@@ -23,9 +23,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
 .delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
 .delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
-.tabs{display:flex;gap:7px;margin:5px 0 14px;overflow:auto}
-.tab{border:0;border-radius:8px;padding:9px 18px;background:#e6eaf1;color:#536074;white-space:nowrap;font:inherit;font-weight:750;cursor:pointer}
-.tab.active{background:var(--navy);color:#fff}
+.tabs-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--blue);font-weight:750;margin:2px 0 8px}
+.tabs-hint .arrow{animation:bounce-x 1.3s infinite}
+@keyframes bounce-x{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
+.tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
+.tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(21,46,85,.35)}
 .pane{display:none}.pane.active{display:block}
 .section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
 .section h2{font-size:16px;margin:0 0 15px;border-left:4px solid var(--navy);padding-left:10px}
@@ -104,6 +108,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 
   <section class="kpis" id="kpis"></section>
 
+  <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
   <nav class="tabs">
     <button class="tab active" data-pane="ops">01 &middot; Vận hành</button>
     <button class="tab" data-pane="view">02 &middot; Người xem</button>
