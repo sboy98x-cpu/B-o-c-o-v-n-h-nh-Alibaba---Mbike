@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bao cao tuan - THAO HA TRADING COMPANY LIMITED</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#152e55;--blue:#2864d7;--blue2:#eaf1ff;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
+.hero{background:linear-gradient(120deg,#152e55,#2b578d);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
+.hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
+.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#dce8fb}
+.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
+.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#dce8fb}
+.period b{display:block;color:#fff;font-size:14px;margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:16px}
+.kpi{background:#fff;border-radius:11px;padding:13px 15px;box-shadow:var(--shadow);min-width:0}
+.kpi .label{font-size:11px;color:var(--muted);margin-bottom:5px}
+.kpi .value{font-size:21px;font-weight:850;letter-spacing:-.04em}
+.kpi .note{font-size:11px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
+.delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
+.delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
+.tabs{display:flex;gap:7px;margin:5px 0 14px;overflow:auto}
+.tab{border:0;border-radius:8px;padding:9px 18px;background:#e6eaf1;color:#536074;white-space:nowrap;font:inherit;font-weight:750;cursor:pointer}
+.tab.active{background:var(--navy);color:#fff}
+.pane{display:none}.pane.active{display:block}
+.section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 15px;border-left:4px solid var(--navy);padding-left:10px}
+.section h3{font-size:14px;margin:0 0 10px}
+.note-line{font-size:12px;color:var(--muted);margin:-8px 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.focus{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px}
+.focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:140px}
+.focus-card.red{background:var(--red2);border-color:#ffd7dc}
+.focus-card.amber{background:var(--amber2);border-color:#f5dfae}
+.focus-card.blue{background:var(--blue2);border-color:#d5e2ff}
+.focus-card h3{font-size:15px;margin:0 0 9px}
+.focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
+.big{font-size:26px;font-weight:900;letter-spacing:-.06em}
+.big small{font-size:12px;letter-spacing:0;font-weight:700;color:var(--muted)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px solid rgba(20,40,75,.1);padding-top:8px;margin-top:8px;font-size:12px}
+.tag{display:inline-flex;border-radius:20px;padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:var(--green);background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:var(--muted);background:#eef1f5}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{border:1px solid var(--line);border-radius:10px;padding:12px}
+.metric .n{font-size:22px;font-weight:850}
+.metric .l{font-size:11px;color:var(--muted)}
+.chart{width:100%;height:280px}
+.chart.sm{height:220px}
+.chart.lg{height:320px}
+.table-wrap{overflow:auto}
+.table{border-collapse:collapse;width:100%;min-width:780px;font-size:12px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;cursor:pointer;white-space:nowrap}
+.table th.num,.table td.num{text-align:right}
+.table tr:hover td{background:#fafcff}
+.buyer{font-weight:800}
+.hint{font-size:11px;color:var(--muted)}
+.diag{display:grid;gap:9px}
+.diag-item{display:grid;grid-template-columns:55px 1fr;gap:10px;align-items:start;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.diag-item:last-child{border-bottom:0}
+.diag-tag{border-radius:6px;text-align:center;padding:4px 3px;font-size:11px;font-weight:850}
+.diag-tag.p0{color:var(--red);background:var(--red2)}.diag-tag.p1{color:var(--amber);background:var(--amber2)}.diag-tag.info{color:var(--blue);background:var(--blue2)}
+.sources{display:flex;gap:8px;flex-wrap:wrap}
+.sources a{color:var(--blue);background:var(--blue2);border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;font-weight:750}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:22px;line-height:1.9}
+.top-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-5px 0 10px;flex-wrap:wrap}
+.need{color:var(--muted);font-size:12px}
+.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
+.subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.searchbar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+.count-pill{font-size:11px;color:var(--muted);background:#f3f5f8;border-radius:20px;padding:4px 10px;white-space:nowrap}
+.subpane{display:none}.subpane.active{display:block}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
+@media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <h1>THAO HA TRADING COMPANY LIMITED <span style="font-size:13px;opacity:.7">&middot; Bao cao tuan</span></h1>
+    <div class="sub"><span class="badge">Nganh: Motorcycle Accessories</span><span class="badge">Thuong hieu: M-Biker</span><span class="badge">Nguon: Van hanh &middot; View &middot; Tin nhan (da nhung du lieu chi tiet)</span></div>
+    <div class="period">Tuan gan nhat day du<b>09/08/2026 &ndash; 15/08/2026</b></div>
+  </header>
+
+  <div class="top-actions">
+    <span class="need">Toan bo du lieu chi tiet tu 3 nguon da duoc nhung san trong trang nay &mdash; khong can mo Google Sheet.</span>
+    <div class="sources">
+      <a href="https://docs.google.com/spreadsheets/d/1a-JOtrofmbR6swKieTAwDQfIOa-q0ae1JnojyYREylk/edit" target="_blank">&#8599; Sheet Van hanh (goc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1gjo8g3xOEpYZDV1xYnLZQdCCEPIrG0TZbrm3gYvn0po/edit" target="_blank">&#8599; Sheet View (goc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1JSk13YiFGMCgxgIC9W3TWSOAlME_7AjafAMBsYUIVSw/edit" target="_blank">&#8599; Sheet Tin nhan (goc)</a>
+    </div>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+
+  <nav class="tabs">
+    <button class="tab active" data-pane="ops">01 &middot; Van hanh</button>
+    <button class="tab" data-pane="view">02 &middot; Nguoi xem</button>
+    <button class="tab" data-pane="buyers">03 &middot; Buyer &amp; tin nhan</button>
+    <button class="tab" data-pane="diag">04 &middot; Ket luan &amp; action</button>
+  </nav>
+
+  <section class="pane active" id="ops">
+    <div class="section">
+      <h2>Tuan nay can tap trung vao 3 viec (trich tu ke hoach hanh dong that trong sheet Van hanh)</h2>
+      <div class="focus" id="focus_cards"></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2>Nhip van hanh 20 tuan gan nhat</h2>
+        <div class="note-line">Luot ghe tham (PV) va ty le phan hoi trong 24h, theo tung tuan &mdash; du lieu day du tu sheet Van hanh.</div>
+        <div id="ch_trend" class="chart lg"></div>
+      </div>
+      <div class="section">
+        <h2>San pham &amp; RFQ 20 tuan gan nhat</h2>
+        <div id="ch_products" class="chart lg"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Bang chi tiet 20 tuan (Van hanh)</h2>
+      <div class="table-wrap"><table class="table" id="tbl_ops"></table></div>
+    </div>
+  </section>
+
+  <section class="pane" id="view">
+    <div class="section">
+      <h2>Nguoi xem tuan 09&ndash;15/08/2026: den tu dau va chat luong the nao?</h2>
+      <div class="metric-row" id="view_metrics"></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2>Cap nguoi mua (pheu chat luong)</h2>
+        <div id="ch_funnel" class="chart"></div>
+        <p class="need" style="margin-top:6px">L1+ (L1-L4) la nhom can uu tien: co the phan loai la nguoi mua tiem nang tro len, chiem <b id="l1pct"></b> tong khach.</p>
+      </div>
+      <div class="section">
+        <h2>Top 12 quoc gia theo luot khach</h2>
+        <div id="ch_country" class="chart"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Toan bo 142 quoc gia / vung co khach ghe tham</h2>
+      <div class="note-line">Bam vao tieu de cot de sap xep. Du lieu day du tu sheet View, tuan 09&ndash;15/08/2026.</div>
+      <div class="searchbar"><input id="country_search" placeholder="Tim quoc gia..."><span class="count-pill" id="country_count"></span></div>
+      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_country"></table></div>
+    </div>
+  </section>
+
+  <section class="pane" id="buyers">
+    <div class="section">
+      <h2>Buyer can follow &mdash; tong hop tu sheet Tin nhan</h2>
+      <div class="metric-row">
+        <div class="metric"><div class="n" style="color:var(--red)">26</div><div class="l">Uu tien cao (can follow 24h)</div></div>
+        <div class="metric"><div class="n" style="color:var(--amber)">15</div><div class="l">Follow nhe</div></div>
+        <div class="metric"><div class="n">13</div><div class="l">Spam / it phan hoi</div></div>
+        <div class="metric"><div class="n" style="color:var(--blue)">28</div><div class="l">Da phan loai khong phu hop</div></div>
+      </div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2>Co cau buyer dang xu ly theo muc uu tien</h2>
+        <div id="ch_priority" class="chart sm"></div>
+      </div>
+      <div class="section">
+        <h2>Mau cau truc tin nhan can thong nhat</h2>
+        <div class="grid3" style="grid-template-columns:1fr">
+          <div class="focus-card blue"><h3>Buyer co san pham san</h3><p>Gia 1 pcs / MOQ &rarr; phi ship &rarr; thoi gian &rarr; link dat hang.</p></div>
+          <div class="focus-card amber"><h3>Buyer custom</h3><p>Xin model, anh, kich thuoc, so luong &rarr; xac nhan MOQ va phi mau.</p></div>
+          <div class="focus-card red"><h3>Buyer hoi phi ship</h3><p>Bao 2 phuong an express / sea &rarr; hoi dia chi hoac cang nhan.</p></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Danh sach buyer chi tiet (nhung toan bo tu sheet Tin nhan)</h2>
+      <div class="subtabs">
+        <button class="subtab active" data-sub="pri">Uu tien follow (<span id="cnt_pri"></span>)</button>
+        <button class="subtab" data-sub="exp">Can khai thac them (<span id="cnt_exp"></span>)</button>
+        <button class="subtab" data-sub="sig">Da co ket luan / khong phu hop (<span id="cnt_sig"></span>)</button>
+      </div>
+      <div class="searchbar"><input id="buyer_search" placeholder="Tim theo ten, quoc gia, san pham..."></div>
+      <div class="subpane active" id="sub_pri"><div class="table-wrap" style="max-height:560px;overflow:auto"><table class="table" id="tbl_pri"></table></div></div>
+      <div class="subpane" id="sub_exp"><div class="table-wrap" style="max-height:560px;overflow:auto"><table class="table" id="tbl_exp"></table></div></div>
+      <div class="subpane" id="sub_sig"><div class="table-wrap" style="max-height:560px;overflow:auto"><table class="table" id="tbl_sig"></table></div></div>
+    </div>
+  </section>
+
+  <section class="pane" id="diag">
+    <div class="section">
+      <h2>Ket luan tuan nay</h2>
+      <div class="diag">
+        <div class="diag-item"><span class="diag-tag info">DATA</span><div><b>Phan hoi va dich vu on dinh.</b> Ty le phan hoi trong 24h dat 97.89% (tuan 09&ndash;15/08), muc tot va cao hon tuan truoc (97.16%).</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>RFQ dang bi bo phi.</b> Chi bao 3/23 luot RFQ trong tuan (con lai 20 luot chua dung) &mdash; day la co hoi mien phi dang bo qua.</div></div>
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>26 buyer can follow trong 24h.</b> Trong do co it nhat 4 buyer da co don/dang giao va 2 buyer muc "rat cao" (Ester Faldikova, Elmer Lopez, Billy Uy) can chot ngay.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>10 san pham dang co van de anh huong traffic</b> (theo ghi nhan tuan 09&ndash;15/08 trong sheet Van hanh) &mdash; can ra soat va sua truoc khi day them quang cao.</div></div>
+        <div class="diag-item"><span class="diag-tag info">DATA</span><div><b>28 buyer da duoc phan loai khong phu hop</b> (vuong phi ship/thue, nham san pham, hoi mua xe thay vi phu kien) &mdash; khong can follow them, tap trung nguon luc cho nhom uu tien.</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Action plan 7 ngay</h2>
+      <div class="grid3">
+        <div class="focus-card red"><h3>Trong 48 gio</h3><p>Follow 4 buyer da co don/dang giao va 2 buyer "rat cao" (Ester, Elmer, Billy) de chot/xac nhan giao hang.</p><span class="tag red">Seller + Sales</span></div>
+        <div class="focus-card amber"><h3>Trong 7 ngay</h3><p>Bao het 20 luot RFQ con lai; sua 10 san pham dang anh huong traffic; nang them san pham len Top/Super Product.</p><span class="tag amber">Ops + Sales</span></div>
+        <div class="focus-card blue"><h3>Tuan ke tiep</h3><p>Tiep tuc dang 5&ndash;10 san pham hot moi ngay theo ke hoach; theo doi 15 buyer follow nhe de nang uu tien.</p><span class="tag blue">Manager</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="foot">Bao cao tuan &middot; thiet ke theo cau truc success case &middot; du lieu day du duoc nhung truc tiep tu 3 sheet nguon &middot; cap nhat tuan 09&ndash;15/08/2026</div>
+</main>
+<script>
+const D = {"ops_weeks":[{"period":"15-2-2026 đến 21-2-2026","Số sao":"4","Tổng số sản phẩm":"1175","Tổng số sản phẩm mới đã đăng":"137","Tổng số người ghé thăm":"1491","Tổng số thư hỏi hàng":"55","Tổng số thư hỏi hàng đã trả lời":"55","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"3.16","Tỉ lệ tin nhắn được phản hồi trong 24h":"94.24","Số lượng Super Product (win)":"1","Số lượng Top Product (tiềm năng)":"105"},{"period":"22-2-2026 đến 28-2-2026","Số sao":"4","Tổng số sản phẩm":"1175","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"1493","Tổng số thư hỏi hàng":"47","Tổng số thư hỏi hàng đã trả lời":"47","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"2.87","Tỉ lệ tin nhắn được phản hồi trong 24h":"94.56","Số lượng Super Product (win)":"1","Số lượng Top Product (tiềm năng)":"106"},{"period":"1-03-2026 đến 07-03-2026","Số sao":"4","Tổng số sản phẩm":"1175","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"1804","Tổng số thư hỏi hàng":"47","Tổng số thư hỏi hàng đã trả lời":"47","Tổng số lượt đã báo giá RFQ":"20","Số lượt báo giá RFQ còn lại":"0","Thời gian phản hồi tin nhắn trung bình(h)":"3.02","Tỉ lệ tin nhắn được phản hồi trong 24h":"94.16","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"104"},{"period":"8-03-2026 đến 014-03-2026","Số sao":"5","Tổng số sản phẩm":"1179","Tổng số sản phẩm mới đã đăng":"4","Tổng số người ghé thăm":"2476","Tổng số thư hỏi hàng":"53","Tổng số thư hỏi hàng đã trả lời":"53","Tổng số lượt đã báo giá RFQ":"20","Số lượt báo giá RFQ còn lại":"0","Thời gian phản hồi tin nhắn trung bình(h)":"2.53","Tỉ lệ tin nhắn được phản hồi trong 24h":"96.05","Số lượng Super Product (win)":"1","Số lượng Top Product (tiềm năng)":"99"},{"period":"15-03-2026 đến 21-03-2026","Số sao":"5","Tổng số sản phẩm":"1179","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2189","Tổng số thư hỏi hàng":"57","Tổng số thư hỏi hàng đã trả lời":"57","Tổng số lượt đã báo giá RFQ":"20","Số lượt báo giá RFQ còn lại":"0","Thời gian phản hồi tin nhắn trung bình(h)":"2.54","Tỉ lệ tin nhắn được phản hồi trong 24h":"96.11","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"100"},{"period":"29-03-2026 đến 4-4-2026","Số sao":"5","Tổng số sản phẩm":"1179","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2023","Tổng số thư hỏi hàng":"43","Tổng số thư hỏi hàng đã trả lời":"43","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"25","Thời gian phản hồi tin nhắn trung bình(h)":"2.37","Tỉ lệ tin nhắn được phản hồi trong 24h":"98.30","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"102"},{"period":"12-04-2026 đến 18-4-2026","Số sao":"5","Tổng số sản phẩm":"1204","Tổng số sản phẩm mới đã đăng":"25","Tổng số người ghé thăm":"2049","Tổng số thư hỏi hàng":"46","Tổng số thư hỏi hàng đã trả lời":"46","Tổng số lượt đã báo giá RFQ":"25","Số lượt báo giá RFQ còn lại":"25","Thời gian phản hồi tin nhắn trung bình(h)":"2.18","Tỉ lệ tin nhắn được phản hồi trong 24h":"98.82","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"100"},{"period":"19-4-2026 đến 25-04-2026","Số sao":"5","Tổng số sản phẩm":"1204","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2447","Tổng số thư hỏi hàng":"74","Tổng số thư hỏi hàng đã trả lời":"74","Tổng số lượt đã báo giá RFQ":"25","Số lượt báo giá RFQ còn lại":"25","Thời gian phản hồi tin nhắn trung bình(h)":"1.86","Tỉ lệ tin nhắn được phản hồi trong 24h":"98.94","Số lượng Super Product (win)":"3","Số lượng Top Product (tiềm năng)":"112"},{"period":"26-4-2026 đến 2-05-2026","Số sao":"5","Tổng số sản phẩm":"1206","Tổng số sản phẩm mới đã đăng":"2","Tổng số người ghé thăm":"2479","Tổng số thư hỏi hàng":"66","Tổng số thư hỏi hàng đã trả lời":"66","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"1.92","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.72","Số lượng Super Product (win)":"3","Số lượng Top Product (tiềm năng)":"112"},{"period":"03-05-2026 đến 09-05-2026","Số sao":"5","Tổng số sản phẩm":"1236","Tổng số sản phẩm mới đã đăng":"30","Tổng số người ghé thăm":"2477","Tổng số thư hỏi hàng":"60","Tổng số thư hỏi hàng đã trả lời":"60","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"1.76","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.81","Số lượng Super Product (win)":"3","Số lượng Top Product (tiềm năng)":"124"},{"period":"17-05-2026 đến 23-05-2026","Số sao":"5","Tổng số sản phẩm":"1280","Tổng số sản phẩm mới đã đăng":"44","Tổng số người ghé thăm":"2109","Tổng số thư hỏi hàng":"47","Tổng số thư hỏi hàng đã trả lời":"47","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"2.61","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.07","Số lượng Super Product (win)":"3","Số lượng Top Product (tiềm năng)":"124"},{"period":"30-05-2026 đến 06-06-2026","Số sao":"5","Tổng số sản phẩm":"1279","Tổng số sản phẩm mới đã đăng":"-1","Tổng số người ghé thăm":"3260","Tổng số thư hỏi hàng":"60","Tổng số thư hỏi hàng đã trả lời":"60","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"3.07","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.58","Số lượng Super Product (win)":"1","Số lượng Top Product (tiềm năng)":"125"},{"period":"14-06-2026 đến 20-06-2026","Số sao":"5","Tổng số sản phẩm":"1279","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2073","Tổng số thư hỏi hàng":"43","Tổng số thư hỏi hàng đã trả lời":"43","Tổng số lượt đã báo giá RFQ":"2","Số lượt báo giá RFQ còn lại":"18","Thời gian phản hồi tin nhắn trung bình(h)":"2.59","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.72","Số lượng Super Product (win)":"1","Số lượng Top Product (tiềm năng)":"123"},{"period":"21-06-2026 đến 27-06-2026","Số sao":"5","Tổng số sản phẩm":"1279","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2249","Tổng số thư hỏi hàng":"40","Tổng số thư hỏi hàng đã trả lời":"40","Tổng số lượt đã báo giá RFQ":"0","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"2.32","Tỉ lệ tin nhắn được phản hồi trong 24h":"98.63","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"119"},{"period":"05-07-2026 đến 11-07-2026","Số sao":"5","Tổng số sản phẩm":"1312","Tổng số sản phẩm mới đã đăng":"20","Tổng số người ghé thăm":"2266","Tổng số thư hỏi hàng":"48","Tổng số thư hỏi hàng đã trả lời":"48","Tổng số lượt đã báo giá RFQ":"16","Số lượt báo giá RFQ còn lại":"4","Thời gian phản hồi tin nhắn trung bình(h)":"2.6","Tỉ lệ tin nhắn được phản hồi trong 24h":"98.34","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"115"},{"period":"12-07-2026 đến 18-07-2026","Số sao":"5","Tổng số sản phẩm":"1312","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2350","Tổng số thư hỏi hàng":"50","Tổng số thư hỏi hàng đã trả lời":"48","Tổng số lượt đã báo giá RFQ":"18","Số lượt báo giá RFQ còn lại":"19","Thời gian phản hồi tin nhắn trung bình(h)":"2.44","Tỉ lệ tin nhắn được phản hồi trong 24h":"98.82","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"111"},{"period":"19-07-2026 đến 25-07-2026","Số sao":"5","Tổng số sản phẩm":"1312","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"2465","Tổng số thư hỏi hàng":"42","Tổng số thư hỏi hàng đã trả lời":"42","Tổng số lượt đã báo giá RFQ":"19","Số lượt báo giá RFQ còn lại":"18","Thời gian phản hồi tin nhắn trung bình(h)":"2.41","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.67","Số lượng Super Product (win)":"2","Số lượng Top Product (tiềm năng)":"93"},{"period":"26-07-2026 đến 01-08-2026","Số sao":"5","Tổng số sản phẩm":"1342","Tổng số sản phẩm mới đã đăng":"30","Tổng số người ghé thăm":"2912","Tổng số thư hỏi hàng":"50","Tổng số thư hỏi hàng đã trả lời":"50","Tổng số lượt đã báo giá RFQ":"3","Số lượt báo giá RFQ còn lại":"18","Thời gian phản hồi tin nhắn trung bình(h)":"2.37","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.19","Số lượng Super Product (win)":"1","Số lượng Top Product (tiềm năng)":"83"},{"period":"02-08-2026 đến 08-08-2026","Số sao":"5","Tổng số sản phẩm":"1342","Tổng số sản phẩm mới đã đăng":"0","Tổng số người ghé thăm":"3032","Tổng số thư hỏi hàng":"44","Tổng số thư hỏi hàng đã trả lời":"44","Tổng số lượt đã báo giá RFQ":"3","Số lượt báo giá RFQ còn lại":"21","Thời gian phản hồi tin nhắn trung bình(h)":"2.26","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.16","Số lượng Super Product (win)":"0","Số lượng Top Product (tiềm năng)":"81"},{"period":"09-08-2026 đến 15-08-2026","Số sao":"5","Tổng số sản phẩm":"1605","Tổng số sản phẩm mới đã đăng":"263","Tổng số người ghé thăm":"3725","Tổng số thư hỏi hàng":"50","Tổng số thư hỏi hàng đã trả lời":"50","Tổng số lượt đã báo giá RFQ":"3","Số lượt báo giá RFQ còn lại":"20","Thời gian phản hồi tin nhắn trung bình(h)":"2.07","Tỉ lệ tin nhắn được phản hồi trong 24h":"97.89","Số lượng Super Product (win)":"0","Số lượng Top Product (tiềm năng)":"78"}],"view_week":{"period":"09-15/08/2026","visitors":1631,"countries":142,"pv":3725,"kw_exact":3594,"visitors_with_kw":1341,"buyer_l1plus":664,"levels":{"L0":967,"L1":247,"L2":289,"L3":109,"L4":19}},"countries":[{"country":"Philippines","visitors":146,"pv":229,"vkw":81,"kwrec":182,"L0":117,"L1":13,"L2":9,"L3":6,"L4":1,"L1plus":29},{"country":"Hoa Kỳ","visitors":136,"pv":287,"vkw":129,"kwrec":346,"L0":63,"L1":28,"L2":31,"L3":11,"L4":3,"L1plus":73},{"country":"Indonesia","visitors":76,"pv":254,"vkw":67,"kwrec":183,"L0":40,"L1":12,"L2":18,"L3":5,"L4":1,"L1plus":36},{"country":"Mexico","visitors":64,"pv":143,"vkw":51,"kwrec":122,"L0":41,"L1":12,"L2":8,"L3":2,"L4":1,"L1plus":23},{"country":"Việt Nam","visitors":57,"pv":190,"vkw":30,"kwrec":83,"L0":36,"L1":15,"L2":6,"L3":0,"L4":0,"L1plus":21},{"country":"Thái Lan","visitors":47,"pv":111,"vkw":34,"kwrec":68,"L0":38,"L1":4,"L2":2,"L3":3,"L4":0,"L1plus":9},{"country":"Ý","visitors":44,"pv":89,"vkw":40,"kwrec":108,"L0":29,"L1":8,"L2":6,"L3":1,"L4":0,"L1plus":15},{"country":"Ấn Độ","visitors":41,"pv":88,"vkw":35,"kwrec":95,"L0":32,"L1":6,"L2":1,"L3":2,"L4":0,"L1plus":9},{"country":"Colombia","visitors":38,"pv":80,"vkw":30,"kwrec":65,"L0":29,"L1":5,"L2":4,"L3":0,"L4":0,"L1plus":9},{"country":"Bờ Biển Ngà","visitors":37,"pv":75,"vkw":36,"kwrec":113,"L0":8,"L1":7,"L2":13,"L3":8,"L4":1,"L1plus":29},{"country":"Argentina","visitors":30,"pv":51,"vkw":20,"kwrec":54,"L0":22,"L1":2,"L2":5,"L3":1,"L4":0,"L1plus":8},{"country":"Malaysia","visitors":26,"pv":44,"vkw":23,"kwrec":57,"L0":17,"L1":2,"L2":4,"L3":0,"L4":3,"L1plus":9},{"country":"Burkina Faso","visitors":25,"pv":48,"vkw":25,"kwrec":82,"L0":6,"L1":6,"L2":8,"L3":5,"L4":0,"L1plus":19},{"country":"Đức","visitors":25,"pv":42,"vkw":22,"kwrec":61,"L0":16,"L1":5,"L2":2,"L3":2,"L4":0,"L1plus":9},{"country":"Pakistan","visitors":25,"pv":53,"vkw":15,"kwrec":34,"L0":20,"L1":2,"L2":2,"L3":1,"L4":0,"L1plus":5},{"country":"Tây Ban Nha","visitors":25,"pv":54,"vkw":18,"kwrec":39,"L0":17,"L1":3,"L2":5,"L3":0,"L4":0,"L1plus":8},{"country":"Nhật Bản","visitors":24,"pv":83,"vkw":18,"kwrec":49,"L0":20,"L1":1,"L2":2,"L3":1,"L4":0,"L1plus":4},{"country":"Venezuela","visitors":24,"pv":49,"vkw":21,"kwrec":57,"L0":20,"L1":1,"L2":3,"L3":0,"L4":0,"L1plus":4},{"country":"Peru","visitors":23,"pv":44,"vkw":22,"kwrec":53,"L0":15,"L1":5,"L2":2,"L3":1,"L4":0,"L1plus":8},{"country":"Pháp","visitors":22,"pv":34,"vkw":21,"kwrec":53,"L0":9,"L1":6,"L2":7,"L3":0,"L4":0,"L1plus":13},{"country":"Brazil","visitors":21,"pv":43,"vkw":18,"kwrec":47,"L0":14,"L1":2,"L2":3,"L3":2,"L4":0,"L1plus":7},{"country":"Campuchia","visitors":19,"pv":98,"vkw":16,"kwrec":43,"L0":12,"L1":1,"L2":4,"L3":2,"L4":0,"L1plus":7},{"country":"Trung Quốc","visitors":18,"pv":39,"vkw":16,"kwrec":38,"L0":18,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Úc","visitors":18,"pv":23,"vkw":15,"kwrec":50,"L0":5,"L1":1,"L2":11,"L3":1,"L4":0,"L1plus":13},{"country":"Vương quốc Anh","visitors":18,"pv":31,"vkw":17,"kwrec":43,"L0":6,"L1":5,"L2":6,"L3":1,"L4":0,"L1plus":12},{"country":"Cộng hòa Dân chủ Congo","visitors":17,"pv":29,"vkw":14,"kwrec":51,"L0":5,"L1":3,"L2":5,"L3":4,"L4":0,"L1plus":12},{"country":"Singapore","visitors":17,"pv":57,"vkw":9,"kwrec":31,"L0":7,"L1":4,"L2":4,"L3":2,"L4":0,"L1plus":10},{"country":"Ghana","visitors":15,"pv":47,"vkw":14,"kwrec":45,"L0":5,"L1":2,"L2":3,"L3":5,"L4":0,"L1plus":10},{"country":"Ả Rập Xê-út","visitors":14,"pv":22,"vkw":13,"kwrec":41,"L0":5,"L1":2,"L2":7,"L3":0,"L4":0,"L1plus":9},{"country":"Bangladesh","visitors":14,"pv":22,"vkw":10,"kwrec":25,"L0":10,"L1":2,"L2":1,"L3":1,"L4":0,"L1plus":4},{"country":"Cameroon","visitors":14,"pv":30,"vkw":12,"kwrec":32,"L0":2,"L1":4,"L2":4,"L3":3,"L4":1,"L1plus":12},{"country":"Kenya","visitors":14,"pv":35,"vkw":10,"kwrec":31,"L0":9,"L1":1,"L2":4,"L3":0,"L4":0,"L1plus":5},{"country":"Hàn Quốc","visitors":13,"pv":42,"vkw":10,"kwrec":22,"L0":11,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Senegal","visitors":13,"pv":20,"vkw":12,"kwrec":33,"L0":5,"L1":2,"L2":2,"L3":4,"L4":0,"L1plus":8},{"country":"Thổ Nhĩ Kỳ","visitors":13,"pv":17,"vkw":10,"kwrec":14,"L0":7,"L1":5,"L2":1,"L3":0,"L4":0,"L1plus":6},{"country":"Canada","visitors":12,"pv":18,"vkw":8,"kwrec":24,"L0":8,"L1":1,"L2":2,"L3":1,"L4":0,"L1plus":4},{"country":"Iraq","visitors":12,"pv":25,"vkw":10,"kwrec":24,"L0":9,"L1":1,"L2":2,"L3":0,"L4":0,"L1plus":3},{"country":"Nigeria","visitors":12,"pv":34,"vkw":12,"kwrec":36,"L0":3,"L1":3,"L2":2,"L3":1,"L4":3,"L1plus":9},{"country":"Tanzania","visitors":12,"pv":19,"vkw":11,"kwrec":36,"L0":4,"L1":2,"L2":4,"L3":2,"L4":0,"L1plus":8},{"country":"Togo","visitors":12,"pv":21,"vkw":12,"kwrec":39,"L0":1,"L1":2,"L2":5,"L3":2,"L4":2,"L1plus":11},{"country":"Chile","visitors":11,"pv":38,"vkw":11,"kwrec":33,"L0":5,"L1":5,"L2":1,"L3":0,"L4":0,"L1plus":6},{"country":"Honduras","visitors":11,"pv":18,"vkw":9,"kwrec":23,"L0":7,"L1":1,"L2":3,"L3":0,"L4":0,"L1plus":4},{"country":"Nam Phi","visitors":11,"pv":14,"vkw":11,"kwrec":30,"L0":7,"L1":2,"L2":0,"L3":0,"L4":2,"L1plus":4},{"country":"Hy Lạp","visitors":10,"pv":20,"vkw":10,"kwrec":26,"L0":6,"L1":1,"L2":2,"L3":0,"L4":1,"L1plus":4},{"country":"New Zealand","visitors":10,"pv":18,"vkw":8,"kwrec":26,"L0":4,"L1":2,"L2":3,"L3":1,"L4":0,"L1plus":6},{"country":"Zambia","visitors":10,"pv":25,"vkw":9,"kwrec":24,"L0":4,"L1":0,"L2":5,"L3":1,"L4":0,"L1plus":6},{"country":"Ai Cập","visitors":9,"pv":45,"vkw":7,"kwrec":15,"L0":7,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Mali","visitors":9,"pv":16,"vkw":9,"kwrec":28,"L0":5,"L1":0,"L2":3,"L3":1,"L4":0,"L1plus":4},{"country":"Sri Lanka","visitors":9,"pv":13,"vkw":7,"kwrec":20,"L0":2,"L1":5,"L2":2,"L3":0,"L4":0,"L1plus":7},{"country":"Benin","visitors":8,"pv":21,"vkw":8,"kwrec":26,"L0":2,"L1":1,"L2":3,"L3":2,"L4":0,"L1plus":6},{"country":"Costa Rica","visitors":8,"pv":16,"vkw":7,"kwrec":19,"L0":5,"L1":2,"L2":0,"L3":1,"L4":0,"L1plus":3},{"country":"Libyan Arab Jamahiriya","visitors":8,"pv":49,"vkw":7,"kwrec":22,"L0":3,"L1":4,"L2":1,"L3":0,"L4":0,"L1plus":5},{"country":"The former Yugoslav Republic of Macedonia","visitors":8,"pv":11,"vkw":6,"kwrec":12,"L0":7,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Uganda","visitors":8,"pv":19,"vkw":8,"kwrec":23,"L0":3,"L1":1,"L2":2,"L3":2,"L4":0,"L1plus":5},{"country":"Ba Lan","visitors":7,"pv":10,"vkw":7,"kwrec":18,"L0":3,"L1":0,"L2":4,"L3":0,"L4":0,"L1plus":4},{"country":"Bolivia","visitors":7,"pv":8,"vkw":5,"kwrec":13,"L0":2,"L1":1,"L2":1,"L3":3,"L4":0,"L1plus":5},{"country":"Các Tiểu Vương quốc Ả Rập Thống nhất","visitors":7,"pv":51,"vkw":6,"kwrec":15,"L0":6,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Ma-rốc","visitors":7,"pv":8,"vkw":5,"kwrec":15,"L0":5,"L1":0,"L2":1,"L3":1,"L4":0,"L1plus":2},{"country":"Bỉ","visitors":6,"pv":7,"vkw":6,"kwrec":17,"L0":2,"L1":2,"L2":1,"L3":1,"L4":0,"L1plus":4},{"country":"Bồ Đào Nha","visitors":6,"pv":8,"vkw":6,"kwrec":15,"L0":3,"L1":0,"L2":3,"L3":0,"L4":0,"L1plus":3},{"country":"Đài Loan","visitors":6,"pv":63,"vkw":3,"kwrec":9,"L0":3,"L1":1,"L2":2,"L3":0,"L4":0,"L1plus":3},{"country":"Ecuador","visitors":6,"pv":8,"vkw":6,"kwrec":20,"L0":3,"L1":1,"L2":1,"L3":1,"L4":0,"L1plus":3},{"country":"Georgia","visitors":6,"pv":10,"vkw":6,"kwrec":19,"L0":4,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Hà Lan","visitors":6,"pv":9,"vkw":5,"kwrec":14,"L0":2,"L1":2,"L2":1,"L3":1,"L4":0,"L1plus":4},{"country":"Lao People's Democratic Republic","visitors":6,"pv":8,"vkw":5,"kwrec":8,"L0":6,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Li-băng","visitors":6,"pv":10,"vkw":5,"kwrec":11,"L0":6,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Mozambique","visitors":6,"pv":39,"vkw":6,"kwrec":18,"L0":4,"L1":0,"L2":2,"L3":0,"L4":0,"L1plus":2},{"country":"Paraguay","visitors":6,"pv":30,"vkw":6,"kwrec":13,"L0":3,"L1":1,"L2":2,"L3":0,"L4":0,"L1plus":3},{"country":"Cộng hòa Séc","visitors":5,"pv":7,"vkw":5,"kwrec":15,"L0":4,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"El Salvador","visitors":5,"pv":6,"vkw":5,"kwrec":15,"L0":5,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Madagascar","visitors":5,"pv":8,"vkw":5,"kwrec":15,"L0":2,"L1":2,"L2":1,"L3":0,"L4":0,"L1plus":3},{"country":"Myanmar","visitors":5,"pv":63,"vkw":5,"kwrec":14,"L0":2,"L1":3,"L2":0,"L3":0,"L4":0,"L1plus":3},{"country":"Ukraina","visitors":5,"pv":8,"vkw":4,"kwrec":8,"L0":5,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Algeria","visitors":4,"pv":7,"vkw":4,"kwrec":12,"L0":2,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Belarus","visitors":4,"pv":9,"vkw":3,"kwrec":6,"L0":3,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Bulgaria","visitors":4,"pv":4,"vkw":1,"kwrec":4,"L0":3,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Jordan","visitors":4,"pv":8,"vkw":4,"kwrec":9,"L0":2,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Kazakhstan","visitors":4,"pv":7,"vkw":4,"kwrec":12,"L0":4,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Malawi","visitors":4,"pv":6,"vkw":3,"kwrec":11,"L0":2,"L1":0,"L2":0,"L3":2,"L4":0,"L1plus":2},{"country":"Na Uy","visitors":4,"pv":5,"vkw":3,"kwrec":8,"L0":2,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Panama","visitors":4,"pv":11,"vkw":4,"kwrec":11,"L0":3,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Puerto Rico","visitors":4,"pv":8,"vkw":3,"kwrec":7,"L0":4,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Romania","visitors":4,"pv":10,"vkw":4,"kwrec":9,"L0":1,"L1":0,"L2":3,"L3":0,"L4":0,"L1plus":3},{"country":"Thụy Sĩ","visitors":4,"pv":4,"vkw":4,"kwrec":13,"L0":1,"L1":1,"L2":2,"L3":0,"L4":0,"L1plus":3},{"country":"Albania","visitors":3,"pv":5,"vkw":3,"kwrec":10,"L0":2,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Áo","visitors":3,"pv":3,"vkw":3,"kwrec":5,"L0":2,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Armenia","visitors":3,"pv":21,"vkw":3,"kwrec":7,"L0":1,"L1":0,"L2":2,"L3":0,"L4":0,"L1plus":2},{"country":"Brunei Darussalam","visitors":3,"pv":8,"vkw":3,"kwrec":11,"L0":1,"L1":2,"L2":0,"L3":0,"L4":0,"L1plus":2},{"country":"Cộng hòa Congo","visitors":3,"pv":7,"vkw":2,"kwrec":8,"L0":0,"L1":0,"L2":0,"L3":3,"L4":0,"L1plus":3},{"country":"Cộng hòa Dominica","visitors":3,"pv":6,"vkw":3,"kwrec":5,"L0":2,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Croatia (local name: Hrvatska)","visitors":3,"pv":3,"vkw":3,"kwrec":10,"L0":0,"L1":1,"L2":2,"L3":0,"L4":0,"L1plus":3},{"country":"Guatemala","visitors":3,"pv":4,"vkw":1,"kwrec":1,"L0":3,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Guinea","visitors":3,"pv":7,"vkw":3,"kwrec":10,"L0":2,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Hồng Kông (Đặc khu hành chính)","visitors":3,"pv":29,"vkw":3,"kwrec":6,"L0":2,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Israel","visitors":3,"pv":4,"vkw":3,"kwrec":9,"L0":2,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Moldova","visitors":3,"pv":4,"vkw":2,"kwrec":5,"L0":2,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Mông Cổ","visitors":3,"pv":4,"vkw":3,"kwrec":8,"L0":2,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Oman","visitors":3,"pv":7,"vkw":3,"kwrec":9,"L0":0,"L1":0,"L2":2,"L3":1,"L4":0,"L1plus":3},{"country":"SERBIA","visitors":3,"pv":4,"vkw":3,"kwrec":9,"L0":3,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Suriname","visitors":3,"pv":5,"vkw":2,"kwrec":7,"L0":2,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Zimbabwe","visitors":3,"pv":4,"vkw":3,"kwrec":12,"L0":2,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Angola","visitors":2,"pv":2,"vkw":2,"kwrec":6,"L0":1,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Azerbaijan","visitors":2,"pv":3,"vkw":2,"kwrec":7,"L0":1,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Botswana","visitors":2,"pv":3,"vkw":2,"kwrec":4,"L0":0,"L1":2,"L2":0,"L3":0,"L4":0,"L1plus":2},{"country":"Hungary","visitors":2,"pv":2,"vkw":2,"kwrec":4,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Ireland","visitors":2,"pv":2,"vkw":2,"kwrec":5,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Kuwait","visitors":2,"pv":3,"vkw":1,"kwrec":3,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Liberia","visitors":2,"pv":3,"vkw":2,"kwrec":6,"L0":1,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Litva","visitors":2,"pv":8,"vkw":2,"kwrec":7,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Maldives","visitors":2,"pv":2,"vkw":2,"kwrec":6,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Nepal","visitors":2,"pv":2,"vkw":1,"kwrec":4,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Nga","visitors":2,"pv":2,"vkw":0,"kwrec":0,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Rwanda","visitors":2,"pv":2,"vkw":2,"kwrec":4,"L0":0,"L1":0,"L2":1,"L3":1,"L4":0,"L1plus":2},{"country":"Somalia","visitors":2,"pv":5,"vkw":2,"kwrec":7,"L0":0,"L1":0,"L2":2,"L3":0,"L4":0,"L1plus":2},{"country":"Tajikistan","visitors":2,"pv":3,"vkw":2,"kwrec":7,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Thụy Điển","visitors":2,"pv":11,"vkw":2,"kwrec":6,"L0":1,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Tunisia","visitors":2,"pv":3,"vkw":2,"kwrec":6,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Uruguay","visitors":2,"pv":9,"vkw":2,"kwrec":7,"L0":0,"L1":0,"L2":2,"L3":0,"L4":0,"L1plus":2},{"country":"Uzbekistan","visitors":2,"pv":4,"vkw":2,"kwrec":4,"L0":0,"L1":1,"L2":1,"L3":0,"L4":0,"L1plus":2},{"country":"Yemen","visitors":2,"pv":2,"vkw":1,"kwrec":2,"L0":1,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Antigua and Barbuda","visitors":1,"pv":3,"vkw":0,"kwrec":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Barbados","visitors":1,"pv":1,"vkw":1,"kwrec":4,"L0":0,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Burundi","visitors":1,"pv":4,"vkw":1,"kwrec":1,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Cape Verde","visitors":1,"pv":2,"vkw":1,"kwrec":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Ethiopia","visitors":1,"pv":4,"vkw":1,"kwrec":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1},{"country":"Guam","visitors":1,"pv":2,"vkw":1,"kwrec":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Guyana","visitors":1,"pv":2,"vkw":1,"kwrec":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Iceland","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":0,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Jamaica","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Malta","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Mauritius","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":0,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Namibia","visitors":1,"pv":3,"vkw":1,"kwrec":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Nicaragua","visitors":1,"pv":1,"vkw":1,"kwrec":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Niger","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":0,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Other","visitors":1,"pv":7,"vkw":0,"kwrec":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Palestine","visitors":1,"pv":5,"vkw":1,"kwrec":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Qatar","visitors":1,"pv":1,"vkw":1,"kwrec":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Reunion","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":0,"L1":0,"L2":0,"L3":1,"L4":0,"L1plus":1},{"country":"Sierra Leone","visitors":1,"pv":1,"vkw":1,"kwrec":4,"L0":0,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Síp","visitors":1,"pv":2,"vkw":1,"kwrec":3,"L0":0,"L1":0,"L2":1,"L3":0,"L4":0,"L1plus":1},{"country":"Turks and Caicos Islands","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1plus":0},{"country":"Yugoslavia","visitors":1,"pv":1,"vkw":1,"kwrec":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1plus":1}],"buyers":{"priority":[{"date":"2026-08-24","name":"Elmer Lopez","country":"Zambia","level":"Chưa thấy L","need":"Đã gửi quotation nhưng khách chưa thanh toán","qty":"1 piece; 20; 5","status":"Lead nóng/chờ thanh toán","priority":"Lead nóng/chờ thanh toán","next":"Follow thanh toán, xác nhận còn cần hàng không"},{"date":"2026-08-14","name":"HENKO IMPORT","country":"Peru","level":"Chưa thấy L","need":"MBiker 16L aluminum side box, hỏi DHL Lima","qty":"1 pair","status":"Lead nóng vướng ship","priority":"Lead nóng vướng ship","next":"Ship 700-800 USD cao; đề xuất phương án ship khác/gom đơn"},{"date":"2026-08-24","name":"Petr Svec","country":"Kazakhstan","level":"Chưa thấy L","need":"Baga/trunk motorcycle, hỏi thanh toán khi nhận hàng","qty":"1 trunk","status":"Lead nóng","priority":"Lead nóng","next":"Giải thích trả trước qua Alibaba, cần postal code để tạo đơn"},{"date":"2026-08-25","name":"Wiro Lungwi","country":"Indonesia","level":"Chưa thấy L","need":"Rebel 300/500/1100 rack; khách hỏi forwarder Indonesia","qty":"500","status":"Lead nóng","priority":"Lead nóng","next":"Báo ship/forwarder, xin city+postal code, lưu ý thuế nhập khẩu"},{"date":"2026-08-25","name":"gomes lopes","country":"Brazil/Portugal","level":"Chưa thấy L","need":"Yamaha PG1 anti-roll/off-road part, muốn mua ngay","qty":"1 piece","status":"Lead nóng","priority":"Lead nóng","next":"Gửi quotation/order link ngay, hỏi địa chỉ nhận hàng"},{"date":"2026-08-16","name":"kitti kittikron","country":"Thailand","level":"Chưa thấy L","need":"Yamaha PG1 front luggage rack/headlight mount","qty":"1 set","status":"Lead nóng","priority":"Lead nóng","next":"Khách hỏi bấm đặt ở đâu, cần tạo order và xin địa chỉ/SĐT/mã bưu chính"},{"date":"2026-08-07","name":"DANIEL SPISSO","country":"Chưa xác định","level":"Chưa thấy L","need":"Quotation rear motorcycle lift ramps/stands MB360/MB111","qty":">=50 pieces","status":"Lead B2B tiềm năng","priority":"Lead B2B tiềm năng","next":"Hỏi mounting/spec, báo MOQ B2B"},{"date":"2026-08-18","name":"User name","country":"Chưa xác định","level":"Chưa thấy L","need":"Hỏi catalogue, xem thêm sản phẩm, đã tính 3 sets","qty":"3 sets","status":"Lead B2B tốt","priority":"Lead B2B tốt","next":"Follow catalogue theo dòng xe và tối ưu phí ship 290 USD"},{"date":"2026-08-24","name":"riccardo civitani","country":"Italy","level":"Chưa thấy L","need":"Yêu cầu DDP price cho sample/5/10/20 units","qty":"1 sample; 5; 10; 20","status":"Lead B2B tốt","priority":"Lead B2B tốt","next":"Báo giá theo tier chuyên nghiệp; tránh trả lời 10-20 quá ít làm mất khách"},{"date":"2026-08-12","name":"Raffy Barrios","country":"Philippines","level":"Chưa thấy L","need":"Đơn bị UPS giữ do import duty/tax","qty":"5; 10; 20","status":"Sau bán - vướng thuế","priority":"Sau bán - vướng thuế","next":"Giải thích thuế nhập khẩu, tránh khách hiểu lầm đã bao gồm"},{"date":"2026-08-12","name":"Ester Faldikova","country":"Czech Republic","level":"Chưa thấy L","need":"Saddle bag holder Rebel 300/500/1100","qty":"USD 71.90","status":"Đã có đơn hoàn tất","priority":"Đã có đơn hoàn tất","next":"Chăm sóc sau bán, xin feedback/đánh giá"},{"date":"2026-08-15","name":"Ibrahim elkersh","country":"Singapore","level":"Chưa thấy L","need":"MBIKER Stainless Steel Rear Luggage Rack Yamaha R15V4 Top Case Motorcycle Helmet Bag Saddle Bag-Retrofit/Upgrade 1-Year","qty":"Smart actions; 1 pcs; 100","status":"Đã có đơn/đang giao","priority":"Đã có đơn/đang giao","next":"Theo dõi vận chuyển, báo khách về thuế nhập khẩu và thời gian nhận."},{"date":"2026-08-16","name":"Jonathan Loh","country":"Singapore","level":"Chưa thấy L","need":"MBIKER rear luggage rack Yamaha R15V4","qty":"USD 83.91","status":"Đã có đơn/đang giao","priority":"Đã có đơn/đang giao","next":"Theo dõi ship, báo khách phí/thuế nếu phát sinh"},{"date":"2026-08-15","name":"Ndoss Thomsoni","country":"Singapore","level":"Chưa thấy L","need":"MBIKER Stainless Steel Rear Luggage Rack Yamaha R15V4 Top Case Motorcycle Helmet Bag Saddle Bag-Retrofit/Upgrade 1-Year","qty":"Smart actions; 1 pcs; 100","status":"Đã có đơn/đang giao","priority":"Đã có đơn/đang giao","next":"Theo dõi vận chuyển, báo khách về thuế nhập khẩu và thời gian nhận."},{"date":"2026-08-17","name":"Yakup Bayraktar","country":"Chưa xác định (ngôn ngữ Thổ Nhĩ Kỳ)","level":"Chưa thấy L","need":"Inquiry M-Biker CB300R Front Motorcycle Headlight 2 Lens. Buyer hỏi MOQ mẫu mới, hỏi sản phẩm là gì, hiển thị ban đêm và vùng sáng bao nhiêu mét.","qty":"1 pcs","status":"Buyer đang hỏi kỹ thông số, seller mới trả lời chung, chưa báo giá rõ.","priority":"Cao","next":"Trả lời rõ giá 1 pcs, ảnh/video test ban đêm nếu có, thông số vùng chiếu sáng; xin địa chỉ nhận hàng để báo ship."},{"date":"2026-08-16","name":"Freddie Galera","country":"Chưa xác định","level":"Có level tag","need":"Ducati 899 Panigale 2-Fork Heavy-Duty Motorcycle Lift Ramps/Stands MB366/MB360/MB111; hệ thống gửi ảnh sản phẩm MB366.","qty":"1 pcs","status":"Có inquiry/sản phẩm cụ thể nhưng chưa thấy buyer hỏi sâu sau ảnh.","priority":"Trung bình","next":"Follow hỏi khách cần loại MB366/MB360/MB111 nào, số lượng và địa chỉ nhận hàng để báo ship."},{"date":"2026-08-13","name":"Ferdinand Bautista","country":"Chưa xác định","level":"Có level tag","need":"Buyer xin bảng giá, sau đó nói muốn linh kiện cho xe máy điện VinFast. Seller đã gửi catalogue/price list Google Sheet.","qty":"Chưa rõ","status":"Có nhu cầu thật, đã hỏi bảng giá nhiều lần và hỏi đúng nhóm phụ kiện.","priority":"Cao","next":"Gửi lại catalogue gọn hơn kèm 5 nhóm hàng VinFast/e-bike có thể cung cấp; hỏi model xe, sản phẩm cần mua và số lượng dự kiến."},{"date":"2026-08-13","name":"Hermannfrankl Mangamba","country":"Chưa xác định (tiếng Pháp)","level":"Có level tag","need":"Hỏi MT09 rear rack box frame, muốn 3 pcs, hỏi thêm thùng nhôm kiểu Yamaha. Seller báo không có đúng model xe.","qty":"3 pcs","status":"Nhu cầu thật nhưng có rủi ro không khớp model/sản phẩm.","priority":"Trung bình","next":"Xin ảnh xe/model năm sản xuất; đề xuất sản phẩm thay thế phù hợp hoặc xác nhận không có để tránh mất thời gian."},{"date":"2026-08-13","name":"User name","country":"Chưa xác định","level":"Có level tag","need":"Hỏi sea shipping agent, muốn ship đường biển để rẻ hơn DHL; hỏi giá USD300, nhận báo 3 bộ USD144 + ship USD290; xin catalogue.","qty":"3 set","status":"Nhu cầu thật, quan tâm mạnh đến chi phí vận chuyển và catalogue.","priority":"Cao","next":"Báo 2 phương án: express nhanh và sea/forwarder rẻ hơn; gửi catalogue ngắn, hỏi cảng/thành phố nhận hàng và thời gian chấp nhận."},{"date":"2026-08-13","name":"Luis Arboleda","country":"Colombia","level":"Chưa thấy L","need":"Hỏi MBiker 28L Aluminum Side Boxes; cho địa chỉ Tunja Colombia; hỏi ship chuẩn, giá sản phẩm USD180/pcs; seller nói ship cao.","qty":"1 pcs / 1 pair","status":"Có địa chỉ và hỏi giá ship, khả năng mua thật nhưng nhạy cảm phí ship.","priority":"Cao","next":"Báo lại tổng tiền rõ: hàng, ship, thời gian, thuế chưa gồm; đưa phương án hàng gom/ship tiết kiệm nếu có."},{"date":"2026-08-12","name":"Heriberto yissi","country":"Chile","level":"Có level tag","need":"Hỏi crash bar và rear rack cho Honda CB350 Hness gửi Chile; 2 sản phẩm USD90, ship USD450; buyer nói quá đắt.","qty":"2 sản phẩm","status":"Buyer chê phí ship cao sau khi báo giá, cơ hội giảm mạnh nhưng vẫn có nhu cầu sản phẩm.","priority":"Trung bình","next":"Đề xuất phương án ship rẻ hơn/gom hàng; nếu không có, hỏi buyer có forwarder tại Trung Quốc không."},{"date":"2026-08-12","name":"Ester Faldikova","country":"Czech Republic","level":"Có level tag","need":"Order Rebel 300/500/1100 saddle bag holder, tổng USD71.90; trạng thái waiting for delivery confirmation, địa chỉ Zlin.","qty":"1 order","status":"Đã có đơn, đang cần thông tin để nhập khẩu/thông quan.","priority":"Rất cao","next":"Nhắn xác nhận đã giao/đang chờ xác nhận; xin thông tin còn thiếu cho hải quan và hướng dẫn buyer confirm delivery khi nhận hàng."},{"date":"2026-07-27","name":"Elmer Lopez","country":"Philippines","level":"Có level tag","need":"CB150X Rear Side Box Frame Rack Full B. Khách từng có order USD 155 và nói muốn order lại.","qty":"1","status":"Đã có order cũ, khách có nhu cầu mua lại.","priority":"Rất cao","next":"Xác nhận đặt lại đúng mẫu cũ, màu đen, địa chỉ cũ hay địa chỉ mới. Gửi lại order link ngay."},{"date":"2026-07-26","name":"Billy Uy","country":"Philippines","level":"Có level tag","need":"XSR155 crash guard / frame protection sliders. Đã tạo contract/order nhưng khách nói chưa thấy discount.","qty":"Chưa rõ","status":"Khách muốn quay về account gốc để thanh toán, có ý định chốt.","priority":"Rất cao","next":"Nhắn ở cả account này và account gốc: xác nhận đã chỉnh discount, gửi lại order đúng account, giữ giá trong 24h."},{"date":"2026-07-29","name":"Kwizerimana Josue","country":"Rwanda","level":"Chưa thấy L","need":"MBIKER Yamaha XSR155 Center Stand. Buyer có 22 product views, 13 valid inquiries trong 90 ngày.","qty":"10 pcs","status":"Đã hỏi sản phẩm, seller cần xin địa chỉ và mã bưu chính để tính ship.","priority":"Cao","next":"Gửi bảng giá 10-99 pcs USD 12, 100-199 pcs USD 11, 200+ pcs USD 10. Xin địa chỉ + postal code để báo ship và tạo quote."},{"date":"2026-07-29","name":"Guigma Charles","country":"Burkina Faso","level":"L1","need":"Exciter 155, màu đen. Khách hỏi giá, chê express ship sang BF USD 175.76 quá cao, có đầu mối nhận hàng tại Trung Quốc.","qty":"1","status":"Đã chấp nhận phương án giao tới đầu mối Trung Quốc.","priority":"Cao","next":"Nhắn tiếng Pháp: xác nhận có thể giao tới contact ở Trung Quốc, xin địa chỉ kho/contact, báo phí nội địa Trung Quốc rẻ hơn express BF."},{"date":"2026-07-27","name":"Ibrahim Jamadar","country":"Chưa thấy","level":"Chưa thấy L","need":"Yamaha XSR155 Motorcycle License Plate & Frames SKU PK.YA.XS.0022.","qty":"1 piece","status":"Khách yêu cầu báo nhanh, seller nói có thể place order.","priority":"Cao","next":"Gửi tổng giá gồm sản phẩm + ship, hỏi xác nhận màu/model, rồi tạo order 1 pcs nếu shop chấp nhận bán lẻ."},{"date":"2026-07-25","name":"FONKOU NARCISSE","country":"Cameroon","level":"Có level tag","need":"Muốn khoảng 5 pcs sample, hỏi trọng lượng từng sản phẩm, vướng forwarder từ Vietnam sang Cameroon.","qty":"5 pcs sample","status":"Đang kẹt phương án vận chuyển/forwarder.","priority":"Trung bình-cao","next":"Gửi trọng lượng/kích thước đóng gói, đề xuất 2 phương án: buyer tự có forwarder hoặc seller check forwarder hỗ trợ Cameroon."},{"date":"2026-07-24","name":"Edel ContrerasOrtiz","country":"USA / California","level":"Chưa thấy L","need":"Genuine Kawasaki Z1000 rack. Hỏi payment, địa chỉ California, sau đó nói phí ship quá cao.","qty":"1","status":"Có nhu cầu thật nhưng mắc phí ship.","priority":"Trung bình","next":"Đề xuất ship chậm hơn, gom hàng, hoặc gửi tới forwarder tại Mỹ/Trung Quốc. Hỏi mức phí ship buyer chấp nhận."},{"date":"2026-07-23","name":"juanma gonzalvez","country":"Chưa thấy","level":"Có level tag","need":"Muốn làm custom cho Sherco 125 2026, tùy chỉnh kích thước và điểm bắt, ban đầu 10 units nhưng không có bản vẽ.","qty":"10 units","status":"Có ý tưởng kinh doanh linh kiện/dàn áo, nhưng thiếu bản vẽ kỹ thuật.","priority":"Trung bình","next":"Không chốt không làm được quá sớm. Xin ảnh xe, ảnh vị trí lắp, kích thước tay đo, video quanh xe; báo phí làm mẫu hoặc MOQ custom."},{"date":"2026-07-23","name":"Navin Roonwal","country":"India / có kho Trung Quốc","level":"Có level tag","need":"Ducati Monster 821 motorcycle ramps/stands. Khách hỏi ship tới kho agent ở Yangkong/Trung Quốc và Ấn Độ, qty 1.","qty":"1","status":"Quan tâm thật nhưng chê phí ship cao.","priority":"Trung bình-thấp","next":"Nếu có kho Trung Quốc thì xin địa chỉ kho để báo phí nội địa; nếu gửi Ấn Độ thì khuyên gom số lượng vì 1 pcs ship cao."},{"date":"2026-07-29","name":"Carlos MeroMera","country":"Ecuador","level":"Chưa thấy L","need":"Hỏi ship tới Manta, Ecuador, muốn door-to-door, hỏi mã bưu chính; seller nói không bán lẻ 1 pcs.","qty":"1","status":"Có nhu cầu nhưng thấp vì chỉ 1 pcs và kẹt ship.","priority":"Trung bình-thấp","next":"Hỏi lại số lượng thực tế. Nếu chỉ 1 pcs thì note phí ship cao/khó; nếu mua nhiều thì báo door-to-door."},{"date":"2026-08-07","name":"Elmer Lopez","country":"Philippines","level":"Có level tag / khách cũ","need":"CB150X Rear Side Box Frame Rack Full B, màu đen. Khách cũ quay lại inquiry lại cùng sản phẩm.","qty":"1 set","status":"Khách hỏi 'Just one set?'. Seller báo 155 USD gồm phí ship, thuế nhập khẩu chưa gồm.","priority":"Rất cao","next":"Gửi order link ngay cho 1 set, xác nhận màu đen và địa chỉ nhận. Nhắc rõ 155 USD gồm ship, chưa gồm import duties."},{"date":"2026-08-10","name":"Pablo Bautista","country":"Tây Ban Nha/LatAm","level":"Chưa thấy","need":"Genuine M-Biker for Rebel 300/500 lower side mirror stand rearview motorcycle mirrors.","qty":"1 unidad","status":"Buyer gửi inquiry bằng tiếng Tây Ban Nha hỏi sản phẩm. Auto đã hỏi khách cần hỏi tương thích, specs hay giá.","priority":"Cao","next":"Nhắn tiếng Tây Ban Nha: xác nhận dùng cho Rebel 300/500, gửi giá 1 bộ + phí ship, hỏi địa chỉ nhận và đời xe."},{"date":"2026-08-10","name":"lin hong run","country":"Trung Quốc","level":"Có level tag","need":"Hỏi custom chân chống/foot stand vì không có mẫu phù hợp xe của khách.","qty":"Chưa rõ","status":"Buyer nói không có chân chống phù hợp nên hỏi có thể custom không; seller nói có thể làm nhưng cần tìm đúng model xe.","priority":"Cao","next":"Xin model xe, năm sản xuất, ảnh vị trí lắp, kích thước; báo rõ custom cần bản vẽ/mẫu và MOQ/chi phí làm mẫu."},{"date":"2026-08-07","name":"Gael tellez","country":"Chưa thấy","level":"Có level tag","need":"M-Biker THNG 30L Aluminum Alloy Top Box / nhu cầu hành lý xe máy 50L/retro-fit.","qty":"1","status":"Đã gửi quotation USD 80 và hỏi khách có cần chỉ 1 item không.","priority":"Trung bình-cao","next":"Hỏi model xe, dung tích cần 30L hay 50L, địa chỉ nhận để báo phí ship; nếu mua 1 pcs thì cảnh báo ship cao."},{"date":"2026-08-07","name":"ADAM KORZENIEWSKI","country":"Chưa thấy","level":"Có level tag","need":"Top box/luggage 50L cho Honda/Ducati/Kawasaki/Suzuki/Yamaha; hỏi có kèm bracket lắp đặt không.","qty":"1 piece","status":"Đã gửi quotation USD 80 và hỏi cấu hình tiêu chuẩn có gồm bracket khách cần không.","priority":"Trung bình-cao","next":"Gửi ảnh bracket/phụ kiện đi kèm, xác nhận xe khách, tạo báo giá gồm box + bracket + ship."},{"date":"2026-08-07","name":"DANIEL SPISSO","country":"Chưa thấy","level":"Có level tag","need":"Genuine MBiker Stainless Steel Forklift Codes MB360/MB111 Rear Motorcycle Lift Ramps & Stands.","qty":"≥50 pcs","status":"Đã gửi quotation USD 30/pcs và hỏi yêu cầu lắp đặt phía sau.","priority":"Cao","next":"Đây là qty lớn hơn nhóm mua lẻ. Cần gửi spec, packing, lead time, hỏi cảng nhận và yêu cầu kỹ thuật lắp đặt."},{"date":"2026-08-07","name":"Pablo Medovyk","country":"Ukraine / tiếng Ukraine","level":"Có level tag","need":"Rebel 300/500 saddle bag leather waterproof 35L; khách hỏi catalog moto accessories và gửi link Google Sheet.","qty":"Chưa rõ","status":"Khách có lịch sử hỏi catalog, sau đó gửi link Google Sheet ngày 07/08.","priority":"Cao","next":"Mở/xem danh sách khách gửi nếu có quyền; nếu không, xin khách gửi file/ảnh danh sách. Gửi catalog phụ kiện Rebel 300/500."},{"date":"2026-08-06","name":"Jec pangilinan","country":"Philippines","level":"Có level tag","need":"Hỏi VinFast OEM parts.","qty":"Chưa rõ","status":"Buyer hỏi shop có phụ tùng OEM VinFast không; seller hỏi cần sản phẩm gì và số lượng.","priority":"Trung bình","next":"Hỏi rõ mã phụ tùng/ảnh, dòng xe VinFast, số lượng; nếu không thuộc danh mục Mbike thì giới thiệu phụ kiện có thể sản xuất/custom."}],"explore":[{"date":"2026-08-14","name":"EmilT Cruz","country":"Chưa xác định","level":"Chưa thấy L","content":"Hỏi payment terms, shipping fee, số lượng 1 — SL: 1","review":"Lead cần báo ship","todo":"Khách hỏi update phí ship; cần báo lại ngay"},{"date":"2026-08-12","name":"GEORGE WILLIAM MATOVU","country":"Uganda","level":"Chưa thấy L","content":"Front paddock stand MB2021, hỏi front/rear set và giá — SL: 100; 10; 1","review":"Lead cần báo giá","todo":"Báo rõ option/version USD 100-180, hỏi số lượng"},{"date":"2026-08-24","name":"Stephen Varley","country":"Zambia","level":"Chưa thấy L","content":"Seller kéo khách về Alibaba; cần delivery city/state — SL: 1 piece; 20; 5","review":"Lead cần follow","todo":"Giữ chat trong Alibaba, hỏi địa chỉ giao"},{"date":"2026-08-07","name":"ADAM KORZENIEWSKI","country":"Chưa xác định","level":"Chưa thấy L","content":"Quotation top box/luggage 30L/50L — SL: 1 piece","review":"Lead cần khai thác","todo":"Xác nhận cần bracket/installation kit"},{"date":"2026-08-12","name":"Abdarman Abakar","country":"Chưa xác định","level":"Chưa thấy L","content":"Missing quantity and unit price — SL: Chưa rõ","review":"Lead cần khai thác","todo":"Cần hỏi đủ mẫu xe, năm xe, số lượng, địa chỉ nhận hàng; sau đó gửi báo giá trong Alibaba."},{"date":"2026-08-21","name":"Ferdinand Bautista","country":"Chưa xác định","level":"Chưa thấy L","content":"i want parts for vinfast e motorcycles — SL: Chưa rõ","review":"Lead cần khai thác","todo":"Cần hỏi đủ mẫu xe, năm xe, số lượng, địa chỉ nhận hàng; sau đó gửi báo giá trong Alibaba."},{"date":"2026-08-07","name":"Gael tellez","country":"Chưa xác định","level":"Chưa thấy L","content":"Quotation top box 30L/50L — SL: 1","review":"Lead cần khai thác","todo":"Hỏi xác nhận chỉ mua 1 item và địa chỉ ship"},{"date":"2026-08-06","name":"Jec pangilinan","country":"Philippines","level":"Chưa thấy L","content":"Hỏi Vinfast OEM parts/Vinfast accessories — SL: Chưa rõ","review":"Lead cần khai thác","todo":"Hỏi rõ model Vinfast và phụ kiện cần mua"},{"date":"2026-08-10","name":"Martin Bagheni","country":"France/French-speaking","level":"Chưa thấy L","content":"Yamaha PG1 anti-roll frame/underbody protection; khách hỏi sản phẩm là gì — SL: 1 pièce; 9 pièce; 5","review":"Lead cần khai thác","todo":"Cần hỏi đủ mẫu xe, năm xe, số lượng, địa chỉ nhận hàng; sau đó gửi báo giá trong Alibaba."},{"date":"2026-08-09","name":"Melvin Mendoza","country":"Chưa xác định","level":"Chưa thấy L","content":"Rear paddock stand; hỏi single sided swingarm — SL: MOQ 10","review":"Lead cần kỹ thuật","todo":"Cần xác nhận swingarm model/ảnh"},{"date":"2026-08-07","name":"Pablo Medovyk","country":"Chưa xác định","level":"Chưa thấy L","content":"Hỏi catalogue moto accessories, gửi Google Sheet — SL: 20; 500; 25","review":"Lead catalogue","todo":"Gửi catalogue có phân nhóm mẫu xe và hỏi model/số lượng"},{"date":"2026-08-08","name":"aljulanda alshaqsi","country":"Oman","level":"Chưa thấy L","content":"Khách gửi số +96899482153 và shipping mark LUBAN-ALJ153 — SL: Chưa rõ","review":"Lead có thông tin liên hệ","todo":"Xác nhận sản phẩm cụ thể/order; có số điện thoại"},{"date":"2026-08-12","name":"Chris Woglo","country":"Togo","level":"Chưa thấy L","content":"Order Yamaha PG1 giá ~9,925 USD nhưng order closed — SL: Order closed","review":"Lead nghi ngờ/đơn đóng","todo":"Xác minh spam/đơn ảo trước khi tốn thời gian"},{"date":"2026-08-10","name":"Pablo Bautista","country":"Spanish-speaking","level":"Chưa thấy L","content":"Inquiry rearview/lower side mirror Rebel 300/500 — SL: 1 unit","review":"Lead thấp","todo":"Cần báo giá/compatibility rõ hơn"},{"date":"2026-08-16","name":"lin hong run","country":"China/Chinese-speaking","level":"Chưa thấy L","content":"Hỏi custom kickstand/chân chống cho xe chưa có mẫu — SL: Chưa rõ","review":"Lead custom khó","todo":"Yêu cầu bản vẽ kỹ thuật/ảnh/kích thước; không có bản vẽ thì khó làm"},{"date":"2026-08-16","name":"lin hong run","country":"Chưa xác định","level":"Có level tag","content":"Preview chỉ thấy buyer trả lời OK, boss; chưa mở ổn định được hội thoại riêng do giao diện giữ chat Freddie.","review":"Có phản hồi nhưng chưa đủ dữ liệu","todo":"Rà lại bằng ô Search tên khách trước khi follow; không đưa vào ưu tiên khi chưa đọc đủ."},{"date":"2026-08-16","name":"kitti kittikron","country":"Chưa xác định (tiếng Thái)","level":"Chưa thấy L","content":"Preview seller yêu cầu địa chỉ, số điện thoại, mã bưu chính để tạo đơn.","review":"Có tín hiệu nhưng chưa đọc sâu","todo":"Rà lại hội thoại; nếu buyer đã gửi địa chỉ thì báo phí ship/tạo order ngay."},{"date":"2026-08-16","name":"Jonathan Loh","country":"Chưa xác định","level":"Có level tag","content":"Preview seller nói sẽ kiểm tra lại phí vận chuyển.","review":"Có khả năng đang chờ ship","todo":"Rà lại hội thoại; gửi phí ship trong 24h kèm thời gian giao và điều kiện thuế."},{"date":"2026-08-15","name":"Ndoss Thomsoni / HENKO IMPORT / EmilT Cruz","country":"Chưa xác định","level":"Có/không rõ","content":"Preview có hỏi số lượng, ngân sách 700-800 USD hoặc xin địa chỉ tính phí.","review":"Cần mở lại bằng Search để xác minh","todo":"Không đưa vào ưu tiên cho tới khi đọc được buyer đã phản hồi nhu cầu rõ ràng."},{"date":"2026-07-29","name":"Edwar Morales","country":"USA","level":"Chưa thấy","content":"Inquiry Yamaha PG1 Anti-Roll, qty 1. Mới có inquiry và câu chào tiếng Tây Ban Nha.","review":"Chưa phản hồi sâu","todo":"Follow 1 lần bằng tiếng Tây Ban Nha, hỏi model xe, số lượng và địa chỉ nhận hàng."},{"date":"2026-07-29","name":"Bernabel TorrijosBautista","country":"Bolivia","level":"L3","content":"Xem Yamaha PG1 Anti-Roll $58-60, min order 1.","review":"Có tín hiệu nhưng chưa nói sâu","todo":"Follow nhẹ hỏi số lượng + địa chỉ nhận hàng để báo ship."},{"date":"2026-07-24","name":"Luis Mayorga","country":"Chưa thấy","level":"Có level tag","content":"Quan tâm Yamaha WR155 accessories/catalog/pictures từ 20/7; 24/7 chỉ là AI follow-up.","review":"Chưa có phản hồi mới","todo":"Gửi ảnh/catalog WR155 một lần, hỏi sản phẩm và số lượng cụ thể."},{"date":"2026-07-23","name":"jioas adjadja","country":"Chưa thấy","level":"Có level tag","content":"Hỏi Yamaha Sirius luggage rack nhưng muốn mua cả xe máy kèm baga.","review":"Sai sản phẩm, tiềm năng thấp","todo":"Giải thích Mbike chỉ bán phụ kiện, hỏi lại nếu chỉ cần baga."},{"date":"2026-07-23","name":"Yohann Toto","country":"Chưa thấy","level":"Chưa thấy","content":"Hỏi có bán Winer/Winner 2026 không.","review":"Sai sản phẩm","todo":"Note không bán xe máy; chỉ giới thiệu phụ kiện nếu buyer cần."},{"date":"2026-07-26","name":"Cristian Miguel Apaza Arapa","country":"Chưa thấy","level":"Có level tag","content":"Hỏi CB350 anti-roll frame, màu chrome và tapabarro phía dưới; seller trả lời không có.","review":"Có nhu cầu nhưng sản phẩm chưa khớp","todo":"Nếu có sản phẩm thay thế, gửi ảnh; nếu không có thì đóng lead."},{"date":"2026-08-10","name":"Martin Bagheni","country":"Tiếng Pháp","level":"Chưa thấy","content":"Khách nhìn ảnh thấy xe máy và hỏi; seller giải thích không bán xe máy.","review":"Sai nhu cầu, không phải lead phụ kiện mạnh","todo":"Gửi 1 tin chốt: shop chỉ bán phụ kiện, nếu cần baga/gương/thùng thì gửi model xe."},{"date":"2026-08-10","name":"Ali Sory","country":"Tiếng Pháp","level":"Chưa thấy","content":"Khách hỏi giá/giao dịch và hỏi shop bán gì; seller nói bán phụ kiện xe máy, không bán xe.","review":"Cần giáo dục danh mục","todo":"Gửi catalog phụ kiện bằng tiếng Pháp, hỏi khách cần phụ kiện cho dòng xe nào."},{"date":"2026-08-10","name":"Gansonre Cheik","country":"Tiếng Pháp","level":"Chưa thấy","content":"Khách gửi ảnh/hỏi Single Luggage Rack Saddlebag nhưng nói muốn chiếc xe máy trong ảnh.","review":"Nhầm sản phẩm","todo":"Nhắc không bán xe máy; nếu cần rack/saddlebag thì hỏi model xe và số lượng."},{"date":"2026-08-08","name":"aljulanda alshaqsi","country":"Oman / tiếng Ả Rập","level":"Có level tag","content":"Khách gửi số điện thoại và hỏi có thiếu thông tin không; seller hỏi cần sản phẩm gì.","review":"Có thông tin liên hệ nhưng nhu cầu chưa rõ","todo":"Không chuyển kênh vội; hỏi sản phẩm cụ thể, model xe, số lượng ngay trong Alibaba."},{"date":"2026-08-08","name":"Sopan Lonare / Melvin Mendoza / Chris Woglo","country":"Chưa thấy","level":"Có/không rõ","content":"Preview ngắn: ok, ảnh, hoặc seller hỏi có đặt thật không.","review":"Cần kiểm tra thêm nếu muốn phân tích sâu","todo":"Chỉ follow nếu khách phản hồi thêm bằng model xe/số lượng/địa chỉ."}],"signals":[{"date":"2026-08-13","name":"Luis Arboleda","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-12","name":"Heriberto yissi","signal":"Mất do phí ship cao","conclusion":"Ship 450 USD quá cao; đề xuất gom hàng hoặc sản phẩm nhẹ hơn"},{"date":"2026-08-11","name":"Salvatore Iacono","signal":"Chưa có mẫu phù hợp","conclusion":"Chưa có, nên lưu nhu cầu phát triển sản phẩm"},{"date":"2026-08-11","name":"Fendi Chen","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-11","name":"zhangweiwei zhangweiwei","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-11","name":"Ergana Stpg","signal":"Không phù hợp/chưa có mẫu","conclusion":"Lưu nhu cầu theo dòng xe để phát triển sản phẩm; hỏi ảnh xe/năm xe nếu có thể làm custom."},{"date":"2026-08-11","name":"jania mark","signal":"Không phù hợp/chưa có mẫu","conclusion":"Lưu nhu cầu theo dòng xe để phát triển sản phẩm; hỏi ảnh xe/năm xe nếu có thể làm custom."},{"date":"2026-08-10","name":"Ali Sory","signal":"Không phù hợp - khách tưởng mua xe","conclusion":"Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."},{"date":"2026-08-09","name":"samir khanji","signal":"Lead chưa phù hợp mẫu xe","conclusion":"Có nhu cầu mua và xin link thanh toán nhưng chưa có fitment Tekken 250"},{"date":"2026-08-09","name":"Ramanantsoa Andriamifaly","signal":"Chưa có mẫu phù hợp","conclusion":"Chưa có mẫu; lưu nhu cầu theo dòng xe"},{"date":"2026-08-08","name":"Bakari TENKODOGO","signal":"Chưa có mẫu phù hợp","conclusion":"Không có center stand cho bike"},{"date":"2026-08-08","name":"Md Shohelrana","signal":"Không phù hợp - tưởng mua xe","conclusion":"Giải thích phụ kiện, không bán xe"},{"date":"2026-08-08","name":"Sopan Lonare","signal":"Không phù hợp - khách tưởng mua xe","conclusion":"Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."},{"date":"2026-08-25","name":"Xamid Bobojanov","signal":"Chưa đủ dữ liệu","conclusion":"Đã mở đọc nhưng nội dung chưa đủ để xác định; cần kiểm tra lại nếu seller thấy khách quan trọng."},{"date":"2026-08-24","name":"Patrick Chikasha","signal":"Không phù hợp - khách tưởng mua xe","conclusion":"Giải thích chỉ bán phụ kiện, không bán xe máy"},{"date":"2026-08-24","name":"sungjun hong","signal":"Không phù hợp - khách tưởng mua xe","conclusion":"Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."},{"date":"2026-08-24","name":"Mohamed Compaore","signal":"Không phù hợp - khách tưởng mua xe","conclusion":"Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."},{"date":"2026-08-22","name":"Razmik Gyurjyan","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-22","name":"rangsit gahawong","signal":"Phản hồi yếu","conclusion":"Có phản hồi nhưng chưa đủ nhu cầu; follow lại bằng câu hỏi cụ thể về sản phẩm/số lượng."},{"date":"2026-08-21","name":"Junior kabanga","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-21","name":"Bachir Sow","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-19","name":"Famili GomezPina","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-18","name":"Leshao Robert","signal":"Không phù hợp/chưa có hàng","conclusion":"Mbike không bán ống xả, lốp hết hàng"},{"date":"2026-08-18","name":"Qwesi Pappy","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-17","name":"Yakup Bayraktar","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-17","name":"MKhalil Fadhli","signal":"Vướng phí ship/thuế","conclusion":"Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."},{"date":"2026-08-17","name":"Radomir Pjevic","signal":"Lead yếu - hỏi COD","conclusion":"Giải thích chỉ thanh toán qua Alibaba trước"},{"date":"2026-08-13","name":"Hermannfrankl Mangamba","signal":"Lead chuyển thành chưa phù hợp","conclusion":"Có nhu cầu ban đầu, nhưng sản phẩm box nhôm chưa đúng mẫu"}]}};
+
+function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+}));
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById('sub_'+b.dataset.sub).classList.add('active');
+}));
+
+const wLatest = D.ops_weeks[D.ops_weeks.length-1];
+const wPrev = D.ops_weeks[D.ops_weeks.length-2];
+function pctDelta(cur,prev){ const c=+cur,p=+prev; if(!p) return null; return ((c-p)/p*100); }
+
+function kpiCard(label,value,note,cls){
+  return '<div class="kpi '+(cls||'')+'"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+(note||'')+'</div></div>';
+}
+(function renderKpis(){
+  const visD = pctDelta(wLatest['Tổng số người ghé thăm'], wPrev['Tổng số người ghé thăm']);
+  const respD = pctDelta(wLatest['Tỉ lệ tin nhắn được phản hồi trong 24h'], wPrev['Tỉ lệ tin nhắn được phản hồi trong 24h']);
+  let html='';
+  html+=kpiCard('Diem gian hang', wLatest['Số sao']+' &#9733;', 'On dinh 5 sao');
+  html+=kpiCard('Luot ghe tham (PV)', fmt(wLatest['Tổng số người ghé thăm']), (visD!=null?'<span class="delta '+(visD>=0?'up':'down')+'">'+(visD>=0?'+':'')+visD.toFixed(0)+'%</span> so voi tuan truoc':''));
+  html+=kpiCard('Khach truy cap doc lap', fmt(D.view_week.visitors), D.view_week.countries+' quoc gia / vung');
+  html+=kpiCard('Thu hoi hang', fmt(wLatest['Tổng số thư hỏi hàng']), wLatest['Tổng số thư hỏi hàng đã trả lời']+' / '+wLatest['Tổng số thư hỏi hàng']+' da tra loi', 'good');
+  html+=kpiCard('Phan hoi trong 24h', wLatest['Tỉ lệ tin nhắn được phản hồi trong 24h']+'%', (respD!=null?'<span class="delta '+(respD>=0?'up':'down')+'">'+(respD>=0?'+':'')+respD.toFixed(1)+'%</span> so voi tuan truoc':''), 'good');
+  html+=kpiCard('RFQ con lai', fmt(wLatest['Số lượt báo giá RFQ còn lại'])+' luot', 'Da bao '+wLatest['Tổng số lượt đã báo giá RFQ']+' / 23 luot', 'warn');
+  document.getElementById('kpis').innerHTML = html;
+})();
+
+(function renderFocus(){
+  const html = [
+    '<div class="focus-card red"><h3>&#9312; Xu ly 10 san pham co van de</h3><div class="big">10 <small>san pham</small></div><p>Co the anh huong traffic; can duy tri so don huy do nguoi ban khong qua 4 va ty le giao hang dung han tu 10% tro len.</p><div class="line"><b>Viec tiep theo</b><span class="tag red">Trong 48h</span></div></div>',
+    '<div class="focus-card amber"><h3>&#9313; Khai thac RFQ</h3><div class="big">20 <small>luot con lai</small></div><p>Da bao 3/23 luot RFQ trong tuan &mdash; con nhieu co hoi mien phi chua dung den.</p><div class="line"><b>Owner</b><span class="tag amber">Sales</span></div></div>',
+    '<div class="focus-card blue"><h3>&#9314; Dang san pham moi</h3><div class="big">'+fmt(wLatest['Tổng số sản phẩm mới đã đăng'])+' <small>sp moi tuan nay</small></div><p>Duy tri nhip dang them 5&ndash;10 san pham hot moi ngay theo ke hoach.</p><div class="line"><b>Owner</b><span class="tag blue">Ops</span></div></div>'
+  ].join('');
+  document.getElementById('focus_cards').innerHTML = html;
+})();
+
+const hasE = typeof echarts !== 'undefined';
+let charts = [];
+function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
+  let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+const AXL = { fontSize:11 };
+
+if (hasE) {
+  const weeks = D.ops_weeks.map(w=>w.period.split(' đến ')[1] || w.period);
+  let c = mkChart('ch_trend');
+  c.setOption({
+    tooltip:{trigger:'axis'}, legend:{top:0,textStyle:{fontSize:11}},
+    grid:{left:46,right:46,top:34,bottom:44},
+    xAxis:{type:'category',data:weeks,axisLabel:Object.assign({},AXL,{rotate:45})},
+    yAxis:[{type:'value',name:'PV',axisLabel:AXL},{type:'value',name:'%',min:80,max:100,axisLabel:AXL}],
+    series:[
+      {name:'Luot ghe tham (PV)',type:'bar',data:D.ops_weeks.map(w=>+w['Tổng số người ghé thăm']),itemStyle:{color:'#2864d7',borderRadius:[4,4,0,0]}},
+      {name:'Phan hoi 24h (%)',type:'line',yAxisIndex:1,data:D.ops_weeks.map(w=>+w['Tỉ lệ tin nhắn được phản hồi trong 24h']),smooth:true,itemStyle:{color:'#1f9a6d'}}
+    ]
+  });
+
+  c = mkChart('ch_products');
+  c.setOption({
+    tooltip:{trigger:'axis'}, legend:{top:0,textStyle:{fontSize:11}},
+    grid:{left:46,right:46,top:34,bottom:44},
+    xAxis:{type:'category',data:weeks,axisLabel:Object.assign({},AXL,{rotate:45})},
+    yAxis:[{type:'value',name:'SP',axisLabel:AXL},{type:'value',name:'RFQ',axisLabel:AXL}],
+    series:[
+      {name:'Top Product',type:'line',data:D.ops_weeks.map(w=>+w['Số lượng Top Product (tiềm năng)']),smooth:true,itemStyle:{color:'#ca7b1b'}},
+      {name:'Super Product',type:'line',data:D.ops_weeks.map(w=>+w['Số lượng Super Product (win)']),smooth:true,itemStyle:{color:'#1f9a6d'}},
+      {name:'RFQ da bao',type:'bar',yAxisIndex:1,data:D.ops_weeks.map(w=>+w['Tổng số lượt đã báo giá RFQ']),itemStyle:{color:'#d95761'}}
+    ]
+  });
+
+  c = mkChart('ch_funnel');
+  const lv = D.view_week.levels;
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: {c}'},
+    series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
+      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
+      color:['#9fb3d6','#7ea1e0','#4f7fd9','#2f6fd9','#1f9a6d'],
+      data:[
+        {value:lv.L0,name:'L0 - Da dang ky'},
+        {value:lv.L1,name:'L1 - Tiem nang'},
+        {value:lv.L2,name:'L2 - Scaleup'},
+        {value:lv.L3,name:'L3 - Enterprise'},
+        {value:lv.L4,name:'L4 - Enterprise Pro'}
+      ]}]
+  });
+  document.getElementById('l1pct').textContent = ((lv.L1+lv.L2+lv.L3+lv.L4)/D.view_week.visitors*100).toFixed(0)+'%';
+
+  c = mkChart('ch_country');
+  const top12 = D.countries.slice(0,12);
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:90,right:24,top:10,bottom:24},
+    xAxis:{type:'value',axisLabel:AXL},
+    yAxis:{type:'category',data:top12.map(x=>x.country).reverse(),axisLabel:AXL},
+    series:[{type:'bar',data:top12.map(x=>x.visitors).reverse(),itemStyle:{color:'#2864d7',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11}}]
+  });
+
+  c = mkChart('ch_priority');
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},
+    legend:{bottom:0,textStyle:{fontSize:12}},
+    series:[{type:'pie',radius:['42%','70%'],center:['50%','44%'],
+      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
+      data:[
+        {name:'Uu tien cao',value:26,itemStyle:{color:'#d95761'}},
+        {name:'Follow nhe',value:15,itemStyle:{color:'#ca7b1b'}},
+        {name:'Spam / it phan hoi',value:13,itemStyle:{color:'#9aa1ad'}}
+      ]}]
+  });
+  window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
+}
+
+document.getElementById('view_metrics').innerHTML =
+  '<div class="metric"><div class="n">'+fmt(D.view_week.visitors)+'</div><div class="l">Visitor records</div></div>'+
+  '<div class="metric"><div class="n">'+fmt(D.view_week.countries)+'</div><div class="l">Quoc gia / vung</div></div>'+
+  '<div class="metric"><div class="n">'+fmt(D.view_week.pv)+'</div><div class="l">PV gian hang</div></div>'+
+  '<div class="metric"><div class="n">'+fmt(D.view_week.buyer_l1plus)+'</div><div class="l">Buyer L1+</div></div>';
+
+(function renderOpsTable(){
+  const metrics = [
+    ['Số sao','Diem sao',false],
+    ['Tổng số sản phẩm','Tong san pham',true],
+    ['Tổng số sản phẩm mới đã đăng','SP moi dang',true],
+    ['Tổng số người ghé thăm','Luot ghe tham (PV)',true],
+    ['Tổng số thư hỏi hàng','Thu hoi hang',true],
+    ['Tổng số thư hỏi hàng đã trả lời','Da tra loi',true],
+    ['Tổng số lượt đã báo giá RFQ','RFQ da bao',true],
+    ['Số lượt báo giá RFQ còn lại','RFQ con lai',true],
+    ['Thời gian phản hồi tin nhắn trung bình(h)','TG phan hoi (h)',false],
+    ['Tỉ lệ tin nhắn được phản hồi trong 24h','Phan hoi 24h (%)',false],
+    ['Số lượng Super Product (win)','Super Product',true],
+    ['Số lượng Top Product (tiềm năng)','Top Product',true]
+  ];
+  const weeksChrono = D.ops_weeks.slice().reverse();
+  let h = '<tr><th>Chi so</th>'+weeksChrono.map(w=>'<th class="num">'+esc(w.period.split(' đến ')[1]||w.period)+'</th>').join('')+'</tr>';
+  metrics.forEach(([key,label,isNum])=>{
+    h += '<tr><td>'+label+'</td>'+weeksChrono.map(w=>'<td class="num">'+(isNum?fmt(w[key]):esc(w[key]))+'</td>').join('')+'</tr>';
+  });
+  document.getElementById('tbl_ops').innerHTML = h;
+})();
+
+function levelBadges(c){
+  return 'L0 '+c.L0+' &middot; L1 '+c.L1+' &middot; L2 '+c.L2+' &middot; L3 '+c.L3+' &middot; L4 '+c.L4;
+}
+function renderCountryTable(list){
+  let h = '<tr><th>Quoc gia / vung</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Co keyword</th><th class="num">L1+</th><th>Chi tiet cap L0-L4</th></tr>';
+  list.forEach(c=>{
+    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.vkw)+'</td><td class="num">'+fmt(c.L1plus)+'</td><td class="hint">'+levelBadges(c)+'</td></tr>';
+  });
+  document.getElementById('tbl_country').innerHTML = h;
+  document.getElementById('country_count').textContent = list.length+' / '+D.countries.length+' quoc gia';
+}
+renderCountryTable(D.countries);
+document.getElementById('country_search').addEventListener('input', e=>{
+  const q = e.target.value.trim().toLowerCase();
+  renderCountryTable(D.countries.filter(c=>c.country.toLowerCase().includes(q)));
+});
+let countrySort = {key:'visitors',dir:-1};
+document.getElementById('tbl_country').addEventListener('click', e=>{
+  const th = e.target.closest('th'); if(!th) return;
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const keys = ['country','visitors','pv','vkw','L1plus',null];
+  const key = keys[idx]; if(!key) return;
+  countrySort.dir = (countrySort.key===key) ? -countrySort.dir : -1;
+  countrySort.key = key;
+  const q = document.getElementById('country_search').value.trim().toLowerCase();
+  const base = D.countries.filter(c=>c.country.toLowerCase().includes(q));
+  base.sort((a,b)=> typeof a[key]==='string' ? a[key].localeCompare(b[key])*countrySort.dir : (a[key]-b[key])*countrySort.dir);
+  renderCountryTable(base);
+});
+
+const priorityColor = p => /rất cao|lead nóng|đã có đơn/i.test(p) ? 'red' : /cao|b2b tốt/i.test(p) ? 'amber' : /trung bình/i.test(p) ? 'blue' : 'gray';
+function renderPriTable(list){
+  let h = '<tr><th>Ngay</th><th>Khach hang</th><th>Quoc gia</th><th>Nhu cau / San pham</th><th>SL</th><th>Muc uu tien</th><th>De xuat nhan tiep theo</th></tr>';
+  list.forEach(r=>{
+    h += '<tr><td class="hint">'+esc(r.date)+'</td><td class="buyer">'+esc(r.name)+'</td><td>'+esc(r.country)+'</td><td>'+esc(r.need)+'</td><td class="hint">'+esc(r.qty)+'</td><td><span class="tag '+priorityColor(r.priority)+'">'+esc(r.priority)+'</span></td><td class="hint">'+esc(r.next)+'</td></tr>';
+  });
+  document.getElementById('tbl_pri').innerHTML = h;
+  document.getElementById('cnt_pri').textContent = list.length;
+}
+function renderExpTable(list){
+  let h = '<tr><th>Ngay</th><th>Khach hang</th><th>Quoc gia</th><th>Noi dung</th><th>Danh gia</th><th>Viec nen lam</th></tr>';
+  list.forEach(r=>{
+    h += '<tr><td class="hint">'+esc(r.date)+'</td><td class="buyer">'+esc(r.name)+'</td><td>'+esc(r.country)+'</td><td>'+esc(r.content)+'</td><td><span class="tag blue">'+esc(r.review)+'</span></td><td class="hint">'+esc(r.todo)+'</td></tr>';
+  });
+  document.getElementById('tbl_exp').innerHTML = h;
+  document.getElementById('cnt_exp').textContent = list.length;
+}
+function renderSigTable(list){
+  let h = '<tr><th>Ngay</th><th>Khach hang</th><th>Dau hieu</th><th>Ket luan</th></tr>';
+  list.forEach(r=>{
+    h += '<tr><td class="hint">'+esc(r.date)+'</td><td class="buyer">'+esc(r.name)+'</td><td><span class="tag gray">'+esc(r.signal)+'</span></td><td class="hint">'+esc(r.conclusion)+'</td></tr>';
+  });
+  document.getElementById('tbl_sig').innerHTML = h;
+  document.getElementById('cnt_sig').textContent = list.length;
+}
+renderPriTable(D.buyers.priority);
+renderExpTable(D.buyers.explore);
+renderSigTable(D.buyers.signals);
+document.getElementById('buyer_search').addEventListener('input', e=>{
+  const q = e.target.value.trim().toLowerCase();
+  const match = (obj,fields)=> fields.some(f=>(obj[f]||'').toLowerCase().includes(q));
+  renderPriTable(D.buyers.priority.filter(r=>match(r,['name','country','need','next'])));
+  renderExpTable(D.buyers.explore.filter(r=>match(r,['name','country','content','todo'])));
+  renderSigTable(D.buyers.signals.filter(r=>match(r,['name','signal','conclusion'])));
+});
+</script>
+</body></html>
