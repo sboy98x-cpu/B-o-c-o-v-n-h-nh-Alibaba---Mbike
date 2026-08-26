@@ -40,16 +40,6 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
 .priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
-.insight-card{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:10px;margin-bottom:8px;font-size:13px;line-height:1.5}
-.insight-card:last-child{margin-bottom:0}
-.insight-badge{flex:none;font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.03em;padding:3px 8px;border-radius:20px;white-space:nowrap;margin-top:1px;color:#fff}
-.insight-card.warn{background:var(--amber2);border:1px solid #f0c98a}
-.insight-card.warn .insight-badge{background:var(--amber)}
-.insight-card.opportunity{background:var(--blue2);border:1px solid var(--line)}
-.insight-card.opportunity .insight-badge{background:var(--blue)}
-.insight-card.good{background:var(--green2);border:1px solid #bfe3cd}
-.insight-card.good .insight-badge{background:var(--green)}
-.insight-text{color:#3a4556}
 .legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
 .legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
 .ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
@@ -138,10 +128,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
   <section class="kpis" id="kpis"></section>
   <div class="kpi-note-line" id="kpi_note"></div>
 
-  <div class="section" style="margin-bottom:15px">
-    <h2>&#128161; Insight cần chú ý</h2>
-    <div id="insight_list"></div>
-  </div>
+  <div class="priority-box"><div class="pico">&#128161;</div><div class="ptxt"><b>Insight cần chú ý</b><ul class="issue-list" id="insight_list"></ul></div></div>
 
   <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
   <nav class="tabs">
@@ -296,24 +283,17 @@ function kpiCard(label,value,note,cls){
   document.getElementById('kpi_note').textContent = 'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — 3 nguồn không cùng tuần nên không gộp thành một chỉ số duy nhất.';
 })();
 
-function renderInsights(insights){
-  const labelMap = {warn:'Cần chú ý', opportunity:'Cơ hội', good:'Đang tốt'};
-  return insights.slice(0,5).map(item => (
-    '<div class="insight-card '+item.type+'"><span class="insight-badge">'+labelMap[item.type]+'</span><span class="insight-text">'+item.text+'</span></div>'
-  )).join('');
-}
 (function renderVccInsights(){
-  const o = D.ops.latest, op = D.ops.previous, v = D.visitor.latest, vp = D.visitor.previous;
-  const byName = n => D.visitor.countries.find(c=>c.country===n) || {visitors:0,pv:0,l1_plus:0};
+  const v = D.visitor.latest, vp = D.visitor.previous;
+  const byName = n => D.visitor.countries.find(c=>c.country===n) || {visitors:0,l1_plus:0};
   const vn = byName('Việt Nam'), cn = byName('Trung Quốc'), us = byName('Hoa Kỳ');
   const insights = [
-    {type:'warn', text:'Visitor tăng nhẹ ('+v.visitor_records+' so với '+vp.visitor_records+') nhưng PV giảm ('+v.store_pv+' so với '+vp.store_pv+') và buyer L1+ giảm mạnh ('+v.buyer_l1_plus+' so với '+vp.buyer_l1_plus+'). Cần ưu tiên chất lượng traffic thay vì chỉ tăng số visitor.'},
-    {type:'warn', text:'Traffic đang tập trung nhiều ở Việt Nam ('+vn.visitors+' visitor, '+vn.pv+' PV) và Trung Quốc ('+cn.visitors+' visitor, '+cn.pv+' PV), trong khi Hoa Kỳ mới có '+us.visitors+' visitor/'+us.l1_plus+' L1+. Cần mở rộng traffic đúng thị trường cold-chain (Mỹ/EU).'},
-    {type:'opportunity', text:'Mary Jane Zamora, Keneth Adesulu, Alviaa Alviaa và Kirti Jain Kothari là nhóm cần follow trước vì đã có nhu cầu về sample, MOQ container, IQF/frozen fruits hoặc giá thị trường.'},
-    {type:'warn', text:'Các blocker chính đang chặn chốt đơn: '+D.messages.summary.main_blockers.join(', ')+'.'},
-    {type:'good', text:'Inquiry đã được trả lời đầy đủ ('+o.inquiries_replied+'/'+o.inquiries+') và tỷ lệ phản hồi trong 24h đạt '+o.reply_24h_rate+'%, nhưng cần cải thiện Marketing/traffic và tạo đơn Trade Assurance.'}
+    'Buyer L1+ giảm mạnh ('+v.buyer_l1_plus+' so với '+vp.buyer_l1_plus+') dù visitor tăng nhẹ; cần ưu tiên chất lượng traffic.',
+    'Traffic tập trung ở Việt Nam ('+vn.visitors+') và Trung Quốc ('+cn.visitors+'); Hoa Kỳ mới '+us.visitors+' visitor — cần mở rộng Mỹ/EU.',
+    'Ưu tiên follow: Mary Jane Zamora, Keneth Adesulu, Alviaa Alviaa, Kirti Jain Kothari.',
+    'Blocker chính: '+D.messages.summary.main_blockers.join(', ')+'.'
   ];
-  document.getElementById('insight_list').innerHTML = renderInsights(insights);
+  document.getElementById('insight_list').innerHTML = insights.map(t=>'<li>'+t+'</li>').join('');
 })();
 
 (function renderFocus(){
