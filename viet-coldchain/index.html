@@ -40,6 +40,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
 .priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
+.legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
+.ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.table.ops-table th{background:var(--navy);color:#fff}
+.table.ops-table td:first-child{font-weight:800;color:var(--navy);background:#f6f9fc}
 .priority-box .pico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
 .priority-box .ptxt b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8d641f;margin-bottom:3px}
 .priority-box .ptxt span{font-size:14px;color:#4a3410;font-weight:650;line-height:1.5}
@@ -127,37 +132,13 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 
   <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
   <nav class="tabs">
-    <button class="tab active" data-pane="ops">01 &middot; Vận hành</button>
-    <button class="tab" data-pane="view">02 &middot; Người xem</button>
-    <button class="tab" data-pane="buyers">03 &middot; Buyer &amp; tin nhắn</button>
-    <button class="tab" data-pane="diag">04 &middot; Kết luận &amp; action</button>
+    <button class="tab active" data-pane="view">01 &middot; Người xem</button>
+    <button class="tab" data-pane="buyers">02 &middot; Buyer &amp; tin nhắn</button>
+    <button class="tab" data-pane="diag">03 &middot; Kết luận &amp; action</button>
+    <button class="tab" data-pane="ops">04 &middot; Vận hành</button>
   </nav>
 
-  <section class="pane active" id="ops">
-    <div class="section">
-      <h2>Tuần này cần tập trung vào việc gì</h2>
-      <div class="note-line">Kỳ dữ liệu: <b id="ops_period"></b> &middot; nguồn sheet Vận hành</div>
-      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b>Vấn đề nổi bật đang ghi nhận</b><ul class="issue-list" id="ops_issues"></ul></div></div>
-      <div class="focus" id="focus_cards"></div>
-    </div>
-    <div class="grid2">
-      <div class="section">
-        <h2>Nhịp vận hành 14 tuần gần nhất</h2>
-        <div class="note-line">Lượt ghé thăm và tỷ lệ phản hồi trong 24h theo từng tuần.</div>
-        <div id="ch_trend" class="chart lg"></div>
-      </div>
-      <div class="section">
-        <h2>Sản phẩm &amp; RFQ 14 tuần gần nhất</h2>
-        <div id="ch_products" class="chart lg"></div>
-      </div>
-    </div>
-    <div class="section">
-      <h2>Bảng chi tiết 14 tuần (Vận hành)</h2>
-      <div class="table-wrap"><table class="table" id="tbl_ops"></table></div>
-    </div>
-  </section>
-
-  <section class="pane" id="view">
+  <section class="pane active" id="view">
     <div class="section">
       <h2>Người xem: đến từ đâu và chất lượng thế nào?</h2>
       <div class="note-line">Kỳ dữ liệu: <b id="view_period"></b> &middot; nguồn sheet Visitor Analyzer &middot; so với tuần trước (<span id="view_period_prev"></span>) trong ngoặc</div>
@@ -211,6 +192,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
   <section class="pane" id="diag">
     <div class="section">
       <h2>Kết luận tuần này</h2>
+      <div class="legend-note">
+        <span class="legend-chip"><span class="diag-tag p0">P0</span> Ưu tiên xử lý ngay &mdash; ảnh hưởng trực tiếp tới đơn hàng/doanh thu</span>
+        <span class="legend-chip"><span class="diag-tag p1">P1</span> Quan trọng, xử lý trong tuần &mdash; chưa khẩn cấp bằng P0</span>
+        <span class="legend-chip"><span class="diag-tag info">DATA</span> Thông tin tham khảo / cần thêm dữ liệu để kết luận sâu hơn</span>
+      </div>
       <div class="diag" id="diag_list"></div>
     </div>
     <div class="section">
@@ -227,6 +213,30 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
         <div class="diag-item"><span class="diag-tag info">DATA</span><div>Chưa có Click, Inquiry visitors, Orders/TA orders cùng kỳ để đối chiếu chuyển đổi thật.</div></div>
         <div class="diag-item"><span class="diag-tag info">DATA</span><div>3 nguồn lệch kỳ báo cáo (xem cảnh báo đầu trang) &mdash; không tính funnel gộp cho tới khi có dữ liệu cùng kỳ.</div></div>
       </div>
+    </div>
+  </section>
+
+  <section class="pane" id="ops">
+    <div class="section">
+      <h2 class="ops-heading">Tuần này cần tập trung vào việc gì</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="ops_period"></b> &middot; nguồn sheet Vận hành</div>
+      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b>Vấn đề nổi bật đang ghi nhận</b><ul class="issue-list" id="ops_issues"></ul></div></div>
+      <div class="focus" id="focus_cards"></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2 class="ops-heading">Nhịp vận hành 14 tuần gần nhất</h2>
+        <div class="note-line">Lượt ghé thăm và tỷ lệ phản hồi trong 24h theo từng tuần.</div>
+        <div id="ch_trend" class="chart lg"></div>
+      </div>
+      <div class="section">
+        <h2 class="ops-heading">Sản phẩm &amp; RFQ 14 tuần gần nhất</h2>
+        <div id="ch_products" class="chart lg"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Bảng chi tiết 14 tuần (Vận hành)</h2>
+      <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
     </div>
   </section>
 
