@@ -1,0 +1,728 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo tuần - Riken</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#153a5b;--blue:#1f7a8c;--blue2:#e6f4f6;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
+.hero{background:linear-gradient(120deg,#153a5b,#1f6f8c);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
+.hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
+.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#dcf0e3}
+.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
+.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#dcf0e3}
+.period b{display:block;color:#fff;font-size:14px;margin-top:2px}
+.langsw{display:flex;gap:6px;margin-bottom:10px;justify-content:flex-end}
+.langbtn{border:1px solid #dbe1ec;background:#fff;color:#3a4556;font:inherit;font-size:12px;font-weight:800;padding:6px 13px;border-radius:20px;cursor:pointer}
+.langbtn.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:8px}
+.kpi{background:#fff;border-radius:11px;padding:13px 15px;box-shadow:var(--shadow);min-width:0}
+.kpi .label{font-size:11px;color:var(--muted);margin-bottom:5px}
+.kpi .value{font-size:21px;font-weight:850;letter-spacing:-.04em}
+.kpi .note{font-size:11px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
+.delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
+.delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
+.kpi-note-line{font-size:11px;color:var(--muted);margin:2px 0 16px}
+.tabs-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--blue);font-weight:750;margin:2px 0 8px}
+.tabs-hint .arrow{animation:bounce-x 1.3s infinite}
+@keyframes bounce-x{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
+.tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
+.tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(21,58,91,.35)}
+.pane{display:none}.pane.active{display:block}
+.section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--navy);padding-left:10px}
+.section h3{font-size:14px;margin:0 0 10px}
+.note-line{font-size:12px;color:var(--muted);margin:8px 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.priority-box .pico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.priority-box .ptxt b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8d641f;margin-bottom:3px}
+.priority-box .ptxt ul{margin:6px 0 0;padding-left:18px}
+.priority-box .ptxt li{font-size:13px;color:#4a3410;margin-bottom:3px}
+.legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
+.legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
+.ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.table.ops-table th{background:var(--navy);color:#fff}
+.table.ops-table td:first-child{font-weight:800;color:var(--navy);background:#f6f9fc}
+.focus{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px}
+.focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:120px}
+.focus-card.red{background:var(--red2);border-color:#ffd7dc}
+.focus-card.amber{background:var(--amber2);border-color:#f5dfae}
+.focus-card.blue{background:var(--blue2);border-color:#c3dde6}
+.focus-card h3{font-size:15px;margin:0 0 9px}
+.focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
+.tag{display:inline-flex;border-radius:20px;padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:var(--green);background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:var(--muted);background:#eef1f5}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{border:1px solid var(--line);border-radius:10px;padding:12px}
+.metric .n{font-size:22px;font-weight:850}
+.metric .l{font-size:11px;color:var(--muted)}
+.chart{width:100%;height:280px}
+.chart.sm{height:220px}
+.table-wrap{overflow:auto}
+.table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap}
+.table th.num,.table td.num{text-align:right}
+.table tr:hover td{background:#fafcff}
+.hint{font-size:11px;color:var(--muted)}
+.kw-group{margin-bottom:14px}
+.kw-group h3{font-size:13px;color:var(--navy);margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--green2);color:var(--green);border-radius:20px;padding:6px 12px;font-size:12.5px;font-weight:700}
+.chip.gray{background:#eef1f5;color:var(--muted)}
+.buyer-card{border:1px solid var(--line);border-radius:11px;padding:14px;margin-bottom:10px}
+.buyer-card .bh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.buyer-card .bh b{font-size:14.5px}
+.buyer-card .bc{color:var(--muted);font-size:12px}
+.buyer-card .row{font-size:13px;margin-top:5px}
+.buyer-card .row b{font-weight:750;color:#4a5566}
+.copy-btn{margin-top:9px;border:1px solid var(--blue);background:var(--blue2);color:#155a68;border-radius:8px;padding:6px 12px;font:inherit;font-size:12px;font-weight:750;cursor:pointer}
+.copy-btn.copied{background:var(--green2);border-color:var(--green);color:var(--green)}
+.simple-list{display:grid;gap:9px}
+.simple-item{border-bottom:1px dashed var(--line);padding:9px 0;font-size:13px}
+.simple-item:last-child{border-bottom:0}
+.simple-item b{font-weight:800}
+.diag{display:grid;gap:9px}
+.diag-item{display:grid;grid-template-columns:55px 1fr;gap:10px;align-items:start;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.diag-item:last-child{border-bottom:0}
+.diag-tag{border-radius:6px;text-align:center;padding:4px 3px;font-size:11px;font-weight:850}
+.diag-tag.p0{color:var(--red);background:var(--red2)}.diag-tag.p1{color:var(--amber);background:var(--amber2)}.diag-tag.info{color:var(--blue);background:var(--blue2)}
+.sources{display:flex;gap:8px;flex-wrap:wrap}
+.sources a{color:var(--blue);background:var(--blue2);border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;font-weight:750}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:22px;line-height:1.9}
+.top-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-5px 0 10px;flex-wrap:wrap}
+.need{color:var(--muted);font-size:12px}
+.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
+.subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.subpane{display:none}.subpane.active{display:block}
+.searchbar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+.count-pill{font-size:11px;color:var(--muted);background:#f3f5f8;border-radius:20px;padding:4px 10px;white-space:nowrap}
+.chart.lg{height:320px}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
+@media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="langsw">
+    <button class="langbtn" id="btnVi">VI Tiếng Việt</button>
+    <button class="langbtn" id="btnZh">中文 中文</button>
+  </div>
+  <header class="hero">
+    <h1 id="h_title">RIKEN <span style="font-size:13px;opacity:.7" id="h_titleSmall">&middot; Báo cáo tuần</span></h1>
+    <div class="sub"><span class="badge" id="h_badgeIndustry">Ngành: Abrasive Materials</span><span class="badge" id="h_badgeSource">Nguồn: Vận hành &middot; Visitor Analyzer &middot; OneTalk Leads</span></div>
+    <div class="period" id="h_period">Xem chi tiết kỳ dữ liệu<b id="h_periodB">từng mục bên dưới</b></div>
+  </header>
+
+  <div class="top-actions">
+    <span class="need" id="topNote">Toàn bộ dữ liệu chi tiết từ 3 nguồn đã được nhúng sẵn trong trang này &mdash; không cần mở Google Sheet.</span>
+    <div class="sources">
+      <a href="#" target="_blank" id="src_ops">&#8599; Sheet Vận hành (gốc)</a>
+      <a href="#" target="_blank" id="src_visitor">&#8599; Sheet Visitor Analyzer (gốc)</a>
+      <a href="#" target="_blank" id="src_leads">&#8599; Sheet OneTalk Leads (gốc)</a>
+    </div>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+  <div class="kpi-note-line" id="kpi_note"></div>
+
+  <div class="tabs-hint"><span class="arrow">&#128072;</span><span id="tabsHintTxt">Bấm vào từng mục bên dưới để xem chi tiết</span></div>
+  <nav class="tabs">
+    <button class="tab active" data-pane="view" id="tabBtnView"></button>
+    <button class="tab" data-pane="buyers" id="tabBtnBuyers"></button>
+    <button class="tab" data-pane="diag" id="tabBtnDiag"></button>
+    <button class="tab" data-pane="ops" id="tabBtnOps"></button>
+  </nav>
+
+  <section class="pane active" id="view">
+    <div class="section">
+      <h2 id="view_h2"></h2>
+      <div class="note-line" id="view_notewrap">Kỳ dữ liệu: <b id="view_period"></b></div>
+      <div class="metric-row" id="view_metrics"></div>
+    </div>
+    <div class="section">
+      <div class="priority-box"><div class="pico">&#128161;</div><div class="ptxt"><b id="view_insightsTitle">Insight cần chú ý</b><ul id="view_insights"></ul></div></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2 id="funnelTitle"></h2>
+        <div id="ch_funnel" class="chart"></div>
+      </div>
+      <div class="section">
+        <h2 id="countryChartTitle"></h2>
+        <div id="ch_country" class="chart"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 id="countryTableTitle"></h2>
+      <div class="note-line" id="country_note" style="margin-top:0"></div>
+      <div class="searchbar"><input id="country_search"><span class="count-pill" id="country_count"></span></div>
+      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_country"></table></div>
+    </div>
+    <div class="section">
+      <h2 id="kwGroupsTitle"></h2>
+      <div class="note-line" id="kwGroupsNote"></div>
+      <div id="kw_groups"></div>
+    </div>
+    <div class="section">
+      <h2 id="kwTableTitle"></h2>
+      <div class="note-line" id="kwTableNote"></div>
+      <div class="searchbar"><input id="kw_search"><span class="count-pill" id="kw_count"></span></div>
+      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_kw"></table></div>
+    </div>
+  </section>
+
+  <section class="pane" id="buyers">
+    <div class="section">
+      <h2 id="buyers_h2"></h2>
+      <div class="metric-row">
+        <div class="metric"><div class="n" style="color:var(--red)" id="m_priority"></div><div class="l" id="m_priority_l">Gần order</div></div>
+        <div class="metric"><div class="n" style="color:var(--blue)" id="m_deep"></div><div class="l" id="m_deep_l">Lead thật cần làm rõ</div></div>
+        <div class="metric"><div class="n" style="color:var(--amber)" id="m_follow"></div><div class="l" id="m_follow_l">Cần theo dõi</div></div>
+        <div class="metric"><div class="n" id="m_real"></div><div class="l" id="m_real_l">Tổng lead có phản hồi thật</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 id="buyerListTitle"></h2>
+      <div class="subtabs">
+        <button class="subtab active" data-sub="pri" id="subBtnPri"></button>
+        <button class="subtab" data-sub="deep" id="subBtnDeep"></button>
+        <button class="subtab" data-sub="exp" id="subBtnExp"></button>
+        <button class="subtab" data-sub="sig" id="subBtnSig"></button>
+      </div>
+      <div class="subpane active" id="sub_pri"><div id="cards_pri"></div></div>
+      <div class="subpane" id="sub_deep"><ul class="simple-list" id="list_deep"></ul></div>
+      <div class="subpane" id="sub_exp"><ul class="simple-list" id="list_exp"></ul></div>
+      <div class="subpane" id="sub_sig"><ul class="simple-list" id="list_sig"></ul></div>
+    </div>
+  </section>
+
+  <section class="pane" id="diag">
+    <div class="section">
+      <h2 id="diag_h2"></h2>
+      <div class="legend-note">
+        <span class="legend-chip"><span class="diag-tag p0">P0</span><span id="legend_p0"></span></span>
+        <span class="legend-chip"><span class="diag-tag p1">P1</span><span id="legend_p1"></span></span>
+        <span class="legend-chip"><span class="diag-tag info">DATA</span><span id="legend_info"></span></span>
+      </div>
+      <div class="note-line" id="ops_conclusion" style="margin:0 0 14px"></div>
+      <div class="diag" id="diag_items"></div>
+    </div>
+    <div class="section">
+      <h2 id="actionPlanTitle"></h2>
+      <div class="grid3" id="actionPlanCards"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="ops">
+    <div class="section">
+      <h2 class="ops-heading" id="ops_bigIssueTitle"></h2>
+      <div class="note-line" id="ops_periodWrap">Kỳ dữ liệu: <b id="ops_period"></b></div>
+      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b id="ops_alertTitle">Cảnh báo vận hành</b><ul id="ops_alerts"></ul></div></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading" id="ops_actionsTitle"></h2>
+      <div class="simple-list" id="ops_actions_list"></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2 class="ops-heading" id="ops_trendTitle"></h2>
+        <div class="note-line" id="ops_trendNote"></div>
+        <div id="ch_trend" class="chart lg"></div>
+      </div>
+      <div class="section">
+        <h2 class="ops-heading" id="ops_productsTitle"></h2>
+        <div id="ch_products" class="chart lg"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading" id="ops_tableTitle"></h2>
+      <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
+    </div>
+  </section>
+
+  <div class="foot" id="footNote"></div>
+</main>
+
+<script>
+const RAW = {"weeks_full":[{"period_vi":"14-06-2026 đến 20-06-2026","period_zh":"14-06-2026 đến 20-06-2026","stars":"0","products":"404","newProducts":"200","visitors":"47","inquiries":"1","repliedInquiries":"1","rfqQuoted":"8","rfqRemaining":"12","avgResponse":"0h","reply24h":"100","superProduct":"0","topProduct":"0"},{"period_vi":"21-06-2026 đến 27-06-2026","period_zh":"21-06-2026 đến 27-06-2026","stars":"0","products":"950","newProducts":"546","visitors":"89","inquiries":"5","repliedInquiries":"5","rfqQuoted":"20","rfqRemaining":"20","avgResponse":"0h","reply24h":"100","superProduct":"0","topProduct":"1"},{"period_vi":"05-07-2026 đến 11-07-2026","period_zh":"2026年7月5日至7月11日","stars":"1","products":"2201","newProducts":"1251","visitors":"175","inquiries":"2","repliedInquiries":"2","rfqQuoted":"15","rfqRemaining":"16","avgResponse":"0,04h","reply24h":"100.00","superProduct":"0","topProduct":"1"},{"period_vi":"09-08-2026 đến 15-08-2026","period_zh":"2026年8月9日至8月15日","stars":"1","products":"2340","newProducts":"139","visitors":"119","inquiries":"4","repliedInquiries":"4","rfqQuoted":"5","rfqRemaining":"29","avgResponse":"0,72h","reply24h":"100.00","superProduct":"0","topProduct":"3"}],"latest_raw":{"period":"09-08-2026 đến 15-08-2026 | 2026年8月9日至8月15日","stars":"1","products":"2340","newProducts":"139","visitors":"119","inquiries":"4","repliedInquiries":"4","rfqQuoted":"5","rfqRemaining":"29","avgResponse":"0,72h","reply24h":"100.00%","superProduct":"0","topProduct":"3"},"previous_raw":{"period":"05-07-2026 đến 11-07-2026 | 2026年7月5日至7月11日","stars":"1","products":"2201","newProducts":"1251","visitors":"175","inquiries":"2","repliedInquiries":"2","rfqQuoted":"15","rfqRemaining":"16","avgResponse":"0,04h","reply24h":"100.00%","superProduct":"0","topProduct":"1"},"countries_full":[{"country":{"vi":"Ai Cập","zh":"埃及"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Azerbaijan","zh":"阿塞拜疆"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Ấn Độ","zh":"印度"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Bulgaria","zh":"保加利亚"},"visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":1,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":{"vi":"Các Tiểu Vương quốc Ả Rập Thống nhất","zh":"阿拉伯联合酋长国"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Canada","zh":"加拿大"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":{"vi":"Colombia","zh":"哥伦比亚"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Cộng hòa Dân chủ Congo","zh":"刚果民主共和国"},"visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Cộng hòa Dominica","zh":"多米尼加共和国"},"visitors":1,"pv":5,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":{"vi":"Estonia","zh":"爱沙尼亚"},"visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Hoa Kỳ","zh":"美国"},"visitors":4,"pv":6,"keywordVisitors":3,"exactKeywordRecords":8,"L0":4,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Iraq","zh":"伊拉克"},"visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Mexico","zh":"墨西哥"},"visitors":3,"pv":11,"keywordVisitors":2,"exactKeywordRecords":5,"L0":1,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":{"vi":"Mozambique","zh":"莫桑比克"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Nga","zh":"俄罗斯"},"visitors":2,"pv":6,"keywordVisitors":2,"exactKeywordRecords":4,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Pakistan","zh":"巴基斯坦"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Peru","zh":"秘鲁"},"visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Philippines","zh":"菲律宾"},"visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":8,"L0":0,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":{"vi":"Sri Lanka","zh":"斯里兰卡"},"visitors":2,"pv":4,"keywordVisitors":2,"exactKeywordRecords":7,"L0":0,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":{"vi":"Tanzania","zh":"坦桑尼亚"},"visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":7,"L0":0,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":{"vi":"Thái Lan","zh":"泰国"},"visitors":1,"pv":3,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Uruguay","zh":"乌拉圭"},"visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":7,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":{"vi":"Việt Nam","zh":"越南"},"visitors":5,"pv":12,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":4,"L2":0,"L3":0,"L4":0,"L1Plus":4},{"country":{"vi":"Ý","zh":"意大利"},"visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1}],"keywords_full":[{"keyword":"asiento para moto keeway light 202","occurrences":2,"pv":2,"levels":{"L0":2,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Uruguay","zh":"乌拉圭"}},{"keyword":"botas impermeable trmicas para agua y frio","occurrences":2,"pv":2,"levels":{"L0":2,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Uruguay","zh":"乌拉圭"}},{"keyword":"lijas de banda 2x72 cermica","occurrences":2,"pv":2,"levels":{"L0":2,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Uruguay","zh":"乌拉圭"}},{"keyword":"40  740","occurrences":1,"pv":5,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Nga","zh":"俄罗斯"}},{"keyword":"50915","occurrences":1,"pv":5,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Nga","zh":"俄罗斯"}},{"keyword":"banda de lija abrasiva 2x72","occurrences":1,"pv":5,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dominica","zh":"多米尼加共和国"}},{"keyword":"carros","occurrences":1,"pv":5,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dominica","zh":"多米尼加共和国"}},{"keyword":"px930t","occurrences":1,"pv":5,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Nga","zh":"俄罗斯"}},{"keyword":"relojes inteligentes","occurrences":1,"pv":5,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dominica","zh":"多米尼加共和国"}},{"keyword":"sierra cinta para madera","occurrences":1,"pv":5,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dominica","zh":"多米尼加共和国"}},{"keyword":"discos de lija automotriz","occurrences":1,"pv":4,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mexico","zh":"墨西哥"}},{"keyword":"digital toys for kids","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"gift for girlfriend","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"sanding sponge block","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"wood sanding sponge","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"5","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"aws400 spray gun oem","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"cabinet door hinge","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"climatic","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Bulgaria","zh":"保加利亚"}},{"keyword":"farm tools","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dân chủ Congo","zh":"刚果民主共和国"}},{"keyword":"pistola para pintar autos","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"plus size african dress","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dân chủ Congo","zh":"刚果民主共和国"}},{"keyword":"robe femme soire","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Cộng hòa Dân chủ Congo","zh":"刚果民主共和国"}},{"keyword":"watch","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"wider 4 style airless sprayer","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"winder 4 spray gunpistola de pulverizacin","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"wood glue for furniture","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"airsoft tabanca","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Azerbaijan","zh":"阿塞拜疆"}},{"keyword":"blank peelandstick sand art adhesive sheet","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Pakistan","zh":"巴基斯坦"}},{"keyword":"bombas diafragma pulmn aire 2","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Colombia","zh":"哥伦比亚"}},{"keyword":"brembo big brake kit for toyota prado 2021","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"ceramic sanding paper sheets","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"cristalespasta de diamante para pulir piedras","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mexico","zh":"墨西哥"}},{"keyword":"cue tip repair tool","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"cuentas de agata de grano azul","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mexico","zh":"墨西哥"}},{"keyword":"disco de jefe para pulir","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Peru","zh":"秘鲁"}},{"keyword":"disco de pulir de caucho plana","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Peru","zh":"秘鲁"}},{"keyword":"disco de pulir de caucho plana  para joyeria","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Peru","zh":"秘鲁"}},{"keyword":"disco pulidora de homa plana","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Peru","zh":"秘鲁"}},{"keyword":"discos para serelharia","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mozambique","zh":"莫桑比克"}},{"keyword":"engine ya ist","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"german saw blades for juwellry","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"granite polishing pads 50 150m","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Các Tiểu Vương quốc Ả Rập Thống nhất","zh":"阿拉伯联合酋长国"}},{"keyword":"gxk56","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Nga","zh":"俄罗斯"}},{"keyword":"hammer drill","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Ấn Độ","zh":"印度"}},{"keyword":"industrial spray painting machine","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Ai Cập","zh":"埃及"}},{"keyword":"j flowers pool cue","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"jewelry saw blade","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"machado","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mozambique","zh":"莫桑比克"}},{"keyword":"marble polishing paid 6 inch","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Các Tiểu Vương quốc Ả Rập Thống nhất","zh":"阿拉伯联合酋长国"}},{"keyword":"miras nocturnas","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Uruguay","zh":"乌拉圭"}},{"keyword":"multi bit 5 mm","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Ấn Độ","zh":"印度"}},{"keyword":"non woven buff polishing wheel for gemstone","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Ấn Độ","zh":"印度"}},{"keyword":"outdoor wifi booster","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"predator p3","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"prefabricated house","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Canada","zh":"加拿大"}},{"keyword":"pregos de varias polegadas de 1 a 6 polegadas","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mozambique","zh":"莫桑比克"}},{"keyword":"pulidora vertical","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"rihon sanding cloth","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"sand paper no 120 8 holes","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"sanding belt 2in x 162 in  grit p240","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"sanding belt 503353mm grit p240","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Hoa Kỳ","zh":"美国"}},{"keyword":"sanding paper with sponge","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Sri Lanka","zh":"斯里兰卡"}},{"keyword":"siete chakras corazon cuentas","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mexico","zh":"墨西哥"}},{"keyword":"siete chakras piedras naturales","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Mexico","zh":"墨西哥"}},{"keyword":"silah","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Azerbaijan","zh":"阿塞拜疆"}},{"keyword":"silicon gun","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Ấn Độ","zh":"印度"}},{"keyword":"solar enegizer","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Tanzania","zh":"坦桑尼亚"}},{"keyword":"stud mounted rectifier diode","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"whirlpool washing machine control panel","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Philippines","zh":"菲律宾"}},{"keyword":"xps foam insulation boards","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Canada","zh":"加拿大"}},{"keyword":"xps tile backer board","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"top_country":{"vi":"Canada","zh":"加拿大"}}],"near_order":[{"name":"Antonio Majano","country":{"vi":"Chưa xác định","zh":"未确认"},"date":"2026-08-24","need":{"vi":"Hỏi Riken là nhà sản xuất hay thương mại.","zh":"询问 Riken 是生产厂家还是贸易公司。"},"qty":{"vi":"Chưa nêu","zh":"未说明"},"blocker":{"vi":"Buyer hỏi trực tiếp năng lực công ty, cần trả lời rõ factory/manufacturer.","zh":"买家关注公司性质，需要明确回复工厂/厂家身份。"},"priority_label":{"vi":"Lead thật - ưu tiên cao","zh":"真实询盘-高优先级"},"next":{"vi":"Trả lời là nhà máy/chuyên abrasive, nêu năm thành lập/năng lực, hỏi sản phẩm và số lượng.","zh":"回复工厂身份、研磨材料能力，并询问产品和数量。"}},{"name":"Ali Lali","country":{"vi":"Chưa xác định","zh":"未确认"},"date":"2026-08-20","need":{"vi":"Cần 20 rolls sandpaper, grit 120 và 180, medium sanding paper; có thể cần backing/coating theo ảnh.","zh":"需要20卷砂纸，120/180目，中等打磨用途，需确认背基/涂层。"},"qty":{"vi":"20 rolls","zh":"20卷"},"blocker":{"vi":"Đã có nhu cầu sản phẩm, thiếu thông tin backing/coating, size, địa chỉ ship.","zh":"需求明确，但缺少背基/涂层、尺寸和收货地址。"},"priority_label":{"vi":"Lead thật - ưu tiên cao","zh":"真实询盘-高优先级"},"next":{"vi":"Hỏi backing material/coating, width/length, destination; gửi quote 120/180 grit.","zh":"确认背基、涂层、宽度长度、目的地后报价。"}},{"name":"Zephy Lubwela","country":{"vi":"Pháp ngữ","zh":"法语区"},"date":"2026-08-18","need":{"vi":"Cần 25 rolls P100 + 25 rolls P120, mỗi roll dài 50m.","zh":"需要25卷P100和25卷P120，每卷50米。"},"qty":{"vi":"50 rolls total","zh":"共50卷"},"blocker":{"vi":"Nhu cầu rất rõ, đang hỏi thêm công ty/email/type/application/destination/trial hay regular.","zh":"数量规格清楚，需补充公司信息、用途、目的地以及试单/长期采购。"},"priority_label":{"vi":"Lead tốt - ưu tiên cao","zh":"优质线索-高优先级"},"next":{"vi":"Lấy đủ company, application, delivery address; gửi quote + freight.","zh":"收集公司、用途、收货地址后发送报价和运费。"}},{"name":"yael Ramirez","country":{"vi":"Dominican Republic","zh":"多米尼加"},"date":"2026-08-11","need":{"vi":"Cần abrasive sponge xanh 100x120x12mm, grit 60-400#, hardness medium, dùng cho car/wood; số lượng 1,000 pcs.","zh":"需要蓝色海绵砂块100x120x12mm，60-400目，中等硬度，用于汽车/木材，数量1000个。"},"qty":{"vi":"1,000 pcs","zh":"1000个"},"blocker":{"vi":"Specs rất rõ, cần company/destination/schedule/target price.","zh":"规格明确，需要公司、目的地、采购时间和目标价。"},"priority_label":{"vi":"Lead tốt - ưu tiên cao","zh":"优质线索-高优先级"},"next":{"vi":"Xin destination city/port và target price, gửi quote.","zh":"获取目的城市/港口和目标价后报价。"}},{"name":"Victor Pedrozo","country":{"vi":"Mexico","zh":"墨西哥"},"date":"2026-08-18","need":{"vi":"Abrasive/sandpaper nhiều grit, grit range 320-3000; grit 80 không có.","zh":"多种粒度砂纸，现有320-3000目，80目不可供。"},"qty":{"vi":"Khoảng 500 pcs, muốn nhiều grit; MOQ 100 pcs/mỗi grit.","zh":"约500片，多个粒度；每个粒度MOQ 100片。"},"blocker":{"vi":"Buyer hỏi bằng tiếng Tây Ban Nha: muốn nhiều loại grit, tối thiểu mỗi grit bao nhiêu, muốn khoảng 500 chiếc. Smart action gợi ý giá $1.20/pc.","zh":"买家询问不同粒度的起订量，约500片，系统建议价格$1.20/片。"},"priority_label":{"vi":"Rất cao","zh":"最高"},"next":{"vi":"Xác nhận có thể mix grit, mỗi grit tối thiểu 100 pcs, hỏi khách muốn chia 500 pcs theo grit nào và báo giá chính thức.","zh":"可以混合粒度，每个粒度最低100片。请确认500片分别需要哪些粒度，我们马上给您正式报价。"}},{"name":"balaji Selvam","country":{"vi":"India","zh":"印度"},"date":"2026-08-17","need":{"vi":"RIKEN Aluminum Oxide Sandpaper thay thế Rhynowet; grit 80-800, easy-tear.","zh":"RIKEN氧化铝砂纸替代Rhynowet，80-800目，易撕。"},"qty":{"vi":"RFQ ≥20,000 pcs; quotation USD 0.20/pc.","zh":"询盘≥20,000片，报价USD 0.20/片。"},"blocker":{"vi":"Seller đã gửi báo giá cho Wolverine RW-A36 Aluminum Oxide Sanding Sheet; order progress thiếu địa chỉ ship.","zh":"已发送报价，订单信息缺少收货地址。"},"priority_label":{"vi":"Rất cao","zh":"最高"},"next":{"vi":"Hỏi xác nhận có chấp nhận RIKEN thay thế Rhynowet không, cần grit/size cụ thể và địa chỉ nhận hàng.","zh":"请确认是否接受RIKEN作为Rhynowet替代品，并提供具体粒度、尺寸及收货地址以便核算运费。"}},{"name":"yael Ramirez","country":{"vi":"Dominican Republic","zh":"多米尼加"},"date":"2026-08-11","need":{"vi":"Blue abrasive sponge 100 x 120 x 12 mm, grit 60-400#, medium hardness, dùng cho ô tô và gỗ.","zh":"蓝色海绵砂块100x120x12mm，60-400目，中等硬度，用于汽车和木材。"},"qty":{"vi":"1,000 pcs","zh":"1000片"},"blocker":{"vi":"Seller đã hỏi company name, website, business type, destination city/port, schedule, target price và xác nhận YINLI hay OEM.","zh":"已询问公司、网站、业务类型、目的港、采购计划、目标价以及YINLI或OEM。"},"priority_label":{"vi":"Cao","zh":"高"},"next":{"vi":"Follow lại bằng bảng thông tin cần khách điền, kèm cam kết báo giá trong ngày.","zh":"请客户补充公司信息、目的港、采购时间和品牌要求，收到后当天提供正式报价。"}},{"name":"michael tigano","country":{"vi":"United States","zh":"美国"},"date":"2026-08-03","need":{"vi":"230x280mm Silicon Carbide Waterproof Sandpaper, Riken C35P, P60-P2000.","zh":"230x280mm碳化硅水砂纸，Riken C35P，P60-P2000。"},"qty":{"vi":"1,000 pcs","zh":"1000片"},"blocker":{"vi":"Buyer có target price $0.09/pc. Seller đã giới thiệu C35P, hỏi grit cụ thể và đề nghị gửi free samples.","zh":"买家目标价$0.09/片；已介绍C35P并询问具体粒度，建议寄样。"},"priority_label":{"vi":"Cao","zh":"高"},"next":{"vi":"Nhắc lại ưu thế C35P, hỏi grit cần test và địa chỉ nhận mẫu.","zh":"再次强调C35P防水纸基和切削优势，请客户确认测试粒度和样品收货地址。"}},{"name":"Ruby N","country":{"vi":"Vietnam flag","zh":"越南标识"},"date":"2026-07-28","need":{"vi":"Corundum sanding paper rolls, medium hardness, 80-800 grit, dùng xử lý aluminum.","zh":"刚玉砂纸卷，中等硬度，80-800目，用于铝材加工。"},"qty":{"vi":"1,000 pcs","zh":"1000片"},"blocker":{"vi":"Seller đã hỏi khách cần đóng gói từng tờ hay dạng cuộn.","zh":"已询问需要单张包装还是卷装。"},"priority_label":{"vi":"Trung bình-cao","zh":"中高"},"next":{"vi":"Gửi 2 phương án đóng gói và giá theo từng phương án.","zh":"提供单张包装和卷装两个方案，并分别报价。"}},{"name":"Raymond lockett","country":{"vi":"United States","zh":"美国"},"date":"2026-07-28","need":{"vi":"Spray gun 600mL gravity feed, dùng ô tô/nội thất/xây dựng.","zh":"600mL上壶喷枪，用于汽车、家具和建筑。"},"qty":{"vi":"1 unit test","zh":"1台测试"},"blocker":{"vi":"Buyer hỏi shipping time tới US; seller hỏi phương thức vận chuyển và xác nhận chỉ mua 1 chiếc để test.","zh":"买家询问到美国运输时间，已询问运输方式并确认是否只买1台测试。"},"priority_label":{"vi":"Trung bình-cao","zh":"中高"},"next":{"vi":"Báo 2 lựa chọn ship mẫu: express và economy, kèm thời gian.","zh":"提供快递和经济运输两种样品运输方案及预计时效。"}},{"name":"Javier Garcia","country":{"vi":"Chưa mở riêng, preview trong chat","zh":"未单独打开，来自预览"},"date":"2026-07-18","need":{"vi":"Aluminum Oxide Flap Disc 4 inch/100mm, grit 40/60, carbon steel polishing, OEM packaging.","zh":"4英寸/100mm氧化铝百叶片，40/60目，碳钢打磨，支持OEM包装。"},"qty":{"vi":"1,000 pcs","zh":"1000片"},"blocker":{"vi":"Seller đã viết proposal khá đầy đủ: chất lượng, OEM/ODM, lead time 5-10 ngày, free samples.","zh":"已发送完整方案，包含质量、OEM、交期5-10天和免费样品。"},"priority_label":{"vi":"Cao","zh":"高"},"next":{"vi":"Tách thành báo giá ngắn, hỏi logo/packing và địa chỉ mẫu.","zh":"简化成正式报价，确认LOGO/包装要求和样品地址。"}}],"deep_leads":[{"name":"balaji Selvam","country":{"vi":"Ấn Độ","zh":"印度"},"note":{"vi":"RFQ tìm Rhynowet sandpaper; Riken đề xuất Aluminum Oxide Sandpaper thay thế, cần grit/size/quantity.","zh":"RFQ寻找Rhynowet砂纸，Riken可推荐氧化铝砂纸替代，需要确认粒度、尺寸、数量。 | SL: Chưa nêu / 未说明"},"eval":{"vi":"Lead thật - ưu tiên vừa","zh":"真实询盘-中优先级"},"next":{"vi":"Hỏi có chấp nhận Riken alternative không, yêu cầu grit/size/quantity.","zh":"询问是否接受Riken替代品，并确认粒度尺寸数量。"}},{"name":"MARCOS RODRIGUES","country":{"vi":"Brazil","zh":"巴西"},"note":{"vi":"Seller follow: Riken là factory sản xuất abrasive materials số lượng lớn, hỏi buyer còn nhu cầu không.","zh":"卖家跟进：Riken是大批量研磨材料工厂，询问买家是否仍有采购需求。 | SL: Chưa nêu / 未说明"},"eval":{"vi":"Lead cũ","zh":"老线索"},"next":{"vi":"Follow bằng câu hỏi sản phẩm cụ thể, grit/quantity.","zh":"跟进具体产品、粒度和数量。"}},{"name":"Victor Pedrozo","country":{"vi":"Spanish","zh":"西语区"},"note":{"vi":"Buyer nói công ty sẽ phản hồi qua email sớm.","zh":"买家表示公司将通过邮件回复。 | SL: Chưa nêu / 未说明"},"eval":{"vi":"Cần xác minh","zh":"需核实"},"next":{"vi":"Mời tiếp tục trao đổi trong Alibaba, hỏi sản phẩm/quantity.","zh":"引导在阿里巴巴内沟通，询问产品和数量。"}},{"name":"Faisal Latif","country":{"vi":"Pakistan","zh":"巴基斯坦"},"note":{"vi":"Buyer hỏi 'which product, sir'.","zh":"买家问具体是什么产品。"},"eval":{"vi":"Có phản hồi nhưng chưa rõ nhu cầu.","zh":"有回复但需求不明确。"},"next":{"vi":"Gửi lại ảnh/link sản phẩm đã hỏi và hỏi application, grit, quantity.","zh":"发送对应产品图/链接，并询问用途、粒度和数量。"}},{"name":"Roman Zebzeev","country":{"vi":"Russia","zh":"俄罗斯"},"note":{"vi":"Seller hỏi còn nhu cầu mua không.","zh":"卖家询问是否仍有采购需求。"},"eval":{"vi":"Lead cũ, cần kích hoạt lại.","zh":"老线索需重新激活。"},"next":{"vi":"Gửi 3 SKU bán tốt và hỏi nhu cầu hiện tại.","zh":"发送3个热销SKU并确认当前采购需求。"}},{"name":"I RIN LEE","country":{"vi":"Korea","zh":"韩国"},"note":{"vi":"Seller hỏi đã nhận email chưa.","zh":"卖家询问是否收到邮件。"},"eval":{"vi":"Có trao đổi ngoài email, cần kéo về Alibaba.","zh":"已转邮件，建议回到平台。"},"next":{"vi":"Nhắn lại trong Alibaba tóm tắt báo giá và hỏi phản hồi.","zh":"在阿里内重新总结报价并询问反馈。"}},{"name":"Even Christan","country":{"vi":"Netherlands","zh":"荷兰"},"note":{"vi":"Hỏi hỗ trợ chọn sản phẩm, tài liệu kỹ thuật và lắp đặt pump.","zh":"涉及泵产品选型、技术资料和安装支持。"},"eval":{"vi":"Có nhu cầu kỹ thuật nhưng có thể lệch ngành mài mòn.","zh":"有技术需求但可能非核心品类。"},"next":{"vi":"Xác minh loại pump/sản phẩm có thuộc danh mục Riken không.","zh":"先确认该泵是否属于RIKEN可供产品范围。"}},{"name":"Jake Wilson","country":{"vi":"United States","zh":"美国"},"note":{"vi":"Buyer hỏi 'Can we discuss further?'.","zh":"买家要求进一步沟通。"},"eval":{"vi":"Có tín hiệu thật nhưng thiếu SKU.","zh":"有真实沟通信号但缺SKU。"},"next":{"vi":"Hỏi khách đang quan tâm sản phẩm nào, grit/size/quantity.","zh":"询问具体产品、粒度、尺寸和采购数量。"}},{"name":"Comprasferreteriakoala Dosquebradas","country":{"vi":"Chưa mở riêng","zh":"未单独打开"},"note":{"vi":"Seller hỏi estimated order quantity và OEM/private label packaging.","zh":"已询问数量及是否需要OEM/自有品牌包装。"},"eval":{"vi":"Lead phụ kiện/abrasive có thể tốt.","zh":"可能有潜力。"},"next":{"vi":"Cần mở riêng tuần sau nếu có thời gian.","zh":"下次可单独打开核查完整对话。"}},{"name":"MauroCesar Andrade","country":{"vi":"Chưa mở riêng","zh":"未单独打开"},"note":{"vi":"RFQ Silicon Carbide waterproof sandpaper P60-P3000, OEM.","zh":"碳化硅水砂纸P60-P3000，支持OEM。"},"eval":{"vi":"Có sản phẩm khớp ngành.","zh":"产品匹配度高。"},"next":{"vi":"Follow lại bằng bảng grit/size/packing.","zh":"用粒度、尺寸、包装表格跟进。"}},{"name":"Tee Poungkaew","country":{"vi":"Chưa mở riêng","zh":"未单独打开"},"note":{"vi":"Trao đổi về chi phí vận chuyển nhanh, cần số lượng để ước tính.","zh":"快递运费需数量才能估算。"},"eval":{"vi":"Kẹt ở phí ship.","zh":"卡在运费核算。"},"next":{"vi":"Hỏi số lượng và kích thước kiện để báo DHL/FedEx.","zh":"询问数量和包装尺寸以核算DHL/FedEx费用。"}}],"followup_simple":[{"name":"Cham Reoun","country":{"vi":"Cambodia","zh":"柬埔寨"},"signal":{"vi":"Chỉ thấy video, chưa đọc được nhu cầu văn bản.","zh":"仅看到视频，无明确文字需求。"},"conclusion":{"vi":"Theo dõi thấp nếu không có phản hồi thêm.","zh":"无进一步回复则低优先级。"}},{"name":"MARCOS RODRIGUES","country":{"vi":"Brazil","zh":"巴西"},"signal":{"vi":"Seller hỏi khách còn nhu cầu mua không.","zh":"卖家询问是否仍采购。"},"conclusion":{"vi":"Chưa có phản hồi mới.","zh":"暂无新回复。"}},{"name":"Maurosalgadolucas Lucas","country":{"vi":"United States","zh":"美国"},"signal":{"vi":"Auto reception stopped.","zh":"自动接待停止。"},"conclusion":{"vi":"Không đủ lead.","zh":"信息不足。"}},{"name":"Hector Escobar","country":{"vi":"Panama","zh":"巴拿马"},"signal":{"vi":"Auto reception stopped.","zh":"自动接待停止。"},"conclusion":{"vi":"Không đủ lead.","zh":"信息不足。"}},{"name":"Mina Hakem","country":{"vi":"Egypt","zh":"埃及"},"signal":{"vi":"Auto reception stopped.","zh":"自动接待停止。"},"conclusion":{"vi":"Không đủ lead.","zh":"信息不足。"}},{"name":"David Rod","country":{"vi":"United States","zh":"美国"},"signal":{"vi":"Liên quan hủy đơn và hoàn tiền.","zh":"涉及取消订单和退款。"},"conclusion":{"vi":"Không phải lead bán mới.","zh":"非新增销售线索。"}},{"name":"Miriel / Aliasger / Pablo","country":{"vi":"US/AE/ES","zh":"US/AE/ES"},"signal":{"vi":"Chỉ chào hỏi hoặc cảm ơn.","zh":"仅问候或致谢。"},"conclusion":{"vi":"Không phân tích sâu.","zh":"不做重点分析。"}},{"name":"Susan Forrest","country":{"vi":"Nepal","zh":"尼泊尔"},"signal":{"vi":"Seller chỉ gửi website công ty.","zh":"仅发送公司网站。"},"conclusion":{"vi":"Cần có phản hồi mua mới đưa lên ưu tiên.","zh":"需买家回复后再提升优先级。"}}]};
+
+const SOURCES = {ops_url:'https://docs.google.com/spreadsheets/d/1UlxJruIUI9LH-g10mVVLqjUWOyS45gyPIsRjO12N0QI/edit', visitor_url:'https://docs.google.com/spreadsheets/d/1Fs4Bces592xi67xKvfttG2O4Imk9p6wsE2w7vFjgOjI/edit', leads_url:'https://docs.google.com/spreadsheets/d/1lgfpYWEQconuxATb3E0Z717nCgsmQrnyGdSZyzunYRE/edit'};
+
+const T = {
+ vi: {
+  titleSmall:'&middot; Báo cáo tuần', badgeIndustry:'Ngành: Abrasive Materials (Vật liệu mài mòn)', badgeSource:'Nguồn: Vận hành &middot; Visitor Analyzer &middot; OneTalk Leads',
+  periodTop:'Xem chi tiết kỳ dữ liệu', periodTopB:'từng mục bên dưới',
+  topNote:'Toàn bộ dữ liệu chi tiết từ 3 nguồn đã được nhúng sẵn trong trang này &mdash; không cần mở Google Sheet.',
+  src_ops:'&#8599; Sheet Vận hành (gốc)', src_visitor:'&#8599; Sheet Visitor Analyzer (gốc)', src_leads:'&#8599; Sheet OneTalk Leads (gốc)',
+  kpiNote:'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — Vận hành và Visitor Analyzer không cùng tuần.',
+  tabsHint:'Bấm vào từng mục bên dưới để xem chi tiết',
+  tab_view:'01 &middot; Người xem', tab_buyers:'02 &middot; Buyer &amp; tin nhắn', tab_diag:'03 &middot; Kết luận &amp; action', tab_ops:'04 &middot; Vận hành',
+  kpi_stars:'Điểm gian hàng', kpi_stars_note:'Marketing còn thiếu 91 visitor, Service còn thiếu 1 buyer feedback để lên mốc tiếp theo',
+  kpi_visitors:'Người ghé thăm (Vận hành)', kpi_visitors_note:'tuần {p} (sheet Vận hành)',
+  kpi_inquiries:'Thư hỏi hàng', kpi_inquiries_note:'{r}/{t} đã trả lời, so với {pv} tuần trước',
+  kpi_reply:'Phản hồi trong 24h', kpi_reply_note:'so với tuần trước ({pv}%)',
+  kpi_l1:'Buyer L1+ (Visitor Analyzer)', kpi_l1_note:'so với tuần trước ({pv})',
+  kpi_near:'Gần order / cần báo giá', kpi_near_note:'{n} cảnh báo vận hành đang mở',
+  view_h2:'Người xem: đến từ đâu và chất lượng thế nào?',
+  view_note:'Kỳ dữ liệu: <b id="view_period"></b> &middot; nguồn sheet Visitor Analyzer &middot; so với tuần trước (<span id="view_period_prev"></span>) trong ngoặc',
+  view_insightsTitle:'Insight cần chú ý',
+  m_visitorRecords:'Visitor records', m_visitorPrev:'tuần trước', m_countries:'Quốc gia / vùng', m_storePv:'PV gian hàng', m_l1plus:'Buyer L1+',
+  funnelTitle:'Cấp người mua (phễu chất lượng)', countryChartTitle:'Quốc gia (nhóm L1+ ưu tiên trước)',
+  levelNames:{L0:'L0 - Đã đăng ký', L1:'L1 - Tiềm năng (Seed)', L2:'L2 - Scaleup', L3:'L3 - Enterprise', L4:'L4 - Enterprise Pro'},
+  countryTableTitle:'Toàn bộ quốc gia / vùng có khách ghé thăm', countrySearchPh:'Tìm quốc gia...', countryCountSuffix:'quốc gia',
+  country_note:'Bảng xếp theo số buyer L1+ giảm dần, sau đó theo visitor.',
+  ctH_country:'Quốc gia', ctH_visitors:'Visitor', ctH_pv:'PV', ctH_kwv:'Có keyword', ctH_kwr:'Bản ghi keyword', ctH_l0:'L0', ctH_l1p:'L1+',
+  kwGroupsTitle:'Từ khoá theo nhóm sản phẩm', kwGroupsNote:'Traffic đến từ nhiều nhóm sản phẩm khác nhau — không coi mọi visitor là buyer phù hợp.',
+  kwG_abrasive:'Đúng ngành Abrasive/Sanding', kwG_spray:'Spray Gun/Tool — có thể liên quan', kwG_furniture:'Furniture/DIY — có thể là cơ hội phụ', kwG_noise:'Lệch ngành / nhiễu',
+  kwTableTitle:'Toàn bộ từ khoá tìm kiếm thật của khách', kwTableNote:'Nguyên văn từ khoá khách gõ để tìm ra gian hàng, sắp xếp theo số lần xuất hiện nhiều nhất.',
+  kwSearchPh:'Tìm từ khoá...', kwCountSuffix:'từ khoá',
+  kwH_keyword:'Từ khoá', kwH_occ:'Số lần', kwH_pv:'PV', kwH_country:'Quốc gia phổ biến nhất',
+  buyers_h2:'Buyer cần follow &mdash; tổng hợp từ OneTalk Leads',
+  m_priority_l:'Gần order', m_deep_l:'Lead thật cần làm rõ', m_follow_l:'Cần theo dõi', m_real_l:'Tổng lead có phản hồi thật',
+  buyerListTitle:'Danh sách buyer',
+  sub_pri:'Gần order', sub_deep:'Lead thật cần làm rõ', sub_exp:'Theo dõi', sub_sig:'Nguyên tắc follow-up',
+  card_need:'Nhu cầu:', card_blocker:'Vướng mắc:', card_next:'Việc tiếp theo:',
+  copyBtn:'Copy next action', copiedBtn:'Đã copy!', copyErr:'Không copy được',
+  diag_h2:'Kết luận tuần này',
+  legend_p0:'Ưu tiên xử lý ngay &mdash; ảnh hưởng trực tiếp tới đơn hàng/doanh thu',
+  legend_p1:'Quan trọng, xử lý trong tuần &mdash; chưa khẩn cấp bằng P0',
+  legend_info:'Thông tin tham khảo / cần thêm dữ liệu để kết luận sâu hơn',
+  ops_conclusion:'Riken có tốc độ phản hồi tốt (100% trong 24h, trung bình 0,72h) và catalog lớn (2.340 sản phẩm), nhưng gian hàng vẫn giữ 1 sao và traffic vận hành giảm (175&rarr;119 visitor). 501 listing gây hiểu nhầm là rủi ro lớn nhất, trong khi 6 buyer đã hỏi rõ grit/size/quantity/freight cần được chốt báo giá trước khi mất cơ hội.',
+  diag_items:[
+   {tag:'p0',html:'<b>501 sản phẩm gây hiểu nhầm</b> đang ảnh hưởng trực tiếp đến chất lượng gian hàng và trọng số tìm kiếm.'},
+   {tag:'p0',html:'<b>Gian hàng vẫn giữ 1 sao</b> nhiều tuần liền. Marketing thiếu 91 visitor, Service thiếu 1 buyer phản hồi để lên mốc tiếp theo.'},
+   {tag:'p1',html:'<b>Traffic vận hành giảm</b> (175&rarr;119 visitor) dù còn 29 lượt RFQ chưa khai thác hết.'},
+   {tag:'p1',html:'<b>Chưa có Super Product</b>, mới có 3 Top Product; chưa ghi nhận GMV Trade Assurance nào.'},
+   {tag:'info',html:'<b>6 buyer đã hỏi rõ grit/size/quantity/freight</b> (Ali Lali, Zephy Lubwela, yael Ramirez, Victor Pedrozo, balaji Selvam, michael tigano) đang chờ báo giá chính thức &mdash; cần chốt trước khi mất cơ hội.'}
+  ],
+  actionPlanTitle:'Action plan 7 ngày',
+  actionCards:[
+   {h:'Trong 48 giờ', p:'Báo giá ngay cho Ali Lali (20 rolls 120/180), Zephy Lubwela (50 rolls P100/P120) và yael Ramirez (1.000 pcs abrasive sponge) khi đã đủ thông số.', cls:'red', tag:'Sales'},
+   {h:'Trong 7 ngày', p:'Xử lý 501 sản phẩm gây hiểu nhầm, follow Victor Pedrozo và balaji Selvam để chốt mix-grit/RFQ, xin thêm 1 Service feedback.', cls:'amber', tag:'Ops + Sales'},
+   {h:'Tuần kế tiếp', p:'Đẩy 3 Top Product lên chất lượng cao hơn, chuẩn bị điều kiện Super Product, tạo đơn Trade Assurance đầu tiên khi buyer sẵn sàng thanh toán.', cls:'blue', tag:'Manager'}
+  ],
+  ops_bigIssueTitle:'Vấn đề lớn nhất tuần này', ops_periodLabel:'Kỳ dữ liệu:', ops_periodNote:'nguồn sheet Vận hành',
+  ops_alertTitle:'Cảnh báo vận hành',
+  ops_alerts:['501 sản phẩm gây hiểu nhầm, ảnh hưởng chất lượng và trọng số tìm kiếm.','Marketing còn thiếu 91 visitor để lên mốc tiếp theo.','Service còn thiếu 1 buyer phản hồi để lên mốc tiếp theo.','Chưa có GMV / đơn Trade Assurance nào.'],
+  ops_actionsTitle:'Hành động tuần tới',
+  ops_actions:['Xử lý 501 sản phẩm gây hiểu nhầm và kiểm tra chất lượng listing.','Duy trì 5-10 sản phẩm hot mỗi ngày, ưu tiên nhóm abrasive/sanding có nhu cầu thật.','Dùng RFQ để tăng traffic mục tiêu; theo dõi 29 lượt RFQ còn lại.','Tăng buyer feedback lần hai để đạt mốc Service tiếp theo.','Đẩy 3 Top Product lên chất lượng cao hơn và tạo Super Product khi đủ điều kiện.','Dùng ảnh/video thật tại nhà máy hoặc người cầm sản phẩm; tránh ảnh ghép/chỉnh quá mức.','Theo dõi buyer lớn hằng tuần và tạo báo giá trong Alibaba.'],
+  ops_trendTitle:'Nhịp vận hành nhiều tuần', ops_trendNote:'Lượt ghé thăm và tỷ lệ phản hồi trong 24h theo từng tuần &mdash; toàn bộ lịch sử có trong sheet Vận hành.',
+  ops_productsTitle:'Sản phẩm &amp; RFQ nhiều tuần', ops_tableTitle:'Bảng KPI vận hành toàn bộ lịch sử tuần',
+  opsMetrics:[['stars','Số sao'],['products','Tổng sản phẩm'],['newProducts','Sản phẩm mới'],['visitors','Người ghé thăm'],['inquiries','Thư hỏi hàng'],['repliedInquiries','Đã trả lời'],['rfqQuoted','RFQ đã báo giá'],['rfqRemaining','RFQ còn lại'],['avgResponse','Phản hồi TB'],['reply24h','Trả lời trong 24h'],['superProduct','Super Product'],['topProduct','Top Product']],
+  legendVisitor:'Lượt ghé thăm', legendReply:'Phản hồi 24h (%)', legendTop:'Top Product', legendSuper:'Super Product', legendRfq:'RFQ đã báo',
+  foot:'Báo cáo tuần &middot; thiết kế theo cấu trúc success case &middot; dữ liệu được nhúng trực tiếp từ 3 sheet nguồn',
+  insights:[
+   'Traffic visitor giảm so với tuần trước (49&rarr;38 visitor, 31&rarr;24 quốc gia); L1+ cũng giảm 20&rarr;16 — nên ưu tiên chất lượng lead hơn số lượng.',
+   'Việt Nam có 5 visitor và 4 L1+ nhưng không ghi nhận keyword nào — cần xác minh lại nhu cầu thực trước khi coi là lead abrasive.',
+   'Mexico, Philippines, Sri Lanka và Tanzania đều có tỷ lệ L1+ cao — nên ưu tiên theo dõi các quốc gia này.',
+   'Nhiều keyword thuộc nhóm nhiễu (đồ chơi, quần áo, đồng hồ, phụ tùng xe...) — không nên tính các visitor này là buyer abrasive tiềm năng.'
+  ],
+  principles:[
+   'Không coi auto reception stopped, chào hỏi, refund/cancel order hoặc seller follow-up đơn thuần là lead nóng.',
+   'Trước khi xin email/điện thoại, phải chốt product, grit, size, qty, packing và destination.',
+   'Victor nói công ty sẽ phản hồi qua email — nên kéo trao đổi và báo giá về lại Alibaba.',
+   'I RIN LEE đã có trao đổi qua email — cần tóm tắt lại báo giá trong Alibaba.'
+  ]
+ },
+ zh: {
+  titleSmall:'&middot; 周报', badgeIndustry:'行业：研磨材料（Abrasive Materials）', badgeSource:'数据来源：运营 &middot; 访客分析 &middot; OneTalk线索',
+  periodTop:'查看下方各模块详情', periodTopB:'各模块数据周期不同',
+  topNote:'来自3个数据源的详细数据已全部嵌入本页面 &mdash; 无需重新打开Google表格。',
+  src_ops:'&#8599; 运营表格（原始）', src_visitor:'&#8599; 访客分析表格（原始）', src_leads:'&#8599; OneTalk线索表格（原始）',
+  kpiNote:'每个KPI均按括号内标注的周期取值——运营和访客分析数据周期不同。',
+  tabsHint:'点击下方各模块查看详情',
+  tab_view:'01 &middot; 访客分析', tab_buyers:'02 &middot; 买家与消息', tab_diag:'03 &middot; 结论与行动', tab_ops:'04 &middot; 运营',
+  kpi_stars:'店铺星级', kpi_stars_note:'营销距离下一档还差91位访客，服务距离下一档还差1位买家反馈',
+  kpi_visitors:'访客数（运营）', kpi_visitors_note:'{p}周（运营表格）',
+  kpi_inquiries:'询盘数', kpi_inquiries_note:'{r}/{t}已回复，对比上周{pv}',
+  kpi_reply:'24小时回复率', kpi_reply_note:'对比上周（{pv}%）',
+  kpi_l1:'L1+买家（访客分析）', kpi_l1_note:'对比上周（{pv}）',
+  kpi_near:'临近成交/待报价', kpi_near_note:'{n}个运营预警待处理',
+  view_h2:'访客：来自哪里，质量如何？',
+  view_note:'数据周期：<b id="view_period"></b> &middot; 来源：访客分析表格 &middot; 括号内为对比上周（<span id="view_period_prev"></span>）',
+  view_insightsTitle:'需要关注的洞察',
+  m_visitorRecords:'访客记录数', m_visitorPrev:'上周', m_countries:'国家/地区数', m_storePv:'店铺PV', m_l1plus:'L1+买家数',
+  funnelTitle:'买家等级（质量漏斗）', countryChartTitle:'国家（优先关注L1+群体）',
+  levelNames:{L0:'L0 - 已注册', L1:'L1 - 潜在买家（Seed）', L2:'L2 - Scaleup', L3:'L3 - Enterprise', L4:'L4 - Enterprise Pro'},
+  countryTableTitle:'全部有访客来访的国家/地区', countrySearchPh:'搜索国家...', countryCountSuffix:'个国家',
+  country_note:'表格按L1+买家数量降序排列，其次按访客数排序。',
+  ctH_country:'国家', ctH_visitors:'访客数', ctH_pv:'PV', ctH_kwv:'有关键词', ctH_kwr:'关键词记录', ctH_l0:'L0', ctH_l1p:'L1+',
+  kwGroupsTitle:'按产品类别分组的关键词', kwGroupsNote:'流量来自多个不同产品类别——不应把所有访客都视为合适的买家。',
+  kwG_abrasive:'符合研磨/砂纸主业', kwG_spray:'喷枪/工具——可能相关', kwG_furniture:'家具/DIY——可能是次要机会', kwG_noise:'非相关/噪音',
+  kwTableTitle:'客户真实搜索的全部关键词', kwTableNote:'客户为找到本店铺而输入的原始关键词，按出现次数从高到低排列。',
+  kwSearchPh:'搜索关键词...', kwCountSuffix:'个关键词',
+  kwH_keyword:'关键词', kwH_occ:'出现次数', kwH_pv:'PV', kwH_country:'最主要国家',
+  buyers_h2:'需跟进的买家 &mdash; 汇总自OneTalk线索',
+  m_priority_l:'临近成交', m_deep_l:'需明确的真实线索', m_follow_l:'继续跟进', m_real_l:'近30天有真实回复的线索总数',
+  buyerListTitle:'买家列表',
+  sub_pri:'临近成交', sub_deep:'需明确的真实线索', sub_exp:'继续跟进', sub_sig:'跟进原则',
+  card_need:'需求：', card_blocker:'障碍：', card_next:'下一步：',
+  copyBtn:'复制下一步', copiedBtn:'已复制！', copyErr:'复制失败',
+  diag_h2:'本周结论',
+  legend_p0:'需立即处理 &mdash; 直接影响订单/营收',
+  legend_p1:'重要，本周内处理 &mdash; 紧急程度低于P0',
+  legend_info:'参考信息 / 需要更多数据才能得出结论',
+  ops_conclusion:'Riken回复速度良好（24小时回复率100%，平均0.72小时），产品目录规模大（2340个产品），但店铺仍为1星，且运营流量下降（175&rarr;119位访客）。501个误导性listing是当前最大风险，同时有6位买家已明确说明粒度/尺寸/数量/运费需求，应优先报价以免错失机会。',
+  diag_items:[
+   {tag:'p0',html:'<b>501个误导性产品</b>正直接影响店铺质量和搜索权重。'},
+   {tag:'p0',html:'<b>店铺已连续多周维持1星。</b>营销距离下一档还差91位访客，服务距离下一档还差1位买家回复。'},
+   {tag:'p1',html:'<b>运营流量下降</b>（175&rarr;119位访客），而剩余29个RFQ尚未充分利用。'},
+   {tag:'p1',html:'<b>尚无Super Product</b>，仅有3个Top Product；尚未记录任何信保交易GMV。'},
+   {tag:'info',html:'<b>已有6位买家明确说明粒度/尺寸/数量/运费需求</b>（Ali Lali、Zephy Lubwela、yael Ramirez、Victor Pedrozo、balaji Selvam、michael tigano），正等待正式报价——应优先处理以免错失机会。'}
+  ],
+  actionPlanTitle:'7天行动计划',
+  actionCards:[
+   {h:'48小时内', p:'在收齐规格后，立即为Ali Lali（20卷120/180目）、Zephy Lubwela（50卷P100/P120）和yael Ramirez（1000个海绵砂块）报价。', cls:'red', tag:'销售'},
+   {h:'7天内', p:'处理501个误导性产品，跟进Victor Pedrozo和balaji Selvam以确认混合粒度/RFQ，再争取1位服务反馈。', cls:'amber', tag:'运营+销售'},
+   {h:'下一周', p:'提升3个Top Product的质量，准备Super Product申请条件，在买家准备付款时创建首个信保订单。', cls:'blue', tag:'管理层'}
+  ],
+  ops_bigIssueTitle:'本周最大问题', ops_periodLabel:'数据周期：', ops_periodNote:'来源：运营表格',
+  ops_alertTitle:'运营预警',
+  ops_alerts:['501个误导性产品，影响店铺质量和搜索权重。','营销距离下一档还差91位访客。','服务距离下一档还差1位买家回复。','尚无信保交易（Trade Assurance）GMV。'],
+  ops_actionsTitle:'下周行动',
+  ops_actions:['处理501个误导性产品并检查listing质量。','每天保持5-10个热销品，优先有真实需求的研磨/砂纸类目。','利用RFQ提升目标流量；跟进剩余29个RFQ。','再争取1次买家反馈以达到下一档服务分。','提升3个Top Product质量，条件成熟时申请Super Product。','使用工厂实拍图片/视频或产品实拿图，避免过度合成的图片。','每周跟进大买家，并在阿里巴巴平台内创建报价。'],
+  ops_trendTitle:'多周运营节奏', ops_trendNote:'各周的访问量与24小时回复率——完整历史数据均来自运营表格。',
+  ops_productsTitle:'多周产品与RFQ', ops_tableTitle:'全部历史周运营KPI表',
+  opsMetrics:[['stars','星级'],['products','产品总数'],['newProducts','新增产品'],['visitors','访客数'],['inquiries','询盘数'],['repliedInquiries','已回复'],['rfqQuoted','已报价RFQ'],['rfqRemaining','剩余RFQ'],['avgResponse','平均回复时长'],['reply24h','24小时回复率'],['superProduct','Super Product'],['topProduct','Top Product']],
+  legendVisitor:'访客数', legendReply:'24小时回复率(%)', legendTop:'Top Product', legendSuper:'Super Product', legendRfq:'已报价RFQ',
+  foot:'周报 &middot; 参考成功案例结构设计 &middot; 数据直接嵌入自3个来源表格',
+  insights:[
+   '访客流量较上周下降（49&rarr;38位访客，31&rarr;24个国家），L1+买家也从20降至16——应优先提升线索质量而非数量。',
+   '越南有5位访客、4位L1+买家，但没有任何关键词记录——需先核实真实需求，再判断是否为研磨类线索。',
+   '墨西哥、菲律宾、斯里兰卡和坦桑尼亚的L1+比例都很高——应优先关注这些国家。',
+   '不少关键词属于非相关类别（玩具、服装、手表、汽车配件等）——不应将这些访客视为潜在的研磨材料买家。'
+  ],
+  principles:[
+   '不要把仅有"自动接待停止"、问候语、退款/取消订单或卖家常规跟进当作热线索。',
+   '在索要邮箱/电话之前，必须先确认产品、粒度、尺寸、数量、包装和目的地。',
+   'Victor表示公司将通过邮件回复——应引导沟通和报价回到阿里巴巴平台内。',
+   'I RIN LEE已通过邮件沟通——需要在阿里巴巴内重新总结报价。'
+  ]
+ }
+};
+
+let LANG = localStorage.getItem('riken_lang') || 'zh';
+function L(x){ return (x && typeof x==='object' && 'vi' in x) ? (x[LANG]!=null?x[LANG]:x.vi) : x; }
+function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function pctDelta(cur,prev){ const c=+cur,p=+prev; if(!p) return null; return ((c-p)/p*100); }
+function num(v){ if(v==null) return 0; const s=String(v).replace('%','').replace('h','').replace(',','.').trim(); const n=parseFloat(s); return isNaN(n)?0:n; }
+function classifyKw(kw){
+  const s = kw.toLowerCase();
+  if(/sand|abrasiv|lija|polish|pulir|grit|corundum|banda de lija|pulidora|marble polishing|granite polishing|non woven buff|discos de lija/.test(s)) return 'abrasive';
+  if(/spray|pistola.*pint|pulveriza|airless/.test(s)) return 'spray';
+  if(/wood|furniture|glue|saw blade|jewelry|hinge|cabinet|madera/.test(s)) return 'furniture';
+  return 'noise';
+}
+
+document.getElementById('src_ops').href = SOURCES.ops_url;
+document.getElementById('src_visitor').href = SOURCES.visitor_url;
+document.getElementById('src_leads').href = SOURCES.leads_url;
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+}));
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById('sub_'+b.dataset.sub).classList.add('active');
+}));
+
+function kpiCard(label,value,note,cls){
+  return '<div class="kpi '+(cls||'')+'"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+(note||'')+'</div></div>';
+}
+
+let charts = [];
+function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
+  let c = (window.echarts && echarts.getInstanceByDom) ? echarts.getInstanceByDom(el) : null; if(c) c.dispose();
+  if(!window.echarts) return null;
+  c=echarts.init(el); charts.push(c); return c; }
+const AXL = { fontSize:11 };
+
+function renderAll(){
+  const t = T[LANG];
+  document.documentElement.lang = LANG;
+  document.getElementById('btnVi').classList.toggle('active', LANG==='vi');
+  document.getElementById('btnZh').classList.toggle('active', LANG==='zh');
+  document.getElementById('h_titleSmall').innerHTML = t.titleSmall;
+  document.getElementById('h_badgeIndustry').textContent = t.badgeIndustry;
+  document.getElementById('h_badgeSource').innerHTML = t.badgeSource;
+  document.getElementById('h_period').childNodes[0].textContent = t.periodTop;
+  document.getElementById('h_periodB').textContent = t.periodTopB;
+  document.getElementById('topNote').innerHTML = t.topNote;
+  document.getElementById('src_ops').innerHTML = t.src_ops;
+  document.getElementById('src_visitor').innerHTML = t.src_visitor;
+  document.getElementById('src_leads').innerHTML = t.src_leads;
+  document.getElementById('tabsHintTxt').textContent = t.tabsHint;
+  document.getElementById('tabBtnView').innerHTML = t.tab_view;
+  document.getElementById('tabBtnBuyers').innerHTML = t.tab_buyers;
+  document.getElementById('tabBtnDiag').innerHTML = t.tab_diag;
+  document.getElementById('tabBtnOps').innerHTML = t.tab_ops;
+  document.getElementById('view_h2').textContent = t.view_h2;
+  document.getElementById('view_notewrap').innerHTML = t.view_note;
+  document.getElementById('view_insightsTitle').textContent = t.view_insightsTitle;
+  document.getElementById('funnelTitle').textContent = t.funnelTitle;
+  document.getElementById('countryChartTitle').textContent = t.countryChartTitle;
+  document.getElementById('countryTableTitle').textContent = t.countryTableTitle;
+  document.getElementById('country_search').placeholder = t.countrySearchPh;
+  document.getElementById('kwGroupsTitle').textContent = t.kwGroupsTitle;
+  document.getElementById('kwGroupsNote').textContent = t.kwGroupsNote;
+  document.getElementById('kwTableTitle').textContent = t.kwTableTitle;
+  document.getElementById('kwTableNote').textContent = t.kwTableNote;
+  document.getElementById('kw_search').placeholder = t.kwSearchPh;
+  document.getElementById('buyers_h2').innerHTML = t.buyers_h2;
+  document.getElementById('m_priority_l').textContent = t.m_priority_l;
+  document.getElementById('m_deep_l').textContent = t.m_deep_l;
+  document.getElementById('m_follow_l').textContent = t.m_follow_l;
+  document.getElementById('m_real_l').textContent = t.m_real_l;
+  document.getElementById('buyerListTitle').textContent = t.buyerListTitle;
+  document.getElementById('subBtnPri').innerHTML = t.sub_pri+' (<span id="cnt_pri"></span>)';
+  document.getElementById('subBtnDeep').innerHTML = t.sub_deep+' (<span id="cnt_deep"></span>)';
+  document.getElementById('subBtnExp').innerHTML = t.sub_exp+' (<span id="cnt_exp"></span>)';
+  document.getElementById('subBtnSig').innerHTML = t.sub_sig+' (<span id="cnt_sig"></span>)';
+  document.getElementById('diag_h2').textContent = t.diag_h2;
+  document.getElementById('legend_p0').innerHTML = t.legend_p0;
+  document.getElementById('legend_p1').innerHTML = t.legend_p1;
+  document.getElementById('legend_info').innerHTML = t.legend_info;
+  document.getElementById('ops_conclusion').innerHTML = t.ops_conclusion;
+  document.getElementById('actionPlanTitle').textContent = t.actionPlanTitle;
+  document.getElementById('ops_bigIssueTitle').textContent = t.ops_bigIssueTitle;
+  document.getElementById('ops_periodWrap').innerHTML = t.ops_periodLabel+' <b id="ops_period"></b> &middot; '+t.ops_periodNote;
+  document.getElementById('ops_alertTitle').textContent = t.ops_alertTitle;
+  document.getElementById('ops_actionsTitle').textContent = t.ops_actionsTitle;
+  document.getElementById('ops_trendTitle').textContent = t.ops_trendTitle;
+  document.getElementById('ops_trendNote').innerHTML = t.ops_trendNote;
+  document.getElementById('ops_productsTitle').innerHTML = t.ops_productsTitle;
+  document.getElementById('ops_tableTitle').textContent = t.ops_tableTitle;
+  document.getElementById('footNote').innerHTML = t.foot;
+
+  const latest = RAW.latest_raw, previous = RAW.previous_raw;
+  const weeksFull = RAW.weeks_full;
+  const countriesFull = RAW.countries_full.filter(c=>c.visitors>0);
+  const keywordsFull = RAW.keywords_full;
+  const nearOrder = RAW.near_order, deepLeads = RAW.deep_leads, followupSimple = RAW.followup_simple;
+
+  const opsVisitorPeriod = LANG==='zh' ? '2026年8月16日至8月22日' : '16-22/08/2026';
+  const opsVisitorPrevPeriod = LANG==='zh' ? '2026年8月10日至8月16日' : '10-16/08/2026';
+  const visitorLatest = {period:opsVisitorPeriod, visitor_records:38, countries:24, store_pv:70, buyer_l1_plus:16, levels:{L0:22,L1:16,L2:0,L3:0,L4:0}};
+  const visitorPrevious = {period:opsVisitorPrevPeriod, visitor_records:49, countries:31, store_pv:89, buyer_l1_plus:20, levels:{L0:29,L1:20,L2:0,L3:0,L4:0}};
+
+  (function renderKpis(){
+    const respD = pctDelta(num(latest.reply24h), num(previous.reply24h));
+    const l1D = pctDelta(visitorLatest.buyer_l1_plus, visitorPrevious.buyer_l1_plus);
+    let html='';
+    html+=kpiCard(t.kpi_stars, latest.stars+' &#9733;', t.kpi_stars_note, 'warn');
+    html+=kpiCard(t.kpi_visitors, fmt(latest.visitors), t.kpi_visitors_note.replace('{p}', LANG==='zh'?RAW.weeks_full[RAW.weeks_full.length-1].period_zh:RAW.weeks_full[RAW.weeks_full.length-1].period_vi), 'warn');
+    html+=kpiCard(t.kpi_inquiries, fmt(latest.inquiries), t.kpi_inquiries_note.replace('{r}',latest.repliedInquiries).replace('{t}',latest.inquiries).replace('{pv}',previous.inquiries), '');
+    html+=kpiCard(t.kpi_reply, num(latest.reply24h)+'%', (respD!=null?'<span class="delta '+(respD>=0?'up':'down')+'">'+(respD>=0?'+':'')+respD.toFixed(1)+'%</span>':'')+' '+t.kpi_reply_note.replace('{pv}',num(previous.reply24h)), 'good');
+    html+=kpiCard(t.kpi_l1, fmt(visitorLatest.buyer_l1_plus), (l1D!=null?'<span class="delta '+(l1D>=0?'up':'down')+'">'+(l1D>=0?'+':'')+l1D.toFixed(0)+'%</span>':'')+' '+t.kpi_l1_note.replace('{pv}',visitorPrevious.buyer_l1_plus), 'warn');
+    html+=kpiCard(t.kpi_near, nearOrder.length+' buyer', t.kpi_near_note.replace('{n}', t.ops_alerts.length), 'warn');
+    document.getElementById('kpis').innerHTML = html;
+    document.getElementById('kpi_note').textContent = t.kpiNote;
+  })();
+
+  const hasE = typeof echarts !== 'undefined';
+  charts.forEach(c=>{try{c.dispose();}catch(e){}}); charts=[];
+  const weekLabels = weeksFull.map(w=> LANG==='zh'? (w.period_zh.includes('|')?w.period_zh.split('|')[1]:w.period_zh) : w.period_vi.split(' đến ')[1]);
+
+  if (hasE) {
+    let c = mkChart('ch_funnel');
+    const lv = visitorLatest.levels;
+    c.setOption({
+      tooltip:{trigger:'item',formatter:'{b}: {c}'},
+      series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
+        label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
+        color:['#c3dde6','#8fc2d1','#1f7a8c','#155a68','#153a5b'],
+        data:[
+          {value:lv.L0,name:t.levelNames.L0},
+          {value:lv.L1,name:t.levelNames.L1},
+          {value:lv.L2,name:t.levelNames.L2},
+          {value:lv.L3,name:t.levelNames.L3},
+          {value:lv.L4,name:t.levelNames.L4}
+        ]}]
+    });
+
+    c = mkChart('ch_country');
+    const sorted = countriesFull.slice().sort((a,b)=> (b.L1Plus-a.L1Plus) || (b.visitors-a.visitors)).slice(0,12);
+    c.setOption({
+      tooltip:{trigger:'axis'},
+      grid:{left:130,right:24,top:10,bottom:24},
+      xAxis:{type:'value',axisLabel:AXL},
+      yAxis:{type:'category',data:sorted.map(x=>L(x.country)).reverse(),axisLabel:AXL},
+      series:[{type:'bar',data:sorted.map(x=>x.L1Plus).reverse(),itemStyle:{color:'#1f7a8c',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11,formatter:(p)=>{
+        const row = sorted.slice().reverse()[p.dataIndex]; return row.L1Plus+' L1+ / '+row.visitors+' visitor';
+      }}}]
+    });
+
+    c = mkChart('ch_trend');
+    c.setOption({
+      tooltip:{trigger:'axis'}, legend:{data:[t.legendVisitor,t.legendReply],top:0,textStyle:{fontSize:11}},
+      grid:{left:46,right:46,top:34,bottom:44},
+      xAxis:{type:'category',data:weekLabels,axisLabel:Object.assign({},AXL,{rotate:30})},
+      yAxis:[{type:'value',name:t.legendVisitor,axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
+      series:[
+        {name:t.legendVisitor,type:'bar',data:weeksFull.map(w=>num(w.visitors)),itemStyle:{color:'#1f7a8c',borderRadius:[4,4,0,0]}},
+        {name:t.legendReply,type:'line',yAxisIndex:1,data:weeksFull.map(w=>num(w.reply24h)),smooth:true,itemStyle:{color:'#1f9a6d'}}
+      ]
+    });
+
+    c = mkChart('ch_products');
+    c.setOption({
+      tooltip:{trigger:'axis'}, legend:{data:[t.legendTop,t.legendSuper,t.legendRfq],top:0,textStyle:{fontSize:11}},
+      grid:{left:46,right:46,top:34,bottom:44},
+      xAxis:{type:'category',data:weekLabels,axisLabel:Object.assign({},AXL,{rotate:30})},
+      yAxis:[{type:'value',name:'SP',axisLabel:AXL},{type:'value',name:'RFQ',axisLabel:AXL}],
+      series:[
+        {name:t.legendTop,type:'line',data:weeksFull.map(w=>num(w.topProduct)),smooth:true,itemStyle:{color:'#ca7b1b'}},
+        {name:t.legendSuper,type:'line',data:weeksFull.map(w=>num(w.superProduct)),smooth:true,itemStyle:{color:'#1f9a6d'}},
+        {name:t.legendRfq,type:'bar',yAxisIndex:1,data:weeksFull.map(w=>num(w.rfqQuoted)),itemStyle:{color:'#d95761'}}
+      ]
+    });
+    window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
+  }
+
+  document.getElementById('view_period').textContent = visitorLatest.period;
+  document.getElementById('view_period_prev').textContent = visitorPrevious.period;
+  document.getElementById('view_insights').innerHTML = t.insights.map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('view_metrics').innerHTML =
+    '<div class="metric"><div class="n">'+fmt(visitorLatest.visitor_records)+'</div><div class="l">'+t.m_visitorRecords+' ('+visitorPrevious.visitor_records+' '+t.m_visitorPrev+')</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(visitorLatest.countries)+'</div><div class="l">'+t.m_countries+'</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(visitorLatest.store_pv)+'</div><div class="l">'+t.m_storePv+' ('+visitorPrevious.store_pv+' '+t.m_visitorPrev+')</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(visitorLatest.buyer_l1_plus)+'</div><div class="l">'+t.m_l1plus+'</div></div>';
+
+  function renderCountryTable(list){
+    let h = '<tr><th>'+t.ctH_country+'</th><th class="num">'+t.ctH_visitors+'</th><th class="num">'+t.ctH_pv+'</th><th class="num">'+t.ctH_kwv+'</th><th class="num">'+t.ctH_kwr+'</th><th class="num">'+t.ctH_l0+'</th><th class="num">'+t.ctH_l1p+'</th></tr>';
+    list.forEach(c=>{
+      h += '<tr><td>'+esc(L(c.country))+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td class="num">'+fmt(c.exactKeywordRecords)+'</td><td class="num">'+fmt(c.L0)+'</td><td class="num"><span class="tag '+(c.L1Plus>0?'green':'gray')+'">'+fmt(c.L1Plus)+'</span></td></tr>';
+    });
+    document.getElementById('tbl_country').innerHTML = h;
+    document.getElementById('country_count').textContent = list.length+' / '+countriesFull.length+' '+t.countryCountSuffix;
+  }
+  renderCountryTable(countriesFull.slice().sort((a,b)=>(b.L1Plus-a.L1Plus)||(b.visitors-a.visitors)));
+  document.getElementById('country_note').textContent = t.country_note;
+  document.getElementById('country_search').oninput = e=>{
+    const q = e.target.value.trim().toLowerCase();
+    renderCountryTable(countriesFull.filter(c=>L(c.country).toLowerCase().includes(q)));
+  };
+
+  (function renderKwGroups(){
+    const groupKeys = ['abrasive','spray','furniture','noise'];
+    const groupLabelKey = {abrasive:'kwG_abrasive',spray:'kwG_spray',furniture:'kwG_furniture',noise:'kwG_noise'};
+    let h='';
+    groupKeys.forEach(gk=>{
+      const items = keywordsFull.filter(k=>classifyKw(k.keyword)===gk);
+      if(!items.length) return;
+      const isBad = gk==='noise';
+      h += '<div class="kw-group"><h3>'+t[groupLabelKey[gk]]+' ('+items.length+')</h3><div class="chips">'+items.map(k=>'<span class="chip'+(isBad?' gray':'')+'">'+esc(k.keyword)+'</span>').join('')+'</div></div>';
+    });
+    document.getElementById('kw_groups').innerHTML = h;
+  })();
+
+  function renderKwTable(list){
+    let h = '<tr><th>'+t.kwH_keyword+'</th><th class="num">'+t.kwH_occ+'</th><th class="num">'+t.kwH_pv+'</th><th>'+t.kwH_country+'</th></tr>';
+    list.forEach(k=>{
+      h += '<tr><td>'+esc(k.keyword)+'</td><td class="num">'+fmt(k.occurrences)+'</td><td class="num">'+fmt(k.pv)+'</td><td class="hint">'+esc(L(k.top_country))+'</td></tr>';
+    });
+    document.getElementById('tbl_kw').innerHTML = h;
+    document.getElementById('kw_count').textContent = list.length+' / '+keywordsFull.length+' '+t.kwCountSuffix;
+  }
+  renderKwTable(keywordsFull.slice().sort((a,b)=>(b.occurrences-a.occurrences)||(b.pv-a.pv)));
+  document.getElementById('kw_search').oninput = e=>{
+    const q = e.target.value.trim().toLowerCase();
+    renderKwTable(keywordsFull.filter(k=>k.keyword.toLowerCase().includes(q)));
+  };
+
+  document.getElementById('m_priority').textContent = nearOrder.length;
+  document.getElementById('m_deep').textContent = deepLeads.length;
+  document.getElementById('m_follow').textContent = followupSimple.length;
+  document.getElementById('m_real').textContent = 14;
+
+  function copyText(btn, text){
+    navigator.clipboard.writeText(text).then(()=>{
+      const orig = btn.textContent;
+      btn.textContent = T[LANG].copiedBtn; btn.classList.add('copied');
+      setTimeout(()=>{ btn.textContent=T[LANG].copyBtn; btn.classList.remove('copied'); }, 1800);
+    }).catch(()=>{ btn.textContent = T[LANG].copyErr; });
+  }
+  window.copyText = copyText;
+
+  const badgeColor = b => /grit/i.test(b) ? 'blue' : /moq|pcs/i.test(b) ? 'amber' : /freight|ship|destination/i.test(b) ? 'amber' : /sample/i.test(b) ? 'green' : /rfq/i.test(b) ? 'blue' : /email|off-platform/i.test(b) ? 'red' : 'gray';
+  function detectBadges(str){
+    const s=(str||'').toLowerCase(); const tags=[];
+    if(/grit/.test(s)) tags.push('Grit');
+    if(/size|mm|inch/.test(s)) tags.push('Spec');
+    if(/moq|mix grit/.test(s)) tags.push('MOQ');
+    if(/freight|ship|destination|port/.test(s)) tags.push('Freight');
+    if(/sample/.test(s)) tags.push('Sample');
+    if(/rfq/.test(s)) tags.push('RFQ');
+    if(/email|whatsapp/.test(s)) tags.push('Off-platform risk');
+    return tags;
+  }
+
+  function renderPriCards(list){
+    document.getElementById('cards_pri').innerHTML = list.map((r,idx)=>{
+      const badges = [...new Set([...detectBadges(L(r.need)), ...detectBadges(L(r.qty))])];
+      const nextText = L(r.next);
+      return '<div class="buyer-card"><div class="bh"><b>'+esc(r.name)+'</b><span class="bc">'+r.date+' &middot; '+esc(L(r.country))+'</span></div>'+
+      '<div class="row">'+badges.map(b=>'<span class="tag '+badgeColor(b)+'" style="margin-right:6px">'+esc(b)+'</span>').join('')+'</div>'+
+      '<div class="row"><b>'+t.card_need+'</b> '+esc(L(r.need))+' &mdash; '+esc(L(r.qty))+'</div>'+
+      '<div class="row"><b>'+t.card_blocker+'</b> '+esc(L(r.blocker))+'</div>'+
+      '<div class="row"><b>'+t.card_next+'</b> '+esc(nextText)+'</div>'+
+      '<button class="copy-btn" onclick="copyText(this, '+JSON.stringify(nextText).replace(/"/g,'&quot;')+')">'+t.copyBtn+'</button></div>';
+    }).join('');
+    document.getElementById('cnt_pri').textContent = list.length;
+  }
+  function renderDeepList(list){
+    document.getElementById('list_deep').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+' ('+esc(L(r.country))+'):</b> '+esc(L(r.note))+' &mdash; '+esc(L(r.next))+'</li>').join('');
+    document.getElementById('cnt_deep').textContent = list.length;
+  }
+  function renderExpList(list){
+    document.getElementById('list_exp').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+' ('+esc(L(r.country))+'):</b> '+esc(L(r.signal))+' &mdash; '+esc(L(r.conclusion))+'</li>').join('');
+    document.getElementById('cnt_exp').textContent = list.length;
+  }
+  function renderSigList(list){
+    document.getElementById('list_sig').innerHTML = list.map(r=>'<li class="simple-item">'+r+'</li>').join('');
+    document.getElementById('cnt_sig').textContent = list.length;
+  }
+  renderPriCards(nearOrder);
+  renderDeepList(deepLeads);
+  renderExpList(followupSimple);
+  renderSigList(t.principles);
+
+  document.getElementById('diag_items').innerHTML = t.diag_items.map(d=>'<div class="diag-item"><span class="diag-tag '+d.tag+'">'+d.tag.toUpperCase()+'</span><div>'+d.html+'</div></div>').join('');
+  document.getElementById('actionPlanCards').innerHTML = t.actionCards.map(c=>'<div class="focus-card '+c.cls+'"><h3>'+c.h+'</h3><p>'+c.p+'</p><span class="tag '+c.cls+'">'+c.tag+'</span></div>').join('');
+
+  document.getElementById('ops_period').textContent = LANG==='zh' ? RAW.weeks_full[RAW.weeks_full.length-1].period_zh : RAW.weeks_full[RAW.weeks_full.length-1].period_vi;
+  document.getElementById('ops_alerts').innerHTML = t.ops_alerts.map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('ops_actions_list').innerHTML = t.ops_actions.map((x,i)=>'<div class="simple-item">'+(i+1)+'. '+x+'</div>').join('');
+
+  (function renderOpsTable(){
+    const weeksChrono = weeksFull.slice().reverse();
+    let h = '<tr><th>'+(LANG==='zh'?'指标':'Chỉ số')+'</th>'+weeksChrono.map(w=>'<th class="num">'+esc(LANG==='zh'?(w.period_zh.includes('|')?w.period_zh.split('|')[1]:w.period_zh):w.period_vi.split(' đến ')[1])+'</th>').join('')+'</tr>';
+    t.opsMetrics.forEach(([key,label])=>{
+      h += '<tr><td>'+label+'</td>'+weeksChrono.map(w=>'<td class="num">'+esc(w[key])+(key==='reply24h'?'%':'')+'</td>').join('')+'</tr>';
+    });
+    document.getElementById('tbl_ops').innerHTML = h;
+  })();
+}
+
+document.getElementById('btnVi').addEventListener('click',()=>{ LANG='vi'; localStorage.setItem('riken_lang','vi'); renderAll(); });
+document.getElementById('btnZh').addEventListener('click',()=>{ LANG='zh'; localStorage.setItem('riken_lang','zh'); renderAll(); });
+
+renderAll();
+</script>
+</body></html>

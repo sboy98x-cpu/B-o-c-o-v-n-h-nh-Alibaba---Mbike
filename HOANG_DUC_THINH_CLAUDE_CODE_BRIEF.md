@@ -236,3 +236,5 @@ Quy tắc dữ liệu:
 - Mỗi tab chụp màn hình được thành báo cáo tuần.
 - Dữ liệu nằm riêng trong `HOANG_DUC_THINH_DATA`; tuần sau chỉ thay object dữ liệu.
 - App không cần tổng hợp lại 3 Google Sheets để chạy bản đầu tiên.
+- Dữ liệu đầy đủ để dựng biểu đồ và bảng chi tiết nằm tại [HOANG_DUC_THINH_FULL_DATA.json](HOANG_DUC_THINH_FULL_DATA.json). Claude Code phải đọc file này để lấy toàn bộ lịch sử tuần, danh sách quốc gia và keyword; không dùng các ví dụ rút gọn trong brief làm toàn bộ dữ liệu.
+- Cấu trúc file: `HOANG_DUC_THINH_FULL_DATA.ops.history` = toàn bộ tuần và 13 chỉ số vận hành; `HOANG_DUC_THINH_FULL_DATA.visitors.countries` = toàn bộ quốc gia trong tuần hiện tại; `HOANG_DUC_THINH_FULL_DATA.visitors.keywords` = toàn bộ keyword chính xác đã gộp theo keyword, gồm `occurrences`, `pv`, level và quốc gia.

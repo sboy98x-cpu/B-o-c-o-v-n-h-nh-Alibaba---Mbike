@@ -225,3 +225,5 @@ Quy tắc:
 - Có thể chụp màn hình từng tab làm báo cáo tuần.
 - Không cần đọc lại 3 Google Sheets để hiểu dữ liệu ban đầu.
 - Có cấu trúc dữ liệu tách khỏi UI để tuần sau chỉ thay `CM_DECOR_DATA`.
+- Dữ liệu đầy đủ để dựng biểu đồ và bảng chi tiết nằm tại [CM_DECOR_FULL_DATA.json](CM_DECOR_FULL_DATA.json). Claude Code phải đọc file này để lấy toàn bộ lịch sử tuần, danh sách quốc gia và keyword; không dùng các ví dụ rút gọn trong brief làm toàn bộ dữ liệu.
+- Cấu trúc file: `CM_DECOR_FULL_DATA.ops.history` = toàn bộ tuần và 13 chỉ số vận hành; `CM_DECOR_FULL_DATA.visitors.countries` = toàn bộ quốc gia trong tuần hiện tại; `CM_DECOR_FULL_DATA.visitors.keywords` = toàn bộ keyword chính xác đã gộp theo keyword, gồm `occurrences`, `pv`, level và quốc gia.
