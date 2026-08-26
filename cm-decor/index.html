@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo tuần - CM Decor</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#3d2a1f;--blue:#b8763e;--blue2:#fbeee0;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
+.hero{background:linear-gradient(120deg,#3d2a1f,#7a4a2b);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
+.hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
+.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#f3e3d3}
+.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
+.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#f3e3d3}
+.period b{display:block;color:#fff;font-size:14px;margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:8px}
+.kpi{background:#fff;border-radius:11px;padding:13px 15px;box-shadow:var(--shadow);min-width:0}
+.kpi .label{font-size:11px;color:var(--muted);margin-bottom:5px}
+.kpi .value{font-size:21px;font-weight:850;letter-spacing:-.04em}
+.kpi .note{font-size:11px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
+.delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
+.delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
+.kpi-note-line{font-size:11px;color:var(--muted);margin:2px 0 16px}
+.tabs-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--blue);font-weight:750;margin:2px 0 8px}
+.tabs-hint .arrow{animation:bounce-x 1.3s infinite}
+@keyframes bounce-x{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
+.tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
+.tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(61,42,31,.35)}
+.pane{display:none}.pane.active{display:block}
+.section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--navy);padding-left:10px}
+.section h3{font-size:14px;margin:0 0 10px}
+.note-line{font-size:12px;color:var(--muted);margin:8px 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.priority-box .pico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.priority-box .ptxt b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8d641f;margin-bottom:3px}
+.priority-box .ptxt ul{margin:6px 0 0;padding-left:18px}
+.priority-box .ptxt li{font-size:13px;color:#4a3410;margin-bottom:3px}
+.legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
+.legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
+.ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.table.ops-table th{background:var(--navy);color:#fff}
+.table.ops-table td:first-child{font-weight:800;color:var(--navy);background:#f6f9fc}
+.focus{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px}
+.focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:120px}
+.focus-card.red{background:var(--red2);border-color:#ffd7dc}
+.focus-card.amber{background:var(--amber2);border-color:#f5dfae}
+.focus-card.blue{background:var(--blue2);border-color:#ecd5b8}
+.focus-card h3{font-size:15px;margin:0 0 9px}
+.focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
+.big{font-size:26px;font-weight:900;letter-spacing:-.06em}
+.big small{font-size:12px;letter-spacing:0;font-weight:700;color:var(--muted)}
+.line{display:flex;justify-content:space-between;gap:10px;align-items:center;border-top:1px solid rgba(20,40,75,.1);padding-top:8px;margin-top:8px;font-size:12px}
+.tag{display:inline-flex;border-radius:20px;padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:var(--green);background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:var(--muted);background:#eef1f5}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{border:1px solid var(--line);border-radius:10px;padding:12px}
+.metric .n{font-size:22px;font-weight:850}
+.metric .l{font-size:11px;color:var(--muted)}
+.chart{width:100%;height:280px}
+.chart.sm{height:220px}
+.table-wrap{overflow:auto}
+.table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap}
+.table th.num,.table td.num{text-align:right}
+.table tr:hover td{background:#fafcff}
+.hint{font-size:11px;color:var(--muted)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--green2);color:var(--green);border-radius:20px;padding:6px 12px;font-size:12.5px;font-weight:700}
+.buyer-card{border:1px solid var(--line);border-radius:11px;padding:14px;margin-bottom:10px}
+.buyer-card .bh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.buyer-card .bh b{font-size:14.5px}
+.buyer-card .bc{color:var(--muted);font-size:12px}
+.buyer-card .row{font-size:13px;margin-top:5px}
+.buyer-card .row b{font-weight:750;color:#4a5566}
+.copy-btn{margin-top:9px;border:1px solid var(--blue);background:var(--blue2);color:#7a4a1f;border-radius:8px;padding:6px 12px;font:inherit;font-size:12px;font-weight:750;cursor:pointer}
+.copy-btn.copied{background:var(--green2);border-color:var(--green);color:var(--green)}
+.simple-list{display:grid;gap:9px}
+.simple-item{border-bottom:1px dashed var(--line);padding:9px 0;font-size:13px}
+.simple-item:last-child{border-bottom:0}
+.simple-item b{font-weight:800}
+.diag{display:grid;gap:9px}
+.diag-item{display:grid;grid-template-columns:55px 1fr;gap:10px;align-items:start;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.diag-item:last-child{border-bottom:0}
+.diag-tag{border-radius:6px;text-align:center;padding:4px 3px;font-size:11px;font-weight:850}
+.diag-tag.p0{color:var(--red);background:var(--red2)}.diag-tag.p1{color:var(--amber);background:var(--amber2)}.diag-tag.info{color:var(--blue);background:var(--blue2)}
+.sources{display:flex;gap:8px;flex-wrap:wrap}
+.sources a{color:var(--blue);background:var(--blue2);border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;font-weight:750}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:22px;line-height:1.9}
+.top-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-5px 0 10px;flex-wrap:wrap}
+.need{color:var(--muted);font-size:12px}
+.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
+.subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.subpane{display:none}.subpane.active{display:block}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
+@media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <h1>CM DECOR <span style="font-size:13px;opacity:.7">&middot; Báo cáo tuần</span></h1>
+    <div class="sub"><span class="badge">Ngành: Home Decor / Lighting</span><span class="badge">Nguồn: Vận hành &middot; Visitor Analyzer &middot; OneTalk Leads</span></div>
+    <div class="period">Xem chi tiết kỳ dữ liệu<b>từng mục bên dưới</b></div>
+  </header>
+
+  <div class="top-actions">
+    <span class="need">Toàn bộ dữ liệu chi tiết từ 3 nguồn đã được nhúng sẵn trong trang này &mdash; không cần mở Google Sheet.</span>
+    <div class="sources">
+      <a href="https://docs.google.com/spreadsheets/d/1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo/edit" target="_blank">&#8599; Sheet Vận hành (gốc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM/edit" target="_blank">&#8599; Sheet Visitor Analyzer (gốc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI/edit" target="_blank">&#8599; Sheet OneTalk Leads (gốc)</a>
+    </div>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+  <div class="kpi-note-line" id="kpi_note"></div>
+
+  <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
+  <nav class="tabs">
+    <button class="tab active" data-pane="view">01 &middot; Người xem</button>
+    <button class="tab" data-pane="buyers">02 &middot; Buyer &amp; tin nhắn</button>
+    <button class="tab" data-pane="diag">03 &middot; Kết luận &amp; action</button>
+    <button class="tab" data-pane="ops">04 &middot; Vận hành</button>
+  </nav>
+
+  <section class="pane active" id="view">
+    <div class="section">
+      <h2>Người xem: đến từ đâu và chất lượng thế nào?</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="view_period"></b> &middot; nguồn sheet Visitor Analyzer &middot; so với tuần trước (<span id="view_period_prev"></span>) trong ngoặc</div>
+      <div class="metric-row" id="view_metrics"></div>
+    </div>
+    <div class="section">
+      <div class="priority-box"><div class="pico">&#128161;</div><div class="ptxt"><b>Insight cần chú ý</b><ul id="view_insights"></ul></div></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2>Cấp người mua (phễu chất lượng)</h2>
+        <div id="ch_funnel" class="chart"></div>
+      </div>
+      <div class="section">
+        <h2>Quốc gia (nhóm L1+ ưu tiên trước)</h2>
+        <div id="ch_country" class="chart"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Bảng quốc gia chi tiết</h2>
+      <div class="table-wrap"><table class="table" id="tbl_country"></table></div>
+    </div>
+    <div class="section">
+      <h2>Từ khoá phù hợp danh mục decor/lighting</h2>
+      <div class="note-line">Các từ khoá khác trong 53 bản ghi keyword tuần này chưa chắc khớp ngành &mdash; cần xác minh trước khi coi là lead nóng.</div>
+      <div class="chips" id="kw_chips"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="buyers">
+    <div class="section">
+      <h2>Buyer cần follow &mdash; tổng hợp từ OneTalk Leads</h2>
+      <div class="metric-row">
+        <div class="metric"><div class="n" style="color:var(--red)" id="m_priority"></div><div class="l">Ưu tiên xử lý ngay</div></div>
+        <div class="metric"><div class="n" style="color:var(--amber)" id="m_follow"></div><div class="l">Cần theo dõi</div></div>
+        <div class="metric"><div class="n" id="m_low"></div><div class="l">Ít phản hồi / rủi ro</div></div>
+        <div class="metric"><div class="n" style="color:var(--blue)" id="m_real"></div><div class="l">Có tín hiệu mua thật</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Làm ngay</h2>
+      <div class="subtabs">
+        <button class="subtab active" data-sub="pri">Làm ngay (<span id="cnt_pri"></span>)</button>
+        <button class="subtab" data-sub="exp">Theo dõi (<span id="cnt_exp"></span>)</button>
+        <button class="subtab" data-sub="sig">Không ưu tiên (<span id="cnt_sig"></span>)</button>
+      </div>
+      <div class="subpane active" id="sub_pri"><div id="cards_pri"></div></div>
+      <div class="subpane" id="sub_exp"><ul class="simple-list" id="list_exp"></ul></div>
+      <div class="subpane" id="sub_sig"><ul class="simple-list" id="list_sig"></ul></div>
+    </div>
+  </section>
+
+  <section class="pane" id="diag">
+    <div class="section">
+      <h2>Kết luận tuần này</h2>
+      <div class="legend-note">
+        <span class="legend-chip"><span class="diag-tag p0">P0</span> Ưu tiên xử lý ngay &mdash; ảnh hưởng trực tiếp tới đơn hàng/doanh thu</span>
+        <span class="legend-chip"><span class="diag-tag p1">P1</span> Quan trọng, xử lý trong tuần &mdash; chưa khẩn cấp bằng P0</span>
+        <span class="legend-chip"><span class="diag-tag info">DATA</span> Thông tin tham khảo / cần thêm dữ liệu để kết luận sâu hơn</span>
+      </div>
+      <div class="diag">
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>Gian hàng đang 0 sao, forecast 1 sao.</b> Traffic tăng mạnh (74&rarr;196 PV) nhưng chất lượng/chuyển đổi chưa theo kịp &mdash; rating và service đang kéo điểm xuống.</div></div>
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>4 buyer cần follow ngay</b> (Hannahchiwendu Christopher, Janez Korelc, Friedrich Donges, Kyei Kyei) &mdash; đều đang chờ phản hồi cụ thể để tiến tới đặt hàng.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>63 sản phẩm điểm thấp + 1 sản phẩm lỗi</b> đang giới hạn traffic và rating; cần xử lý trước khi mở rộng danh mục.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>Chưa dùng RFQ và chưa có Trade Assurance.</b> Còn 20 lượt RFQ miễn phí và chưa có tín hiệu GMV nào trong kỳ.</div></div>
+        <div class="diag-item"><span class="diag-tag info">DATA</span><div><b>Nhóm buyer L1+ ổn định ở mức 10</b> dù traffic biến động &mdash; đây là nhóm đáng khai thác nhất, không phụ thuộc traffic tổng.</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Action plan 7 ngày</h2>
+      <div class="grid3">
+        <div class="focus-card red"><h3>Trong 48 giờ</h3><p>Trả lời 4 buyer ưu tiên (Hannahchiwendu, Janez, Friedrich, Kyei Kyei) với thông tin/mẫu cụ thể theo yêu cầu.</p><span class="tag red">Sales</span></div>
+        <div class="focus-card amber"><h3>Trong 7 ngày</h3><p>Đăng 5&ndash;10 sản phẩm decor/lighting mới mỗi ngày; xử lý 63 sản phẩm điểm thấp; báo giá ít nhất 1 RFQ.</p><span class="tag amber">Ops + Sales</span></div>
+        <div class="focus-card blue"><h3>Tuần kế tiếp</h3><p>Tạo đơn Trade Assurance đầu tiên; đẩy sản phẩm đủ điều kiện lên Top/Super Product; theo dõi nhóm 5 buyer cần theo dõi.</p><span class="tag blue">Manager</span></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Điều kiện thành công tuần tới</h2>
+      <div class="chips">
+        <span class="chip">Có sản phẩm mới đăng</span>
+        <span class="chip">Xử lý sản phẩm điểm thấp</span>
+        <span class="chip">Ít nhất 1 RFQ được báo giá</span>
+        <span class="chip">Có tín hiệu Trade Assurance</span>
+        <span class="chip">Thu thêm buyer response</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="pane" id="ops">
+    <div class="section">
+      <h2 class="ops-heading">Vấn đề lớn nhất tuần này</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="ops_period"></b> &middot; nguồn sheet Vận hành</div>
+      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b>Cảnh báo vận hành</b><ul id="ops_alerts"></ul></div></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Hành động tuần tới</h2>
+      <div class="simple-list" id="ops_actions_list"></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Bảng KPI vận hành (tuần này / tuần trước)</h2>
+      <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
+    </div>
+  </section>
+
+  <div class="foot">Báo cáo tuần &middot; thiết kế theo cấu trúc success case &middot; dữ liệu được nhúng trực tiếp từ 3 sheet nguồn</div>
+</main>
+<script>
+const D = {"profile":{"name":"CM Decor","industry":"Home Decor / Lighting","brand":"CM Decor"},"ops":{"latest":{"period":"09-08-2026 đến 15-08-2026","stars":0,"total_products":1061,"new_products":0,"visitors":196,"inquiries":1,"inquiries_replied":1,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0,"reply_24h_rate":100,"super_products":0,"top_products":0},"previous":{"period":"02-08-2026 đến 08-08-2026","stars":1,"total_products":1061,"new_products":0,"visitors":74,"inquiries":2,"inquiries_replied":2,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0,"reply_24h_rate":100,"super_products":0,"top_products":1},"alerts":["Gian hàng hiện 0 sao, forecast 1 sao.","Marketing mới có 115 khách.","Service mới có 2 người mua phản hồi.","Chưa có GMV Trade Assurance.","1 sản phẩm gặp vấn đề, 63 sản phẩm điểm thấp.","Chưa có Top Product/Super Product ở kỳ mới nhất.","Chưa sử dụng RFQ.","Không đăng sản phẩm mới trong tuần.","Tránh đăng hình/sản phẩm có logo tranh bóng đá hoặc dấu hiệu vi phạm bản quyền thương hiệu."],"actions":["Đăng 5–10 sản phẩm decor/lighting có nhu cầu mỗi ngày.","Bổ sung ảnh thật, video thật, kích thước, vật liệu, MOQ và thông tin đóng gói.","Xử lý 63 sản phẩm điểm thấp và sản phẩm lỗi trước khi mở rộng danh mục.","Khai thác RFQ còn lại; ưu tiên nhu cầu phù hợp lighting/decor.","Đẩy sản phẩm đủ điều kiện lên Top/Super Product.","Tạo đơn Trade Assurance để bắt đầu có GMV và tín hiệu giao dịch."]},"visitors":{"latest":{"period":"16-22/08/2026","visitor_records":21,"countries":18,"store_pv":33,"exact_keyword_records":53,"visitors_with_keyword":18,"buyer_l1_plus":10,"levels":{"L0":11,"L1":10,"L2":0,"L3":0,"L4":0},"source_pages":3},"previous":{"period":"09-15/08/2026","visitor_records":24,"countries":16,"store_pv":196,"exact_keyword_records":66,"visitors_with_keyword":22,"buyer_l1_plus":10,"levels":{"L0":14,"L1":10,"L2":0,"L3":0,"L4":0}},"insights":["Số buyer L1+ giữ nguyên ở mức 10 dù PV giảm mạnh; đây là nhóm cần ưu tiên.","Traffic tuần này phân tán: 18 quốc gia, phần lớn mỗi nước chỉ có 1 visitor.","Trung Quốc có 4 visitor nhưng đều L0; không nên xem đây là nhóm ưu tiên bán hàng.","Các tín hiệu L1 đáng chú ý đến từ Togo, Ấn Độ, Campuchia, Colombia, Papua New Guinea, Thái Lan, Pháp, Hàn Quốc, Jamaica và một số nước khác."],"countries":[{"country":"China","visitors":4,"pv":5,"keywordVisitors":4,"keywordRecords":12,"l1Plus":0,"level":"L0"},{"country":"India","visitors":1,"pv":2,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Cambodia","visitors":1,"pv":1,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Colombia","visitors":1,"pv":1,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Papua New Guinea","visitors":1,"pv":3,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Togo","visitors":1,"pv":3,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Thailand","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"France","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"South Korea","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Jamaica","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"}],"keywords_matched":["hand tufted wool rug","wall art","abstract art print","gate light","quartz wall clock","outdoor spotlight","décor maison","tapis salon modern","paintings and wall arts"]},"leads":{"summary":{"priority_count":2,"followup_count":2,"low_response_count":6,"real_signal_leads":["Hannahchiwendu Christopher","Friedrich Donges","Kyei Kyei"]},"priority":[{"name":"Hannahchiwendu Christopher","country":"Chưa xác định","need":"Đèn pendant/lantern M03.01, hỏi 1–2 pcs","blocker":"Thiếu địa chỉ, số lượng cuối và phí ship","next":"Xác nhận USD 32/pc, hỏi địa chỉ đầy đủ + postal code, báo ship/thời gian, đề xuất Trade Assurance"},{"name":"Janez Korelc","country":"UK","need":"Giải pháp đèn indoor cho thị trường UK","blocker":"Chưa có số lượng; cần chứng từ an toàn","next":"Gửi CE/UKCA/RoHS nếu có, hỏi dòng sản phẩm và qty"},{"name":"Friedrich Donges","country":"Greece","need":"Đã gửi product card, có unread","blocker":"Chưa rõ sản phẩm/qty/địa chỉ","next":"Trả lời trong Alibaba, hỏi product + qty + country, gửi catalog phù hợp, báo giá trong ngày"},{"name":"Kyei Kyei","country":"Ghana","need":"Đồng hồ treo tường tròn quartz","blocker":"Chưa rõ kim hay digital, qty chưa rõ","next":"Gửi 3 mẫu, MOQ/sample price/size/material, hỏi chọn kim hay digital và trial qty"}],"followup":[{"name":"DK Gupta","note":"Hỏi mục đích sử dụng đèn; cần indoor/outdoor, project, qty, target price."},{"name":"Nguyen Hung (Việt Nam)","note":"Hỏi đèn sân vườn; cần loại, công suất, qty, địa điểm, ngân sách."},{"name":"Svetlana Kononiuk (US)","note":"Hỏi chiều cao/trọng lượng đèn solar; gửi thông số, quy cách đóng gói, ảnh thật và hỏi qty."},{"name":"Arnold Amet (Papua New Guinea)","note":"Quan tâm kiểu artistic/metal; gửi 2–3 mẫu, hỏi size/color/qty."},{"name":"Nhóm hỏi indoor lighting cho UK","note":"Chỉ cung cấp CE/RoHS/UKCA nếu có, xác minh công ty/sản phẩm/qty."}],"lowResponse":["Yêu cầu xin catalog/báo giá qua email ngoài Alibaba: luyalcomunication@zohomail.com, SALESEXPORT@INTERNET.RU, maxelectro05@gmail.com, spencesales25@gmail.com.","Không gửi thông tin nhạy cảm hoặc chuyển giao dịch ra ngoài Alibaba khi chưa xác minh.","Williams mark: nội dung thiên về promotion, chưa phải buyer decor rõ ràng.","sabreee jak: có dấu hiệu muốn dẫn sang website ngoài; hỏi lại product/qty và giữ trao đổi trên Alibaba."]},"sources":{"ops_url":"https://docs.google.com/spreadsheets/d/1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo/edit","visitor_url":"https://docs.google.com/spreadsheets/d/1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM/edit","message_url":"https://docs.google.com/spreadsheets/d/1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI/edit"}};
+
+function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function pctDelta(cur,prev){ const c=+cur,p=+prev; if(!p) return null; return ((c-p)/p*100); }
+
+document.querySelectorAll('.sources a')[0].href = D.sources.ops_url;
+document.querySelectorAll('.sources a')[1].href = D.sources.visitor_url;
+document.querySelectorAll('.sources a')[2].href = D.sources.message_url;
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+}));
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById('sub_'+b.dataset.sub).classList.add('active');
+}));
+
+function kpiCard(label,value,note,cls){
+  return '<div class="kpi '+(cls||'')+'"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+(note||'')+'</div></div>';
+}
+(function renderKpis(){
+  const o = D.ops.latest, op = D.ops.previous, v = D.visitors.latest;
+  const visD = pctDelta(o.visitors, op.visitors);
+  let html='';
+  html+=kpiCard('Điểm gian hàng', o.stars+' &#9733;', '<span class="delta down">giảm</span> so với '+op.stars+' sao tuần trước', 'bad');
+  html+=kpiCard('Người ghé thăm (Visitor)', fmt(v.visitor_records), 'tuần '+v.period+' (Visitor Analyzer)');
+  html+=kpiCard('Thư hỏi hàng', fmt(o.inquiries), o.inquiries_replied+'/'+o.inquiries+' đã trả lời &middot; tuần Vận hành', 'good');
+  html+=kpiCard('Buyer L1+', fmt(v.buyer_l1_plus), 'ổn định so với tuần trước ('+op.reply_24h_rate+'% phản hồi 24h)', 'good');
+  html+=kpiCard('Top/Super Product', o.top_products+' / '+o.super_products, 'Top Product giảm từ '+op.top_products+' tuần trước', 'warn');
+  html+=kpiCard('Cần xử lý ngay', D.leads.priority.length+' buyer', D.ops.alerts.length+' cảnh báo vận hành đang mở', 'bad');
+  document.getElementById('kpis').innerHTML = html;
+  document.getElementById('kpi_note').textContent = 'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — Vận hành và Visitor Analyzer không cùng tuần.';
+})();
+
+const hasE = typeof echarts !== 'undefined';
+let charts = [];
+function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
+  let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+const AXL = { fontSize:11 };
+
+if (hasE) {
+  let c = mkChart('ch_funnel');
+  const lv = D.visitors.latest.levels;
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: {c}'},
+    series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
+      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
+      color:['#e3c3a0','#cf9a5f','#b8763e','#96602f','#3d2a1f'],
+      data:[
+        {value:lv.L0,name:'L0 - Đã đăng ký'},
+        {value:lv.L1,name:'L1 - Tiềm năng'},
+        {value:lv.L2,name:'L2 - Scaleup'},
+        {value:lv.L3,name:'L3 - Enterprise'},
+        {value:lv.L4,name:'L4 - Enterprise Pro'}
+      ]}]
+  });
+
+  c = mkChart('ch_country');
+  const sorted = D.visitors.countries.slice().sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:110,right:24,top:10,bottom:24},
+    xAxis:{type:'value',axisLabel:AXL},
+    yAxis:{type:'category',data:sorted.map(x=>x.country).reverse(),axisLabel:AXL},
+    series:[{type:'bar',data:sorted.map(x=>x.visitors).reverse(),itemStyle:{color:(p)=>sorted.slice().reverse()[p.dataIndex].l1Plus>0?'#b8763e':'#d8c3ac',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11}}]
+  });
+  window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
+}
+
+document.getElementById('view_period').textContent = D.visitors.latest.period;
+document.getElementById('view_period_prev').textContent = D.visitors.previous.period;
+document.getElementById('view_insights').innerHTML = D.visitors.insights.map(x=>'<li>'+esc(x)+'</li>').join('');
+(function(){
+  const v = D.visitors.latest, vp = D.visitors.previous;
+  document.getElementById('view_metrics').innerHTML =
+    '<div class="metric"><div class="n">'+fmt(v.visitor_records)+'</div><div class="l">Visitor records ('+vp.visitor_records+' tuần trước)</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.countries)+'</div><div class="l">Quốc gia / vùng</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.store_pv)+'</div><div class="l">PV gian hàng ('+vp.store_pv+' tuần trước)</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.buyer_l1_plus)+'</div><div class="l">Buyer L1+</div></div>';
+})();
+
+(function renderCountryTable(){
+  const sorted = D.visitors.countries.slice().sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
+  let h = '<tr><th>Quốc gia</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th>Level</th></tr>';
+  sorted.forEach(c=>{
+    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td><span class="tag '+(c.l1Plus>0?'green':'gray')+'">'+esc(c.level)+'</span></td></tr>';
+  });
+  document.getElementById('tbl_country').innerHTML = h;
+})();
+
+document.getElementById('kw_chips').innerHTML = D.visitors.keywords_matched.map(k=>'<span class="chip">'+esc(k)+'</span>').join('');
+
+document.getElementById('m_priority').textContent = D.leads.priority.length;
+document.getElementById('m_follow').textContent = D.leads.followup.length;
+document.getElementById('m_low').textContent = D.leads.lowResponse.length;
+document.getElementById('m_real').textContent = D.leads.summary.real_signal_leads.length;
+
+function copyText(btn, text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent = 'Đã copy!'; btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='Copy next action'; btn.classList.remove('copied'); }, 1800);
+  }).catch(()=>{ btn.textContent = 'Không copy được'; });
+}
+window.copyText = copyText;
+
+function renderPriCards(list){
+  document.getElementById('cards_pri').innerHTML = list.map((r,i)=>
+    '<div class="buyer-card"><div class="bh"><b>'+esc(r.name)+'</b><span class="bc">'+esc(r.country)+'</span></div>'+
+    '<div class="row"><b>Nhu cầu:</b> '+esc(r.need)+'</div>'+
+    '<div class="row"><b>Vướng mắc:</b> '+esc(r.blocker)+'</div>'+
+    '<div class="row"><b>Việc tiếp theo:</b> '+esc(r.next)+'</div>'+
+    '<button class="copy-btn" onclick="copyText(this, '+JSON.stringify(r.next).replace(/"/g,'&quot;')+')">Copy next action</button></div>'
+  ).join('');
+  document.getElementById('cnt_pri').textContent = list.length;
+}
+function renderExpList(list){
+  document.getElementById('list_exp').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+':</b> '+esc(r.note)+'</li>').join('');
+  document.getElementById('cnt_exp').textContent = list.length;
+}
+function renderSigList(list){
+  document.getElementById('list_sig').innerHTML = list.map(r=>'<li class="simple-item">'+esc(r)+'</li>').join('');
+  document.getElementById('cnt_sig').textContent = list.length;
+}
+renderPriCards(D.leads.priority);
+renderExpList(D.leads.followup);
+renderSigList(D.leads.lowResponse);
+
+document.getElementById('ops_period').textContent = D.ops.latest.period;
+document.getElementById('ops_alerts').innerHTML = D.ops.alerts.map(x=>'<li>'+esc(x)+'</li>').join('');
+document.getElementById('ops_actions_list').innerHTML = D.ops.actions.map((x,i)=>'<div class="simple-item">'+(i+1)+'. '+esc(x)+'</div>').join('');
+
+(function renderOpsTable(){
+  const o = D.ops.latest, op = D.ops.previous;
+  const rows = [
+    ['Số sao', o.stars, op.stars, false],
+    ['Tổng sản phẩm', o.total_products, op.total_products, true],
+    ['Sản phẩm mới', o.new_products, op.new_products, true],
+    ['Tổng người ghé thăm', o.visitors, op.visitors, true],
+    ['Inquiry', o.inquiries, op.inquiries, true],
+    ['Inquiry đã trả lời', o.inquiries_replied, op.inquiries_replied, true],
+    ['RFQ đã báo giá', o.rfq_quoted, op.rfq_quoted, true],
+    ['RFQ còn lại', o.rfq_remaining, op.rfq_remaining, true],
+    ['Thời gian phản hồi TB (h)', o.avg_reply_hours, op.avg_reply_hours, false],
+    ['Trả lời trong 24h (%)', o.reply_24h_rate, op.reply_24h_rate, false],
+    ['Super Product', o.super_products, op.super_products, true],
+    ['Top Product', o.top_products, op.top_products, true]
+  ];
+  let h = '<tr><th>Chỉ số</th><th class="num">Tuần này ('+esc(o.period.split(' đến ')[1])+')</th><th class="num">Tuần trước ('+esc(op.period.split(' đến ')[1])+')</th></tr>';
+  rows.forEach(([label,cur,prev,isNum])=>{
+    h += '<tr><td>'+label+'</td><td class="num">'+(isNum?fmt(cur):esc(cur))+'</td><td class="num">'+(isNum?fmt(prev):esc(prev))+'</td></tr>';
+  });
+  document.getElementById('tbl_ops').innerHTML = h;
+})();
+</script>
+</body></html>
