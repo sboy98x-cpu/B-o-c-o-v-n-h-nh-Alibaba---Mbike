@@ -1,0 +1,1950 @@
+{
+  "brand": "viet-drip",
+  "generatedAt": "2026-08-26",
+  "sourceIds": {
+    "ops": "1ogyDY_dwnxPf8upnib5mL-5g9kGpMuoJ7wurByAaiKQ",
+    "visitor": "1c7NvoAVG7kQUwAsLNoPmCj-Yxv4DF8UKua1ijJEjki4"
+  },
+  "ops": {
+    "headers": [
+      "Khung thời gian hoạt động",
+      "Tuần ",
+      "09-08-2026 đến 15-08-2026",
+      "02-08-2026 đến 08-08-2026",
+      "26-07-2026 đến 01-08-2026",
+      "19-07-2026 đến 25-07-2026",
+      "12-07-2026 đến 18-07-2026",
+      "05-07-2026 đến 11-07-2026",
+      "21-06-2026 đến 27-06-2026",
+      "14-06-2026 đến 20-06-2026",
+      "31-05-2026 đến 06-05-2026"
+    ],
+    "history": [
+      {
+        "period": "09-08-2026 đến 15-08-2026",
+        "stars": "1",
+        "products": "1044",
+        "newProducts": "13",
+        "visitors": "110",
+        "inquiries": "5",
+        "repliedInquiries": "5",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "0,8h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "5"
+      },
+      {
+        "period": "02-08-2026 đến 08-08-2026",
+        "stars": "1",
+        "products": "1031",
+        "newProducts": "0",
+        "visitors": "70",
+        "inquiries": "1",
+        "repliedInquiries": "1",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "2,01h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "4"
+      },
+      {
+        "period": "26-07-2026 đến 01-08-2026",
+        "stars": "1",
+        "products": "1031",
+        "newProducts": "1",
+        "visitors": "88",
+        "inquiries": "4",
+        "repliedInquiries": "4",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "1,7h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "3"
+      },
+      {
+        "period": "19-07-2026 đến 25-07-2026",
+        "stars": "1",
+        "products": "1030",
+        "newProducts": "0",
+        "visitors": "32",
+        "inquiries": "3",
+        "repliedInquiries": "3",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "3,84h",
+        "reply24h": "91.67%",
+        "superProduct": "0",
+        "topProduct": "2"
+      },
+      {
+        "period": "12-07-2026 đến 18-07-2026",
+        "stars": "1",
+        "products": "1030",
+        "newProducts": "4",
+        "visitors": "73",
+        "inquiries": "3",
+        "repliedInquiries": "3",
+        "rfqQuoted": "5",
+        "rfqRemaining": "20",
+        "avgResponse": "4,59h",
+        "reply24h": "92.31%",
+        "superProduct": "0",
+        "topProduct": "2"
+      },
+      {
+        "period": "05-07-2026 đến 11-07-2026",
+        "stars": "1",
+        "products": "1026",
+        "newProducts": "503",
+        "visitors": "82",
+        "inquiries": "3",
+        "repliedInquiries": "3",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "4,23h",
+        "reply24h": "93%",
+        "superProduct": "0",
+        "topProduct": "2"
+      },
+      {
+        "period": "21-06-2026 đến 27-06-2026",
+        "stars": "1",
+        "products": "523",
+        "newProducts": "46",
+        "visitors": "95",
+        "inquiries": "4",
+        "repliedInquiries": "4",
+        "rfqQuoted": "20",
+        "rfqRemaining": "20",
+        "avgResponse": "9,19h",
+        "reply24h": "80%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "14-06-2026 đến 20-06-2026",
+        "stars": "0",
+        "products": "477",
+        "newProducts": "36",
+        "visitors": "84",
+        "inquiries": "4",
+        "repliedInquiries": "4",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "10,54h",
+        "reply24h": "85.71%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "31-05-2026 đến 06-05-2026",
+        "stars": "0",
+        "products": "441",
+        "newProducts": "441",
+        "visitors": "40",
+        "inquiries": "1",
+        "repliedInquiries": "1",
+        "rfqQuoted": "20",
+        "rfqRemaining": "0",
+        "avgResponse": "13,36h",
+        "reply24h": "67%",
+        "superProduct": "0",
+        "topProduct": "0"
+      }
+    ]
+  },
+  "visitors": {
+    "period": "16-22.08",
+    "countries": [
+      {
+        "country": "Ả Rập Xê-út",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Argentina",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Armenia",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Ấn Độ",
+        "visitors": "2",
+        "pv": "13",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "5",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Brazil",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Campuchia",
+        "visitors": "2",
+        "pv": "3",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "2",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Canada",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Cộng hòa Dominica",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Guinea-Bissau",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Hàn Quốc",
+        "visitors": "2",
+        "pv": "12",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Hoa Kỳ",
+        "visitors": "4",
+        "pv": "4",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "8",
+        "L0": "0",
+        "L1": "4",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "4"
+      },
+      {
+        "country": "Indonesia",
+        "visitors": "3",
+        "pv": "12",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "11",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Kenya",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Libyan Arab Jamahiriya",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Malaysia",
+        "visitors": "2",
+        "pv": "2",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Mexico",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Nam Phi",
+        "visitors": "2",
+        "pv": "3",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "6",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "New Zealand",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Nicaragua",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Palestine",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Peru",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Philippines",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Senegal",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Sri Lanka",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Tanzania",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Trung Quốc",
+        "visitors": "3",
+        "pv": "6",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "9",
+        "L0": "3",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Úc",
+        "visitors": "1",
+        "pv": "12",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Việt Nam",
+        "visitors": "2",
+        "pv": "2",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Vương quốc Anh",
+        "visitors": "1",
+        "pv": "15",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Zambia",
+        "visitors": "2",
+        "pv": "3",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "sp6",
+        "occurrences": 2,
+        "pv": 12,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hàn Quốc": 2
+        }
+      },
+      {
+        "keyword": "sp630e",
+        "occurrences": 2,
+        "pv": 12,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hàn Quốc": 2
+        }
+      },
+      {
+        "keyword": "selang",
+        "occurrences": 2,
+        "pv": 6,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 2
+        }
+      },
+      {
+        "keyword": "selang air",
+        "occurrences": 2,
+        "pv": 6,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 2
+        }
+      },
+      {
+        "keyword": "hp rt mt800",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 2,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Campuchia": 2
+        }
+      },
+      {
+        "keyword": "12 inch irrigation tubing",
+        "occurrences": 1,
+        "pv": 15,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword": "amplifier sale",
+        "occurrences": 1,
+        "pv": 15,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword": "high power amplifier",
+        "occurrences": 1,
+        "pv": 15,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword": "hydroponic tower grow",
+        "occurrences": 1,
+        "pv": 15,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword": "george building",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "smart toilet",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "verde marble vanity",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "vietdrip",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "16mm plain lateral drip pipes",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "sand filter for drip irrigation",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "womens intimates",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "film plastik rumah kaca",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "konektor dari pipa ke selang hdpe tetes",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "kubah geodesik",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "set lengkap rumah hijau",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "selang plastik irigasi",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "工具",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "花园",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "铲子",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "0281002509",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword": "4mm barbed straight connector drip irrigation",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "bacterial wilt",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword": "drip irrigation system",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "filtre  disque h 4 pouces  300 maille",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "mini valve gouttegoutte polyoxymthylne",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "petrol sprayer gun and pipe",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword": "pvc pipe fittings",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "selang pertanian",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "selang terpal hitam",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "steel  door and frome",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "upvc ball valve",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "valves",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "agricultural drip line",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword": "agricultural irrigation sprinklers",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "aspersores para riego agricola para cultivo de ban",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dominica": 1
+        }
+      },
+      {
+        "keyword": "auto parts",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "automatic valve water control",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 1
+        }
+      },
+      {
+        "keyword": "back to school",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword": "barber",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "bird toys china",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "bmw x5 digital cluster",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 1
+        }
+      },
+      {
+        "keyword": "bomba de agua diesel de 2 pulgadas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nicaragua": 1
+        }
+      },
+      {
+        "keyword": "cabinets for growing indoor plants",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword": "car air freshener",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "clcio virgem",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword": "clothes",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "craftsman wrenches",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "dcg q2 channel printer",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "disco laser light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "drip irrigation valve 16mm",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword": "f10",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Libyan Arab Jamahiriya": 1
+        }
+      },
+      {
+        "keyword": "f10 m5",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Libyan Arab Jamahiriya": 1
+        }
+      },
+      {
+        "keyword": "flash card book",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword": "fog spray machine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "foor cuttingmachine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "garage tools set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword": "high quality bedfings",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword": "hose connector",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "hose pipe for agriculture farming",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "joggers men high quality",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword": "kong dog toy",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "long sleeved tshirt with breast pocket with collar",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword": "massage machine full body",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "modern buffet mirror",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ả Rập Xê-út": 1
+        }
+      },
+      {
+        "keyword": "motobombas de agua gasolina",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nicaragua": 1
+        }
+      },
+      {
+        "keyword": "motoculteur",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword": "organic dog toys",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "outils agricoles",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword": "patio swings",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ả Rập Xê-út": 1
+        }
+      },
+      {
+        "keyword": "plush toy",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "pompe  eau solaire 3hp",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guinea-Bissau": 1
+        }
+      },
+      {
+        "keyword": "pulvrisateur lectrique",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guinea-Bissau": 1
+        }
+      },
+      {
+        "keyword": "pvc fittings for irrigation networks",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword": "rear glass bmw e93 and f33",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Libyan Arab Jamahiriya": 1
+        }
+      },
+      {
+        "keyword": "riego por nebulizacion",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "sideboards",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ả Rập Xê-út": 1
+        }
+      },
+      {
+        "keyword": "solar irrigation pump",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guinea-Bissau": 1
+        }
+      },
+      {
+        "keyword": "sprinkler irrigation system",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "swimming pool",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "tea",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 1
+        }
+      },
+      {
+        "keyword": "tlphone doogee",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword": "torta de ossos",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword": "torta de ossos fertilizantes de plantas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword": "transparent pot for indoor plants",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword": "water methanol injection kit",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 1
+        }
+      },
+      {
+        "keyword": "water pipe for fire figting",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "welding lead",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      }
+    ]
+  }
+}
