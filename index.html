@@ -349,11 +349,15 @@ if (hasE) {
   window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
 }
 
-document.getElementById('view_metrics').innerHTML =
-  '<div class="metric"><div class="n">'+fmt(D.view_week.visitors)+'</div><div class="l">Visitor records</div></div>'+
-  '<div class="metric"><div class="n">'+fmt(D.view_week.countries)+'</div><div class="l">Quốc gia / vùng</div></div>'+
-  '<div class="metric"><div class="n">'+fmt(D.view_week.pv)+'</div><div class="l">PV gian hàng</div></div>'+
-  '<div class="metric"><div class="n">'+fmt(D.view_week.buyer_l1plus)+'</div><div class="l">Buyer L1+</div></div>';
+(function(){
+  const lv2 = D.view_week.levels;
+  const l2plus = (lv2.L2||0) + (lv2.L3||0) + (lv2.L4||0);
+  document.getElementById('view_metrics').innerHTML =
+    '<div class="metric"><div class="n">'+fmt(D.view_week.visitors)+'</div><div class="l">Visitor records</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(D.view_week.countries)+'</div><div class="l">Quốc gia / vùng</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(D.view_week.pv)+'</div><div class="l">PV gian hàng</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(l2plus)+'</div><div class="l">Buyer L2+ (Scaleup trở lên)</div></div>';
+})();
 
 (function renderOpsTable(){
   const metrics = [
@@ -382,9 +386,9 @@ function levelBadges(c){
   return 'L0 '+c.L0+' &middot; L1 '+c.L1+' &middot; L2 '+c.L2+' &middot; L3 '+c.L3+' &middot; L4 '+c.L4;
 }
 function renderCountryTable(list){
-  let h = '<tr><th>Quốc gia / vùng</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th class="num">L1+</th><th>Chi tiết cấp L0-L4</th></tr>';
+  let h = '<tr><th>Quốc gia / vùng</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th class="num">Keyword chính xác (giữ nguyên)</th><th class="num">L1+</th><th>Chi tiết cấp L0-L4</th></tr>';
   list.forEach(c=>{
-    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.vkw)+'</td><td class="num">'+fmt(c.L1plus)+'</td><td class="hint">'+levelBadges(c)+'</td></tr>';
+    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.vkw)+'</td><td class="num">'+fmt(c.kwrec)+'</td><td class="num">'+fmt(c.L1plus)+'</td><td class="hint">'+levelBadges(c)+'</td></tr>';
   });
   document.getElementById('tbl_country').innerHTML = h;
   document.getElementById('country_count').textContent = list.length+' / '+D.countries.length+' quốc gia';
@@ -398,7 +402,7 @@ let countrySort = {key:'visitors',dir:-1};
 document.getElementById('tbl_country').addEventListener('click', e=>{
   const th = e.target.closest('th'); if(!th) return;
   const idx = Array.from(th.parentNode.children).indexOf(th);
-  const keys = ['country','visitors','pv','vkw','L1plus',null];
+  const keys = ['country','visitors','pv','vkw','kwrec','L1plus',null];
   const key = keys[idx]; if(!key) return;
   countrySort.dir = (countrySort.key===key) ? -countrySort.dir : -1;
   countrySort.key = key;
