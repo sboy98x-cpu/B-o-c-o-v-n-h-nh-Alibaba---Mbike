@@ -38,6 +38,16 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
 .priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.insight-card{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:10px;margin-bottom:8px;font-size:13px;line-height:1.5}
+.insight-card:last-child{margin-bottom:0}
+.insight-badge{flex:none;font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.03em;padding:3px 8px;border-radius:20px;white-space:nowrap;margin-top:1px;color:#fff}
+.insight-card.warn{background:var(--amber2);border:1px solid #f0c98a}
+.insight-card.warn .insight-badge{background:var(--amber)}
+.insight-card.opportunity{background:var(--blue2);border:1px solid var(--line)}
+.insight-card.opportunity .insight-badge{background:var(--blue)}
+.insight-card.good{background:var(--green2);border:1px solid #bfe3cd}
+.insight-card.good .insight-badge{background:var(--green)}
+.insight-text{color:#3a4556}
 .legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
 .legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
 .ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
@@ -112,6 +122,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
   </div>
 
   <section class="kpis" id="kpis"></section>
+
+  <div class="section" style="margin-bottom:15px">
+    <h2>&#128161; Insight cần chú ý</h2>
+    <div id="insight_list"></div>
+  </div>
 
   <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
   <nav class="tabs">
@@ -276,6 +291,44 @@ function kpiCard(label,value,note,cls){
   html+=kpiCard('Phản hồi trong 24h', wLatest['Tỉ lệ tin nhắn được phản hồi trong 24h']+'%', (respD!=null?'<span class="delta '+(respD>=0?'up':'down')+'">'+(respD>=0?'+':'')+respD.toFixed(1)+'%</span> so với tuần trước':''), 'good');
   html+=kpiCard('RFQ còn lại', fmt(wLatest['Số lượt báo giá RFQ còn lại'])+' lượt', 'Đã báo '+wLatest['Tổng số lượt đã báo giá RFQ']+' / 23 lượt', 'warn');
   document.getElementById('kpis').innerHTML = html;
+})();
+
+function renderInsights(insights){
+  const labelMap = {warn:'Cần chú ý', opportunity:'Cơ hội', good:'Đang tốt'};
+  return insights.slice(0,5).map(item => (
+    '<div class="insight-card '+item.type+'"><span class="insight-badge">'+labelMap[item.type]+'</span><span class="insight-text">'+item.text+'</span></div>'
+  )).join('');
+}
+(function renderMbikeInsights(){
+  const stars = +wLatest['Số sao'];
+  const visL = +wLatest['Tổng số người ghé thăm'], visP = +wPrev['Tổng số người ghé thăm'];
+  const inqL = +wLatest['Tổng số thư hỏi hàng'], inqP = +wPrev['Tổng số thư hỏi hàng'];
+  const visGrowth = pctDelta(visL, visP), inqGrowth = pctDelta(inqL, inqP);
+  const insights = [];
+
+  if (stars >= 5) {
+    insights.push({type:'good', text:'Gian hàng đang duy trì rating cao ('+stars+' sao) và có nền tảng sản phẩm lớn. Trọng tâm tiếp theo là chuyển traffic thành inquiry và đơn Trade Assurance.'});
+  }
+
+  if (inqL < inqP) {
+    insights.push({type:'warn', text:'Inquiry đang giảm so với tuần trước ('+inqL+' so với '+inqP+'). Ưu tiên kiểm tra các sản phẩm có lượt xem cao nhưng chưa tạo hỏi hàng.'});
+  } else if (visGrowth!=null && inqGrowth!=null && visGrowth > inqGrowth) {
+    insights.push({type:'warn', text:'Traffic tăng '+visGrowth.toFixed(0)+'% ('+visL+' so với '+visP+') nhưng inquiry chỉ tăng '+inqGrowth.toFixed(0)+'% ('+inqL+' so với '+inqP+') — chưa tương xứng. Cần tối ưu ảnh chính, title, keyword, giá, MOQ và CTA trên các sản phẩm có PV cao.'});
+  }
+
+  const topCountries = D.countries.slice().sort((a,b)=>(b.L1plus-a.L1plus)||(b.pv-a.pv)).slice(0,3);
+  insights.push({type:'opportunity', text:'Ưu tiên các quốc gia có L1+ cao và keyword đúng ngành motorcycle accessories, không chỉ ưu tiên quốc gia có nhiều visitor L0. Dẫn đầu: '+topCountries.map(c=>c.country+' ('+c.L1plus+' L1+)').join(', ')+'.'});
+
+  const motoKwPattern = /motorcycle|crash bar|luggage rack|top box|headlight|phone holder|\bcb\b|yamaha|honda|ktm|bmw|ducati/i;
+  const topKw = D.keywords.filter(k=>motoKwPattern.test(k.keyword)).sort((a,b)=>b.pv-a.pv).slice(0,3);
+  insights.push({type:'opportunity', text:'Keyword đang cho thấy buyer tìm đúng nhóm phụ kiện xe máy và một số model cụ thể ('+topKw.map(k=>'"'+k.keyword+'"').join(', ')+'). Nên tạo/đẩy sản phẩm theo model có nhu cầu rõ.'});
+
+  const p0 = D.buyers.priority[0];
+  if (p0) {
+    insights.push({type:'warn', text:'Ưu tiên buyer đã có product, quantity, model, địa chỉ hoặc câu hỏi về shipping — ví dụ '+p0.name+' ('+p0.country+'): '+p0.need+'. Next action phải cụ thể: gửi spec, báo giá, phí ship và link Trade Assurance.'});
+  }
+
+  document.getElementById('insight_list').innerHTML = renderInsights(insights);
 })();
 
 (function renderFocus(){

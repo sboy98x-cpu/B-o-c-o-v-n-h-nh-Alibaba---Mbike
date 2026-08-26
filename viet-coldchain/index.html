@@ -5,15 +5,15 @@
 <title>Báo cáo tuần - VIET COLDCHAIN JOINT STOCK COMPANY</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
 <style>
-:root{--navy:#0d3b3e;--blue:#1a8f8c;--blue2:#e6f6f5;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+:root{--navy:#7a2e0a;--blue:#d9711f;--blue2:#fdece0;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
 .wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
-.hero{background:linear-gradient(120deg,#0d3b3e,#1c6b66);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
+.hero{background:linear-gradient(120deg,#7a2e0a,#b24a14);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
 .hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
-.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#dcf3f0}
+.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#f2d9c4}
 .badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
-.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#dcf3f0}
+.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#f2d9c4}
 .period b{display:block;color:#fff;font-size:14px;margin-top:2px}
 .warn-banner{background:#fff5df;border:1px solid #f0c98a;border-radius:10px;padding:10px 14px;margin-bottom:14px;font-size:12.5px;color:#7a5620;display:flex;gap:8px;align-items:flex-start}
 .kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:8px}
@@ -31,7 +31,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
 .tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
 .tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
-.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(13,59,62,.35)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(122,46,10,.35)}
 .pane{display:none}.pane.active{display:block}
 .section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
 .section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--navy);padding-left:10px}
@@ -40,6 +40,16 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
 .priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.insight-card{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:10px;margin-bottom:8px;font-size:13px;line-height:1.5}
+.insight-card:last-child{margin-bottom:0}
+.insight-badge{flex:none;font-size:10px;font-weight:850;text-transform:uppercase;letter-spacing:.03em;padding:3px 8px;border-radius:20px;white-space:nowrap;margin-top:1px;color:#fff}
+.insight-card.warn{background:var(--amber2);border:1px solid #f0c98a}
+.insight-card.warn .insight-badge{background:var(--amber)}
+.insight-card.opportunity{background:var(--blue2);border:1px solid var(--line)}
+.insight-card.opportunity .insight-badge{background:var(--blue)}
+.insight-card.good{background:var(--green2);border:1px solid #bfe3cd}
+.insight-card.good .insight-badge{background:var(--green)}
+.insight-text{color:#3a4556}
 .legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
 .legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
 .ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
@@ -54,7 +64,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:120px}
 .focus-card.red{background:var(--red2);border-color:#ffd7dc}
 .focus-card.amber{background:var(--amber2);border-color:#f5dfae}
-.focus-card.blue{background:var(--blue2);border-color:#bfe6e3}
+.focus-card.blue{background:var(--blue2);border-color:#f3c8a3}
 .focus-card h3{font-size:15px;margin:0 0 9px}
 .focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
 .big{font-size:26px;font-weight:900;letter-spacing:-.06em}
@@ -127,6 +137,11 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 
   <section class="kpis" id="kpis"></section>
   <div class="kpi-note-line" id="kpi_note"></div>
+
+  <div class="section" style="margin-bottom:15px">
+    <h2>&#128161; Insight cần chú ý</h2>
+    <div id="insight_list"></div>
+  </div>
 
   <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
   <nav class="tabs">
@@ -281,6 +296,26 @@ function kpiCard(label,value,note,cls){
   document.getElementById('kpi_note').textContent = 'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — 3 nguồn không cùng tuần nên không gộp thành một chỉ số duy nhất.';
 })();
 
+function renderInsights(insights){
+  const labelMap = {warn:'Cần chú ý', opportunity:'Cơ hội', good:'Đang tốt'};
+  return insights.slice(0,5).map(item => (
+    '<div class="insight-card '+item.type+'"><span class="insight-badge">'+labelMap[item.type]+'</span><span class="insight-text">'+item.text+'</span></div>'
+  )).join('');
+}
+(function renderVccInsights(){
+  const o = D.ops.latest, op = D.ops.previous, v = D.visitor.latest, vp = D.visitor.previous;
+  const byName = n => D.visitor.countries.find(c=>c.country===n) || {visitors:0,pv:0,l1_plus:0};
+  const vn = byName('Việt Nam'), cn = byName('Trung Quốc'), us = byName('Hoa Kỳ');
+  const insights = [
+    {type:'warn', text:'Visitor tăng nhẹ ('+v.visitor_records+' so với '+vp.visitor_records+') nhưng PV giảm ('+v.store_pv+' so với '+vp.store_pv+') và buyer L1+ giảm mạnh ('+v.buyer_l1_plus+' so với '+vp.buyer_l1_plus+'). Cần ưu tiên chất lượng traffic thay vì chỉ tăng số visitor.'},
+    {type:'warn', text:'Traffic đang tập trung nhiều ở Việt Nam ('+vn.visitors+' visitor, '+vn.pv+' PV) và Trung Quốc ('+cn.visitors+' visitor, '+cn.pv+' PV), trong khi Hoa Kỳ mới có '+us.visitors+' visitor/'+us.l1_plus+' L1+. Cần mở rộng traffic đúng thị trường cold-chain (Mỹ/EU).'},
+    {type:'opportunity', text:'Mary Jane Zamora, Keneth Adesulu, Alviaa Alviaa và Kirti Jain Kothari là nhóm cần follow trước vì đã có nhu cầu về sample, MOQ container, IQF/frozen fruits hoặc giá thị trường.'},
+    {type:'warn', text:'Các blocker chính đang chặn chốt đơn: '+D.messages.summary.main_blockers.join(', ')+'.'},
+    {type:'good', text:'Inquiry đã được trả lời đầy đủ ('+o.inquiries_replied+'/'+o.inquiries+') và tỷ lệ phản hồi trong 24h đạt '+o.reply_24h_rate+'%, nhưng cần cải thiện Marketing/traffic và tạo đơn Trade Assurance.'}
+  ];
+  document.getElementById('insight_list').innerHTML = renderInsights(insights);
+})();
+
 (function renderFocus(){
   document.getElementById('ops_period').textContent = D.ops.latest.period;
   document.getElementById('ops_issues').innerHTML = D.ops.issues.map(x=>'<li>'+esc(x)+'</li>').join('');
@@ -308,7 +343,7 @@ if (hasE) {
     xAxis:{type:'category',data:weeks,axisLabel:Object.assign({},AXL,{rotate:45})},
     yAxis:[{type:'value',name:'Visitor',axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
     series:[
-      {name:'Lượt ghé thăm',type:'bar',data:D.ops.weeks.map(w=>+w['Tổng số người ghé thăm']),itemStyle:{color:'#1a8f8c',borderRadius:[4,4,0,0]}},
+      {name:'Lượt ghé thăm',type:'bar',data:D.ops.weeks.map(w=>+w['Tổng số người ghé thăm']),itemStyle:{color:'#d9711f',borderRadius:[4,4,0,0]}},
       {name:'Phản hồi 24h (%)',type:'line',yAxisIndex:1,data:D.ops.weeks.map(w=>+w['Tỉ lệ tin nhắn được phản hồi trong 24h']),smooth:true,itemStyle:{color:'#1f9a6d'}}
     ]
   });
@@ -332,7 +367,7 @@ if (hasE) {
     tooltip:{trigger:'item',formatter:'{b}: {c}'},
     series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
       label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
-      color:['#9fd3d0','#5fb6b1','#2f8f8a','#1a6f6b','#0d3b3e'],
+      color:['#f3c8a3','#e8975a','#d9711f','#a8500f','#7a2e0a'],
       data:[
         {value:lv.L0,name:'L0 - Đã đăng ký'},
         {value:lv.L1,name:'L1 - Tiềm năng'},
@@ -349,7 +384,7 @@ if (hasE) {
     grid:{left:90,right:24,top:10,bottom:24},
     xAxis:{type:'value',axisLabel:AXL},
     yAxis:{type:'category',data:top.map(x=>x.country).reverse(),axisLabel:AXL},
-    series:[{type:'bar',data:top.map(x=>x.visitors).reverse(),itemStyle:{color:'#1a8f8c',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11}}]
+    series:[{type:'bar',data:top.map(x=>x.visitors).reverse(),itemStyle:{color:'#d9711f',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11}}]
   });
   window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
 }
