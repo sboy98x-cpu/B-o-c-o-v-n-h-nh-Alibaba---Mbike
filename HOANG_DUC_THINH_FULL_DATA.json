@@ -1,0 +1,5474 @@
+{
+  "brand": "hoang-duc-thinh",
+  "generatedAt": "2026-08-26",
+  "sourceIds": {
+    "ops": "19WZKZlW2NOLJqdaNroG3rReagIWcqOCDpgXO9edqhJs",
+    "visitor": "1qDXhvdMg0Eip8djGJPOUPhNHhPUbRpElsCJ2ZOiRv4I"
+  },
+  "ops": {
+    "headers": [
+      "Khung thời gian hoạt động",
+      "Tuần ",
+      "09-08-2026 đến 15-08-2026",
+      "02-08-2026 đến 08-08-2026",
+      "26-07-2026 đến 01-08-2026",
+      "19-07-2026 đến 25-07-2026",
+      "12-07-2026 đến 18-07-2026",
+      "05-07-2026 đến 11-07-2026",
+      "21-06-2026 đến 27-06-2026",
+      "14-06-2026 đến 20-06-2026",
+      "30-05-2026 đến 06-06-2026",
+      "17-05-2026 đến 23-05-2026",
+      "26-4-2026 đến 2-05-2026",
+      "19-4-2026 đến 25-04-2026"
+    ],
+    "history": [
+      {
+        "period": "09-08-2026 đến 15-08-2026",
+        "stars": "2",
+        "products": "596",
+        "newProducts": "0",
+        "visitors": "252",
+        "inquiries": "10",
+        "repliedInquiries": "10",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "5h",
+        "reply24h": "80.00%",
+        "superProduct": "1",
+        "topProduct": "17"
+      },
+      {
+        "period": "02-08-2026 đến 08-08-2026",
+        "stars": "2",
+        "products": "596",
+        "newProducts": "0",
+        "visitors": "272",
+        "inquiries": "8",
+        "repliedInquiries": "8",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "4,42h",
+        "reply24h": "82.35%",
+        "superProduct": "1",
+        "topProduct": "17"
+      },
+      {
+        "period": "26-07-2026 đến 01-08-2026",
+        "stars": "2",
+        "products": "596",
+        "newProducts": "0",
+        "visitors": "195",
+        "inquiries": "12",
+        "repliedInquiries": "12",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "3,13h",
+        "reply24h": "87.50%",
+        "superProduct": "0",
+        "topProduct": "17"
+      },
+      {
+        "period": "19-07-2026 đến 25-07-2026",
+        "stars": "3",
+        "products": "596",
+        "newProducts": "0",
+        "visitors": "133",
+        "inquiries": "12",
+        "repliedInquiries": "12",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "2,18h",
+        "reply24h": "91.30%",
+        "superProduct": "1",
+        "topProduct": "16"
+      },
+      {
+        "period": "12-07-2026 đến 18-07-2026",
+        "stars": "3",
+        "products": "596",
+        "newProducts": "0",
+        "visitors": "187",
+        "inquiries": "8",
+        "repliedInquiries": "8",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "2h",
+        "reply24h": "92.00%",
+        "superProduct": "0",
+        "topProduct": "16"
+      },
+      {
+        "period": "05-07-2026 đến 11-07-2026",
+        "stars": "3",
+        "products": "596",
+        "newProducts": "-3",
+        "visitors": "296",
+        "inquiries": "16",
+        "repliedInquiries": "14",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "1,86h",
+        "reply24h": "92.59%",
+        "superProduct": "0",
+        "topProduct": "15"
+      },
+      {
+        "period": "21-06-2026 đến 27-06-2026",
+        "stars": "3",
+        "products": "599",
+        "newProducts": "0",
+        "visitors": "604",
+        "inquiries": "20",
+        "repliedInquiries": "20",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "2,27h",
+        "reply24h": "91.11%",
+        "superProduct": "0",
+        "topProduct": "13"
+      },
+      {
+        "period": "14-06-2026 đến 20-06-2026",
+        "stars": "2",
+        "products": "599",
+        "newProducts": "0",
+        "visitors": "464",
+        "inquiries": "10",
+        "repliedInquiries": "6",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "1,58h",
+        "reply24h": "94%",
+        "superProduct": "0",
+        "topProduct": "9"
+      },
+      {
+        "period": "30-05-2026 đến 06-06-2026",
+        "stars": "1",
+        "products": "600",
+        "newProducts": "100",
+        "visitors": "411",
+        "inquiries": "7",
+        "repliedInquiries": "6",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "0,12h",
+        "reply24h": "100%",
+        "superProduct": "0",
+        "topProduct": "3"
+      },
+      {
+        "period": "17-05-2026 đến 23-05-2026",
+        "stars": "1",
+        "products": "500",
+        "newProducts": "385",
+        "visitors": "96",
+        "inquiries": "6",
+        "repliedInquiries": "6",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "7,15h",
+        "reply24h": "71.43%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "26-4-2026 đến 2-05-2026",
+        "stars": "1",
+        "products": "115",
+        "newProducts": "14",
+        "visitors": "51",
+        "inquiries": "6",
+        "repliedInquiries": "5",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "8,25h",
+        "reply24h": "67%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "19-4-2026 đến 25-04-2026",
+        "stars": "0",
+        "products": "101",
+        "newProducts": "101",
+        "visitors": "159",
+        "inquiries": "2",
+        "repliedInquiries": "1",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "0,01h",
+        "reply24h": "100%",
+        "superProduct": "0",
+        "topProduct": "0"
+      }
+    ]
+  },
+  "visitors": {
+    "period": "16-22.08",
+    "countries": [
+      {
+        "country": "Ả Rập Xê-út",
+        "visitors": "2",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Ai Cập",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Angola",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Áo",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Argentina",
+        "visitors": "4",
+        "pv": "7",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "9",
+        "L0": "3",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Ấn Độ",
+        "visitors": "3",
+        "pv": "11",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "9",
+        "L0": "1",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Ba Lan",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Bỉ",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Bồ Đào Nha",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Brazil",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Burkina Faso",
+        "visitors": "2",
+        "pv": "5",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Canada",
+        "visitors": "5",
+        "pv": "8",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "10",
+        "L0": "3",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Colombia",
+        "visitors": "4",
+        "pv": "14",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "13",
+        "L0": "4",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Cộng hòa Dân chủ Congo",
+        "visitors": "2",
+        "pv": "4",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "7",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Đan Mạch",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Ethiopia",
+        "visitors": "3",
+        "pv": "5",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Gabon",
+        "visitors": "2",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Ghana",
+        "visitors": "4",
+        "pv": "4",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "12",
+        "L0": "1",
+        "L1": "3",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "3"
+      },
+      {
+        "country": "Guatemala",
+        "visitors": "3",
+        "pv": "5",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "8",
+        "L0": "3",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Guinea",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Hà Lan",
+        "visitors": "5",
+        "pv": "6",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "9",
+        "L0": "5",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Hàn Quốc",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Hoa Kỳ",
+        "visitors": "25",
+        "pv": "42",
+        "keywordVisitors": "16",
+        "exactKeywordRecords": "39",
+        "L0": "17",
+        "L1": "8",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "8"
+      },
+      {
+        "country": "Hy Lạp",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Indonesia",
+        "visitors": "3",
+        "pv": "6",
+        "keywordVisitors": "3",
+        "exactKeywordRecords": "7",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Iraq",
+        "visitors": "2",
+        "pv": "5",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Ireland",
+        "visitors": "2",
+        "pv": "6",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Israel",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Kazakhstan",
+        "visitors": "1",
+        "pv": "4",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Kenya",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Libyan Arab Jamahiriya",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Ma-rốc",
+        "visitors": "1",
+        "pv": "3",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Malaysia",
+        "visitors": "6",
+        "pv": "14",
+        "keywordVisitors": "5",
+        "exactKeywordRecords": "13",
+        "L0": "1",
+        "L1": "5",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "5"
+      },
+      {
+        "country": "Maldives",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Mali",
+        "visitors": "2",
+        "pv": "3",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Malta",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Mayotte",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Mexico",
+        "visitors": "6",
+        "pv": "7",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "10",
+        "L0": "4",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Mông Cổ",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Nam Phi",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "New Zealand",
+        "visitors": "2",
+        "pv": "5",
+        "keywordVisitors": "2",
+        "exactKeywordRecords": "2",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Nga",
+        "visitors": "4",
+        "pv": "6",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "4",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Nhật Bản",
+        "visitors": "2",
+        "pv": "3",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Peru",
+        "visitors": "4",
+        "pv": "16",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "10",
+        "L0": "2",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Pháp",
+        "visitors": "9",
+        "pv": "13",
+        "keywordVisitors": "7",
+        "exactKeywordRecords": "15",
+        "L0": "7",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Philippines",
+        "visitors": "9",
+        "pv": "20",
+        "keywordVisitors": "6",
+        "exactKeywordRecords": "15",
+        "L0": "4",
+        "L1": "5",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "5"
+      },
+      {
+        "country": "Tanzania",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Tây Ban Nha",
+        "visitors": "6",
+        "pv": "7",
+        "keywordVisitors": "6",
+        "exactKeywordRecords": "15",
+        "L0": "3",
+        "L1": "3",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "3"
+      },
+      {
+        "country": "Thổ Nhĩ Kỳ",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Thụy Điển",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Trinidad and Tobago",
+        "visitors": "1",
+        "pv": "3",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Trung Quốc",
+        "visitors": "10",
+        "pv": "17",
+        "keywordVisitors": "7",
+        "exactKeywordRecords": "20",
+        "L0": "10",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Úc",
+        "visitors": "7",
+        "pv": "7",
+        "keywordVisitors": "6",
+        "exactKeywordRecords": "16",
+        "L0": "5",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "2"
+      },
+      {
+        "country": "Việt Nam",
+        "visitors": "6",
+        "pv": "18",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "8",
+        "L0": "5",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Vương quốc Anh",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Ý",
+        "visitors": "5",
+        "pv": "7",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "7",
+        "L0": "5",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Yemen",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Zimbabwe",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "beige couch living room",
+        "occurrences": 4,
+        "pv": 12,
+        "levels": {
+          "L0": 0,
+          "L1": 4,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 4
+        }
+      },
+      {
+        "keyword": "beige couch living room fabric",
+        "occurrences": 4,
+        "pv": 12,
+        "levels": {
+          "L0": 0,
+          "L1": 4,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 4
+        }
+      },
+      {
+        "keyword": "dinning table 6 chairs",
+        "occurrences": 3,
+        "pv": 9,
+        "levels": {
+          "L0": 0,
+          "L1": 3,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 3
+        }
+      },
+      {
+        "keyword": "bar stool big",
+        "occurrences": 3,
+        "pv": 5,
+        "levels": {
+          "L0": 3,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guatemala": 3
+        }
+      },
+      {
+        "keyword": "island stools for kitchen",
+        "occurrences": 3,
+        "pv": 5,
+        "levels": {
+          "L0": 3,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guatemala": 3
+        }
+      },
+      {
+        "keyword": "sofa",
+        "occurrences": 3,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 2,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1,
+          "Malta": 1,
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "canap compress",
+        "occurrences": 3,
+        "pv": 3,
+        "levels": {
+          "L0": 3,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 3
+        }
+      },
+      {
+        "keyword": "puff para pie de cama 160",
+        "occurrences": 2,
+        "pv": 11,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 2
+        }
+      },
+      {
+        "keyword": "silln moderno de un asientomrsa auxiliar de sala",
+        "occurrences": 2,
+        "pv": 11,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 2
+        }
+      },
+      {
+        "keyword": "sillones",
+        "occurrences": 2,
+        "pv": 11,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 2
+        }
+      },
+      {
+        "keyword": "womens casual trousers",
+        "occurrences": 2,
+        "pv": 11,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 2
+        }
+      },
+      {
+        "keyword": "furniture",
+        "occurrences": 2,
+        "pv": 9,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1,
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "bascule dor 500 g",
+        "occurrences": 2,
+        "pv": 5,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Burkina Faso": 2
+        }
+      },
+      {
+        "keyword": "jeux denfants voiture lectriques",
+        "occurrences": 2,
+        "pv": 5,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Burkina Faso": 2
+        }
+      },
+      {
+        "keyword": "body",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mali": 2
+        }
+      },
+      {
+        "keyword": "coque pc",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mali": 2
+        }
+      },
+      {
+        "keyword": "cran pc",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mali": 2
+        }
+      },
+      {
+        "keyword": "compressed sofa",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malta": 1,
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "dining chairs",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1,
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "canvas bag",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "plastic bottles",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "thch anh",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "alfombras 3x4 lana",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "bicycle accessories",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "mesa centro cuadrados negro y blanco piedra",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "ottoman benchmesas tipo consola",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "proveedor muebles en ho chi minh city",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "6 eggs box carton",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "alashan agate",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "cuckoo rice cooker",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "electric switch",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "pressure cooker",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "inflatable furniture with the sofa bed inside",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "outdoor bean bag",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "outdoor led garden lights",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "outdoor projector",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "pvc inflatable  house",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "agricultural machinery",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "desiccant",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "dinning chair",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword": "l shape sofa set",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword": "lit enfant superpos",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Burkina Faso": 1
+        }
+      },
+      {
+        "keyword": "md24",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "床头板",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "活动板房",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "48v electric bicycle",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "accent chair",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "actuator valve",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "android tablet",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "ballerina hanging planter",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trinidad and Tobago": 1
+        }
+      },
+      {
+        "keyword": "beige sofa",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "broyeur plastique",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "canap",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "coffee table",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 1
+        }
+      },
+      {
+        "keyword": "curved sofa",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "edan lx3",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "edan lx6",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "fauteuil compress",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "habit",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "hed spa",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ma-rốc": 1
+        }
+      },
+      {
+        "keyword": "hotel furniture sofa sets",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Iraq": 1
+        }
+      },
+      {
+        "keyword": "ilot central de cuisine",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "ilot de cuisine",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "ilot de cuisine abec chaisw",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "industrial spice grinder machine",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "mesin karbonisasi",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "mesin utk proses carbonisasi batok leapa",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "moto",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "pet electric v shape operation table",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "planter",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trinidad and Tobago": 1
+        }
+      },
+      {
+        "keyword": "planter ballerina",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trinidad and Tobago": 1
+        }
+      },
+      {
+        "keyword": "queen modern headboard",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guatemala": 1
+        }
+      },
+      {
+        "keyword": "round coffe table walnut colour",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "samsung galaxy s24 ultra",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ma-rốc": 1
+        }
+      },
+      {
+        "keyword": "table de massage",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ma-rốc": 1
+        }
+      },
+      {
+        "keyword": "accent chair set of 2",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "aparador",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "bed",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Đan Mạch": 1
+        }
+      },
+      {
+        "keyword": "bed side table",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword": "bedden",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword": "bedroom furniture",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "best quality headphone",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "camper",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "casas de hormign",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "ceiling fan",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "cobertizo de herramientas",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "colchones para acampadas",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "company overview  qingdao ouli international trade co ltd",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "corner dressing table set",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword": "des lits",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword": "dresser for bedroom",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword": "dressing table set",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword": "ensemble de meubles de chambre",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword": "etagere chaussures",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword": "fandalier",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "french chest of drawers",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword": "gabinetes de cocina de madera",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "glossy cover for board",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "head board",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "head board for bed",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "headboard for bed",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword": "jbl headphones",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "king size bed",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Đan Mạch": 1
+        }
+      },
+      {
+        "keyword": "king size bedroom set",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Đan Mạch": 1
+        }
+      },
+      {
+        "keyword": "lozko skladane",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "mango wood sideboard",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "meja dapur troli",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "mesa de noche de madera",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "mesas de noche",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "mesita de noche",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "mquinas de envasado multifuncionales",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "muebles para la casa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "ombrelloni da spiaggia",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "pochette bijoux voyage",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "pochon bijoux",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "pojedyncze ko",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "qingdao besten flowery co ltd",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "qingdao ouli international trade co ltd",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "reception desk beauty salon",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "running shoes",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "set bed",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "side chairs for office",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "side table with charging walnut",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword": "sillas de comedor",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "sof con cama",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "sombrilla inteligente anti uv",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "sombrilla inteligente anti uv para playa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "sombrilla inteligente anti uv playa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "squishy dumplings",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "tafel voor tv",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword": "te veel regen voor de tuin",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword": "tefal voor tv",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword": "vent cover",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "wall panel pvc",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "wedding rings couple set",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "womens sweaters",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "acrylic coffee dripper stand",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "adjustable mobile rotating sliding rolling kitchen island",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "armario de almacenamiento",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "banco pie de cama",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "base tv branco e dourado",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Bồ Đào Nha": 1
+        }
+      },
+      {
+        "keyword": "bean bag chair for adults",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ba Lan": 1
+        }
+      },
+      {
+        "keyword": "bean bag sofas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "beanbag",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "bedroom sets",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tanzania": 1
+        }
+      },
+      {
+        "keyword": "beige leather sofas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "boneless couch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malta": 1
+        }
+      },
+      {
+        "keyword": "boneless couch sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hy Lạp": 1
+        }
+      },
+      {
+        "keyword": "boneless couch sofa pink",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hy Lạp": 1
+        }
+      },
+      {
+        "keyword": "boots for soccer",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "cabecera de cama",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "cabecero de cama 150cm",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "cadeira odontolgica mvel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword": "cadeiras para mesa jantar",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword": "cama de da",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "cama montessori nios",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "cama para dormir de nios",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "camas full",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "camera de segurana",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword": "camilla de masaje",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "canap compress france",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "canape compress",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "canape modulable",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "casquette de luxe homme pour sortie",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Gabon": 1
+        }
+      },
+      {
+        "keyword": "chaise lounge",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "chocolate brown couch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "chocolate couch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "comoda dormitorio de lujo",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "compressed sofa l shape",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "compresses sofa suite",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword": "console table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "cooking pot set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "corner sofa bed",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword": "dining room sets",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ả Rập Xê-út": 1
+        }
+      },
+      {
+        "keyword": "disposable tableware",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "divani",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "dormitorio completo de matrimonio",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "drinkware",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "dropshipping suppliers home products",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "dual motor office desk",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "dual motor office desk cable management",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "eetstoelen linnen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "eetstoelen met armleuning landelijk",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "eetstoelen met armleuning linnen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "emerald green dining chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "enlargement vacuum pump",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "farbic",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "fashion  necklaces",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mông Cổ": 1
+        }
+      },
+      {
+        "keyword": "fleur de dcoration",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "forceps de extrao dentria por pcs",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword": "forros para sof em forma de u",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword": "four de gteau ptisserie",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Burkina Faso": 1
+        }
+      },
+      {
+        "keyword": "fragrance oil for detergent",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword": "furniture hinges",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword": "garrafa termica",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "gray sectional sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "green dining chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "grietas cermicas para exterior",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "halloween",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "hand painted wall art",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "home gym",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "japanese dining table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Guatemala": 1
+        }
+      },
+      {
+        "keyword": "jbl boombox 4 speaker",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "juego de mesa de comedor",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "king size bed set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "kitchen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "kitchen island",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "kitchen island table with storage",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "kitchen storage cabinet",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "kkkmmmmmmmmm",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "lace front wig natural hair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "large mirror",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "laundry cabinets",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "leather dining chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "lit en bois",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mayotte": 1
+        }
+      },
+      {
+        "keyword": "living room coffee table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malaysia": 1
+        }
+      },
+      {
+        "keyword": "living room couch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "lmpara de mesa recargable",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "machine  coudre",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Gabon": 1
+        }
+      },
+      {
+        "keyword": "machinery",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "masajeador de madera",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "modern coffee table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hy Lạp": 1
+        }
+      },
+      {
+        "keyword": "modern sectional sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "moon cake",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "moon chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "moveis banheiro",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Bồ Đào Nha": 1
+        }
+      },
+      {
+        "keyword": "muebles de dormitorio cajoneras",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "mutfak ada tezgahlari",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "new dining chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "oem dual motor sit stand desk",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "office desk",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "ottoman",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "oturma odasi takimlari",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "oturma odasi takimlaribar",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "outdoor kitchen set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "panca ingresso",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "panca pouf",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "panca pouf moderna",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "papasan chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "pokmon trading card game",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "pool tiles mosaic swimming",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "post card paper 350gsm",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Maldives": 1
+        }
+      },
+      {
+        "keyword": "prefabricated wooden house",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "presse canne a sucre lectrique",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Gabon": 1
+        }
+      },
+      {
+        "keyword": "pvc sol carreaux 60x60",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mayotte": 1
+        }
+      },
+      {
+        "keyword": "rattan headboard queen boho",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "rattan headboard queen minimum order 1 piece",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "revtement de sol en pvc",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mayotte": 1
+        }
+      },
+      {
+        "keyword": "robe de soire chic",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "round chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "rugs living room large",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "rugs living room large black",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "running boards",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mông Cổ": 1
+        }
+      },
+      {
+        "keyword": "sacs  main dames",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword": "savon",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "seat cushion",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "sectional sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "sedie da pranzo moderne",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword": "servies goud",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hà Lan": 1
+        }
+      },
+      {
+        "keyword": "short jean homme",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "side table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "silln comprimido",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword": "sintered stone dining table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "sleeper couch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Malta": 1
+        }
+      },
+      {
+        "keyword": "slim console cabinet",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword": "slippers",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mông Cổ": 1
+        }
+      },
+      {
+        "keyword": "smart center table with fridge",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "soap extruder",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "sof moderno comprimido",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "sofa cover",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword": "sofa modular de compresion",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "sofa molding",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword": "sofa set white or beige",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "sofa set white or beige leather",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword": "sofas modernos comprimido",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "soft play fence",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "soupe",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "sponge compressed sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword": "sports jersey",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "surron light bee x",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "thi trang n",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword": "toallas personalizadas accesorios para hotel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "toddler bed",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword": "toy car",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "try storage",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "txpi300",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword": "utensilios para baos de hotel orgnico",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "vibrador sexual de mujer anal",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "watch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword": "whitewash  side table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "winter floral  stems",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "wire shelf cover",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword": "womens casual shoes",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword": "wood whitewash  side table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword": "wooden montessori twin bedframe",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword": "yatak odasi takimlari",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "动漫服装",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "美国服装",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "豆袋椅",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "配件",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      }
+    ]
+  }
+}
