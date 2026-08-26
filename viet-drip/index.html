@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo tuần - Viet Drip</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#0f2f4a;--blue:#2a7fb8;--blue2:#e8f2fb;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
+.hero{background:linear-gradient(120deg,#0f2f4a,#1f5a86);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
+.hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
+.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#dcf0e3}
+.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
+.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#dcf0e3}
+.period b{display:block;color:#fff;font-size:14px;margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:8px}
+.kpi{background:#fff;border-radius:11px;padding:13px 15px;box-shadow:var(--shadow);min-width:0}
+.kpi .label{font-size:11px;color:var(--muted);margin-bottom:5px}
+.kpi .value{font-size:21px;font-weight:850;letter-spacing:-.04em}
+.kpi .note{font-size:11px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
+.delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
+.delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
+.kpi-note-line{font-size:11px;color:var(--muted);margin:2px 0 16px}
+.tabs-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--blue);font-weight:750;margin:2px 0 8px}
+.tabs-hint .arrow{animation:bounce-x 1.3s infinite}
+@keyframes bounce-x{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
+.tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
+.tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(15,47,74,.35)}
+.pane{display:none}.pane.active{display:block}
+.section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--navy);padding-left:10px}
+.section h3{font-size:14px;margin:0 0 10px}
+.note-line{font-size:12px;color:var(--muted);margin:8px 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.priority-box .pico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.priority-box .ptxt b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8d641f;margin-bottom:3px}
+.priority-box .ptxt ul{margin:6px 0 0;padding-left:18px}
+.priority-box .ptxt li{font-size:13px;color:#4a3410;margin-bottom:3px}
+.legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
+.legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
+.ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.table.ops-table th{background:var(--navy);color:#fff}
+.table.ops-table td:first-child{font-weight:800;color:var(--navy);background:#f6f9fc}
+.focus{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px}
+.focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:120px}
+.focus-card.red{background:var(--red2);border-color:#ffd7dc}
+.focus-card.amber{background:var(--amber2);border-color:#f5dfae}
+.focus-card.blue{background:var(--blue2);border-color:#bcdcf0}
+.focus-card h3{font-size:15px;margin:0 0 9px}
+.focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
+.tag{display:inline-flex;border-radius:20px;padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:var(--green);background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:var(--muted);background:#eef1f5}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{border:1px solid var(--line);border-radius:10px;padding:12px}
+.metric .n{font-size:22px;font-weight:850}
+.metric .l{font-size:11px;color:var(--muted)}
+.chart{width:100%;height:280px}
+.chart.sm{height:220px}
+.table-wrap{overflow:auto}
+.table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap}
+.table th.num,.table td.num{text-align:right}
+.table tr:hover td{background:#fafcff}
+.hint{font-size:11px;color:var(--muted)}
+.kw-group{margin-bottom:14px}
+.kw-group h3{font-size:13px;color:var(--navy);margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--green2);color:var(--green);border-radius:20px;padding:6px 12px;font-size:12.5px;font-weight:700}
+.chip.gray{background:#eef1f5;color:var(--muted)}
+.buyer-card{border:1px solid var(--line);border-radius:11px;padding:14px;margin-bottom:10px}
+.buyer-card .bh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.buyer-card .bh b{font-size:14.5px}
+.buyer-card .bc{color:var(--muted);font-size:12px}
+.buyer-card .row{font-size:13px;margin-top:5px}
+.buyer-card .row b{font-weight:750;color:#4a5566}
+.copy-btn{margin-top:9px;border:1px solid var(--blue);background:var(--blue2);color:#1f5a86;border-radius:8px;padding:6px 12px;font:inherit;font-size:12px;font-weight:750;cursor:pointer}
+.copy-btn.copied{background:var(--green2);border-color:var(--green);color:var(--green)}
+.simple-list{display:grid;gap:9px}
+.simple-item{border-bottom:1px dashed var(--line);padding:9px 0;font-size:13px}
+.simple-item:last-child{border-bottom:0}
+.simple-item b{font-weight:800}
+.diag{display:grid;gap:9px}
+.diag-item{display:grid;grid-template-columns:55px 1fr;gap:10px;align-items:start;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.diag-item:last-child{border-bottom:0}
+.diag-tag{border-radius:6px;text-align:center;padding:4px 3px;font-size:11px;font-weight:850}
+.diag-tag.p0{color:var(--red);background:var(--red2)}.diag-tag.p1{color:var(--amber);background:var(--amber2)}.diag-tag.info{color:var(--blue);background:var(--blue2)}
+.sources{display:flex;gap:8px;flex-wrap:wrap}
+.sources a{color:var(--blue);background:var(--blue2);border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;font-weight:750}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:22px;line-height:1.9}
+.top-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-5px 0 10px;flex-wrap:wrap}
+.need{color:var(--muted);font-size:12px}
+.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
+.subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.subpane{display:none}.subpane.active{display:block}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
+@media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <h1>VIET DRIP <span style="font-size:13px;opacity:.7">&middot; Báo cáo tuần</span></h1>
+    <div class="sub"><span class="badge">Ngành: Agricultural Irrigation / Drip Fittings</span><span class="badge">Nguồn: Vận hành &middot; Visitor Analyzer &middot; OneTalk Leads</span></div>
+    <div class="period">Xem chi tiết kỳ dữ liệu<b>từng mục bên dưới</b></div>
+  </header>
+
+  <div class="top-actions">
+    <span class="need">Toàn bộ dữ liệu chi tiết từ 3 nguồn đã được nhúng sẵn trong trang này &mdash; không cần mở Google Sheet.</span>
+    <div class="sources">
+      <a href="https://docs.google.com/spreadsheets/d/1ogyDY_dwnxPf8upnib5mL-5g9kGpMuoJ7wurByAaiKQ/edit" target="_blank">&#8599; Sheet Vận hành (gốc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1c7NvoAVG7kQUwAsLNoPmCj-Yxv4DF8UKua1ijJEjki4/edit" target="_blank">&#8599; Sheet Visitor Analyzer (gốc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/15fmMDH4sgckIHN9GseZoe5NIoL6abepXU2X3raFb5TA/edit" target="_blank">&#8599; Sheet OneTalk Leads (gốc)</a>
+    </div>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+  <div class="kpi-note-line" id="kpi_note"></div>
+
+  <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
+  <nav class="tabs">
+    <button class="tab active" data-pane="view">01 &middot; Người xem</button>
+    <button class="tab" data-pane="buyers">02 &middot; Buyer &amp; tin nhắn</button>
+    <button class="tab" data-pane="diag">03 &middot; Kết luận &amp; action</button>
+    <button class="tab" data-pane="ops">04 &middot; Vận hành</button>
+  </nav>
+
+  <section class="pane active" id="view">
+    <div class="section">
+      <h2>Người xem: đến từ đâu và chất lượng thế nào?</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="view_period"></b> &middot; nguồn sheet Visitor Analyzer &middot; so với tuần trước (<span id="view_period_prev"></span>) trong ngoặc</div>
+      <div class="metric-row" id="view_metrics"></div>
+    </div>
+    <div class="section">
+      <div class="priority-box"><div class="pico">&#128161;</div><div class="ptxt"><b>Insight cần chú ý</b><ul id="view_insights"></ul></div></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2>Cấp người mua (phễu chất lượng)</h2>
+        <div id="ch_funnel" class="chart"></div>
+      </div>
+      <div class="section">
+        <h2>Quốc gia (nhóm L1+ ưu tiên trước)</h2>
+        <div id="ch_country" class="chart"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Bảng quốc gia chi tiết</h2>
+      <div class="table-wrap"><table class="table" id="tbl_country"></table></div>
+    </div>
+    <div class="section">
+      <h2>Từ khoá theo nhóm sản phẩm</h2>
+      <div class="note-line">Traffic đến từ nhiều nhóm sản phẩm khác nhau — không coi mọi visitor là buyer nội thất phù hợp.</div>
+      <div id="kw_groups"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="buyers">
+    <div class="section">
+      <h2>Buyer cần follow &mdash; tổng hợp từ OneTalk Leads</h2>
+      <div class="metric-row">
+        <div class="metric"><div class="n" style="color:var(--red)" id="m_priority"></div><div class="l">Ưu tiên xử lý ngay</div></div>
+        <div class="metric"><div class="n" style="color:var(--amber)" id="m_follow"></div><div class="l">Cần theo dõi</div></div>
+        <div class="metric"><div class="n" id="m_low"></div><div class="l">Ít phản hồi / rủi ro</div></div>
+        <div class="metric"><div class="n" style="color:var(--blue)" id="m_real"></div><div class="l">Có phản hồi thật</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Danh sách buyer</h2>
+      <div class="subtabs">
+        <button class="subtab active" data-sub="pri">Làm ngay (<span id="cnt_pri"></span>)</button>
+        <button class="subtab" data-sub="exp">Cần kiểm tra kỹ thuật (<span id="cnt_exp"></span>)</button>
+        <button class="subtab" data-sub="sig">Không ưu tiên (<span id="cnt_sig"></span>)</button>
+      </div>
+      <div class="subpane active" id="sub_pri"><div id="cards_pri"></div></div>
+      <div class="subpane" id="sub_exp"><ul class="simple-list" id="list_exp"></ul></div>
+      <div class="subpane" id="sub_sig"><ul class="simple-list" id="list_sig"></ul></div>
+    </div>
+  </section>
+
+  <section class="pane" id="diag">
+    <div class="section">
+      <h2>Kết luận tuần này</h2>
+      <div class="legend-note">
+        <span class="legend-chip"><span class="diag-tag p0">P0</span> Ưu tiên xử lý ngay &mdash; ảnh hưởng trực tiếp tới đơn hàng/doanh thu</span>
+        <span class="legend-chip"><span class="diag-tag p1">P1</span> Quan trọng, xử lý trong tuần &mdash; chưa khẩn cấp bằng P0</span>
+        <span class="legend-chip"><span class="diag-tag info">DATA</span> Thông tin tham khảo / cần thêm dữ liệu để kết luận sâu hơn</span>
+      </div>
+      <div class="note-line" id="ops_conclusion" style="margin:0 0 14px"></div>
+      <div class="diag">
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>Gian hàng vẫn 1 sao</b>, bị giới hạn bởi cả Marketing (150 khách) và Service (chỉ 9 người mua phản hồi) &mdash; chưa đủ để lên sao dù traffic đã tăng.</div></div>
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>4 buyer ưu tiên cần chốt ngay</b> (Jose RodriguezGiraldo 5.000 pcs, Jake Tartaglia kỹ thuật X1000/X2000, Emmanuel Nhandara coupling 16mm, Jessica Mbibi catalog/bulk) &mdash; đều có nhu cầu thật cần thông tin cụ thể để tiến tới đặt hàng.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>13 sản phẩm lỗi trên trang chủ</b> đang ảnh hưởng traffic và rating &mdash; cần xử lý trước khi đẩy thêm quảng cáo.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>Chưa dùng RFQ, chưa có Trade Assurance.</b> Còn 20 lượt RFQ miễn phí và chưa có tín hiệu GMV nào trong kỳ.</div></div>
+        <div class="diag-item"><span class="diag-tag info">DATA</span><div><b>Buyer L1+ tăng từ 19 lên 22</b>, tín hiệu tích cực dù PV đi ngang &mdash; nên ưu tiên chất lượng visitor (Hoa Kỳ, Campuchia, Indonesia, Zambia, Nam Phi) hơn là chạy theo số lượng.</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Action plan 7 ngày</h2>
+      <div class="grid3">
+        <div class="focus-card red"><h3>Trong 48 giờ</h3><p>Chốt đơn 5.000 pcs với Jose RodriguezGiraldo (Peru); xử lý kỹ thuật X1000/X2000 cho Jake Tartaglia; xác nhận qty + ship cho Emmanuel Nhandara.</p><span class="tag red">Sales</span></div>
+        <div class="focus-card amber"><h3>Trong 7 ngày</h3><p>Xử lý 13 sản phẩm lỗi; báo ít nhất vài RFQ phù hợp trong 20 RFQ còn lại; đăng 5&ndash;10 sản phẩm hot/irrigation mỗi ngày.</p><span class="tag amber">Ops + Sales</span></div>
+        <div class="focus-card blue"><h3>Tuần kế tiếp</h3><p>Tạo đơn Trade Assurance đầu tiên; nâng sản phẩm tiềm năng lên Top/Super Product; theo dõi 4 lead kỹ thuật cần xác nhận.</p><span class="tag blue">Manager</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pane" id="ops">
+    <div class="section">
+      <h2 class="ops-heading">Vấn đề lớn nhất tuần này</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="ops_period"></b> &middot; nguồn sheet Vận hành</div>
+      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b>Cảnh báo vận hành</b><ul id="ops_alerts"></ul></div></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Hành động tuần tới</h2>
+      <div class="simple-list" id="ops_actions_list"></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Bảng KPI vận hành (tuần này / tuần trước)</h2>
+      <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
+    </div>
+  </section>
+
+  <div class="foot">Báo cáo tuần &middot; thiết kế theo cấu trúc success case &middot; dữ liệu được nhúng trực tiếp từ 3 sheet nguồn</div>
+</main>
+<script>
+const D = {"profile":{"name":"VIET DRIP COMPANY LIMITED","industry":"Agricultural Irrigation / Drip Fittings","brand":"Viet Drip"},"ops":{"latest":{"period":"09-08-2026 đến 15-08-2026","stars":1,"total_products":1044,"new_products":13,"visitors":110,"inquiries":5,"inquiries_replied":5,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0.8,"reply_24h_rate":100,"super_products":0,"top_products":5},"previous":{"period":"02-08-2026 đến 08-08-2026","stars":1,"total_products":1031,"new_products":0,"visitors":70,"inquiries":1,"inquiries_replied":1,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":2.01,"reply_24h_rate":100,"super_products":0,"top_products":4},"alerts":["Gian hàng đang ở 1 sao, bị giới hạn bởi cả Marketing và Service.","Marketing có 150 khách, Service có 9 người mua phản hồi.","Chưa có GMV/đơn Trade Assurance.","Trang chủ ghi nhận 13 sản phẩm lỗi cần xử lý.","Chưa sử dụng quyền lợi RFQ.","Traffic và conversion còn thấp; cần tăng traffic đúng nhóm khách ngành tưới tiêu.","Chưa có Super Product; mới có 5 Top Product tiềm năng."],"conclusion":"Traffic và inquiry đã cải thiện, tốc độ phản hồi hiện tốt, nhưng gian hàng vẫn chưa chuyển được tín hiệu thành giao dịch Trade Assurance. Nút thắt chính là sản phẩm lỗi, traffic chưa đủ tập trung, chưa khai thác RFQ và chưa có sản phẩm Top/Super đủ mạnh.","actions":["Xử lý 13 sản phẩm lỗi trước khi đẩy thêm quảng cáo.","Đăng 5-10 sản phẩm hot/high-demand mỗi ngày, ưu tiên irrigation/drip fittings.","Tăng traffic bằng quảng cáo và RFQ phù hợp ngành hàng.","Nâng các sản phẩm tiềm năng lên Top/Super Product.","Tạo đơn Trade Assurance để bắt đầu có GMV.","Bổ sung ảnh/video thực tế, ảnh nhà máy và thông tin sản phẩm rõ hơn."]},"visitors":{"latest":{"period":"16-22/08/2026","visitor_records":45,"countries":31,"store_pv":108,"exact_keyword_records":97,"visitors_with_keyword":36,"buyer_l1_plus":22,"levels":{"L0":23,"L1":22,"L2":0,"L3":0,"L4":0},"source_pages":5},"previous":{"period":"09-15/08/2026","visitor_records":39,"countries":21,"store_pv":110,"exact_keyword_records":89,"visitors_with_keyword":34,"buyer_l1_plus":19,"levels":{"L0":20,"L1":19,"L2":0,"L3":0,"L4":0}},"insights":["Visitor tăng khoảng 15.4%, số quốc gia tăng từ 21 lên 31, keyword tăng từ 89 lên 97.","PV gần như đi ngang/giảm nhẹ 110 → 108; nên ưu tiên chất lượng visitor thay vì chỉ tăng số lượng.","Buyer L1+ tăng 19 → 22, là tín hiệu tích cực.","Nhóm có tín hiệu phù hợp Viet Drip: Ấn Độ, Campuchia, Indonesia, Kenya, Mexico, UAE, Senegal, Zambia, UK, Australia, Dominican Republic, Guinea-Bissau và Hoa Kỳ.","Visitor Hoa Kỳ: 4 người, cả 4 là L1 — nên đưa lên nhóm cần kiểm tra keyword và follow.","Các visitor Trung Quốc có 3 bản ghi, 6 PV nhưng đều L0 và hoạt động trên rất nhiều nhà cung cấp; không coi là lead nóng."],"countries":[{"country":"United States","visitors":4,"pv":4,"keywordVisitors":3,"keywordRecords":8,"l0":0,"l1":4,"l1Plus":4},{"country":"India","visitors":2,"pv":13,"keywordVisitors":2,"keywordRecords":5,"l0":1,"l1":1,"l1Plus":1},{"country":"Indonesia","visitors":3,"pv":12,"keywordVisitors":3,"keywordRecords":11,"l0":2,"l1":1,"l1Plus":1},{"country":"Cambodia","visitors":2,"pv":3,"keywordVisitors":2,"keywordRecords":2,"l0":0,"l1":2,"l1Plus":2},{"country":"South Korea","visitors":2,"pv":12,"keywordVisitors":2,"keywordRecords":4,"l0":2,"l1":0,"l1Plus":0},{"country":"Zambia","visitors":2,"pv":3,"keywordVisitors":2,"keywordRecords":6,"l0":1,"l1":1,"l1Plus":1},{"country":"South Africa","visitors":2,"pv":3,"keywordVisitors":2,"keywordRecords":6,"l0":1,"l1":1,"l1Plus":1},{"country":"Australia","visitors":1,"pv":12,"keywordVisitors":1,"keywordRecords":4,"l0":0,"l1":1,"l1Plus":1},{"country":"United Kingdom","visitors":1,"pv":15,"keywordVisitors":1,"keywordRecords":4,"l0":0,"l1":1,"l1Plus":1}],"keyword_groups":{"Đúng ngành irrigation/drip":["agricultural drip line","drip irrigation valve 16mm","hose pipe for agriculture farming","selang plastik irigasi","sand filter for drip irrigation","16mm plain lateral drip pipes","pvc fittings for irrigation networks","konektor dari pipa ke selang hdpe tetes","agricultural irrigation sprinklers","12 inch irrigation tubing","solar irrigation pump"],"Cần kiểm tra thêm":["motoculteur","outils agricoles","petrol sprayer gun and pipe","fog spray machine"],"Không liên quan / lệch ngành":["sp6","BMW","tea","toys","amplifier","womens intimates","sideboards"]}},"leads":{"summary":{"priority_count":2,"followup_count":4,"low_response_count":2,"real_signal_leads":5},"priority":[{"name":"Jose RodriguezGiraldo","country":"Peru","need":"Spraying Filter 16/20mm, 5.000 pcs, USD 0,218/pc","blocker":"Cần xác nhận freight tới Cusco và chốt thanh toán","next":"Xác nhận total USD 1.132,11 gồm express ship, packing/thời gian giao; tạo Trade Assurance order ngay","risk":false},{"name":"Jake Tartaglia","country":"Chưa xác định","need":"Hỏi kỹ thuật X1000 vs X2000, 37L/h, mã X137A/X237A","blocker":"Chưa rõ qty và ứng dụng","next":"Gửi bảng so sánh flow rate, coverage, connection, phụ kiện; hỏi quantity và mục đích dùng","risk":false},{"name":"Emmanuel Nhandara","country":"Zimbabwe","need":"16mm drip connector/coupling, 300-500 pcs","blocker":"Thiếu địa chỉ ship và chốt qty","next":"Xác nhận giá tham chiếu USD 0,05/pc, hỏi chốt 300 hay 500 pcs và destination, báo ship","risk":false},{"name":"Jessica Mbibi","country":"Netherlands","need":"Black PP Coupling 32mm và nhiều pipe fittings","blocker":"Có email ngoài Alibaba, inquiry ghi 1 piece nhưng nhu cầu là catalog/bulk","next":"Gửi model/spec, bảng giá bậc 1-500/501-5000/5001+, hỏi target qty; giữ báo giá/order trên Alibaba","risk":true}],"followup":[{"name":"Christopher Velonis","note":"Center pivot irrigation hose/pivot boot, ID 6 5/8”, OD 7”, length 16”, 4-ply tire cord. Xác nhận khả năng sản xuất, áp suất, qty, bản vẽ/ảnh mẫu và địa chỉ."},{"name":"Maksim Mikhailencko","note":"LDPE pipes. Gửi 3 lựa chọn size, MOQ, giá; hỏi đường kính, độ dày, chiều dài cuộn, qty."},{"name":"Emmanuel Nhandara (theo dõi thêm)","note":"Nếu buyer chưa chốt số lượng, follow lại theo 300/500 pcs."},{"name":"Daniel Gabbay","note":"Chỉ nói 'okay, thank you sir'; không đưa vào lead nóng nếu chưa có inquiry mới."}],"lowResponse":["WANDERSON EIDS DE OLIVEIRA: muốn chuyển WhatsApp; chỉ tiếp tục khi xác định product/qty, lưu thông tin chính trên Alibaba. (rủi ro off-platform)","MUHAMMAD ARSLAN: thiếu sản phẩm, size, qty; không chuyển WhatsApp/Zalo trước khi đủ thông tin. (rủi ro off-platform)","jania mark, W N, Alviaa Alviaa: chủ yếu xin WhatsApp/Zalo, chưa có SKU/qty. (rủi ro off-platform)","Tin seller gửi hàng loạt hoặc chỉ có visitor follow-up không tính là lead mua chất lượng."]},"sources":{"ops_url":"https://docs.google.com/spreadsheets/d/1ogyDY_dwnxPf8upnib5mL-5g9kGpMuoJ7wurByAaiKQ/edit","visitor_url":"https://docs.google.com/spreadsheets/d/1c7NvoAVG7kQUwAsLNoPmCj-Yxv4DF8UKua1ijJEjki4/edit","message_url":"https://docs.google.com/spreadsheets/d/15fmMDH4sgckIHN9GseZoe5NIoL6abepXU2X3raFb5TA/edit"}};
+
+function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function pctDelta(cur,prev){ const c=+cur,p=+prev; if(!p) return null; return ((c-p)/p*100); }
+
+document.querySelectorAll('.sources a')[0].href = D.sources.ops_url;
+document.querySelectorAll('.sources a')[1].href = D.sources.visitor_url;
+document.querySelectorAll('.sources a')[2].href = D.sources.message_url;
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+}));
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById('sub_'+b.dataset.sub).classList.add('active');
+}));
+
+function kpiCard(label,value,note,cls){
+  return '<div class="kpi '+(cls||'')+'"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+(note||'')+'</div></div>';
+}
+(function renderKpis(){
+  const o = D.ops.latest, op = D.ops.previous, v = D.visitors.latest, vp = D.visitors.previous;
+  const visD = pctDelta(v.buyer_l1_plus, vp.buyer_l1_plus);
+  let html='';
+  html+=kpiCard('Điểm gian hàng', o.stars+' &#9733;', 'Không đổi so với tuần trước ('+op.stars+' sao) &mdash; đang bị giới hạn bởi Marketing &amp; Service', 'bad');
+  html+=kpiCard('Người ghé thăm (Visitor)', fmt(v.visitor_records), 'tuần '+v.period+' (Visitor Analyzer)');
+  html+=kpiCard('Thư hỏi hàng', fmt(o.inquiries), o.inquiries_replied+'/'+o.inquiries+' đã trả lời &middot; tuần Vận hành', 'good');
+  html+=kpiCard('Phản hồi trong 24h', o.reply_24h_rate+'%', 'Ổn định 100% cả 2 tuần', 'good');
+  html+=kpiCard('Buyer L1+', fmt(v.buyer_l1_plus), (visD!=null?'<span class="delta '+(visD>=0?'up':'down')+'">'+(visD>=0?'+':'')+visD.toFixed(0)+'%</span>':'')+' so với tuần trước ('+vp.buyer_l1_plus+')', 'good');
+  html+=kpiCard('Cần xử lý ngay', D.leads.priority.length+' buyer', D.ops.alerts.length+' cảnh báo vận hành đang mở', 'warn');
+  document.getElementById('kpis').innerHTML = html;
+  document.getElementById('kpi_note').textContent = 'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — Vận hành và Visitor Analyzer không cùng tuần.';
+})();
+
+const hasE = typeof echarts !== 'undefined';
+let charts = [];
+function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
+  let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+const AXL = { fontSize:11 };
+
+if (hasE) {
+  let c = mkChart('ch_funnel');
+  const lv = D.visitors.latest.levels;
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: {c}'},
+    series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
+      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
+      color:['#bcdcf0','#7ec1e5','#2a7fb8','#1f5a86','#0f2f4a'],
+      data:[
+        {value:lv.L0,name:'L0 - Đã đăng ký'},
+        {value:lv.L1,name:'L1 - Tiềm năng'},
+        {value:lv.L2,name:'L2 - Scaleup'},
+        {value:lv.L3,name:'L3 - Enterprise'},
+        {value:lv.L4,name:'L4 - Enterprise Pro'}
+      ]}]
+  });
+
+  c = mkChart('ch_country');
+  const sorted = D.visitors.countries.slice().sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:110,right:24,top:10,bottom:24},
+    xAxis:{type:'value',axisLabel:AXL},
+    yAxis:{type:'category',data:sorted.map(x=>x.country).reverse(),axisLabel:AXL},
+    series:[{type:'bar',data:sorted.map(x=>x.l1Plus).reverse(),itemStyle:{color:'#2a7fb8',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11,formatter:(p)=>{
+      const row = sorted.slice().reverse()[p.dataIndex]; return row.l1Plus+' L1+ / '+row.visitors+' visitor';
+    }}}]
+  });
+  window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
+}
+
+document.getElementById('view_period').textContent = D.visitors.latest.period;
+document.getElementById('view_period_prev').textContent = D.visitors.previous.period;
+document.getElementById('view_insights').innerHTML = D.visitors.insights.map(x=>'<li>'+esc(x)+'</li>').join('');
+(function(){
+  const v = D.visitors.latest, vp = D.visitors.previous;
+  document.getElementById('view_metrics').innerHTML =
+    '<div class="metric"><div class="n">'+fmt(v.visitor_records)+'</div><div class="l">Visitor records ('+vp.visitor_records+' tuần trước)</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.countries)+'</div><div class="l">Quốc gia / vùng</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.store_pv)+'</div><div class="l">PV gian hàng ('+vp.store_pv+' tuần trước)</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.buyer_l1_plus)+'</div><div class="l">Buyer L1+</div></div>';
+})();
+
+(function renderCountryTable(){
+  const sorted = D.visitors.countries.slice().sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
+  let h = '<tr><th>Quốc gia</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th class="num">L0</th><th class="num">L1+</th></tr>';
+  sorted.forEach(c=>{
+    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td class="num">'+fmt(c.l0)+'</td><td class="num"><span class="tag '+(c.l1Plus>0?'green':'gray')+'">'+fmt(c.l1Plus)+'</span></td></tr>';
+  });
+  document.getElementById('tbl_country').innerHTML = h;
+})();
+
+(function renderKwGroups(){
+  const groups = D.visitors.keyword_groups;
+  let h='';
+  for (const g in groups) {
+    const isBad = /xác minh|không liên quan/i.test(g);
+    h += '<div class="kw-group"><h3>'+esc(g)+'</h3><div class="chips">'+groups[g].map(k=>'<span class="chip'+(isBad?' gray':'')+'">'+esc(k)+'</span>').join('')+'</div></div>';
+  }
+  document.getElementById('kw_groups').innerHTML = h;
+})();
+
+document.getElementById('m_priority').textContent = D.leads.priority.length;
+document.getElementById('m_follow').textContent = D.leads.followup.length;
+document.getElementById('m_low').textContent = D.leads.lowResponse.length;
+document.getElementById('m_real').textContent = D.leads.summary.real_signal_leads;
+
+function copyText(btn, text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent = 'Đã copy!'; btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='Copy next action'; btn.classList.remove('copied'); }, 1800);
+  }).catch(()=>{ btn.textContent = 'Không copy được'; });
+}
+window.copyText = copyText;
+
+function renderPriCards(list){
+  document.getElementById('cards_pri').innerHTML = list.map(r=>
+    '<div class="buyer-card"><div class="bh"><b>'+esc(r.name)+'</b><span class="bc">'+esc(r.country)+(r.risk?' &middot; <span class="tag red">off-platform risk</span>':'')+'</span></div>'+
+    '<div class="row"><b>Nhu cầu:</b> '+esc(r.need)+'</div>'+
+    '<div class="row"><b>Vướng mắc:</b> '+esc(r.blocker)+'</div>'+
+    '<div class="row"><b>Việc tiếp theo:</b> '+esc(r.next)+'</div>'+
+    '<button class="copy-btn" onclick="copyText(this, '+JSON.stringify(r.next).replace(/"/g,'&quot;')+')">Copy next action</button></div>'
+  ).join('');
+  document.getElementById('cnt_pri').textContent = list.length;
+}
+function renderExpList(list){
+  document.getElementById('list_exp').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+':</b> '+esc(r.note)+'</li>').join('');
+  document.getElementById('cnt_exp').textContent = list.length;
+}
+function renderSigList(list){
+  document.getElementById('list_sig').innerHTML = list.map(r=>'<li class="simple-item">'+esc(r)+'</li>').join('');
+  document.getElementById('cnt_sig').textContent = list.length;
+}
+renderPriCards(D.leads.priority);
+renderExpList(D.leads.followup);
+renderSigList(D.leads.lowResponse);
+
+document.getElementById('ops_period').textContent = D.ops.latest.period;
+document.getElementById('ops_alerts').innerHTML = D.ops.alerts.map(x=>'<li>'+esc(x)+'</li>').join('');
+document.getElementById('ops_conclusion').textContent = D.ops.conclusion;
+document.getElementById('ops_actions_list').innerHTML = D.ops.actions.map((x,i)=>'<div class="simple-item">'+(i+1)+'. '+esc(x)+'</div>').join('');
+
+(function renderOpsTable(){
+  const o = D.ops.latest, op = D.ops.previous;
+  const rows = [
+    ['Số sao', o.stars, op.stars, false],
+    ['Tổng sản phẩm', o.total_products, op.total_products, true],
+    ['Sản phẩm mới', o.new_products, op.new_products, true],
+    ['Người ghé thăm', o.visitors, op.visitors, true],
+    ['Thư hỏi hàng', o.inquiries, op.inquiries, true],
+    ['Thư hỏi hàng đã trả lời', o.inquiries_replied, op.inquiries_replied, true],
+    ['RFQ đã báo giá', o.rfq_quoted, op.rfq_quoted, true],
+    ['RFQ còn lại', o.rfq_remaining, op.rfq_remaining, true],
+    ['Phản hồi trung bình (h)', o.avg_reply_hours, op.avg_reply_hours, false],
+    ['Phản hồi trong 24h (%)', o.reply_24h_rate, op.reply_24h_rate, false],
+    ['Super Product', o.super_products, op.super_products, true],
+    ['Top Product', o.top_products, op.top_products, true]
+  ];
+  let h = '<tr><th>Chỉ số</th><th class="num">Tuần này ('+esc(o.period.split(' đến ')[1])+')</th><th class="num">Tuần trước ('+esc(op.period.split(' đến ')[1])+')</th></tr>';
+  rows.forEach(([label,cur,prev,isNum])=>{
+    h += '<tr><td>'+label+'</td><td class="num">'+(isNum?fmt(cur):esc(cur))+'</td><td class="num">'+(isNum?fmt(prev):esc(prev))+'</td></tr>';
+  });
+  document.getElementById('tbl_ops').innerHTML = h;
+})();
+</script>
+</body></html>
