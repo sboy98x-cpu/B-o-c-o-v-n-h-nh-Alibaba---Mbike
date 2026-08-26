@@ -1,0 +1,1260 @@
+{
+  "brand": "cm-decor",
+  "generatedAt": "2026-08-26",
+  "sourceIds": {
+    "ops": "1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo",
+    "visitor": "1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM"
+  },
+  "ops": {
+    "headers": [
+      "Khung thời gian hoạt động",
+      "Tuần ",
+      "09-08-2026 đến 15-08-2026",
+      "02-08-2026 đến 08-08-2026",
+      "26-07-2026 đến 01-08-2026",
+      "19-07-2026 đến 25-07-2026",
+      "12-07-2026 đến 18-07-2026",
+      "05-07-2026 đến 11-07-2026",
+      "21-06-2026 đến 27-06-2026",
+      "14-06-2026 đến 20-06-2026",
+      "30-05-2026 đến 06-06-2026",
+      "17-05-2026 đến 23-05-2026",
+      "03-05-2026 đến 09-05-2026",
+      "26-4-2026 đến 2-05-2026",
+      "19-4-2026 đến 25-04-2026"
+    ],
+    "history": [
+      {
+        "period": "09-08-2026 đến 15-08-2026",
+        "stars": "0",
+        "products": "1061",
+        "newProducts": "0",
+        "visitors": "196",
+        "inquiries": "1",
+        "repliedInquiries": "1",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "0h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "02-08-2026 đến 08-08-2026",
+        "stars": "1",
+        "products": "1061",
+        "newProducts": "0",
+        "visitors": "74",
+        "inquiries": "2",
+        "repliedInquiries": "2",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "0h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "1"
+      },
+      {
+        "period": "26-07-2026 đến 01-08-2026",
+        "stars": "1",
+        "products": "1061",
+        "newProducts": "0",
+        "visitors": "58",
+        "inquiries": "1",
+        "repliedInquiries": "1",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "0h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "1"
+      },
+      {
+        "period": "19-07-2026 đến 25-07-2026",
+        "stars": "0",
+        "products": "1061",
+        "newProducts": "1",
+        "visitors": "57",
+        "inquiries": "1",
+        "repliedInquiries": "1",
+        "rfqQuoted": "4",
+        "rfqRemaining": "18",
+        "avgResponse": "0h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "2"
+      },
+      {
+        "period": "12-07-2026 đến 18-07-2026",
+        "stars": "0",
+        "products": "1060",
+        "newProducts": "-1",
+        "visitors": "50",
+        "inquiries": "0",
+        "repliedInquiries": "0",
+        "rfqQuoted": "4",
+        "rfqRemaining": "18",
+        "avgResponse": "0h",
+        "reply24h": "100.00%",
+        "superProduct": "0",
+        "topProduct": "2"
+      },
+      {
+        "period": "05-07-2026 đến 11-07-2026",
+        "stars": "1",
+        "products": "1061",
+        "newProducts": "0",
+        "visitors": "15",
+        "inquiries": "1",
+        "repliedInquiries": "1",
+        "rfqQuoted": "2",
+        "rfqRemaining": "20",
+        "avgResponse": "0 giờ",
+        "reply24h": "100,00%",
+        "superProduct": "0",
+        "topProduct": "2"
+      },
+      {
+        "period": "21-06-2026 đến 27-06-2026",
+        "stars": "1",
+        "products": "1061",
+        "newProducts": "3",
+        "visitors": "122",
+        "inquiries": "2",
+        "repliedInquiries": "2",
+        "rfqQuoted": "20",
+        "rfqRemaining": "20",
+        "avgResponse": "3,13h",
+        "reply24h": "87,50%",
+        "superProduct": "0",
+        "topProduct": "3"
+      },
+      {
+        "period": "14-06-2026 đến 20-06-2026",
+        "stars": "1",
+        "products": "1058",
+        "newProducts": "0",
+        "visitors": "100",
+        "inquiries": "0",
+        "repliedInquiries": "0",
+        "rfqQuoted": "1",
+        "rfqRemaining": "19",
+        "avgResponse": "6,45h",
+        "reply24h": "88.89%",
+        "superProduct": "0",
+        "topProduct": "3"
+      },
+      {
+        "period": "30-05-2026 đến 06-06-2026",
+        "stars": "1",
+        "products": "1058",
+        "newProducts": "0",
+        "visitors": "52",
+        "inquiries": "3",
+        "repliedInquiries": "3",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "6,4h",
+        "reply24h": "87,50%",
+        "superProduct": "0",
+        "topProduct": "3"
+      },
+      {
+        "period": "17-05-2026 đến 23-05-2026",
+        "stars": "1",
+        "products": "1061",
+        "newProducts": "388",
+        "visitors": "119",
+        "inquiries": "4",
+        "repliedInquiries": "4",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "5,43h",
+        "reply24h": "89,47%",
+        "superProduct": "0",
+        "topProduct": "13"
+      },
+      {
+        "period": "03-05-2026 đến 09-05-2026",
+        "stars": "2",
+        "products": "673",
+        "newProducts": "323",
+        "visitors": "70",
+        "inquiries": "4",
+        "repliedInquiries": "4",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "4,52h",
+        "reply24h": "92.31%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "26-4-2026 đến 2-05-2026",
+        "stars": "1",
+        "products": "350",
+        "newProducts": "0",
+        "visitors": "65",
+        "inquiries": "7",
+        "repliedInquiries": "7",
+        "rfqQuoted": "0",
+        "rfqRemaining": "20",
+        "avgResponse": "3,75h",
+        "reply24h": "100%",
+        "superProduct": "0",
+        "topProduct": "0"
+      },
+      {
+        "period": "19-4-2026 đến 25-04-2026",
+        "stars": "0",
+        "products": "350",
+        "newProducts": "41",
+        "visitors": "106",
+        "inquiries": "2",
+        "repliedInquiries": "2",
+        "rfqQuoted": "0",
+        "rfqRemaining": "40",
+        "avgResponse": "0,01h",
+        "reply24h": "100%",
+        "superProduct": "0",
+        "topProduct": "0"
+      }
+    ]
+  },
+  "visitors": {
+    "period": "16-22.08",
+    "countries": [
+      {
+        "country": "Ấn Độ",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Ba Lan",
+        "visitors": "1",
+        "pv": "3",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Benin",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Campuchia",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Colombia",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Đan Mạch",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Hàn Quốc",
+        "visitors": "1",
+        "pv": "3",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Iraq",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Jamaica",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Kazakhstan",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "0",
+        "exactKeywordRecords": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Mauritius",
+        "visitors": "1",
+        "pv": "2",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Papua New Guinea",
+        "visitors": "1",
+        "pv": "3",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Pháp",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Tây Ban Nha",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Thái Lan",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Togo",
+        "visitors": "1",
+        "pv": "3",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "1"
+      },
+      {
+        "country": "Trinidad and Tobago",
+        "visitors": "1",
+        "pv": "1",
+        "keywordVisitors": "1",
+        "exactKeywordRecords": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      },
+      {
+        "country": "Trung Quốc",
+        "visitors": "4",
+        "pv": "5",
+        "keywordVisitors": "4",
+        "exactKeywordRecords": "12",
+        "L0": "4",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1Plus": "0"
+      }
+    ],
+    "keywords": [
+      {
+        "keyword": "bagages",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Togo": 1
+        }
+      },
+      {
+        "keyword": "car detailing",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Papua New Guinea": 1
+        }
+      },
+      {
+        "keyword": "complet boucles doreilles chaine de qualit",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Togo": 1
+        }
+      },
+      {
+        "keyword": "land cruiser 80 headlights",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Papua New Guinea": 1
+        }
+      },
+      {
+        "keyword": "led lights",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Papua New Guinea": 1
+        }
+      },
+      {
+        "keyword": "sac de taille pour femmes",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Togo": 1
+        }
+      },
+      {
+        "keyword": "toyota land cruiser 80 series window frames",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Papua New Guinea": 1
+        }
+      },
+      {
+        "keyword": "511 timing advancer",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "car radiator",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "dcor maison",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Benin": 1
+        }
+      },
+      {
+        "keyword": "electronics products vietnam",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "paintings and wall arts",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Benin": 1
+        }
+      },
+      {
+        "keyword": "pic16f15223",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "pic16f15223tisl14soic",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword": "poster",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "punch press",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "spot led",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Mauritius": 1
+        }
+      },
+      {
+        "keyword": "table gaming rglable",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Benin": 1
+        }
+      },
+      {
+        "keyword": "tapis salon modern",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Benin": 1
+        }
+      },
+      {
+        "keyword": "abstract art print",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword": "aquariums & accessories",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Đan Mạch": 1
+        }
+      },
+      {
+        "keyword": "arrosage automatique pour jardin",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "b button b button b button",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Iraq": 1
+        }
+      },
+      {
+        "keyword": "chasis de buggy",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "fuel filter",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "gate light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword": "hand tufted wool rug",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword": "instrument carrying case",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "jebao gyre",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Đan Mạch": 1
+        }
+      },
+      {
+        "keyword": "luminaire",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "metal bench",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "modern outdoor sofa set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword": "multimeter test lead",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "murphy beds",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword": "pendant light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "portable air conditioner fan",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "pu saddle pad",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "quartz wall clock movement",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "real madrid",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword": "recyclage",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "resin animals miniature",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "round outdoor entertainment building",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword": "sexy painting",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trinidad and Tobago": 1
+        }
+      },
+      {
+        "keyword": "solar lights",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword": "spot light outdoor 150wr",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Thái Lan": 1
+        }
+      },
+      {
+        "keyword": "tube carre",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword": "wall art",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword": "wall clock",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "wardrobe drawer divider",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword": "watch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trinidad and Tobago": 1
+        }
+      },
+      {
+        "keyword": "wholesale steampunk industrial gear wall clock iron bronze low moq fast response",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword": "women body shape",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Trinidad and Tobago": 1
+        }
+      },
+      {
+        "keyword": "wyze cam v3",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        },
+        "countries": {
+          "Đan Mạch": 1
+        }
+      }
+    ]
+  }
+}

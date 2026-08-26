@@ -101,6 +101,10 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
 .subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
 .subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
 .subpane{display:none}.subpane.active{display:block}
+.searchbar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+.count-pill{font-size:11px;color:var(--muted);background:#f3f5f8;border-radius:20px;padding:4px 10px;white-space:nowrap}
+.chart.lg{height:320px}
 @media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
 @media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
 </style>
@@ -153,13 +157,21 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
       </div>
     </div>
     <div class="section">
-      <h2>Bảng quốc gia chi tiết</h2>
-      <div class="table-wrap"><table class="table" id="tbl_country"></table></div>
+      <h2>Toàn bộ quốc gia / vùng có khách ghé thăm</h2>
+      <div class="note-line">Bấm vào tiêu đề cột để sắp xếp. Dữ liệu đầy đủ từ sheet Visitor Analyzer, tuần hiện tại.</div>
+      <div class="searchbar"><input id="country_search" placeholder="Tìm quốc gia..."><span class="count-pill" id="country_count"></span></div>
+      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_country"></table></div>
     </div>
     <div class="section">
       <h2>Từ khoá phù hợp danh mục decor/lighting</h2>
-      <div class="note-line">Các từ khoá khác trong 53 bản ghi keyword tuần này chưa chắc khớp ngành &mdash; cần xác minh trước khi coi là lead nóng.</div>
+      <div class="note-line">Các từ khoá nổi bật khớp đúng ngành hàng &mdash; xem đầy đủ toàn bộ từ khoá ở bảng bên dưới.</div>
       <div class="chips" id="kw_chips"></div>
+    </div>
+    <div class="section">
+      <h2>Toàn bộ từ khoá tìm kiếm thật của khách</h2>
+      <div class="note-line">Nguyên văn từ khoá khách gõ để tìm ra gian hàng, sắp xếp theo số lần xuất hiện nhiều nhất.</div>
+      <div class="searchbar"><input id="kw_search" placeholder="Tìm từ khoá..."><span class="count-pill" id="kw_count"></span></div>
+      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_kw"></table></div>
     </div>
   </section>
 
@@ -232,8 +244,19 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
       <h2 class="ops-heading">Hành động tuần tới</h2>
       <div class="simple-list" id="ops_actions_list"></div>
     </div>
+    <div class="grid2">
+      <div class="section">
+        <h2 class="ops-heading">Nhịp vận hành nhiều tuần</h2>
+        <div class="note-line">Lượt ghé thăm và tỷ lệ phản hồi trong 24h theo từng tuần &mdash; toàn bộ lịch sử có trong sheet Vận hành.</div>
+        <div id="ch_trend" class="chart lg"></div>
+      </div>
+      <div class="section">
+        <h2 class="ops-heading">Sản phẩm &amp; RFQ nhiều tuần</h2>
+        <div id="ch_products" class="chart lg"></div>
+      </div>
+    </div>
     <div class="section">
-      <h2 class="ops-heading">Bảng KPI vận hành (tuần này / tuần trước)</h2>
+      <h2 class="ops-heading">Bảng KPI vận hành toàn bộ lịch sử tuần</h2>
       <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
     </div>
   </section>
@@ -241,7 +264,7 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
   <div class="foot">Báo cáo tuần &middot; thiết kế theo cấu trúc success case &middot; dữ liệu được nhúng trực tiếp từ 3 sheet nguồn</div>
 </main>
 <script>
-const D = {"profile":{"name":"CM Decor","industry":"Home Decor / Lighting","brand":"CM Decor"},"ops":{"latest":{"period":"09-08-2026 đến 15-08-2026","stars":0,"total_products":1061,"new_products":0,"visitors":196,"inquiries":1,"inquiries_replied":1,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0,"reply_24h_rate":100,"super_products":0,"top_products":0},"previous":{"period":"02-08-2026 đến 08-08-2026","stars":1,"total_products":1061,"new_products":0,"visitors":74,"inquiries":2,"inquiries_replied":2,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0,"reply_24h_rate":100,"super_products":0,"top_products":1},"alerts":["Gian hàng hiện 0 sao, forecast 1 sao.","Marketing mới có 115 khách.","Service mới có 2 người mua phản hồi.","Chưa có GMV Trade Assurance.","1 sản phẩm gặp vấn đề, 63 sản phẩm điểm thấp.","Chưa có Top Product/Super Product ở kỳ mới nhất.","Chưa sử dụng RFQ.","Không đăng sản phẩm mới trong tuần.","Tránh đăng hình/sản phẩm có logo tranh bóng đá hoặc dấu hiệu vi phạm bản quyền thương hiệu."],"actions":["Đăng 5–10 sản phẩm decor/lighting có nhu cầu mỗi ngày.","Bổ sung ảnh thật, video thật, kích thước, vật liệu, MOQ và thông tin đóng gói.","Xử lý 63 sản phẩm điểm thấp và sản phẩm lỗi trước khi mở rộng danh mục.","Khai thác RFQ còn lại; ưu tiên nhu cầu phù hợp lighting/decor.","Đẩy sản phẩm đủ điều kiện lên Top/Super Product.","Tạo đơn Trade Assurance để bắt đầu có GMV và tín hiệu giao dịch."]},"visitors":{"latest":{"period":"16-22/08/2026","visitor_records":21,"countries":18,"store_pv":33,"exact_keyword_records":53,"visitors_with_keyword":18,"buyer_l1_plus":10,"levels":{"L0":11,"L1":10,"L2":0,"L3":0,"L4":0},"source_pages":3},"previous":{"period":"09-15/08/2026","visitor_records":24,"countries":16,"store_pv":196,"exact_keyword_records":66,"visitors_with_keyword":22,"buyer_l1_plus":10,"levels":{"L0":14,"L1":10,"L2":0,"L3":0,"L4":0}},"insights":["Số buyer L1+ giữ nguyên ở mức 10 dù PV giảm mạnh; đây là nhóm cần ưu tiên.","Traffic tuần này phân tán: 18 quốc gia, phần lớn mỗi nước chỉ có 1 visitor.","Trung Quốc có 4 visitor nhưng đều L0; không nên xem đây là nhóm ưu tiên bán hàng.","Các tín hiệu L1 đáng chú ý đến từ Togo, Ấn Độ, Campuchia, Colombia, Papua New Guinea, Thái Lan, Pháp, Hàn Quốc, Jamaica và một số nước khác."],"countries":[{"country":"China","visitors":4,"pv":5,"keywordVisitors":4,"keywordRecords":12,"l1Plus":0,"level":"L0"},{"country":"India","visitors":1,"pv":2,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Cambodia","visitors":1,"pv":1,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Colombia","visitors":1,"pv":1,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Papua New Guinea","visitors":1,"pv":3,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Togo","visitors":1,"pv":3,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Thailand","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"France","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"South Korea","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Jamaica","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"}],"keywords_matched":["hand tufted wool rug","wall art","abstract art print","gate light","quartz wall clock","outdoor spotlight","décor maison","tapis salon modern","paintings and wall arts"]},"leads":{"summary":{"priority_count":2,"followup_count":2,"low_response_count":6,"real_signal_leads":["Hannahchiwendu Christopher","Friedrich Donges","Kyei Kyei"]},"priority":[{"name":"Hannahchiwendu Christopher","country":"Chưa xác định","need":"Đèn pendant/lantern M03.01, hỏi 1–2 pcs","blocker":"Thiếu địa chỉ, số lượng cuối và phí ship","next":"Xác nhận USD 32/pc, hỏi địa chỉ đầy đủ + postal code, báo ship/thời gian, đề xuất Trade Assurance"},{"name":"Janez Korelc","country":"UK","need":"Giải pháp đèn indoor cho thị trường UK","blocker":"Chưa có số lượng; cần chứng từ an toàn","next":"Gửi CE/UKCA/RoHS nếu có, hỏi dòng sản phẩm và qty"},{"name":"Friedrich Donges","country":"Greece","need":"Đã gửi product card, có unread","blocker":"Chưa rõ sản phẩm/qty/địa chỉ","next":"Trả lời trong Alibaba, hỏi product + qty + country, gửi catalog phù hợp, báo giá trong ngày"},{"name":"Kyei Kyei","country":"Ghana","need":"Đồng hồ treo tường tròn quartz","blocker":"Chưa rõ kim hay digital, qty chưa rõ","next":"Gửi 3 mẫu, MOQ/sample price/size/material, hỏi chọn kim hay digital và trial qty"}],"followup":[{"name":"DK Gupta","note":"Hỏi mục đích sử dụng đèn; cần indoor/outdoor, project, qty, target price."},{"name":"Nguyen Hung (Việt Nam)","note":"Hỏi đèn sân vườn; cần loại, công suất, qty, địa điểm, ngân sách."},{"name":"Svetlana Kononiuk (US)","note":"Hỏi chiều cao/trọng lượng đèn solar; gửi thông số, quy cách đóng gói, ảnh thật và hỏi qty."},{"name":"Arnold Amet (Papua New Guinea)","note":"Quan tâm kiểu artistic/metal; gửi 2–3 mẫu, hỏi size/color/qty."},{"name":"Nhóm hỏi indoor lighting cho UK","note":"Chỉ cung cấp CE/RoHS/UKCA nếu có, xác minh công ty/sản phẩm/qty."}],"lowResponse":["Yêu cầu xin catalog/báo giá qua email ngoài Alibaba: luyalcomunication@zohomail.com, SALESEXPORT@INTERNET.RU, maxelectro05@gmail.com, spencesales25@gmail.com.","Không gửi thông tin nhạy cảm hoặc chuyển giao dịch ra ngoài Alibaba khi chưa xác minh.","Williams mark: nội dung thiên về promotion, chưa phải buyer decor rõ ràng.","sabreee jak: có dấu hiệu muốn dẫn sang website ngoài; hỏi lại product/qty và giữ trao đổi trên Alibaba."]},"sources":{"ops_url":"https://docs.google.com/spreadsheets/d/1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo/edit","visitor_url":"https://docs.google.com/spreadsheets/d/1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM/edit","message_url":"https://docs.google.com/spreadsheets/d/1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI/edit"}};
+const D = {"profile":{"name":"CM Decor","industry":"Home Decor / Lighting","brand":"CM Decor"},"ops":{"latest":{"period":"09-08-2026 đến 15-08-2026","stars":0,"total_products":1061,"new_products":0,"visitors":196,"inquiries":1,"inquiries_replied":1,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0,"reply_24h_rate":100,"super_products":0,"top_products":0},"previous":{"period":"02-08-2026 đến 08-08-2026","stars":1,"total_products":1061,"new_products":0,"visitors":74,"inquiries":2,"inquiries_replied":2,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":0,"reply_24h_rate":100,"super_products":0,"top_products":1},"alerts":["Gian hàng hiện 0 sao, forecast 1 sao.","Marketing mới có 115 khách.","Service mới có 2 người mua phản hồi.","Chưa có GMV Trade Assurance.","1 sản phẩm gặp vấn đề, 63 sản phẩm điểm thấp.","Chưa có Top Product/Super Product ở kỳ mới nhất.","Chưa sử dụng RFQ.","Không đăng sản phẩm mới trong tuần.","Tránh đăng hình/sản phẩm có logo tranh bóng đá hoặc dấu hiệu vi phạm bản quyền thương hiệu."],"actions":["Đăng 5–10 sản phẩm decor/lighting có nhu cầu mỗi ngày.","Bổ sung ảnh thật, video thật, kích thước, vật liệu, MOQ và thông tin đóng gói.","Xử lý 63 sản phẩm điểm thấp và sản phẩm lỗi trước khi mở rộng danh mục.","Khai thác RFQ còn lại; ưu tiên nhu cầu phù hợp lighting/decor.","Đẩy sản phẩm đủ điều kiện lên Top/Super Product.","Tạo đơn Trade Assurance để bắt đầu có GMV và tín hiệu giao dịch."],"weeks_full":[{"period":"19-4-2026 đến 25-04-2026","stars":"0","products":"350","newProducts":"41","visitors":"106","inquiries":"2","repliedInquiries":"2","rfqQuoted":"0","rfqRemaining":"40","avgResponse":"0,01h","reply24h":"100%","superProduct":"0","topProduct":"0"},{"period":"26-4-2026 đến 2-05-2026","stars":"1","products":"350","newProducts":"0","visitors":"65","inquiries":"7","repliedInquiries":"7","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"3,75h","reply24h":"100%","superProduct":"0","topProduct":"0"},{"period":"03-05-2026 đến 09-05-2026","stars":"2","products":"673","newProducts":"323","visitors":"70","inquiries":"4","repliedInquiries":"4","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"4,52h","reply24h":"92.31%","superProduct":"0","topProduct":"0"},{"period":"17-05-2026 đến 23-05-2026","stars":"1","products":"1061","newProducts":"388","visitors":"119","inquiries":"4","repliedInquiries":"4","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"5,43h","reply24h":"89,47%","superProduct":"0","topProduct":"13"},{"period":"30-05-2026 đến 06-06-2026","stars":"1","products":"1058","newProducts":"0","visitors":"52","inquiries":"3","repliedInquiries":"3","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"6,4h","reply24h":"87,50%","superProduct":"0","topProduct":"3"},{"period":"14-06-2026 đến 20-06-2026","stars":"1","products":"1058","newProducts":"0","visitors":"100","inquiries":"0","repliedInquiries":"0","rfqQuoted":"1","rfqRemaining":"19","avgResponse":"6,45h","reply24h":"88.89%","superProduct":"0","topProduct":"3"},{"period":"21-06-2026 đến 27-06-2026","stars":"1","products":"1061","newProducts":"3","visitors":"122","inquiries":"2","repliedInquiries":"2","rfqQuoted":"20","rfqRemaining":"20","avgResponse":"3,13h","reply24h":"87,50%","superProduct":"0","topProduct":"3"},{"period":"05-07-2026 đến 11-07-2026","stars":"1","products":"1061","newProducts":"0","visitors":"15","inquiries":"1","repliedInquiries":"1","rfqQuoted":"2","rfqRemaining":"20","avgResponse":"0 giờ","reply24h":"100,00%","superProduct":"0","topProduct":"2"},{"period":"12-07-2026 đến 18-07-2026","stars":"0","products":"1060","newProducts":"-1","visitors":"50","inquiries":"0","repliedInquiries":"0","rfqQuoted":"4","rfqRemaining":"18","avgResponse":"0h","reply24h":"100.00%","superProduct":"0","topProduct":"2"},{"period":"19-07-2026 đến 25-07-2026","stars":"0","products":"1061","newProducts":"1","visitors":"57","inquiries":"1","repliedInquiries":"1","rfqQuoted":"4","rfqRemaining":"18","avgResponse":"0h","reply24h":"100.00%","superProduct":"0","topProduct":"2"},{"period":"26-07-2026 đến 01-08-2026","stars":"1","products":"1061","newProducts":"0","visitors":"58","inquiries":"1","repliedInquiries":"1","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"0h","reply24h":"100.00%","superProduct":"0","topProduct":"1"},{"period":"02-08-2026 đến 08-08-2026","stars":"1","products":"1061","newProducts":"0","visitors":"74","inquiries":"2","repliedInquiries":"2","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"0h","reply24h":"100.00%","superProduct":"0","topProduct":"1"},{"period":"09-08-2026 đến 15-08-2026","stars":"0","products":"1061","newProducts":"0","visitors":"196","inquiries":"1","repliedInquiries":"1","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"0h","reply24h":"100.00%","superProduct":"0","topProduct":"0"}]},"visitors":{"latest":{"period":"16-22/08/2026","visitor_records":21,"countries":18,"store_pv":33,"exact_keyword_records":53,"visitors_with_keyword":18,"buyer_l1_plus":10,"levels":{"L0":11,"L1":10,"L2":0,"L3":0,"L4":0},"source_pages":3},"previous":{"period":"09-15/08/2026","visitor_records":24,"countries":16,"store_pv":196,"exact_keyword_records":66,"visitors_with_keyword":22,"buyer_l1_plus":10,"levels":{"L0":14,"L1":10,"L2":0,"L3":0,"L4":0}},"insights":["Số buyer L1+ giữ nguyên ở mức 10 dù PV giảm mạnh; đây là nhóm cần ưu tiên.","Traffic tuần này phân tán: 18 quốc gia, phần lớn mỗi nước chỉ có 1 visitor.","Trung Quốc có 4 visitor nhưng đều L0; không nên xem đây là nhóm ưu tiên bán hàng.","Các tín hiệu L1 đáng chú ý đến từ Togo, Ấn Độ, Campuchia, Colombia, Papua New Guinea, Thái Lan, Pháp, Hàn Quốc, Jamaica và một số nước khác."],"countries":[{"country":"China","visitors":4,"pv":5,"keywordVisitors":4,"keywordRecords":12,"l1Plus":0,"level":"L0"},{"country":"India","visitors":1,"pv":2,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Cambodia","visitors":1,"pv":1,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Colombia","visitors":1,"pv":1,"keywordVisitors":1,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Papua New Guinea","visitors":1,"pv":3,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Togo","visitors":1,"pv":3,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Thailand","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"France","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"South Korea","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"},{"country":"Jamaica","visitors":1,"pv":1,"keywordVisitors":null,"keywordRecords":null,"l1Plus":1,"level":"L1"}],"keywords_matched":["hand tufted wool rug","wall art","abstract art print","gate light","quartz wall clock","outdoor spotlight","décor maison","tapis salon modern","paintings and wall arts"],"countries_full":[{"country":"Ấn Độ","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Ba Lan","visitors":1,"pv":3,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Benin","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Campuchia","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Colombia","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Đan Mạch","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Hàn Quốc","visitors":1,"pv":3,"keywordVisitors":0,"exactKeywordRecords":0,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Iraq","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Jamaica","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Kazakhstan","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Mauritius","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Papua New Guinea","visitors":1,"pv":3,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Pháp","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Tây Ban Nha","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Thái Lan","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Togo","visitors":1,"pv":3,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Trinidad and Tobago","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Trung Quốc","visitors":4,"pv":5,"keywordVisitors":4,"exactKeywordRecords":12,"L0":4,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0}],"keywords_full":[{"keyword":"bagages","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Togo":1},"top_country":"Togo"},{"keyword":"car detailing","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Papua New Guinea":1},"top_country":"Papua New Guinea"},{"keyword":"complet boucles doreilles chaine de qualit","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Togo":1},"top_country":"Togo"},{"keyword":"land cruiser 80 headlights","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Papua New Guinea":1},"top_country":"Papua New Guinea"},{"keyword":"led lights","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Papua New Guinea":1},"top_country":"Papua New Guinea"},{"keyword":"sac de taille pour femmes","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Togo":1},"top_country":"Togo"},{"keyword":"toyota land cruiser 80 series window frames","occurrences":1,"pv":3,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Papua New Guinea":1},"top_country":"Papua New Guinea"},{"keyword":"511 timing advancer","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Ấn Độ":1},"top_country":"Ấn Độ"},{"keyword":"car radiator","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"dcor maison","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Benin":1},"top_country":"Benin"},{"keyword":"electronics products vietnam","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Ấn Độ":1},"top_country":"Ấn Độ"},{"keyword":"paintings and wall arts","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Benin":1},"top_country":"Benin"},{"keyword":"pic16f15223","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Ấn Độ":1},"top_country":"Ấn Độ"},{"keyword":"pic16f15223tisl14soic","occurrences":1,"pv":2,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Ấn Độ":1},"top_country":"Ấn Độ"},{"keyword":"poster","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"punch press","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"spot led","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Mauritius":1},"top_country":"Mauritius"},{"keyword":"table gaming rglable","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Benin":1},"top_country":"Benin"},{"keyword":"tapis salon modern","occurrences":1,"pv":2,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Benin":1},"top_country":"Benin"},{"keyword":"abstract art print","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Campuchia":1},"top_country":"Campuchia"},{"keyword":"aquariums & accessories","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Đan Mạch":1},"top_country":"Đan Mạch"},{"keyword":"arrosage automatique pour jardin","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Pháp":1},"top_country":"Pháp"},{"keyword":"b button b button b button","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Iraq":1},"top_country":"Iraq"},{"keyword":"chasis de buggy","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Colombia":1},"top_country":"Colombia"},{"keyword":"fuel filter","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"gate light","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Campuchia":1},"top_country":"Campuchia"},{"keyword":"hand tufted wool rug","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Campuchia":1},"top_country":"Campuchia"},{"keyword":"instrument carrying case","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"jebao gyre","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Đan Mạch":1},"top_country":"Đan Mạch"},{"keyword":"luminaire","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Pháp":1},"top_country":"Pháp"},{"keyword":"metal bench","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"modern outdoor sofa set","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Jamaica":1},"top_country":"Jamaica"},{"keyword":"multimeter test lead","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"murphy beds","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Jamaica":1},"top_country":"Jamaica"},{"keyword":"pendant light","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"portable air conditioner fan","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Tây Ban Nha":1},"top_country":"Tây Ban Nha"},{"keyword":"pu saddle pad","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"quartz wall clock movement","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Colombia":1},"top_country":"Colombia"},{"keyword":"real madrid","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Tây Ban Nha":1},"top_country":"Tây Ban Nha"},{"keyword":"recyclage","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Pháp":1},"top_country":"Pháp"},{"keyword":"resin animals miniature","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"round outdoor entertainment building","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Jamaica":1},"top_country":"Jamaica"},{"keyword":"sexy painting","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trinidad and Tobago":1},"top_country":"Trinidad and Tobago"},{"keyword":"solar lights","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Jamaica":1},"top_country":"Jamaica"},{"keyword":"spot light outdoor 150wr","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Thái Lan":1},"top_country":"Thái Lan"},{"keyword":"tube carre","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Pháp":1},"top_country":"Pháp"},{"keyword":"wall art","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Campuchia":1},"top_country":"Campuchia"},{"keyword":"wall clock","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"wardrobe drawer divider","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trung Quốc":1},"top_country":"Trung Quốc"},{"keyword":"watch","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trinidad and Tobago":1},"top_country":"Trinidad and Tobago"},{"keyword":"wholesale steampunk industrial gear wall clock iron bronze low moq fast response","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Colombia":1},"top_country":"Colombia"},{"keyword":"women body shape","occurrences":1,"pv":1,"levels":{"L0":1,"L1":0,"L2":0,"L3":0,"L4":0},"countries":{"Trinidad and Tobago":1},"top_country":"Trinidad and Tobago"},{"keyword":"wyze cam v3","occurrences":1,"pv":1,"levels":{"L0":0,"L1":1,"L2":0,"L3":0,"L4":0},"countries":{"Đan Mạch":1},"top_country":"Đan Mạch"}]},"leads":{"summary":{"priority_count":2,"followup_count":2,"low_response_count":6,"real_signal_leads":["Hannahchiwendu Christopher","Friedrich Donges","Kyei Kyei"]},"priority":[{"name":"Hannahchiwendu Christopher","country":"Chưa xác định","need":"Đèn pendant/lantern M03.01, hỏi 1–2 pcs","blocker":"Thiếu địa chỉ, số lượng cuối và phí ship","next":"Xác nhận USD 32/pc, hỏi địa chỉ đầy đủ + postal code, báo ship/thời gian, đề xuất Trade Assurance"},{"name":"Janez Korelc","country":"UK","need":"Giải pháp đèn indoor cho thị trường UK","blocker":"Chưa có số lượng; cần chứng từ an toàn","next":"Gửi CE/UKCA/RoHS nếu có, hỏi dòng sản phẩm và qty"},{"name":"Friedrich Donges","country":"Greece","need":"Đã gửi product card, có unread","blocker":"Chưa rõ sản phẩm/qty/địa chỉ","next":"Trả lời trong Alibaba, hỏi product + qty + country, gửi catalog phù hợp, báo giá trong ngày"},{"name":"Kyei Kyei","country":"Ghana","need":"Đồng hồ treo tường tròn quartz","blocker":"Chưa rõ kim hay digital, qty chưa rõ","next":"Gửi 3 mẫu, MOQ/sample price/size/material, hỏi chọn kim hay digital và trial qty"}],"followup":[{"name":"DK Gupta","note":"Hỏi mục đích sử dụng đèn; cần indoor/outdoor, project, qty, target price."},{"name":"Nguyen Hung (Việt Nam)","note":"Hỏi đèn sân vườn; cần loại, công suất, qty, địa điểm, ngân sách."},{"name":"Svetlana Kononiuk (US)","note":"Hỏi chiều cao/trọng lượng đèn solar; gửi thông số, quy cách đóng gói, ảnh thật và hỏi qty."},{"name":"Arnold Amet (Papua New Guinea)","note":"Quan tâm kiểu artistic/metal; gửi 2–3 mẫu, hỏi size/color/qty."},{"name":"Nhóm hỏi indoor lighting cho UK","note":"Chỉ cung cấp CE/RoHS/UKCA nếu có, xác minh công ty/sản phẩm/qty."}],"lowResponse":["Yêu cầu xin catalog/báo giá qua email ngoài Alibaba: luyalcomunication@zohomail.com, SALESEXPORT@INTERNET.RU, maxelectro05@gmail.com, spencesales25@gmail.com.","Không gửi thông tin nhạy cảm hoặc chuyển giao dịch ra ngoài Alibaba khi chưa xác minh.","Williams mark: nội dung thiên về promotion, chưa phải buyer decor rõ ràng.","sabreee jak: có dấu hiệu muốn dẫn sang website ngoài; hỏi lại product/qty và giữ trao đổi trên Alibaba."]},"sources":{"ops_url":"https://docs.google.com/spreadsheets/d/1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo/edit","visitor_url":"https://docs.google.com/spreadsheets/d/1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM/edit","message_url":"https://docs.google.com/spreadsheets/d/1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI/edit"}};
 
 function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
 function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -285,6 +308,9 @@ let charts = [];
 function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
   let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
 const AXL = { fontSize:11 };
+function num(v){ if(v==null) return 0; const s=String(v).replace('%','').replace('h','').replace(',','.').trim(); const n=parseFloat(s); return isNaN(n)?0:n; }
+const weeksFull = D.ops.weeks_full || [];
+const weekLabels = weeksFull.map(w=>w.period.split(' đến ')[1] || w.period);
 
 if (hasE) {
   let c = mkChart('ch_funnel');
@@ -312,6 +338,33 @@ if (hasE) {
     yAxis:{type:'category',data:sorted.map(x=>x.country).reverse(),axisLabel:AXL},
     series:[{type:'bar',data:sorted.map(x=>x.visitors).reverse(),itemStyle:{color:(p)=>sorted.slice().reverse()[p.dataIndex].l1Plus>0?'#b8763e':'#d8c3ac',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11}}]
   });
+
+  if (weeksFull.length) {
+    c = mkChart('ch_trend');
+    c.setOption({
+      tooltip:{trigger:'axis'}, legend:{top:0,textStyle:{fontSize:11}},
+      grid:{left:46,right:46,top:34,bottom:44},
+      xAxis:{type:'category',data:weekLabels,axisLabel:Object.assign({},AXL,{rotate:45})},
+      yAxis:[{type:'value',name:'Visitor',axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
+      series:[
+        {name:'Lượt ghé thăm',type:'bar',data:weeksFull.map(w=>num(w.visitors)),itemStyle:{color:'#b8763e',borderRadius:[4,4,0,0]}},
+        {name:'Phản hồi 24h (%)',type:'line',yAxisIndex:1,data:weeksFull.map(w=>num(w.reply24h)),smooth:true,itemStyle:{color:'#1f9a6d'}}
+      ]
+    });
+
+    c = mkChart('ch_products');
+    c.setOption({
+      tooltip:{trigger:'axis'}, legend:{top:0,textStyle:{fontSize:11}},
+      grid:{left:46,right:46,top:34,bottom:44},
+      xAxis:{type:'category',data:weekLabels,axisLabel:Object.assign({},AXL,{rotate:45})},
+      yAxis:[{type:'value',name:'SP',axisLabel:AXL},{type:'value',name:'RFQ',axisLabel:AXL}],
+      series:[
+        {name:'Top Product',type:'line',data:weeksFull.map(w=>num(w.topProduct)),smooth:true,itemStyle:{color:'#ca7b1b'}},
+        {name:'Super Product',type:'line',data:weeksFull.map(w=>num(w.superProduct)),smooth:true,itemStyle:{color:'#1f9a6d'}},
+        {name:'RFQ đã báo',type:'bar',yAxisIndex:1,data:weeksFull.map(w=>num(w.rfqQuoted)),itemStyle:{color:'#d95761'}}
+      ]
+    });
+  }
   window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
 }
 
@@ -327,16 +380,50 @@ document.getElementById('view_insights').innerHTML = D.visitors.insights.map(x=>
     '<div class="metric"><div class="n">'+fmt(v.buyer_l1_plus)+'</div><div class="l">Buyer L1+</div></div>';
 })();
 
-(function renderCountryTable(){
-  const sorted = D.visitors.countries.slice().sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
-  let h = '<tr><th>Quốc gia</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th>Level</th></tr>';
-  sorted.forEach(c=>{
-    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td><span class="tag '+(c.l1Plus>0?'green':'gray')+'">'+esc(c.level)+'</span></td></tr>';
+const countriesFull = D.visitors.countries_full || D.visitors.countries;
+function renderCountryTable(list){
+  let h = '<tr><th>Quốc gia</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th class="num">Bản ghi keyword</th><th class="num">L0</th><th class="num">L1+</th></tr>';
+  list.forEach(c=>{
+    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td class="num">'+fmt(c.exactKeywordRecords)+'</td><td class="num">'+fmt(c.L0)+'</td><td class="num"><span class="tag '+(c.L1Plus>0?'green':'gray')+'">'+fmt(c.L1Plus)+'</span></td></tr>';
   });
   document.getElementById('tbl_country').innerHTML = h;
-})();
+  document.getElementById('country_count').textContent = list.length+' / '+countriesFull.length+' quốc gia';
+}
+renderCountryTable(countriesFull.slice().sort((a,b)=>(b.L1Plus-a.L1Plus)||(b.visitors-a.visitors)));
+document.getElementById('country_search').addEventListener('input', e=>{
+  const q = e.target.value.trim().toLowerCase();
+  renderCountryTable(countriesFull.filter(c=>c.country.toLowerCase().includes(q)));
+});
+let countrySort = {key:'L1Plus',dir:-1};
+document.getElementById('tbl_country').addEventListener('click', e=>{
+  const th = e.target.closest('th'); if(!th) return;
+  const idx = Array.from(th.parentNode.children).indexOf(th);
+  const keys = ['country','visitors','pv','keywordVisitors','exactKeywordRecords','L0','L1Plus'];
+  const key = keys[idx]; if(!key) return;
+  countrySort.dir = (countrySort.key===key) ? -countrySort.dir : -1;
+  countrySort.key = key;
+  const q = document.getElementById('country_search').value.trim().toLowerCase();
+  const base = countriesFull.filter(c=>c.country.toLowerCase().includes(q));
+  base.sort((a,b)=> typeof a[key]==='string' ? a[key].localeCompare(b[key])*countrySort.dir : (a[key]-b[key])*countrySort.dir);
+  renderCountryTable(base);
+});
 
 document.getElementById('kw_chips').innerHTML = D.visitors.keywords_matched.map(k=>'<span class="chip">'+esc(k)+'</span>').join('');
+
+const keywordsFull = D.visitors.keywords_full || [];
+function renderKwTable(list){
+  let h = '<tr><th>Từ khoá</th><th class="num">Số lần</th><th class="num">PV</th><th>Quốc gia phổ biến nhất</th></tr>';
+  list.forEach(k=>{
+    h += '<tr><td>'+esc(k.keyword)+'</td><td class="num">'+fmt(k.occurrences)+'</td><td class="num">'+fmt(k.pv)+'</td><td class="hint">'+esc(k.top_country)+'</td></tr>';
+  });
+  document.getElementById('tbl_kw').innerHTML = h;
+  document.getElementById('kw_count').textContent = list.length+' / '+keywordsFull.length+' từ khoá';
+}
+renderKwTable(keywordsFull.slice().sort((a,b)=>(b.occurrences-a.occurrences)||(b.pv-a.pv)));
+document.getElementById('kw_search').addEventListener('input', e=>{
+  const q = e.target.value.trim().toLowerCase();
+  renderKwTable(keywordsFull.filter(k=>k.keyword.toLowerCase().includes(q)));
+});
 
 document.getElementById('m_priority').textContent = D.leads.priority.length;
 document.getElementById('m_follow').textContent = D.leads.followup.length;
@@ -378,24 +465,24 @@ document.getElementById('ops_alerts').innerHTML = D.ops.alerts.map(x=>'<li>'+esc
 document.getElementById('ops_actions_list').innerHTML = D.ops.actions.map((x,i)=>'<div class="simple-item">'+(i+1)+'. '+esc(x)+'</div>').join('');
 
 (function renderOpsTable(){
-  const o = D.ops.latest, op = D.ops.previous;
-  const rows = [
-    ['Số sao', o.stars, op.stars, false],
-    ['Tổng sản phẩm', o.total_products, op.total_products, true],
-    ['Sản phẩm mới', o.new_products, op.new_products, true],
-    ['Tổng người ghé thăm', o.visitors, op.visitors, true],
-    ['Inquiry', o.inquiries, op.inquiries, true],
-    ['Inquiry đã trả lời', o.inquiries_replied, op.inquiries_replied, true],
-    ['RFQ đã báo giá', o.rfq_quoted, op.rfq_quoted, true],
-    ['RFQ còn lại', o.rfq_remaining, op.rfq_remaining, true],
-    ['Thời gian phản hồi TB (h)', o.avg_reply_hours, op.avg_reply_hours, false],
-    ['Trả lời trong 24h (%)', o.reply_24h_rate, op.reply_24h_rate, false],
-    ['Super Product', o.super_products, op.super_products, true],
-    ['Top Product', o.top_products, op.top_products, true]
+  const metrics = [
+    ['stars','Số sao',false],
+    ['products','Tổng sản phẩm',true],
+    ['newProducts','Sản phẩm mới',true],
+    ['visitors','Người ghé thăm',true],
+    ['inquiries','Thư hỏi hàng',true],
+    ['repliedInquiries','Đã trả lời',true],
+    ['rfqQuoted','RFQ đã báo giá',true],
+    ['rfqRemaining','RFQ còn lại',true],
+    ['avgResponse','Phản hồi TB',false],
+    ['reply24h','Trả lời trong 24h',false],
+    ['superProduct','Super Product',true],
+    ['topProduct','Top Product',true]
   ];
-  let h = '<tr><th>Chỉ số</th><th class="num">Tuần này ('+esc(o.period.split(' đến ')[1])+')</th><th class="num">Tuần trước ('+esc(op.period.split(' đến ')[1])+')</th></tr>';
-  rows.forEach(([label,cur,prev,isNum])=>{
-    h += '<tr><td>'+label+'</td><td class="num">'+(isNum?fmt(cur):esc(cur))+'</td><td class="num">'+(isNum?fmt(prev):esc(prev))+'</td></tr>';
+  const weeksChrono = weeksFull.slice().reverse();
+  let h = '<tr><th>Chỉ số</th>'+weeksChrono.map(w=>'<th class="num">'+esc(w.period.split(' đến ')[1]||w.period)+'</th>').join('')+'</tr>';
+  metrics.forEach(([key,label])=>{
+    h += '<tr><td>'+label+'</td>'+weeksChrono.map(w=>'<td class="num">'+esc(w[key])+'</td>').join('')+'</tr>';
   });
   document.getElementById('tbl_ops').innerHTML = h;
 })();
