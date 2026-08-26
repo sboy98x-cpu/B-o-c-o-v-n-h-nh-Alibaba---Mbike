@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Báo cáo tuần - Vivika</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#5a1f3d;--blue:#c4477a;--blue2:#fbe8f0;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+.wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
+.hero{background:linear-gradient(120deg,#5a1f3d,#8f2f5f);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
+.hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
+.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#dcf0e3}
+.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
+.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#dcf0e3}
+.period b{display:block;color:#fff;font-size:14px;margin-top:2px}
+.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:8px}
+.kpi{background:#fff;border-radius:11px;padding:13px 15px;box-shadow:var(--shadow);min-width:0}
+.kpi .label{font-size:11px;color:var(--muted);margin-bottom:5px}
+.kpi .value{font-size:21px;font-weight:850;letter-spacing:-.04em}
+.kpi .note{font-size:11px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+.kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
+.delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
+.delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
+.kpi-note-line{font-size:11px;color:var(--muted);margin:2px 0 16px}
+.tabs-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--blue);font-weight:750;margin:2px 0 8px}
+.tabs-hint .arrow{animation:bounce-x 1.3s infinite}
+@keyframes bounce-x{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
+.tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
+.tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
+.tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
+.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(90,31,61,.35)}
+.pane{display:none}.pane.active{display:block}
+.section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--navy);padding-left:10px}
+.section h3{font-size:14px;margin:0 0 10px}
+.note-line{font-size:12px;color:var(--muted);margin:8px 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
+.priority-box .pico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
+.priority-box .ptxt b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8d641f;margin-bottom:3px}
+.priority-box .ptxt ul{margin:6px 0 0;padding-left:18px}
+.priority-box .ptxt li{font-size:13px;color:#4a3410;margin-bottom:3px}
+.legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
+.legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
+.ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
+.table.ops-table th{background:var(--navy);color:#fff}
+.table.ops-table td:first-child{font-weight:800;color:var(--navy);background:#f6f9fc}
+.focus{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px}
+.focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:120px}
+.focus-card.red{background:var(--red2);border-color:#ffd7dc}
+.focus-card.amber{background:var(--amber2);border-color:#f5dfae}
+.focus-card.blue{background:var(--blue2);border-color:#f0c3d8}
+.focus-card h3{font-size:15px;margin:0 0 9px}
+.focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
+.tag{display:inline-flex;border-radius:20px;padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:var(--green);background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:var(--muted);background:#eef1f5}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.metric{border:1px solid var(--line);border-radius:10px;padding:12px}
+.metric .n{font-size:22px;font-weight:850}
+.metric .l{font-size:11px;color:var(--muted)}
+.chart{width:100%;height:280px}
+.chart.sm{height:220px}
+.table-wrap{overflow:auto}
+.table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap}
+.table th.num,.table td.num{text-align:right}
+.table tr:hover td{background:#fafcff}
+.hint{font-size:11px;color:var(--muted)}
+.kw-group{margin-bottom:14px}
+.kw-group h3{font-size:13px;color:var(--navy);margin:0 0 8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{background:var(--green2);color:var(--green);border-radius:20px;padding:6px 12px;font-size:12.5px;font-weight:700}
+.chip.gray{background:#eef1f5;color:var(--muted)}
+.buyer-card{border:1px solid var(--line);border-radius:11px;padding:14px;margin-bottom:10px}
+.buyer-card .bh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
+.buyer-card .bh b{font-size:14.5px}
+.buyer-card .bc{color:var(--muted);font-size:12px}
+.buyer-card .row{font-size:13px;margin-top:5px}
+.buyer-card .row b{font-weight:750;color:#4a5566}
+.copy-btn{margin-top:9px;border:1px solid var(--blue);background:var(--blue2);color:#8f2f5f;border-radius:8px;padding:6px 12px;font:inherit;font-size:12px;font-weight:750;cursor:pointer}
+.copy-btn.copied{background:var(--green2);border-color:var(--green);color:var(--green)}
+.simple-list{display:grid;gap:9px}
+.simple-item{border-bottom:1px dashed var(--line);padding:9px 0;font-size:13px}
+.simple-item:last-child{border-bottom:0}
+.simple-item b{font-weight:800}
+.diag{display:grid;gap:9px}
+.diag-item{display:grid;grid-template-columns:55px 1fr;gap:10px;align-items:start;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.diag-item:last-child{border-bottom:0}
+.diag-tag{border-radius:6px;text-align:center;padding:4px 3px;font-size:11px;font-weight:850}
+.diag-tag.p0{color:var(--red);background:var(--red2)}.diag-tag.p1{color:var(--amber);background:var(--amber2)}.diag-tag.info{color:var(--blue);background:var(--blue2)}
+.sources{display:flex;gap:8px;flex-wrap:wrap}
+.sources a{color:var(--blue);background:var(--blue2);border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;font-weight:750}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:22px;line-height:1.9}
+.top-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-5px 0 10px;flex-wrap:wrap}
+.need{color:var(--muted);font-size:12px}
+.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
+.subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+.subpane{display:none}.subpane.active{display:block}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
+@media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <header class="hero">
+    <h1>VIVIKA <span style="font-size:13px;opacity:.7">&middot; Báo cáo tuần</span></h1>
+    <div class="sub"><span class="badge">Ngành: Women's Fashion / Apparel</span><span class="badge">Nguồn: Vận hành &middot; Visitor Analyzer &middot; OneTalk Leads</span></div>
+    <div class="period">Xem chi tiết kỳ dữ liệu<b>từng mục bên dưới</b></div>
+  </header>
+
+  <div class="top-actions">
+    <span class="need">Toàn bộ dữ liệu chi tiết từ 3 nguồn đã được nhúng sẵn trong trang này &mdash; không cần mở Google Sheet.</span>
+    <div class="sources">
+      <a href="https://docs.google.com/spreadsheets/d/1UyhdMTe5ZBx32Sf3SapWI8sqRaK942_1yt5HU0sniS8/edit" target="_blank">&#8599; Sheet Vận hành (gốc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1GqjNAbTuNN1sktkxcSnrxoDQo3YQEh512Iw5qsMyKTc/edit" target="_blank">&#8599; Sheet Visitor Analyzer (gốc)</a>
+      <a href="https://docs.google.com/spreadsheets/d/1grrkUcubFagMAkg98GTBjn6Er3Ou4sGl6kPBKlda59M/edit" target="_blank">&#8599; Sheet OneTalk Leads (gốc)</a>
+    </div>
+  </div>
+
+  <section class="kpis" id="kpis"></section>
+  <div class="kpi-note-line" id="kpi_note"></div>
+
+  <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
+  <nav class="tabs">
+    <button class="tab active" data-pane="view">01 &middot; Người xem</button>
+    <button class="tab" data-pane="buyers">02 &middot; Buyer &amp; tin nhắn</button>
+    <button class="tab" data-pane="diag">03 &middot; Kết luận &amp; action</button>
+    <button class="tab" data-pane="ops">04 &middot; Vận hành</button>
+  </nav>
+
+  <section class="pane active" id="view">
+    <div class="section">
+      <h2>Người xem: đến từ đâu và chất lượng thế nào?</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="view_period"></b> &middot; nguồn sheet Visitor Analyzer &middot; so với tuần trước (<span id="view_period_prev"></span>) trong ngoặc</div>
+      <div class="metric-row" id="view_metrics"></div>
+    </div>
+    <div class="section">
+      <div class="priority-box"><div class="pico">&#128161;</div><div class="ptxt"><b>Insight cần chú ý</b><ul id="view_insights"></ul></div></div>
+    </div>
+    <div class="grid2">
+      <div class="section">
+        <h2>Cấp người mua (phễu chất lượng)</h2>
+        <div id="ch_funnel" class="chart"></div>
+      </div>
+      <div class="section">
+        <h2>Quốc gia (nhóm L1+ ưu tiên trước)</h2>
+        <div id="ch_country" class="chart"></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Bảng quốc gia chi tiết</h2>
+      <div class="note-line" id="country_note" style="margin-top:0"></div>
+      <div class="table-wrap"><table class="table" id="tbl_country"></table></div>
+    </div>
+    <div class="section">
+      <h2>Từ khoá theo nhóm sản phẩm</h2>
+      <div class="note-line">Traffic đến từ nhiều nhóm sản phẩm khác nhau — không coi mọi visitor là buyer nội thất phù hợp.</div>
+      <div id="kw_groups"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="buyers">
+    <div class="section">
+      <h2>Buyer cần follow &mdash; tổng hợp từ OneTalk Leads</h2>
+      <div class="metric-row">
+        <div class="metric"><div class="n" style="color:var(--red)" id="m_priority"></div><div class="l">Gần order</div></div>
+        <div class="metric"><div class="n" style="color:var(--blue)" id="m_deep"></div><div class="l">Lead thật cần làm rõ</div></div>
+        <div class="metric"><div class="n" style="color:var(--amber)" id="m_follow"></div><div class="l">Cần theo dõi</div></div>
+        <div class="metric"><div class="n" id="m_real"></div><div class="l">Tổng lead có phản hồi thật</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Danh sách buyer</h2>
+      <div class="subtabs">
+        <button class="subtab active" data-sub="pri">Gần order (<span id="cnt_pri"></span>)</button>
+        <button class="subtab" data-sub="deep">Lead thật cần làm rõ (<span id="cnt_deep"></span>)</button>
+        <button class="subtab" data-sub="exp">Theo dõi (<span id="cnt_exp"></span>)</button>
+        <button class="subtab" data-sub="sig">Nguyên tắc follow-up (<span id="cnt_sig"></span>)</button>
+      </div>
+      <div class="subpane active" id="sub_pri"><div id="cards_pri"></div></div>
+      <div class="subpane" id="sub_deep"><ul class="simple-list" id="list_deep"></ul></div>
+      <div class="subpane" id="sub_exp"><ul class="simple-list" id="list_exp"></ul></div>
+      <div class="subpane" id="sub_sig"><ul class="simple-list" id="list_sig"></ul></div>
+    </div>
+  </section>
+
+  <section class="pane" id="diag">
+    <div class="section">
+      <h2>Kết luận tuần này</h2>
+      <div class="legend-note">
+        <span class="legend-chip"><span class="diag-tag p0">P0</span> Ưu tiên xử lý ngay &mdash; ảnh hưởng trực tiếp tới đơn hàng/doanh thu</span>
+        <span class="legend-chip"><span class="diag-tag p1">P1</span> Quan trọng, xử lý trong tuần &mdash; chưa khẩn cấp bằng P0</span>
+        <span class="legend-chip"><span class="diag-tag info">DATA</span> Thông tin tham khảo / cần thêm dữ liệu để kết luận sâu hơn</span>
+      </div>
+      <div class="note-line" id="ops_conclusion" style="margin:0 0 14px"></div>
+      <div class="diag">
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>6 buyer đang gần bước order</b> (Lucy Flores, Maud Morris, Marygrace Sabanal, Melody Adepa, Sarah Sarah, Kadiatou Barry) &mdash; chỉ thiếu payment link, shipping hoặc size/color/qty để chốt đơn.</div></div>
+        <div class="diag-item"><span class="diag-tag p0">P0</span><div><b>Gian hàng vẫn 2 sao dù Forecast đạt 4 sao.</b> Service mới có 32 người mua phản hồi, còn thiếu 18 để đạt mốc tiếp theo.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>Traffic và inquiry giảm</b> (684&rarr;457 visitor, 16&rarr;8 inquiry) dù buyer L1+ tăng mạnh (70&rarr;132) &mdash; nên ưu tiên chất lượng chuyển đổi thay vì chạy theo lượng.</div></div>
+        <div class="diag-item"><span class="diag-tag p1">P1</span><div><b>2 sản phẩm lỗi, 3 điểm phạt và chưa có Super Product.</b> Còn thiếu 367 sản phẩm PIS&ge;5 để đạt mốc 1.500.</div></div>
+        <div class="diag-item"><span class="diag-tag info">DATA</span><div><b>12 lead có phản hồi thật</b> đang chờ làm rõ size/color/qty (Kety Kety, Dixit Bhatt, Ha Nguyen...) &mdash; cần xử lý sâu để không mất cơ hội.</div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2>Action plan 7 ngày</h2>
+      <div class="grid3">
+        <div class="focus-card red"><h3>Trong 48 giờ</h3><p>Gửi đúng payment link cho Lucy Flores; chốt shipping cho Maud Morris và Marygrace Sabanal; xử lý order cho Kety Kety và Dixit Bhatt.</p><span class="tag red">Sales</span></div>
+        <div class="focus-card amber"><h3>Trong 7 ngày</h3><p>Xử lý 2 sản phẩm lỗi và 3 điểm phạt; xin thêm 18 buyer feedback; báo RFQ phù hợp; đăng 5&ndash;10 mẫu hot mỗi ngày ưu tiên hình ảnh/PIS tốt.</p><span class="tag amber">Ops + Sales</span></div>
+        <div class="focus-card blue"><h3>Tuần kế tiếp</h3><p>Liên kết EU Responsible Person; nâng 18 Top Product tiềm năng lên Top/Super Product; theo dõi 5 buyer nhóm cần theo dõi.</p><span class="tag blue">Manager</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pane" id="ops">
+    <div class="section">
+      <h2 class="ops-heading">Vấn đề lớn nhất tuần này</h2>
+      <div class="note-line">Kỳ dữ liệu: <b id="ops_period"></b> &middot; nguồn sheet Vận hành</div>
+      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b>Cảnh báo vận hành</b><ul id="ops_alerts"></ul></div></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Hành động tuần tới</h2>
+      <div class="simple-list" id="ops_actions_list"></div>
+    </div>
+    <div class="section">
+      <h2 class="ops-heading">Bảng KPI vận hành (tuần này / tuần trước)</h2>
+      <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
+    </div>
+  </section>
+
+  <div class="foot">Báo cáo tuần &middot; thiết kế theo cấu trúc success case &middot; dữ liệu được nhúng trực tiếp từ 3 sheet nguồn</div>
+</main>
+<script>
+const D = {"profile":{"name":"CÔNG TY TNHH VIVI KA (VIVIKA Clothing)","industry":"Women's Fashion / Apparel","brand":"Vivika"},"ops":{"latest":{"period":"09-08-2026 đến 15-08-2026","stars":2,"total_products":1133,"new_products":63,"visitors":457,"inquiries":8,"inquiries_replied":8,"rfq_quoted":4,"rfq_remaining":20,"avg_reply_hours":2.93,"reply_24h_rate":94.92,"super_products":0,"top_products":18},"previous":{"period":"02-08-2026 đến 08-08-2026","stars":2,"total_products":1070,"new_products":0,"visitors":684,"inquiries":16,"inquiries_replied":16,"rfq_quoted":4,"rfq_remaining":21,"avg_reply_hours":1.9,"reply_24h_rate":98.08,"super_products":0,"top_products":16},"alerts":["Current Rating chỉ 2 sao, dù Forecast đạt 4 sao.","Service có 32 người mua phản hồi, còn thiếu 18 để đạt mốc tiếp theo.","Có 2 sản phẩm gặp vấn đề và 3 điểm phạt.","Số sản phẩm PIS ≥5 còn thiếu 367 để đạt mốc 1.500.","Chưa có Super Product và chưa có tín hiệu chuyển đổi Trade Assurance đủ rõ.","Traffic giảm 684 → 457 và inquiry giảm 16 → 8.","Phản hồi trong 24h giảm 98.08% → 94.92%; cần bảo vệ Service.","Cần liên kết EU Responsible Person."],"conclusion":"Vivika đang mở rộng catalog tốt, đạt 1.133 sản phẩm và 18 Top Product tiềm năng, nhưng traffic/inquiry giảm. Nút thắt hiện tại là chất lượng và hiển thị sản phẩm, Service chưa đạt mốc tiếp theo, chưa có Super Product/TA conversion, còn sản phẩm lỗi và vấn đề EU Responsible Person.","actions":["Duy trì đăng 5-10 mẫu hot mỗi ngày nhưng ưu tiên mẫu có khả năng bán và hình ảnh/PIS tốt.","Xử lý 2 sản phẩm lỗi và 3 điểm phạt.","Tối ưu sản phẩm, Search traffic và Showcase.","Báo RFQ phù hợp, nâng 18 Top Product tiềm năng lên Top/Super Product.","Phản hồi buyer thường xuyên, kéo thêm 18 buyer feedback để cải thiện sao.","Liên kết EU Responsible Person.","Với buyer đã gần order: gửi đúng payment/order link, ship, size/color và MOQ; tránh hỏi phone/address quá sớm."]},"visitors":{"latest":{"period":"16-22/08/2026","visitor_records":299,"countries":83,"store_pv":772,"exact_keyword_records":665,"visitors_with_keyword":244,"buyer_l1_plus":132,"levels":{"L0":167,"L1":132,"L2":0,"L3":0,"L4":0},"source_pages":30},"previous":{"period":"09-15/08/2026","visitor_records":170,"countries":67,"store_pv":457,"exact_keyword_records":362,"visitors_with_keyword":135,"buyer_l1_plus":70,"levels":{"L0":100,"L1":70,"L2":0,"L3":0,"L4":0}},"insights":["Visitor tăng 170 → 299, PV tăng 457 → 772, keyword tăng 362 → 665, L1+ tăng 70 → 132.","Traffic tăng rất mạnh, nhưng cần kiểm tra độ phù hợp vì nhiều keyword thuộc thời trang nữ nói chung và nhiều visitor đến từ các thị trường phân tán.","Campuchia có 5 visitor, 22 PV; Ghana có 4 visitor, 40 PV — nên kiểm tra sâu các visitor có thời gian/PV cao.","Visitor nhiều nhưng L0 hoặc lệch ngành không nên đưa ngay vào buyer priority."],"countries":[{"country":"DR Congo","visitors":15,"pv":39,"keywordVisitors":15,"keywordRecords":49,"l0":6,"l1":9,"l1Plus":9},{"country":"Ivory Coast","visitors":6,"pv":11,"keywordVisitors":6,"keywordRecords":18,"l0":3,"l1":3,"l1Plus":3},{"country":"Benin","visitors":5,"pv":9,"keywordVisitors":3,"keywordRecords":10,"l0":2,"l1":3,"l1Plus":3},{"country":"Cambodia","visitors":5,"pv":22,"keywordVisitors":5,"keywordRecords":14,"l0":4,"l1":1,"l1Plus":1},{"country":"Ghana","visitors":4,"pv":40,"keywordVisitors":4,"keywordRecords":13,"l0":1,"l1":3,"l1Plus":3},{"country":"Saudi Arabia","visitors":3,"pv":50,"keywordVisitors":3,"keywordRecords":9,"l0":1,"l1":2,"l1Plus":2},{"country":"Canada","visitors":3,"pv":20,"keywordVisitors":3,"keywordRecords":11,"l0":1,"l1":2,"l1Plus":2},{"country":"Cameroon","visitors":3,"pv":7,"keywordVisitors":2,"keywordRecords":7,"l0":0,"l1":3,"l1Plus":3},{"country":"Botswana","visitors":2,"pv":8,"keywordVisitors":2,"keywordRecords":7,"l0":0,"l1":2,"l1Plus":2}],"country_note":"Bảng quốc gia đọc được trong dữ liệu nguồn không hiển thị đầy đủ Hoa Kỳ trong phần đã trích xuất; không tự suy diễn số liệu quốc gia chưa có — dùng tổng KPI Visitor Analyzer làm số chuẩn.","keyword_groups":{"Đúng ngành thời trang nữ/Vivika":["womens summer set","korean style women clothes","designer tote","women s dress","prom dresses","womens blouse","women office dress","women summer blouses","cargo shirts for men cotton","skirts for women","shortsleeved top","vietnamese dress vendor","vietnam supplier wholesale","women s pants","womens sweaters","womens vests & waistcoats"],"Có thể là cơ hội nhưng cần xác minh":["jacob watch","kelly bracelet with diamond","moissanite earrings for kids","closet light","mannequin","coiffeuse vanity"],"Lệch ngành / nhiễu":["power hammer drills","food processor chopper","car parts","tea","toys","machine fume","lm1600","sp6"]}},"leads":{"summary":{"priority_count":6,"followup_count":5,"low_response_count":0,"real_signal_leads":12},"near_order":[{"name":"Lucy Flores","country":"Chưa xác định","need":"Đã có ý định thanh toán/đặt hàng; cần payment link mới, bỏ white pants","blocker":"Link/sản phẩm chưa đúng","next":"Gửi lại payment link đúng item, xác nhận không có white pants","badges":["Payment"]},{"name":"Maud Morris","country":"Chưa xác định","need":"Đang chờ shipping fee","blocker":"Chưa có address đầy đủ","next":"Xin địa chỉ đầy đủ, tính ship và tạo order link","badges":["Shipping"]},{"name":"Marygrace Sabanal","country":"Chưa xác định","need":"Đang ở bước tạo shipment order","blocker":"Thiếu quantity, size/color và địa chỉ","next":"Hỏi qty + size/color + destination, tạo shipment/order","badges":["MOQ","Size/Color","Shipping"]},{"name":"Melody Adepa","country":"Chưa xác định","need":"Cần shipping information để tạo order link","blocker":"Chưa đủ thông tin giao hàng","next":"Thu address/phone sau khi xác nhận item list, tạo order Alibaba","badges":["Shipping"]},{"name":"Sarah Sarah","country":"Chưa xác định","need":"Đang ở bước lấy thông tin đặt hàng","blocker":"Chưa rõ item list/qty","next":"Hỏi item list, qty, size/color và sau đó xin phone/address","badges":["MOQ"]},{"name":"Kadiatou Barry","country":"Pháp ngữ","need":"Blazer có stock, wholesale từ 2 pcs, USD 31,9/pc","blocker":"Chưa rõ qty/size/color","next":"Nhắn tiếng Pháp, hỏi qty/size/color và tạo order link","badges":["MOQ","Size/Color"]}],"deep_leads":[{"name":"Kety Kety","country":"Malabo / Español","note":"Quan tâm đồ nữ size XXL, muốn nhiều mẫu/màu, đã gửi địa chỉ air freight tại Guangzhou và có forwarder. Dress MOQ 30, blazer vest MOQ 2. Nhắn tiếng Tây Ban Nha, xác nhận contact/forwarder, gửi 5-8 mẫu XXL khác màu, hỏi qty từng mẫu và phương án ship về Malabo."},{"name":"sarah sarah","country":"Chưa xác định","note":"Hỏi bộ nữ công sở 2 mảnh, USD 22,20-36,90, MOQ 20; đã cho chiều cao 1,59m/cân nặng 62kg. Xác nhận size XL, hỏi sample hay wholesale, màu/size breakdown và ship."},{"name":"Dixit Bhatt","country":"India","note":"Xem nhiều SKU, từ MOQ 2-50, đã gửi địa chỉ và số điện thoại tại Bengaluru. Gửi bảng 5 mẫu đã xem, hỏi mẫu muốn đặt trước, size/color/qty, tính ship và tạo freight quotation."},{"name":"Haifaa Aluweili","country":"Chưa xác định","note":"Muốn video sản phẩm; seller đã hỏi company/qty/port/deadline quá sớm. Gửi video trước, sau đó giải thích cần qty/port/deadline để báo giá chính xác."},{"name":"Ha Nguyen","country":"Chưa xác định","note":"Có inquiry nhưng seller gửi company profile/catalog quá dài. Follow ngắn: hỏi sản phẩm, qty, size/màu, nhãn riêng; gửi catalog đúng nhóm."},{"name":"Jerry King","country":"Chưa xác định","note":"Mới nhận link product list; gửi 5 nhóm bán chạy và hỏi dresses/tops/skirts/suits + qty."}],"followup":[{"name":"Marisol Daugherty","note":"Skirt chỉ có XL; production full size run MOQ 50/design. Hỏi mua XL sẵn hay full size."},{"name":"Caisha Yusufcumar","note":"Pants hết hàng; production MOQ 50, USD 25/pc. Hỏi màu/size/qty."},{"name":"Lorre Griffiths","note":"Sample từ 1 pc/design. Gửi sample price/ship, hỏi design/size/color."},{"name":"Riris Indah","note":"Pink dress hết hàng; production MOQ 70, USD 25,06/pc. Hỏi size ratio/deadline."},{"name":"Sabriddin Nurimof","note":"Set hết hàng; production MOQ 50, USD 30,25/set. Hỏi size/color/qty."}],"principles":["Không đưa nhóm chỉ có 'automatic reception stopped', seller/bot xin address/phone hàng loạt hoặc link catalog đơn thuần vào lead nóng.","Trước khi xin thông tin cá nhân, phải hỏi product, qty, size/color, destination và deadline.","Không đẩy buyer sang WhatsApp/Zalo khi chưa lưu đủ thông tin và chưa xác minh nhu cầu; ưu tiên giữ báo giá/order trên Alibaba.","Tin nhắn nên ngắn, cụ thể theo B2B thời trang: item → qty → size/color → material/OEM → destination → deadline."]},"sources":{"ops_url":"https://docs.google.com/spreadsheets/d/1UyhdMTe5ZBx32Sf3SapWI8sqRaK942_1yt5HU0sniS8/edit","visitor_url":"https://docs.google.com/spreadsheets/d/1GqjNAbTuNN1sktkxcSnrxoDQo3YQEh512Iw5qsMyKTc/edit","message_url":"https://docs.google.com/spreadsheets/d/1grrkUcubFagMAkg98GTBjn6Er3Ou4sGl6kPBKlda59M/edit"}};
+
+function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function pctDelta(cur,prev){ const c=+cur,p=+prev; if(!p) return null; return ((c-p)/p*100); }
+
+document.querySelectorAll('.sources a')[0].href = D.sources.ops_url;
+document.querySelectorAll('.sources a')[1].href = D.sources.visitor_url;
+document.querySelectorAll('.sources a')[2].href = D.sources.message_url;
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active');
+  window.dispatchEvent(new Event('resize'));
+}));
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active');document.getElementById('sub_'+b.dataset.sub).classList.add('active');
+}));
+
+function kpiCard(label,value,note,cls){
+  return '<div class="kpi '+(cls||'')+'"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+(note||'')+'</div></div>';
+}
+(function renderKpis(){
+  const o = D.ops.latest, op = D.ops.previous, v = D.visitors.latest, vp = D.visitors.previous;
+  const visD = pctDelta(v.buyer_l1_plus, vp.buyer_l1_plus);
+  const respD = pctDelta(o.reply_24h_rate, op.reply_24h_rate);
+  let html='';
+  html+=kpiCard('Điểm gian hàng', o.stars+' &#9733;', 'Forecast 4 sao &mdash; cần thêm 18 buyer feedback để lên mốc', 'warn');
+  html+=kpiCard('Người ghé thăm (Visitor)', fmt(v.visitor_records), 'tuần '+v.period+' (Visitor Analyzer)', 'good');
+  html+=kpiCard('Thư hỏi hàng', fmt(o.inquiries), o.inquiries_replied+'/'+o.inquiries+' đã trả lời, giảm so với '+op.inquiries+' tuần trước', 'warn');
+  html+=kpiCard('Phản hồi trong 24h', o.reply_24h_rate+'%', (respD!=null?'<span class="delta '+(respD>=0?'up':'down')+'">'+(respD>=0?'+':'')+respD.toFixed(1)+'%</span>':'')+' so với tuần trước ('+op.reply_24h_rate+'%)', 'warn');
+  html+=kpiCard('Buyer L1+', fmt(v.buyer_l1_plus), (visD!=null?'<span class="delta '+(visD>=0?'up':'down')+'">'+(visD>=0?'+':'')+visD.toFixed(0)+'%</span>':'')+' so với tuần trước ('+vp.buyer_l1_plus+')', 'good');
+  html+=kpiCard('Gần order', D.leads.near_order.length+' buyer', D.ops.alerts.length+' cảnh báo vận hành đang mở', 'warn');
+  document.getElementById('kpis').innerHTML = html;
+  document.getElementById('kpi_note').textContent = 'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — Vận hành và Visitor Analyzer không cùng tuần.';
+})();
+
+const hasE = typeof echarts !== 'undefined';
+let charts = [];
+function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
+  let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+const AXL = { fontSize:11 };
+
+if (hasE) {
+  let c = mkChart('ch_funnel');
+  const lv = D.visitors.latest.levels;
+  c.setOption({
+    tooltip:{trigger:'item',formatter:'{b}: {c}'},
+    series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
+      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
+      color:['#f0c3d8','#e290b5','#c4477a','#8f2f5f','#5a1f3d'],
+      data:[
+        {value:lv.L0,name:'L0 - Đã đăng ký'},
+        {value:lv.L1,name:'L1 - Tiềm năng'},
+        {value:lv.L2,name:'L2 - Scaleup'},
+        {value:lv.L3,name:'L3 - Enterprise'},
+        {value:lv.L4,name:'L4 - Enterprise Pro'}
+      ]}]
+  });
+
+  c = mkChart('ch_country');
+  const sorted = D.visitors.countries.filter(c=>c.visitors>0).sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
+  c.setOption({
+    tooltip:{trigger:'axis'},
+    grid:{left:110,right:24,top:10,bottom:24},
+    xAxis:{type:'value',axisLabel:AXL},
+    yAxis:{type:'category',data:sorted.map(x=>x.country).reverse(),axisLabel:AXL},
+    series:[{type:'bar',data:sorted.map(x=>x.l1Plus).reverse(),itemStyle:{color:'#c4477a',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11,formatter:(p)=>{
+      const row = sorted.slice().reverse()[p.dataIndex]; return row.l1Plus+' L1+ / '+row.visitors+' visitor';
+    }}}]
+  });
+  window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
+}
+
+document.getElementById('view_period').textContent = D.visitors.latest.period;
+document.getElementById('view_period_prev').textContent = D.visitors.previous.period;
+document.getElementById('view_insights').innerHTML = D.visitors.insights.map(x=>'<li>'+esc(x)+'</li>').join('');
+(function(){
+  const v = D.visitors.latest, vp = D.visitors.previous;
+  document.getElementById('view_metrics').innerHTML =
+    '<div class="metric"><div class="n">'+fmt(v.visitor_records)+'</div><div class="l">Visitor records ('+vp.visitor_records+' tuần trước)</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.countries)+'</div><div class="l">Quốc gia / vùng</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.store_pv)+'</div><div class="l">PV gian hàng ('+vp.store_pv+' tuần trước)</div></div>'+
+    '<div class="metric"><div class="n">'+fmt(v.buyer_l1_plus)+'</div><div class="l">Buyer L1+</div></div>';
+})();
+
+(function renderCountryTable(){
+  const sorted = D.visitors.countries.filter(c=>c.visitors>0).sort((a,b)=> (b.l1Plus-a.l1Plus) || (b.visitors-a.visitors));
+  let h = '<tr><th>Quốc gia</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th class="num">L0</th><th class="num">L1+</th></tr>';
+  sorted.forEach(c=>{
+    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td class="num">'+fmt(c.l0)+'</td><td class="num"><span class="tag '+(c.l1Plus>0?'green':'gray')+'">'+fmt(c.l1Plus)+'</span></td></tr>';
+  });
+  document.getElementById('tbl_country').innerHTML = h;
+  document.getElementById('country_note').textContent = D.visitors.country_note || '';
+})();
+
+(function renderKwGroups(){
+  const groups = D.visitors.keyword_groups;
+  let h='';
+  for (const g in groups) {
+    const isBad = /xác minh|không liên quan/i.test(g);
+    h += '<div class="kw-group"><h3>'+esc(g)+'</h3><div class="chips">'+groups[g].map(k=>'<span class="chip'+(isBad?' gray':'')+'">'+esc(k)+'</span>').join('')+'</div></div>';
+  }
+  document.getElementById('kw_groups').innerHTML = h;
+})();
+
+document.getElementById('m_priority').textContent = D.leads.near_order.length;
+document.getElementById('m_deep').textContent = D.leads.deep_leads.length;
+document.getElementById('m_follow').textContent = D.leads.followup.length;
+document.getElementById('m_real').textContent = D.leads.summary.real_signal_leads;
+
+function copyText(btn, text){
+  navigator.clipboard.writeText(text).then(()=>{
+    btn.textContent = 'Đã copy!'; btn.classList.add('copied');
+    setTimeout(()=>{ btn.textContent='Copy next action'; btn.classList.remove('copied'); }, 1800);
+  }).catch(()=>{ btn.textContent = 'Không copy được'; });
+}
+window.copyText = copyText;
+
+const badgeColor = b => /payment/i.test(b) ? 'red' : /shipping/i.test(b) ? 'amber' : /moq/i.test(b) ? 'blue' : /size/i.test(b) ? 'green' : 'gray';
+function renderPriCards(list){
+  document.getElementById('cards_pri').innerHTML = list.map(r=>
+    '<div class="buyer-card"><div class="bh"><b>'+esc(r.name)+'</b><span class="bc">'+esc(r.country)+'</span></div>'+
+    '<div class="row">'+(r.badges||[]).map(b=>'<span class="tag '+badgeColor(b)+'" style="margin-right:6px">'+esc(b)+'</span>').join('')+'</div>'+
+    '<div class="row"><b>Nhu cầu:</b> '+esc(r.need)+'</div>'+
+    '<div class="row"><b>Vướng mắc:</b> '+esc(r.blocker)+'</div>'+
+    '<div class="row"><b>Việc tiếp theo:</b> '+esc(r.next)+'</div>'+
+    '<button class="copy-btn" onclick="copyText(this, '+JSON.stringify(r.next).replace(/"/g,'&quot;')+')">Copy next action</button></div>'
+  ).join('');
+  document.getElementById('cnt_pri').textContent = list.length;
+}
+function renderDeepList(list){
+  document.getElementById('list_deep').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+' ('+esc(r.country)+'):</b> '+esc(r.note)+'</li>').join('');
+  document.getElementById('cnt_deep').textContent = list.length;
+}
+function renderExpList(list){
+  document.getElementById('list_exp').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+':</b> '+esc(r.note)+'</li>').join('');
+  document.getElementById('cnt_exp').textContent = list.length;
+}
+function renderSigList(list){
+  document.getElementById('list_sig').innerHTML = list.map(r=>'<li class="simple-item">'+esc(r)+'</li>').join('');
+  document.getElementById('cnt_sig').textContent = list.length;
+}
+renderPriCards(D.leads.near_order);
+renderDeepList(D.leads.deep_leads);
+renderExpList(D.leads.followup);
+renderSigList(D.leads.principles);
+
+document.getElementById('ops_period').textContent = D.ops.latest.period;
+document.getElementById('ops_alerts').innerHTML = D.ops.alerts.map(x=>'<li>'+esc(x)+'</li>').join('');
+document.getElementById('ops_conclusion').textContent = D.ops.conclusion;
+document.getElementById('ops_actions_list').innerHTML = D.ops.actions.map((x,i)=>'<div class="simple-item">'+(i+1)+'. '+esc(x)+'</div>').join('');
+
+(function renderOpsTable(){
+  const o = D.ops.latest, op = D.ops.previous;
+  const rows = [
+    ['Số sao', o.stars, op.stars, false],
+    ['Tổng sản phẩm', o.total_products, op.total_products, true],
+    ['Sản phẩm mới', o.new_products, op.new_products, true],
+    ['Người ghé thăm', o.visitors, op.visitors, true],
+    ['Thư hỏi hàng', o.inquiries, op.inquiries, true],
+    ['Thư hỏi hàng đã trả lời', o.inquiries_replied, op.inquiries_replied, true],
+    ['RFQ đã báo giá', o.rfq_quoted, op.rfq_quoted, true],
+    ['RFQ còn lại', o.rfq_remaining, op.rfq_remaining, true],
+    ['Phản hồi trung bình (h)', o.avg_reply_hours, op.avg_reply_hours, false],
+    ['Phản hồi trong 24h (%)', o.reply_24h_rate, op.reply_24h_rate, false],
+    ['Super Product', o.super_products, op.super_products, true],
+    ['Top Product', o.top_products, op.top_products, true]
+  ];
+  let h = '<tr><th>Chỉ số</th><th class="num">Tuần này ('+esc(o.period.split(' đến ')[1])+')</th><th class="num">Tuần trước ('+esc(op.period.split(' đến ')[1])+')</th></tr>';
+  rows.forEach(([label,cur,prev,isNum])=>{
+    h += '<tr><td>'+label+'</td><td class="num">'+(isNum?fmt(cur):esc(cur))+'</td><td class="num">'+(isNum?fmt(prev):esc(prev))+'</td></tr>';
+  });
+  document.getElementById('tbl_ops').innerHTML = h;
+})();
+</script>
+</body></html>
