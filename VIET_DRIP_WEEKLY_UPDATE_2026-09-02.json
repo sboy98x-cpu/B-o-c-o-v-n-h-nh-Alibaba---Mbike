@@ -1,0 +1,2354 @@
+{
+  "generated_for": "Claude Code weekly app update",
+  "brand": "Viet Drip",
+  "app_path": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/viet-drip/index.html",
+  "reporting_period": {
+    "visitor_current": "27.08-02.09",
+    "visitor_previous": "16-22.08",
+    "generated_date": "2026-09-04"
+  },
+  "source_spreadsheets": {
+    "operations": "1ogyDY_dwnxPf8upnib5mL-5g9kGpMuoJ7wurByAaiKQ",
+    "visitor": "1c7NvoAVG7kQUwAsLNoPmCj-Yxv4DF8UKua1ijJEjki4",
+    "onetalk": "15fmMDH4sgckIHN9GseZoe5NIoL6abepXU2X3raFb5TA"
+  },
+  "operations": {
+    "history": [
+      {
+        "week": "23-08-2026 đến 29-08-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1044",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "211",
+          "Tổng số thư hỏi hàng": "6",
+          "Tổng số thư hỏi hàng đã trả lời": "6",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0,8h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "8"
+        }
+      },
+      {
+        "week": "09-08-2026 đến 15-08-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1044",
+          "Tổng số sản phẩm mới đã đăng": "13",
+          "Tổng số người ghé thăm": "110",
+          "Tổng số thư hỏi hàng": "5",
+          "Tổng số thư hỏi hàng đã trả lời": "5",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0,8h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "5"
+        }
+      },
+      {
+        "week": "02-08-2026 đến 08-08-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1031",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "70",
+          "Tổng số thư hỏi hàng": "1",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,01h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "4"
+        }
+      },
+      {
+        "week": "26-07-2026 đến 01-08-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1031",
+          "Tổng số sản phẩm mới đã đăng": "1",
+          "Tổng số người ghé thăm": "88",
+          "Tổng số thư hỏi hàng": "4",
+          "Tổng số thư hỏi hàng đã trả lời": "4",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,7h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "3"
+        }
+      },
+      {
+        "week": "19-07-2026 đến 25-07-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1030",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "32",
+          "Tổng số thư hỏi hàng": "3",
+          "Tổng số thư hỏi hàng đã trả lời": "3",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "3,84h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "91.67%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "2"
+        }
+      },
+      {
+        "week": "12-07-2026 đến 18-07-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1030",
+          "Tổng số sản phẩm mới đã đăng": "4",
+          "Tổng số người ghé thăm": "73",
+          "Tổng số thư hỏi hàng": "3",
+          "Tổng số thư hỏi hàng đã trả lời": "3",
+          "Tổng số lượt đã báo giá RFQ": "5",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "4,59h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "92.31%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "2"
+        }
+      },
+      {
+        "week": "05-07-2026 đến 11-07-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1026",
+          "Tổng số sản phẩm mới đã đăng": "503",
+          "Tổng số người ghé thăm": "82",
+          "Tổng số thư hỏi hàng": "3",
+          "Tổng số thư hỏi hàng đã trả lời": "3",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "4,23h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "93%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "2"
+        }
+      },
+      {
+        "week": "21-06-2026 đến 27-06-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "523",
+          "Tổng số sản phẩm mới đã đăng": "46",
+          "Tổng số người ghé thăm": "95",
+          "Tổng số thư hỏi hàng": "4",
+          "Tổng số thư hỏi hàng đã trả lời": "4",
+          "Tổng số lượt đã báo giá RFQ": "20",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "9,19h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "80%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "14-06-2026 đến 20-06-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "477",
+          "Tổng số sản phẩm mới đã đăng": "36",
+          "Tổng số người ghé thăm": "84",
+          "Tổng số thư hỏi hàng": "4",
+          "Tổng số thư hỏi hàng đã trả lời": "4",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "10,54h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "85.71%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "31-05-2026 đến 06-05-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "441",
+          "Tổng số sản phẩm mới đã đăng": "441",
+          "Tổng số người ghé thăm": "40",
+          "Tổng số thư hỏi hàng": "1",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "20",
+          "Số lượt báo giá RFQ còn lại": "0",
+          "Thời gian phản hồi tin nhắn trung bình": "13,36h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "67%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      }
+    ],
+    "raw": [
+      [
+        "Khung thời gian hoạt động",
+        "Tuần ",
+        "23-08-2026 đến 29-08-2026",
+        "09-08-2026 đến 15-08-2026",
+        "02-08-2026 đến 08-08-2026",
+        "26-07-2026 đến 01-08-2026",
+        "19-07-2026 đến 25-07-2026",
+        "12-07-2026 đến 18-07-2026",
+        "05-07-2026 đến 11-07-2026",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026",
+        "31-05-2026 đến 06-05-2026"
+      ],
+      [
+        null,
+        "Số sao",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm",
+        "1044",
+        "1044",
+        "1031",
+        "1031",
+        "1030",
+        "1030",
+        "1026",
+        "523",
+        "477",
+        "441"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm mới đã đăng",
+        "0",
+        "13",
+        "0",
+        "1",
+        "0",
+        "4",
+        "503",
+        "46",
+        "36",
+        "441"
+      ],
+      [
+        null,
+        "Tổng số người ghé thăm",
+        "211",
+        "110",
+        "70",
+        "88",
+        "32",
+        "73",
+        "82",
+        "95",
+        "84",
+        "40"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng",
+        "6",
+        "5",
+        "1",
+        "4",
+        "3",
+        "3",
+        "3",
+        "4",
+        "4",
+        "1"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng đã trả lời",
+        "6",
+        "5",
+        "1",
+        "4",
+        "3",
+        "3",
+        "3",
+        "4",
+        "4",
+        "1"
+      ],
+      [
+        null,
+        "Tổng số lượt đã báo giá RFQ",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5",
+        "0",
+        "20",
+        "0",
+        "20"
+      ],
+      [
+        null,
+        "Số lượt báo giá RFQ còn lại",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "0"
+      ],
+      [
+        null,
+        "Thời gian phản hồi tin nhắn trung bình",
+        "0,8h",
+        "0,8h",
+        "2,01h",
+        "1,7h",
+        "3,84h",
+        "4,59h",
+        "4,23h",
+        "9,19h",
+        "10,54h",
+        "13,36h"
+      ],
+      [
+        null,
+        "Tỉ lệ tin nhắn được phản hồi trong 24h",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "91.67%",
+        "92.31%",
+        "93%",
+        "80%",
+        "85.71%",
+        "67%"
+      ],
+      [
+        null,
+        "Số lượng Super Product (win)",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượng Top Product (tiềm năng)",
+        "8",
+        "5",
+        "4",
+        "3",
+        "2",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Kế hoạch hành động cho tuần tiếp theo",
+        "Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày, nhanh chóng đạt 1000 sản phẩm",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày ",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày "
+      ],
+      [
+        null,
+        "Tối ưu hoá các chỉ số",
+        "Xử lý sản phẩm rủi ro và sản phẩm Issue; cải thiện Marketing và Service; tăng traffic; báo RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng quảng cáo và RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Tối ưu 1.010 Basic Product lên Potential/Top; tăng traffic và inquiry",
+        "Đăng thêm sản phẩm high demand",
+        "Cần phải tìm các sản phẩm hot liên quan đến ngành hàng trên sàn để đăng bài, hút thêm traffic",
+        "Cần phải tìm các sản phẩm hot liên quan đến ngành hàng trên sàn để đăng bài, hút thêm traffic"
+      ],
+      [
+        null,
+        null,
+        "Có 845 sản phẩm rủi ro và 14 sản phẩm Issue ảnh hưởng tuân thủ, khả năng hiển thị; chưa có đơn và GMV Trade Assurance; gian hàng bị giới hạn ở 1 sao do Marketing và Service; traffic lệch về thị trường đang phát triển; RFQ và công cụ AI chưa được tận dụng hiệu quả",
+        "Gian hàng bị giới hạn ở 1 sao do Marketing và Service: Marketing có 150 khách, Service có 9 người mua phản hồi; chưa có GMV Trade Assurance; trang chủ ghi nhận 13 sản phẩm lỗi; chưa sử dụng quyền lợi RFQ; traffic và chuyển đổi còn thấp",
+        "Có 13 sản phẩm gặp vấn đề cần xử lý; chưa có giao dịch Trade Assurance; gian hàng bị giới hạn ở 1 sao do Marketing và Service; traffic chưa tập trung đúng thị trường mục tiêu; RFQ và các quyền lợi gian hàng chưa được tận dụng",
+        "Có 12 sản phẩm gặp vấn đề cần xử lý; chưa có giao dịch Trade Assurance; gian hàng bị giới hạn ở 1 sao do Marketing và Service; traffic chưa tập trung đúng thị trường mục tiêu; RFQ và các quyền lợi gian hàng chưa được tận dụng",
+        "390 sản phẩm rủi ro ảnh hưởng trọng số gian hàng; Hiệu suất phản hồi thấp và chưa có giao dịch; Gian hàng bị giới hạn ở 1 sao do chỉ số Marketing và Service; Traffic tập trung quá nhiều tại Việt Nam, chưa đúng thị trường mục tiêu",
+        "390 sản phẩm rủi ro ảnh hưởng trọng số gian hàng; Hiệu suất phản hồi thấp và chưa có giao dịch; Gian hàng bị giới hạn ở 1 sao do chỉ số Marketing và Service; Traffic tập trung quá nhiều tại Việt Nam, chưa đúng thị trường mục tiêu",
+        "Xử lý 6 sản phẩm có vấn đề; liên kết EU Responsible Person; cải thiện tốc độ và tỉ lệ phản hồi tin nhắn",
+        null,
+        "Số sao = 0 nên phải đăng nhiều sản phẩm hơn",
+        "Số sao = 0 nên phải đăng nhiều sản phẩm hơn"
+      ],
+      [
+        null,
+        null,
+        null,
+        "Chạy quảng cáo nếu có thể",
+        "Chạy quảng cáo nếu có thể",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Chụp lại hình ảnh và video nhà máy, video, ảnh sản phẩm trực quan hơn nữa, thực tế hơn vì bán buôn"
+      ],
+      [],
+      [],
+      [
+        "Đánh giá sơ bộ",
+        "Vấn đề ưu tiên xử lý",
+        null,
+        "Đăng thêm sản phẩm và chạy quảng cáo, traffic gian hàng đang cải thiện dần",
+        "Đăng thêm sản phẩm và chạy quảng cáo, traffic gian hàng đang cải thiện dần",
+        "Có 12 sản phẩm gặp vấn đề cần xử lý;",
+        "tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "cải thiện tốc độ và tỉ lệ phản hồi tin nhắn",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày "
+      ],
+      [
+        null,
+        "Báo cáo từ AI"
+      ]
+    ]
+  },
+  "visitor": {
+    "current_summary": {
+      "Số bản ghi khách truy cập": [
+        "47",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "29",
+        "L0",
+        "Người mua đã đăng ký",
+        "19"
+      ],
+      "Tổng PV trên gian hàng": [
+        "257",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "28"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "123",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "42",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "0"
+      ],
+      "Số buyer L1+": [
+        "28",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "5",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "previous_summary": {
+      "Số bản ghi khách truy cập": [
+        "45",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "31",
+        "L0",
+        "Người mua đã đăng ký",
+        "23"
+      ],
+      "Tổng PV trên gian hàng": [
+        "108",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "22"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "97",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "36",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "0"
+      ],
+      "Số buyer L1+": [
+        "22",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "5",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "current_countries": [
+      {
+        "Quốc gia / vùng": "Ả Rập Xê-út",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Algeria",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Argentina",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ấn Độ",
+        "Số visitor": "6",
+        "Tổng PV": "58",
+        "Visitor có keyword": "6",
+        "Bản ghi keyword chính xác": "16",
+        "L0": "0",
+        "L1": "6",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "6"
+      },
+      {
+        "Quốc gia / vùng": "Ba Lan",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Bangladesh",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Bỉ",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bờ Biển Ngà",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Brazil",
+        "Số visitor": "3",
+        "Tổng PV": "4",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "Số visitor": "1",
+        "Tổng PV": "33",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Campuchia",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Cộng hòa Congo",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ecuador",
+        "Số visitor": "1",
+        "Tổng PV": "4",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "El Salvador",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ghana",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Hoa Kỳ",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Kenya",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Li-băng",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Namibia",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Nhật Bản",
+        "Số visitor": "2",
+        "Tổng PV": "98",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "8",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Nicaragua",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Senegal",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Tajikistan",
+        "Số visitor": "2",
+        "Tổng PV": "6",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Trung Quốc",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Úc",
+        "Số visitor": "4",
+        "Tổng PV": "15",
+        "Visitor có keyword": "4",
+        "Bản ghi keyword chính xác": "11",
+        "L0": "0",
+        "L1": "4",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "4"
+      },
+      {
+        "Quốc gia / vùng": "Venezuela",
+        "Số visitor": "1",
+        "Tổng PV": "4",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Việt Nam",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Zambia",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Zimbabwe",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      }
+    ],
+    "current_exact_keywords": [
+      {
+        "keyword_exact": "ldpe pipe",
+        "occurrences": 2,
+        "pv": 98,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Nhật Bản": 2
+        }
+      },
+      {
+        "keyword_exact": "ldpe pipe 100m",
+        "occurrences": 1,
+        "pv": 75,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword_exact": "ldpe pipe 32mm",
+        "occurrences": 1,
+        "pv": 75,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword_exact": "ldpe pipe 32mmldpe pipe 25mm",
+        "occurrences": 1,
+        "pv": 75,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword_exact": "drip tape",
+        "occurrences": 2,
+        "pv": 38,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Ấn Độ": 2
+        }
+      },
+      {
+        "keyword_exact": "watch",
+        "occurrences": 2,
+        "pv": 38,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Ấn Độ": 2
+        }
+      },
+      {
+        "keyword_exact": "drone camera 4k",
+        "occurrences": 1,
+        "pv": 33,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "sensor solar lights",
+        "occurrences": 1,
+        "pv": 33,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "solar sensor motion alarm with free shipping",
+        "occurrences": 1,
+        "pv": 33,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "water drip automatic circling irragtion",
+        "occurrences": 1,
+        "pv": 33,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "hdpe pipe 32mm 100m roll",
+        "occurrences": 1,
+        "pv": 23,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword_exact": "ldpe pipe 50mmldpe pipe 100m",
+        "occurrences": 1,
+        "pv": 23,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword_exact": "pe管",
+        "occurrences": 1,
+        "pv": 23,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nhật Bản": 1
+        }
+      },
+      {
+        "keyword_exact": "16mm plain lateral drip pipes",
+        "occurrences": 4,
+        "pv": 20,
+        "levels": {
+          "L1": 4
+        },
+        "countries": {
+          "Ấn Độ": 4
+        }
+      },
+      {
+        "keyword_exact": "mulching film agricultural plastic",
+        "occurrences": 4,
+        "pv": 20,
+        "levels": {
+          "L1": 4
+        },
+        "countries": {
+          "Ấn Độ": 4
+        }
+      },
+      {
+        "keyword_exact": "sand filter for drip irrigation",
+        "occurrences": 4,
+        "pv": 20,
+        "levels": {
+          "L1": 4
+        },
+        "countries": {
+          "Ấn Độ": 4
+        }
+      },
+      {
+        "keyword_exact": "pc microsprinkler",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Úc": 2
+        }
+      },
+      {
+        "keyword_exact": "smart toilet",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Úc": 2
+        }
+      },
+      {
+        "keyword_exact": "verde marble vanity",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Úc": 2
+        }
+      },
+      {
+        "keyword_exact": "usb",
+        "occurrences": 2,
+        "pv": 6,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Tajikistan": 2
+        }
+      },
+      {
+        "keyword_exact": "16 pro max original",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bờ Biển Ngà": 2
+        }
+      },
+      {
+        "keyword_exact": "moto pompe  gaz",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bờ Biển Ngà": 2
+        }
+      },
+      {
+        "keyword_exact": "cargador de bateria de auto",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "chinese products",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "cortadora de cesped a gasolina",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ecuador": 1
+        }
+      },
+      {
+        "keyword_exact": "drip irrigation hosehdpe pipe fittings private label   free shipping",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "equipos agrcolas",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ecuador": 1
+        }
+      },
+      {
+        "keyword_exact": "extractor coconut",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ecuador": 1
+        }
+      },
+      {
+        "keyword_exact": "mangueras de riego",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ecuador": 1
+        }
+      },
+      {
+        "keyword_exact": "mesas plegables de acero",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "olive oil",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "phone charger",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "waistband",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "anhui fulaier ecommerce co ltd",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "fournitures scolaires",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "grillage pour cloture",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "microaspersores riego",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nicaragua": 1
+        }
+      },
+      {
+        "keyword_exact": "motoculteur diesel",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "motoculteur multifonction",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "sinta de goteo agricola",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nicaragua": 1
+        }
+      },
+      {
+        "keyword_exact": "sistema de riego por goteo",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nicaragua": 1
+        }
+      },
+      {
+        "keyword_exact": "110mm pvc irrigation manifold 4 outlets",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Algeria": 2
+        }
+      },
+      {
+        "keyword_exact": "bm p cao 15bar",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Việt Nam": 2
+        }
+      },
+      {
+        "keyword_exact": "bom ly tm a tng cnh thng ng",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Việt Nam": 2
+        }
+      },
+      {
+        "keyword_exact": "cooler spout",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "dn110 agricultural irrigation manifold",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Algeria": 2
+        }
+      },
+      {
+        "keyword_exact": "dn110 irrigation water distribution manifolddn110 irrigation water distribution manifold",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Algeria": 2
+        }
+      },
+      {
+        "keyword_exact": "juice spigot",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "my o rnh",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Việt Nam": 2
+        }
+      },
+      {
+        "keyword_exact": "navajas de injertar",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "El Salvador": 2
+        }
+      },
+      {
+        "keyword_exact": "soldadora pvc",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "El Salvador": 2
+        }
+      },
+      {
+        "keyword_exact": "soldadura",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "El Salvador": 2
+        }
+      },
+      {
+        "keyword_exact": "spigot",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "cabbage seeds",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "kit chaves de ferramentas",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword_exact": "mangueira de gotejamento",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword_exact": "pvc or water hose puncher",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "sacks",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "10寸越野电动滑板车 双大灯 ecross pro2公模",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "5 star hotel bedding duvet set with pillows",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "5 star hotel luxury bed sheets set egyptian cotton",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "6 inches solenoid valve",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "batterie automobile et tracteur",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "borehole casing",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "borehole drilling machine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "casio calculator fx991ex",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "chicken bulb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Namibia": 1
+        }
+      },
+      {
+        "keyword_exact": "chocolate moulds",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Namibia": 1
+        }
+      },
+      {
+        "keyword_exact": "couveuses solaires",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "dbroussailleuses",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "drip lineconectors",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "drip offtake connectors",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "ford ranger 2017 model headlight",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Namibia": 1
+        }
+      },
+      {
+        "keyword_exact": "french press",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Li-băng": 1
+        }
+      },
+      {
+        "keyword_exact": "hb pencils in bulk",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "high quality bedfings",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "hydraulic drilling rig",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "impresora manual color",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "kids lunch box set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Li-băng": 1
+        }
+      },
+      {
+        "keyword_exact": "lonas toldos",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "machine pour dessiner les vtements",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword_exact": "machines minires",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword_exact": "papel para finado hamburguesas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "patio swings",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ả Rập Xê-út": 1
+        }
+      },
+      {
+        "keyword_exact": "solenoid valve",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "stationery and school supplies",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "tenu de travail",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword_exact": "tlphone doccasion",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "tupperwer",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Li-băng": 1
+        }
+      },
+      {
+        "keyword_exact": "tuyau darrosage goutte  goutte",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "used gaming laptops core i9 rtx 4090",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "凿岩机yt29",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "球齿钻头32mm",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      }
+    ]
+  },
+  "onetalk": {
+    "overview": [
+      {
+        "Hạng mục": "03/09/2026 - cập nhật tuần mới",
+        "Số lượng": "11 buyer rà soát trên OneTalk",
+        "Ghi chú vận hành": "4 khách ưu tiên; 6 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "29/08/2026 - 03/09/2026",
+        "Ghi chú vận hành": "Tập trung khách hỏi ống tưới LDPE, drip/irrigation pipe, giá theo roll/metre, ship Japan và thanh toán."
+      },
+      {
+        "Hạng mục": "Trọng tâm tuần này",
+        "Số lượng": "LDPE irrigation pipe / drip tape / payment",
+        "Ghi chú vận hành": "Lead tốt nhất là khách đã hỏi cách thanh toán và khách Nhật đã nhận báo giá + phí ship."
+      },
+      {
+        "Hạng mục": "Rủi ro chính",
+        "Số lượng": "Nhiều khách chưa rõ đường kính/số lượng",
+        "Ghi chú vận hành": "Cần hỏi nhanh diameter 6-32mm, warranty 3/5/10 years, roll length, quantity, destination."
+      },
+      {
+        "Hạng mục": "25/08/2026 - cập nhật tuần mới",
+        "Số lượng": "8 lead đã lọc",
+        "Ghi chú vận hành": "2 khách ưu tiên; 4 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "Tuần 25/08/2026",
+        "Ghi chú vận hành": "Lọc buyer có phản hồi thật; chú ý khách hỏi kỹ thuật và khách kéo sang kênh ngoài."
+      },
+      {
+        "Hạng mục": "Khách ưu tiên",
+        "Số lượng": "2",
+        "Ghi chú vận hành": "Jake Tartaglia, Jose RodriguezGiraldo."
+      },
+      {
+        "Hạng mục": "Khách cần theo dõi / ít phản hồi",
+        "Số lượng": "6",
+        "Ghi chú vận hành": "4 lead cần khai thác thêm + 2 lead rủi ro/off-platform."
+      },
+      {
+        "Hạng mục": "Tài khoản đã rà soát",
+        "Số lượng": "PHUONG DO MINH / Viet Drip",
+        "Ghi chú vận hành": "Đã đăng nhập và đọc OneTalk ngày 18/08/2026."
+      },
+      {
+        "Hạng mục": "Khách có phản hồi trong 30 ngày gần nhất",
+        "Số lượng": "8 buyers",
+        "Ghi chú vận hành": "Số liệu hiển thị trong OneTalk."
+      },
+      {
+        "Hạng mục": "Khách có phản hồi thật, nên ưu tiên xử lý",
+        "Số lượng": "5",
+        "Ghi chú vận hành": "Jose, Emmanuel, Jessica, Christopher, Maksim có nhu cầu sản phẩm/đơn hàng rõ hơn."
+      },
+      {
+        "Hạng mục": "Khách cần theo dõi",
+        "Số lượng": "7",
+        "Ghi chú vận hành": "Wanderson, Muhammad, Thucyen, Daniel, Rinaldi, Lip Pon, Yakir có trao đổi nhưng thiếu thông tin hoặc phản hồi ngắn."
+      },
+      {
+        "Hạng mục": "Khách ít phản hồi / không ưu tiên",
+        "Số lượng": "Nhiều",
+        "Ghi chú vận hành": "Một số chỉ hỏi WhatsApp/Zalo hoặc seller gửi tin hàng loạt, chưa có phản hồi mua rõ."
+      },
+      {
+        "Hạng mục": "Vấn đề nổi bật",
+        "Số lượng": "Cần chốt bước order",
+        "Ghi chú vận hành": "Nhiều lead đã hỏi đúng sản phẩm nhưng đang thiếu địa chỉ ship, thông số, số lượng hoặc bị kéo ra WhatsApp."
+      },
+      {
+        "Hạng mục": "Hành động ưu tiên",
+        "Số lượng": "Báo giá + phí ship trong Alibaba",
+        "Ghi chú vận hành": "Với lead có số lượng: tạo báo giá/Trade Assurance order ngay; với lead thiếu thông tin: hỏi SKU, size, quantity, destination."
+      }
+    ],
+    "priority_buyers": [
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "Jake Tartaglia",
+        "Quốc gia": "Chưa xác định",
+        "Sản phẩm / nhu cầu hỏi": "Khách hàng tiềm năng",
+        "Số lượng": "Buyer hỏi “How can I make the payment by card?”",
+        "Nội dung đã đọc trong tin nhắn": "Chưa rõ / đang ở bước thanh toán",
+        "Mức ưu tiên": "Tín hiệu rất nóng vì buyer hỏi cách thanh toán, cần xử lý ngay để không rơi đơn",
+        "Đề xuất nhắn tiếp theo": "Rất cao"
+      },
+      {
+        "Ngày": "2026-08-29",
+        "Khách hàng": "weicengzhu zheng",
+        "Quốc gia": "Japan / Osaka",
+        "Sản phẩm / nhu cầu hỏi": "Có level tag",
+        "Số lượng": "32mm LDPE Pipe 100m/roll, bảo hành 10/5/3 năm; đã báo giá từng loại và ship Vietnam-Osaka",
+        "Nội dung đã đọc trong tin nhắn": "Theo roll / chưa rõ số roll",
+        "Mức ưu tiên": "Đã có báo giá rõ: 10 năm USD 43.92/roll, 5 năm USD 38.90, 3 năm USD 37.64; ship Osaka khoảng USD 40-80/roll",
+        "Đề xuất nhắn tiếp theo": "Rất cao"
+      },
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Juan Anahua",
+        "Quốc gia": "Chưa xác định",
+        "Sản phẩm / nhu cầu hỏi": "Có level tag",
+        "Số lượng": "LDPE irrigation pipes 6mm-32mm cho nông nghiệp/drip tape; hỏi diameter và packaging",
+        "Nội dung đã đọc trong tin nhắn": "5 units",
+        "Mức ưu tiên": "Buyer có quantity 5 unit, cần xác định đường kính và quy cách đóng gói",
+        "Đề xuất nhắn tiếp theo": "Cao"
+      },
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "naveen naani",
+        "Quốc gia": "Chưa xác định",
+        "Sản phẩm / nhu cầu hỏi": "Có level tag",
+        "Số lượng": "Hỏi giá theo meter/roll, nhiều size pipe khác nhau",
+        "Nội dung đã đọc trong tin nhắn": "Chưa rõ",
+        "Mức ưu tiên": "Buyer đang hỏi cấu trúc giá, cần map size trước khi báo chính xác",
+        "Đề xuất nhắn tiếp theo": "Cao"
+      },
+      {
+        "Ngày": "2026-08-19",
+        "Khách hàng": "Jake Tartaglia",
+        "Quốc gia": "Chưa xác định",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi sự khác nhau giữa X1000 và X2000 range, 37L/h, mã X137A và X237A",
+        "Số lượng": "Chưa nêu",
+        "Nội dung đã đọc trong tin nhắn": "Khách hỏi kỹ thuật sản phẩm rất cụ thể",
+        "Mức ưu tiên": "Lead tốt - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Trả lời bảng so sánh: flow rate, coverage, connection size, hose/stake included; hỏi quantity và ứng dụng"
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Jose RodriguezGiraldo",
+        "Quốc gia": "Peru - Cusco",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi phí ship từ Việt Nam tới Peru theo kg có hợp lý không; đang check freight tới Cusco; sản phẩm 5,000 pcs giá USD 0.218/pc",
+        "Số lượng": "5,000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Khách quan tâm giá vận chuyển và tổng landed cost",
+        "Mức ưu tiên": "Lead tốt - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Tính freight Cusco, so sánh air/sea nếu có, gửi tổng giá CIF/DDP nếu làm được"
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Jose RodriguezGiraldo",
+        "Quốc gia": "Peru",
+        "Sản phẩm / nhu cầu hỏi": "Spraying Filter 16mm/20mm Chamber, irrigation fitting black color Vietdrip Brand.",
+        "Số lượng": "5,000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Order progress 80%: đơn giá USD 0.218, item subtotal USD 1,090, phí ship express USD 42.11, tổng USD 1,132.11. Đã có địa chỉ Cusco, Peru.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Xác nhận lại tổng tiền USD 1,132.11, thời gian giao express, packing; đề nghị tạo Trade Assurance order ngay và xin xác nhận thanh toán."
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Emmanuel Nhandara",
+        "Quốc gia": "Zimbabwe",
+        "Sản phẩm / nhu cầu hỏi": "16mm drip connector/coupling, irrigation set.",
+        "Số lượng": "300-500 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi có couplings không và nói 'yes please send quote'. Smart action hiển thị giá USD 0.05/pc cho 1-500 pcs, order progress thiếu địa chỉ ship.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Báo rõ có coupling 16mm, giá USD 0.05/pc, hỏi chốt 300 hay 500 pcs và địa chỉ giao hàng để báo phí ship."
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Jessica Mbibi",
+        "Quốc gia": "Netherlands",
+        "Sản phẩm / nhu cầu hỏi": "Black PP Coupling 32mm và nhiều loại pipe fittings: elbows, tees, reducers, couplings, unions, caps, flanges...",
+        "Số lượng": "Inquiry ghi 1 piece nhưng nội dung là yêu cầu danh mục/mua hàng",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi inquiry đầy đủ và yêu cầu model, specs, MOQ, pricing, packaging; có email ngoài Alibaba trong nội dung.",
+        "Mức ưu tiên": "Cao nhưng rủi ro off-platform",
+        "Đề xuất nhắn tiếp theo": "Trả lời trực tiếp trong Alibaba: gửi thông số Black PP Coupling 32mm, bảng giá theo bậc 1-500/501-5000/5001+, hỏi target quantity và nhắc báo giá/order qua Alibaba để bảo vệ giao dịch."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Christopher Velonis",
+        "Quốc gia": "Vietnam flag hiển thị",
+        "Sản phẩm / nhu cầu hỏi": "Center pivot irrigation hose pivot boot/flexible boot coupling, 4-ply tire cord reinforced.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi specification rất chi tiết: ID 6 5/8 inch, OD 7 inch, length 16 inch, dùng cho pivot tower connection/elbow.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Xác nhận có thể sản xuất/cung cấp theo spec hay không; nếu được, hỏi áp suất làm việc, số lượng, bản vẽ/ảnh mẫu và địa chỉ giao hàng."
+      },
+      {
+        "Ngày": "2026-07-16",
+        "Khách hàng": "Maksim Mikhailencko",
+        "Quốc gia": "Belarus",
+        "Sản phẩm / nhu cầu hỏi": "LDPE pipes.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Tin gần nhất seller hỏi khách còn quan tâm mua LDPE pipes không; được tag khách hàng tiềm năng.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Follow-up bằng 3 lựa chọn size LDPE, MOQ, giá tham khảo; hỏi đường kính, độ dày, chiều dài cuộn và số lượng dự kiến."
+      }
+    ],
+    "followup_buyers": [
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "Gunveer Singh",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Chưa thấy L",
+        "Đánh giá": "Chỉ mở đầu “Helloo”, chưa có sản phẩm/số lượng",
+        "Việc nên làm": "Lead mở đầu"
+      },
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "Giovanni Capostagno",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Chưa thấy L",
+        "Đánh giá": "Snapshot chỉ thấy translation tip, chưa có nội dung nhu cầu rõ",
+        "Việc nên làm": "Cần kiểm tra lại nếu có tin mới"
+      },
+      {
+        "Ngày": "2026-08-28",
+        "Khách hàng": "Abdulaziz A",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Chưa thấy L",
+        "Đánh giá": "Buyer nói đã gửi vào email",
+        "Việc nên làm": "Có nguy cơ chuyển kênh ngoài"
+      },
+      {
+        "Ngày": "2026-08-25",
+        "Khách hàng": "yinghe chen",
+        "Quốc gia": "Trung Quốc / tiếng Trung",
+        "Nội dung": "Có level tag",
+        "Đánh giá": "Quan tâm PE pipes, sprinkler nozzles, accessories từ nhựa nguyên sinh 100%",
+        "Việc nên làm": "Chưa rõ"
+      },
+      {
+        "Ngày": "2026-08-25",
+        "Khách hàng": "ROBERT GO",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Chưa thấy L",
+        "Đánh giá": "Seller gửi catalog, chưa thấy buyer phản hồi rõ",
+        "Việc nên làm": "Lead cần follow"
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Jose RodriguezGiraldo",
+        "Quốc gia": "Peru",
+        "Nội dung": "Khách hàng tiềm năng",
+        "Đánh giá": "Đã có shipping rates Vietnam-Peru tính theo kg; hỏi buyer thấy VND rates có hợp lý không",
+        "Việc nên làm": "Chưa rõ"
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Emmanuel Nhandara",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Cần 16mm drip connector / straight coupling valve cho irrigation set | SL: chưa nêu",
+        "Đánh giá": "Lead thật - ưu tiên vừa",
+        "Việc nên làm": "Hỏi quantity, gửi giá theo bậc 1-500 pcs và MOQ nếu có"
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Christopher Velonis",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Center pivot irrigation hose pivot boot/flexible boot coupling; specs: 4-ply tire cord, ID 6 5/8”, OD 7”, length 16” | SL: chưa nêu",
+        "Đánh giá": "Lead kỹ thuật - cần kiểm tra sản xuất",
+        "Việc nên làm": "Xác nhận có sản xuất được không, hỏi quantity, material, pressure, drawing/photo"
+      },
+      {
+        "Ngày": "2026-08-02",
+        "Khách hàng": "Daniel Gabbay",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Chỉ trả lời “okay, thank you sir” | SL: chưa nêu",
+        "Đánh giá": "Lead yếu",
+        "Việc nên làm": "Không phân tích sâu; follow nếu có inquiry mới"
+      },
+      {
+        "Ngày": "2026-07-16",
+        "Khách hàng": "Maksim Mikhailencko",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Seller follow LDPE pipes: “Are you still interested...” | SL: chưa nêu",
+        "Đánh giá": "Lead cũ",
+        "Việc nên làm": "Gửi catalogue/giá LDPE theo size nếu buyer phản hồi"
+      },
+      {
+        "Ngày": "2026-07-17",
+        "Khách hàng": "WANDERSON EIDS DE OLIVEIRA",
+        "Quốc gia": "Brazil",
+        "Nội dung": "Khách nói sẽ liên hệ qua WhatsApp, được tag khách hàng tiềm năng.",
+        "Đánh giá": "Có tiềm năng nhưng có nguy cơ rời nền tảng.",
+        "Việc nên làm": "Giữ trao đổi chính trên Alibaba, hỏi sản phẩm/số lượng và nhắc có thể tạo order để bảo vệ giao dịch."
+      },
+      {
+        "Ngày": "2026-07-15",
+        "Khách hàng": "MUHAMMAD ARSLAN",
+        "Quốc gia": "Pakistan",
+        "Nội dung": "Seller hỏi quantity/size và đề nghị WhatsApp/Zalo; có 2 dòng hội thoại gần nhau.",
+        "Đánh giá": "Thiếu thông tin sản phẩm, chưa đủ lead ưu tiên.",
+        "Việc nên làm": "Hỏi lại size, quantity, destination; chỉ chuyển WhatsApp sau khi đã lưu đủ thông tin trên sheet."
+      },
+      {
+        "Ngày": "2026-07-10",
+        "Khách hàng": "Thucyen Ho",
+        "Quốc gia": "Australia",
+        "Nội dung": "Nội dung tiếng Việt: 'Chỉ có cố định que với dây 5x3mm ạ', được tag khách hàng tiềm năng.",
+        "Đánh giá": "Có trao đổi thật nhưng chưa rõ buyer/seller nói về sản phẩm nào.",
+        "Việc nên làm": "Hỏi khách cần phụ kiện cố định que hay dây 5x3mm, số lượng và địa chỉ nhận."
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "Daniel Gabbay",
+        "Quốc gia": "United States",
+        "Nội dung": "Khách trả lời 'okay, thank you sir'.",
+        "Đánh giá": "Phản hồi thật nhưng chưa có nhu cầu hiện tại.",
+        "Việc nên làm": "Follow nhẹ, hỏi có cần thêm báo giá hoặc mẫu sản phẩm nào không."
+      },
+      {
+        "Ngày": "2026-07-25",
+        "Khách hàng": "Rinaldi Febrian",
+        "Quốc gia": "Indonesia",
+        "Nội dung": "AI follow-up đề xuất sample barb connectors.",
+        "Đánh giá": "Có thể là lead cũ, chưa thấy phản hồi mới.",
+        "Việc nên làm": "Gửi 2-3 mẫu barb connector bán tốt và hỏi có cần sample không."
+      },
+      {
+        "Ngày": "2026-07-24",
+        "Khách hàng": "Lip Pon",
+        "Quốc gia": "Thailand",
+        "Nội dung": "AI follow-up hỏi có nhu cầu/dự án mới không.",
+        "Đánh giá": "Lead cũ, chưa có phản hồi cụ thể.",
+        "Việc nên làm": "Theo dõi nhẹ, gửi catalogue irrigation fittings theo nhóm sản phẩm."
+      },
+      {
+        "Ngày": "2026-07-07",
+        "Khách hàng": "Yakir shitrit",
+        "Quốc gia": "Israel",
+        "Nội dung": "Khách/seller trả lời 'I'm afraid I don't know either. Sorry about that.'",
+        "Đánh giá": "Không đủ thông tin để ưu tiên.",
+        "Việc nên làm": "Chỉ rà lại nếu có lịch sử trước đó quan trọng."
+      }
+    ],
+    "low_response_or_spam": [
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "W N",
+        "Quốc gia": "Chỉ thấy translation tip, chưa có nhu cầu rõ",
+        "Dấu hiệu": "Không tính lead chính",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Penny Penny",
+        "Quốc gia": "Chỉ thấy translation tip, chưa có sản phẩm/số lượng rõ",
+        "Dấu hiệu": "Không tính lead chính tuần này",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Jessica Mbibi",
+        "Quốc gia": "Hội thoại chỉ báo auto-reception stopped, chưa thấy nhu cầu mới",
+        "Dấu hiệu": "Ít phản hồi",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-02",
+        "Khách hàng": "FHhf Gjffd",
+        "Quốc gia": "Chỉ là visitor follow-up, không có nhu cầu sản phẩm",
+        "Dấu hiệu": "Không tính lead",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "jania mark",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "Đề xuất chuyển sang WhatsApp/Zalo vì email phản hồi chậm; có thể là lead thật nhưng rủi ro/off-platform nhẹ.",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-11",
+        "Khách hàng": "W N",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "Hỏi chat trên WhatsApp; chưa có nhu cầu sản phẩm, chỉ xin kênh ngoài.",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "jania mark",
+        "Quốc gia": "Vietnam",
+        "Dấu hiệu": "Chỉ xin trao đổi qua WhatsApp/Zalo.",
+        "Kết luận": "Không phân tích sâu nếu chưa có SKU/số lượng."
+      },
+      {
+        "Ngày": "2026-08-11",
+        "Khách hàng": "W N",
+        "Quốc gia": "India",
+        "Dấu hiệu": "Chỉ hỏi chat WhatsApp.",
+        "Kết luận": "Thiếu nhu cầu sản phẩm."
+      },
+      {
+        "Ngày": "2026-08-07",
+        "Khách hàng": "Alviaa Alviaa",
+        "Quốc gia": "Pakistan",
+        "Dấu hiệu": "Chỉ để lại WhatsApp.",
+        "Kết luận": "Không đủ lead ưu tiên."
+      },
+      {
+        "Ngày": "2026-08-02",
+        "Khách hàng": "FHhf Gjffd",
+        "Quốc gia": "Saudi Arabia",
+        "Dấu hiệu": "Chỉ hiện visitor follow-up.",
+        "Kết luận": "Không phải lead có phản hồi rõ."
+      },
+      {
+        "Ngày": "2026-07-04",
+        "Khách hàng": "Mark Alhovirta / Kevin Nabwire / Stas Baciu",
+        "Quốc gia": "US/Kenya/UK",
+        "Dấu hiệu": "Tin seller gửi hàng loạt về Hanging Flower Pots, chưa thấy buyer phản hồi rõ.",
+        "Kết luận": "Không đưa vào khách ưu tiên tuần này."
+      },
+      {
+        "Ngày": "2026-07-02",
+        "Khách hàng": "Silent Auction",
+        "Quốc gia": "United States",
+        "Dấu hiệu": "Seller hỏi số điện thoại để nhắn WhatsApp/Zalo.",
+        "Kết luận": "Không đủ nhu cầu mua."
+      }
+    ]
+  },
+  "update_rules": [
+    "Không tự bịa dữ liệu; null hiển thị Chưa có dữ liệu.",
+    "Giữ nguyên Keyword chính xác; không dịch hoặc sửa chính tả.",
+    "Dùng toàn bộ operations.history để vẽ xu hướng nhiều tuần.",
+    "Hiển thị toàn bộ quốc gia và toàn bộ từ khóa, có lọc/sắp xếp.",
+    "Tái tính Insight cần chú ý từ kỳ hiện tại so với kỳ trước và dữ liệu buyer."
+  ]
+}

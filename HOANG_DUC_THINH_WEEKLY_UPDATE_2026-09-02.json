@@ -1,0 +1,5010 @@
+{
+  "generated_for": "Claude Code weekly app update",
+  "brand": "Hoàng Đức Thịnh",
+  "app_path": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/hoang-duc-thinh/index.html",
+  "reporting_period": {
+    "visitor_current": "27.08-02.09",
+    "visitor_previous": "16-22.08",
+    "generated_date": "2026-09-04"
+  },
+  "source_spreadsheets": {
+    "operations": "19WZKZlW2NOLJqdaNroG3rReagIWcqOCDpgXO9edqhJs",
+    "visitor": "1qDXhvdMg0Eip8djGJPOUPhNHhPUbRpElsCJ2ZOiRv4I",
+    "onetalk": "11-5KohzSJJWioLGKR8KU0W_cu-mcEQ12smLOEVJ72F8"
+  },
+  "operations": {
+    "history": [
+      {
+        "week": "23-08-2026 đến 29-08-2026",
+        "metrics": {
+          "Số sao": "2",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "233",
+          "Tổng số thư hỏi hàng": "8",
+          "Tổng số thư hỏi hàng đã trả lời": "8",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,68h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "89.29%",
+          "Số lượng Super Product (win)": "1",
+          "Số lượng Top Product (tiềm năng)": "16"
+        }
+      },
+      {
+        "week": "09-08-2026 đến 15-08-2026",
+        "metrics": {
+          "Số sao": "2",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "252",
+          "Tổng số thư hỏi hàng": "10",
+          "Tổng số thư hỏi hàng đã trả lời": "10",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "5h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "80.00%",
+          "Số lượng Super Product (win)": "1",
+          "Số lượng Top Product (tiềm năng)": "17"
+        }
+      },
+      {
+        "week": "02-08-2026 đến 08-08-2026",
+        "metrics": {
+          "Số sao": "2",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "272",
+          "Tổng số thư hỏi hàng": "8",
+          "Tổng số thư hỏi hàng đã trả lời": "8",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "4,42h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "82.35%",
+          "Số lượng Super Product (win)": "1",
+          "Số lượng Top Product (tiềm năng)": "17"
+        }
+      },
+      {
+        "week": "26-07-2026 đến 01-08-2026",
+        "metrics": {
+          "Số sao": "2",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "195",
+          "Tổng số thư hỏi hàng": "12",
+          "Tổng số thư hỏi hàng đã trả lời": "12",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "3,13h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "87.50%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "17"
+        }
+      },
+      {
+        "week": "19-07-2026 đến 25-07-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "133",
+          "Tổng số thư hỏi hàng": "12",
+          "Tổng số thư hỏi hàng đã trả lời": "12",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,18h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "91.30%",
+          "Số lượng Super Product (win)": "1",
+          "Số lượng Top Product (tiềm năng)": "16"
+        }
+      },
+      {
+        "week": "12-07-2026 đến 18-07-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "187",
+          "Tổng số thư hỏi hàng": "8",
+          "Tổng số thư hỏi hàng đã trả lời": "8",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "92.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "16"
+        }
+      },
+      {
+        "week": "05-07-2026 đến 11-07-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "596",
+          "Tổng số sản phẩm mới đã đăng": "-3",
+          "Tổng số người ghé thăm": "296",
+          "Tổng số thư hỏi hàng": "16",
+          "Tổng số thư hỏi hàng đã trả lời": "14",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,86h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "92.59%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "15"
+        }
+      },
+      {
+        "week": "21-06-2026 đến 27-06-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "599",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "604",
+          "Tổng số thư hỏi hàng": "20",
+          "Tổng số thư hỏi hàng đã trả lời": "20",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,27h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "91.11%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "13"
+        }
+      },
+      {
+        "week": "14-06-2026 đến 20-06-2026",
+        "metrics": {
+          "Số sao": "2",
+          "Tổng số sản phẩm": "599",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "464",
+          "Tổng số thư hỏi hàng": "10",
+          "Tổng số thư hỏi hàng đã trả lời": "6",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,58h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "94%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "9"
+        }
+      },
+      {
+        "week": "30-05-2026 đến 06-06-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "600",
+          "Tổng số sản phẩm mới đã đăng": "100",
+          "Tổng số người ghé thăm": "411",
+          "Tổng số thư hỏi hàng": "7",
+          "Tổng số thư hỏi hàng đã trả lời": "6",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0,12h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "3"
+        }
+      },
+      {
+        "week": "17-05-2026 đến 23-05-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "500",
+          "Tổng số sản phẩm mới đã đăng": "385",
+          "Tổng số người ghé thăm": "96",
+          "Tổng số thư hỏi hàng": "6",
+          "Tổng số thư hỏi hàng đã trả lời": "6",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "7,15h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "71.43%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "26-4-2026 đến 2-05-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "115",
+          "Tổng số sản phẩm mới đã đăng": "14",
+          "Tổng số người ghé thăm": "51",
+          "Tổng số thư hỏi hàng": "6",
+          "Tổng số thư hỏi hàng đã trả lời": "5",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "8,25h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "67%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "19-4-2026 đến 25-04-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "101",
+          "Tổng số sản phẩm mới đã đăng": "101",
+          "Tổng số người ghé thăm": "159",
+          "Tổng số thư hỏi hàng": "2",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0,01h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      }
+    ],
+    "raw": [
+      [
+        "Khung thời gian hoạt động",
+        "Tuần ",
+        "23-08-2026 đến 29-08-2026",
+        "09-08-2026 đến 15-08-2026",
+        "02-08-2026 đến 08-08-2026",
+        "26-07-2026 đến 01-08-2026",
+        "19-07-2026 đến 25-07-2026",
+        "12-07-2026 đến 18-07-2026",
+        "05-07-2026 đến 11-07-2026",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026",
+        "30-05-2026 đến 06-06-2026",
+        "17-05-2026 đến 23-05-2026",
+        "26-4-2026 đến 2-05-2026",
+        "19-4-2026 đến 25-04-2026"
+      ],
+      [
+        null,
+        "Số sao",
+        "2",
+        "2",
+        "2",
+        "2",
+        "3",
+        "3",
+        "3",
+        "3",
+        "2",
+        "1",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm",
+        "596",
+        "596",
+        "596",
+        "596",
+        "596",
+        "596",
+        "596",
+        "599",
+        "599",
+        "600",
+        "500",
+        "115",
+        "101"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm mới đã đăng",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "-3",
+        "0",
+        "0",
+        "100",
+        "385",
+        "14",
+        "101"
+      ],
+      [
+        null,
+        "Tổng số người ghé thăm",
+        "233",
+        "252",
+        "272",
+        "195",
+        "133",
+        "187",
+        "296",
+        "604",
+        "464",
+        "411",
+        "96",
+        "51",
+        "159"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng",
+        "8",
+        "10",
+        "8",
+        "12",
+        "12",
+        "8",
+        "16",
+        "20",
+        "10",
+        "7",
+        "6",
+        "6",
+        "2"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng đã trả lời",
+        "8",
+        "10",
+        "8",
+        "12",
+        "12",
+        "8",
+        "14",
+        "20",
+        "6",
+        "6",
+        "6",
+        "5",
+        "1"
+      ],
+      [
+        null,
+        "Tổng số lượt đã báo giá RFQ",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượt báo giá RFQ còn lại",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20"
+      ],
+      [
+        null,
+        "Thời gian phản hồi tin nhắn trung bình",
+        "2,68h",
+        "5h",
+        "4,42h",
+        "3,13h",
+        "2,18h",
+        "2h",
+        "1,86h",
+        "2,27h",
+        "1,58h",
+        "0,12h",
+        "7,15h",
+        "8,25h",
+        "0,01h"
+      ],
+      [
+        null,
+        "Tỉ lệ tin nhắn được phản hồi trong 24h",
+        "89.29%",
+        "80.00%",
+        "82.35%",
+        "87.50%",
+        "91.30%",
+        "92.00%",
+        "92.59%",
+        "91.11%",
+        "94%",
+        "100%",
+        "71.43%",
+        "67%",
+        "100%"
+      ],
+      [
+        null,
+        "Số lượng Super Product (win)",
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượng Top Product (tiềm năng)",
+        "16",
+        "17",
+        "17",
+        "17",
+        "16",
+        "16",
+        "15",
+        "13",
+        "9",
+        "3",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Kế hoạch hành động cho tuần tiếp theo",
+        "Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm high demand mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm high demand mỗi ngày",
+        "Đăng thêm sản phẩm để đạt 1000 sản phẩm để đạt 5 sao",
+        "Tuần sau đội thiết kế sẽ hoàn thành đủ 600 sản phẩm",
+        "Hết tháng đội thiết kế sẽ đăng hết đủ 600 sản phẩm, dí liên tục",
+        "Qua lễ sẽ cập nhật tiếp tục 100 sản phẩm"
+      ],
+      [
+        null,
+        "Tối ưu hoá các chỉ số",
+        "Khôi phục traffic; đăng sản phẩm mới và RTS; xử lý sản phẩm gây hiểu nhầm; sử dụng RFQ; cải thiện Service và tạo đơn Trade Assurance",
+        "Cải thiện phản hồi khách hàng; báo RFQ; phát triển sản phẩm RTS; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Phát triển sản phẩm RTS; báo RFQ; tối ưu sản phẩm và cải thiện tỷ lệ chuyển đổi",
+        "Phát triển sản phẩm RTS; báo RFQ; tối ưu sản phẩm và cải thiện tỷ lệ chuyển đổi",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Phát triển sản phẩm RTS; Báo RFQ; Tối ưu sản phẩm và tăng tỉ lệ chuyển đổi",
+        "Báo RFQ; Phát triển sản phẩm RTS; Tối ưu sản phẩm và cải thiện tỉ lệ chuyển đổi",
+        "Báo RFQ thường xuyên",
+        "Báo RFQ thường xuyên",
+        "Báo RFQ thường xuyên",
+        "Báo RFQ thường xuyên",
+        "Báo RFQ thường xuyên",
+        "Báo hết RFQ trong tháng này"
+      ],
+      [
+        null,
+        null,
+        "Impression và lượt truy cập đang giảm; chưa đăng sản phẩm mới, chưa có sản phẩm RTS; có 1 sản phẩm gây hiểu nhầm; RFQ và tài khoản phụ chưa được sử dụng; chưa có đơn Trade Assurance và Service là điểm nghẽn",
+        "Service đang giới hạn gian hàng ở 2 sao: chỉ có 14 người mua phản hồi và tỷ lệ phản hồi 80%; chưa có GMV Trade Assurance; chưa sử dụng quyền lợi RFQ; có 1 sản phẩm gặp vấn đề; cần tăng traffic và cải thiện chuyển đổi",
+        "Service 2 sao đang ngăn gian hàng đạt 3 sao và cần thêm 1 người mua phản hồi lần hai; chưa có đơn Trade Assurance và chuyển đổi thanh toán; traffic giảm và chưa sử dụng RFQ; chưa có sản phẩm RTS; có 1 sản phẩm gây hiểu nhầm",
+        "Service 2 sao đang ngăn gian hàng đạt 3 sao và cần thêm 1 người mua phản hồi lần hai; chưa có đơn Trade Assurance và chuyển đổi thanh toán; traffic giảm và chưa sử dụng RFQ; chưa có sản phẩm RTS; có 1 sản phẩm gây hiểu nhầm",
+        "Chưa có đơn Trade Assurance và GMV, tỉ lệ chuyển đổi đơn hàng 0%; Cần tối ưu thêm 203 sản phẩm và tăng 14 người mua phản hồi lần hai để lên 4 sao; Chưa có sản phẩm RTS, traffic chưa chính xác; Chưa tận dụng RFQ, tài khoản phụ và điểm AI",
+        "Chưa có đơn Trade Assurance và GMV, tỉ lệ chuyển đổi đơn hàng 0%; Cần tối ưu thêm 203 sản phẩm và tăng 14 người mua phản hồi lần hai để lên 4 sao; Chưa có sản phẩm RTS, traffic chưa chính xác; Chưa tận dụng RFQ, tài khoản phụ và điểm AI",
+        "Cải thiện chuyển đổi đơn hàng và Trade Assurance; Tối ưu thêm 203 sản phẩm đạt PIS; Tăng 14 người mua phản hồi lần hai; Phát triển sản phẩm RTS; Sử dụng RFQ, tài khoản phụ và điểm AI",
+        "Thanh toán qua Alibaba",
+        "Thanh toán qua Alibaba"
+      ],
+      [
+        null,
+        null,
+        null,
+        "Phản hồi khách và báo giá nhanh chuẩn",
+        "Gian hàng có traffic rất tốt, nhưng lại ko trả lời bài bản, khách hàng bị AI trả lời khá nhiều",
+        "Số sao bị rớt ro không phản hồi người mua trong vòng 48h, cần trả lời khách hàng nhanh chóng hơn, không bỏ qua bất kỳ tin nhắn nào",
+        null,
+        null,
+        null,
+        "Kiểm tra tin nhắn thường xuyên và báo giá"
+      ],
+      [
+        null,
+        null,
+        null,
+        "Gian hàng tiếp tục rớt sao, cho không phản hồi khách",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Đã có số liệu về quảng cáo, sắp xếp 1 buổi hẹn online với đội quảng cáo để kiểm tra chỉ số"
+      ],
+      [],
+      [
+        "Đánh giá sơ bộ",
+        "Vấn đề ưu tiên xử lý",
+        null,
+        "Phản hồi khách và báo giá nhanh chuẩn",
+        "Số sao bị rớt ro không phản hồi người mua trong vòng 48h, cần trả lời khách hàng nhanh chóng hơn, không bỏ qua bất kỳ tin nhắn nào",
+        "Số sao bị rớt ro không phản hồi người mua trong vòng 48h, cần trả lời khách hàng nhanh chóng hơn, không bỏ qua bất kỳ tin nhắn nào",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Kiểm tra tin nhắn thường xuyên và báo giá",
+        "Đăng thêm các sản phẩm High Demand và Báo RFQ",
+        "Đăng thêm các sản phẩm High Demand và Báo RFQ",
+        "Báo RFQ thường xuyên",
+        "Báo RFQ thường xuyên",
+        "Báo hết RFQ trong tháng này"
+      ],
+      [
+        null,
+        "Báo cáo AI"
+      ]
+    ]
+  },
+  "visitor": {
+    "current_summary": {
+      "Số bản ghi khách truy cập": [
+        "156",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "60",
+        "L0",
+        "Người mua đã đăng ký",
+        "102"
+      ],
+      "Tổng PV trên gian hàng": [
+        "252",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "54"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "318",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "117",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "0"
+      ],
+      "Số buyer L1+": [
+        "54",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "16",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "previous_summary": {
+      "Số bản ghi khách truy cập": [
+        "177",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "58",
+        "L0",
+        "Người mua đã đăng ký",
+        "122"
+      ],
+      "Tổng PV trên gian hàng": [
+        "315",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "55"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "328",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "130",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "0"
+      ],
+      "Số buyer L1+": [
+        "55",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "18",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "current_countries": [
+      {
+        "Quốc gia / vùng": "Ả Rập Xê-út",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ai Cập",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Algeria",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Angola",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Argentina",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Aruba",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Azerbaijan",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ấn Độ",
+        "Số visitor": "3",
+        "Tổng PV": "3",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "8",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Ba Lan",
+        "Số visitor": "3",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "3",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Bahrain",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Bangladesh",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bỉ",
+        "Số visitor": "3",
+        "Tổng PV": "3",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bồ Đào Nha",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bờ Biển Ngà",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bulgaria",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Burkina Faso",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Cameroon",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "8",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Campuchia",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Canada",
+        "Số visitor": "4",
+        "Tổng PV": "20",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "0",
+        "L1": "4",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "4"
+      },
+      {
+        "Quốc gia / vùng": "Chile",
+        "Số visitor": "3",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "3",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Colombia",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Cộng hòa Congo",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Cộng hòa Dominica",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Croatia (local name: Hrvatska)",
+        "Số visitor": "2",
+        "Tổng PV": "9",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Đức",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Ethiopia",
+        "Số visitor": "2",
+        "Tổng PV": "5",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Georgia",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ghana",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Guinea",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Hoa Kỳ",
+        "Số visitor": "29",
+        "Tổng PV": "47",
+        "Visitor có keyword": "22",
+        "Bản ghi keyword chính xác": "64",
+        "L0": "19",
+        "L1": "10",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "10"
+      },
+      {
+        "Quốc gia / vùng": "Indonesia",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "5",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ireland",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Jamaica",
+        "Số visitor": "3",
+        "Tổng PV": "3",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "10",
+        "L0": "3",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Kazakhstan",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Kenya",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Madagascar",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Mali",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Mexico",
+        "Số visitor": "7",
+        "Tổng PV": "18",
+        "Visitor có keyword": "4",
+        "Bản ghi keyword chính xác": "11",
+        "L0": "6",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Mozambique",
+        "Số visitor": "3",
+        "Tổng PV": "13",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "12",
+        "L0": "1",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Nam Phi",
+        "Số visitor": "3",
+        "Tổng PV": "4",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "10",
+        "L0": "2",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "New Zealand",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Nicaragua",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Pakistan",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Panama",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Peru",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Pháp",
+        "Số visitor": "7",
+        "Tổng PV": "9",
+        "Visitor có keyword": "5",
+        "Bản ghi keyword chính xác": "13",
+        "L0": "4",
+        "L1": "3",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "3"
+      },
+      {
+        "Quốc gia / vùng": "Romania",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Singapore",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Tây Ban Nha",
+        "Số visitor": "5",
+        "Tổng PV": "6",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "4",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Thái Lan",
+        "Số visitor": "4",
+        "Tổng PV": "5",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "1",
+        "L1": "3",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "3"
+      },
+      {
+        "Quốc gia / vùng": "Thổ Nhĩ Kỳ",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Thụy Điển",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Trung Quốc",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "5",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Úc",
+        "Số visitor": "5",
+        "Tổng PV": "6",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "2",
+        "L1": "3",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "3"
+      },
+      {
+        "Quốc gia / vùng": "Venezuela",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Việt Nam",
+        "Số visitor": "4",
+        "Tổng PV": "5",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "4",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Vương quốc Anh",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Ý",
+        "Số visitor": "7",
+        "Tổng PV": "8",
+        "Visitor có keyword": "6",
+        "Bản ghi keyword chính xác": "17",
+        "L0": "7",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Zambia",
+        "Số visitor": "3",
+        "Tổng PV": "5",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "9",
+        "L0": "1",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      }
+    ],
+    "current_exact_keywords": [
+      {
+        "keyword_exact": "compressed sofa",
+        "occurrences": 3,
+        "pv": 19,
+        "levels": {
+          "L1": 3
+        },
+        "countries": {
+          "Canada": 1,
+          "Ghana": 1,
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "sapatilhas tendncia",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mozambique": 1
+        }
+      },
+      {
+        "keyword_exact": "sof actual",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mozambique": 1
+        }
+      },
+      {
+        "keyword_exact": "sofas modernos com tecido veludo",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mozambique": 1
+        }
+      },
+      {
+        "keyword_exact": "velvet sectional sofa",
+        "occurrences": 1,
+        "pv": 9,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mozambique": 1
+        }
+      },
+      {
+        "keyword_exact": "chairs for living room",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "cuatrimoto",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "cuatrimoto con cabina",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "mattresses",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "muebles de nadera",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "sofa set furniture living room",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "canap compress",
+        "occurrences": 4,
+        "pv": 4,
+        "levels": {
+          "L1": 4
+        },
+        "countries": {
+          "Cameroon": 2,
+          "Pháp": 2
+        }
+      },
+      {
+        "keyword_exact": "tv stands",
+        "occurrences": 3,
+        "pv": 4,
+        "levels": {
+          "L0": 3
+        },
+        "countries": {
+          "Kenya": 1,
+          "Nam Phi": 1,
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "14",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Algeria": 2
+        }
+      },
+      {
+        "keyword_exact": "3",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Algeria": 2
+        }
+      },
+      {
+        "keyword_exact": "caixa de ferramentas",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Mozambique": 2
+        }
+      },
+      {
+        "keyword_exact": "commercial refrigerator compressor",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Zambia": 2
+        }
+      },
+      {
+        "keyword_exact": "garrafeira de parede",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Mozambique": 2
+        }
+      },
+      {
+        "keyword_exact": "headboard for beds king size",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Zambia": 2
+        }
+      },
+      {
+        "keyword_exact": "moto",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Algeria": 2
+        }
+      },
+      {
+        "keyword_exact": "sofa comprimido",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Mozambique": 2
+        }
+      },
+      {
+        "keyword_exact": "sofa comprimido a vacuo",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Mozambique": 2
+        }
+      },
+      {
+        "keyword_exact": "bordadora",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "car air freshener",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "cnc wood and alluminum",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "liquid silver wrap",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "wrap car vinyl",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "x ray machine",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "bean bag chair",
+        "occurrences": 3,
+        "pv": 3,
+        "levels": {
+          "L0": 3
+        },
+        "countries": {
+          "Hoa Kỳ": 2,
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "u shape sofa cover",
+        "occurrences": 3,
+        "pv": 3,
+        "levels": {
+          "L0": 3
+        },
+        "countries": {
+          "Jamaica": 2,
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "bed",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Thụy Điển": 1,
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword_exact": "sofa",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Trung Quốc": 1,
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "szafka nocna",
+        "occurrences": 2,
+        "pv": 3,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Ba Lan": 2
+        }
+      },
+      {
+        "keyword_exact": "bed side table",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "capellini furniture",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Romania": 1
+        }
+      },
+      {
+        "keyword_exact": "fufu machine",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "lshaped sectional sofa",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Croatia (local name: Hrvatska)": 1
+        }
+      },
+      {
+        "keyword_exact": "relax chair",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bulgaria": 1
+        }
+      },
+      {
+        "keyword_exact": "webster clothing garment",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "womens intimates",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Croatia (local name: Hrvatska)": 1
+        }
+      },
+      {
+        "keyword_exact": "bar accessories commercial",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Jamaica": 2
+        }
+      },
+      {
+        "keyword_exact": "bedroom drawers",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "bedroom sets",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 1,
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1,
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "brass kitchen faucet",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "copre divano",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Ý": 2
+        }
+      },
+      {
+        "keyword_exact": "copre divano a forma di  u",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Ý": 2
+        }
+      },
+      {
+        "keyword_exact": "flat press machine",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Thái Lan": 2
+        }
+      },
+      {
+        "keyword_exact": "furniture",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "furniture recliner",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "hidden stove",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Thái Lan": 2
+        }
+      },
+      {
+        "keyword_exact": "inkjet",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Thái Lan": 2
+        }
+      },
+      {
+        "keyword_exact": "lave linge semi automatique 20 kg",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Cameroon": 2
+        }
+      },
+      {
+        "keyword_exact": "lighting fixture",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "modern sectional sofa",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Panama": 1,
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "rooftop transparent swimming pool",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Jamaica": 2
+        }
+      },
+      {
+        "keyword_exact": "texas",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "tlphones mobiles doccasion",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Cameroon": 2
+        }
+      },
+      {
+        "keyword_exact": "university notre dame",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "university of notre dame",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "zoyer machine broderie",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Cameroon": 2
+        }
+      },
+      {
+        "keyword_exact": "3d打印灯丝",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "baby clothes wholesale",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "baby onsies organic cotton",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "bedding set cotton",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "bedroom furniture",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "bench seat pool cover",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "bimico",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword_exact": "bubble big sofa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Đức": 1
+        }
+      },
+      {
+        "keyword_exact": "bubble komprimierte ecksofa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Đức": 1
+        }
+      },
+      {
+        "keyword_exact": "butterfly necklace",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "compressed sofa set",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "crain",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "dormitory storage box",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "headboard for beds",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "hilton pillow",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "isla de cocina",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "leather recliner sofa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "liquid filling machine",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Georgia": 1
+        }
+      },
+      {
+        "keyword_exact": "living room cabinets",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "living room curtains set",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "living room sets",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "machine",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Georgia": 1
+        }
+      },
+      {
+        "keyword_exact": "matelas gonflable",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "mobile specchio bagno",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "mobile spechhio bagno",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "mobile tv soggiorno",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "modern pendant light",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "murphy wall bed",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Thụy Điển": 1
+        }
+      },
+      {
+        "keyword_exact": "organic egyptian cotton hand towels",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "patas para mesas acero inoxidable",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "proyector jmgo",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "rear bumper",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "smart bed king size",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Thụy Điển": 1
+        }
+      },
+      {
+        "keyword_exact": "sof de compresin",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Peru": 1
+        }
+      },
+      {
+        "keyword_exact": "specchio contenitore  bagno",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "techfabric sofa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "vending machine with robotic arm",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Georgia": 1
+        }
+      },
+      {
+        "keyword_exact": "wine glasses x 2 packaged",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "2024 prius front bumper",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "a removable kitchen allen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "adjustable height dining table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "adjustable height dining table mechanism",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "aluminum profiles",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "animal run cage",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Aruba": 1
+        }
+      },
+      {
+        "keyword_exact": "appliances for home",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword_exact": "applicateur huile  vitres voiture",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "armoir",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Madagascar": 1
+        }
+      },
+      {
+        "keyword_exact": "armoir et ceintre",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Madagascar": 1
+        }
+      },
+      {
+        "keyword_exact": "armrios de cozinha",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "bascule dor 500 g",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Burkina Faso": 1
+        }
+      },
+      {
+        "keyword_exact": "base cabecera de cama",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "bathroom light fixture over the mirror",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "bean bag sofas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "bedding set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ireland": 1
+        }
+      },
+      {
+        "keyword_exact": "bedroom furniture set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword_exact": "bests",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "bicycle titanium parts",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "bloc moteur hilux",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "bloc moteur hilux d4d diesel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "boatneckdresspatterns",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "books",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword_exact": "bucket seats for car old style",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "cabecera cama queen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "cadeira odontolgica mvel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword_exact": "camas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Chile": 1
+        }
+      },
+      {
+        "keyword_exact": "camera de surveillance",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "camra de surveillance a distance",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "camra de surveillance moins cher mais bonne qualit",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "canap",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "canap dangle compress",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "canap modulable",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "canape compress",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "canape meuble",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "capa de sof u",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword_exact": "casquette",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "cassettiera camera da letto",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "ceintre pour habits",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "colchones de espuma memory",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "comedor 4 sillas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "comforters",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword_exact": "comodino camera da letto",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "complete solar system",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword_exact": "console table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "contact lenses",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "contact lenses wholesale",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "cucina angolare piccola",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "custom gift set pen book and water bottle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "des lits",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword_exact": "desk",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "dildo",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bồ Đào Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "dillon sectional",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "dining table set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "display case",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "diwali lights wholesale",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "dog crate covers",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "dressing",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "dune sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "ensembles pour femmes",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "eyebrow lamination kit",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "fencing",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "forceps de extrao dentria por pcs",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Angola": 1
+        }
+      },
+      {
+        "keyword_exact": "furniture bedroom sets",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Azerbaijan": 1
+        }
+      },
+      {
+        "keyword_exact": "fushan kusimi furniture press sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "garage shelves",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Singapore": 1
+        }
+      },
+      {
+        "keyword_exact": "garden furniture covers waterproof",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword_exact": "generic 20w splittype",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Georgia": 1
+        }
+      },
+      {
+        "keyword_exact": "guida porta legno",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "headboard for king bed",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "headboards for beds",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "high back microfiber living room set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "home decor new product",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "isola cucina",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "isola vetro",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "jeux denfants voiture lectriques",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Burkina Faso": 1
+        }
+      },
+      {
+        "keyword_exact": "juguete economico",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "juguetes de cocina",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "kasur queen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "kidsdresswithbow",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "king size bed",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "kitchen island",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "kitchen island table with storage",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "kitchen islands",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bahrain": 1
+        }
+      },
+      {
+        "keyword_exact": "kitchen mats for floor",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "kitchen storage",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bahrain": 1
+        }
+      },
+      {
+        "keyword_exact": "laminate flooring",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Azerbaijan": 1
+        }
+      },
+      {
+        "keyword_exact": "large duffle bag",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword_exact": "linen",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "linen ottoman",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword_exact": "lit",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "lit enfant superpos",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Burkina Faso": 1
+        }
+      },
+      {
+        "keyword_exact": "living room sofas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "luxury duffle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword_exact": "luxury sectional sofa set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "make up complet",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Madagascar": 1
+        }
+      },
+      {
+        "keyword_exact": "marble dining table",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "mercedes benz",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "meuble armoire lit",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword_exact": "meuble chanvre consoler",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword_exact": "meuble de chambre",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Guinea": 1
+        }
+      },
+      {
+        "keyword_exact": "meuble salle  manger complet",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "microfiber livingroom set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "ming g",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Việt Nam": 1
+        }
+      },
+      {
+        "keyword_exact": "modern bedroom",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "modern wardrobe",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "moldes de hormign",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "moldes para pavimento",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "motorcycle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "moule pour bordure de route",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Cộng hòa Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "movable toilet house",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "movable urinal booth",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "mquinas de caf self service",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bồ Đào Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "mquinas de caf self service com moedeiros",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bồ Đào Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "mueble de televisin moderno",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "muebles comprimidos cuero",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "ottoman",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "outdoor covers for rattan furniture",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "outdoor furniture cover",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "panel cerca",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "pants set for women",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "parket",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Azerbaijan": 1
+        }
+      },
+      {
+        "keyword_exact": "party rentals",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "perfume bracelet spray wrist for men",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "polaris ranger doors",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "poltrone salotto gonfiabili",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "porte entre",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "pvc ceiling panel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ghana": 1
+        }
+      },
+      {
+        "keyword_exact": "queen bed frame",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "queen bedroom set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword_exact": "rak wall",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "recliner sofa set",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Jamaica": 1
+        }
+      },
+      {
+        "keyword_exact": "research peptides kit",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Georgia": 1
+        }
+      },
+      {
+        "keyword_exact": "respaldo de camas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Chile": 1
+        }
+      },
+      {
+        "keyword_exact": "roc cabinetry",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "round garden furniture covers waterproof",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword_exact": "sac de couchage camping",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Madagascar": 1
+        }
+      },
+      {
+        "keyword_exact": "scooter",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "sectional cloud sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "sectional sofa",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "sedie da pranzo",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "sedie da soggiorno",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "shanghaizhejiang biotech &amp; chemical co ltd",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Georgia": 1
+        }
+      },
+      {
+        "keyword_exact": "sillas de comedor modernas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword_exact": "sillas para comedor modernas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Nicaragua": 1
+        }
+      },
+      {
+        "keyword_exact": "sof comprimido",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "sofa chair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "sofa compresion al vacio",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Panama": 1
+        }
+      },
+      {
+        "keyword_exact": "sofa cover u shape 6 seater",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "sofas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Tây Ban Nha": 1
+        }
+      },
+      {
+        "keyword_exact": "sofas comprimidos envasado al vacio",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Panama": 1
+        }
+      },
+      {
+        "keyword_exact": "sponge upholstery foam",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bỉ": 1
+        }
+      },
+      {
+        "keyword_exact": "storage ottoman beige",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Vương quốc Anh": 1
+        }
+      },
+      {
+        "keyword_exact": "table metallique",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "tasche",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "taschengurt",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "tiles",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bahrain": 1
+        }
+      },
+      {
+        "keyword_exact": "toilet aluminum cabinet",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "top 10 furniture",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "umbrella wholesale cheap",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "umbrella wholesale hotel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "ustensiles de cuisine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "utv accessories",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "valentino",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "vanity maquillaje",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mexico": 1
+        }
+      },
+      {
+        "keyword_exact": "velvet bedding",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "New Zealand": 1
+        }
+      },
+      {
+        "keyword_exact": "vetements femme",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pháp": 1
+        }
+      },
+      {
+        "keyword_exact": "vetro doccia 140",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ý": 1
+        }
+      },
+      {
+        "keyword_exact": "vietnamese raw hair",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Nam Phi": 1
+        }
+      },
+      {
+        "keyword_exact": "waterproof tactical binocular",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "wedding cups",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Aruba": 1
+        }
+      },
+      {
+        "keyword_exact": "wheels black cadillac xt5",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "wood flooring",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "wooden grocery shelves",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "塑料框",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword_exact": "梳子",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword_exact": "棉签",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      }
+    ]
+  },
+  "onetalk": {
+    "overview": [
+      {
+        "Hạng mục": "03/09/2026 - cập nhật tuần mới",
+        "Số lượng": "18 buyer rà soát trên OneTalk",
+        "Ghi chú vận hành": "6 khách ưu tiên; 6 cần theo dõi; 5 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "29/08/2026 - 03/09/2026",
+        "Ghi chú vận hành": "Tập trung khách hỏi sofa/sectional/bedroom set, packing size, CBM, vận chuyển và MOQ."
+      },
+      {
+        "Hạng mục": "Trọng tâm tuần này",
+        "Số lượng": "Sofa/sectional + đơn nội thất số lượng nhỏ đến vừa",
+        "Ghi chú vận hành": "Nhiều khách hỏi 1 set/4 pieces; cần phân loại mẫu lẻ với khách có thể lên MOQ 20 sets."
+      },
+      {
+        "Hạng mục": "Rủi ro chính",
+        "Số lượng": "MOQ cao + phí ship + kéo email ngoài",
+        "Ghi chú vận hành": "Cần giữ buyer trên Alibaba, báo rõ MOQ 20 sets; nếu khách nhỏ thì chuyển sang sample/RTS nếu có."
+      },
+      {
+        "Hạng mục": "25/08/2026 - cập nhật tuần mới",
+        "Số lượng": "10 lead đã lọc",
+        "Ghi chú vận hành": "4 khách ưu tiên; 4 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "Tuần 25/08/2026",
+        "Ghi chú vận hành": "Tập trung buyer có phản hồi thật, có nhu cầu sản phẩm/custom/ship rõ."
+      },
+      {
+        "Hạng mục": "Khách ưu tiên",
+        "Số lượng": "4",
+        "Ghi chú vận hành": "Shonedricka Kirven, William FitzGerald, Kyle CalgaryCustomPits, James Scott."
+      },
+      {
+        "Hạng mục": "Khách cần theo dõi / ít phản hồi",
+        "Số lượng": "6",
+        "Ghi chú vận hành": "4 lead cần khai thác thêm + 2 lead yếu/rủi ro."
+      },
+      {
+        "Hạng mục": "Khoảng thời gian đã rà soát",
+        "Số lượng": "12/08-17/08/2026",
+        "Ghi chú vận hành": "Đã mở sâu các hội thoại chính của tài khoản danchoihaynho2@gmail.com, gồm Laura, Shonedricka, Mato, Nico, Ana, James, Kyle và Yu."
+      },
+      {
+        "Hạng mục": "Khách có phản hồi thật, nên ưu tiên xử lý",
+        "Số lượng": "7",
+        "Ghi chú vận hành": "Chỉ tính khách có tin nhắn buyer rõ ràng về sản phẩm, số lượng, địa chỉ, yêu cầu kỹ thuật hoặc cách mua."
+      },
+      {
+        "Hạng mục": "Khách cần theo dõi nhẹ",
+        "Số lượng": "6",
+        "Ghi chú vận hành": "Có tín hiệu sản phẩm/visitor nhưng thiếu phản hồi buyer sâu hoặc thiếu thông tin chốt báo giá."
+      },
+      {
+        "Hạng mục": "Khách ít phản hồi/không ưu tiên",
+        "Số lượng": "5",
+        "Ghi chú vận hành": "Chỉ có translation tip, visitor, chào hỏi, AI tự trả hoặc không phải buyer mua hàng."
+      },
+      {
+        "Hạng mục": "Vấn đề nổi bật",
+        "Số lượng": "Thiếu báo giá nhanh, thiếu màu/MOQ/ship rõ",
+        "Ghi chú vận hành": "Lead tốt bị vướng màu đỏ, chống cháy, phí ship door delivery, custom size và xác nhận model."
+      },
+      {
+        "Hạng mục": "Hành động ưu tiên",
+        "Số lượng": "Báo giá + xác nhận điều kiện chốt",
+        "Ghi chú vận hành": "Với lead đã có số lượng/địa chỉ: báo giá, phí ship, thời gian giao. Với lead custom: tóm tắt spec và xin bản vẽ/số lượng."
+      },
+      {
+        "Hạng mục": "Lưu ý dữ liệu",
+        "Số lượng": "Không lấy spam",
+        "Ghi chú vận hành": "Các dòng trong nhóm ưu tiên đều có buyer phản hồi thật; khách chỉ có tin nhắn từ hệ thống/seller đã hạ nhóm."
+      }
+    ],
+    "priority_buyers": [
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Christian Ortiz",
+        "Quốc gia / tín hiệu": "Mexico / Cancun CP 77505",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Contemporary sectional sofa, hỏi shipping tới Cancun; quantity đang để 1 nhưng có thể cần bulk",
+        "Số lượng": "1 set / cần xác nhận bulk",
+        "Nội dung đã đọc trong tin nhắn": "Buyer có địa chỉ khu vực rõ và đang hỏi logistics; seller đã hỏi phương thức vận chuyển/bao bì",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Xác nhận 1 set hay bulk, báo MOQ, hỏi đóng gói và gửi freight option tới Cancun"
+      },
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Eric Danso",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Furniture/sofa inquiry; seller báo MOQ 20 sets, customization/packaging/logo MOQ 50 sets",
+        "Số lượng": "20 sets hoặc 50 sets nếu custom",
+        "Nội dung đã đọc trong tin nhắn": "Buyer đang ở bước xác nhận MOQ, có khả năng đơn wholesale nếu chấp nhận số lượng",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi buyer có chấp nhận 20 sets không; nếu cần logo/custom thì báo MOQ 50 sets và gửi price tier"
+      },
+      {
+        "Ngày": "2026-08-29",
+        "Khách hàng": "Diana Wanzek",
+        "Quốc gia / tín hiệu": "Đức / tiếng Đức",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Sofa L-Shape/Straight, size 200x80x85 cm, màu Grey/Beige/Blue, MOQ 20 sets",
+        "Số lượng": "MOQ 20 sets",
+        "Nội dung đã đọc trong tin nhắn": "Buyer trao đổi bằng tiếng Đức, nhu cầu sản phẩm rõ, cần chọn kiểu L-shape hay Straight",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Trả lời tiếng Đức, hỏi chọn L-Shape hay Straight, màu, quantity và địa chỉ giao EU"
+      },
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "phillip mukenge",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi packing size/carton dimensions để tính CBM",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer quan tâm logistics/CBM, tín hiệu nghiêm túc cho vận chuyển container",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi packing size/carton dimensions, CBM theo 1 set và theo container; hỏi quantity final"
+      },
+      {
+        "Ngày": "2026-08-25",
+        "Khách hàng": "JUNAID WARIS",
+        "Quốc gia / tín hiệu": "Pakistan / Karachi",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "RFQ yêu cầu thông tin/spec/availability/pricing, delivery tới Jinnah International Airport Karachi",
+        "Số lượng": "1500 pieces",
+        "Nội dung đã đọc trong tin nhắn": "Số lượng lớn nhưng có dấu hiệu yêu cầu gửi quotation qua email ngoài; vẫn là inquiry có thông tin cụ thể",
+        "Mức ưu tiên": "Cao nhưng rủi ro",
+        "Đề xuất nhắn tiếp theo": "Trả lời trong Alibaba, gửi quotation/spec, hỏi xác nhận sản phẩm cụ thể; không chuyển toàn bộ giao dịch ra email"
+      },
+      {
+        "Ngày": "2026-08-25",
+        "Khách hàng": "Chris Sizemore",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Bedroom set direction: nightstand, dresser, maybe lounge chair in similar style",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer có concept mua combo phòng ngủ, cần lên danh sách sản phẩm và phong cách",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi bộ gợi ý nightstand/dresser/lounge chair, hỏi số lượng từng món, chất liệu, ngân sách và địa chỉ ship"
+      },
+      {
+        "Ngày": "2026-08-20",
+        "Khách hàng": "shonedricka Kirven",
+        "Quốc gia / tín hiệu": "United States - Raleigh, NC",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Có báo giá sản phẩm, đang chờ freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610",
+        "Số lượng": "Chưa rõ, có total hàng USD 176.00",
+        "Nội dung đã đọc trong tin nhắn": "Khách hỏi/đợi giá vận chuyển, có địa chỉ cụ thể; đang thiếu freight charge để chốt tổng",
+        "Mức ưu tiên": "Lead nóng - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Chốt freight door delivery ngay, gửi total landed cost và nhắc đặt qua Alibaba"
+      },
+      {
+        "Ngày": "2026-08-21",
+        "Khách hàng": "William FitzGerald",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Grill cover, hỏi thêm requirement; có thông tin PFAS compliance US market, OEM/ODM, custom size/color, lead time 15-25 days",
+        "Số lượng": "Chưa nêu",
+        "Nội dung đã đọc trong tin nhắn": "Tag Potential, nhu cầu đúng sản phẩm cover, cần spec/size/quantity",
+        "Mức ưu tiên": "Lead tốt - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi kích thước, chất liệu, số lượng, thị trường; nhắc PFAS compliance nếu bán US"
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Kyle CalgaryCustomPits",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Khách mô tả base model custom rất cụ thể: 34 inch hexagon x 15 inch tall, bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inches wide every other side",
+        "Số lượng": "Custom size, chưa nêu qty",
+        "Nội dung đã đọc trong tin nhắn": "Nhu cầu custom rất rõ, nên follow kỹ bản vẽ/kích thước",
+        "Mức ưu tiên": "Lead tốt - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Yêu cầu bản vẽ/ảnh mẫu, vật liệu, số lượng, mục đích dùng; xác nhận có thể custom"
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "James Scott",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Khách có nhu cầu 40-70 pcs trong 4 tuần, seller hỏi product/model nào",
+        "Số lượng": "40-70 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Có quantity và deadline rõ nhưng thiếu model",
+        "Mức ưu tiên": "Lead tốt - cần làm rõ",
+        "Đề xuất nhắn tiếp theo": "Hỏi sản phẩm/model, địa chỉ giao, xác nhận 4 tuần có kịp không"
+      },
+      {
+        "Ngày": "2026-08-15",
+        "Khách hàng": "Laura Cosentino",
+        "Quốc gia / tín hiệu": "Italy / tiếng Ý",
+        "Level": "Chưa thấy",
+        "Sản phẩm / nhu cầu hỏi": "Sofa chair MD05, hỏi có chống cháy không, có màu đỏ không và phí vận chuyển tới Italy.",
+        "Số lượng": "30+ chiếc",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi 13048 Santhia, sau đó chốt địa chỉ Via Matteotti 129G, CAP 13094 Gaglianico Biella. Buyer cần màu đỏ nhưng hiện chỉ có Yellow/Green/Grey; cũng hỏi sản phẩm có ignifughe/chống cháy không.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Trả lời tiếng Ý: xác nhận hiện chưa có đỏ/chống cháy nếu đúng vậy; đề xuất màu thay thế hoặc hỏi có nhận đặt riêng màu đỏ không, báo cước Italy theo 30 chiếc và thời gian giao."
+      },
+      {
+        "Ngày": "2026-08-13",
+        "Khách hàng": "shonedricka Kirven",
+        "Quốc gia / tín hiệu": "USA / Raleigh, North Carolina",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Ghế ăn Contemporary Velvet Upholstered Dining Chair MD07; buyer muốn báo giá và phí ship.",
+        "Số lượng": "2 chiếc",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi quote + shipping price cho dining table/chair, cung cấp ZIP 27610, Raleigh North Carolina, chọn phương án rẻ nhất, xác nhận sea freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Báo ngay giá 2 chiếc, phí sea freight door delivery, thời gian dự kiến, điều kiện thuế/phụ phí. Hỏi lại màu/chất liệu để tạo đơn Alibaba."
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Kyle CalgaryCustomPits",
+        "Quốc gia / tín hiệu": "Canada / Calgary theo tên buyer",
+        "Level": "Có level tag / Potential",
+        "Sản phẩm / nhu cầu hỏi": "Custom outdoor covers cho nhiều mẫu firepit: chống nước, chống UV, màu đen, vật liệu dày.",
+        "Số lượng": "Custom, chưa chốt số lượng",
+        "Nội dung đã đọc trong tin nhắn": "Buyer cần cover cho Basic firepits, half lid, 2 half lids, full lids, thêm footrest, size 34/40 inch. Sau đó buyer gửi spec: base model 34 inch hexagon x 15 inch; bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inch wide every other side.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Tóm tắt spec thành bảng kỹ thuật, xin ảnh/bản vẽ từng model, hỏi số lượng mỗi size, xác nhận chất liệu/độ dày/màu đen rồi hẹn báo giá sau khi kỹ thuật kiểm."
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Ana Malila zau",
+        "Quốc gia / tín hiệu": "Canada",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Modern solid wood bed headboard MD02, Queen size, màu OFFWHITE.",
+        "Số lượng": "1 chiếc",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi Queen, hỏi Price, nói 'I m in Canada', sau đó 'Just one piece'. Order progress thiếu unit price và shipping address; hệ thống gợi ý giá USD 699.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi giá Queen USD 699 nếu đúng, hỏi địa chỉ nhận hàng tại Canada để tính ship, gửi ảnh thực tế/kích thước 29.5 H x 67.4 W x 88.9 L."
+      },
+      {
+        "Ngày": "2026-08-13",
+        "Khách hàng": "Nicoetjulie Boguslawski",
+        "Quốc gia / tín hiệu": "Pháp / tiếng Pháp",
+        "Level": "Chưa thấy",
+        "Sản phẩm / nhu cầu hỏi": "Sectional sofa MD22, size 200x80x85 cm, màu Grey/Beige/Blue; buyer hỏi cách mua.",
+        "Số lượng": "MOQ 20, buyer chưa chốt qty",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi bằng tiếng Pháp 'Comment acheté ce produit'. Sản phẩm hiện giá 194-224 USD, MOQ 20. Seller/AI đã hướng dẫn chọn số lượng và màu để đặt trên Alibaba.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Nhắn tiếng Pháp thật ngắn: xác nhận MOQ 20, giá theo bậc, hỏi màu Grey/Beige/Blue và số lượng, sau đó tạo order trực tiếp trên Alibaba."
+      },
+      {
+        "Ngày": "2026-08-13",
+        "Khách hàng": "Mato Mihalic",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Closed Foaming Lightweight Waterproof Air Mattress Outdoor MD04 Camping.",
+        "Số lượng": "MOQ 50, chưa có qty buyer",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi product card; seller/AI trả lời về waterproof camping mattress cover. Sản phẩm giá 16-19 USD, MOQ 50, OEM brand available; còn thiếu số lượng và unit price trong order progress.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Gửi thông số 190x60x5 cm, giá 19 USD cho 50-99 pcs và 16 USD cho 100+ nếu đúng; hỏi buyer cần bao nhiêu, có cần logo/bao bì riêng không."
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "James Scott",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy",
+        "Sản phẩm / nhu cầu hỏi": "Buyer muốn mua một lô hàng, cần 40-70 items, giao trong khoảng 4 tuần.",
+        "Số lượng": "40-70 chiếc",
+        "Nội dung đã đọc trong tin nhắn": "Buyer viết rõ kế hoạch mua batch 40-70 items và muốn follow up sớm. Tuy nhiên hệ thống báo tài khoản buyer đã tự hủy hoặc bị kiểm soát do vi phạm nền tảng, hiện không thể reply.",
+        "Mức ưu tiên": "Cao nhưng rủi ro",
+        "Đề xuất nhắn tiếp theo": "Không thể nhắn trực tiếp nếu Alibaba khóa reply. Nếu còn kênh hợp lệ trong Alibaba/RFQ thì xác minh lại buyer; không đưa vào forecast đơn chắc chắn."
+      },
+      {
+        "Ngày": "2026-08-11",
+        "Khách hàng": "Yu Chen Wei",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Square Cushion Cover màu bright red, outdoor, waterproof UV resistant.",
+        "Số lượng": "MOQ 100, chưa có qty buyer",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi product card; seller/AI phản hồi mô tả màu đỏ. Giá 2.98-3.32 USD, MOQ 100. Chưa thấy buyer phản hồi tiếp sau báo giá.",
+        "Mức ưu tiên": "Trung bình",
+        "Đề xuất nhắn tiếp theo": "Follow ngắn: gửi bảng giá theo bậc 100/300/1000 pcs, hỏi size và số lượng; nếu không trả lời sau 2 lần thì hạ ưu tiên."
+      }
+    ],
+    "followup_buyers": [
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "rong bei",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Chỉ thấy buyer gửi hình ảnh, chưa đọc được sản phẩm/số lượng trong snapshot",
+        "Đánh giá": "Cần mở sâu nếu ảnh là inquiry thật",
+        "Việc nên làm": "Mở lại hội thoại, xem ảnh và hỏi sản phẩm/số lượng/địa chỉ ship"
+      },
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "Ruth Woldu",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Chỉ thấy hình ảnh, chưa có text nhu cầu rõ trong snapshot",
+        "Đánh giá": "Cần kiểm tra thêm",
+        "Việc nên làm": "Mở chat, đọc ảnh/sản phẩm; nếu buyer có nhu cầu thì chuyển ưu tiên"
+      },
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "Maria Kazmi",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Hội thoại có product card, chưa thấy nội dung hỏi sâu",
+        "Đánh giá": "Lead cần khai thác",
+        "Việc nên làm": "Hỏi buyer quan tâm model nào, số lượng và địa chỉ nhận hàng"
+      },
+      {
+        "Ngày": "2026-08-28",
+        "Khách hàng": "CamachoLopez AnnyYhanell",
+        "Quốc gia / tín hiệu": "Mexico / CP 77527",
+        "Level": "Có level tag",
+        "Nội dung": "Hỏi shipping tới 77527, seller nói phí ship báo riêng theo đơn thật và air shipping",
+        "Đánh giá": "Chưa rõ",
+        "Việc nên làm": "Lead thật nhưng vướng logistics/chi phí ship"
+      },
+      {
+        "Ngày": "2026-08-24",
+        "Khách hàng": "Marie Musangi",
+        "Quốc gia / tín hiệu": "DR Congo / Kinshasa",
+        "Level": "Có level tag",
+        "Nội dung": "Khách Kinshasa, RDC, 4 pieces; seller hỏi muốn đi biển hay express",
+        "Đánh giá": "4 pieces",
+        "Việc nên làm": "Lead có địa chỉ quốc gia và số lượng nhỏ, cần chốt phương thức ship"
+      },
+      {
+        "Ngày": "2026-08-23",
+        "Khách hàng": "yann sultan",
+        "Quốc gia / tín hiệu": "Pháp ngữ",
+        "Level": "Có level tag",
+        "Nội dung": "Muốn xem chất lượng sản phẩm/sofa",
+        "Đánh giá": "Chưa rõ",
+        "Việc nên làm": "Lead cần chứng minh chất lượng trước khi hỏi giá"
+      },
+      {
+        "Ngày": "2026-08-23",
+        "Khách hàng": "yann sultan",
+        "Quốc gia / tín hiệu": "Chưa xác định / Pháp ngữ",
+        "Level": "L?",
+        "Nội dung": "Muốn xem chất lượng sofa/sản phẩm; cần technical sheet, assembly instructions, model documents | SL: chưa nêu",
+        "Đánh giá": "Lead thật - ưu tiên vừa",
+        "Việc nên làm": "Gửi ảnh/video chất lượng, technical sheet, hỏi số lượng/mẫu muốn xem"
+      },
+      {
+        "Ngày": "2026-08-16",
+        "Khách hàng": "ShaikJafar Shareef",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Nội dung": "MD04 coffee table; MOQ 50 pcs, giá từ USD 53 cho 50-99 pcs | SL: MOQ 50 pcs",
+        "Đánh giá": "Lead thật - ưu tiên vừa",
+        "Việc nên làm": "Hỏi số lượng mục tiêu và màu/chất liệu; gửi bảng giá theo bậc"
+      },
+      {
+        "Ngày": "2026-08-15",
+        "Khách hàng": "Laura Cosentino",
+        "Quốc gia / tín hiệu": "Ý / Italian",
+        "Level": "L?",
+        "Nội dung": "Khách nói “nhưng bạn không có màu đỏ” | SL: chưa nêu",
+        "Đánh giá": "Lead có rào cản màu",
+        "Việc nên làm": "Đề xuất màu gần nhất hoặc custom MOQ nếu có"
+      },
+      {
+        "Ngày": "2026-08-13",
+        "Khách hàng": "Nicoetjulie Boguslawski",
+        "Quốc gia / tín hiệu": "Pháp ngữ",
+        "Level": "L?",
+        "Nội dung": "Sản phẩm kích thước 200x80x85 cm, màu Grey/Beige/Blue; cần quantity và màu | SL: chưa nêu",
+        "Đánh giá": "Lead thật - ưu tiên vừa",
+        "Việc nên làm": "Hỏi màu và số lượng, gửi link/order Alibaba"
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Alexander Magore",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Nội dung": "Buyer chỉ nhắn 'how are you doing today'.",
+        "Đánh giá": "Có phản hồi nhưng chưa có nhu cầu sản phẩm",
+        "Việc nên làm": "Trả lời thân thiện, hỏi khách đang quan tâm sản phẩm nào, số lượng và thị trường nhập hàng."
+      },
+      {
+        "Ngày": "2026-08-16",
+        "Khách hàng": "ShaikJafar Shareef",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Nội dung": "Trong preview chỉ thấy seller/AI báo regular order MOQ is 50 pieces.",
+        "Đánh giá": "Có khả năng buyer hỏi MOQ nhưng chưa mở sâu được nội dung buyer",
+        "Việc nên làm": "Tìm lại hội thoại khi có thời gian; hỏi khách muốn sản phẩm nào, màu/size và số lượng dự kiến."
+      },
+      {
+        "Ngày": "2026-08-15",
+        "Khách hàng": "Gert vandenBerg",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Nội dung": "Chỉ hiện visitor reminder.",
+        "Đánh giá": "Chưa phải lead thật",
+        "Việc nên làm": "Chỉ follow nếu xem được sản phẩm đã xem hoặc khách có phản hồi mới."
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "veronica lorena",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy",
+        "Nội dung": "Chỉ hiện visitor reminder.",
+        "Đánh giá": "Chưa phải lead thật",
+        "Việc nên làm": "Không đưa vào nhóm khách ưu tiên nếu chưa có tin buyer."
+      },
+      {
+        "Ngày": "2026-08-10",
+        "Khách hàng": "Kyle Tran",
+        "Quốc gia / tín hiệu": "Việt Nam / logistics",
+        "Level": "Có level tag",
+        "Nội dung": "Nội dung trao đổi về tuyến vận chuyển North America, South America, Europe, Southeast Asia và Domestic Market.",
+        "Đánh giá": "Có thể là hỏi logistics, không phải buyer mua sản phẩm",
+        "Việc nên làm": "Xác minh loại hàng/tuyến đích; chỉ giữ nếu liên quan đơn hàng thật."
+      },
+      {
+        "Ngày": "2026-08-09",
+        "Khách hàng": "Diaby Sankoun",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Nội dung": "Preview chỉ thấy seller/AI hỏi lại số lượng cho modern solid wood king bed.",
+        "Đánh giá": "Có tín hiệu sản phẩm nhưng chưa đọc được buyer phản hồi sau đó",
+        "Việc nên làm": "Theo dõi nhẹ; hỏi lại số lượng, kích thước, địa chỉ nếu buyer mở lại hội thoại."
+      },
+      {
+        "Ngày": "2026-08-04",
+        "Khách hàng": "Jack Dempsey",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Nội dung": "Preview cho thấy khách từng hỏi outdoor bench covers, waterproof rating và seam sealing.",
+        "Đánh giá": "Có tín hiệu kỹ thuật nhưng chưa mở sâu trong lượt này",
+        "Việc nên làm": "Gửi lại thông số chống nước/seam sealing, hỏi buyer còn dự án hay số lượng cần mua không."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Luisa Scandaglia",
+        "Quốc gia / tín hiệu": "Italy / tiếng Ý",
+        "Level": "Chưa thấy",
+        "Nội dung": "Preview cho thấy khách hỏi thiết kế sofa/3D; seller nói chưa có bản 3D, có thể gửi ảnh thật hoặc chuyển team.",
+        "Đánh giá": "Có tín hiệu sản phẩm nhưng chưa đọc sâu",
+        "Việc nên làm": "Follow bằng tiếng Ý: hỏi khách muốn L-shape hay straight, gửi ảnh thật và timeline làm bản vẽ nếu có."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Richard Logro",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: MD08 garden chair foldable aluminum alloy, MOQ 50, OEM/ODM, màu Silver hoặc Black.",
+        "Đánh giá": "Cần theo dõi nếu buyer phản hồi màu/số lượng",
+        "Việc nên làm": "Gửi ảnh 2 màu, hỏi số lượng, địa chỉ/cảng nhận để báo giá."
+      }
+    ],
+    "low_response_or_spam": [
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "W N",
+        "Dấu hiệu": "Chỉ thấy translation tip, chưa có nhu cầu buyer rõ",
+        "Kết luận": "Không tính lead chính tuần này"
+      },
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "shahrokh shamloo",
+        "Dấu hiệu": "Chỉ phản hồi “ok”, chưa có sản phẩm/số lượng rõ",
+        "Kết luận": "Ít phản hồi, chờ buyer nói nhu cầu cụ thể"
+      },
+      {
+        "Ngày": "2026-08-27",
+        "Khách hàng": "Thitichaya Srisuk",
+        "Dấu hiệu": "Chỉ thấy hình ảnh, chưa có nội dung text rõ trong snapshot",
+        "Kết luận": "Cần mở sâu nếu muốn xác định lead, hiện chưa đưa vào ưu tiên"
+      },
+      {
+        "Ngày": "2026-08-25",
+        "Khách hàng": "Xamid Bobojanov",
+        "Dấu hiệu": "Chỉ thấy translation tip trong snapshot, chưa đọc được nhu cầu mới",
+        "Kết luận": "Không cập nhật lead chính nếu không có nội dung mới"
+      },
+      {
+        "Ngày": "2026-08-21",
+        "Khách hàng": "William FitzGerald",
+        "Dấu hiệu": "Seller kéo WhatsApp, không thấy nhu cầu mới trong tuần này",
+        "Kết luận": "Không tính lead tuần mới; hạn chế kéo khỏi Alibaba nếu chưa chốt"
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Ana Malila zau",
+        "Dấu hiệu": "Nhu cầu nhỏ lẻ: chỉ cần 1 piece",
+        "Kết luận": "Nếu có sample/RTS thì báo; nếu MOQ cao thì giải thích, ưu tiên thấp."
+      },
+      {
+        "Ngày": "2026-08-05",
+        "Khách hàng": "Friedrich Donges",
+        "Dấu hiệu": "Translation tip/không thấy nhu cầu rõ trong tuần",
+        "Kết luận": "Không follow nếu không có inquiry rõ."
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Faisal Latif",
+        "Dấu hiệu": "Preview chỉ hiện Translation Tip, không thấy buyer hỏi sản phẩm.",
+        "Kết luận": "Không phân tích sâu, không tính lead."
+      },
+      {
+        "Ngày": "2026-08-16",
+        "Khách hàng": "Safa Saeed",
+        "Dấu hiệu": "Auto reception đạt giới hạn, chưa thấy buyer hỏi mới trong preview.",
+        "Kết luận": "Chỉ theo dõi nếu buyer phản hồi mới."
+      },
+      {
+        "Ngày": "2026-08-11",
+        "Khách hàng": "DOCK RACE WEAR",
+        "Dấu hiệu": "Chỉ hiện Translation Tip.",
+        "Kết luận": "Không tính lead tốt nếu chưa thấy nhu cầu mua."
+      },
+      {
+        "Ngày": "2026-08-05",
+        "Khách hàng": "Friedrich Donges",
+        "Dấu hiệu": "Chỉ hiện Translation Tip.",
+        "Kết luận": "Không ưu tiên."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Frank Liang",
+        "Dấu hiệu": "Preview là nhà cung cấp sponge giới thiệu có 2 dây chuyền/2 nhà máy, daily capacity 2 container 40HQ, phục vụ Amazon sellers.",
+        "Kết luận": "Không phải buyer mua hàng chính; không đưa vào lead bán hàng."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Amanda Zhao",
+        "Dấu hiệu": "Chỉ thấy '你好'.",
+        "Kết luận": "Chưa có nhu cầu sản phẩm."
+      },
+      {
+        "Ngày": "2026-07-29",
+        "Khách hàng": "Abdumalik Musayev / Helene BLSLU",
+        "Dấu hiệu": "Chỉ hiện Translation Tip hoặc auto reception stopped.",
+        "Kết luận": "Không tính lead ưu tiên."
+      },
+      {
+        "Ngày": "2026-08-17",
+        "Khách hàng": "Visitor/auto reminder khác",
+        "Dấu hiệu": "Không có nội dung buyer thật.",
+        "Kết luận": "Loại khỏi danh sách khách có phản hồi chất lượng."
+      }
+    ]
+  },
+  "update_rules": [
+    "Không tự bịa dữ liệu; null hiển thị Chưa có dữ liệu.",
+    "Giữ nguyên Keyword chính xác; không dịch hoặc sửa chính tả.",
+    "Dùng toàn bộ operations.history để vẽ xu hướng nhiều tuần.",
+    "Hiển thị toàn bộ quốc gia và toàn bộ từ khóa, có lọc/sắp xếp.",
+    "Tái tính Insight cần chú ý từ kỳ hiện tại so với kỳ trước và dữ liệu buyer."
+  ]
+}

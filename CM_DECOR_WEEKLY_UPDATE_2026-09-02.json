@@ -1,0 +1,1596 @@
+{
+  "generated_for": "Claude Code weekly app update",
+  "brand": "CM Decor",
+  "app_path": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/cm-decor/index.html",
+  "reporting_period": {
+    "visitor_current": "27.08-02.09",
+    "visitor_previous": "16-22.08",
+    "generated_date": "2026-09-04"
+  },
+  "source_spreadsheets": {
+    "operations": "1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo",
+    "visitor": "1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM",
+    "onetalk": "1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI"
+  },
+  "operations": {
+    "history": [
+      {
+        "week": "23-08-2026 đến 29-08-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "37",
+          "Tổng số thư hỏi hàng": "0",
+          "Tổng số thư hỏi hàng đã trả lời": "0",
+          "Tổng số lượt đã báo giá RFQ": "1",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "09-08-2026 đến 15-08-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "196",
+          "Tổng số thư hỏi hàng": "1",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "02-08-2026 đến 08-08-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "74",
+          "Tổng số thư hỏi hàng": "2",
+          "Tổng số thư hỏi hàng đã trả lời": "2",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "1"
+        }
+      },
+      {
+        "week": "26-07-2026 đến 01-08-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "58",
+          "Tổng số thư hỏi hàng": "1",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "1"
+        }
+      },
+      {
+        "week": "19-07-2026 đến 25-07-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "1",
+          "Tổng số người ghé thăm": "57",
+          "Tổng số thư hỏi hàng": "1",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "4",
+          "Số lượt báo giá RFQ còn lại": "18",
+          "Thời gian phản hồi tin nhắn trung bình": "0h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "2"
+        }
+      },
+      {
+        "week": "12-07-2026 đến 18-07-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "1060",
+          "Tổng số sản phẩm mới đã đăng": "-1",
+          "Tổng số người ghé thăm": "50",
+          "Tổng số thư hỏi hàng": "0",
+          "Tổng số thư hỏi hàng đã trả lời": "0",
+          "Tổng số lượt đã báo giá RFQ": "4",
+          "Số lượt báo giá RFQ còn lại": "18",
+          "Thời gian phản hồi tin nhắn trung bình": "0h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "2"
+        }
+      },
+      {
+        "week": "05-07-2026 đến 11-07-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "15",
+          "Tổng số thư hỏi hàng": "1",
+          "Tổng số thư hỏi hàng đã trả lời": "1",
+          "Tổng số lượt đã báo giá RFQ": "2",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0 giờ",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100,00%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "2"
+        }
+      },
+      {
+        "week": "21-06-2026 đến 27-06-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "3",
+          "Tổng số người ghé thăm": "122",
+          "Tổng số thư hỏi hàng": "2",
+          "Tổng số thư hỏi hàng đã trả lời": "2",
+          "Tổng số lượt đã báo giá RFQ": "20",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "3,13h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "87,50%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "3"
+        }
+      },
+      {
+        "week": "14-06-2026 đến 20-06-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1058",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "100",
+          "Tổng số thư hỏi hàng": "0",
+          "Tổng số thư hỏi hàng đã trả lời": "0",
+          "Tổng số lượt đã báo giá RFQ": "1",
+          "Số lượt báo giá RFQ còn lại": "19",
+          "Thời gian phản hồi tin nhắn trung bình": "6,45h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "88.89%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "3"
+        }
+      },
+      {
+        "week": "30-05-2026 đến 06-06-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1058",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "52",
+          "Tổng số thư hỏi hàng": "3",
+          "Tổng số thư hỏi hàng đã trả lời": "3",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "6,4h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "87,50%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "3"
+        }
+      },
+      {
+        "week": "17-05-2026 đến 23-05-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "1061",
+          "Tổng số sản phẩm mới đã đăng": "388",
+          "Tổng số người ghé thăm": "119",
+          "Tổng số thư hỏi hàng": "4",
+          "Tổng số thư hỏi hàng đã trả lời": "4",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "5,43h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "89,47%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "13"
+        }
+      },
+      {
+        "week": "03-05-2026 đến 09-05-2026",
+        "metrics": {
+          "Số sao": "2",
+          "Tổng số sản phẩm": "673",
+          "Tổng số sản phẩm mới đã đăng": "323",
+          "Tổng số người ghé thăm": "70",
+          "Tổng số thư hỏi hàng": "4",
+          "Tổng số thư hỏi hàng đã trả lời": "4",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "4,52h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "92.31%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "26-4-2026 đến 2-05-2026",
+        "metrics": {
+          "Số sao": "1",
+          "Tổng số sản phẩm": "350",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "65",
+          "Tổng số thư hỏi hàng": "7",
+          "Tổng số thư hỏi hàng đã trả lời": "7",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "3,75h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "19-4-2026 đến 25-04-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "350",
+          "Tổng số sản phẩm mới đã đăng": "41",
+          "Tổng số người ghé thăm": "106",
+          "Tổng số thư hỏi hàng": "2",
+          "Tổng số thư hỏi hàng đã trả lời": "2",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "40",
+          "Thời gian phản hồi tin nhắn trung bình": "0,01h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      },
+      {
+        "week": "12-4-2026 đến 18-4-2026",
+        "metrics": {
+          "Số sao": "0",
+          "Tổng số sản phẩm": "309",
+          "Tổng số sản phẩm mới đã đăng": "309",
+          "Tổng số người ghé thăm": "61",
+          "Tổng số thư hỏi hàng": "3",
+          "Tổng số thư hỏi hàng đã trả lời": "3",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "40",
+          "Thời gian phản hồi tin nhắn trung bình": "0,01h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "0"
+        }
+      }
+    ],
+    "raw": [
+      [
+        "Khung thời gian hoạt động",
+        "Tuần ",
+        "23-08-2026 đến 29-08-2026",
+        "09-08-2026 đến 15-08-2026",
+        "02-08-2026 đến 08-08-2026",
+        "26-07-2026 đến 01-08-2026",
+        "19-07-2026 đến 25-07-2026",
+        "12-07-2026 đến 18-07-2026",
+        "05-07-2026 đến 11-07-2026",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026",
+        "30-05-2026 đến 06-06-2026",
+        "17-05-2026 đến 23-05-2026",
+        "03-05-2026 đến 09-05-2026",
+        "26-4-2026 đến 2-05-2026",
+        "19-4-2026 đến 25-04-2026",
+        "12-4-2026 đến 18-4-2026"
+      ],
+      [
+        null,
+        "Số sao",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm",
+        "1061",
+        "1061",
+        "1061",
+        "1061",
+        "1061",
+        "1060",
+        "1061",
+        "1061",
+        "1058",
+        "1058",
+        "1061",
+        "673",
+        "350",
+        "350",
+        "309"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm mới đã đăng",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "-1",
+        "0",
+        "3",
+        "0",
+        "0",
+        "388",
+        "323",
+        "0",
+        "41",
+        "309"
+      ],
+      [
+        null,
+        "Tổng số người ghé thăm",
+        "37",
+        "196",
+        "74",
+        "58",
+        "57",
+        "50",
+        "15",
+        "122",
+        "100",
+        "52",
+        "119",
+        "70",
+        "65",
+        "106",
+        "61"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng",
+        "0",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "1",
+        "2",
+        "0",
+        "3",
+        "4",
+        "4",
+        "7",
+        "2",
+        "3"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng đã trả lời",
+        "0",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "1",
+        "2",
+        "0",
+        "3",
+        "4",
+        "4",
+        "7",
+        "2",
+        "3"
+      ],
+      [
+        null,
+        "Tổng số lượt đã báo giá RFQ",
+        "1",
+        "0",
+        "0",
+        "0",
+        "4",
+        "4",
+        "2",
+        "20",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượt báo giá RFQ còn lại",
+        "20",
+        "20",
+        "20",
+        "20",
+        "18",
+        "18",
+        "20",
+        "20",
+        "19",
+        "20",
+        "20",
+        "20",
+        "20",
+        "40",
+        "40"
+      ],
+      [
+        null,
+        "Thời gian phản hồi tin nhắn trung bình",
+        "0h",
+        "0h",
+        "0h",
+        "0h",
+        "0h",
+        "0h",
+        "0 giờ",
+        "3,13h",
+        "6,45h",
+        "6,4h",
+        "5,43h",
+        "4,52h",
+        "3,75h",
+        "0,01h",
+        "0,01h"
+      ],
+      [
+        null,
+        "Tỉ lệ tin nhắn được phản hồi trong 24h",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100,00%",
+        "87,50%",
+        "88.89%",
+        "87,50%",
+        "89,47%",
+        "92.31%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      [
+        null,
+        "Số lượng Super Product (win)",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượng Top Product (tiềm năng)",
+        "0",
+        "0",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "3",
+        "3",
+        "3",
+        "13",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Kế hoạch hành động cho tuần tiếp theo",
+        "Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn",
+        "Tập trung thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn",
+        "Đề xuất đăng thêm 10 sản phẩm mới Highdemand mỗi ngày",
+        "Đề xuất đăng thêm 10 sản phẩm mới mỗi ngày",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm "
+      ],
+      [
+        null,
+        "Tối ưu hoá các chỉ số",
+        "Tăng traffic; tối ưu 61 sản phẩm điểm thấp; báo RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm lỗi; sử dụng RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Tăng traffic; cải thiện Service; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Báo RFQ; tối ưu Marketing và Service để tăng sao",
+        "Thanh toán TA",
+        "Làm lại giá sản phẩm",
+        "Báo giá RFQ",
+        "Chỉnh sửa thêm video vào các sản phẩm đã đăng",
+        "Báo RFQ",
+        "Báo RFQ",
+        "Báo hết 40 RFQ trước 30/4",
+        "Báo hết 40 RFQ trước 30/4"
+      ],
+      [
+        null,
+        null,
+        "Gian hàng hiện 0 sao do Marketing; chỉ có 98 khách trong 30 ngày; chưa có GMV Trade Assurance; 61 sản phẩm điểm thấp và chưa có Top/Super Product; quyền lợi RFQ còn ít được sử dụng",
+        "Gian hàng hiện 0 sao, Forecast 1 sao; Marketing chỉ có 115 khách và Service mới có 2 người mua phản hồi; chưa có GMV Trade Assurance; có 1 sản phẩm gặp vấn đề; 63 sản phẩm điểm thấp và chưa có Top/Super Product; chưa sử dụng RFQ",
+        "Chưa có đơn Trade Assurance, GMV và tỷ lệ chuyển đổi đơn hàng bằng 0; Marketing còn thiếu 18 khách và Service thiếu 2 người mua phản hồi lần hai; tỷ lệ sản phẩm RTS dưới 1%; có 5 sản phẩm rủi ro và 1 sản phẩm gây hiểu nhầm; chưa tận dụng hiệu quả RFQ và công cụ AI",
+        "Chưa có đơn Trade Assurance, GMV và tỷ lệ chuyển đổi đơn hàng bằng 0; Marketing còn thiếu 18 khách và Service thiếu 2 người mua phản hồi lần hai; tỷ lệ sản phẩm RTS dưới 1%; có 5 sản phẩm rủi ro và 1 sản phẩm gây hiểu nhầm; chưa tận dụng hiệu quả RFQ và điểm AI",
+        "Chưa có đơn Trade Assurance và GMV; tỷ lệ chuyển đổi giảm; có 1 sản phẩm rủi ro và chỉ 10 sản phẩm RTS; Marketing và Service hạn chế số sao; traffic lệch thị trường và System Recommendations thấp; RFQ chưa được tận dụng",
+        "Chưa có đơn Trade Assurance và GMV; tỷ lệ chuyển đổi giảm; có 1 sản phẩm rủi ro và chỉ 10 sản phẩm RTS; Marketing và Service kéo số sao xuống 0; traffic lệch thị trường và System Recommendations thấp; còn 18 lượt RFQ chưa sử dụng",
+        "Tăng giao dịch Trade Assurance; cải thiện chuyển đổi và tốc độ phản hồi; tăng sản phẩm RTS; tối ưu Marketing và Service để vượt 1 sao; nhắm đúng thị trường và tăng traffic từ System Recommendations",
+        "Làm lại giá sản phẩm",
+        "Thanh toán TA",
+        "Đẩy quảng cáo và làm nhiệm vụ lên 5 sao",
+        null,
+        "Anh chị đăng sản phẩm, thêm video giúp em, vì để tăng lượng thực tế và thu hút ngừoi xem hơn, video có thể khách ảnh sản phẩm",
+        "Đăng thêm sản phẩm RTS"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "Chạy quảng cáo nếu có thể",
+        null,
+        null,
+        "Vì bị chặn traffic 1 tuần trước nên không có đơn hỏi hàng nào, tuần này đã bắt đầu có traffic lại",
+        null,
+        "Tránh đăng các sản phẩm lỗi về logo tranh bóng đá dính bản quyền thương hiệu",
+        null,
+        "Thêm video 30s vào các sản phẩm, để trực quan, thêm video nhà máy vào phần mô tả ở dưới",
+        null,
+        null,
+        "Show case em đã xử lý, mọi người có thể vào phần Promotion để sửa lại show case"
+      ],
+      [],
+      [],
+      [
+        "Đánh giá sơ bộ",
+        "Vấn đề ưu tiên xử lý",
+        null,
+        "Đăng thêm sản phẩm, hoạt động mạnh mẽ trong việc làm hình ảnh thật, video thật",
+        "Đăng thêm sản phẩm, hoạt động mạnh mẽ trong việc làm hình ảnh thật, video thật",
+        "Chỉnh sửa lại sản phẩm, đăng sản phẩm highdemand",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn",
+        "Tập trung thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn và làm lại giá sản phẩm",
+        "Đề xuất đăng thêm 10 sản phẩm mới Highdemand mỗi ngày",
+        "Chỉnh sửa thêm video vào các sản phẩm đã đăng",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Báo hết 40 RFQ trước 30/4",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm "
+      ],
+      [
+        null,
+        "Báo cáo từ AI"
+      ]
+    ]
+  },
+  "visitor": {
+    "current_summary": {
+      "Số bản ghi khách truy cập": [
+        "26",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "15",
+        "L0",
+        "Người mua đã đăng ký",
+        "16"
+      ],
+      "Tổng PV trên gian hàng": [
+        "54",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "10"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "42",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "15",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "0"
+      ],
+      "Số buyer L1+": [
+        "10",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "3",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "previous_summary": {
+      "Số bản ghi khách truy cập": [
+        "21",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "18",
+        "L0",
+        "Người mua đã đăng ký",
+        "11"
+      ],
+      "Tổng PV trên gian hàng": [
+        "33",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "10"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "53",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "18",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "0"
+      ],
+      "Số buyer L1+": [
+        "10",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "3",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "current_countries": [
+      {
+        "Quốc gia / vùng": "Ấn Độ",
+        "Số visitor": "4",
+        "Tổng PV": "10",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "4",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Bolivia",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Canada",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Chad",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Hy Lạp",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Mali",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Na Uy",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Philippines",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Senegal",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Singapore",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Togo",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Trung Quốc",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Úc",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ý",
+        "Số visitor": "2",
+        "Tổng PV": "14",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "8",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Zambia",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      }
+    ],
+    "current_exact_keywords": [
+      {
+        "keyword_exact": "automobile elettrica",
+        "occurrences": 2,
+        "pv": 14,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Ý": 2
+        }
+      },
+      {
+        "keyword_exact": "gommone ciglia v luxury",
+        "occurrences": 2,
+        "pv": 14,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Ý": 2
+        }
+      },
+      {
+        "keyword_exact": "lampade solari da giardino",
+        "occurrences": 2,
+        "pv": 14,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Ý": 2
+        }
+      },
+      {
+        "keyword_exact": "peptidi iniettabili",
+        "occurrences": 2,
+        "pv": 14,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Ý": 2
+        }
+      },
+      {
+        "keyword_exact": "outdoor pillar light",
+        "occurrences": 2,
+        "pv": 6,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Ấn Độ": 2
+        }
+      },
+      {
+        "keyword_exact": "solar pillar light outdoor",
+        "occurrences": 2,
+        "pv": 6,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Ấn Độ": 2
+        }
+      },
+      {
+        "keyword_exact": "watch",
+        "occurrences": 2,
+        "pv": 6,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Ấn Độ": 2
+        }
+      },
+      {
+        "keyword_exact": "girador de bolsos",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "lampara coreana",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "medical consumables",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Trung Quốc": 2
+        }
+      },
+      {
+        "keyword_exact": "mochilas ergonomicas",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "packaging machine",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Trung Quốc": 2
+        }
+      },
+      {
+        "keyword_exact": "post light e27",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Philippines": 2
+        }
+      },
+      {
+        "keyword_exact": "tugofwar rope",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Trung Quốc": 2
+        }
+      },
+      {
+        "keyword_exact": "solar outdoor lights waterproof patio lights",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Úc": 1
+        }
+      },
+      {
+        "keyword_exact": "1nz engine 1nzfe",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "appliques",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Chad": 1
+        }
+      },
+      {
+        "keyword_exact": "babe sofas",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "chandelier",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "corten steel bollard light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "curtains for the living room luxury long window",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Zambia": 1
+        }
+      },
+      {
+        "keyword_exact": "des lits",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Chad": 1
+        }
+      },
+      {
+        "keyword_exact": "living room furniture",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Chad": 1
+        }
+      },
+      {
+        "keyword_exact": "miroir de poche",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Togo": 1
+        }
+      },
+      {
+        "keyword_exact": "nordic style resin ornaments",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Togo": 1
+        }
+      },
+      {
+        "keyword_exact": "outdoor fountain stone",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "outdoor wall sconce black",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Canada": 1
+        }
+      },
+      {
+        "keyword_exact": "resin crafts",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Togo": 1
+        }
+      }
+    ]
+  },
+  "onetalk": {
+    "overview": [
+      {
+        "Hạng mục": "03/09/2026 - cập nhật tuần mới",
+        "Số lượng": "12 buyer rà soát",
+        "Ghi chú vận hành": "7 khách ưu tiên; 3 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "28/08/2026 - 03/09/2026",
+        "Ghi chú vận hành": "Tập trung khách hỏi đèn sân vườn/ngoài trời, dự án thương mại, vật liệu, chứng chỉ và vận chuyển."
+      },
+      {
+        "Hạng mục": "Trọng tâm tuần này",
+        "Số lượng": "Garden lighting / outdoor commercial display",
+        "Ghi chú vận hành": "Lead tốt nhất có thông số kỹ thuật rõ: UL driver, 120/277V, CRI≥90, IP65, vật liệu copper/steel/inox/acrylic."
+      },
+      {
+        "Hạng mục": "Rủi ro chính",
+        "Số lượng": "Thiếu địa chỉ ship + thiếu cấu hình vật liệu",
+        "Ghi chú vận hành": "Nhiều báo giá đang thiếu transport method, packaging, delivery address và xác nhận vật liệu."
+      },
+      {
+        "Hạng mục": "25/08/2026 - cập nhật tuần mới",
+        "Số lượng": "10",
+        "Ghi chú vận hành": "2 khách ưu tiên; 2 cần theo dõi; 6 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Tài khoản đã rà soát",
+        "Số lượng": "CM Decor",
+        "Ghi chú vận hành": "Đã đăng nhập và đọc danh sách OneTalk ngày 18/08/2026."
+      },
+      {
+        "Hạng mục": "Khách có phản hồi trong 30 ngày gần nhất",
+        "Số lượng": "2 buyers",
+        "Ghi chú vận hành": "Số liệu hiển thị ngay trong OneTalk của tài khoản."
+      },
+      {
+        "Hạng mục": "Khách có tín hiệu mua thật nên xử lý",
+        "Số lượng": "3",
+        "Ghi chú vận hành": "Hannahchiwendu Christopher, Friedrich Donges, Kyei Kyei có nhu cầu sản phẩm hoặc inquiry rõ hơn các dòng còn lại."
+      },
+      {
+        "Hạng mục": "Khách cần kiểm tra nhẹ",
+        "Số lượng": "5",
+        "Ghi chú vận hành": "Williams mark, Nguyen Hung, Svetlana Kononiuk, Arnold Amet, nhóm hỏi tiêu chuẩn an toàn thị trường UK."
+      },
+      {
+        "Hạng mục": "Tin ít chất lượng / nghi spam",
+        "Số lượng": "Nhiều",
+        "Ghi chú vận hành": "Nhiều buyer yêu cầu gửi email ngoài Alibaba hoặc cùng một mẫu tin giống nhau; không nên đưa vào lead ưu tiên."
+      },
+      {
+        "Hạng mục": "Vấn đề nổi bật",
+        "Số lượng": "Cần phản hồi thủ công sâu hơn",
+        "Ghi chú vận hành": "AI reception hỏi tiếp nhưng thiếu báo giá, thiếu hình/spec, thiếu chi phí ship và chưa chốt bước tạo order."
+      },
+      {
+        "Hạng mục": "Hành động ưu tiên",
+        "Số lượng": "Báo giá nhanh + giữ giao dịch trên Alibaba",
+        "Ghi chú vận hành": "Lead thật cần được hỏi địa chỉ giao hàng, xác nhận SKU, gửi ảnh/spec/chứng chỉ và báo phí ship ngay trong nền tảng."
+      }
+    ],
+    "priority_buyers": [
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "TEDDY KASSA",
+        "Quốc gia": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Outdoor lighting project; no-remote, UL driver, 120/277V, 3-tier sizes, 3000K, CRI≥90, matte black, reinforced pallet/crate packing",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer đưa thông số kỹ thuật rất rõ, phù hợp khách dự án/nhập khẩu chuyên nghiệp",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Gửi bảng xác nhận spec, bản vẽ/kích thước 3 size, chứng chỉ driver UL, giá theo số lượng và lead time"
+      },
+      {
+        "Ngày": "2026-08-28",
+        "Khách hàng": "Josh Chauvet",
+        "Quốc gia": "USA / Reno",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Large commercial outdoor Christmas displays / festive photo-op frames, acrylic, solar battery/button control",
+        "Số lượng": "8 bộ lớn",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi dự án thương mại ở Reno, cần packaging và yêu cầu ship; sản phẩm có tùy chỉnh OEM/ODM",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi kích thước từng display, deadline event, địa chỉ Reno, yêu cầu chống thời tiết; gửi proposal dự án + freight estimate"
+      },
+      {
+        "Ngày": "2026-08-28",
+        "Khách hàng": "GEORGE ZAVADSKY",
+        "Quốc gia": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "50W garden lighting, constant light, IP65, hỏi detachable hay semi-flush mount",
+        "Số lượng": "15 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Buyer đã có số lượng 15 pcs và thông số công suất/IP rõ",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi phương thức vận chuyển, địa chỉ nhận hàng, kiểu lắp đặt cuối cùng và gửi báo giá 15 pcs"
+      },
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "Jacek ochal",
+        "Quốc gia": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Garden lighting solar power; hỏi vật liệu thân đèn plastic hay die-cast aluminum, bảo hành 3 năm, custom design",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer mới, đã được báo base price USD 20.80-28.00 nhưng thiếu vật liệu và logistics",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi vật liệu mong muốn, số lượng, địa chỉ giao và gửi ảnh/video case tương tự"
+      },
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Herman Jacobs",
+        "Quốc gia": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "RFQ copper outdoor lights / wall lamps, lifespan 30,000h, AutoCAD layout, warm white, touch control/CCT",
+        "Số lượng": "5 units",
+        "Nội dung đã đọc trong tin nhắn": "Có RFQ rõ 5 units, nhưng vật liệu copper khác spec LED hiện tại; thiếu packaging/delivery address",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Xác nhận có làm copper finish không, hỏi CCT/touch control, địa chỉ nhận hàng và gửi quote 5 units"
+      },
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Patrick Greier",
+        "Quốc gia": "Germany",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Garden lighting decoration, OEM/ODM; hỏi installation height/weight, fixture type, chứng chỉ cho Germany",
+        "Số lượng": "5 units",
+        "Nội dung đã đọc trong tin nhắn": "Buyer từ Đức, có yêu cầu kỹ thuật và logistics; phù hợp nhóm cần chứng chỉ EU",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi thông số height/weight, chứng chỉ phù hợp Đức/EU, hỏi địa chỉ và cấu hình fixture cuối"
+      },
+      {
+        "Ngày": "2026-08-29",
+        "Khách hàng": "C S-P",
+        "Quốc gia": "France",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Garden lighting warm white CCT, IP65, steel/inox, shipping to France, detachable/fixed installation",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Nhu cầu thật, có quốc gia nhận hàng France, cần làm rõ fixed hay detachable và phương thức ship",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi số lượng, địa chỉ France, chọn fixed/detachable và đóng gói; gửi phí ship"
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "Hannahchiwendu Christopher",
+        "Quốc gia": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Quan tâm white leaf-style pendant light / Lantern M03.01 Chandelier & Pendant Light; hỏi số lượng, seller hỏi địa chỉ ship; sản phẩm có LED, bảo hành 2 năm, lifespan 25,000h",
+        "Số lượng": "Trial order 1 pc hoặc chưa chốt",
+        "Nội dung đã đọc trong tin nhắn": "Có nhu cầu sản phẩm thật, đang thiếu địa chỉ giao hàng và xác nhận số lượng",
+        "Mức ưu tiên": "Lead thật - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Xin địa chỉ giao hàng, xác nhận quantity, báo giá USD 32/pc MOQ 1 và lead time"
+      },
+      {
+        "Ngày": "2026-07-19",
+        "Khách hàng": "Janez Korelc",
+        "Quốc gia": "UK / chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Quan tâm indoor lighting solutions cho UK market, hỏi tiêu chuẩn an toàn/safety regulations",
+        "Số lượng": "Chưa nêu",
+        "Nội dung đã đọc trong tin nhắn": "Có nhu cầu B2B thật hơn nhóm scam; cần trả lời chứng nhận/tiêu chuẩn",
+        "Mức ưu tiên": "Lead thật - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Gửi chứng nhận/tiêu chuẩn liên quan CE/UKCA/RoHS nếu có, hỏi dòng sản phẩm và số lượng"
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "Hannahchiwendu Christopher",
+        "Quốc gia": "India",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Lantern M03.01 Chandelier and Pendant Light, giá hiển thị $32, MOQ 1.",
+        "Số lượng": "2 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi sản phẩm đèn treo Lantern M03.01 và trả lời số lượng 2 chiếc. AI đã hỏi địa chỉ giao hàng; order progress báo thiếu đơn giá và địa chỉ ship.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Gửi xác nhận: giá $32/chiếc, hỏi địa chỉ nhận hàng đầy đủ + mã bưu điện, báo phí ship 2 chiếc, thời gian giao và đề nghị tạo Trade Assurance order."
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Friedrich Donges",
+        "Quốc gia": "Greece",
+        "Level": "Chưa thấy level",
+        "Sản phẩm / nhu cầu hỏi": "Gửi product card, chưa thấy buyer nhắn thêm nội dung trong phần đọc được.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Hội thoại đang unread 2 và có product inquiry. Cần mở/đọc sâu lại khi mạng OneTalk ổn định hơn để xác định mẫu sản phẩm.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Trả lời ngay trong Alibaba: hỏi buyer cần mẫu nào, số lượng, địa chỉ giao hàng; gửi catalogue nhóm sản phẩm liên quan và đề nghị báo giá trong ngày."
+      },
+      {
+        "Ngày": "2026-07-20",
+        "Khách hàng": "Kyei Kyei",
+        "Quốc gia": "Ghana",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Đồng hồ treo tường tròn, quartz movement, single-face design, họa tiết geometric.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "AI đã tư vấn sản phẩm theo nhu cầu modern circular wall clocks và hỏi buyer muốn kim hay digital readout. Chưa thấy phản hồi tiếp theo.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Gửi 3 mẫu đồng hồ đang bán tốt, MOQ, giá mẫu, kích thước, vật liệu; hỏi khách cần kim hay digital và dự kiến số lượng nhập thử."
+      }
+    ],
+    "followup_buyers": [
+      {
+        "Ngày": "2026-08-29",
+        "Khách hàng": "Brian Norman",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Abstract geometric wall clock, quartz movement; hỏi packaging và engraving/personalization",
+        "Đánh giá": "Lead đúng ngành décor nhưng chưa thấy số lượng",
+        "Việc nên làm": "Hỏi số lượng, kích thước, yêu cầu đóng gói và có cần in logo/khắc riêng không"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "Asaf Shemesh",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Hội thoại có 5 tin nhưng snapshot chỉ thấy auto-reception stopped, chưa thấy nội dung nhu cầu cụ thể",
+        "Đánh giá": "Cần mở sâu lại nếu muốn phân tích chính xác",
+        "Việc nên làm": "Không đưa vào khách ưu tiên khi chưa đọc được sản phẩm/số lượng; mở lại khi mạng ổn"
+      },
+      {
+        "Ngày": "2026-08-27",
+        "Khách hàng": "Maria Kazmi",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "Hội thoại có file đính kèm, snapshot chưa thấy nội dung đọc được",
+        "Đánh giá": "Cần kiểm tra file/nội dung nếu user muốn rà sâu",
+        "Việc nên làm": "Mở lại hội thoại, xem file buyer gửi và xác định có RFQ thật hay không"
+      },
+      {
+        "Ngày": "2026-07-20",
+        "Khách hàng": "Kyei Kyei",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "L?",
+        "Đánh giá": "Quan tâm modern circular wall clocks, quartz movement, single-face design; cần xác nhận needle display hay digital readout",
+        "Việc nên làm": "Chưa nêu"
+      },
+      {
+        "Ngày": "2026-07-29",
+        "Khách hàng": "DK Gupta",
+        "Quốc gia": "Chưa xác định",
+        "Nội dung": "L?",
+        "Đánh giá": "Hỏi mục đích sử dụng đèn (“what purpose do you need the lights for?”), chưa có buyer trả lời sâu",
+        "Việc nên làm": "Chưa nêu"
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "Williams mark",
+        "Quốc gia": "United States",
+        "Nội dung": "AI trả lời về product promotion trên Alibaba, hỏi sản phẩm và mục tiêu promotion.",
+        "Đánh giá": "Không giống buyer mua đèn; có thể là dịch vụ/marketing.",
+        "Việc nên làm": "Không ưu tiên. Nếu trả lời lại, xác minh nhu cầu mua sản phẩm cụ thể trước."
+      },
+      {
+        "Ngày": "2026-07-01",
+        "Khách hàng": "Nguyen Hung",
+        "Quốc gia": "Vietnam",
+        "Nội dung": "Buyer nhắn 'đèn sân vườn ạ'.",
+        "Đánh giá": "Có nhu cầu nhưng quá ngắn, chưa có số lượng hoặc mẫu.",
+        "Việc nên làm": "Hỏi loại đèn sân vườn, công suất, số lượng, địa điểm lắp và ngân sách; gửi 3 mẫu phù hợp."
+      },
+      {
+        "Ngày": "2026-06-29",
+        "Khách hàng": "Svetlana Kononiuk",
+        "Quốc gia": "United States",
+        "Nội dung": "AI follow-up về height/weight của solar lights.",
+        "Đánh giá": "Có nhu cầu hỏi thông số nhưng chưa thấy báo thông số hoàn chỉnh.",
+        "Việc nên làm": "Gửi bảng thông số chiều cao, trọng lượng, packing size, ảnh thực tế và hỏi số lượng dự án."
+      },
+      {
+        "Ngày": "2026-07-06",
+        "Khách hàng": "Arnold Amet",
+        "Quốc gia": "Papua New Guinea",
+        "Nội dung": "AI tư vấn sản phẩm thiết kế nghệ thuật/metal construction và hỏi style/color.",
+        "Đánh giá": "Có thể là lead trang trí, nhưng chưa có phản hồi buyer tiếp theo.",
+        "Việc nên làm": "Gửi mẫu theo 2-3 phong cách và hỏi kích thước, màu, số lượng."
+      },
+      {
+        "Ngày": "2026-06-28",
+        "Khách hàng": "Sermarj Felipe và nhóm hỏi tiêu chuẩn UK",
+        "Quốc gia": "Nhiều quốc gia",
+        "Nội dung": "Nhiều tài khoản dùng cùng một nội dung hỏi indoor lighting cho thị trường UK và yêu cầu safety standards.",
+        "Đánh giá": "Cần cẩn trọng vì mẫu tin lặp nhiều; vẫn có thể phản hồi chuẩn nếu muốn lọc.",
+        "Việc nên làm": "Gửi một mẫu trả lời ngắn về CE/RoHS/UKCA nếu có, yêu cầu buyer xác nhận công ty, sản phẩm, số lượng và giữ trao đổi trên Alibaba."
+      }
+    ],
+    "low_response_or_spam": [
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "Asaf Shemesh",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "Chỉ thấy hệ thống auto-reception stopped, chưa có sản phẩm/số lượng rõ trong phần đọc tuần này",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-27",
+        "Khách hàng": "Maria Kazmi",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "Chỉ thấy file đính kèm, chưa xác định nội dung lead từ snapshot; cần mở sâu trước khi tính lead",
+        "Kết luận": null
+      },
+      {
+        "Ngày": "2026-08-09",
+        "Khách hàng": "User name / Anny Yang - Luyal Communications",
+        "Quốc gia": "United States (Washington D.C.)",
+        "Dấu hiệu": "L?",
+        "Kết luận": "Tự nhận sourcing OEM/ODM Garden Light, yêu cầu gửi quotation/company info qua email luyalcomunication@zohomail.com"
+      },
+      {
+        "Ngày": "2026-08-12",
+        "Khách hàng": "Friedrich Donges",
+        "Quốc gia": "Chưa xác định / email .RU",
+        "Dấu hiệu": "L?",
+        "Kết luận": "Yêu cầu catalog để lập order list, mua số lượng lớn, gửi qua SALESEXPORT@INTERNET.RU"
+      },
+      {
+        "Ngày": "2026-07-22",
+        "Khách hàng": "Jay Patel",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "L?",
+        "Kết luận": "Yêu cầu gửi catalogue tới maxelectro05@gmail.com để chọn order list và thanh toán"
+      },
+      {
+        "Ngày": "2026-07-17",
+        "Khách hàng": "Jackson Wine",
+        "Quốc gia": "USA",
+        "Dấu hiệu": "L?",
+        "Kết luận": "Yêu cầu gửi quotation trực tiếp tới spencesales25@gmail.com, nói cần large quantity delivery to USA"
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "Williams mark",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "L?",
+        "Kết luận": "Trao đổi về product promotion trên Alibaba, không phải buyer mua sản phẩm décor rõ ràng"
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "sabreee jak",
+        "Quốc gia": "Chưa xác định",
+        "Dấu hiệu": "L?",
+        "Kết luận": "Khách chia sẻ Stafir.com; seller giữ trao đổi trên Alibaba và hỏi quantity"
+      },
+      {
+        "Ngày": "2026-08-09",
+        "Khách hàng": "User name / Luyal Communications",
+        "Quốc gia": "China flag, nội dung ghi United States",
+        "Dấu hiệu": "Tin dài yêu cầu gửi quotation/catalog đến email zohomail ngoài Alibaba.",
+        "Kết luận": "Nghi spam/off-platform, không đưa vào lead ưu tiên."
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "sabreee jak",
+        "Quốc gia": "Bangladesh",
+        "Dấu hiệu": "Giới thiệu Stafir.com, nói resell/SEO sản phẩm; tài khoản đã bị hủy hoặc bị kiểm soát vi phạm.",
+        "Kết luận": "Loại khỏi lead bán hàng."
+      },
+      {
+        "Ngày": "2026-07-29",
+        "Khách hàng": "DK Gupta",
+        "Quốc gia": "India",
+        "Dấu hiệu": "Yêu cầu gửi catalog/địa chỉ đến email INFO.WORLDSUPPLY@INBOX.RU; seller hỏi mục đích dùng đèn.",
+        "Kết luận": "Nghi spam/off-platform."
+      },
+      {
+        "Ngày": "2026-07-22",
+        "Khách hàng": "Jay Patel",
+        "Quốc gia": "India",
+        "Dấu hiệu": "Yêu cầu gửi catalog tới email maxelectro05@gmail.com, không có SKU/số lượng cụ thể.",
+        "Kết luận": "Nghi spam/off-platform."
+      },
+      {
+        "Ngày": "2026-07-17",
+        "Khách hàng": "Jackson Wine",
+        "Quốc gia": "Vietnam flag, nội dung nói USA",
+        "Dấu hiệu": "Yêu cầu báo giá qua email spencesales25@gmail.com, không chốt sản phẩm cụ thể.",
+        "Kết luận": "Nghi spam/off-platform."
+      },
+      {
+        "Ngày": "2026-06-28",
+        "Khách hàng": "Nhiều contact hỏi safety standards giống nhau",
+        "Quốc gia": "ES/SN/FR/NO/IT/US...",
+        "Dấu hiệu": "Cùng một đoạn văn lặp về indoor lighting for UK market.",
+        "Kết luận": "Xếp nhóm rà nhẹ, chỉ ưu tiên nếu buyer phản hồi riêng sau câu hỏi xác minh."
+      }
+    ]
+  },
+  "update_rules": [
+    "Không tự bịa dữ liệu; null hiển thị Chưa có dữ liệu.",
+    "Giữ nguyên Keyword chính xác; không dịch hoặc sửa chính tả.",
+    "Dùng toàn bộ operations.history để vẽ xu hướng nhiều tuần.",
+    "Hiển thị toàn bộ quốc gia và toàn bộ từ khóa, có lọc/sắp xếp.",
+    "Tái tính Insight cần chú ý từ kỳ hiện tại so với kỳ trước và dữ liệu buyer."
+  ]
+}

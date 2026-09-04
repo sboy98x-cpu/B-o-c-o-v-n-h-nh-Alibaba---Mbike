@@ -1,0 +1,6169 @@
+{
+  "generated_for": "Claude Code weekly app update",
+  "brand": "G8 Home",
+  "language": "vi",
+  "app_path": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/g8-home/index.html",
+  "reporting_period": {
+    "visitor_current": "27.08-02.09",
+    "visitor_previous": "16-22.08",
+    "generated_date": "2026-09-04"
+  },
+  "source_spreadsheets": {
+    "operations": "1KwPZ4-Xx1UR8KS6glUiE8r2Djjn0-geUXfD1-f8LcyU",
+    "visitor": "1qnpYOb_AJwOoO-apHY2ZcGSonkp01JR8Bq-rt7LyI4A",
+    "onetalk": "14UCEVfn8ECHJdpV0PGy21JGJLvPoGjLMy9dbEwWvJlE"
+  },
+  "operations": {
+    "history": [
+      {
+        "week": "23-08-2026 đến 29-08-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1114",
+          "Tổng số sản phẩm mới đã đăng": "-13",
+          "Tổng số người ghé thăm": "668",
+          "Tổng số thư hỏi hàng": "62",
+          "Tổng số thư hỏi hàng đã trả lời": "62",
+          "Tổng số lượt đã báo giá RFQ": "1",
+          "Số lượt báo giá RFQ còn lại": "19",
+          "Thời gian phản hồi tin nhắn trung bình": "2,44h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "95.54%",
+          "Số lượng Super Product (win)": "3",
+          "Số lượng Top Product (tiềm năng)": "57"
+        }
+      },
+      {
+        "week": "09-08-2026 đến 15-08-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1127",
+          "Tổng số sản phẩm mới đã đăng": "3",
+          "Tổng số người ghé thăm": "422",
+          "Tổng số thư hỏi hàng": "31",
+          "Tổng số thư hỏi hàng đã trả lời": "31",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,7h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.25%",
+          "Số lượng Super Product (win)": "3",
+          "Số lượng Top Product (tiềm năng)": "55"
+        }
+      },
+      {
+        "week": "02-08-2026 đến 08-08-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1124",
+          "Tổng số sản phẩm mới đã đăng": "10",
+          "Tổng số người ghé thăm": "435",
+          "Tổng số thư hỏi hàng": "27",
+          "Tổng số thư hỏi hàng đã trả lời": "27",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,96h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.37%",
+          "Số lượng Super Product (win)": "2",
+          "Số lượng Top Product (tiềm năng)": "55"
+        }
+      },
+      {
+        "week": "26-07-2026 đến 01-08-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1114",
+          "Tổng số sản phẩm mới đã đăng": "1",
+          "Tổng số người ghé thăm": "360",
+          "Tổng số thư hỏi hàng": "29",
+          "Tổng số thư hỏi hàng đã trả lời": "29",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,27h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.54%",
+          "Số lượng Super Product (win)": "2",
+          "Số lượng Top Product (tiềm năng)": "57"
+        }
+      },
+      {
+        "week": "19-07-2026 đến 25-07-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1113",
+          "Tổng số sản phẩm mới đã đăng": "11",
+          "Tổng số người ghé thăm": "324",
+          "Tổng số thư hỏi hàng": "23",
+          "Tổng số thư hỏi hàng đã trả lời": "23",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,33h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.77%",
+          "Số lượng Super Product (win)": "1",
+          "Số lượng Top Product (tiềm năng)": "56"
+        }
+      },
+      {
+        "week": "12-07-2026 đến 18-07-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1102",
+          "Tổng số sản phẩm mới đã đăng": "18",
+          "Tổng số người ghé thăm": "427",
+          "Tổng số thư hỏi hàng": "37",
+          "Tổng số thư hỏi hàng đã trả lời": "37",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,3h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.95%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "59"
+        }
+      },
+      {
+        "week": "05-07-2026 đến 11-07-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1084",
+          "Tổng số sản phẩm mới đã đăng": "9",
+          "Tổng số người ghé thăm": "492",
+          "Tổng số thư hỏi hàng": "46",
+          "Tổng số thư hỏi hàng đã trả lời": "46",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,06h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "99.03%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "63"
+        }
+      },
+      {
+        "week": "21-06-2026 đến 27-06-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1075",
+          "Tổng số sản phẩm mới đã đăng": "1",
+          "Tổng số người ghé thăm": "541",
+          "Tổng số thư hỏi hàng": "57",
+          "Tổng số thư hỏi hàng đã trả lời": "57",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,42h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "99%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "65"
+        }
+      },
+      {
+        "week": "14-06-2026 đến 20-06-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1074",
+          "Tổng số sản phẩm mới đã đăng": "16",
+          "Tổng số người ghé thăm": "517",
+          "Tổng số thư hỏi hàng": "58",
+          "Tổng số thư hỏi hàng đã trả lời": "58",
+          "Tổng số lượt đã báo giá RFQ": "3",
+          "Số lượt báo giá RFQ còn lại": "19",
+          "Thời gian phản hồi tin nhắn trung bình": "1,17h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "67"
+        }
+      },
+      {
+        "week": "30-05-2026 đến 06-06-2026",
+        "metrics": {
+          "Số sao": "3",
+          "Tổng số sản phẩm": "1058",
+          "Tổng số sản phẩm mới đã đăng": "15",
+          "Tổng số người ghé thăm": "479",
+          "Tổng số thư hỏi hàng": "43",
+          "Tổng số thư hỏi hàng đã trả lời": "43",
+          "Tổng số lượt đã báo giá RFQ": "2",
+          "Số lượt báo giá RFQ còn lại": "18",
+          "Thời gian phản hồi tin nhắn trung bình": "1,07h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "99,43%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "65"
+        }
+      },
+      {
+        "week": "17-05-2026 đến 23-05-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "1043",
+          "Tổng số sản phẩm mới đã đăng": "30",
+          "Tổng số người ghé thăm": "673",
+          "Tổng số thư hỏi hàng": "51",
+          "Tổng số thư hỏi hàng đã trả lời": "51",
+          "Tổng số lượt đã báo giá RFQ": "0",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "1,52h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.95%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "67"
+        }
+      },
+      {
+        "week": "03-05-2026 đến 09-05-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "1013",
+          "Tổng số sản phẩm mới đã đăng": "51",
+          "Tổng số người ghé thăm": "507",
+          "Tổng số thư hỏi hàng": "48",
+          "Tổng số thư hỏi hàng đã trả lời": "48",
+          "Tổng số lượt đã báo giá RFQ": "5",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "2,01h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "97.44%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "63"
+        }
+      },
+      {
+        "week": "26-4-2026 đến 2-05-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "962",
+          "Tổng số sản phẩm mới đã đăng": "47",
+          "Tổng số người ghé thăm": "554",
+          "Tổng số thư hỏi hàng": "48",
+          "Tổng số thư hỏi hàng đã trả lời": "48",
+          "Tổng số lượt đã báo giá RFQ": "5",
+          "Số lượt báo giá RFQ còn lại": "15",
+          "Thời gian phản hồi tin nhắn trung bình": "1,96h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "97.86%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "62"
+        }
+      },
+      {
+        "week": "19-4-2026 đến 25-04-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "915",
+          "Tổng số sản phẩm mới đã đăng": "0",
+          "Tổng số người ghé thăm": "599",
+          "Tổng số thư hỏi hàng": "61",
+          "Tổng số thư hỏi hàng đã trả lời": "58",
+          "Tổng số lượt đã báo giá RFQ": "6",
+          "Số lượt báo giá RFQ còn lại": "17",
+          "Thời gian phản hồi tin nhắn trung bình": "1,47h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "97.77%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "56"
+        }
+      },
+      {
+        "week": "12-4-2026 đến 18-4-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "915",
+          "Tổng số sản phẩm mới đã đăng": "62",
+          "Tổng số người ghé thăm": "603",
+          "Tổng số thư hỏi hàng": "53",
+          "Tổng số thư hỏi hàng đã trả lời": "53",
+          "Tổng số lượt đã báo giá RFQ": "6",
+          "Số lượt báo giá RFQ còn lại": "17",
+          "Thời gian phản hồi tin nhắn trung bình": "1,36h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "98.08%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "59"
+        }
+      },
+      {
+        "week": "29-3-2026 đến 4-4-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "853",
+          "Tổng số sản phẩm mới đã đăng": "40",
+          "Tổng số người ghé thăm": "458",
+          "Tổng số thư hỏi hàng": "41",
+          "Tổng số thư hỏi hàng đã trả lời": "41",
+          "Tổng số lượt đã báo giá RFQ": "1",
+          "Số lượt báo giá RFQ còn lại": "19",
+          "Thời gian phản hồi tin nhắn trung bình": "0,72h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "99.31%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "49"
+        }
+      },
+      {
+        "week": "15-3-2026 đến 21-3-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "813",
+          "Tổng số sản phẩm mới đã đăng": "37",
+          "Tổng số người ghé thăm": "580",
+          "Tổng số thư hỏi hàng": "41",
+          "Tổng số thư hỏi hàng đã trả lời": "37",
+          "Tổng số lượt đã báo giá RFQ": "9",
+          "Số lượt báo giá RFQ còn lại": "11",
+          "Thời gian phản hồi tin nhắn trung bình": "0,52h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "46"
+        }
+      },
+      {
+        "week": "8-3-2026 đến 14-3-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "776",
+          "Tổng số sản phẩm mới đã đăng": "29",
+          "Tổng số người ghé thăm": "440",
+          "Tổng số thư hỏi hàng": "44",
+          "Tổng số thư hỏi hàng đã trả lời": "44",
+          "Tổng số lượt đã báo giá RFQ": "6",
+          "Số lượt báo giá RFQ còn lại": "14",
+          "Thời gian phản hồi tin nhắn trung bình": "0,58h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "40"
+        }
+      },
+      {
+        "week": "1-3-2026 đến 7-3-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "747",
+          "Tổng số sản phẩm mới đã đăng": "30",
+          "Tổng số người ghé thăm": "548",
+          "Tổng số thư hỏi hàng": "48",
+          "Tổng số thư hỏi hàng đã trả lời": "48",
+          "Tổng số lượt đã báo giá RFQ": "7",
+          "Số lượt báo giá RFQ còn lại": "20",
+          "Thời gian phản hồi tin nhắn trung bình": "0,59",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "40"
+        }
+      },
+      {
+        "week": "22-2-2026 đến 28-2-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "717",
+          "Tổng số sản phẩm mới đã đăng": "34",
+          "Tổng số người ghé thăm": "645",
+          "Tổng số thư hỏi hàng": "53",
+          "Tổng số thư hỏi hàng đã trả lời": "53",
+          "Tổng số lượt đã báo giá RFQ": "3",
+          "Số lượt báo giá RFQ còn lại": "17",
+          "Thời gian phản hồi tin nhắn trung bình": "0,44 h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "33"
+        }
+      },
+      {
+        "week": "15-2-2026 đến 21-2-2026",
+        "metrics": {
+          "Số sao": "4",
+          "Tổng số sản phẩm": "683",
+          "Tổng số sản phẩm mới đã đăng": "462",
+          "Tổng số người ghé thăm": "324",
+          "Tổng số thư hỏi hàng": "35",
+          "Tổng số thư hỏi hàng đã trả lời": "35",
+          "Tổng số lượt đã báo giá RFQ": "19",
+          "Số lượt báo giá RFQ còn lại": "18",
+          "Thời gian phản hồi tin nhắn trung bình": "0,26 h",
+          "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%",
+          "Số lượng Super Product (win)": "0",
+          "Số lượng Top Product (tiềm năng)": "33"
+        }
+      }
+    ],
+    "raw": [
+      [
+        "Khung thời gian hoạt động",
+        "Tuần ",
+        "23-08-2026 đến 29-08-2026",
+        "09-08-2026 đến 15-08-2026",
+        "02-08-2026 đến 08-08-2026",
+        "26-07-2026 đến 01-08-2026",
+        "19-07-2026 đến 25-07-2026",
+        "12-07-2026 đến 18-07-2026",
+        "05-07-2026 đến 11-07-2026",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026",
+        "30-05-2026 đến 06-06-2026",
+        "17-05-2026 đến 23-05-2026",
+        "03-05-2026 đến 09-05-2026",
+        "26-4-2026 đến 2-05-2026",
+        "19-4-2026 đến 25-04-2026",
+        "12-4-2026 đến 18-4-2026",
+        "29-3-2026 đến 4-4-2026",
+        "15-3-2026 đến 21-3-2026",
+        "8-3-2026 đến 14-3-2026",
+        "1-3-2026 đến 7-3-2026",
+        "22-2-2026 đến 28-2-2026",
+        "15-2-2026 đến 21-2-2026"
+      ],
+      [
+        null,
+        "Số sao",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "3",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4",
+        "4"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm",
+        "1114",
+        "1127",
+        "1124",
+        "1114",
+        "1113",
+        "1102",
+        "1084",
+        "1075",
+        "1074",
+        "1058",
+        "1043",
+        "1013",
+        "962",
+        "915",
+        "915",
+        "853",
+        "813",
+        "776",
+        "747",
+        "717",
+        "683"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm mới đã đăng",
+        "-13",
+        "3",
+        "10",
+        "1",
+        "11",
+        "18",
+        "9",
+        "1",
+        "16",
+        "15",
+        "30",
+        "51",
+        "47",
+        "0",
+        "62",
+        "40",
+        "37",
+        "29",
+        "30",
+        "34",
+        "462"
+      ],
+      [
+        null,
+        "Tổng số người ghé thăm",
+        "668",
+        "422",
+        "435",
+        "360",
+        "324",
+        "427",
+        "492",
+        "541",
+        "517",
+        "479",
+        "673",
+        "507",
+        "554",
+        "599",
+        "603",
+        "458",
+        "580",
+        "440",
+        "548",
+        "645",
+        "324"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng",
+        "62",
+        "31",
+        "27",
+        "29",
+        "23",
+        "37",
+        "46",
+        "57",
+        "58",
+        "43",
+        "51",
+        "48",
+        "48",
+        "61",
+        "53",
+        "41",
+        "41",
+        "44",
+        "48",
+        "53",
+        "35"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng đã trả lời",
+        "62",
+        "31",
+        "27",
+        "29",
+        "23",
+        "37",
+        "46",
+        "57",
+        "58",
+        "43",
+        "51",
+        "48",
+        "48",
+        "58",
+        "53",
+        "41",
+        "37",
+        "44",
+        "48",
+        "53",
+        "35"
+      ],
+      [
+        null,
+        "Tổng số lượt đã báo giá RFQ",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "3",
+        "2",
+        "0",
+        "5",
+        "5",
+        "6",
+        "6",
+        "1",
+        "9",
+        "6",
+        "7",
+        "3",
+        "19"
+      ],
+      [
+        null,
+        "Số lượt báo giá RFQ còn lại",
+        "19",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "19",
+        "18",
+        "20",
+        "20",
+        "15",
+        "17",
+        "17",
+        "19",
+        "11",
+        "14",
+        "20",
+        "17",
+        "18"
+      ],
+      [
+        null,
+        "Thời gian phản hồi tin nhắn trung bình",
+        "2,44h",
+        "1,7h",
+        "1,96h",
+        "2,27h",
+        "2,33h",
+        "2,3h",
+        "2,06h",
+        "1,42h",
+        "1,17h",
+        "1,07h",
+        "1,52h",
+        "2,01h",
+        "1,96h",
+        "1,47h",
+        "1,36h",
+        "0,72h",
+        "0,52h",
+        "0,58h",
+        "0,59",
+        "0,44 h",
+        "0,26 h"
+      ],
+      [
+        null,
+        "Tỉ lệ tin nhắn được phản hồi trong 24h",
+        "95.54%",
+        "98.25%",
+        "98.37%",
+        "98.54%",
+        "98.77%",
+        "98.95%",
+        "99.03%",
+        "99%",
+        "100%",
+        "99,43%",
+        "98.95%",
+        "97.44%",
+        "97.86%",
+        "97.77%",
+        "98.08%",
+        "99.31%",
+        "100%",
+        "100%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      [
+        null,
+        "Số lượng Super Product (win)",
+        "3",
+        "3",
+        "2",
+        "2",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượng Top Product (tiềm năng)",
+        "57",
+        "55",
+        "55",
+        "57",
+        "56",
+        "59",
+        "63",
+        "65",
+        "67",
+        "65",
+        "67",
+        "63",
+        "62",
+        "56",
+        "59",
+        "49",
+        "46",
+        "40",
+        "40",
+        "33",
+        "33"
+      ],
+      [
+        "Kế hoạch hành động cho tuần tiếp theo",
+        "Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày"
+      ],
+      [
+        null,
+        "Tối ưu hoá các chỉ số",
+        "Xử lý sản phẩm rủi ro; tăng traffic tại thị trường phát triển; báo RFQ; cải thiện chuyển đổi và tạo đơn Trade Assurance",
+        "Tăng traffic bằng quảng cáo và RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Xử lý sản phẩm rủi ro; tăng traffic bằng quảng cáo và RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm rủi ro; tăng traffic bằng quảng cáo và RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm rủi ro; tăng traffic bằng quảng cáo và RFQ; nâng sản phẩm lên Top/Super Product",
+        "Báo RFQ; tối ưu sản phẩm; tăng traffic và cải thiện tỷ lệ chuyển đổi; tạo đơn Trade Assurance",
+        "Báo RFQ; Tối ưu sản phẩm; Tăng traffic và cải thiện tỉ lệ chuyển đổi",
+        "Báo thêm RFQ",
+        "Báo thêm RFQ",
+        "Báo thêm RFQ",
+        "Làm nhiệm vụ để tăng thêm người ghé thăm",
+        "Làm nhiệm vụ để tăng thêm người ghé thăm",
+        "Thiếu GPSR chứng chỉ để hiển thị ở Châu Âu",
+        "Sửa sản phẩm >5.0",
+        "update các chứng chỉ như Iso nếu có để thêm vào sản phẩm khi đăng bài",
+        "Sửa lại các điểm pis của sản phẩm >5.2",
+        "Sửa lại các điểm pis của sản phẩm >5.2",
+        "Sửa lại các điểm pis của sản phẩm >5.2",
+        "Đăng 1000 sản phẩm để 5 sao",
+        "Đăng 1000 sản phẩm để 5 sao",
+        "Đăng 1000 sản phẩm để 5 sao"
+      ],
+      [
+        null,
+        null,
+        "Báo cáo chẩn đoán ghi nhận 1.111/1.113 sản phẩm có rủi ro; chưa phát sinh đơn và GMV Trade Assurance; traffic tập trung ở thị trường đang phát triển; Marketing cần thêm khách để lên hạng và quyền lợi RFQ chưa được khai thác tốt",
+        "Chưa có GMV Trade Assurance; Marketing có 709 khách, còn thiếu 291 khách để đạt mốc tiếp theo; chưa sử dụng quyền lợi RFQ; cần tiếp tục tăng traffic tại các thị trường phát triển và cải thiện chuyển đổi đơn hàng",
+        "Có 1.111/1.113 sản phẩm được báo cáo có rủi ro; chưa có đơn Trade Assurance, GMV và chuyển đổi thanh toán; Marketing còn thiếu 352 khách; traffic chưa tập trung vào thị trường phát triển; chưa tận dụng RFQ, tài khoản phụ và công cụ AI",
+        "1.111/1.113 sản phẩm được báo cáo có rủi ro; chưa có đơn Trade Assurance, GMV và chuyển đổi thanh toán; Marketing còn thiếu 352 khách; traffic tập trung ở thị trường đang phát triển; RFQ, tài khoản phụ và điểm AI chưa được tận dụng",
+        "1075 sản phẩm được báo cáo có rủi ro chưa có GPSR, tái ký năm 2 sẽ miễn phí; chưa có đơn Trade Assurance và GMV; thiếu 238 lượt khách để nâng sao Marketing; traffic tập trung nhiều ở thị trường đang phát triển, cần tăng traffic từ Mỹ và châu Âu",
+        "1075 sản phẩm được báo cáo có rủi ro chưa có GPSR, tái ký năm 2 sẽ miễn phí; chưa có đơn Trade Assurance và GMV; thiếu 238 lượt khách để nâng sao Marketing; traffic tập trung nhiều ở thị trường đang phát triển, cần tăng traffic từ Mỹ và châu Âu",
+        "Tối ưu 1075 sản phẩm rủi ro; Cải thiện tỉ lệ chuyển đổi thanh toán; Tăng 238 lượt khách để nâng sao Marketing; Điều chỉnh traffic hướng tới Mỹ và châu Âu",
+        "Thanh toán TA 3 đơn mẫu",
+        "Thanh toán TA 2 đơn mẫu",
+        "Thanh toán TA",
+        "Làm nhiệm vụ thanh toán TA để tăng sao",
+        "Báo RFQ để táng người ghé thăm",
+        "Thanh toán qua Alibaba vì hệ thống nhận thấy có 240 đơn hàng tiềm năng nhưng không được thanh toán qua Alibaba",
+        "Chạy quảng cáo, hoặc mua từ khoá quảng cáo, để tiếm cận nhiều khách hơn ( nên đạt được 1000 Sp hãy triển khai chiến dịch)",
+        "Chạy quảng cáo, hoặc mua từ khoá quảng cáo, để tiếm cận nhiều khách hơn ( nên đạt được 1000 Sp hãy triển khai chiến dịch)",
+        "Chạy quảng cáo, hoặc mua từ khoá quảng cáo, để tiếm cận nhiều khách hơn ( nên đạt được 1000 Sp hãy triển khai chiến dịch)",
+        "Chạy quảng cáo, hoặc mua từ khoá quảng cáo, để tiếm cận nhiều khách hơn ( nên đạt được 1000 Sp hãy triển khai chiến dịch)",
+        "Chạy quảng cáo, hoặc mua từ khoá quảng cáo, để tiếm cận nhiều khách hơn ( nên đạt được 1000 Sp hãy triển khai chiến dịch)",
+        "Chưa sửa điểm pis sản phẩm theo thang điểm mới, cần sửa điểm từ sản phẩm Top product trước >5,2 để tránh rớt điểm về sau",
+        "Khách hàng >L2+ vẫn đang còn thấp",
+        "Chỉnh sửa Sản phẩm Top lên Super (mục tiêu 1)"
+      ],
+      [
+        null,
+        null,
+        null,
+        "Tái đăng ký sớm, tránh để quá hạn gian hàng, còn 2 tháng nữa là hết hạn gian hàng",
+        "Đề xuất miễn phí ship mẫu với các đối tác lớn, check với quy mô thương mại của họ",
+        "Đề xuất miễn phí ship mẫu với các đối tác lớn, check với quy mô thương mại của họ",
+        "Đề xuất gửi mẫu miễn phí cho các đối tác có năng lực nhập khẩu lớn",
+        null,
+        null,
+        null,
+        "Làm nhiệm vụ sàn",
+        "Làm nhiệm vụ sàn",
+        null,
+        null,
+        "Tỷ lệ traffic từ Mỹ vẫn thấp so với Trung Bình ngành, cần tập trung vào Mỹ nhiều hơn, ",
+        "Đăng sản phẩm lên 5 sao",
+        "Thanh toán qua Alibaba",
+        "Thanh toán qua Alibaba",
+        "Triển khai nhiều đơn mẫu hoặc thanh toán qua Alibaba, để lấy review, giúp khách đến sau tin tưởng hơn",
+        "Triển khai nhiều đơn mẫu hoặc thanh toán qua Alibaba, để lấy review, giúp khách đến sau tin tưởng hơn",
+        "Phân tích sâu hơn về các sản phẩm và từ khóa hot ở thị trường Hoa kỳ dựa vào RFQ hay Keyword inex trong tab phân tích từ khóa của gian hàng để đăng bài thu hút thêm buyer Mỹ",
+        "Thiếu chứng chỉ GPRS để bán ở Châu Âu (chứng chỉ này Alibaba có cấp, em vẫn đang làm việc)",
+        "Cập nhật chỉnh sửa giấy tờ để sản phẩm chất lượng hơn, sàn đang ưu tiên các sản phẩm đầy đủ thông tin"
+      ],
+      [
+        null,
+        null,
+        null,
+        "Đăng thêm sản phẩm",
+        "Tái đăng ký sớm, tránh để quá hạn gian hàng, còn 2 tháng nữa là hết hạn gian hàng",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Sàn nâng số lượng visit cho toàn bộ các gian hàng ngành này, vì độ hot của sản phẩm và nhu cầu của thị trường tăng cao, cần thêm sản phẩm hoặc thêm quảng cáo để có thể đạt 5 sao",
+        null,
+        null,
+        "Đăng thêm sản phẩm để đạt 1000 sản phẩm",
+        null,
+        "Đăng sản phẩm lên 5 sao",
+        "Đăng sản phẩm lên 5 sao",
+        null,
+        null,
+        "Sửa thông tin các sản phẩm Basic",
+        "Pakistan và Banglades đang chiếm nhiều traffic lớn, nhưng khách chất lượng ngành này là ở Hoa Kỳ, Đức và Trung Quốc",
+        "Duy trì tốc độ và tỷ lệ phản hồi 100%"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Tập trung đăng sản phẩm hướng vào thị trường Mỹ",
+        null,
+        null,
+        null,
+        null,
+        "Điểm của sản phẩm trung bình là 4.0 nên chất lượng bài đăng sản phẩm chưa tốt, cần cập nhật điểm sản phẩm lên 5.0",
+        "Thanh toán qua Alibaba đơn đầu tiên, giúp gian hàng có đánh giá"
+      ],
+      [
+        "Đánh giá sơ bộ",
+        "Vấn đề ưu tiên xử lý",
+        null,
+        "Báo RFQ; tối ưu sản phẩm; tăng traffic và cải thiện tỷ lệ chuyển đổi; tạo đơn Trade Assurance",
+        "Báo RFQ; tối ưu sản phẩm; tăng traffic và cải thiện tỷ lệ chuyển đổi; tạo đơn Trade Assurance",
+        "Báo RFQ; tối ưu sản phẩm; tăng traffic và cải thiện tỷ lệ chuyển đổi; tạo đơn Trade Assurance",
+        "Báo RFQ; tối ưu sản phẩm; tăng traffic và cải thiện tỷ lệ chuyển đổi; tạo đơn Trade Assurance",
+        "Báo RFQ; tối ưu sản phẩm; tăng traffic và cải thiện tỷ lệ chuyển đổi; tạo đơn Trade Assurance",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm sản phẩm có nhu cầu cao và Thanh toán qua TA",
+        "Đăng thêm sản phẩm có nhu cầu cao và Thanh toán qua TA",
+        "Đăng thêm sản phẩm có nhu cầu cao và Thanh toán qua TA",
+        "Làm nhiệm vụ thanh toán TA và đăng thêm sản phẩm, làm nhiệm vụ gian hàng để tăng lượt ghé thăm",
+        "Chỉ còn thiếu gần 100 visit gian hàng trong tháng nữa sẽ đạt 5 sao, đăng thêm sản phẩm, làm nhiệm vụ, báo RFQ để đạt 5 sao trong tháng này",
+        "Đăng thêm sản phẩm để đạt 1000 sản phẩm",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Gian hàng đang lấy traffic tự nhiên rất tốt, chỉ cần đăng thêm sản phẩm mới mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm High Demand mỗi ngày",
+        "Tập trung  lại các điểm pis của sản phẩm >5.2, và các sản phẩm potential",
+        "Sửa lại các điểm pis của sản phẩm >5.2, và các sản phẩm basic",
+        "Sửa điểm pis của sản phẩm",
+        "Ưu tiên sửa điểm Pis của sản phẩm",
+        "Tăng sản phẩm Super (sản phẩm win) lên 1 bằng cách chỉnh sửa sản phẩm Potential, 4 sao đơn hỏi hàng nhiều"
+      ],
+      [
+        null,
+        "Báo cáo từ AI"
+      ]
+    ]
+  },
+  "visitor": {
+    "current_summary": {
+      "Số bản ghi khách truy cập": [
+        "218",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "55",
+        "L0",
+        "Người mua đã đăng ký",
+        "114"
+      ],
+      "Tổng PV trên gian hàng": [
+        "585",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "19"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "387",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "72"
+      ],
+      "Số visitor có keyword": [
+        "146",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "8"
+      ],
+      "Số buyer L1+": [
+        "104",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "5"
+      ],
+      "Số trang nguồn đã lấy": [
+        "22",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "previous_summary": {
+      "Số bản ghi khách truy cập": [
+        "218",
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "46",
+        "L0",
+        "Người mua đã đăng ký",
+        "110"
+      ],
+      "Tổng PV trên gian hàng": [
+        "629",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "35"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "448",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        "62"
+      ],
+      "Số visitor có keyword": [
+        "175",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        "9"
+      ],
+      "Số buyer L1+": [
+        "108",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        "2"
+      ],
+      "Số trang nguồn đã lấy": [
+        "22",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ]
+    },
+    "current_countries": [
+      {
+        "Quốc gia / vùng": "Ả Rập Xê-út",
+        "Số visitor": "4",
+        "Tổng PV": "25",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "0",
+        "L1": "0",
+        "L2": "4",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "4"
+      },
+      {
+        "Quốc gia / vùng": "Afghanistan",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Ai Cập",
+        "Số visitor": "6",
+        "Tổng PV": "15",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "4",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Albania",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Algeria",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Argentina",
+        "Số visitor": "3",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "3",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ấn Độ",
+        "Số visitor": "21",
+        "Tổng PV": "43",
+        "Visitor có keyword": "19",
+        "Bản ghi keyword chính xác": "57",
+        "L0": "8",
+        "L1": "3",
+        "L2": "9",
+        "L3": "0",
+        "L4": "1",
+        "L1+": "13"
+      },
+      {
+        "Quốc gia / vùng": "Bangladesh",
+        "Số visitor": "44",
+        "Tổng PV": "87",
+        "Visitor có keyword": "30",
+        "Bản ghi keyword chính xác": "78",
+        "L0": "23",
+        "L1": "4",
+        "L2": "11",
+        "L3": "3",
+        "L4": "3",
+        "L1+": "21"
+      },
+      {
+        "Quốc gia / vùng": "Benin",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Bolivia",
+        "Số visitor": "4",
+        "Tổng PV": "4",
+        "Visitor có keyword": "4",
+        "Bản ghi keyword chính xác": "12",
+        "L0": "2",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Botswana",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bờ Biển Ngà",
+        "Số visitor": "2",
+        "Tổng PV": "5",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "0",
+        "L1": "1",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Brazil",
+        "Số visitor": "5",
+        "Tổng PV": "9",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "4",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Bulgaria",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Burkina Faso",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "Số visitor": "2",
+        "Tổng PV": "8",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "7",
+        "L0": "0",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Campuchia",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Chile",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Colombia",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "1",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Cộng hòa Dân chủ Congo",
+        "Số visitor": "2",
+        "Tổng PV": "5",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "1",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Đài Loan",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ethiopia",
+        "Số visitor": "1",
+        "Tổng PV": "7",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Hà Lan",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Hoa Kỳ",
+        "Số visitor": "18",
+        "Tổng PV": "37",
+        "Visitor có keyword": "11",
+        "Bản ghi keyword chính xác": "30",
+        "L0": "8",
+        "L1": "3",
+        "L2": "7",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "10"
+      },
+      {
+        "Quốc gia / vùng": "Indonesia",
+        "Số visitor": "15",
+        "Tổng PV": "100",
+        "Visitor có keyword": "10",
+        "Bản ghi keyword chính xác": "24",
+        "L0": "10",
+        "L1": "2",
+        "L2": "3",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "5"
+      },
+      {
+        "Quốc gia / vùng": "Iran",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Iraq",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Kenya",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "5",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Kyrgyzstan",
+        "Số visitor": "1",
+        "Tổng PV": "8",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Liberia",
+        "Số visitor": "2",
+        "Tổng PV": "3",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "1",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Libyan Arab Jamahiriya",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Mali",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "5",
+        "L0": "0",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Mauritania",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "0",
+        "L1": "0",
+        "L2": "0",
+        "L3": "1",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Mauritius",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Mexico",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Mozambique",
+        "Số visitor": "2",
+        "Tổng PV": "7",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Myanmar",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Nam Phi",
+        "Số visitor": "2",
+        "Tổng PV": "5",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "0",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Nepal",
+        "Số visitor": "4",
+        "Tổng PV": "8",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Niger",
+        "Số visitor": "1",
+        "Tổng PV": "11",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Nigeria",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "0",
+        "L1": "0",
+        "L2": "0",
+        "L3": "1",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Pakistan",
+        "Số visitor": "21",
+        "Tổng PV": "93",
+        "Visitor có keyword": "14",
+        "Bản ghi keyword chính xác": "34",
+        "L0": "15",
+        "L1": "1",
+        "L2": "5",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "6"
+      },
+      {
+        "Quốc gia / vùng": "Paraguay",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Philippines",
+        "Số visitor": "3",
+        "Tổng PV": "3",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Senegal",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Seychelles",
+        "Số visitor": "1",
+        "Tổng PV": "3",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Sri Lanka",
+        "Số visitor": "6",
+        "Tổng PV": "8",
+        "Visitor có keyword": "4",
+        "Bản ghi keyword chính xác": "13",
+        "L0": "3",
+        "L1": "1",
+        "L2": "1",
+        "L3": "1",
+        "L4": "0",
+        "L1+": "3"
+      },
+      {
+        "Quốc gia / vùng": "Thái Lan",
+        "Số visitor": "1",
+        "Tổng PV": "2",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "3",
+        "L0": "0",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Thổ Nhĩ Kỳ",
+        "Số visitor": "3",
+        "Tổng PV": "7",
+        "Visitor có keyword": "3",
+        "Bản ghi keyword chính xác": "9",
+        "L0": "2",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Thụy Sĩ",
+        "Số visitor": "2",
+        "Tổng PV": "4",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "0",
+        "L1": "1",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Trung Quốc",
+        "Số visitor": "5",
+        "Tổng PV": "16",
+        "Visitor có keyword": "4",
+        "Bản ghi keyword chính xác": "9",
+        "L0": "5",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Ukraina",
+        "Số visitor": "1",
+        "Tổng PV": "1",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng": "Venezuela",
+        "Số visitor": "3",
+        "Tổng PV": "8",
+        "Visitor có keyword": "2",
+        "Bản ghi keyword chính xác": "6",
+        "L0": "1",
+        "L1": "0",
+        "L2": "2",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng": "Việt Nam",
+        "Số visitor": "2",
+        "Tổng PV": "2",
+        "Visitor có keyword": "0",
+        "Bản ghi keyword chính xác": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "1",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng": "Zimbabwe",
+        "Số visitor": "1",
+        "Tổng PV": "4",
+        "Visitor có keyword": "1",
+        "Bản ghi keyword chính xác": "4",
+        "L0": "0",
+        "L1": "0",
+        "L2": "0",
+        "L3": "1",
+        "L4": "0",
+        "L1+": "1"
+      }
+    ],
+    "current_exact_keywords": [
+      {
+        "keyword_exact": "led bulb pcb board",
+        "occurrences": 3,
+        "pv": 74,
+        "levels": {
+          "L2": 3
+        },
+        "countries": {
+          "Indonesia": 3
+        }
+      },
+      {
+        "keyword_exact": "led ac part",
+        "occurrences": 2,
+        "pv": 62,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Indonesia": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulbs",
+        "occurrences": 2,
+        "pv": 62,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Indonesia": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulbsled bulb pcb board",
+        "occurrences": 1,
+        "pv": 51,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb parts 12 watt chaina",
+        "occurrences": 1,
+        "pv": 23,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "led driver pcb board",
+        "occurrences": 2,
+        "pv": 21,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Ả Rập Xê-út": 2
+        }
+      },
+      {
+        "keyword_exact": "led e27",
+        "occurrences": 2,
+        "pv": 21,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Ả Rập Xê-út": 2
+        }
+      },
+      {
+        "keyword_exact": "led light driver 20 word",
+        "occurrences": 2,
+        "pv": 21,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Ả Rập Xê-út": 2
+        }
+      },
+      {
+        "keyword_exact": "watch",
+        "occurrences": 5,
+        "pv": 16,
+        "levels": {
+          "L1": 1,
+          "L2": 3,
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1,
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 2,
+          "Bangladesh": 1,
+          "Ai Cập": 1
+        }
+      },
+      {
+        "keyword_exact": "5w led bulb",
+        "occurrences": 2,
+        "pv": 15,
+        "levels": {
+          "L0": 1,
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1,
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "leed bulb",
+        "occurrences": 1,
+        "pv": 15,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ả Rập Xê-út": 1
+        }
+      },
+      {
+        "keyword_exact": "lifepo4 battery cells",
+        "occurrences": 1,
+        "pv": 14,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "lifepo4 battery pack 48v",
+        "occurrences": 1,
+        "pv": 14,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "osaka 12w led bulb",
+        "occurrences": 1,
+        "pv": 14,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "prismatic lifepo4 battery",
+        "occurrences": 1,
+        "pv": 14,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "5w led bulb parts",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "alat pertukangan dari indonesia",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "kerajinan tangan dari rotan indonesia",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "led 5v",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "singapura dob",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "ampoule",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Niger": 1
+        }
+      },
+      {
+        "keyword_exact": "power bank 40000 amh pour tlphone",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Niger": 1
+        }
+      },
+      {
+        "keyword_exact": "power bank pour tlphone",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Niger": 1
+        }
+      },
+      {
+        "keyword_exact": "sacs au dos scolaire enfant",
+        "occurrences": 1,
+        "pv": 11,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Niger": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb raw material",
+        "occurrences": 4,
+        "pv": 10,
+        "levels": {
+          "L0": 2,
+          "L2": 2
+        },
+        "countries": {
+          "Pakistan": 1,
+          "Ấn Độ": 1,
+          "Ai Cập": 1,
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "12w led bulb e27",
+        "occurrences": 2,
+        "pv": 10,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Trung Quốc": 2
+        }
+      },
+      {
+        "keyword_exact": "generator petrol",
+        "occurrences": 1,
+        "pv": 10,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "smart lcd tv",
+        "occurrences": 1,
+        "pv": 10,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "smart lcd tv 32",
+        "occurrences": 1,
+        "pv": 10,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "changing offer",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 2
+        }
+      },
+      {
+        "keyword_exact": "hypoxie rsine dtanchit",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "jeans pour hommes",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "ppr",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 2
+        }
+      },
+      {
+        "keyword_exact": "soulier seconde main",
+        "occurrences": 2,
+        "pv": 8,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "chint breaker",
+        "occurrences": 1,
+        "pv": 8,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "it",
+        "occurrences": 1,
+        "pv": 8,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "mavic pro drone",
+        "occurrences": 1,
+        "pv": 8,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Kyrgyzstan": 1
+        }
+      },
+      {
+        "keyword_exact": "pvc tape making machine",
+        "occurrences": 1,
+        "pv": 8,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb",
+        "occurrences": 3,
+        "pv": 7,
+        "levels": {
+          "L0": 2,
+          "L2": 1
+        },
+        "countries": {
+          "Sri Lanka": 1,
+          "Hoa Kỳ": 1,
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "cfl bulb",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "compact fluorescent light",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "grill ventilation for restaurant",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "in pakistan products",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "iron square box",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "palmier",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "plastic plants",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "ventilation smoke",
+        "occurrences": 1,
+        "pv": 7,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ethiopia": 1
+        }
+      },
+      {
+        "keyword_exact": "mens jeans",
+        "occurrences": 3,
+        "pv": 6,
+        "levels": {
+          "L0": 3
+        },
+        "countries": {
+          "Pakistan": 1,
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulb housing raw material",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb plastic cover",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "vivo y20 display crown",
+        "occurrences": 1,
+        "pv": 6,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "skd led bulb",
+        "occurrences": 3,
+        "pv": 5,
+        "levels": {
+          "L0": 2,
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1,
+          "Hoa Kỳ": 1,
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "led dob bulb skd",
+        "occurrences": 2,
+        "pv": 5,
+        "levels": {
+          "L3": 1,
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1,
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "30 led",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Các Tiểu Vương quốc Ả Rập Thống nhất": 1
+        }
+      },
+      {
+        "keyword_exact": "disfraz de robot",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "lampada led",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword_exact": "lampu sorot led",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "lampu sorot led kamera",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "laser modelo ds1000rgb mk3",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "pcb lampu led",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "psb light",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "robot costume",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "topi",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "18w dob single capacitor",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulb chip 12w",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L2": 1,
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1,
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb raw material b22 cap in zhongshan",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Nepal": 2
+        }
+      },
+      {
+        "keyword_exact": "led light",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L2": 1,
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1,
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "leds",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Nepal": 2
+        }
+      },
+      {
+        "keyword_exact": "1200 mh 37v battery",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "5kw generators",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "9 what do bp cb",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "9 what do bp cb led",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "9 what dob p cb led driver on board",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "banana chips production machine",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "bote densemble doutils de mcanicien",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "elidi light 100",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "generators",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "headlamps",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "injecteurs toyota hilux 2kd",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "lampu led",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "laptop board chip in shenzhen",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb dob",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb holder",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb housing",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led driver power supply",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "lmpada com pilhas",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mozambique": 1
+        }
+      },
+      {
+        "keyword_exact": "peinture maison",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "robinet de cuisine",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "robinet intelligent",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "sacs de taille",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "semiconductor",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "semiconductor electrical board",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "socket parts",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "sodium cyanide",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Zimbabwe": 1
+        }
+      },
+      {
+        "keyword_exact": "to be 20 c 8 watt led pcb",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb skd",
+        "occurrences": 3,
+        "pv": 3,
+        "levels": {
+          "L2": 3
+        },
+        "countries": {
+          "Bangladesh": 3
+        }
+      },
+      {
+        "keyword_exact": "18w led bulb",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "2 pin plug",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "bis led",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "endstriyel ultrasonik nemlendirici",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "hand touch screen gps",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Botswana": 1
+        }
+      },
+      {
+        "keyword_exact": "kawasaki ninja 500 se",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Botswana": 1
+        }
+      },
+      {
+        "keyword_exact": "kawasaki ninja hybrid 7",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Botswana": 1
+        }
+      },
+      {
+        "keyword_exact": "led 18w",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led ampl",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "led ampl retim",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "led filament",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led module 12v",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "mobile charging pcb",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "mr16 skd",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "pcb led",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "rain jacket waterproof",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "raincoat imported",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "royal",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "souk oda panelleri",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "souk oda pu 80mm paneli",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "telephone occasion en gros",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "vantilatr",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "348link httpswwwalibabacomshowroommotorcycletires325169html",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "bag for women",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "cubierta para parabrisas de moto",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "fomex",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "itel 2160 mobile tlphone",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Benin": 2
+        }
+      },
+      {
+        "keyword_exact": "jet fan turbo double battery",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "jet fan turbo double head",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulb driver",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulb driver and parts",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "led bulb e27 b22",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "led light skd",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Bangladesh": 2
+        }
+      },
+      {
+        "keyword_exact": "llantas para moto",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "parabrisas de proteccin",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "taladro de impacto",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Bolivia": 2
+        }
+      },
+      {
+        "keyword_exact": "waterproof led outdoor wall lamp villa",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Benin": 2
+        }
+      },
+      {
+        "keyword_exact": "wireless gps tracker and cut off and cut on",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L2": 2
+        },
+        "countries": {
+          "Hoa Kỳ": 2
+        }
+      },
+      {
+        "keyword_exact": "womens intimates",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Bangladesh": 1,
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "10watts bulb",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Nigeria": 1
+        }
+      },
+      {
+        "keyword_exact": "12w e27 led bulb",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "5 row led light strip",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "50000",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Mauritania": 1
+        }
+      },
+      {
+        "keyword_exact": "5w bulb light",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "60cm satellite dish",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "6203 2rs",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "6203 2rs rodamientos de bolas acero cromado",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "8 256 rugged phone unbranded",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Nigeria": 1
+        }
+      },
+      {
+        "keyword_exact": "acdc led light",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "ai",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Nigeria": 1
+        }
+      },
+      {
+        "keyword_exact": "auto cut charging circuit dc 12v",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "bicicleta de montaa 29",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "bulb valt metter",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "bulb valt or amp metter",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "cabinet handle",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "calcutta",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "casing lampu led bulbe",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "china led bulb skd",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Algeria": 1
+        }
+      },
+      {
+        "keyword_exact": "copper wire scrap",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "cotton briefs men",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "dada drinking water pump",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "dc fan circuit",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "delay spray for men",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "dmx connector",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "electric decorative items",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "electronic accessories",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "emergency led light",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "fast charging circuit",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "focos led para casa",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "glhbirne",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thụy Sĩ": 1
+        }
+      },
+      {
+        "keyword_exact": "gold",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "grosir ponsel bekas",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "handy",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "horquilla 29 aire",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "insulation piercing connector",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Iraq": 1
+        }
+      },
+      {
+        "keyword_exact": "kitchen storage cabinet",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Thụy Sĩ": 1
+        }
+      },
+      {
+        "keyword_exact": "lace elastic bra",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "lampes 11 kwt",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Senegal": 1
+        }
+      },
+      {
+        "keyword_exact": "led",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Iraq": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb 50 watt skd",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb raw material 12w",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulbs 20 watt",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led driver",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led maislampen ra 90",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thụy Sĩ": 1
+        }
+      },
+      {
+        "keyword_exact": "led plate light",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led power supply",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "led skd bulbled dob",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "led tube light making michine",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "leuchtmittel led g4 6 volt",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thụy Sĩ": 1
+        }
+      },
+      {
+        "keyword_exact": "mesin crimping cap e27 lampu led",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "mesin lampu led 15watt",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "outdoor led string lights",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thái Lan": 1
+        }
+      },
+      {
+        "keyword_exact": "pa66 reinforced with 30 glass fiber (pa66gf30)",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Venezuela": 1
+        }
+      },
+      {
+        "keyword_exact": "plastic storage basket",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Thụy Sĩ": 1
+        }
+      },
+      {
+        "keyword_exact": "plum 15 vitamin c serum",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "rakhi raksha bandhan",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "rechargeable led light",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "rgb",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thái Lan": 1
+        }
+      },
+      {
+        "keyword_exact": "rtx 3060",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Nigeria": 1
+        }
+      },
+      {
+        "keyword_exact": "schrank",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Thụy Sĩ": 1
+        }
+      },
+      {
+        "keyword_exact": "scrap bulb",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "skd",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ai Cập": 1
+        }
+      },
+      {
+        "keyword_exact": "skd bulb wholesale",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "slim power supply",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "smd raw material",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "smoke absober soldering",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "solar street lights outdoor waterproof",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "stand fan motor",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "t8 rgb",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Thái Lan": 1
+        }
+      },
+      {
+        "keyword_exact": "tharkar",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "toys for children",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "usb rechargeable mini fan",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "water dispenser mini",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "water fountain",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "waterproof power supply",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc": 1
+        }
+      },
+      {
+        "keyword_exact": "wooden spoon making machine",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Algeria": 1
+        }
+      },
+      {
+        "keyword_exact": "103j 600v",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "1170 mm blank pcb in china t8led tubelight",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L4": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "12v led light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "18650 battery",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L4": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "20w usb c pd charger pcba 220v ac",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "50 w headlamp mining",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "5in1 fully automatic nonwoven bag making machine with online loop",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "9w led bulb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "9wt led light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "adidas samba",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "ampoule led maison",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "ampoule lumineux led",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mauritius": 1
+        }
+      },
+      {
+        "keyword_exact": "android venu",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Benin": 1
+        }
+      },
+      {
+        "keyword_exact": "anima hai bodong",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword_exact": "armes de chasse",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "baskets",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "bombillos led",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword_exact": "bouteille de parfum",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Mali": 1
+        }
+      },
+      {
+        "keyword_exact": "bulb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Albania": 1
+        }
+      },
+      {
+        "keyword_exact": "bulbs",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "cable unipolar",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "cables commonly used accessories",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword_exact": "calzado al mayor",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "casque moto",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Cộng hòa Dân chủ Congo": 1
+        }
+      },
+      {
+        "keyword_exact": "cble lectrique",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mauritius": 1
+        }
+      },
+      {
+        "keyword_exact": "ceiling fan",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "chinese premium cigarettes",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "cloths",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "cofix tools",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "colorete",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Paraguay": 1
+        }
+      },
+      {
+        "keyword_exact": "crocs original al por mayor",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "crypto memory chip copier",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "dimmable led bulbs",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "dob pcb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "download video cepat download gratis",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "e27 led bulb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "e27 led bulb wholesale",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Benin": 1
+        }
+      },
+      {
+        "keyword_exact": "earphone type c",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "electric chula",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "electric tools neon tester",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "electrical switch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "electronic repair microscope",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "elements for instant showers",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "emergency led bulb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "emergency led bulb driver pcb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "faiba glass  rod",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "faibre  glaas  fishing  rod",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "fancy lights for home",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "flashlight",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword_exact": "freidoras de aire",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Paraguay": 1
+        }
+      },
+      {
+        "keyword_exact": "full body massage mattress",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "glass",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "guiyu liang  zhongshan wynns lighting co",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "headlamp",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "hexagon lights",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "high frequincy label readerwriter",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "high quality ac bulb circuit board",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "hulang lighting",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "hydraulic drilling rig",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "ice cream powder",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L4": 1
+        },
+        "countries": {
+          "Liberia": 1
+        }
+      },
+      {
+        "keyword_exact": "icopor para techo",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword_exact": "incerto",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword_exact": "ips",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "jy super",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "knee massager",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "knee support brace",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "kuzoom led",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "labalaba manusia",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Indonesia": 1
+        }
+      },
+      {
+        "keyword_exact": "laminas de icopor para cielo raso",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword_exact": "lampadaire solaire extrieur",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Mauritius": 1
+        }
+      },
+      {
+        "keyword_exact": "led ac bulb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulb parts",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "led bulbs wholesale",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Thổ Nhĩ Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "led dob chip",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "led dob pcb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "led headlamp rechargeable",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "led light mould",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "lmparas grow",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "lmparas led",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "luminous gileo ips",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ": 1
+        }
+      },
+      {
+        "keyword_exact": "matriel de confection de vetement",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "matriel de couture professionnelle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "metal core pcb",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L4": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "mixed clothes wholesale",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "naris reduces stretch marks forming lotion",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "osram halogen bullb 12v 100 watts",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword_exact": "panel techo pvc",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Colombia": 1
+        }
+      },
+      {
+        "keyword_exact": "pantone book",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "password remover",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L4": 1
+        },
+        "countries": {
+          "Liberia": 1
+        }
+      },
+      {
+        "keyword_exact": "pastilha para desbaste",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Brazil": 1
+        }
+      },
+      {
+        "keyword_exact": "phone repair microscope",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L4": 1
+        },
+        "countries": {
+          "Liberia": 1
+        }
+      },
+      {
+        "keyword_exact": "ponge mtallique",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà": 1
+        }
+      },
+      {
+        "keyword_exact": "punching machines",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "pvc id card making sheet manufacturer 076mm or 080mm white and golde",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "ram ddr5 laptop",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "raqueta mosquito",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Paraguay": 1
+        }
+      },
+      {
+        "keyword_exact": "rechargeable bulbs",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "shein bales brand new",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "silicona actica transparente",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina": 1
+        }
+      },
+      {
+        "keyword_exact": "smart changeover switch",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "smart lithium inverter",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "smart mops",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "smart plug raw material",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "smd es3j diode",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "solar pannel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "solar street light controller",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "sound bar with subwoofer",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Kenya": 1
+        }
+      },
+      {
+        "keyword_exact": "spinning reel handle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "spray bottle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "ss royal bolt",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "steel water bottle",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "street lights",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword_exact": "switches and socket",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "tenda router",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Bangladesh": 1
+        }
+      },
+      {
+        "keyword_exact": "toys",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      },
+      {
+        "keyword_exact": "tuya smart plug skd  tuya smart bulb components",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "wall panel",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ": 1
+        }
+      },
+      {
+        "keyword_exact": "watch for men",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Pakistan": 1
+        }
+      },
+      {
+        "keyword_exact": "waterproof solar street light",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Philippines": 1
+        }
+      },
+      {
+        "keyword_exact": "wine bottle labels",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword_exact": "wine box with accessories",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L2": 1
+        },
+        "countries": {
+          "Campuchia": 1
+        }
+      },
+      {
+        "keyword_exact": "ws2811",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L3": 1
+        },
+        "countries": {
+          "Sri Lanka": 1
+        }
+      }
+    ]
+  },
+  "onetalk": {
+    "overview": [
+      {
+        "Hạng mục": "03/09/2026 - cập nhật tuần mới",
+        "Số lượng": "23 buyer rà soát trên OneTalk",
+        "Ghi chú vận hành": "6 khách ưu tiên; 8 cần theo dõi; 6 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "30/08/2026 - 03/09/2026",
+        "Ghi chú vận hành": "Tin nhắn mới khá nhiều, nhưng nhiều hội thoại chỉ là câu mở đầu/seller hỏi lại spec; chỉ tính lead khi có sản phẩm, MOQ, báo giá hoặc yêu cầu kỹ thuật."
+      },
+      {
+        "Hạng mục": "Trọng tâm tuần này",
+        "Số lượng": "LED bulb / SKD bulb / finished bulb / DOB 18W",
+        "Ghi chú vận hành": "Nhu cầu tập trung vào bóng LED E27/B22, 12W/18W, màu 6500K/3200K, MOQ wholesale 5000 pcs."
+      },
+      {
+        "Hạng mục": "Rủi ro chính",
+        "Số lượng": "Khách nhỏ hỏi lẻ + thiếu spec",
+        "Ghi chú vận hành": "Cần chuẩn hóa câu hỏi nhanh: watt, base E27/B22, SKD hay finished, số lượng, quốc gia/cảng nhận."
+      },
+      {
+        "Hạng mục": "25/08/2026 - cập nhật tuần mới",
+        "Số lượng": "9 lead đã lọc",
+        "Ghi chú vận hành": "4 khách ưu tiên; 4 cần theo dõi; 1 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      },
+      {
+        "Hạng mục": "Khoảng đọc lại",
+        "Số lượng": "Tuần 25/08/2026",
+        "Ghi chú vận hành": "Tập trung buyer có phản hồi thật, có nhu cầu rõ hoặc vướng bước báo giá/ship/MOQ."
+      },
+      {
+        "Hạng mục": "Khách ưu tiên",
+        "Số lượng": "4",
+        "Ghi chú vận hành": "Abdul Halim, Meelay Cho, Qazi Zia, Taraq Khan."
+      },
+      {
+        "Hạng mục": "Khách cần theo dõi / ít phản hồi",
+        "Số lượng": "5",
+        "Ghi chú vận hành": "4 lead cần khai thác thêm + 1 nhóm khách hỏi MOQ/khách nhỏ."
+      },
+      {
+        "Hạng mục": "Khoảng thời gian đã cập nhật",
+        "Số lượng": "23/07-17/08/2026",
+        "Ghi chú vận hành": "Bảng tích lũy: tuần mới được chèn lên trên cùng, dữ liệu cũ giữ nguyên bên dưới."
+      },
+      {
+        "Hạng mục": "Khách có phản hồi/nội dung thật cần ưu tiên",
+        "Số lượng": "23",
+        "Ghi chú vận hành": "15 lead cũ + 8 lead mới tuần 14-16/08."
+      },
+      {
+        "Hạng mục": "Khách cần theo dõi nhẹ",
+        "Số lượng": "12",
+        "Ghi chú vận hành": "10 dòng cũ + 2 dòng cần theo dõi mới."
+      },
+      {
+        "Hạng mục": "Khách ít phản hồi/không ưu tiên",
+        "Số lượng": "11",
+        "Ghi chú vận hành": "10 dòng cũ + 1 dòng ít phản hồi mới."
+      },
+      {
+        "Hạng mục": "Vấn đề nổi bật",
+        "Số lượng": "Specs/MOQ/báo giá cần chuẩn hóa",
+        "Ghi chú vận hành": "Nhiều buyer hỏi specs, wattage, MOQ, price list; cần chuẩn bị spec sheet và báo giá nhanh."
+      },
+      {
+        "Hạng mục": "Hành động ưu tiên",
+        "Số lượng": "Gửi specs + hỏi model/số lượng",
+        "Ghi chú vận hành": "Với khách hỏi kỹ thuật, gửi datasheet chính thức kèm ảnh, sau đó hỏi wattage, B22/E27, CCT, số lượng và cảng nhận hàng."
+      }
+    ],
+    "priority_buyers": [
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "Sugeng Lampoe",
+        "Quốc gia / tín hiệu": "Indonesia / tiếng Indonesia",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "LED bulb wholesale; buyer hỏi “klo cb moq nya 1000 pcs dulu bisa kah bos” tức muốn thử MOQ 1000 pcs trước",
+        "Số lượng": "1000 pcs thử",
+        "Nội dung đã đọc trong tin nhắn": "Buyer có nhu cầu thật nhưng thấp hơn MOQ chuẩn; có thể là đơn test để mở rộng sau",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Báo chính sách MOQ 5000 pcs, nếu muốn test 1000 pcs cần giá cao hơn hoặc mix model; hỏi watt/base và địa chỉ Indonesia"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "alsdyq mhjwb",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi SKD bulb hay finished bulb",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer có nhu cầu đúng ngành LED, đang ở bước xác định loại hàng",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi buyer muốn SKD hay finished, watt/base/color temperature, quantity và cảng nhận"
+      },
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "Raju Beta",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "AC 220V LED bulb E27, 6500K/3200K, dùng residential/warehouse lighting",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Đã có sản phẩm/spec tương đối rõ, cần khai thác dự án hoặc wholesale",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi spec sheet 12W/E27/B22, hỏi quantity và có cần hỗ trợ project installation không"
+      },
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "Rambinay Sah",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Đã gửi quotation, seller nhắc “Please check my quotation sir”",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Có báo giá nhưng chưa thấy buyer phản hồi sau báo giá",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Follow lại bằng câu ngắn: đã xem báo giá chưa, cần chỉnh watt/base/số lượng/ship không"
+      },
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "Procurement Mineazy",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Seller nhắc buyer check price và feedback",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Tên buyer có tín hiệu procurement, đã có giá nhưng thiếu phản hồi",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi feedback về giá, quantity target, quốc gia nhận hàng; đề xuất giá theo MOQ 5000 pcs"
+      },
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "Fazle Pilu",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Buyer/seller trao đổi về 18W DOB target",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Lead đúng ngành, cần spec kỹ thuật DOB 18W",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Xin ảnh/spec DOB target, base, lumen, PCB/driver yêu cầu và số lượng"
+      },
+      {
+        "Ngày": "2026-08-24",
+        "Khách hàng": "Abdul Halim",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Wholesale SKD LED Bulb 12W/18W/7W/5W, B22/E27, 6500K/3200K; đã có order card",
+        "Số lượng": "5,000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Đã xác nhận order card: USD 0.13/pc, tổng USD 4,402.43; đang chờ thanh toán Alibaba",
+        "Mức ưu tiên": "Lead nóng - ưu tiên rất cao",
+        "Đề xuất nhắn tiếp theo": "Follow thanh toán ngay, xác nhận cấu hình, nhắc Trade Assurance và lịch sản xuất"
+      },
+      {
+        "Ngày": "2026-08-23",
+        "Khách hàng": "Meelay Cho",
+        "Quốc gia / tín hiệu": "Myanmar / Naypyidaw",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "LED bulb, E27 base, mix 4000 pcs 6500K + 1000 pcs 3200K; cần tính shipping/landed cost để bán tại thị trường",
+        "Số lượng": "5,000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Khách chấp nhận MOQ 5000 nếu chi phí vận chuyển hợp lý; cần báo shipping",
+        "Mức ưu tiên": "Lead nóng - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Tính shipping đến Naypyidaw, gửi tổng landed cost, hỏi cách đóng gói/đơn vị nhận hàng"
+      },
+      {
+        "Ngày": "2026-08-21/24",
+        "Khách hàng": "Qazi Zia",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "12W SKD LED bulb, hỏi giá 10,000 pcs; quan tâm top cover PP, yêu cầu video close-up",
+        "Số lượng": "10,000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Khách hỏi sâu về sản phẩm, giá đã báo USD 0.23/pc EXW, thiếu địa chỉ nhận hàng",
+        "Mức ưu tiên": "Lead tốt - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Gửi video/ảnh close-up top cover PP, hỏi địa chỉ nhận hàng, xác nhận standard white cover hay custom logo"
+      },
+      {
+        "Ngày": "2026-08-20/24",
+        "Khách hàng": "Taraq Khan",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi giá 5,000 pcs, đang tư vấn 15W SKD, B22/E27, 6500K",
+        "Số lượng": "5,000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "MOQ đạt, đã có thông tin giá USD 0.13/pc; cần khách xác nhận model/watt",
+        "Mức ưu tiên": "Lead tốt - ưu tiên cao",
+        "Đề xuất nhắn tiếp theo": "Chốt wattage/base, gửi proforma/order card nếu khách xác nhận"
+      },
+      {
+        "Ngày": "2026-08-16",
+        "Khách hàng": "MD SHAMEM HOSSAN",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Cần LED bulb SKD, hỏi catalogue/specs; muốn xem accessories 3W-50W; hỏi có manufacture SKD LED không.",
+        "Số lượng": "Chưa chốt",
+        "Nội dung đã đọc trong tin nhắn": "Buyer phản hồi nhiều lần, đã nhận catalogue G8 Home_Catalogue.pdf, yêu cầu specs.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Gửi specs sheet ngắn cho SKD LED bulb 3W-50W; hỏi wattage ưu tiên, B22/E27, CCT, số lượng mỗi loại và cảng nhận hàng."
+      },
+      {
+        "Ngày": "2026-08-15",
+        "Khách hàng": "Mohamed ElDawly",
+        "Quốc gia / tín hiệu": "Egypt",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi giá SKD 12W LED bulb; seller báo USD0.21/pcs EXW, qty 5000; buyer nói giá quá cao và có nguồn thấp hơn.",
+        "Số lượng": "5000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Có quote gần hoàn chỉnh: product, unit price, qty, address Egypt; thiếu shipping fee.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi target price và tiêu chuẩn chất lượng nguồn rẻ hơn; nhấn mạnh 2 năm bảo hành/20.000 giờ; báo best price theo 5k/10k/20k và phí vận chuyển."
+      },
+      {
+        "Ngày": "2026-08-15",
+        "Khách hàng": "Md Mannan",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi giá PCB cho mọi wattage, hỏi specs; từng nói 3000 pcs, seller báo MOQ 5000 pcs mỗi size.",
+        "Số lượng": "3000 pcs / MOQ 5000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi kỹ về wattage, PCB, A/T bulb; đang chờ specs.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi bảng specs PCB/DOB theo wattage; giải thích MOQ 5000 pcs/size, có thể mix mẫu không; xin wattage chính để quote."
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "archil inaishvili",
+        "Quốc gia / tín hiệu": "Chưa xác định (tên Georgia)",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi G8 HOME A70-12W/G01 LED bulb; quan tâm model/wattage 12-15-18-50, A bulb hoặc T bulb.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer trả lời model/wattage nhưng chưa nói số lượng.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi bảng chọn A/T bulb, wattage 12/15/18/50, B22/E27, CCT; hỏi số lượng mỗi wattage để báo giá tốt nhất."
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "Huseyin Temel",
+        "Quốc gia / tín hiệu": "Turkey",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Inquiry 9W warm white/white SKD LED bulb; lịch sử cũ từng hỏi giá 100.000 units và assembled product.",
+        "Số lượng": "1 inquiry / lịch sử 100.000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Có lịch sử số lượng lớn, tuần này seller hỏi feedback giá USD0.211/pcs.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Follow tiếng Thổ/Anh: xác nhận nhu cầu 9W, assembled hay SKD, số lượng dự kiến; gửi lại giá theo 5k/20k/100k và điều kiện FOB/EXW."
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "Twara David",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Inquiry LED bulb 9W-12W warm white, muốn base screw, không phải loại 2-pin; hỏi sản phẩm B22/E27 220V.",
+        "Số lượng": "1 piece inquiry",
+        "Nội dung đã đọc trong tin nhắn": "Buyer nêu specs rõ: warm white 9W-12W, base screw.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Xác nhận base E27/B22 dạng screw, gửi specs 9W/12W và MOQ bán buôn; hỏi số lượng order thật vì inquiry đang để 1 piece."
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "Sohail Aftab",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Cần DOB only, hỏi số lượng trong carton, trọng lượng, kích thước; buyer xác nhận 'yes' và seller nói 'this is my DOB'.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer hỏi thông số đóng gói/kỹ thuật, có nhu cầu DOB.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi carton packing: pcs/carton, GW/NW, carton size, DOB specs; hỏi wattage, base và số lượng."
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "Sarang Ali",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi G8 HOME LED DOB Bulb 20W/15W/12W/9W; buyer nói cần 15W piece, seller hỏi số lượng.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Có nhu cầu sản phẩm cụ thể nhưng chưa có số lượng.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Báo 15W có/không, MOQ và giá theo số lượng; hỏi B22/E27, màu sáng và qty."
+      },
+      {
+        "Ngày": "2026-07-29",
+        "Khách hàng": "Nanaopoku Yeboah",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Bóng LED 10W, 15W, 20W; buyer quay lại hỏi price list.",
+        "Số lượng": "Chưa chốt",
+        "Nội dung đã đọc trong tin nhắn": "Buyer nhắn: cần price list. Lịch sử cũ từng hỏi bulbs 10W-20W và đã được báo giá 10W 0.186 USD, 15W 0.222 USD, 20W 0.282 USD.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Gửi lại bảng giá gọn, hỏi số lượng từng wattage, chân B22/E27, màu sáng và cảng/quốc gia nhận hàng. Nhấn mạnh MOQ bán buôn 5000 pcs/wattage nếu áp dụng."
+      },
+      {
+        "Ngày": "2026-07-29",
+        "Khách hàng": "Nga Ta",
+        "Quốc gia / tín hiệu": "Việt Nam / tiếng Việt",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "G8 HOME LED DOB Bulb SKD Parts 7W/9W/12W/15W, Aluminum, B22/E27, 6500K/3200K, CRI83.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer chủ động hỏi có ai chat không; seller/auto reception hỏi lại cần hỗ trợ sản phẩm phần nào.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Nhắn tiếng Việt, hỏi khách cần linh kiện SKD hay bóng hoàn thiện, wattage nào, số lượng dự kiến và địa chỉ/kho nhận. Gửi catalog DOB bulb SKD."
+      },
+      {
+        "Ngày": "2026-07-29",
+        "Khách hàng": "Nausher Rasel",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "LED DOB Bulb B22/E27, 6500K/3200K, CRI>=83, 98 lm/W.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer gửi inquiry sản phẩm, auto hỏi chọn base và màu sáng. Sau đó seller nhắn thank you/for the inquiry.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Follow lại hỏi khách chọn B22 hay E27, cold/warm white, wattage, số lượng. Gửi 3 lựa chọn giá theo MOQ 5000/10000/20000 pcs nếu có."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "A.K.M Zaman",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Khách yêu cầu thông số kỹ thuật/specs.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Buyer nhắn ngày 14/7: please send specs; ngày 28/7 là AI follow-up.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Gửi PDF/spec sheet chuẩn cho dòng khách đã hỏi, kèm bảng wattage, lumen, CRI, PF, lifetime, packing. Hỏi quantity và thị trường bán."
+      },
+      {
+        "Ngày": "2026-07-26",
+        "Khách hàng": "Karachi King",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "12W White DOB PCB, buyer đang so sánh nhà cung cấp.",
+        "Số lượng": "500 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Buyer nói đang so sánh supplier trước đơn đầu tiên, yêu cầu giá nhà máy ước tính cho 12W White DOB PCB 500 pcs.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Dù MOQ chuẩn có thể cao hơn, nên phản hồi chuyên nghiệp: MOQ bán buôn, giá tham khảo theo 500/5000/10000 pcs, thông số PCB, và hỏi có thể tăng số lượng hoặc gom model không."
+      },
+      {
+        "Ngày": "2026-07-25",
+        "Khách hàng": "Son Min",
+        "Quốc gia / tín hiệu": "Có tín hiệu Nga/Trung Quốc qua nội dung chat",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Khách hỏi specs, địa điểm logistics như Yiwu/Guangzhou/Urumqi, nói mỗi size 5000 pcs.",
+        "Số lượng": "5000 pcs mỗi size",
+        "Nội dung đã đọc trong tin nhắn": "Buyer trao đổi nhiều bằng tiếng Nga, hỏi specs là gì, nhắc tới Yiwu/Guangzhou/Urumqi và mỗi kích thước 5000 pcs.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi ảnh + spec sheet dễ hiểu, không chỉ file chữ. Hỏi khách muốn nhận hàng tại Trung Quốc hay xuất trực tiếp, xác nhận từng wattage/size 5000 pcs."
+      },
+      {
+        "Ngày": "2026-07-24",
+        "Khách hàng": "Ezekia Msemwa",
+        "Quốc gia / tín hiệu": "Tanzania",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "LED lights wholesale.",
+        "Số lượng": "MOQ 5000 pcs/wattage",
+        "Nội dung đã đọc trong tin nhắn": "Buyer nói I’m from Tanzania. Seller trả lời là nhà sản xuất đèn LED từ Việt Nam và MOQ 5000 pcs mỗi wattage.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi buyer đang nhập khẩu model nào tại Tanzania, số lượng theo wattage, cảng nhận hàng. Gửi MOQ + giá FOB/EXW và lead time."
+      },
+      {
+        "Ngày": "2026-07-24",
+        "Khách hàng": "Deepak Maran",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Thông số kỹ thuật LED DOB Bulb 9W.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Có bảng specification chi tiết: 9W, 90-370VAC, PF >=0.95, THD <15%, 6500K, CRI >=80, 1000lm, lifetime 25,000h, warranty 2 years.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Khách đã quan tâm sâu về specs. Cần gửi datasheet chính thức, hỏi số lượng test/mass order, yêu cầu chuẩn thị trường và target price."
+      },
+      {
+        "Ngày": "2026-07-24",
+        "Khách hàng": "Tanin Rahman",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Wholesale LED Bulb T10-60/G01 6500K DOB Driver, B22/E27, 97 Lm/W.",
+        "Số lượng": "5000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Buyer từng nói please send specs; ngày 24/7 phản hồi: that is not specs.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Cần xử lý ngay vì khách đang không hài lòng về tài liệu. Gửi đúng spec sheet có bảng kỹ thuật, ảnh sản phẩm, packing, chứng nhận và hỏi khách cần thông số nào chưa có."
+      },
+      {
+        "Ngày": "2026-08-10",
+        "Khách hàng": "Sagar Hegde",
+        "Quốc gia / tín hiệu": "Chưa thấy trong preview",
+        "Level": "Chưa thấy",
+        "Sản phẩm / nhu cầu hỏi": "Chargers/connectors: khách nói đã có chargers, cần connectors được soldered và assembled.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Preview rõ: 'we have the chargers, we need it the connectors to be soldered and assembled'.",
+        "Mức ưu tiên": "Rất cao",
+        "Đề xuất nhắn tiếp theo": "Hỏi số lượng connectors, loại đầu nối, ảnh/bản vẽ, yêu cầu soldering/assembly, tiêu chuẩn test. Gửi xác nhận G8 có thể làm lắp ráp theo yêu cầu nếu đủ MOQ."
+      },
+      {
+        "Ngày": "2026-08-10",
+        "Khách hàng": "Rahul Yadav",
+        "Quốc gia / tín hiệu": "Chưa thấy trong preview",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "LED bulb / MOQ bán buôn.",
+        "Số lượng": "MOQ 5000 pcs",
+        "Nội dung đã đọc trong tin nhắn": "Preview: seller báo 'the MOQ is 5000pcs sir'.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi bảng giá theo wattage, hỏi khách cần B22/E27, 6500K/3200K, số lượng từng wattage và cảng nhận hàng."
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "AliRaza Ansari",
+        "Quốc gia / tín hiệu": "Chưa thấy trong preview",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Khách yêu cầu specs.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Preview: 'please send specs'.",
+        "Mức ưu tiên": "Cao",
+        "Đề xuất nhắn tiếp theo": "Gửi spec sheet chuẩn cho dòng sản phẩm khách đang xem: wattage, lumen, CRI, PF, lifetime, packing, MOQ. Hỏi số lượng và thị trường bán."
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "Md Fakhruddin",
+        "Quốc gia / tín hiệu": "Chưa thấy trong preview",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Khách hỏi lại sản phẩm/thông tin chưa hiểu.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Preview: 'what is that?'.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Gửi lại ảnh sản phẩm + mô tả ngắn, hỏi khách đang cần bóng LED hoàn thiện, SKD parts hay PCB/DOB."
+      },
+      {
+        "Ngày": "2026-08-08",
+        "Khách hàng": "Zamna Khan",
+        "Quốc gia / tín hiệu": "Chưa thấy trong preview",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Hỏi xuất xứ nhà cung cấp.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Preview: 'Are you from China sir?'.",
+        "Mức ưu tiên": "Trung bình-cao",
+        "Đề xuất nhắn tiếp theo": "Nhấn mạnh G8 là nhà sản xuất/nguồn hàng từ Việt Nam, gửi ảnh nhà máy, chứng nhận và hỏi khách cần model/số lượng nào."
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "RafayAhmed Khan",
+        "Quốc gia / tín hiệu": "Chưa thấy trong preview",
+        "Level": "Có level tag",
+        "Sản phẩm / nhu cầu hỏi": "Khách nói 'This is my LED bulb'.",
+        "Số lượng": "Chưa rõ",
+        "Nội dung đã đọc trong tin nhắn": "Preview từ list: buyer có ảnh/thông tin bóng LED của họ.",
+        "Mức ưu tiên": "Trung bình",
+        "Đề xuất nhắn tiếp theo": "Hỏi ảnh/spec đầy đủ, wattage, input voltage, base, CCT, số lượng. Nếu muốn làm tương tự, xin mẫu hoặc datasheet."
+      }
+    ],
+    "followup_buyers": [
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "MD MAHIN",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller hỏi lại purchase quantity",
+        "Đánh giá": "Lead mới thiếu số lượng",
+        "Việc nên làm": "Follow hỏi số lượng, watt/base, SKD hay finished; chỉ báo giá khi đủ thông tin"
+      },
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "Hameed Kamal",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller gửi catalogue và hỏi buyer muốn model nào",
+        "Đánh giá": "Buyer cần chọn model",
+        "Việc nên làm": "Gửi 3 model bán chạy + MOQ/giá tham khảo, hỏi watt/base và thị trường bán"
+      },
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "Mdsohag Mia",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller hỏi purchase quantity",
+        "Đánh giá": "Lead mới thiếu số lượng",
+        "Việc nên làm": "Hỏi quantity tối thiểu, có thể mix 12W/18W để đủ MOQ không"
+      },
+      {
+        "Ngày": "2026-09-02",
+        "Khách hàng": "Rakiswende KIENDREBEOGO",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller yêu cầu buyer gửi specs",
+        "Đánh giá": "Lead thiếu thông số",
+        "Việc nên làm": "Gửi form hỏi nhanh: watt, base, voltage, CCT, quantity, destination"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "Zafar Niazi",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller báo chỉ bán wholesale MOQ 5000 pcs",
+        "Đánh giá": "Có thể là khách hỏi số lượng nhỏ",
+        "Việc nên làm": "Chờ buyer xác nhận đủ MOQ; nếu không đủ thì đề xuất mix model hoặc giữ ít ưu tiên"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "sangam electronics",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller yêu cầu gửi specs",
+        "Đánh giá": "Tên buyer có tín hiệu điện tử/đại lý nhưng thiếu thông tin",
+        "Việc nên làm": "Gửi mẫu spec list và hỏi 12W/18W, E27/B22, quantity"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "Haroon Haroon",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller giới thiệu G8 là nhà sản xuất LED tại Việt Nam",
+        "Đánh giá": "Lead mở đầu, chưa rõ sản phẩm",
+        "Việc nên làm": "Hỏi nhu cầu nhập khẩu: bulb type, watt, MOQ, country"
+      },
+      {
+        "Ngày": "2026-08-30",
+        "Khách hàng": "Rakib Hasan",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Chưa thấy L",
+        "Nội dung": "Seller hỏi specification của LED bulb muốn mua",
+        "Đánh giá": "Lead mới thiếu spec",
+        "Việc nên làm": "Hỏi watt/base/CCT/quantity và gửi catalogue ngắn"
+      },
+      {
+        "Ngày": "2026-08-24",
+        "Khách hàng": "Adilet Sagynbaev",
+        "Quốc gia / tín hiệu": "Kyrgyzstan / Nga ngữ",
+        "Level": "L?",
+        "Nội dung": "G8 HOME LED Bulb 15W, 6500K, AC220V, CRI>84, 1370lm, E27/B22, bảo hành 2 năm; hỏi wattage/base | SL: chưa nêu, MOQ 5000",
+        "Đánh giá": "Lead thật - ưu tiên vừa",
+        "Việc nên làm": "Hỏi E27 hay B22, số lượng, địa chỉ nhận hàng; gửi spec sheet ngắn"
+      },
+      {
+        "Ngày": "2026-08-22/24",
+        "Khách hàng": "Mary Henewaa",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Nội dung": "SKD bulbs, B22 base; khách hỏi tăng quantity lên 1000 pcs each nhưng seller MOQ 5000 pcs | SL: 1,000 pcs each, thấp hơn MOQ 5000",
+        "Đánh giá": "Lead có rào cản MOQ",
+        "Việc nên làm": "Giải thích MOQ factory 5000, đề xuất gom wattage/mix để đủ MOQ hoặc chọn mẫu RTS nếu có"
+      },
+      {
+        "Ngày": "2026-08-24",
+        "Khách hàng": "@hotmail.com NA",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Nội dung": "Hỏi/trao đổi wattage LED bulb, hiện chỉ có 9W/12W/15W available | SL: chưa nêu",
+        "Đánh giá": "Lead cần xác minh",
+        "Việc nên làm": "Hỏi quantity và base E27/B22 trước khi báo giá"
+      },
+      {
+        "Ngày": "2026-08-24",
+        "Khách hàng": "FahadAli Khan / Breeze Shah / Mahmoud sawan",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "L?",
+        "Nội dung": "Tin ngắn “sir/yes sir/image”, chưa đủ nhu cầu cụ thể | SL: chưa nêu",
+        "Đánh giá": "Lead sớm",
+        "Việc nên làm": "Hỏi spec, wattage, base, quantity, shipping country"
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "aaron nambafu",
+        "Quốc gia / tín hiệu": "Kenya (theo mã +254, cần xác minh Customer)",
+        "Level": "Có level tag",
+        "Nội dung": "Hỏi SKD LED bulb 5W-60W, màu white/warm white/green/blue/red; gửi WhatsApp +254 746574134 và yêu cầu quote qua WhatsApp.",
+        "Đánh giá": "Có nhu cầu nhưng có rủi ro off-platform/cảnh báo tin bị thu hồi",
+        "Việc nên làm": "Giữ trao đổi trên Alibaba, trả lời trong chat: xác nhận wattage/base/CCT và gửi quote; không kéo sang WhatsApp nếu platform cảnh báo."
+      },
+      {
+        "Ngày": "2026-08-16",
+        "Khách hàng": "JosephNielsen Planilla / Smart assistant",
+        "Quốc gia / tín hiệu": "Chưa xác định",
+        "Level": "Có level tag / Official",
+        "Nội dung": "Preview chủ yếu là nhắc auto-quotation/off reminder, không thấy buyer hỏi hàng mới.",
+        "Đánh giá": "Không phải lead mới rõ ràng",
+        "Việc nên làm": "Không đưa vào ưu tiên; chỉ bật/kiểm tra auto quotation nếu cần."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Riyaz M",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Nội dung": "Từng hỏi T bulb; trong tuần chỉ có AI reconnect, buyer chưa phản hồi mới.",
+        "Đánh giá": "Có lịch sử nhưng tuần này chưa đủ sâu",
+        "Việc nên làm": "Gửi 1 tin follow có ảnh T bulb/specs và hỏi còn cần báo giá không."
+      },
+      {
+        "Ngày": "2026-07-27",
+        "Khách hàng": "User Name",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Nội dung": "Inquiry 12W Bombillos LED 6500K, min order 5000; buyer phản hồi thank you/for the inquiry.",
+        "Đánh giá": "Có tín hiệu nhưng chưa rõ nhu cầu",
+        "Việc nên làm": "Hỏi số lượng, thị trường bán và chân đèn cần dùng. Nếu không phản hồi thêm thì follow nhẹ."
+      },
+      {
+        "Ngày": "2026-07-26",
+        "Khách hàng": "Hassan Ramzan",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Nội dung": "Inquiry A-shape LED bulb SKD 12W/18W/7W/5W; trước đó từng cần thông tin recipient để check cost.",
+        "Đánh giá": "Có lịch sử trao đổi, cần xác minh lại",
+        "Việc nên làm": "Hỏi lại thông tin người nhận để tính phí, đồng thời gửi MOQ và bảng giá theo wattage."
+      },
+      {
+        "Ngày": "2026-07-25",
+        "Khách hàng": "Prudence Houngue",
+        "Quốc gia / tín hiệu": "Tiếng Pháp",
+        "Level": "Có level tag",
+        "Nội dung": "Buyer hỏi bằng tiếng Pháp 'il est où?' và trả lời 'd'accord'.",
+        "Đánh giá": "Có phản hồi nhưng nội dung chưa đủ rõ",
+        "Việc nên làm": "Follow tiếng Pháp, hỏi khách cần sản phẩm nào, số lượng, quốc gia/cảng nhận hàng."
+      },
+      {
+        "Ngày": "2026-07-23",
+        "Khách hàng": "Fahad Ali",
+        "Quốc gia / tín hiệu": "Chưa thấy trong khung đọc",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: seller hỏi buyer muốn giá ship hay giá bóng.",
+        "Đánh giá": "Cần mở lại nếu muốn xác nhận sâu",
+        "Việc nên làm": "Follow hỏi rõ buyer cần bulb price hay shipping price, số lượng và địa chỉ nhận."
+      },
+      {
+        "Ngày": "2026-08-10",
+        "Khách hàng": "Shubrata D",
+        "Quốc gia / tín hiệu": "Chưa thấy",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: 'sir?'.",
+        "Đánh giá": "Có phản hồi nhưng chưa rõ nhu cầu",
+        "Việc nên làm": "Hỏi khách cần báo giá, specs hay kiểm tra model nào; gửi catalog ngắn."
+      },
+      {
+        "Ngày": "2026-08-10",
+        "Khách hàng": "Kossi AGBLEGAN",
+        "Quốc gia / tín hiệu": "Chưa thấy",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: 'for the inquiry'.",
+        "Đánh giá": "Chưa phản hồi sâu",
+        "Việc nên làm": "Follow 1 lần: hỏi wattage/base/số lượng/cảng nhận hàng."
+      },
+      {
+        "Ngày": "2026-08-10",
+        "Khách hàng": "Rudi Rudi",
+        "Quốc gia / tín hiệu": "Chưa thấy",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: 'for the inquiry'.",
+        "Đánh giá": "Chưa phản hồi sâu",
+        "Việc nên làm": "Follow nhẹ bằng câu hỏi lựa chọn: LED bulb, SKD parts hay PCB/DOB?"
+      },
+      {
+        "Ngày": "2026-08-09",
+        "Khách hàng": "It park",
+        "Quốc gia / tín hiệu": "Chưa thấy",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: 'thank you'.",
+        "Đánh giá": "Lịch sự nhưng chưa có bước mua rõ",
+        "Việc nên làm": "Nhắn tiếp: bạn muốn báo giá mẫu nào, số lượng và địa chỉ nhận hàng?"
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "Safa Motors",
+        "Quốc gia / tín hiệu": "Chưa thấy",
+        "Level": "Có level tag",
+        "Nội dung": "Preview: 'USD'.",
+        "Đánh giá": "Có thể liên quan báo giá, cần mở lại nếu follow sâu",
+        "Việc nên làm": "Hỏi lại khách xác nhận sản phẩm, số lượng và điều kiện giá USD/FOB/EXW."
+      }
+    ],
+    "low_response_or_spam": [
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "jabed hosen",
+        "Dấu hiệu": "Chỉ nhắn “sir”, chưa có sản phẩm/số lượng",
+        "Kết luận": "Không tính lead chính, chỉ hỏi lại nhu cầu nếu muốn khai thác"
+      },
+      {
+        "Ngày": "2026-09-03",
+        "Khách hàng": "Marco Shidonge",
+        "Dấu hiệu": "Chỉ thấy seller trả lời “for the inquiry”, chưa có nội dung buyer rõ",
+        "Kết luận": "Ít dữ liệu, chưa đưa vào lead ưu tiên"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "MR Madni",
+        "Dấu hiệu": "Chỉ thấy “for the inquiry”, chưa có sản phẩm/số lượng",
+        "Kết luận": "Ít phản hồi, chưa đủ điều kiện lead"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "Awaisdaula Awaisdaula",
+        "Dấu hiệu": "Chỉ thấy “for the inquiry”, chưa có nội dung rõ",
+        "Kết luận": "Ít phản hồi, chờ buyer gửi nhu cầu thật"
+      },
+      {
+        "Ngày": "2026-09-01",
+        "Khách hàng": "saidur rahman",
+        "Dấu hiệu": "Chỉ phản hồi “fine”, chưa thấy nhu cầu sản phẩm cụ thể",
+        "Kết luận": "Ít phản hồi"
+      },
+      {
+        "Ngày": "2026-08-31",
+        "Khách hàng": "Hassan Yaar",
+        "Dấu hiệu": "Chỉ thấy “thank you sir”, chưa có bước mua hàng rõ",
+        "Kết luận": "Tạm xếp ít phản hồi"
+      },
+      {
+        "Ngày": "2026-08-24",
+        "Khách hàng": "Munir Ahmad / các khách hỏi MOQ",
+        "Dấu hiệu": "Nhiều khách hỏi nhỏ lẻ, chưa đủ MOQ",
+        "Kết luận": "Chuẩn hoá câu trả lời MOQ 5000 pcs + gợi ý mix model để đủ MOQ; chỉ nâng ưu tiên khi buyer xác nhận đủ số lượng."
+      },
+      {
+        "Ngày": "2026-08-14",
+        "Khách hàng": "Các preview chỉ có 'for the inquiry', 'thank you', 'sir?' không kèm nhu cầu mới",
+        "Dấu hiệu": "Không đủ dữ liệu lead thật",
+        "Kết luận": "Bỏ qua, chỉ follow khi buyer nêu specs/số lượng rõ."
+      },
+      {
+        "Ngày": "2026-07-28",
+        "Khách hàng": "Rahul Yadav",
+        "Dấu hiệu": "Preview chỉ thấy 'for the inquiry', chưa mở được nội dung sâu ổn định.",
+        "Kết luận": "Không đưa vào khách ưu tiên nếu chưa có thêm phản hồi."
+      },
+      {
+        "Ngày": "2026-07-27",
+        "Khách hàng": "Fiaz Ali",
+        "Dấu hiệu": "Preview: seller nói MOQ 5000 pcs; chưa đọc được toàn bộ hội thoại trong phiên này.",
+        "Kết luận": "Cần kiểm tra lại nếu muốn phân loại chính xác."
+      },
+      {
+        "Ngày": "2026-07-27",
+        "Khách hàng": "Thiva Thiva",
+        "Dấu hiệu": "Preview chỉ thấy 'ok'.",
+        "Kết luận": "Theo dõi nhẹ, chưa đủ dữ liệu để coi là lead mạnh."
+      },
+      {
+        "Ngày": "2026-07-27",
+        "Khách hàng": "malick Diouf",
+        "Dấu hiệu": "Preview: seller nói MOQ 5000 pcs mỗi wattage; click mở chưa ổn định.",
+        "Kết luận": "Cần kiểm tra lại trước khi đưa vào ưu tiên."
+      },
+      {
+        "Ngày": "2026-07-24",
+        "Khách hàng": "Shahriar Ahmed",
+        "Dấu hiệu": "Tuần này chủ yếu là AI reconnect; lịch sử 06/7 có inquiry sản phẩm.",
+        "Kết luận": "Không phân tích sâu trong tuần 23-29/7."
+      },
+      {
+        "Ngày": "2026-07-24",
+        "Khách hàng": "TheNALM Industries",
+        "Dấu hiệu": "Preview có câu 'Kindly prepare me a quotation', nhưng phiên click chưa mở đúng ổn định.",
+        "Kết luận": "Cần mở lại, có thể là lead tốt nhưng chưa đủ chứng cứ trong bảng này."
+      },
+      {
+        "Ngày": "2026-08-09",
+        "Khách hàng": "User name",
+        "Dấu hiệu": "User recalled a message.",
+        "Kết luận": "Không tính lead đến khi khách gửi lại nhu cầu."
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "AkandDigital SevaCentre / usman tariq",
+        "Dấu hiệu": "Preview ngắn: for the inquiry / How can I help you sir.",
+        "Kết luận": "Chưa đủ dữ liệu để phân tích sâu."
+      },
+      {
+        "Ngày": "2026-08-01",
+        "Khách hàng": "7015638135",
+        "Dấu hiệu": "Chỉ thấy [Inquiry], chưa mở được nội dung sâu.",
+        "Kết luận": "Cần kiểm tra lại nếu muốn đưa vào lead ưu tiên."
+      },
+      {
+        "Ngày": "2026-08-08 đến 2026-08-10",
+        "Khách hàng": "Các dòng chỉ có cảm ơn/for the inquiry",
+        "Dấu hiệu": "Không có thông tin sản phẩm, số lượng, quốc gia/cảng nhận.",
+        "Kết luận": "Theo dõi nhẹ, không tính lead nóng."
+      }
+    ]
+  },
+  "update_rules": [
+    "Không tự bịa dữ liệu; null hiển thị Chưa có dữ liệu.",
+    "Giữ nguyên Keyword chính xác; không dịch hoặc sửa chính tả.",
+    "Dùng toàn bộ operations.history để vẽ xu hướng nhiều tuần.",
+    "Hiển thị toàn bộ quốc gia và toàn bộ từ khóa, có lọc/sắp xếp.",
+    "Tái tính Insight cần chú ý từ kỳ hiện tại so với kỳ trước và dữ liệu buyer.",
+    "Giao diện chỉ dùng tiếng Việt."
+  ]
+}

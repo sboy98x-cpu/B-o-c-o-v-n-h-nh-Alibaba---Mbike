@@ -1,0 +1,2074 @@
+{
+  "generated_for": "Claude Code weekly app update",
+  "brand": "Riken",
+  "language": "vi-zh",
+  "app_path": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/riken/index.html",
+  "reporting_period": {
+    "visitor_current": "27.08-02.09",
+    "visitor_previous": "16-22.08",
+    "generated_date": "2026-09-04"
+  },
+  "source_spreadsheets": {
+    "operations": "1UlxJruIUI9LH-g10mVVLqjUWOyS45gyPIsRjO12N0QI",
+    "visitor": "1Fs4Bces592xi67xKvfttG2O4Imk9p6wsE2w7vFjgOjI",
+    "onetalk": "1lgfpYWEQconuxATb3E0Z717nCgsmQrnyGdSZyzunYRE"
+  },
+  "operations": {
+    "history": [
+      {
+        "week": "23-08-2026 đến 29-08-2026 | 2026年8月23日至8月29日",
+        "metrics": {
+          "星级 | Xếp hạng sao": "2",
+          "产品总数量 | Tổng số sản phẩm": "2281",
+          "新增产品总数量 | Tổng số sản phẩm mới": "-59",
+          "访客总数 | Tổng lượt truy cập": "117",
+          "询盘总数量 | Tổng số inquiry (khách hỏi)": "7",
+          "已回复询盘数量 | Số inquiry đã phản hồi": "7",
+          "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "2",
+          "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "18",
+          "平均回复时间 | Thời gian phản hồi trung bình": "3,2h",
+          "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100.00%",
+          "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+          "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"
+        }
+      },
+      {
+        "week": "09-08-2026 đến 15-08-2026 | 2026年8月9日至8月15日",
+        "metrics": {
+          "星级 | Xếp hạng sao": "1",
+          "产品总数量 | Tổng số sản phẩm": "2340",
+          "新增产品总数量 | Tổng số sản phẩm mới": "139",
+          "访客总数 | Tổng lượt truy cập": "119",
+          "询盘总数量 | Tổng số inquiry (khách hỏi)": "4",
+          "已回复询盘数量 | Số inquiry đã phản hồi": "4",
+          "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "5",
+          "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "29",
+          "平均回复时间 | Thời gian phản hồi trung bình": "0,72h",
+          "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100.00%",
+          "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+          "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"
+        }
+      },
+      {
+        "week": "05-07-2026 đến 11-07-2026 | 2026年7月5日至7月11日",
+        "metrics": {
+          "星级 | Xếp hạng sao": "1",
+          "产品总数量 | Tổng số sản phẩm": "2201",
+          "新增产品总数量 | Tổng số sản phẩm mới": "1251",
+          "访客总数 | Tổng lượt truy cập": "175",
+          "询盘总数量 | Tổng số inquiry (khách hỏi)": "2",
+          "已回复询盘数量 | Số inquiry đã phản hồi": "2",
+          "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "15",
+          "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "16",
+          "平均回复时间 | Thời gian phản hồi trung bình": "0,04h",
+          "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100.00%",
+          "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+          "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "1"
+        }
+      },
+      {
+        "week": "21-06-2026 đến 27-06-2026",
+        "metrics": {
+          "星级 | Xếp hạng sao": "0",
+          "产品总数量 | Tổng số sản phẩm": "950",
+          "新增产品总数量 | Tổng số sản phẩm mới": "546",
+          "访客总数 | Tổng lượt truy cập": "89",
+          "询盘总数量 | Tổng số inquiry (khách hỏi)": "5",
+          "已回复询盘数量 | Số inquiry đã phản hồi": "5",
+          "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "20",
+          "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20",
+          "平均回复时间 | Thời gian phản hồi trung bình": "0h",
+          "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100%",
+          "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+          "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "1"
+        }
+      },
+      {
+        "week": "14-06-2026 đến 20-06-2026",
+        "metrics": {
+          "星级 | Xếp hạng sao": "0",
+          "产品总数量 | Tổng số sản phẩm": "404",
+          "新增产品总数量 | Tổng số sản phẩm mới": "200",
+          "访客总数 | Tổng lượt truy cập": "47",
+          "询盘总数量 | Tổng số inquiry (khách hỏi)": "1",
+          "已回复询盘数量 | Số inquiry đã phản hồi": "1",
+          "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "8",
+          "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "12",
+          "平均回复时间 | Thời gian phản hồi trung bình": "0h",
+          "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100%",
+          "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+          "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "0"
+        }
+      }
+    ],
+    "raw": [
+      [
+        "运营时间范围",
+        "周次 | Tuần",
+        "23-08-2026 đến 29-08-2026 | 2026年8月23日至8月29日",
+        "09-08-2026 đến 15-08-2026 | 2026年8月9日至8月15日",
+        "05-07-2026 đến 11-07-2026 | 2026年7月5日至7月11日",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026"
+      ],
+      [
+        "已执行计划",
+        "星级 | Xếp hạng sao",
+        "2",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "产品总数量 | Tổng số sản phẩm",
+        "2281",
+        "2340",
+        "2201",
+        "950",
+        "404"
+      ],
+      [
+        null,
+        "新增产品总数量 | Tổng số sản phẩm mới",
+        "-59",
+        "139",
+        "1251",
+        "546",
+        "200"
+      ],
+      [
+        null,
+        "访客总数 | Tổng lượt truy cập",
+        "117",
+        "119",
+        "175",
+        "89",
+        "47"
+      ],
+      [
+        null,
+        "询盘总数量 | Tổng số inquiry (khách hỏi)",
+        "7",
+        "4",
+        "2",
+        "5",
+        "1"
+      ],
+      [
+        null,
+        "已回复询盘数量 | Số inquiry đã phản hồi",
+        "7",
+        "4",
+        "2",
+        "5",
+        "1"
+      ],
+      [
+        null,
+        "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá",
+        "2",
+        "5",
+        "15",
+        "20",
+        "8"
+      ],
+      [
+        null,
+        "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá",
+        "18",
+        "29",
+        "16",
+        "20",
+        "12"
+      ],
+      [
+        null,
+        "平均回复时间 | Thời gian phản hồi trung bình",
+        "3,2h",
+        "0,72h",
+        "0,04h",
+        "0h",
+        "0h"
+      ],
+      [
+        null,
+        "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100%",
+        "100%"
+      ],
+      [
+        null,
+        "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)",
+        "3",
+        "3",
+        "1",
+        "1",
+        "0"
+      ],
+      [
+        "下周行动计划",
+        "新品更新 | Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày | 每天新增5–10款热门产品",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày | 每天新增5–10款热门产品",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày | 每天新增5-10款热门产品",
+        "建议每天新增 50 款高需求（High Demand）产品。 Đề xuất mỗi ngày đăng mới 50 sản phẩm có nhu cầu mua cao (High Demand).",
+        "建议每天新增 50 款高需求（High Demand）产品。",
+        "Khuyến nghị mỗi ngày đăng thêm 50 sản phẩm High Demand (Nhu cầu cao)."
+      ],
+      [
+        null,
+        "指标优化 | Tối ưu chỉ số",
+        "Xử lý 501 sản phẩm gây hiểu nhầm; tăng traffic mục tiêu từ thị trường phát triển; tăng quảng cáo và báo RFQ; cải thiện chuyển đổi từ hiển thị sang hỏi hàng; tạo đơn Trade Assurance | 处理501个误导性产品；提升发达市场的精准流量；加强广告投放和RFQ报价；改善从曝光到询盘的转化；促成信保订单",
+        "Xử lý 501 sản phẩm gây hiểu nhầm; tăng traffic mục tiêu bằng quảng cáo và RFQ; tăng người mua phản hồi lần hai; nâng sản phẩm lên Top/Super Product | 处理501个误导性产品；通过广告和RFQ增加目标流量；提升二次回复买家数量；将产品升级为Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product; Marketing 0 sao do thiếu traffic, cần tăng traffic quảng cáo | 处理问题产品；通过RFQ报价增加流量；将产品提升至Top/Super Product；营销为0星，需要增加广告流量",
+        "通过报价RFQ来增加店铺曝光，吸引更多访客进入店铺 👉 Thông qua việc báo giá RFQ để tăng lượt hiển thị cho gian hàng, thu hút thêm nhiều khách truy cập vào shop.",
+        "通过报价RFQ来增加店铺曝光，吸引更多访客进入店铺",
+        "Tăng cường gửi báo giá RFQ để gia tăng độ hiển thị của gian hàng, thu hút nhiều khách truy cập vào gian hàng hơn."
+      ],
+      [
+        null,
+        null,
+        "Có 501 sản phẩm gây hiểu nhầm ảnh hưởng trọng số gian hàng; Current Rating là 2 sao nhưng Forecast chỉ 1 sao do Marketing yếu; 30 ngày chỉ có 190 khách và GMV Trade Assurance 90 ngày bằng 0; traffic, cơ hội kinh doanh và chuyển đổi còn thấp; RFQ chưa được tận dụng hết; hiện có 97 sản phẩm Inactive và 17 sản phẩm Pending nên Active giảm 59 so với cột gần nhất | 501个误导性产品影响店铺权重；当前星级为2星，但因营销能力较弱，预测仅为1星；近30天仅190位访客，近90天信保交易GMV为0；流量、商机和转化率仍偏低；RFQ权益尚未充分利用；目前有97个下架产品和17个审核中产品，因此在售产品较最近一列减少59个",
+        "501 sản phẩm gây hiểu nhầm ảnh hưởng chất lượng và trọng số tìm kiếm; Forecast chỉ 1 sao: Marketing có 209 khách, thiếu 91 khách để lên mốc tiếp theo và Service có 14 người mua phản hồi, thiếu 1; traffic và cơ hội kinh doanh thấp, tập trung nhiều tại Việt Nam; chưa có GMV Trade Assurance; chưa tận dụng hết RFQ | 501个误导性产品影响产品质量和搜索权重；预测星级仅为1星：营销指标为209位访客，距离下一档还差91位，服务指标为14位回复买家，还差1位；流量和商机规模偏低且过度集中在越南；尚无信保交易GMV；RFQ权益尚未充分利用",
+        "184 sản phẩm gây hiểu nhầm ảnh hưởng trọng số gian hàng; Marketing 0 sao do thiếu traffic; chưa có đơn Trade Assurance; chưa tận dụng hiệu quả RFQ, tài khoản phụ và công cụ AI | 184个误导性产品影响店铺权重；营销为0星且流量不足；尚无信保订单；未充分利用RFQ、子账号及AI工具",
+        "需要使用阿里巴巴平台进行交易支付 👉 Cần sử dụng nền tảng Alibaba để tiến hành thanh toán giao dịch (thanh toán qua Trade Assurance/Tín bảo).",
+        "需要使用阿里巴巴平台进行交易支付",
+        "Nên sử dụng hình thức thanh toán giao dịch qua Alibaba để tăng độ tin cậy và cải thiện hiệu quả vận hành gian hàng."
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "建议在店铺达到1000个产品之后再加大广告投入，这样广告效果会更好，流量利用率也会更高。👉 Khuyên bạn sau khi gian hàng đạt mốc 1000 sản phẩm rồi mới tăng cường ngân sách chạy quảng cáo, như vậy hiệu quả quảng cáo sẽ tốt hơn, tỷ lệ tận dụng lưu lượng truy cập (traffic) cũng sẽ cao hơn.",
+        "建议在店铺达到1000个产品之后再加大广告投入，这样广告效果会更好，流量利用率也会更高。",
+        "Khuyến nghị chỉ nên tăng mạnh ngân sách quảng cáo sau khi gian hàng đạt khoảng 1.000 sản phẩm, khi đó hiệu quả quảng cáo và tỷ lệ tận dụng lưu lượng truy cập sẽ tốt hơn."
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        "产品发布时尽量使用真实视频和实拍图片，最好是在工厂现场拍摄，或者由工作人员手持展示产品，不建议使用拼接图片或过度修图的素材。真实的图片和视频更容易获得买家的信任，也有助于提高询盘转化率。",
+        "Khi đăng sản phẩm nên sử dụng video thực tế và hình ảnh chụp thực tế, tốt nhất là chụp tại nhà máy hoặc có người cầm sản phẩm để giới thiệu. Không nên sử dụng ảnh cắt ghép hoặc chỉnh sửa quá nhiều. Hình ảnh và video chân thực sẽ giúp khách hàng tin tưởng hơn và nâng cao tỷ lệ chuyển đổi từ hỏi hàng thành đơn hàng."
+      ],
+      [
+        "初步评估",
+        "优先处理问题 | Vấn đề ưu tiên xử lý",
+        null,
+        "目前店铺的**流量增长得非常不错**，再加上最近新增了大量产品，我建议老板可以考虑**尽早开始投入广告推广**，同时让运营人员继续发布更多产品，进一步扩大店铺的曝光。\n\n在销售方面，也建议老板**每周都要重点跟进客户的询盘和订单情况**，特别是有潜力的大客户，要及时沟通和持续跟进，这样才能把现在增长的流量更好地转化成实际订单。\n",
+        "Marketing 0 sao do thiếu traffic, cần thêm traffic quảng cáo | 营销为0星，原因是流量不足，需要增加广告流量",
+        "建议每天新增 50 款高需求（High Demand）产品。Đề xuất mỗi ngày đăng mới 50 sản phẩm có nhu cầu mua cao (High Demand).",
+        "建议每天新增 50 款高需求（High Demand）产品。",
+        "Khuyến nghị mỗi ngày tiếp tục bổ sung 50 sản phẩm High Demand (Nhu cầu cao) để mở rộng độ phủ từ khóa và tăng cơ hội tiếp cận khách hàng quốc tế."
+      ],
+      [
+        null,
+        "AI 自动生成报告"
+      ]
+    ]
+  },
+  "visitor": {
+    "current_summary": {
+      "Số bản ghi khách truy cập / 访客记录数": [
+        "50",
+        "Chú giải cấp người mua / 买家等级说明"
+      ],
+      "Số quốc gia / vùng / 国家或地区数": [
+        "25",
+        "L0",
+        "Người mua đã đăng ký / 已注册买家",
+        "15"
+      ],
+      "Tổng PV trên gian hàng / 店铺总 PV": [
+        "95",
+        "L1",
+        "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+        "35"
+      ],
+      "Số bản ghi keyword chính xác / 精确关键词记录数": [
+        "94",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup) / 小型企业买家（Scaleup）",
+        "0"
+      ],
+      "Số visitor có keyword / 有关键词的访客数": [
+        "36",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise) / 企业级买家（Enterprise）",
+        "0"
+      ],
+      "Số buyer L1+ / L1+ 买家数": [
+        "35",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô) / Enterprise Pro 百万级买家",
+        "0"
+      ],
+      "Số trang nguồn đã lấy / 已采集源页面数": [
+        "5",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com. / L1+ 包括 L1、L2、L3 和 L4，代表 Alibaba.com 的高质量买家群体。"
+      ]
+    },
+    "previous_summary": {
+      "Số bản ghi khách truy cập / 访客记录数": [
+        "38",
+        "Chú giải cấp người mua / 买家等级说明"
+      ],
+      "Số quốc gia / vùng / 国家或地区数": [
+        "24",
+        "L0",
+        "Người mua đã đăng ký / 已注册买家",
+        "22"
+      ],
+      "Tổng PV trên gian hàng / 店铺总 PV": [
+        "70",
+        "L1",
+        "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+        "16"
+      ],
+      "Số bản ghi keyword chính xác / 精确关键词记录数": [
+        "75",
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup) / 小型企业买家（Scaleup）",
+        "0"
+      ],
+      "Số visitor có keyword / 有关键词的访客数": [
+        "27",
+        "L3",
+        "Người mua doanh nghiệp (Enterprise) / 企业级买家（Enterprise）",
+        "0"
+      ],
+      "Số buyer L1+ / L1+ 买家数": [
+        "16",
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô) / Enterprise Pro 百万级买家",
+        "0"
+      ],
+      "Số trang nguồn đã lấy / 已采集源页面数": [
+        "4",
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com. / L1+ 包括 L1、L2、L3 和 L4，代表 Alibaba.com 的高质量买家群体。"
+      ]
+    },
+    "current_countries": [
+      {
+        "Quốc gia / vùng / 国家或地区": "Ả Rập Xê-út / 沙特阿拉伯",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Argentina / 阿根廷",
+        "Số visitor / 访客数": "2",
+        "Tổng PV / 总 PV": "4",
+        "Visitor có keyword / 有关键词访客": "2",
+        "Bản ghi keyword chính xác / 精确关键词记录": "6",
+        "L0": "1",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Ấn Độ / 印度",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Bangladesh / 孟加拉国",
+        "Số visitor / 访客数": "2",
+        "Tổng PV / 总 PV": "4",
+        "Visitor có keyword / 有关键词访客": "2",
+        "Bản ghi keyword chính xác / 精确关键词记录": "6",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Bờ Biển Ngà / 科特迪瓦",
+        "Số visitor / 访客数": "2",
+        "Tổng PV / 总 PV": "14",
+        "Visitor có keyword / 有关键词访客": "2",
+        "Bản ghi keyword chính xác / 精确关键词记录": "5",
+        "L0": "0",
+        "L1": "2",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "2"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Brazil / 巴西",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Canada / 加拿大",
+        "Số visitor / 访客数": "3",
+        "Tổng PV / 总 PV": "9",
+        "Visitor có keyword / 有关键词访客": "3",
+        "Bản ghi keyword chính xác / 精确关键词记录": "6",
+        "L0": "0",
+        "L1": "3",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "3"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Costa Rica / 哥斯达黎加",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Hoa Kỳ / 美国",
+        "Số visitor / 访客数": "8",
+        "Tổng PV / 总 PV": "15",
+        "Visitor có keyword / 有关键词访客": "6",
+        "Bản ghi keyword chính xác / 精确关键词记录": "15",
+        "L0": "2",
+        "L1": "6",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "6"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Indonesia / 印度尼西亚",
+        "Số visitor / 访客数": "2",
+        "Tổng PV / 总 PV": "2",
+        "Visitor có keyword / 有关键词访客": "2",
+        "Bản ghi keyword chính xác / 精确关键词记录": "4",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Kazakhstan / 哈萨克斯坦",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "1",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Kuwait / 科威特",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Mexico / 墨西哥",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Moldova / 摩尔多瓦",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "1",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Pakistan / 巴基斯坦",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "5",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Phần Lan / 芬兰",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "0",
+        "Bản ghi keyword chính xác / 精确关键词记录": "0",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Philippines / 菲律宾",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "2",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Romania / 罗马尼亚",
+        "Số visitor / 访客数": "2",
+        "Tổng PV / 总 PV": "2",
+        "Visitor có keyword / 有关键词访客": "2",
+        "Bản ghi keyword chính xác / 精确关键词记录": "8",
+        "L0": "2",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Tanzania / 坦桑尼亚",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "3",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Tây Ban Nha / 西班牙",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Trung Quốc / 中国",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "3",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "3",
+        "L0": "1",
+        "L1": "0",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "0"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Venezuela / 委内瑞拉",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "0",
+        "Bản ghi keyword chính xác / 精确关键词记录": "0",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Việt Nam / 越南",
+        "Số visitor / 访客数": "12",
+        "Tổng PV / 总 PV": "19",
+        "Visitor có keyword / 有关键词访客": "2",
+        "Bản ghi keyword chính xác / 精确关键词记录": "7",
+        "L0": "1",
+        "L1": "11",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "11"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Ý / 意大利",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "1",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "4",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      },
+      {
+        "Quốc gia / vùng / 国家或地区": "Yemen / 也门",
+        "Số visitor / 访客数": "1",
+        "Tổng PV / 总 PV": "2",
+        "Visitor có keyword / 有关键词访客": "1",
+        "Bản ghi keyword chính xác / 精确关键词记录": "3",
+        "L0": "0",
+        "L1": "1",
+        "L2": "0",
+        "L3": "0",
+        "L4": "0",
+        "L1+": "1"
+      }
+    ],
+    "current_exact_keywords": [
+      {
+        "keyword_exact": "abrasifs pour polissage de stucco veneziano",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà / 科特迪瓦": 1
+        }
+      },
+      {
+        "keyword_exact": "outils abrasifs p 3000  p 6000 riken",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà / 科特迪瓦": 1
+        }
+      },
+      {
+        "keyword_exact": "outils abrasifs p 3000  p 6000 riken viet nam",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà / 科特迪瓦": 1
+        }
+      },
+      {
+        "keyword_exact": "ponceuse girafe",
+        "occurrences": 1,
+        "pv": 12,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà / 科特迪瓦": 1
+        }
+      },
+      {
+        "keyword_exact": "browsing history",
+        "occurrences": 3,
+        "pv": 7,
+        "levels": {
+          "L1": 3
+        },
+        "countries": {
+          "Canada / 加拿大": 2,
+          "Argentina / 阿根廷": 1
+        }
+      },
+      {
+        "keyword_exact": "abrasive belt slitting machines",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pakistan / 巴基斯坦": 1
+        }
+      },
+      {
+        "keyword_exact": "ceramic abrasive belt",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pakistan / 巴基斯坦": 1
+        }
+      },
+      {
+        "keyword_exact": "ceramic sanding disc",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada / 加拿大": 1
+        }
+      },
+      {
+        "keyword_exact": "disposable coverall suit",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada / 加拿大": 1
+        }
+      },
+      {
+        "keyword_exact": "jwt abrasive rolls",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pakistan / 巴基斯坦": 1
+        }
+      },
+      {
+        "keyword_exact": "jwt cloth backed ceramic roll 1400mm p60",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Pakistan / 巴基斯坦": 1
+        }
+      },
+      {
+        "keyword_exact": "pu paint polyurethane",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada / 加拿大": 1
+        }
+      },
+      {
+        "keyword_exact": "sponge",
+        "occurrences": 1,
+        "pv": 5,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Canada / 加拿大": 1
+        }
+      },
+      {
+        "keyword_exact": "15 ton rotary compressormitsubishi",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bangladesh / 孟加拉国": 2
+        }
+      },
+      {
+        "keyword_exact": "erramientas para pintura de carro",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 2
+        }
+      },
+      {
+        "keyword_exact": "lenovo thinkpad t480s",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bangladesh / 孟加拉国": 2
+        }
+      },
+      {
+        "keyword_exact": "sundown audio",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 2
+        }
+      },
+      {
+        "keyword_exact": "ultrasonic cutting machineckuc13",
+        "occurrences": 2,
+        "pv": 4,
+        "levels": {
+          "L1": 2
+        },
+        "countries": {
+          "Bangladesh / 孟加拉国": 2
+        }
+      },
+      {
+        "keyword_exact": "abrasive roll manufacturer",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "non woven matt wheel",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "nonwoven abrasive wheel",
+        "occurrences": 1,
+        "pv": 4,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "bearings",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc / 中国": 1
+        }
+      },
+      {
+        "keyword_exact": "juegos de herramientas dewalt",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Argentina / 阿根廷": 1
+        }
+      },
+      {
+        "keyword_exact": "office printer",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Tanzania / 坦桑尼亚": 1
+        }
+      },
+      {
+        "keyword_exact": "pumps",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc / 中国": 1
+        }
+      },
+      {
+        "keyword_exact": "queue divider",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Tanzania / 坦桑尼亚": 1
+        }
+      },
+      {
+        "keyword_exact": "spandex cocktail table covers",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Tanzania / 坦桑尼亚": 1
+        }
+      },
+      {
+        "keyword_exact": "家具",
+        "occurrences": 1,
+        "pv": 3,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Trung Quốc / 中国": 1
+        }
+      },
+      {
+        "keyword_exact": "abrasive flap wheel",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Romania / 罗马尼亚": 2
+        }
+      },
+      {
+        "keyword_exact": "calzos niveladores",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Romania / 罗马尼亚": 2
+        }
+      },
+      {
+        "keyword_exact": "calzos niveladores autocaravanas",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Romania / 罗马尼亚": 2
+        }
+      },
+      {
+        "keyword_exact": "niveladores de cermica y porcelanato de 1mm",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Romania / 罗马尼亚": 2
+        }
+      },
+      {
+        "keyword_exact": "pistol semprot",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Indonesia / 印度尼西亚": 2
+        }
+      },
+      {
+        "keyword_exact": "spraygun",
+        "occurrences": 2,
+        "pv": 2,
+        "levels": {
+          "L0": 2
+        },
+        "countries": {
+          "Indonesia / 印度尼西亚": 2
+        }
+      },
+      {
+        "keyword_exact": "iwata",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "jay zhou jian",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Yemen / 也门": 1
+        }
+      },
+      {
+        "keyword_exact": "kawami",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "linyi grinding wheels",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Yemen / 也门": 1
+        }
+      },
+      {
+        "keyword_exact": "mejji mini sng phun son",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "sata jet x",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "tampon de polissage inox",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Bờ Biển Ngà / 科特迪瓦": 1
+        }
+      },
+      {
+        "keyword_exact": "water pump ndl",
+        "occurrences": 1,
+        "pv": 2,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Yemen / 也门": 1
+        }
+      },
+      {
+        "keyword_exact": "a giy mi",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "abrasivo grana 600",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ý / 意大利": 1
+        }
+      },
+      {
+        "keyword_exact": "asistencia para mover autos chocados",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina / 阿根廷": 1
+        }
+      },
+      {
+        "keyword_exact": "astuccio microfibra effetto suede",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ý / 意大利": 1
+        }
+      },
+      {
+        "keyword_exact": "baitcasting reel lucana",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ / 印度": 1
+        }
+      },
+      {
+        "keyword_exact": "car paint",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "chameleon pigment powder",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Philippines / 菲律宾": 1
+        }
+      },
+      {
+        "keyword_exact": "coated abrasive manufacturing machine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Costa Rica / 哥斯达黎加": 1
+        }
+      },
+      {
+        "keyword_exact": "drine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ / 印度": 1
+        }
+      },
+      {
+        "keyword_exact": "electric orbital sanding machine for car",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ả Rập Xê-út / 沙特阿拉伯": 1
+        }
+      },
+      {
+        "keyword_exact": "herramientas pa e a taller",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina / 阿根廷": 1
+        }
+      },
+      {
+        "keyword_exact": "herramientas para pintar autos",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "lamiera diamantata grana 600",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ý / 意大利": 1
+        }
+      },
+      {
+        "keyword_exact": "maca root capsules",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico / 墨西哥": 1
+        }
+      },
+      {
+        "keyword_exact": "mechanical keyboard",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ấn Độ / 印度": 1
+        }
+      },
+      {
+        "keyword_exact": "milwaukee m12 sander",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "motor de gasolina pequeo",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Tây Ban Nha / 西班牙": 1
+        }
+      },
+      {
+        "keyword_exact": "novedoso tendencia",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina / 阿根廷": 1
+        }
+      },
+      {
+        "keyword_exact": "orbital sander",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Moldova / 摩尔多瓦": 1
+        }
+      },
+      {
+        "keyword_exact": "orbital sanding machine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ả Rập Xê-út / 沙特阿拉伯": 1
+        }
+      },
+      {
+        "keyword_exact": "packaging tessuto",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Ý / 意大利": 1
+        }
+      },
+      {
+        "keyword_exact": "pistola airsoft metal",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Tây Ban Nha / 西班牙": 1
+        }
+      },
+      {
+        "keyword_exact": "pistola co2 metal",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Tây Ban Nha / 西班牙": 1
+        }
+      },
+      {
+        "keyword_exact": "pistola de gravedad neiko 31213a",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico / 墨西哥": 1
+        }
+      },
+      {
+        "keyword_exact": "pistola de gravedad profecional de gama alta",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico / 墨西哥": 1
+        }
+      },
+      {
+        "keyword_exact": "pistola de pintura para carro",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Brazil / 巴西": 1
+        }
+      },
+      {
+        "keyword_exact": "pistola de pulverizacion kova",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Argentina / 阿根廷": 1
+        }
+      },
+      {
+        "keyword_exact": "r101",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Kazakhstan / 哈萨克斯坦": 1
+        }
+      },
+      {
+        "keyword_exact": "riel gua 31in  para sierra makita 7 14 inalmbrica",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Mexico / 墨西哥": 1
+        }
+      },
+      {
+        "keyword_exact": "sander foam interface pad",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "sander machine",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Kuwait / 科威特": 1
+        }
+      },
+      {
+        "keyword_exact": "sanding machine for wood",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Ả Rập Xê-út / 沙特阿拉伯": 1
+        }
+      },
+      {
+        "keyword_exact": "shadow spray primer gun",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "sn  t",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Việt Nam / 越南": 1
+        }
+      },
+      {
+        "keyword_exact": "surf prep sander",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "w101 spray gun",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L1": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "wolter 101 spray gun",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Philippines / 菲律宾": 1
+        }
+      },
+      {
+        "keyword_exact": "wooden clog  heels",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      },
+      {
+        "keyword_exact": "wooden heels",
+        "occurrences": 1,
+        "pv": 1,
+        "levels": {
+          "L0": 1
+        },
+        "countries": {
+          "Hoa Kỳ / 美国": 1
+        }
+      }
+    ]
+  },
+  "onetalk": {
+    "overview": [
+      {
+        "Hạng mục / 项目": "03/09/2026 - cập nhật tuần mới / 本周更新",
+        "Số liệu / 数据": "14 buyer đã rà soát / 已检查14位买家",
+        "Ghi chú vận hành / 运营备注": "7 khách ưu tiên; 5 cần theo dõi; 3 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng. / 7个重点客户；5个继续跟进；3个低优先级/风险，已插入最上方。"
+      },
+      {
+        "Hạng mục / 项目": "Khoảng đọc lại / 检查周期",
+        "Số liệu / 数据": "29/08/2026 - 03/09/2026",
+        "Ghi chú vận hành / 运营备注": "Tập trung khách hỏi sanding discs, abrasive belts, spray gun, grit/diameter, sample và shipping. / 聚焦砂碟、砂带、喷枪、粒度/直径、样品和物流询盘。"
+      },
+      {
+        "Hạng mục / 项目": "Trọng tâm tuần này / 本周重点",
+        "Số liệu / 数据": "Abrasive discs + abrasive belts / 砂碟与砂带",
+        "Ghi chú vận hành / 运营备注": "Lead tốt có thông số rõ: 6 inch 150mm, grit P120/P150/P320/P1000, GXK51 belt, 240 grit, 150-250 pcs, sample. / 优质线索有明确规格与数量。"
+      },
+      {
+        "Hạng mục / 项目": "Rủi ro chính / 主要风险",
+        "Số liệu / 数据": "Thiếu grit/quantity/destination hoặc kéo sai ngành / 缺少粒度、数量、目的地或品类不匹配",
+        "Ghi chú vận hành / 运营备注": "Cần hỏi nhanh grit, diameter, hole pattern, backing, quantity, destination và có cần sample không. / 快速确认粒度、尺寸、孔型、背基、数量、目的地及样品需求。"
+      },
+      {
+        "Hạng mục / 项目": "25/08/2026 - cập nhật tuần mới / 本周更新",
+        "Số liệu / 数据": "7 lead / 7条线索",
+        "Ghi chú vận hành / 运营备注": "Dữ liệu song ngữ Việt-Trung, chèn lên trên cùng / 越中双语数据，已插入最上方。"
+      },
+      {
+        "Hạng mục / 项目": "Khoảng đọc lại / 检查周期",
+        "Số liệu / 数据": "Tuần 25/08/2026 / 2026年8月25日周",
+        "Ghi chú vận hành / 运营备注": "Tập trung khách có phản hồi thật / 聚焦真实回复客户。"
+      },
+      {
+        "Hạng mục / 项目": "Khách ưu tiên / 重点客户",
+        "Số liệu / 数据": "4",
+        "Ghi chú vận hành / 运营备注": "Antonio Majano, Ali Lali, Zephy Lubwela, yael Ramirez."
+      },
+      {
+        "Hạng mục / 项目": "Khách cần theo dõi / 继续跟进",
+        "Số liệu / 数据": "3",
+        "Ghi chú vận hành / 运营备注": "balaji Selvam, MARCOS RODRIGUES, Victor Pedrozo."
+      },
+      {
+        "Hạng mục / 项目": "Tài khoản đã rà soát / 已检查账号",
+        "Số liệu / 数据": "RIKEN - DING YI WEI",
+        "Ghi chú vận hành / 运营备注": "Đã đọc OneTalk ngày 18/08/2026. / 已于2026年8月18日查看OneTalk消息。"
+      },
+      {
+        "Hạng mục / 项目": "Khách có phản hồi trong 30 ngày / 近30天回复买家",
+        "Số liệu / 数据": "14 buyers / 14位买家",
+        "Ghi chú vận hành / 运营备注": "Số liệu hiển thị trong OneTalk. / 数据来自OneTalk页面。"
+      },
+      {
+        "Hạng mục / 项目": "Thời gian phản hồi trung bình / 平均回复时长",
+        "Số liệu / 数据": "0.63 giờ / 0.63小时",
+        "Ghi chú vận hành / 运营备注": "Tốc độ phản hồi tốt, cần tập trung chất lượng chốt đơn. / 回复速度较好，重点应放在订单推进质量。"
+      },
+      {
+        "Hạng mục / 项目": "Khách ưu tiên xử lý / 优先跟进客户",
+        "Số liệu / 数据": "7",
+        "Ghi chú vận hành / 运营备注": "Victor, Balaji, Yael, Michael, Ruby, Raymond, Javier/David nhóm abrasive có nhu cầu rõ. / 这些客户需求相对明确。"
+      },
+      {
+        "Hạng mục / 项目": "Khách cần theo dõi / 需继续跟进客户",
+        "Số liệu / 数据": "8",
+        "Ghi chú vận hành / 运营备注": "Faisal, Roman, I RIN LEE, Even, Jake, Comprasferreteriakoala, MauroCesar, Tee có tín hiệu nhưng thiếu thông tin. / 有信号但信息不足。"
+      },
+      {
+        "Hạng mục / 项目": "Tin ít giá trị / 低价值消息",
+        "Số liệu / 数据": "Nhiều / 较多",
+        "Ghi chú vận hành / 运营备注": "Chỉ chào hỏi, auto follow-up, yêu cầu email, hoàn tiền hoặc không có SKU/số lượng. / 仅问候、自动跟进、邮箱、退款或无明确需求。"
+      },
+      {
+        "Hạng mục / 项目": "Vấn đề nổi bật / 核心问题",
+        "Số liệu / 数据": "Cần chốt thông số + báo giá nhanh / 需快速确认规格并报价",
+        "Ghi chú vận hành / 运营备注": "Nhiều lead đang thiếu grit, size, quantity, packing, destination và yêu cầu mẫu. / 多数线索缺少粒度、尺寸、数量、包装、目的地和样品确认。"
+      },
+      {
+        "Hạng mục / 项目": "Hành động ưu tiên / 优先动作",
+        "Số liệu / 数据": "Tạo báo giá trong Alibaba / 在阿里内生成报价",
+        "Ghi chú vận hành / 运营备注": "Không kéo khách ra ngoài nền tảng trước khi đủ thông tin. / 信息未完整前，尽量在平台内完成沟通和报价。"
+      }
+    ],
+    "priority_buyers": [
+      {
+        "Ngày / 日期": "2026-09-03",
+        "Khách hàng / 客户": "James Thomson",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: 6 Inch (150mm) Multi-Hole White Sanding Discs; cần ceramic/aluminum oxide, hole 0/6/8/17/49, OEM label, có thể test sample. CN: 6英寸150mm多孔白色砂碟，需确认陶瓷/氧化铝、孔型和OEM贴牌，可提供样品测试。",
+        "Số lượng / 数量": "Chưa rõ, gợi ý 1,000/3,000/5,000+ pcs / 数量未定，建议确认1000/3000/5000+片",
+        "Nội dung đã đọc / 已读内容": "VI: Buyer có inquiry rất rõ về sản phẩm; seller đã hỏi grit, quantity, destination/forwarder. CN: 买家需求明确，需确认粒度、数量、目的地/货代仓。",
+        "Ưu tiên / 优先级": "Rất cao / 很高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Hỏi grit size, số lượng từng grit, destination city/postal code hoặc warehouse; đề xuất free sample. CN: 询问粒度、各粒度数量、目的地/仓库，并推荐免费样品。"
+      },
+      {
+        "Ngày / 日期": "2026-09-02",
+        "Khách hàng / 客户": "Jackeline Gonzalez",
+        "Quốc gia / 国家": "USA / Lynnwood",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Muốn sample grit 180 và 220 cùng nhau. CN: 需要180目和220目样品一起寄送。",
+        "Số lượng / 数量": "Sample 180 + 220 / 样品180+220",
+        "Nội dung đã đọc / 已读内容": "VI: Seller đã đồng ý arrange sample, đang thiếu full street address Lynnwood để tính ship. CN: 已同意安排样品，缺少Lynnwood完整街道地址以确认运费。",
+        "Ưu tiên / 优先级": "Rất cao / 很高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Xin full address + phone, báo sample/ship fee và thời gian gửi mẫu. CN: 索要完整地址和电话，确认样品费/运费与寄送时间。"
+      },
+      {
+        "Ngày / 日期": "2026-09-02",
+        "Khách hàng / 客户": "Gerald Nduwuchi",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Riken GXK51 abrasive belt cho wood/metal sanding, hỏi 1.2mm thickness và paper packing. CN: GXK51砂带用于木材/金属打磨，需确认1.2mm厚度和纸包装。",
+        "Số lượng / 数量": "150 units / 150件",
+        "Nội dung đã đọc / 已读内容": "VI: Buyer có quantity 150 units, cần xác nhận có cần sample kiểm tra hay đơn sản xuất luôn. CN: 买家数量150件，需确认是否先测样或直接下单。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Gửi spec GXK51, hỏi size belt, grit, backing, có cần sample không. CN: 发送GXK51规格，确认砂带尺寸、粒度、背基及样品需求。"
+      },
+      {
+        "Ngày / 日期": "2026-08-30",
+        "Khách hàng / 客户": "SyedMeer UzaifAli",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: 240-grit abrasive belts GXK51 cho wood/metal; hỏi vận chuyển và order một lần hay lặp lại. CN: 240目GXK51砂带，用于木材/金属，需确认运输方式和是否长期采购。",
+        "Số lượng / 数量": "250 pieces / 250件",
+        "Nội dung đã đọc / 已读内容": "VI: Buyer có số lượng 250 pcs, sản phẩm đúng ngành, cần khai thác recurring volume. CN: 买家数量250件，品类匹配，可挖掘长期采购。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Hỏi belt size, backing, destination, transport method và monthly volume. CN: 确认砂带尺寸、背基、目的地、运输方式和月采购量。"
+      },
+      {
+        "Ngày / 日期": "2026-08-29",
+        "Khách hàng / 客户": "Ricardo Tovar",
+        "Quốc gia / 国家": "China / Trung Quốc",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: HVLP Gravity Feed Air Paint Spray Gun J-15/W-101 type; nozzle 1.2/1.3/1.4mm, automotive/furniture finishing. CN: HVLP重力喷枪J-15/W-101，喷嘴1.2/1.3/1.4mm，用于汽车/家具喷涂。",
+        "Số lượng / 数量": "10 pcs / 10件",
+        "Nội dung đã đọc / 已读内容": "VI: Đã có đơn 10 pcs, cần xác nhận nozzle size và shipping city/warehouse ở China. CN: 已有10件需求，需确认喷嘴规格和中国收货城市/仓库。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Hỏi nozzle configuration 1.3/1.4mm và địa chỉ kho Trung Quốc để finalize order. CN: 确认喷嘴配置和中国仓库地址以完成订单。"
+      },
+      {
+        "Ngày / 日期": "2026-08-29",
+        "Khách hàng / 客户": "Abdus Samad",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Round Yellow Abrasive Sanding Discs AP33M Gold, 5 inch/6 inch, multi-hole, OEM box. CN: 黄色圆形砂碟AP33M Gold，5/6英寸，多孔，支持OEM包装。",
+        "Số lượng / 数量": "Chưa rõ / 未确认",
+        "Nội dung đã đọc / 已读内容": "VI: Buyer hỏi đúng sản phẩm; cần diameter, grit, quantity; có thể gửi free sample. CN: 需求匹配，需确认直径、粒度和数量，可寄样测试。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Hỏi 5 inch hay 6 inch, grit size, số lượng; đề xuất sample test. CN: 确认5英寸或6英寸、粒度、数量，并推荐样品测试。"
+      },
+      {
+        "Ngày / 日期": "2026-08-27",
+        "Khách hàng / 客户": "Bryce Collins",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: 6 Inch Purple Multi-Hole Ceramic Sanding Discs, grit P120/P150/P320/P1000, OEM/private label. CN: 6英寸紫色多孔陶瓷砂碟，P120/P150/P320/P1000，支持OEM/自有品牌。",
+        "Số lượng / 数量": "MOQ 1,000 pcs; tier tốt 3,000-5,000 pcs / MOQ1000片，最佳阶梯3000-5000片",
+        "Nội dung đã đọc / 已读内容": "VI: Buyer có grit cụ thể và quan tâm so sánh tier 1,000 vs 3,000 pcs. CN: 买家粒度明确，适合报价1000与3000片阶梯。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Gửi tiered quotation 1,000/3,000/5,000 pcs, hỏi destination và packaging logo. CN: 发送1000/3000/5000片阶梯报价，确认目的地和包装logo。"
+      },
+      {
+        "Ngày / 日期": "2026-08-24",
+        "Khách hàng / 客户": "Antonio Majano",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Hỏi Riken là nhà sản xuất hay thương mại. CN: 询问 Riken 是生产厂家还是贸易公司。",
+        "Số lượng / 数量": "Chưa nêu / 未说明",
+        "Nội dung đã đọc / 已读内容": "VI: Buyer hỏi trực tiếp năng lực công ty, cần trả lời rõ factory/manufacturer. CN: 买家关注公司性质，需要明确回复工厂/厂家身份。",
+        "Ưu tiên / 优先级": "Lead thật - ưu tiên cao / 真实询盘-高优先级",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Trả lời là nhà máy/chuyên abrasive, nêu năm thành lập/năng lực, hỏi sản phẩm và số lượng. CN: 回复工厂身份、研磨材料能力，并询问产品和数量。"
+      },
+      {
+        "Ngày / 日期": "2026-08-20",
+        "Khách hàng / 客户": "Ali Lali",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Cần 20 rolls sandpaper, grit 120 và 180, medium sanding paper; có thể cần backing/coating theo ảnh. CN: 需要20卷砂纸，120/180目，中等打磨用途，需确认背基/涂层。",
+        "Số lượng / 数量": "20 rolls / 20卷",
+        "Nội dung đã đọc / 已读内容": "VI: Đã có nhu cầu sản phẩm, thiếu thông tin backing/coating, size, địa chỉ ship. CN: 需求明确，但缺少背基/涂层、尺寸和收货地址。",
+        "Ưu tiên / 优先级": "Lead thật - ưu tiên cao / 真实询盘-高优先级",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Hỏi backing material/coating, width/length, destination; gửi quote 120/180 grit. CN: 确认背基、涂层、宽度长度、目的地后报价。"
+      },
+      {
+        "Ngày / 日期": "2026-08-18",
+        "Khách hàng / 客户": "Zephy Lubwela",
+        "Quốc gia / 国家": "Pháp ngữ / 法语区",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Cần 25 rolls P100 + 25 rolls P120, mỗi roll dài 50m. CN: 需要25卷P100和25卷P120，每卷50米。",
+        "Số lượng / 数量": "50 rolls total / 共50卷",
+        "Nội dung đã đọc / 已读内容": "VI: Nhu cầu rất rõ, đang hỏi thêm công ty/email/type/application/destination/trial hay regular. CN: 数量规格清楚，需补充公司信息、用途、目的地以及试单/长期采购。",
+        "Ưu tiên / 优先级": "Lead tốt - ưu tiên cao / 优质线索-高优先级",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Lấy đủ company, application, delivery address; gửi quote + freight. CN: 收集公司、用途、收货地址后发送报价和运费。"
+      },
+      {
+        "Ngày / 日期": "2026-08-11",
+        "Khách hàng / 客户": "yael Ramirez",
+        "Quốc gia / 国家": "Dominican Republic / 多米尼加",
+        "Sản phẩm & nhu cầu / 产品与需求": "VI: Cần abrasive sponge xanh 100x120x12mm, grit 60-400#, hardness medium, dùng cho car/wood; số lượng 1,000 pcs. CN: 需要蓝色海绵砂块100x120x12mm，60-400目，中等硬度，用于汽车/木材，数量1000个。",
+        "Số lượng / 数量": "1,000 pcs / 1000个",
+        "Nội dung đã đọc / 已读内容": "VI: Specs rất rõ, cần company/destination/schedule/target price. CN: 规格明确，需要公司、目的地、采购时间和目标价。",
+        "Ưu tiên / 优先级": "Lead tốt - ưu tiên cao / 优质线索-高优先级",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Xin destination city/port và target price, gửi quote. CN: 获取目的城市/港口和目标价后报价。"
+      },
+      {
+        "Ngày / 日期": "2026-08-18",
+        "Khách hàng / 客户": "Victor Pedrozo",
+        "Quốc gia / 国家": "Mexico / 墨西哥",
+        "Sản phẩm & nhu cầu / 产品与需求": "Abrasive/sandpaper nhiều grit, grit range 320-3000; grit 80 không có. / 多种粒度砂纸，现有320-3000目，80目不可供。",
+        "Số lượng / 数量": "Khoảng 500 pcs, muốn nhiều grit; MOQ 100 pcs/mỗi grit. / 约500片，多个粒度；每个粒度MOQ 100片。",
+        "Nội dung đã đọc / 已读内容": "Buyer hỏi bằng tiếng Tây Ban Nha: muốn nhiều loại grit, tối thiểu mỗi grit bao nhiêu, muốn khoảng 500 chiếc. Smart action gợi ý giá $1.20/pc. / 买家询问不同粒度的起订量，约500片，系统建议价格$1.20/片。",
+        "Ưu tiên / 优先级": "Rất cao / 最高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Xác nhận có thể mix grit, mỗi grit tối thiểu 100 pcs, hỏi khách muốn chia 500 pcs theo grit nào và báo giá chính thức. ZH: 可以混合粒度，每个粒度最低100片。请确认500片分别需要哪些粒度，我们马上给您正式报价。"
+      },
+      {
+        "Ngày / 日期": "2026-08-17",
+        "Khách hàng / 客户": "balaji Selvam",
+        "Quốc gia / 国家": "India / 印度",
+        "Sản phẩm & nhu cầu / 产品与需求": "RIKEN Aluminum Oxide Sandpaper thay thế Rhynowet; grit 80-800, easy-tear. / RIKEN氧化铝砂纸替代Rhynowet，80-800目，易撕。",
+        "Số lượng / 数量": "RFQ ≥20,000 pcs; quotation USD 0.20/pc. / 询盘≥20,000片，报价USD 0.20/片。",
+        "Nội dung đã đọc / 已读内容": "Seller đã gửi báo giá cho Wolverine RW-A36 Aluminum Oxide Sanding Sheet; order progress thiếu địa chỉ ship. / 已发送报价，订单信息缺少收货地址。",
+        "Ưu tiên / 优先级": "Rất cao / 最高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Hỏi xác nhận có chấp nhận RIKEN thay thế Rhynowet không, cần grit/size cụ thể và địa chỉ nhận hàng. ZH: 请确认是否接受RIKEN作为Rhynowet替代品，并提供具体粒度、尺寸及收货地址以便核算运费。"
+      },
+      {
+        "Ngày / 日期": "2026-08-11",
+        "Khách hàng / 客户": "yael Ramirez",
+        "Quốc gia / 国家": "Dominican Republic / 多米尼加",
+        "Sản phẩm & nhu cầu / 产品与需求": "Blue abrasive sponge 100 x 120 x 12 mm, grit 60-400#, medium hardness, dùng cho ô tô và gỗ. / 蓝色海绵砂块100x120x12mm，60-400目，中等硬度，用于汽车和木材。",
+        "Số lượng / 数量": "1,000 pcs / 1000片",
+        "Nội dung đã đọc / 已读内容": "Seller đã hỏi company name, website, business type, destination city/port, schedule, target price và xác nhận YINLI hay OEM. / 已询问公司、网站、业务类型、目的港、采购计划、目标价以及YINLI或OEM。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Follow lại bằng bảng thông tin cần khách điền, kèm cam kết báo giá trong ngày. ZH: 请客户补充公司信息、目的港、采购时间和品牌要求，收到后当天提供正式报价。"
+      },
+      {
+        "Ngày / 日期": "2026-08-03",
+        "Khách hàng / 客户": "michael tigano",
+        "Quốc gia / 国家": "United States / 美国",
+        "Sản phẩm & nhu cầu / 产品与需求": "230x280mm Silicon Carbide Waterproof Sandpaper, Riken C35P, P60-P2000. / 230x280mm碳化硅水砂纸，Riken C35P，P60-P2000。",
+        "Số lượng / 数量": "1,000 pcs / 1000片",
+        "Nội dung đã đọc / 已读内容": "Buyer có target price $0.09/pc. Seller đã giới thiệu C35P, hỏi grit cụ thể và đề nghị gửi free samples. / 买家目标价$0.09/片；已介绍C35P并询问具体粒度，建议寄样。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Nhắc lại ưu thế C35P, hỏi grit cần test và địa chỉ nhận mẫu. ZH: 再次强调C35P防水纸基和切削优势，请客户确认测试粒度和样品收货地址。"
+      },
+      {
+        "Ngày / 日期": "2026-07-28",
+        "Khách hàng / 客户": "Ruby N",
+        "Quốc gia / 国家": "Vietnam flag / 越南标识",
+        "Sản phẩm & nhu cầu / 产品与需求": "Corundum sanding paper rolls, medium hardness, 80-800 grit, dùng xử lý aluminum. / 刚玉砂纸卷，中等硬度，80-800目，用于铝材加工。",
+        "Số lượng / 数量": "1,000 pcs / 1000片",
+        "Nội dung đã đọc / 已读内容": "Seller đã hỏi khách cần đóng gói từng tờ hay dạng cuộn. / 已询问需要单张包装还是卷装。",
+        "Ưu tiên / 优先级": "Trung bình-cao / 中高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Gửi 2 phương án đóng gói và giá theo từng phương án. ZH: 提供单张包装和卷装两个方案，并分别报价。"
+      },
+      {
+        "Ngày / 日期": "2026-07-28",
+        "Khách hàng / 客户": "Raymond lockett",
+        "Quốc gia / 国家": "United States / 美国",
+        "Sản phẩm & nhu cầu / 产品与需求": "Spray gun 600mL gravity feed, dùng ô tô/nội thất/xây dựng. / 600mL上壶喷枪，用于汽车、家具和建筑。",
+        "Số lượng / 数量": "1 unit test / 1台测试",
+        "Nội dung đã đọc / 已读内容": "Buyer hỏi shipping time tới US; seller hỏi phương thức vận chuyển và xác nhận chỉ mua 1 chiếc để test. / 买家询问到美国运输时间，已询问运输方式并确认是否只买1台测试。",
+        "Ưu tiên / 优先级": "Trung bình-cao / 中高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Báo 2 lựa chọn ship mẫu: express và economy, kèm thời gian. ZH: 提供快递和经济运输两种样品运输方案及预计时效。"
+      },
+      {
+        "Ngày / 日期": "2026-07-18",
+        "Khách hàng / 客户": "Javier Garcia",
+        "Quốc gia / 国家": "Chưa mở riêng, preview trong chat / 未单独打开，来自预览",
+        "Sản phẩm & nhu cầu / 产品与需求": "Aluminum Oxide Flap Disc 4 inch/100mm, grit 40/60, carbon steel polishing, OEM packaging. / 4英寸/100mm氧化铝百叶片，40/60目，碳钢打磨，支持OEM包装。",
+        "Số lượng / 数量": "1,000 pcs / 1000片",
+        "Nội dung đã đọc / 已读内容": "Seller đã viết proposal khá đầy đủ: chất lượng, OEM/ODM, lead time 5-10 ngày, free samples. / 已发送完整方案，包含质量、OEM、交期5-10天和免费样品。",
+        "Ưu tiên / 优先级": "Cao / 高",
+        "Đề xuất nhắn tiếp / 建议回复": "VI: Tách thành báo giá ngắn, hỏi logo/packing và địa chỉ mẫu. ZH: 简化成正式报价，确认LOGO/包装要求和样品地址。"
+      }
+    ],
+    "followup_buyers": [
+      {
+        "Ngày / 日期": "2026-09-03",
+        "Khách hàng / 客户": "Rajabu Kitema",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Nội dung / 内容": "VI: Chỉ thấy buyer gửi hình ảnh, có level tag nhưng chưa đọc được text sản phẩm. CN: 仅看到图片，有level标签，但未看到明确文字需求。 | SL: Chưa rõ / 未确认",
+        "Đánh giá / 判断": "VI: Cần mở ảnh/xác nhận sản phẩm trước khi đưa vào khách ưu tiên. CN: 需查看图片并确认产品后再列为重点客户。",
+        "Việc nên làm / 下一步": "VI: Hỏi buyer cần loại abrasive nào, size/grit/quantity/destination. CN: 询问需要哪类研磨产品、尺寸、粒度、数量和目的地。"
+      },
+      {
+        "Ngày / 日期": "2026-09-03",
+        "Khách hàng / 客户": "ghgv vhh",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Nội dung / 内容": "VI: Chỉ thấy hình ảnh, chưa có nhu cầu text rõ. CN: 仅看到图片，无明确文字需求。 | SL: Chưa rõ / 未确认",
+        "Đánh giá / 判断": "VI: Lead chưa đủ dữ liệu, cần đọc ảnh hoặc hỏi lại. CN: 线索信息不足，需要看图或追问。",
+        "Việc nên làm / 下一步": "VI: Hỏi sản phẩm, quy cách và số lượng; nếu không phản hồi thì xếp thấp. CN: 追问产品、规格和数量；无回复则降优先级。"
+      },
+      {
+        "Ngày / 日期": "2026-09-01",
+        "Khách hàng / 客户": "Pavel Haurilchik",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Nội dung / 内容": "VI: Chỉ thấy auto-reception stopped, chưa có nội dung sản phẩm trong snapshot. CN: 仅看到自动接待停止，未见明确产品内容。 | SL: Chưa rõ / 未确认",
+        "Đánh giá / 判断": "VI: Cần mở sâu nếu có lịch sử chat trước. CN: 如有历史聊天需进一步打开查看。",
+        "Việc nên làm / 下一步": "VI: Chưa tính lead chính; follow hỏi nhu cầu abrasive cụ thể. CN: 暂不列重点，追问具体研磨产品需求。"
+      },
+      {
+        "Ngày / 日期": "2026-08-27",
+        "Khách hàng / 客户": "Emanuel Liska",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Nội dung / 内容": "VI: Aluminum Oxide abrasive product, diameter 6-115mm, hỏi certificate, dùng xử lý copper, blade length 20mm. CN: 氧化铝研磨产品，直径6-115mm，询问证书，用于铜材加工，需确认20mm长度。 | SL: Chưa rõ / 未确认",
+        "Đánh giá / 判断": "VI: Lead kỹ thuật, cần xác nhận quy cách trước khi báo giá. CN: 技术型线索，报价前需确认规格。",
+        "Việc nên làm / 下一步": "VI: Hỏi application, grit, diameter, length 20mm có đúng không, packing/transport. CN: 确认用途、粒度、直径、20mm长度是否正确及包装/运输。"
+      },
+      {
+        "Ngày / 日期": "2026-08-27",
+        "Khách hàng / 客户": "omar tmezeh",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Nội dung / 内容": "VI: OEM/ODM/OBM abrasive discs, medium hardness, thickness 3.0mm, xử lý aluminum, buyer có item count nhưng thiếu total volume/logistics. CN: OEM/ODM/OBM砂碟，中等硬度、3.0mm厚，用于铝材加工，有数量但缺总量和物流。 | SL: Chưa rõ / 未确认",
+        "Đánh giá / 判断": "VI: Lead đúng ngành nhưng còn thiếu dimension và delivery address. CN: 品类匹配，但缺尺寸和收货地址。",
+        "Việc nên làm / 下一步": "VI: Hỏi surface dimension, grit, total quantity, delivery address và transport method. CN: 询问工作面尺寸、粒度、总量、地址和运输方式。"
+      },
+      {
+        "Ngày / 日期": "2026-08-17",
+        "Khách hàng / 客户": "balaji Selvam",
+        "Quốc gia / 国家": "Ấn Độ / 印度",
+        "Nội dung / 内容": "VI: RFQ tìm Rhynowet sandpaper; Riken đề xuất Aluminum Oxide Sandpaper thay thế, cần grit/size/quantity. CN: RFQ寻找Rhynowet砂纸，Riken可推荐氧化铝砂纸替代，需要确认粒度、尺寸、数量。 | SL: Chưa nêu / 未说明",
+        "Đánh giá / 判断": "Lead thật - ưu tiên vừa / 真实询盘-中优先级",
+        "Việc nên làm / 下一步": "VI: Hỏi có chấp nhận Riken alternative không, yêu cầu grit/size/quantity. CN: 询问是否接受Riken替代品，并确认粒度尺寸数量。"
+      },
+      {
+        "Ngày / 日期": "2026-08-13",
+        "Khách hàng / 客户": "MARCOS RODRIGUES",
+        "Quốc gia / 国家": "Brazil / 巴西",
+        "Nội dung / 内容": "VI: Seller follow: Riken là factory sản xuất abrasive materials số lượng lớn, hỏi buyer còn nhu cầu không. CN: 卖家跟进：Riken是大批量研磨材料工厂，询问买家是否仍有采购需求。 | SL: Chưa nêu / 未说明",
+        "Đánh giá / 判断": "Lead cũ / 老线索",
+        "Việc nên làm / 下一步": "VI: Follow bằng câu hỏi sản phẩm cụ thể, grit/quantity. CN: 跟进具体产品、粒度和数量。"
+      },
+      {
+        "Ngày / 日期": "2026-08-22",
+        "Khách hàng / 客户": "Victor Pedrozo",
+        "Quốc gia / 国家": "Spanish / 西语区",
+        "Nội dung / 内容": "VI: Buyer nói công ty sẽ phản hồi qua email sớm. CN: 买家表示公司将通过邮件回复。 | SL: Chưa nêu / 未说明",
+        "Đánh giá / 判断": "Cần xác minh / 需核实",
+        "Việc nên làm / 下一步": "VI: Mời tiếp tục trao đổi trong Alibaba, hỏi sản phẩm/quantity. CN: 引导在阿里巴巴内沟通，询问产品和数量。"
+      },
+      {
+        "Ngày / 日期": "2026-08-17",
+        "Khách hàng / 客户": "Faisal Latif",
+        "Quốc gia / 国家": "Pakistan / 巴基斯坦",
+        "Nội dung / 内容": "Buyer hỏi 'which product, sir'. / 买家问具体是什么产品。",
+        "Đánh giá / 判断": "Có phản hồi nhưng chưa rõ nhu cầu. / 有回复但需求不明确。",
+        "Việc nên làm / 下一步": "VI: Gửi lại ảnh/link sản phẩm đã hỏi và hỏi application, grit, quantity. ZH: 发送对应产品图/链接，并询问用途、粒度和数量。"
+      },
+      {
+        "Ngày / 日期": "2026-07-30",
+        "Khách hàng / 客户": "Roman Zebzeev",
+        "Quốc gia / 国家": "Russia / 俄罗斯",
+        "Nội dung / 内容": "Seller hỏi còn nhu cầu mua không. / 卖家询问是否仍有采购需求。",
+        "Đánh giá / 判断": "Lead cũ, cần kích hoạt lại. / 老线索需重新激活。",
+        "Việc nên làm / 下一步": "VI: Gửi 3 SKU bán tốt và hỏi nhu cầu hiện tại. ZH: 发送3个热销SKU并确认当前采购需求。"
+      },
+      {
+        "Ngày / 日期": "2026-07-30",
+        "Khách hàng / 客户": "I RIN LEE",
+        "Quốc gia / 国家": "Korea / 韩国",
+        "Nội dung / 内容": "Seller hỏi đã nhận email chưa. / 卖家询问是否收到邮件。",
+        "Đánh giá / 判断": "Có trao đổi ngoài email, cần kéo về Alibaba. / 已转邮件，建议回到平台。",
+        "Việc nên làm / 下一步": "VI: Nhắn lại trong Alibaba tóm tắt báo giá và hỏi phản hồi. ZH: 在阿里内重新总结报价并询问反馈。"
+      },
+      {
+        "Ngày / 日期": "2026-07-29",
+        "Khách hàng / 客户": "Even Christan",
+        "Quốc gia / 国家": "Netherlands / 荷兰",
+        "Nội dung / 内容": "Hỏi hỗ trợ chọn sản phẩm, tài liệu kỹ thuật và lắp đặt pump. / 涉及泵产品选型、技术资料和安装支持。",
+        "Đánh giá / 判断": "Có nhu cầu kỹ thuật nhưng có thể lệch ngành mài mòn. / 有技术需求但可能非核心品类。",
+        "Việc nên làm / 下一步": "VI: Xác minh loại pump/sản phẩm có thuộc danh mục Riken không. ZH: 先确认该泵是否属于RIKEN可供产品范围。"
+      },
+      {
+        "Ngày / 日期": "2026-07-25",
+        "Khách hàng / 客户": "Jake Wilson",
+        "Quốc gia / 国家": "United States / 美国",
+        "Nội dung / 内容": "Buyer hỏi 'Can we discuss further?'. / 买家要求进一步沟通。",
+        "Đánh giá / 判断": "Có tín hiệu thật nhưng thiếu SKU. / 有真实沟通信号但缺SKU。",
+        "Việc nên làm / 下一步": "VI: Hỏi khách đang quan tâm sản phẩm nào, grit/size/quantity. ZH: 询问具体产品、粒度、尺寸和采购数量。"
+      },
+      {
+        "Ngày / 日期": "2026-07-22",
+        "Khách hàng / 客户": "Comprasferreteriakoala Dosquebradas",
+        "Quốc gia / 国家": "Chưa mở riêng / 未单独打开",
+        "Nội dung / 内容": "Seller hỏi estimated order quantity và OEM/private label packaging. / 已询问数量及是否需要OEM/自有品牌包装。",
+        "Đánh giá / 判断": "Lead phụ kiện/abrasive có thể tốt. / 可能有潜力。",
+        "Việc nên làm / 下一步": "VI: Cần mở riêng tuần sau nếu có thời gian. ZH: 下次可单独打开核查完整对话。"
+      },
+      {
+        "Ngày / 日期": "2026-07-20",
+        "Khách hàng / 客户": "MauroCesar Andrade",
+        "Quốc gia / 国家": "Chưa mở riêng / 未单独打开",
+        "Nội dung / 内容": "RFQ Silicon Carbide waterproof sandpaper P60-P3000, OEM. / 碳化硅水砂纸P60-P3000，支持OEM。",
+        "Đánh giá / 判断": "Có sản phẩm khớp ngành. / 产品匹配度高。",
+        "Việc nên làm / 下一步": "VI: Follow lại bằng bảng grit/size/packing. ZH: 用粒度、尺寸、包装表格跟进。"
+      },
+      {
+        "Ngày / 日期": "2026-07-20",
+        "Khách hàng / 客户": "Tee Poungkaew",
+        "Quốc gia / 国家": "Chưa mở riêng / 未单独打开",
+        "Nội dung / 内容": "Trao đổi về chi phí vận chuyển nhanh, cần số lượng để ước tính. / 快递运费需数量才能估算。",
+        "Đánh giá / 判断": "Kẹt ở phí ship. / 卡在运费核算。",
+        "Việc nên làm / 下一步": "VI: Hỏi số lượng và kích thước kiện để báo DHL/FedEx. ZH: 询问数量和包装尺寸以核算DHL/FedEx费用。"
+      }
+    ],
+    "low_response_or_spam": [
+      {
+        "Ngày / 日期": "2026-08-27",
+        "Khách hàng / 客户": "User name / Anny Yang",
+        "Quốc gia / 国家": "United States / 美国",
+        "Dấu hiệu / 信号": "VI: Nội dung hỏi PUMPS, không đúng ngành abrasive; yêu cầu gửi email ngoài. CN: 询问PUMPS泵类产品，非研磨品类，并要求邮件外部联系。",
+        "Kết luận / 结论": null
+      },
+      {
+        "Ngày / 日期": "2026-09-03",
+        "Khách hàng / 客户": "ghgv vhh",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Dấu hiệu / 信号": "VI: Chỉ có hình ảnh, chưa có nhu cầu rõ trong phần đọc. CN: 仅有图片，未见明确需求。",
+        "Kết luận / 结论": null
+      },
+      {
+        "Ngày / 日期": "2026-09-01",
+        "Khách hàng / 客户": "Pavel Haurilchik",
+        "Quốc gia / 国家": "Chưa xác định / 未确认",
+        "Dấu hiệu / 信号": "VI: Chỉ thấy hệ thống báo automatic reception stopped, chưa đủ thông tin lead. CN: 仅看到自动接待停止，线索信息不足。",
+        "Kết luận / 结论": null
+      },
+      {
+        "Ngày / 日期": "2026-08-13",
+        "Khách hàng / 客户": "Cham Reoun",
+        "Quốc gia / 国家": "Cambodia / 柬埔寨",
+        "Dấu hiệu / 信号": "Chỉ thấy video, chưa đọc được nhu cầu văn bản. / 仅看到视频，无明确文字需求。",
+        "Kết luận / 结论": "Theo dõi thấp nếu không có phản hồi thêm. / 无进一步回复则低优先级。"
+      },
+      {
+        "Ngày / 日期": "2026-08-13",
+        "Khách hàng / 客户": "MARCOS RODRIGUES",
+        "Quốc gia / 国家": "Brazil / 巴西",
+        "Dấu hiệu / 信号": "Seller hỏi khách còn nhu cầu mua không. / 卖家询问是否仍采购。",
+        "Kết luận / 结论": "Chưa có phản hồi mới. / 暂无新回复。"
+      },
+      {
+        "Ngày / 日期": "2026-08-13",
+        "Khách hàng / 客户": "Maurosalgadolucas Lucas",
+        "Quốc gia / 国家": "United States / 美国",
+        "Dấu hiệu / 信号": "Auto reception stopped. / 自动接待停止。",
+        "Kết luận / 结论": "Không đủ lead. / 信息不足。"
+      },
+      {
+        "Ngày / 日期": "2026-08-11",
+        "Khách hàng / 客户": "Hector Escobar",
+        "Quốc gia / 国家": "Panama / 巴拿马",
+        "Dấu hiệu / 信号": "Auto reception stopped. / 自动接待停止。",
+        "Kết luận / 结论": "Không đủ lead. / 信息不足。"
+      },
+      {
+        "Ngày / 日期": "2026-08-05",
+        "Khách hàng / 客户": "Mina Hakem",
+        "Quốc gia / 国家": "Egypt / 埃及",
+        "Dấu hiệu / 信号": "Auto reception stopped. / 自动接待停止。",
+        "Kết luận / 结论": "Không đủ lead. / 信息不足。"
+      },
+      {
+        "Ngày / 日期": "2026-07-30",
+        "Khách hàng / 客户": "David Rod",
+        "Quốc gia / 国家": "United States / 美国",
+        "Dấu hiệu / 信号": "Liên quan hủy đơn và hoàn tiền. / 涉及取消订单和退款。",
+        "Kết luận / 结论": "Không phải lead bán mới. / 非新增销售线索。"
+      },
+      {
+        "Ngày / 日期": "2026-07-28",
+        "Khách hàng / 客户": "Miriel / Aliasger / Pablo",
+        "Quốc gia / 国家": "US/AE/ES",
+        "Dấu hiệu / 信号": "Chỉ chào hỏi hoặc cảm ơn. / 仅问候或致谢。",
+        "Kết luận / 结论": "Không phân tích sâu. / 不做重点分析。"
+      },
+      {
+        "Ngày / 日期": "2026-07-27",
+        "Khách hàng / 客户": "Susan Forrest",
+        "Quốc gia / 国家": "Nepal / 尼泊尔",
+        "Dấu hiệu / 信号": "Seller chỉ gửi website công ty. / 仅发送公司网站。",
+        "Kết luận / 结论": "Cần có phản hồi mua mới đưa lên ưu tiên. / 需买家回复后再提升优先级。"
+      }
+    ]
+  },
+  "update_rules": [
+    "Không tự bịa dữ liệu; null hiển thị Chưa có dữ liệu.",
+    "Giữ nguyên Keyword chính xác; không dịch hoặc sửa chính tả.",
+    "Dùng toàn bộ operations.history để vẽ xu hướng nhiều tuần.",
+    "Hiển thị toàn bộ quốc gia và toàn bộ từ khóa, có lọc/sắp xếp.",
+    "Tái tính Insight cần chú ý từ kỳ hiện tại so với kỳ trước và dữ liệu buyer.",
+    "Giữ toàn bộ giao diện song ngữ Việt / 中文."
+  ]
+}
