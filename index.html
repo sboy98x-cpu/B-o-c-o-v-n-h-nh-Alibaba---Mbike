@@ -165,20 +165,6 @@ body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-
         <div class="metric"><div class="n" style="color:var(--blue)" id="m_total_count"></div><div class="l">Tổng buyer đã rà soát</div></div>
       </div>
     </div>
-    <div class="grid2">
-      <div class="section">
-        <h2>Cơ cấu buyer đang xử lý theo mức ưu tiên</h2>
-        <div id="ch_priority" class="chart sm"></div>
-      </div>
-      <div class="section">
-        <h2>Mẫu cấu trúc tin nhắn cần thống nhất</h2>
-        <div class="grid3" style="grid-template-columns:1fr">
-          <div class="focus-card blue"><h3>Buyer có sản phẩm sẵn</h3><p>Giá 1 pcs / MOQ &rarr; phí ship &rarr; thời gian &rarr; link đặt hàng.</p></div>
-          <div class="focus-card amber"><h3>Buyer custom</h3><p>Xin model, ảnh, kích thước, số lượng &rarr; xác nhận MOQ và phí mẫu.</p></div>
-          <div class="focus-card red"><h3>Buyer hỏi phí ship</h3><p>Báo 2 phương án express / sea &rarr; hỏi địa chỉ hoặc cảng nhận.</p></div>
-        </div>
-      </div>
-    </div>
     <div class="section">
       <h2>Danh sách buyer chi tiết (nhúng toàn bộ từ sheet Tin nhắn)</h2>
       <div class="subtabs">
@@ -378,19 +364,6 @@ if (hasE) {
     xAxis:{type:'value',axisLabel:AXL},
     yAxis:{type:'category',data:top12.map(x=>x.country).reverse(),axisLabel:AXL},
     series:[{type:'bar',data:top12.map(x=>x.visitors).reverse(),itemStyle:{color:'#2864d7',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11}}]
-  });
-
-  c = mkChart('ch_priority');
-  c.setOption({
-    tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},
-    legend:{bottom:0,textStyle:{fontSize:12}},
-    series:[{type:'pie',radius:['42%','70%'],center:['50%','44%'],
-      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
-      data:[
-        {name:'Ưu tiên cao',value:D.buyers.priority.length,itemStyle:{color:'#d95761'}},
-        {name:'Follow nhẹ',value:D.buyers.explore.length,itemStyle:{color:'#ca7b1b'}},
-        {name:'Spam / ít phản hồi',value:D.buyers.signals.length,itemStyle:{color:'#9aa1ad'}}
-      ]}]
   });
   window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
 }
