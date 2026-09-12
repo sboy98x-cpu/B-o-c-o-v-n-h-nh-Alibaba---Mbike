@@ -412,7 +412,7 @@ const T = {
  }
 };
 
-let LANG = localStorage.getItem('riken_lang') || 'zh';
+let LANG = localStorage.getItem('riken_lang_v2') || 'zh';
 function L(x){ return (x && typeof x==='object' && 'vi' in x) ? (x[LANG]!=null?x[LANG]:x.vi) : x; }
 function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
 function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
@@ -720,8 +720,8 @@ function renderAll(){
   })();
 }
 
-document.getElementById('btnVi').addEventListener('click',()=>{ LANG='vi'; localStorage.setItem('riken_lang','vi'); renderAll(); });
-document.getElementById('btnZh').addEventListener('click',()=>{ LANG='zh'; localStorage.setItem('riken_lang','zh'); renderAll(); });
+document.getElementById('btnVi').addEventListener('click',()=>{ LANG='vi'; localStorage.setItem('riken_lang_v2','vi'); renderAll(); });
+document.getElementById('btnZh').addEventListener('click',()=>{ LANG='zh'; localStorage.setItem('riken_lang_v2','zh'); renderAll(); });
 
 renderAll();
 </script>
