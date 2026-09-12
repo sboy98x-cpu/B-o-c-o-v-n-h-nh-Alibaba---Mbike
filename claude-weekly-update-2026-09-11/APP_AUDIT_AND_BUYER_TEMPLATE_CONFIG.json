@@ -1,0 +1,159 @@
+{
+  "schema_version": "2.0",
+  "purpose": "Bản vá bắt buộc cho Claude Code sau khi kiểm tra trực tiếp 8 file index.html. Sửa dữ liệu cũ/chồng lặp và chuẩn hóa tab Buyer theo form Riken.",
+  "execution_mode": "REPLACE_EXISTING_COMPONENTS_NOT_APPEND",
+  "hard_rules": [
+    "Không chèn thêm kết luận/action mới bên dưới nội dung cũ. Phải xóa component cũ và render lại từ source_of_truth.",
+    "Mỗi app chỉ được có đúng một section #buyers, một section #diag và một nhóm Action plan 7 ngày.",
+    "Không hard-code số buyer, tên buyer, RFQ, visitor, PV hoặc L1+ trong HTML tĩnh nếu dữ liệu đã có trong JSON.",
+    "Tất cả số đếm Buyer phải tính từ buyer_data mới sau khi lọc/deduplicate.",
+    "Nếu cùng buyer xuất hiện nhiều dòng/ngày, giữ lịch sử nhưng chỉ tạo một thẻ buyer; thẻ dùng ngày mới nhất và gộp diễn biến quan trọng.",
+    "Kết luận và Action plan phải được dựng lại từ dữ liệu tuần hiện tại; không giữ câu chữ từ tuần trước.",
+    "Không đổi dữ liệu vận hành/visitor đúng kỳ hiện tại. Chỉ sửa những phần hiển thị sai, cũ hoặc bị lặp.",
+    "Riken giữ song ngữ Việt-Trung. G8 Home chỉ tiếng Việt."
+  ],
+  "riken_buyer_template": {
+    "reference_file": "riken/index.html",
+    "summary_metrics": [
+      "Gần order / cần xử lý trong 24h",
+      "Lead thật cần làm rõ",
+      "Cần theo dõi",
+      "Tổng lead có phản hồi thật"
+    ],
+    "subtabs": [
+      "Gần order",
+      "Lead thật cần làm rõ",
+      "Theo dõi",
+      "Ít phản hồi / rủi ro và nguyên tắc follow-up"
+    ],
+    "priority_card_fields": [
+      "Ngày cập nhật mới nhất",
+      "Tên buyer",
+      "Quốc gia và cờ quốc gia",
+      "Level",
+      "Nhu cầu/sản phẩm",
+      "Số lượng",
+      "Tín hiệu hoặc vướng mắc",
+      "Mức ưu tiên",
+      "Việc tiếp theo"
+    ],
+    "card_features": [
+      "Nút Copy next action",
+      "Màu đỏ cho rất cao/gần order, cam cho cao, xanh cho đang theo dõi, xám cho ít phản hồi",
+      "Sắp xếp ưu tiên giảm dần rồi ngày mới nhất",
+      "Tìm theo tên, quốc gia, sản phẩm",
+      "Bộ lọc mức ưu tiên và quốc gia",
+      "Không trình bày buyer ưu tiên bằng bảng ngang quá rộng"
+    ],
+    "classification": [
+      "Gần order: buyer đã hỏi thanh toán/order/PI/mẫu, đã chốt số lượng hoặc đang chờ ship.",
+      "Lead thật cần làm rõ: có nhu cầu thật nhưng còn thiếu spec, số lượng, MOQ, địa chỉ/cảng hoặc phương án vận chuyển.",
+      "Theo dõi: có trao đổi nhưng chưa đủ tín hiệu chốt.",
+      "Ít phản hồi/rủi ro: spam, hỏi nhầm ngành, auto message hoặc không phản hồi."
+    ]
+  },
+  "global_acceptance_tests": [
+    "Không còn hai kết luận khác tuần xuất hiện cùng lúc.",
+    "Không còn thẻ Action plan bị lồng hoặc thừa ngoài .grid3.",
+    "Không còn số buyer hard-code không khớp mảng dữ liệu.",
+    "Buyer mới nhất xuất hiện ở đầu danh sách.",
+    "Mỗi buyer ưu tiên hiển thị đủ nhu cầu, số lượng, vướng mắc và hành động tiếp theo.",
+    "Tìm kiếm, subtab và Copy next action hoạt động.",
+    "Mở file offline không có lỗi JavaScript.",
+    "Không có thẻ đóng div thừa làm vỡ bố cục."
+  ],
+  "app_audit": [
+    {
+      "store": "Mbike",
+      "app_path": "index.html",
+      "severity": "high",
+      "findings": [
+        "Bốn KPI Buyer đang hard-code 26/15/13/28 trong HTML, trong khi dữ liệu mới có 64 dòng ưu tiên, 58 cần theo dõi và 56 ít phản hồi.",
+        "Buyer ưu tiên đang dùng bảng ngang; chưa dùng thẻ Riken có vướng mắc, next action và nút copy.",
+        "Biểu đồ cơ cấu buyer còn hard-code 26/15/13/28.",
+        "Một focus card khác lại ghi 8 buyer trong khi phần kết luận ghi 10 buyer; phải tính động từ dữ liệu."
+      ],
+      "fix": "Thay toàn bộ tab Buyer và biểu đồ cơ cấu bằng form Riken; mọi số đếm tính từ buyer_data."
+    },
+    {
+      "store": "VCC",
+      "app_path": "viet-coldchain/index.html",
+      "severity": "medium",
+      "findings": [
+        "Dữ liệu tổng hợp buyer hiện đúng kỳ nhưng Action plan vẫn hard-code Oleg Golinsky và nhóm 15 buyer, không tự cập nhật theo buyer mới.",
+        "Thiếu nhóm Lead thật cần làm rõ và thiếu nút Copy next action.",
+        "Thẻ ưu tiên chưa hiển thị ngày, số lượng và level đầy đủ."
+      ],
+      "fix": "Giữ dữ liệu KPI đúng; dựng lại Buyer/Action plan từ buyer_data mới theo form Riken."
+    },
+    {
+      "store": "CM Decor",
+      "app_path": "cm-decor/index.html",
+      "severity": "critical",
+      "findings": [
+        "Khối Kết luận chứa đồng thời bản mới 4 buyer/RFQ 6/PV 88 và bản cũ 3 buyer/RFQ 1/PV 54.",
+        "Action plan bị lặp: bản mới còn 15 RFQ và bản cũ còn 20 RFQ.",
+        "Có thẻ div đóng thừa làm các khối cũ nằm ngoài container.",
+        "Tab Buyer chưa có Lead thật cần làm rõ, tìm kiếm và Copy next action."
+      ],
+      "fix": "Xóa toàn bộ khối kết luận/action bị ghép; render một bản duy nhất từ dữ liệu mới và thay Buyer theo form Riken."
+    },
+    {
+      "store": "G8 Home",
+      "app_path": "g8-home/index.html",
+      "severity": "critical",
+      "findings": [
+        "Khối Kết luận đang chứa nhiều phiên bản tuần chồng nhau: Vinod Kumar Katyal ở bản mới nhưng các bản cũ vẫn còn bên dưới.",
+        "Các giá trị RFQ, L1+ và top country của tuần cũ còn tồn tại trong DOM.",
+        "Buyer tab thiếu nhóm Lead thật cần làm rõ, tìm kiếm và Copy next action."
+      ],
+      "fix": "Thay nguyên khối Kết luận/Action plan và Buyer; không chỉnh nối từng dòng."
+    },
+    {
+      "store": "Riken",
+      "app_path": "riken/index.html",
+      "severity": "reference",
+      "findings": [
+        "Đây là mẫu Buyer chuẩn: bốn KPI, bốn subtab, priority cards và Copy next action.",
+        "Cần đọc lại buyer_data mới nhất và tính lại số lượng, nhưng giữ nguyên UX song ngữ."
+      ],
+      "fix": "Giữ giao diện; chỉ đồng bộ dữ liệu buyer mới và bảo đảm không hard-code."
+    },
+    {
+      "store": "Hoang Duc Thinh",
+      "app_path": "hoang-duc-thinh/index.html",
+      "severity": "critical",
+      "findings": [
+        "Kết luận hiện chứa ít nhất ba thế hệ nội dung: nhóm 4 buyer mới, nhóm 3 buyer cũ và nhóm 5 buyer cũ hơn.",
+        "Action plan cũng lặp nhiều bản với số nhóm theo dõi 29/19/10.",
+        "Một số khối bị đóng div sai vị trí.",
+        "Tab Buyer thiếu nhóm Lead thật cần làm rõ, tìm kiếm và Copy next action."
+      ],
+      "fix": "Thay toàn bộ Kết luận/Action plan và Buyer bằng component dữ liệu động."
+    },
+    {
+      "store": "Viet Drip",
+      "app_path": "viet-drip/index.html",
+      "severity": "critical",
+      "findings": [
+        "Kết luận chứa đồng thời bản mới và hai bản cũ với RFQ 1/20, 0/20 và buyer L1+ của các tuần khác nhau.",
+        "Action plan lặp ba phiên bản.",
+        "Jake Tartaglia xuất hiện nhiều dòng theo lịch sử và đang bị tính/hiển thị như hai buyer; phải gộp thành một buyer với diễn biến mới nhất.",
+        "Tab Buyer thiếu Lead thật cần làm rõ, tìm kiếm và Copy next action."
+      ],
+      "fix": "Deduplicate theo buyer, giữ lịch sử trong thẻ; thay toàn bộ Kết luận/Action plan và Buyer."
+    },
+    {
+      "store": "Vivika",
+      "app_path": "vivika/index.html",
+      "severity": "critical",
+      "findings": [
+        "Kết luận mới ghi gian hàng 5 sao nhưng nội dung cũ bên dưới vẫn ghi 2 sao/Forecast 4 sao.",
+        "RFQ, L1+, PV và danh sách buyer của tuần cũ còn hiển thị cùng bản mới.",
+        "Action plan lặp nhiều phiên bản với số RFQ và số buyer khác nhau.",
+        "Buyer tab gần giống Riken nhưng thiếu tìm kiếm, bộ lọc và Copy next action."
+      ],
+      "fix": "Giữ cấu trúc bốn nhóm Buyer nhưng thay toàn bộ dữ liệu, thêm chức năng còn thiếu và xóa sạch nội dung tuần cũ."
+    }
+  ]
+}
