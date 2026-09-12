@@ -1,0 +1,222 @@
+{
+  "schema_version": "1.0",
+  "project": "Cập nhật tuần mới cho 8 app báo cáo vận hành Alibaba",
+  "generated_at": "2026-09-12T00:00:00+07:00",
+  "buyer_refresh": "Đã đọc lại ngày 2026-09-12 từ toàn bộ phạm vi A:Z của tất cả tab OneTalk/buyer. Bản này thay thế dữ liệu buyer trước đó bị thiếu.",
+  "data_periods": {
+    "visitor_analysis": "2026-09-03 đến 2026-09-09",
+    "operations_latest": "2026-08-30 đến 2026-09-05",
+    "onetalk_leads": "Dùng các bản ghi cập nhật mới nhất có trong từng file; một số nguồn đã cập nhật đến 2026-09-11."
+  },
+  "claude_code_prompt": [
+    "Hãy cập nhật trực tiếp 8 app hiện có bằng 8 file JSON đi kèm. Không đọc lại Google Sheets trừ khi phát hiện dữ liệu lỗi hoặc thiếu.",
+    "Giữ nguyên nhận diện và cấu trúc tốt của từng app; chỉ bổ sung tuần mới, sửa nội dung phân tích và cải thiện khả năng đọc.",
+    "Không xóa dữ liệu tuần cũ. Biểu đồ vận hành phải dùng toàn bộ các tuần có trong raw_data.operations_all_weeks.",
+    "Mỗi app phải có bốn lớp thông tin rõ ràng: Kết luận điều hành; Vận hành; Người xem; Buyer/OneTalk.",
+    "Ngay đầu trang phải có ba khối nổi bật: Điểm tốt, Điểm nghẽn, Việc cần làm trong 7 ngày. Mỗi nhận định phải gắn với số liệu.",
+    "Thêm mục 'Insight cần chú ý' cho cả Mbike và VCC, đồng thời duy trì mục này nhất quán ở các app còn lại.",
+    "Ở Người xem - Quốc gia: dùng toàn bộ country_current_all_rows, có tìm kiếm/sắp xếp/phân trang; mặc định nổi bật theo visitor, PV và L1+.",
+    "Ở Người xem - Từ khóa: dùng toàn bộ keyword_current_all_exact_rows, giữ nguyên Keyword chính xác, hiển thị số lần xuất hiện và PV; không thay bằng vài nhóm từ khóa mẫu.",
+    "Ở Người xem - Visitor: dùng toàn bộ visitor_current_all_rows; cho phép lọc quốc gia, level L0-L4/L1+, sản phẩm/từ khóa và độ sâu truy cập.",
+    "Ở Buyer: ưu tiên người cần xử lý trong 24 giờ; hiển thị buyer, quốc gia, sản phẩm, nhu cầu/số lượng, tình trạng, vấn đề cần xử lý, mức ưu tiên và đề xuất chốt đơn.",
+    "Phải dựng lại toàn bộ thẻ buyer, số lượng buyer ưu tiên và kết luận buyer từ raw_data.lead_tabs mới; không giữ danh sách buyer hard-code của phiên bản app cũ.",
+    "Nếu số liệu vận hành và Visitor Analyzer khác kỳ, ghi rõ hai khoảng thời gian; không trộn chúng thành cùng một tuần.",
+    "Không tự bịa số, không đổi đơn vị, không âm thầm sửa các giá trị âm trong nguồn. Giá trị như sản phẩm mới = -1 phải được diễn giải là biến động ròng/giảm 1 nếu ngữ cảnh phù hợp.",
+    "Riken giữ song ngữ Việt-Trung. G8 Home chỉ dùng tiếng Việt. Các app khác giữ ngôn ngữ hiện tại.",
+    "Thiết kế để ông chủ chụp một màn hình là thấy: trạng thái chung, 3 chỉ số quan trọng nhất, buyer cần xử lý và 3 hành động tuần tới."
+  ],
+  "ui_acceptance_criteria": {
+    "summary_above_fold": [
+      "Tên gian hàng và kỳ dữ liệu",
+      "Điểm tốt nhất tuần",
+      "Điểm nghẽn lớn nhất tuần",
+      "Số buyer cần xử lý trong 24 giờ",
+      "Ba hành động ưu tiên"
+    ],
+    "charts": [
+      "Biểu đồ xu hướng nhiều tuần cho 12 KPI vận hành, có thể bật/tắt nhóm chỉ số",
+      "So sánh tuần này và tuần trước cho visitor, PV, keyword visitor và L1+",
+      "Cơ cấu level L0-L4",
+      "Top quốc gia theo visitor/PV/L1+, nhưng bảng chi tiết vẫn phải chứa toàn bộ quốc gia",
+      "Top từ khóa để quan sát nhanh, nhưng bảng chi tiết vẫn phải chứa toàn bộ từ khóa chính xác"
+    ],
+    "status_colors": {
+      "good": "Xanh lá",
+      "warning": "Vàng/cam",
+      "bottleneck": "Đỏ",
+      "neutral": "Xám/xanh dương nhạt"
+    },
+    "interactions": [
+      "Bộ lọc tuần",
+      "Bộ lọc quốc gia",
+      "Bộ lọc level buyer",
+      "Tìm kiếm từ khóa/buyer",
+      "Sắp xếp cột",
+      "Thu gọn bảng dài",
+      "Responsive để xem và chụp màn hình trên laptop"
+    ]
+  },
+  "cross_store_snapshot": [
+    {
+      "store": "Mbike",
+      "file": "mbike.json",
+      "app_path": "index.html",
+      "visitor_current": 1914,
+      "visitor_previous": 1546,
+      "visitor_change_pct": 23.8,
+      "pv_current": 4533,
+      "pv_previous": 3416,
+      "pv_change_pct": 32.7,
+      "l1plus_current": 772,
+      "l1plus_previous": 635,
+      "l1plus_change_pct": 21.6,
+      "operations_highlight": "Visitor vận hành 4.122 tăng 17,6%; inquiry 66 giảm 9,6%; phản hồi trung bình xấu đi 2,12h → 3,69h; Top Product 88 → 91.",
+      "executive_insight": "Tăng trưởng traffic và buyer chất lượng rất mạnh; điểm nghẽn chuyển sang tốc độ phản hồi và chuyển đổi inquiry thành đơn."
+    },
+    {
+      "store": "VCC",
+      "file": "vcc.json",
+      "app_path": "viet-coldchain/index.html",
+      "visitor_current": 36,
+      "visitor_previous": 38,
+      "visitor_change_pct": -5.3,
+      "pv_current": 63,
+      "pv_previous": 67,
+      "pv_change_pct": -6,
+      "l1plus_current": 13,
+      "l1plus_previous": 16,
+      "l1plus_change_pct": -18.8,
+      "operations_highlight": "Visitor vận hành 51 → 77 và inquiry 2 → 4; phản hồi vẫn chậm khoảng 5,91h; Top Product 9 → 10.",
+      "executive_insight": "KPI vận hành cải thiện nhưng dữ liệu người xem tuần gần nhất giảm nhẹ; cần ưu tiên tốc độ phản hồi và khai thác 13 buyer L1+."
+    },
+    {
+      "store": "CM Decor",
+      "file": "cm-decor.json",
+      "app_path": "cm-decor/index.html",
+      "visitor_current": 35,
+      "visitor_previous": 26,
+      "visitor_change_pct": 34.6,
+      "pv_current": 88,
+      "pv_previous": 54,
+      "pv_change_pct": 63,
+      "l1plus_current": 15,
+      "l1plus_previous": 10,
+      "l1plus_change_pct": 50,
+      "operations_highlight": "Sao 0 → 1; visitor vận hành 37 → 62; inquiry 0 → 3; RFQ 1 → 6; Top/Super Product vẫn 0.",
+      "executive_insight": "Tuần tăng trưởng rõ ở đầu phễu và RFQ; điểm nghẽn là chưa tạo được Top/Super Product để giữ đà."
+    },
+    {
+      "store": "Hoang Duc Thinh",
+      "file": "hoang-duc-thinh.json",
+      "app_path": "hoang-duc-thinh/index.html",
+      "visitor_current": 139,
+      "visitor_previous": 156,
+      "visitor_change_pct": -10.9,
+      "pv_current": 217,
+      "pv_previous": 252,
+      "pv_change_pct": -13.9,
+      "l1plus_current": 56,
+      "l1plus_previous": 54,
+      "l1plus_change_pct": 3.7,
+      "operations_highlight": "Visitor vận hành 233 → 270; response time cải thiện 2,68h → 1,57h; RFQ vẫn 0; Super Product 1 → 0.",
+      "executive_insight": "Tổng traffic giảm nhưng buyer L1+ vẫn tăng nhẹ; chất lượng khách ổn, cần kích hoạt RFQ và phục hồi Super Product."
+    },
+    {
+      "store": "Viet Drip",
+      "file": "viet-drip.json",
+      "app_path": "viet-drip/index.html",
+      "visitor_current": 35,
+      "visitor_previous": 47,
+      "visitor_change_pct": -25.5,
+      "pv_current": 109,
+      "pv_previous": 257,
+      "pv_change_pct": -57.6,
+      "l1plus_current": 17,
+      "l1plus_previous": 28,
+      "l1plus_change_pct": -39.3,
+      "operations_highlight": "Visitor vận hành 211 → 109 nhưng inquiry 6 → 10; response time xấu đi 0,8h → 3,71h; Top Product 8 → 9.",
+      "executive_insight": "Traffic giảm sâu nhưng số inquiry tăng, cho thấy khách vào có ý định cao hơn; cần giữ chuyển đổi bằng phản hồi nhanh và phục hồi nguồn traffic."
+    },
+    {
+      "store": "Vivika",
+      "file": "vivika.json",
+      "app_path": "vivika/index.html",
+      "visitor_current": 260,
+      "visitor_previous": 375,
+      "visitor_change_pct": -30.7,
+      "pv_current": 923,
+      "pv_previous": 1344,
+      "pv_change_pct": -31.3,
+      "l1plus_current": 107,
+      "l1plus_previous": 143,
+      "l1plus_change_pct": -25.2,
+      "operations_highlight": "Sao tăng 2 → 5; inquiry 43 → 51; Top Product 23 → 29; visitor vận hành giảm nhẹ 1.401 → 1.352.",
+      "executive_insight": "Chất lượng vận hành tăng mạnh dù traffic giảm; cần tận dụng 5 sao và 29 Top Product để kéo lại traffic và xử lý 107 buyer L1+."
+    },
+    {
+      "store": "Riken",
+      "file": "riken.json",
+      "app_path": "riken/index.html",
+      "visitor_current": 38,
+      "visitor_previous": 50,
+      "visitor_change_pct": -24,
+      "pv_current": 74,
+      "pv_previous": 95,
+      "pv_change_pct": -22.1,
+      "l1plus_current": 14,
+      "l1plus_previous": 35,
+      "l1plus_change_pct": -60,
+      "operations_highlight": "Nguồn vận hành là bảng song ngữ; Claude phải giữ nguyên từng cột/nhãn và đọc tuần mới nhất từ raw_data thay vì suy đoán từ vị trí hiển thị.",
+      "executive_insight": "Điểm nghẽn lớn nhất là buyer L1+ giảm 60%; ưu tiên kiểm tra từ khóa/quốc gia mất traffic và follow-up buyer hiện có."
+    },
+    {
+      "store": "G8 Home",
+      "file": "g8-home.json",
+      "app_path": "g8-home/index.html",
+      "visitor_current": 210,
+      "visitor_previous": 218,
+      "visitor_change_pct": -3.7,
+      "pv_current": 607,
+      "pv_previous": 585,
+      "pv_change_pct": 3.8,
+      "l1plus_current": 93,
+      "l1plus_previous": 104,
+      "l1plus_change_pct": -10.6,
+      "operations_highlight": "Visitor vận hành 668 → 578; inquiry 62 → 39; Super Product 3 → 2; Top Product 57 → 58; phản hồi 2,44h → 2,56h.",
+      "executive_insight": "PV tăng dù visitor giảm nhẹ, nhưng inquiry và L1+ đi xuống; cần ưu tiên chất lượng traffic, Super Product và danh sách buyer đang theo dõi."
+    }
+  ],
+  "required_data_contract": {
+    "per_store_json_fields": [
+      "raw_data.operations_all_weeks",
+      "raw_data.visitor_current_summary",
+      "raw_data.visitor_previous_summary",
+      "raw_data.visitor_current_all_rows",
+      "raw_data.keyword_current_all_exact_rows",
+      "raw_data.country_current_all_rows",
+      "raw_data.lead_tabs"
+    ],
+    "critical_rule": "Các bảng chi tiết phải lấy toàn bộ mảng dữ liệu; top cards/charts chỉ là lớp tóm tắt, không được thay thế dữ liệu đầy đủ."
+  },
+  "files": [
+    "mbike.json",
+    "vcc.json",
+    "cm-decor.json",
+    "hoang-duc-thinh.json",
+    "viet-drip.json",
+    "vivika.json",
+    "riken.json",
+    "g8-home.json"
+  ],
+  "completion_checklist": [
+    "Cả 8 index.html đã được cập nhật và mở offline không lỗi.",
+    "Không có app nào hiển thị số tuần cũ như số tuần mới.",
+    "Mỗi app ghi rõ kỳ Visitor 03-09.09 và kỳ vận hành 30.08-05.09.",
+    "Xu hướng vận hành giữ toàn bộ lịch sử trong file nguồn.",
+    "Quốc gia, từ khóa và visitor có đủ toàn bộ dòng.",
+    "Buyer ưu tiên được rút từ tab lead mới nhất, có hành động follow-up cụ thể.",
+    "Mbike và VCC có mục Insight cần chú ý.",
+    "Riken song ngữ Việt-Trung; G8 Home chỉ tiếng Việt.",
+    "Không có số liệu hoặc kết luận không truy ngược được về JSON."
+  ]
+}

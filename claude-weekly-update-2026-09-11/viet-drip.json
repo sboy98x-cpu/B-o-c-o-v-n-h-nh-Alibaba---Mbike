@@ -1,0 +1,2926 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-12T00:00:00+07:00",
+  "purpose": "Nguồn dữ liệu đầy đủ để Claude Code cập nhật app báo cáo tuần Alibaba; không cần đọc lại Google Sheets.",
+  "store": "Viet Drip",
+  "app_path": "viet-drip/index.html",
+  "periods": {
+    "visitor_current": "Tuần này · Tổng quan · 03-09.09",
+    "visitor_previous": "Tuần trước · Tổng quan · 27.08-02.09",
+    "operations_note": "Bảng vận hành chứa toàn bộ các tuần; lấy cột tuần mới nhất và giữ lịch sử."
+  },
+  "source_manifest": {
+    "operations": {
+      "spreadsheet_id": "1ogyDY_dwnxPf8upnib5mL-5g9kGpMuoJ7wurByAaiKQ",
+      "title": "VIET DRIP COMPANY LIMITED BÁO CÁO TUẦN",
+      "sheet": "Trang tính1",
+      "url": "https://docs.google.com/spreadsheets/d/1ogyDY_dwnxPf8upnib5mL-5g9kGpMuoJ7wurByAaiKQ/edit?gid=0",
+      "range": "A1:AK60"
+    },
+    "visitors": {
+      "spreadsheet_id": "1c7NvoAVG7kQUwAsLNoPmCj-Yxv4DF8UKua1ijJEjki4",
+      "title": "Viet Drip - Visitor Analyzer - Theo dõi hàng tuần",
+      "current_summary_sheet": "Tuần này · Tổng quan · 03-09.09",
+      "current_visitors_sheet": "Tuần này · Khách truy cập · 03-09.09",
+      "current_keywords_sheet": "Tuần này · Từ khóa · 03-09.09",
+      "current_countries_sheet": "Tuần này · Quốc gia · 03-09.09",
+      "previous_summary_sheet": "Tuần trước · Tổng quan · 27.08-02.09",
+      "url": "https://docs.google.com/spreadsheets/d/1c7NvoAVG7kQUwAsLNoPmCj-Yxv4DF8UKua1ijJEjki4/edit?gid=2096000601"
+    },
+    "leads": {
+      "spreadsheet_id": "15fmMDH4sgckIHN9GseZoe5NIoL6abepXU2X3raFb5TA",
+      "title": "Viet Drip OneTalk Leads 2026-08-18",
+      "sheets": [
+        "Tong quan",
+        "Khach uu tien",
+        "Can theo doi",
+        "It phan hoi"
+      ],
+      "url": "https://docs.google.com/spreadsheets/d/15fmMDH4sgckIHN9GseZoe5NIoL6abepXU2X3raFb5TA/edit?gid=661916390",
+      "read_scope": "Toàn bộ phạm vi A:Z của tất cả tab buyer"
+    }
+  },
+  "normalized_index": {
+    "current_visitor_summary": {
+      "Viet Drip — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất": [],
+      "Thời gian dữ liệu: 2026-09-03 đến 2026-09-09 | Bộ lọc nguồn: Last 7 days": [],
+      "Số bản ghi khách truy cập": [
+        "35",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "28",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "18"
+      ],
+      "Tổng PV trên gian hàng": [
+        "109",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "17"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "81",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "31",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      "Số buyer L1+": [
+        "17",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "4",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      "Nguồn dữ liệu": [],
+      "https://data.alibaba.com/marketing/visitor": []
+    },
+    "previous_visitor_summary": {
+      "Viet Drip — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất": [],
+      "Thời gian dữ liệu: 2026-08-27 đến 2026-09-02 | Bộ lọc nguồn: Last 7 days": [],
+      "Số bản ghi khách truy cập": [
+        "47",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "29",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "19"
+      ],
+      "Tổng PV trên gian hàng": [
+        "257",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "28"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "123",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "42",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      "Số buyer L1+": [
+        "28",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "5",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      "Nguồn dữ liệu": [],
+      "https://data.alibaba.com/marketing/visitor": []
+    },
+    "row_counts": {
+      "current_visitors": 35,
+      "current_keywords": 81,
+      "current_countries": 28,
+      "lead_tabs": {
+        "Tong quan": 23,
+        "Khach uu tien": 16,
+        "Can theo doi": 25,
+        "It phan hoi": 18
+      }
+    }
+  },
+  "raw_data": {
+    "operations_all_weeks": [
+      [
+        "\nVIET DRIP COMPANY LIMITED BÁO CÁO TUẦN"
+      ],
+      [
+        "Chỉ Số Chung"
+      ],
+      [
+        "Khung thời gian hoạt động",
+        "Tuần ",
+        "30-08-2026 đến 05-09-2026",
+        "23-08-2026 đến 29-08-2026",
+        "09-08-2026 đến 15-08-2026",
+        "02-08-2026 đến 08-08-2026",
+        "26-07-2026 đến 01-08-2026",
+        "19-07-2026 đến 25-07-2026",
+        "12-07-2026 đến 18-07-2026",
+        "05-07-2026 đến 11-07-2026",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026",
+        "31-05-2026 đến 06-05-2026"
+      ],
+      [
+        null,
+        "Số sao",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm",
+        "1044",
+        "1044",
+        "1044",
+        "1031",
+        "1031",
+        "1030",
+        "1030",
+        "1026",
+        "523",
+        "477",
+        "441"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm mới đã đăng",
+        "0",
+        "0",
+        "13",
+        "0",
+        "1",
+        "0",
+        "4",
+        "503",
+        "46",
+        "36",
+        "441"
+      ],
+      [
+        null,
+        "Tổng số người ghé thăm",
+        "109",
+        "211",
+        "110",
+        "70",
+        "88",
+        "32",
+        "73",
+        "82",
+        "95",
+        "84",
+        "40"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng",
+        "10",
+        "6",
+        "5",
+        "1",
+        "4",
+        "3",
+        "3",
+        "3",
+        "4",
+        "4",
+        "1"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng đã trả lời",
+        "10",
+        "6",
+        "5",
+        "1",
+        "4",
+        "3",
+        "3",
+        "3",
+        "4",
+        "4",
+        "1"
+      ],
+      [
+        null,
+        "Tổng số lượt đã báo giá RFQ",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "5",
+        "0",
+        "20",
+        "0",
+        "20"
+      ],
+      [
+        null,
+        "Số lượt báo giá RFQ còn lại",
+        "19",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "20",
+        "0"
+      ],
+      [
+        null,
+        "Thời gian phản hồi tin nhắn trung bình",
+        "3,71h",
+        "0,8h",
+        "0,8h",
+        "2,01h",
+        "1,7h",
+        "3,84h",
+        "4,59h",
+        "4,23h",
+        "9,19h",
+        "10,54h",
+        "13,36h"
+      ],
+      [
+        null,
+        "Tỉ lệ tin nhắn được phản hồi trong 24h",
+        "94.74%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "91.67%",
+        "92.31%",
+        "93%",
+        "80%",
+        "85.71%",
+        "67%"
+      ],
+      [
+        null,
+        "Số lượng Super Product (win)",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượng Top Product (tiềm năng)",
+        "9",
+        "8",
+        "5",
+        "4",
+        "3",
+        "2",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Kế hoạch hành động cho tuần tiếp theo",
+        "Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày, nhanh chóng đạt 1000 sản phẩm",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày ",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày "
+      ],
+      [
+        null,
+        "Tối ưu hoá các chỉ số",
+        "Xử lý sản phẩm rủi ro và sản phẩm Issue; tăng traffic bằng quảng cáo/RFQ; cải thiện Service; nâng Top/Super Product và tạo đơn Trade Assurance",
+        "Xử lý sản phẩm rủi ro và sản phẩm Issue; cải thiện Marketing và Service; tăng traffic; báo RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng quảng cáo và RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Xử lý sản phẩm lỗi; tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "Tối ưu 1.010 Basic Product lên Potential/Top; tăng traffic và inquiry",
+        "Đăng thêm sản phẩm high demand",
+        "Cần phải tìm các sản phẩm hot liên quan đến ngành hàng trên sàn để đăng bài, hút thêm traffic",
+        "Cần phải tìm các sản phẩm hot liên quan đến ngành hàng trên sàn để đăng bài, hút thêm traffic"
+      ],
+      [
+        null,
+        null,
+        "Có 854 sản phẩm rủi ro và 14 sản phẩm Issue làm giảm khả năng hiển thị; chưa có đơn/GMV Trade Assurance; Marketing và Service chỉ đạt 1 sao; traffic và quy mô giao dịch thấp; RFQ mới dùng 1/20, chưa có tài khoản phụ và AI chưa được tận dụng hiệu quả",
+        "Có 845 sản phẩm rủi ro và 14 sản phẩm Issue ảnh hưởng tuân thủ, khả năng hiển thị; chưa có đơn và GMV Trade Assurance; gian hàng bị giới hạn ở 1 sao do Marketing và Service; traffic lệch về thị trường đang phát triển; RFQ và công cụ AI chưa được tận dụng hiệu quả",
+        "Gian hàng bị giới hạn ở 1 sao do Marketing và Service: Marketing có 150 khách, Service có 9 người mua phản hồi; chưa có GMV Trade Assurance; trang chủ ghi nhận 13 sản phẩm lỗi; chưa sử dụng quyền lợi RFQ; traffic và chuyển đổi còn thấp",
+        "Có 13 sản phẩm gặp vấn đề cần xử lý; chưa có giao dịch Trade Assurance; gian hàng bị giới hạn ở 1 sao do Marketing và Service; traffic chưa tập trung đúng thị trường mục tiêu; RFQ và các quyền lợi gian hàng chưa được tận dụng",
+        "Có 12 sản phẩm gặp vấn đề cần xử lý; chưa có giao dịch Trade Assurance; gian hàng bị giới hạn ở 1 sao do Marketing và Service; traffic chưa tập trung đúng thị trường mục tiêu; RFQ và các quyền lợi gian hàng chưa được tận dụng",
+        "390 sản phẩm rủi ro ảnh hưởng trọng số gian hàng; Hiệu suất phản hồi thấp và chưa có giao dịch; Gian hàng bị giới hạn ở 1 sao do chỉ số Marketing và Service; Traffic tập trung quá nhiều tại Việt Nam, chưa đúng thị trường mục tiêu",
+        "390 sản phẩm rủi ro ảnh hưởng trọng số gian hàng; Hiệu suất phản hồi thấp và chưa có giao dịch; Gian hàng bị giới hạn ở 1 sao do chỉ số Marketing và Service; Traffic tập trung quá nhiều tại Việt Nam, chưa đúng thị trường mục tiêu",
+        "Xử lý 6 sản phẩm có vấn đề; liên kết EU Responsible Person; cải thiện tốc độ và tỉ lệ phản hồi tin nhắn",
+        null,
+        "Số sao = 0 nên phải đăng nhiều sản phẩm hơn",
+        "Số sao = 0 nên phải đăng nhiều sản phẩm hơn"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        "Chạy quảng cáo nếu có thể",
+        "Chạy quảng cáo nếu có thể",
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Chụp lại hình ảnh và video nhà máy, video, ảnh sản phẩm trực quan hơn nữa, thực tế hơn vì bán buôn"
+      ],
+      [],
+      [],
+      [
+        "Đánh giá sơ bộ",
+        "Vấn đề ưu tiên xử lý",
+        null,
+        null,
+        "Đăng thêm sản phẩm và chạy quảng cáo, traffic gian hàng đang cải thiện dần",
+        "Đăng thêm sản phẩm và chạy quảng cáo, traffic gian hàng đang cải thiện dần",
+        "Có 12 sản phẩm gặp vấn đề cần xử lý;",
+        "tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "tăng traffic bằng RFQ; nâng sản phẩm lên Top/Super Product",
+        "cải thiện tốc độ và tỉ lệ phản hồi tin nhắn",
+        "Đề xuất đăng thêm 5-10 sản phẩm Hight demand hoặc hot product mỗi ngày "
+      ],
+      [
+        null,
+        "Báo cáo từ AI"
+      ]
+    ],
+    "visitor_current_summary": [
+      [
+        "Viet Drip — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất"
+      ],
+      [],
+      [
+        "Thời gian dữ liệu: 2026-09-03 đến 2026-09-09 | Bộ lọc nguồn: Last 7 days"
+      ],
+      [],
+      [
+        "Số bản ghi khách truy cập",
+        "35",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      [
+        "Số quốc gia / vùng",
+        "28",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "18"
+      ],
+      [
+        "Tổng PV trên gian hàng",
+        "109",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "17"
+      ],
+      [
+        "Số bản ghi keyword chính xác",
+        "81",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số visitor có keyword",
+        "31",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số buyer L1+",
+        "17",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số trang nguồn đã lấy",
+        "4",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      [],
+      [],
+      [
+        "Nguồn dữ liệu"
+      ],
+      [
+        "https://data.alibaba.com/marketing/visitor"
+      ]
+    ],
+    "visitor_previous_summary": [
+      [
+        "Viet Drip — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất"
+      ],
+      [],
+      [
+        "Thời gian dữ liệu: 2026-08-27 đến 2026-09-02 | Bộ lọc nguồn: Last 7 days"
+      ],
+      [],
+      [
+        "Số bản ghi khách truy cập",
+        "47",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      [
+        "Số quốc gia / vùng",
+        "29",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "19"
+      ],
+      [
+        "Tổng PV trên gian hàng",
+        "257",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "28"
+      ],
+      [
+        "Số bản ghi keyword chính xác",
+        "123",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số visitor có keyword",
+        "42",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số buyer L1+",
+        "28",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số trang nguồn đã lấy",
+        "5",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      [],
+      [],
+      [
+        "Nguồn dữ liệu"
+      ],
+      [
+        "https://data.alibaba.com/marketing/visitor"
+      ]
+    ],
+    "visitor_current_all_rows": [
+      [
+        "Ngày truy cập",
+        "Khách truy cập",
+        "Cấp người mua",
+        "Phân loại người mua",
+        "Quốc gia / vùng",
+        "PV",
+        "Thời gian lưu lại",
+        "Keyword tìm kiếm nhiều nhất",
+        "Hoạt động trên gian hàng",
+        "Hoạt động trên website",
+        "Trang nguồn"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Libyan Arab Jamahiriya",
+        "1",
+        "4s",
+        "bahce sulama\nbahce sulama yagmurlama dnerleri\nfiskiye",
+        null,
+        "Tổng lượt xem: 22 trang\nĐã truy cập 5 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-09",
+        "D2609092",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Nam Phi",
+        "1",
+        "6s",
+        "-",
+        null,
+        "Tổng lượt xem: 5 trang\nĐã truy cập 1 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-09",
+        "D2609093",
+        "L0",
+        "Người mua đã đăng ký",
+        "Kenya",
+        "5",
+        "79s",
+        "borehole casing\ndrip irrigation system 16mm\nborehole drilling machine",
+        "Đã gửi yêu cầu\nĐã gửi tin nhắn qua TM",
+        "Tổng lượt xem: 63 trang\nĐã truy cập 5 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609081",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uganda",
+        "1",
+        "42s",
+        "plumbing materials",
+        null,
+        "Tổng lượt xem: 20 trang\nĐã đăng 1 RFQ",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Puerto Rico",
+        "1",
+        "6s",
+        "sofa cover\nkitchen racks organizer\ncough cover\noutdoor bench",
+        null,
+        "Tổng lượt xem: 42 trang\nĐã truy cập 11 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Úc",
+        "2",
+        "46s",
+        "abs hydroponic runoff tray\nfake grass with drainage\n10mm ldpe irrigation tubing",
+        null,
+        "Tổng lượt xem: 58 trang\nĐã truy cập 9 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609084",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ả Rập Xê-út",
+        "1",
+        "7s",
+        "-",
+        null,
+        "Tổng lượt xem: 5 trang\nĐã truy cập 1 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609085",
+        "L0",
+        "Người mua đã đăng ký",
+        "Maldives",
+        "8",
+        "180s",
+        "drip emitters\ndrip hose conection rubber how to fixin\ndrip hose conection rubber",
+        null,
+        "Tổng lượt xem: 260 trang\nĐã truy cập 15 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-07",
+        "D2609071",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "3",
+        "22s",
+        "curtains for the living room\nkp giy khng g\ndrip irrigation hole punch tool",
+        null,
+        "Tổng lượt xem: 15 trang\nĐã truy cập 3 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nam Phi",
+        "1",
+        "5s",
+        "nissan serena 1998  sr20 with manual transmission\nice cream gasoline there wheeler bike\nfish pond tanks canvas and galvanized",
+        null,
+        "Tổng lượt xem: 61 trang\nĐã truy cập 10 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-07",
+        "D2609073",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bờ Biển Ngà",
+        "1",
+        "9s",
+        "dj lumire\nquipements de bar\njordans",
+        null,
+        "Tổng lượt xem: 600 trang\nĐã đăng 2 RFQ",
+        "2"
+      ],
+      [
+        "2026-09-07",
+        "D2609074",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ấn Độ",
+        "2",
+        "31s",
+        "rice\nsolar panels\ndates\nplastic pipe",
+        null,
+        "Tổng lượt xem: 250 trang\nĐã truy cập 40 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-07",
+        "D2609075",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ma-rốc",
+        "1",
+        "6s",
+        "arroseur",
+        null,
+        "Tổng lượt xem: 17 trang\nĐã truy cập 6 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-07",
+        "D2609076",
+        "L0",
+        "Người mua đã đăng ký",
+        "Singapore",
+        "2",
+        "416s",
+        "irrrigation fitting",
+        "Đã truy cập trang chủ",
+        "Tổng lượt xem: 16 trang\nĐã truy cập 5 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "13",
+        "223s",
+        "irrigation equipment\nprotein cookies\n4 inch pvc coupling\nirrigation 78 valves",
+        null,
+        "Tổng lượt xem: 98 trang\nĐã truy cập 16 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609062",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Mexico",
+        "1",
+        "24s",
+        "bomba de agua sumergible\nrodillos para dresser td15e\nkit manguera para inflar neumticos",
+        null,
+        "Tổng lượt xem: 414 trang\nĐã truy cập 57 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Angola",
+        "2",
+        "7s",
+        "tractor fendet de 180 hp\ncaminho volvo\ntrator agrcola yto 100 hp",
+        null,
+        "Tổng lượt xem: 439 trang\nĐã truy cập 71 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Guatemala",
+        "1",
+        "5s",
+        "bicicleta vintage mujer\nmoto elctrica\nvasos para boba",
+        null,
+        "Tổng lượt xem: 44 trang\nĐã truy cập 5 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609065",
+        "L0",
+        "Người mua đã đăng ký",
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "13",
+        "163s",
+        "hose connectors for gardens",
+        null,
+        "Tổng lượt xem: 37 trang\nĐã truy cập 5 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609066",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ý",
+        "2",
+        "115s",
+        "-",
+        null,
+        "Tổng lượt xem: 7 trang\nĐã truy cập 1 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bahrain",
+        "1",
+        "6s",
+        "garden\nmilwaukee m18\nelectronic solenoid valve",
+        null,
+        "Tổng lượt xem: 212 trang\nĐã đăng 20 RFQ",
+        "3"
+      ],
+      [
+        "2026-09-06",
+        "D2609068",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "1",
+        "1s",
+        "kit brumisateur ventilateur\ncamscope numrique full hd\nrobinet infrarouge automatique",
+        "Đã gửi tin nhắn qua TM",
+        "Tổng lượt xem: 1000 trang\nĐã truy cập 49 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609051",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "3",
+        "7s",
+        "plastic arrow",
+        null,
+        "Tổng lượt xem: 111 trang\nĐã truy cập 9 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "1",
+        "11s",
+        "kit brumisateur ventilateur\ncamscope numrique full hd\nrobinet infrarouge automatique\nvanne ouverture fermeture tuyau darrosage",
+        "Đã gửi tin nhắn qua TM",
+        "Tổng lượt xem: 920 trang\nĐã truy cập 52 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "6",
+        "70s",
+        "sprinkler irrigation system\nupvc ball valve\n360 degree rotating sprinkler",
+        null,
+        "Tổng lượt xem: 28 trang\nĐã truy cập 3 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609041",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Thổ Nhĩ Kỳ",
+        "1",
+        "18s",
+        "agricultural drip tape",
+        null,
+        "Tổng lượt xem: 101 trang\nĐã đăng 1 RFQ",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609042",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Canada",
+        "1",
+        "3s",
+        "binini top",
+        null,
+        "Tổng lượt xem: 3 trang\nĐã truy cập 1 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609043",
+        "L0",
+        "Người mua đã đăng ký",
+        "Panama",
+        "2",
+        "7s",
+        "-",
+        null,
+        "Tổng lượt xem: 20 trang\nĐã truy cập 1 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609044",
+        "L0",
+        "Người mua đã đăng ký",
+        "Colombia",
+        "1",
+        "52s",
+        "como detetar agua suterraneas\ntubera de riego",
+        null,
+        "Tổng lượt xem: 34 trang\nĐã truy cập 6 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609045",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Nhật Bản",
+        "1",
+        "5s",
+        "磁石 円柱\n角\nt",
+        null,
+        "Tổng lượt xem: 463 trang\nĐã truy cập 65 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609046",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Malaysia",
+        "1",
+        "14s",
+        "crane outrigger pads\nldpe micro tube 27mm\nldpe pipe",
+        null,
+        "Tổng lượt xem: 57 trang\nĐã đăng 30 RFQ",
+        "4"
+      ],
+      [
+        "2026-09-04",
+        "D2609047",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Li-băng",
+        "1",
+        "8s",
+        "baby box\nletter foil balloon 40 inch card paxk\n2705730",
+        null,
+        "Tổng lượt xem: 9 trang\nĐã truy cập 2 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Guatemala",
+        "2",
+        "1s",
+        "pulverizadores agrcolas dron\nmotor de fumigar con cuatrimoto\nmaquina de soldar 130a de microalambre",
+        null,
+        "Tổng lượt xem: 133 trang\nĐã truy cập 8 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nhật Bản",
+        "24",
+        "279s",
+        "ldpe pipe 32mm\nldpe pipe\nldpe pipe 100m\nldpe 32mm",
+        null,
+        "Tổng lượt xem: 47 trang\nĐã truy cập 8 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609033",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "1",
+        "14s",
+        "雨鸟伸缩喷头",
+        null,
+        "Tổng lượt xem: 27 trang\nĐã truy cập 6 nhà cung cấp",
+        "4"
+      ]
+    ],
+    "keyword_current_all_exact_rows": [
+      [
+        "Ngày truy cập",
+        "Khách truy cập",
+        "Cấp người mua",
+        "Phân loại người mua",
+        "Quốc gia / vùng",
+        "Keyword chính xác (giữ nguyên)",
+        "PV",
+        "Thời gian (giây)"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Libyan Arab Jamahiriya",
+        "bahce sulama",
+        "1",
+        "4"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Libyan Arab Jamahiriya",
+        "bahce sulama yagmurlama dnerleri",
+        "1",
+        "4"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Libyan Arab Jamahiriya",
+        "fiskiye",
+        "1",
+        "4"
+      ],
+      [
+        "2026-09-09",
+        "D2609093",
+        "L0",
+        "Người mua đã đăng ký",
+        "Kenya",
+        "borehole casing",
+        "5",
+        "79"
+      ],
+      [
+        "2026-09-09",
+        "D2609093",
+        "L0",
+        "Người mua đã đăng ký",
+        "Kenya",
+        "drip irrigation system 16mm",
+        "5",
+        "79"
+      ],
+      [
+        "2026-09-09",
+        "D2609093",
+        "L0",
+        "Người mua đã đăng ký",
+        "Kenya",
+        "borehole drilling machine",
+        "5",
+        "79"
+      ],
+      [
+        "2026-09-08",
+        "D2609081",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uganda",
+        "plumbing materials",
+        "1",
+        "42"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Puerto Rico",
+        "sofa cover",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Puerto Rico",
+        "kitchen racks organizer",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Puerto Rico",
+        "cough cover",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Puerto Rico",
+        "outdoor bench",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Úc",
+        "abs hydroponic runoff tray",
+        "2",
+        "46"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Úc",
+        "fake grass with drainage",
+        "2",
+        "46"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Úc",
+        "10mm ldpe irrigation tubing",
+        "2",
+        "46"
+      ],
+      [
+        "2026-09-08",
+        "D2609085",
+        "L0",
+        "Người mua đã đăng ký",
+        "Maldives",
+        "drip emitters",
+        "8",
+        "180"
+      ],
+      [
+        "2026-09-08",
+        "D2609085",
+        "L0",
+        "Người mua đã đăng ký",
+        "Maldives",
+        "drip hose conection rubber how to fixin",
+        "8",
+        "180"
+      ],
+      [
+        "2026-09-08",
+        "D2609085",
+        "L0",
+        "Người mua đã đăng ký",
+        "Maldives",
+        "drip hose conection rubber",
+        "8",
+        "180"
+      ],
+      [
+        "2026-09-07",
+        "D2609071",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "curtains for the living room",
+        "3",
+        "22"
+      ],
+      [
+        "2026-09-07",
+        "D2609071",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "kp giy khng g",
+        "3",
+        "22"
+      ],
+      [
+        "2026-09-07",
+        "D2609071",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "drip irrigation hole punch tool",
+        "3",
+        "22"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nam Phi",
+        "nissan serena 1998  sr20 with manual transmission",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nam Phi",
+        "ice cream gasoline there wheeler bike",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nam Phi",
+        "fish pond tanks canvas and galvanized",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-07",
+        "D2609073",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bờ Biển Ngà",
+        "dj lumire",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-07",
+        "D2609073",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bờ Biển Ngà",
+        "quipements de bar",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-07",
+        "D2609073",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bờ Biển Ngà",
+        "jordans",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-07",
+        "D2609074",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ấn Độ",
+        "rice",
+        "2",
+        "31"
+      ],
+      [
+        "2026-09-07",
+        "D2609074",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ấn Độ",
+        "solar panels",
+        "2",
+        "31"
+      ],
+      [
+        "2026-09-07",
+        "D2609074",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ấn Độ",
+        "dates",
+        "2",
+        "31"
+      ],
+      [
+        "2026-09-07",
+        "D2609074",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ấn Độ",
+        "plastic pipe",
+        "2",
+        "31"
+      ],
+      [
+        "2026-09-07",
+        "D2609075",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ma-rốc",
+        "arroseur",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-07",
+        "D2609076",
+        "L0",
+        "Người mua đã đăng ký",
+        "Singapore",
+        "irrrigation fitting",
+        "2",
+        "416"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "irrigation equipment",
+        "13",
+        "223"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "protein cookies",
+        "13",
+        "223"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "4 inch pvc coupling",
+        "13",
+        "223"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "irrigation 78 valves",
+        "13",
+        "223"
+      ],
+      [
+        "2026-09-06",
+        "D2609062",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Mexico",
+        "bomba de agua sumergible",
+        "1",
+        "24"
+      ],
+      [
+        "2026-09-06",
+        "D2609062",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Mexico",
+        "rodillos para dresser td15e",
+        "1",
+        "24"
+      ],
+      [
+        "2026-09-06",
+        "D2609062",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Mexico",
+        "kit manguera para inflar neumticos",
+        "1",
+        "24"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Angola",
+        "tractor fendet de 180 hp",
+        "2",
+        "7"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Angola",
+        "caminho volvo",
+        "2",
+        "7"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Angola",
+        "trator agrcola yto 100 hp",
+        "2",
+        "7"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Guatemala",
+        "bicicleta vintage mujer",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Guatemala",
+        "moto elctrica",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Guatemala",
+        "vasos para boba",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-06",
+        "D2609065",
+        "L0",
+        "Người mua đã đăng ký",
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "hose connectors for gardens",
+        "13",
+        "163"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bahrain",
+        "garden",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bahrain",
+        "milwaukee m18",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Bahrain",
+        "electronic solenoid valve",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-06",
+        "D2609068",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "kit brumisateur ventilateur",
+        "1",
+        "1"
+      ],
+      [
+        "2026-09-06",
+        "D2609068",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "camscope numrique full hd",
+        "1",
+        "1"
+      ],
+      [
+        "2026-09-06",
+        "D2609068",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "robinet infrarouge automatique",
+        "1",
+        "1"
+      ],
+      [
+        "2026-09-05",
+        "D2609051",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "plastic arrow",
+        "3",
+        "7"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "kit brumisateur ventilateur",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "camscope numrique full hd",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "robinet infrarouge automatique",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "vanne ouverture fermeture tuyau darrosage",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "sprinkler irrigation system",
+        "6",
+        "70"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "upvc ball valve",
+        "6",
+        "70"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "360 degree rotating sprinkler",
+        "6",
+        "70"
+      ],
+      [
+        "2026-09-04",
+        "D2609041",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Thổ Nhĩ Kỳ",
+        "agricultural drip tape",
+        "1",
+        "18"
+      ],
+      [
+        "2026-09-04",
+        "D2609042",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Canada",
+        "binini top",
+        "1",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609044",
+        "L0",
+        "Người mua đã đăng ký",
+        "Colombia",
+        "como detetar agua suterraneas",
+        "1",
+        "52"
+      ],
+      [
+        "2026-09-04",
+        "D2609044",
+        "L0",
+        "Người mua đã đăng ký",
+        "Colombia",
+        "tubera de riego",
+        "1",
+        "52"
+      ],
+      [
+        "2026-09-04",
+        "D2609045",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Nhật Bản",
+        "磁石 円柱",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-04",
+        "D2609045",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Nhật Bản",
+        "角",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-04",
+        "D2609045",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Nhật Bản",
+        "t",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-04",
+        "D2609046",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Malaysia",
+        "crane outrigger pads",
+        "1",
+        "14"
+      ],
+      [
+        "2026-09-04",
+        "D2609046",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Malaysia",
+        "ldpe micro tube 27mm",
+        "1",
+        "14"
+      ],
+      [
+        "2026-09-04",
+        "D2609046",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Malaysia",
+        "ldpe pipe",
+        "1",
+        "14"
+      ],
+      [
+        "2026-09-04",
+        "D2609047",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Li-băng",
+        "baby box",
+        "1",
+        "8"
+      ],
+      [
+        "2026-09-04",
+        "D2609047",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Li-băng",
+        "letter foil balloon 40 inch card paxk",
+        "1",
+        "8"
+      ],
+      [
+        "2026-09-04",
+        "D2609047",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Li-băng",
+        "2705730",
+        "1",
+        "8"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Guatemala",
+        "pulverizadores agrcolas dron",
+        "2",
+        "1"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Guatemala",
+        "motor de fumigar con cuatrimoto",
+        "2",
+        "1"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Guatemala",
+        "maquina de soldar 130a de microalambre",
+        "2",
+        "1"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nhật Bản",
+        "ldpe pipe 32mm",
+        "24",
+        "279"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nhật Bản",
+        "ldpe pipe",
+        "24",
+        "279"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nhật Bản",
+        "ldpe pipe 100m",
+        "24",
+        "279"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L0",
+        "Người mua đã đăng ký",
+        "Nhật Bản",
+        "ldpe 32mm",
+        "24",
+        "279"
+      ],
+      [
+        "2026-09-03",
+        "D2609033",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "雨鸟伸缩喷头",
+        "1",
+        "14"
+      ]
+    ],
+    "country_current_all_rows": [
+      [
+        "Quốc gia / vùng",
+        "Số visitor",
+        "Tổng PV",
+        "Visitor có keyword",
+        "Bản ghi keyword chính xác",
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L1+"
+      ],
+      [
+        "Ả Rập Xê-út",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Angola",
+        "1",
+        "2",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Ấn Độ",
+        "2",
+        "8",
+        "2",
+        "7",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Bahrain",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Bờ Biển Ngà",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "1",
+        "13",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Canada",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Colombia",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Guatemala",
+        "2",
+        "3",
+        "2",
+        "6",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Hoa Kỳ",
+        "4",
+        "18",
+        "4",
+        "12",
+        "2",
+        "2",
+        "0",
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "Kenya",
+        "1",
+        "5",
+        "1",
+        "3",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Li-băng",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Libyan Arab Jamahiriya",
+        "1",
+        "1",
+        "1",
+        "3",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Ma-rốc",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Malaysia",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Maldives",
+        "1",
+        "8",
+        "1",
+        "3",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Mexico",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Nam Phi",
+        "2",
+        "2",
+        "1",
+        "3",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Nhật Bản",
+        "2",
+        "25",
+        "2",
+        "7",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Panama",
+        "1",
+        "2",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Puerto Rico",
+        "1",
+        "1",
+        "1",
+        "4",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Singapore",
+        "1",
+        "2",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Thổ Nhĩ Kỳ",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Trung Quốc",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Úc",
+        "1",
+        "2",
+        "1",
+        "3",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Uganda",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Việt Nam",
+        "1",
+        "3",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Ý",
+        "1",
+        "2",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    ],
+    "lead_tabs": {
+      "Tong quan": [
+        [
+          "Hạng mục",
+          "Số lượng",
+          "Ghi chú vận hành"
+        ],
+        [
+          "11/09/2026 - bổ sung kiểm tra thiếu",
+          "Mốc 03-08 và 18-24 đã rà lại",
+          "Không thấy lead mua hàng rõ trong 18-24. Mốc 03-08 chỉ thấy Alviaa Alviaa ngày 07/08 kéo WhatsApp, chưa có sản phẩm/số lượng trong snapshot."
+        ],
+        [
+          "Khoảng bổ sung",
+          "03/08-08/08 và 18/08-24/08/2026",
+          "Các ngày gần mốc: 17/08 có shipping rates Peru nhưng ngoài khoảng; 12/08 có 16mm drip connector nhưng ngoài khoảng nên không đưa vào bổ sung lần này."
+        ],
+        [
+          "Lead bổ sung ưu tiên",
+          "0 buyer",
+          "Không có lead đủ tiêu chí ưu tiên trong đúng hai khoảng ngày."
+        ],
+        [
+          "11/09/2026 - cập nhật tuần mới",
+          "12 buyer rà soát trên OneTalk",
+          "4 khách ưu tiên; 6 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+        ],
+        [
+          "Khoảng đọc lại",
+          "06/09/2026 - 11/09/2026",
+          "Tập trung drip/LDPE/irrigation fitting, sample/test product, thickness/flow rate, đơn nhỏ 10 pcs."
+        ],
+        [
+          "Trọng tâm tuần này",
+          "Irrigation fitting + LDPE pipe + sample/test",
+          "Jake có tín hiệu đang xác nhận sản phẩm cần thử; Francisco hỏi fitting với spec kỹ thuật."
+        ],
+        [
+          "Rủi ro chính",
+          "Một số khách chuyển email hoặc chỉ nhắn ok",
+          "Ưu tiên giữ trao đổi trên Alibaba và hỏi diameter/thickness/flow/quantity."
+        ],
+        [
+          "03/09/2026 - cập nhật tuần mới",
+          "11 buyer rà soát trên OneTalk",
+          "4 khách ưu tiên; 6 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+        ],
+        [
+          "Khoảng đọc lại",
+          "29/08/2026 - 03/09/2026",
+          "Tập trung khách hỏi ống tưới LDPE, drip/irrigation pipe, giá theo roll/metre, ship Japan và thanh toán."
+        ],
+        [
+          "Trọng tâm tuần này",
+          "LDPE irrigation pipe / drip tape / payment",
+          "Lead tốt nhất là khách đã hỏi cách thanh toán và khách Nhật đã nhận báo giá + phí ship."
+        ],
+        [
+          "Rủi ro chính",
+          "Nhiều khách chưa rõ đường kính/số lượng",
+          "Cần hỏi nhanh diameter 6-32mm, warranty 3/5/10 years, roll length, quantity, destination."
+        ],
+        [
+          "25/08/2026 - cập nhật tuần mới",
+          "8 lead đã lọc",
+          "2 khách ưu tiên; 4 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+        ],
+        [
+          "Khoảng đọc lại",
+          "Tuần 25/08/2026",
+          "Lọc buyer có phản hồi thật; chú ý khách hỏi kỹ thuật và khách kéo sang kênh ngoài."
+        ],
+        [
+          "Khách ưu tiên",
+          "2",
+          "Jake Tartaglia, Jose RodriguezGiraldo."
+        ],
+        [
+          "Khách cần theo dõi / ít phản hồi",
+          "6",
+          "4 lead cần khai thác thêm + 2 lead rủi ro/off-platform."
+        ],
+        [
+          "Tài khoản đã rà soát",
+          "PHUONG DO MINH / Viet Drip",
+          "Đã đăng nhập và đọc OneTalk ngày 18/08/2026."
+        ],
+        [
+          "Khách có phản hồi trong 30 ngày gần nhất",
+          "8 buyers",
+          "Số liệu hiển thị trong OneTalk."
+        ],
+        [
+          "Khách có phản hồi thật, nên ưu tiên xử lý",
+          "5",
+          "Jose, Emmanuel, Jessica, Christopher, Maksim có nhu cầu sản phẩm/đơn hàng rõ hơn."
+        ],
+        [
+          "Khách cần theo dõi",
+          "7",
+          "Wanderson, Muhammad, Thucyen, Daniel, Rinaldi, Lip Pon, Yakir có trao đổi nhưng thiếu thông tin hoặc phản hồi ngắn."
+        ],
+        [
+          "Khách ít phản hồi / không ưu tiên",
+          "Nhiều",
+          "Một số chỉ hỏi WhatsApp/Zalo hoặc seller gửi tin hàng loạt, chưa có phản hồi mua rõ."
+        ],
+        [
+          "Vấn đề nổi bật",
+          "Cần chốt bước order",
+          "Nhiều lead đã hỏi đúng sản phẩm nhưng đang thiếu địa chỉ ship, thông số, số lượng hoặc bị kéo ra WhatsApp."
+        ],
+        [
+          "Hành động ưu tiên",
+          "Báo giá + phí ship trong Alibaba",
+          "Với lead có số lượng: tạo báo giá/Trade Assurance order ngay; với lead thiếu thông tin: hỏi SKU, size, quantity, destination."
+        ]
+      ],
+      "Khach uu tien": [
+        [
+          "Ngày",
+          "Khách hàng",
+          "Quốc gia",
+          "Sản phẩm / nhu cầu hỏi",
+          "Số lượng",
+          "Nội dung đã đọc trong tin nhắn",
+          "Mức ưu tiên",
+          "Đề xuất nhắn tiếp theo"
+        ],
+        [
+          "2026-09-11",
+          "Jake Tartaglia",
+          "Chưa xác định",
+          "Khách hàng tiềm năng",
+          "Buyer xác nhận “Yes, that's right. This is the product you need to try.”",
+          "Sample/test product",
+          "Lead nóng vì buyer đã xác nhận sản phẩm cần thử, tuần trước đã hỏi payment by card",
+          "Rất cao",
+          "Gửi lại order/payment link Alibaba, xác nhận sản phẩm test, quantity, địa chỉ nhận hàng và cách thanh toán bằng card"
+        ],
+        [
+          "2026-09-02",
+          "Jake Tartaglia",
+          "Chưa xác định",
+          "Khách hàng tiềm năng",
+          "Buyer hỏi “How can I make the payment by card?”",
+          "Chưa rõ / đang ở bước thanh toán",
+          "Tín hiệu rất nóng vì buyer hỏi cách thanh toán, cần xử lý ngay để không rơi đơn",
+          "Rất cao",
+          "Hướng dẫn thanh toán qua Alibaba/Trade Assurance bằng card, xác nhận lại đơn hàng và tổng tiền"
+        ],
+        [
+          "2026-08-29",
+          "weicengzhu zheng",
+          "Japan / Osaka",
+          "Có level tag",
+          "32mm LDPE Pipe 100m/roll, bảo hành 10/5/3 năm; đã báo giá từng loại và ship Vietnam-Osaka",
+          "Theo roll / chưa rõ số roll",
+          "Đã có báo giá rõ: 10 năm USD 43.92/roll, 5 năm USD 38.90, 3 năm USD 37.64; ship Osaka khoảng USD 40-80/roll",
+          "Rất cao",
+          "Hỏi buyer chọn loại bảo hành nào, số roll, địa chỉ Osaka; gửi order link/quotation cuối"
+        ],
+        [
+          "2026-08-17",
+          "Jose RodriguezGiraldo",
+          "Peru",
+          "Spraying Filter 16mm/20mm Chamber, irrigation fitting black color Vietdrip Brand.",
+          "5,000 pcs",
+          "Order progress 80%: đơn giá USD 0.218, item subtotal USD 1,090, phí ship express USD 42.11, tổng USD 1,132.11. Đã có địa chỉ Cusco, Peru.",
+          "Rất cao",
+          "Xác nhận lại tổng tiền USD 1,132.11, thời gian giao express, packing; đề nghị tạo Trade Assurance order ngay và xin xác nhận thanh toán."
+        ],
+        [
+          "2026-08-12",
+          "Emmanuel Nhandara",
+          "Zimbabwe",
+          "16mm drip connector/coupling, irrigation set.",
+          "300-500 pcs",
+          "Buyer hỏi có couplings không và nói 'yes please send quote'. Smart action hiển thị giá USD 0.05/pc cho 1-500 pcs, order progress thiếu địa chỉ ship.",
+          "Rất cao",
+          "Báo rõ có coupling 16mm, giá USD 0.05/pc, hỏi chốt 300 hay 500 pcs và địa chỉ giao hàng để báo phí ship."
+        ],
+        [
+          "2026-09-09",
+          "FRANCISCO Chirrute",
+          "Chưa xác định",
+          "Có level tag",
+          "Black virgin plastic irrigation fitting, OEM logo, hỏi thickness 0.16-0.5mm và flow rate phù hợp farm/garden",
+          "Chưa rõ",
+          "Lead đúng ngành, có spec kỹ thuật rõ về độ dày/flow rate",
+          "Cao",
+          "Hỏi exact thickness, flow rate, size/diameter, quantity và địa chỉ ship; gửi spec sheet"
+        ],
+        [
+          "2026-09-08",
+          "naveen naani",
+          "Chưa xác định",
+          "Có level tag",
+          "Follow order trước, seller nói hy vọng buyer hài lòng với order lần này",
+          "Order cũ / repeat",
+          "Khách đã có order, cần chăm sóc hậu mãi và mở đơn tiếp theo",
+          "Cao",
+          "Hỏi đã nhận hàng chưa, feedback chất lượng, có cần reorder size khác không"
+        ],
+        [
+          "2026-09-06",
+          "Narcisse Assanvo",
+          "Pháp ngữ",
+          "Chưa thấy L",
+          "Đã báo giá 10 pcs, exact price USD 0.22/pc cho tranche 1-500 pcs",
+          "10 pieces",
+          "Lead có số lượng và giá rõ, đơn nhỏ nhưng thật",
+          "Cao",
+          "Xác nhận chốt 10 pcs, hỏi địa chỉ nhận hàng và phương thức ship"
+        ],
+        [
+          "2026-09-02",
+          "naveen naani",
+          "Chưa xác định",
+          "Có level tag",
+          "Hỏi giá theo meter/roll, nhiều size pipe khác nhau",
+          "Chưa rõ",
+          "Buyer đang hỏi cấu trúc giá, cần map size trước khi báo chính xác",
+          "Cao",
+          "Gửi bảng size phổ biến + giá theo roll, hỏi diameter/length/quantity và warranty cần dùng"
+        ],
+        [
+          "2026-08-30",
+          "Juan Anahua",
+          "Chưa xác định",
+          "Có level tag",
+          "LDPE irrigation pipes 6mm-32mm cho nông nghiệp/drip tape; hỏi diameter và packaging",
+          "5 units",
+          "Buyer có quantity 5 unit, cần xác định đường kính và quy cách đóng gói",
+          "Cao",
+          "Hỏi đường kính 6-32mm, loại drip tape đang dùng, packing và địa chỉ nhận hàng"
+        ],
+        [
+          "2026-08-19",
+          "Jake Tartaglia",
+          "Chưa xác định",
+          "Hỏi sự khác nhau giữa X1000 và X2000 range, 37L/h, mã X137A và X237A",
+          "Chưa nêu",
+          "Khách hỏi kỹ thuật sản phẩm rất cụ thể",
+          "Lead tốt - ưu tiên cao",
+          "Trả lời bảng so sánh: flow rate, coverage, connection size, hose/stake included; hỏi quantity và ứng dụng"
+        ],
+        [
+          "2026-08-17",
+          "Jessica Mbibi",
+          "Netherlands",
+          "Black PP Coupling 32mm và nhiều loại pipe fittings: elbows, tees, reducers, couplings, unions, caps, flanges...",
+          "Inquiry ghi 1 piece nhưng nội dung là yêu cầu danh mục/mua hàng",
+          "Buyer gửi inquiry đầy đủ và yêu cầu model, specs, MOQ, pricing, packaging; có email ngoài Alibaba trong nội dung.",
+          "Cao nhưng rủi ro off-platform",
+          "Trả lời trực tiếp trong Alibaba: gửi thông số Black PP Coupling 32mm, bảng giá theo bậc 1-500/501-5000/5001+, hỏi target quantity và nhắc báo giá/order qua Alibaba để bảo vệ giao dịch."
+        ],
+        [
+          "2026-08-17",
+          "Jose RodriguezGiraldo",
+          "Peru - Cusco",
+          "Hỏi phí ship từ Việt Nam tới Peru theo kg có hợp lý không; đang check freight tới Cusco; sản phẩm 5,000 pcs giá USD 0.218/pc",
+          "5,000 pcs",
+          "Khách quan tâm giá vận chuyển và tổng landed cost",
+          "Lead tốt - ưu tiên cao",
+          "Tính freight Cusco, so sánh air/sea nếu có, gửi tổng giá CIF/DDP nếu làm được"
+        ],
+        [
+          "2026-07-28",
+          "Christopher Velonis",
+          "Vietnam flag hiển thị",
+          "Center pivot irrigation hose pivot boot/flexible boot coupling, 4-ply tire cord reinforced.",
+          "Chưa rõ",
+          "Buyer gửi specification rất chi tiết: ID 6 5/8 inch, OD 7 inch, length 16 inch, dùng cho pivot tower connection/elbow.",
+          "Cao",
+          "Xác nhận có thể sản xuất/cung cấp theo spec hay không; nếu được, hỏi áp suất làm việc, số lượng, bản vẽ/ảnh mẫu và địa chỉ giao hàng."
+        ],
+        [
+          "2026-07-16",
+          "Maksim Mikhailencko",
+          "Belarus",
+          "LDPE pipes.",
+          "Chưa rõ",
+          "Tin gần nhất seller hỏi khách còn quan tâm mua LDPE pipes không; được tag khách hàng tiềm năng.",
+          "Trung bình-cao",
+          "Follow-up bằng 3 lựa chọn size LDPE, MOQ, giá tham khảo; hỏi đường kính, độ dày, chiều dài cuộn và số lượng dự kiến."
+        ]
+      ],
+      "Can theo doi": [
+        [
+          "Ngày",
+          "Khách hàng",
+          "Quốc gia",
+          "Nội dung",
+          "Đánh giá",
+          "Việc nên làm"
+        ],
+        [
+          "2026-08-07",
+          "Alviaa Alviaa",
+          "Chưa xác định",
+          "Buyer/seller để lại WhatsApp: +84 961 477 423; chưa thấy sản phẩm, số lượng hoặc yêu cầu kỹ thuật trong snapshot.",
+          "Chưa rõ",
+          "Có rủi ro off-platform, chưa đủ điều kiện lead ưu tiên.",
+          "Trung bình-thấp",
+          "Giữ trao đổi trên Alibaba; hỏi buyer cần sản phẩm nào, size/quantity/destination trước khi chuyển kênh."
+        ],
+        [
+          "2026-09-10",
+          "Pascal Mghanga",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Chỉ thấy automatic reception stopped, chưa có nhu cầu rõ",
+          "Cần mở sâu",
+          "Hỏi lại sản phẩm tưới nào buyer cần, size và số lượng"
+        ],
+        [
+          "2026-09-06",
+          "Mahbuba Maha",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Buyer phản hồi ok",
+          "Có phản hồi nhưng thiếu sản phẩm",
+          "Follow nếu trước đó đã báo giá; hỏi muốn đặt hàng không"
+        ],
+        [
+          "2026-09-02",
+          "Gunveer Singh",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Chỉ mở đầu “Helloo”",
+          "Lead mở đầu",
+          "Hỏi buyer cần LDPE pipe/drip connector/nozzle nào, size và quantity"
+        ],
+        [
+          "2026-09-02",
+          "Giovanni Capostagno",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Chỉ thấy translation tip",
+          "Cần kiểm tra lại",
+          "Chưa đưa vào lead chính"
+        ],
+        [
+          "2026-08-30",
+          "Juan Anahua",
+          "Chưa xác định",
+          "Có level tag",
+          "LDPE irrigation pipes 6-32mm, quantity 5 units, cần chọn diameter/packaging",
+          "5 units",
+          "Lead cũ vẫn nên follow nếu chưa chốt",
+          "Hỏi đường kính và địa chỉ, gửi quotation cuối"
+        ],
+        [
+          "2026-08-29",
+          "weicengzhu zheng",
+          "Japan / Osaka",
+          "Có level tag",
+          "32mm LDPE Pipe 100m/roll, báo giá 3/5/10 năm và ship Osaka USD 40-80/roll",
+          "Theo roll",
+          "Lead cũ tốt, cần follow chọn bảo hành/số roll",
+          "Hỏi chọn 3/5/10 năm, số roll và địa chỉ Osaka"
+        ],
+        [
+          "2026-09-02",
+          "Gunveer Singh",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Chỉ mở đầu “Helloo”, chưa có sản phẩm/số lượng",
+          "Lead mở đầu",
+          "Hỏi buyer đang cần loại ống tưới/drip nào, đường kính và số lượng"
+        ],
+        [
+          "2026-09-02",
+          "Giovanni Capostagno",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Snapshot chỉ thấy translation tip, chưa có nội dung nhu cầu rõ",
+          "Cần kiểm tra lại nếu có tin mới",
+          "Chưa đưa vào lead chính cho đến khi thấy sản phẩm/số lượng"
+        ],
+        [
+          "2026-08-28",
+          "Abdulaziz A",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Buyer nói đã gửi vào email",
+          "Có nguy cơ chuyển kênh ngoài",
+          "Trả lời giữ trên Alibaba, hỏi lại sản phẩm/số lượng và yêu cầu gửi thông tin trong chat"
+        ],
+        [
+          "2026-08-25",
+          "yinghe chen",
+          "Trung Quốc / tiếng Trung",
+          "Có level tag",
+          "Quan tâm PE pipes, sprinkler nozzles, accessories từ nhựa nguyên sinh 100%",
+          "Chưa rõ",
+          "Lead đúng ngành nhưng thiếu số lượng/spec",
+          "Trả lời tiếng Trung, gửi danh mục PE pipe/nozzle/accessories và hỏi spec/quantity"
+        ],
+        [
+          "2026-08-25",
+          "ROBERT GO",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Seller gửi catalog, chưa thấy buyer phản hồi rõ",
+          "Lead cần follow",
+          "Hỏi buyer chọn model nào trong catalog, số lượng và địa chỉ nhận hàng"
+        ],
+        [
+          "2026-08-17",
+          "Jose RodriguezGiraldo",
+          "Peru",
+          "Khách hàng tiềm năng",
+          "Đã có shipping rates Vietnam-Peru tính theo kg; hỏi buyer thấy VND rates có hợp lý không",
+          "Chưa rõ",
+          "Lead cũ cần follow vì đang vướng phí ship",
+          "Follow xem buyer chấp nhận phí chưa, đề xuất gom hàng/sea nếu air quá cao"
+        ],
+        [
+          "2026-08-12",
+          "Emmanuel Nhandara",
+          "Chưa xác định",
+          "Cần 16mm drip connector / straight coupling valve cho irrigation set | SL: chưa nêu",
+          "Lead thật - ưu tiên vừa",
+          "Hỏi quantity, gửi giá theo bậc 1-500 pcs và MOQ nếu có"
+        ],
+        [
+          "2026-07-28",
+          "Christopher Velonis",
+          "Chưa xác định",
+          "Center pivot irrigation hose pivot boot/flexible boot coupling; specs: 4-ply tire cord, ID 6 5/8”, OD 7”, length 16” | SL: chưa nêu",
+          "Lead kỹ thuật - cần kiểm tra sản xuất",
+          "Xác nhận có sản xuất được không, hỏi quantity, material, pressure, drawing/photo"
+        ],
+        [
+          "2026-08-02",
+          "Daniel Gabbay",
+          "Chưa xác định",
+          "Chỉ trả lời “okay, thank you sir” | SL: chưa nêu",
+          "Lead yếu",
+          "Không phân tích sâu; follow nếu có inquiry mới"
+        ],
+        [
+          "2026-07-16",
+          "Maksim Mikhailencko",
+          "Chưa xác định",
+          "Seller follow LDPE pipes: “Are you still interested...” | SL: chưa nêu",
+          "Lead cũ",
+          "Gửi catalogue/giá LDPE theo size nếu buyer phản hồi"
+        ],
+        [
+          "2026-07-17",
+          "WANDERSON EIDS DE OLIVEIRA",
+          "Brazil",
+          "Khách nói sẽ liên hệ qua WhatsApp, được tag khách hàng tiềm năng.",
+          "Có tiềm năng nhưng có nguy cơ rời nền tảng.",
+          "Giữ trao đổi chính trên Alibaba, hỏi sản phẩm/số lượng và nhắc có thể tạo order để bảo vệ giao dịch."
+        ],
+        [
+          "2026-07-15",
+          "MUHAMMAD ARSLAN",
+          "Pakistan",
+          "Seller hỏi quantity/size và đề nghị WhatsApp/Zalo; có 2 dòng hội thoại gần nhau.",
+          "Thiếu thông tin sản phẩm, chưa đủ lead ưu tiên.",
+          "Hỏi lại size, quantity, destination; chỉ chuyển WhatsApp sau khi đã lưu đủ thông tin trên sheet."
+        ],
+        [
+          "2026-07-10",
+          "Thucyen Ho",
+          "Australia",
+          "Nội dung tiếng Việt: 'Chỉ có cố định que với dây 5x3mm ạ', được tag khách hàng tiềm năng.",
+          "Có trao đổi thật nhưng chưa rõ buyer/seller nói về sản phẩm nào.",
+          "Hỏi khách cần phụ kiện cố định que hay dây 5x3mm, số lượng và địa chỉ nhận."
+        ],
+        [
+          "2026-08-01",
+          "Daniel Gabbay",
+          "United States",
+          "Khách trả lời 'okay, thank you sir'.",
+          "Phản hồi thật nhưng chưa có nhu cầu hiện tại.",
+          "Follow nhẹ, hỏi có cần thêm báo giá hoặc mẫu sản phẩm nào không."
+        ],
+        [
+          "2026-07-25",
+          "Rinaldi Febrian",
+          "Indonesia",
+          "AI follow-up đề xuất sample barb connectors.",
+          "Có thể là lead cũ, chưa thấy phản hồi mới.",
+          "Gửi 2-3 mẫu barb connector bán tốt và hỏi có cần sample không."
+        ],
+        [
+          "2026-07-24",
+          "Lip Pon",
+          "Thailand",
+          "AI follow-up hỏi có nhu cầu/dự án mới không.",
+          "Lead cũ, chưa có phản hồi cụ thể.",
+          "Theo dõi nhẹ, gửi catalogue irrigation fittings theo nhóm sản phẩm."
+        ],
+        [
+          "2026-07-07",
+          "Yakir shitrit",
+          "Israel",
+          "Khách/seller trả lời 'I'm afraid I don't know either. Sorry about that.'",
+          "Không đủ thông tin để ưu tiên.",
+          "Chỉ rà lại nếu có lịch sử trước đó quan trọng."
+        ]
+      ],
+      "It phan hoi": [
+        [
+          "Ngày",
+          "Khách hàng",
+          "Quốc gia",
+          "Dấu hiệu",
+          "Kết luận"
+        ],
+        [
+          "2026-08-07",
+          "Alviaa Alviaa",
+          "Chưa xác định",
+          "Chỉ thấy WhatsApp, không có nhu cầu sản phẩm/số lượng rõ trong snapshot."
+        ],
+        [
+          "2026-09-10",
+          "Pascal Mghanga",
+          "Chỉ thấy auto-reception stopped, chưa có sản phẩm/số lượng",
+          "Không tính lead chính"
+        ],
+        [
+          "2026-09-06",
+          "Mahbuba Maha",
+          "Chỉ phản hồi ok, chưa có nhu cầu mới",
+          "Ít phản hồi"
+        ],
+        [
+          "2026-09-02",
+          "Giovanni Capostagno",
+          "Chỉ thấy translation tip, chưa có nội dung buyer rõ",
+          "Không tính lead chính"
+        ],
+        [
+          "2026-08-28",
+          "Abdulaziz A",
+          "Buyer nói đã gửi email, có nguy cơ kéo ngoài nền tảng",
+          "Giữ trao đổi trên Alibaba; chưa tính ưu tiên nếu thiếu nội dung mới"
+        ],
+        [
+          "2026-09-02",
+          "W N",
+          "Chỉ thấy translation tip, chưa có nhu cầu rõ",
+          "Không tính lead chính"
+        ],
+        [
+          "2026-08-30",
+          "Penny Penny",
+          "Chỉ thấy translation tip, chưa có sản phẩm/số lượng rõ",
+          "Không tính lead chính tuần này"
+        ],
+        [
+          "2026-08-17",
+          "Jessica Mbibi",
+          "Hội thoại chỉ báo auto-reception stopped, chưa thấy nhu cầu mới",
+          "Ít phản hồi"
+        ],
+        [
+          "2026-08-02",
+          "FHhf Gjffd",
+          "Chỉ là visitor follow-up, không có nhu cầu sản phẩm",
+          "Không tính lead"
+        ],
+        [
+          "2026-08-12",
+          "jania mark",
+          "Chưa xác định",
+          "Đề xuất chuyển sang WhatsApp/Zalo vì email phản hồi chậm; có thể là lead thật nhưng rủi ro/off-platform nhẹ."
+        ],
+        [
+          "2026-08-11",
+          "W N",
+          "Chưa xác định",
+          "Hỏi chat trên WhatsApp; chưa có nhu cầu sản phẩm, chỉ xin kênh ngoài."
+        ],
+        [
+          "2026-08-12",
+          "jania mark",
+          "Vietnam",
+          "Chỉ xin trao đổi qua WhatsApp/Zalo.",
+          "Không phân tích sâu nếu chưa có SKU/số lượng."
+        ],
+        [
+          "2026-08-11",
+          "W N",
+          "India",
+          "Chỉ hỏi chat WhatsApp.",
+          "Thiếu nhu cầu sản phẩm."
+        ],
+        [
+          "2026-08-07",
+          "Alviaa Alviaa",
+          "Pakistan",
+          "Chỉ để lại WhatsApp.",
+          "Không đủ lead ưu tiên."
+        ],
+        [
+          "2026-08-02",
+          "FHhf Gjffd",
+          "Saudi Arabia",
+          "Chỉ hiện visitor follow-up.",
+          "Không phải lead có phản hồi rõ."
+        ],
+        [
+          "2026-07-04",
+          "Mark Alhovirta / Kevin Nabwire / Stas Baciu",
+          "US/Kenya/UK",
+          "Tin seller gửi hàng loạt về Hanging Flower Pots, chưa thấy buyer phản hồi rõ.",
+          "Không đưa vào khách ưu tiên tuần này."
+        ],
+        [
+          "2026-07-02",
+          "Silent Auction",
+          "United States",
+          "Seller hỏi số điện thoại để nhắn WhatsApp/Zalo.",
+          "Không đủ nhu cầu mua."
+        ]
+      ]
+    }
+  },
+  "claude_rules": [
+    "Không tự bịa hoặc làm tròn số liệu nguồn.",
+    "Cập nhật tuần mới nhưng giữ nguyên toàn bộ lịch sử nhiều tuần.",
+    "Hiển thị so sánh tuần này/tuần trước, điểm tốt, điểm nghẽn và hành động ưu tiên.",
+    "Quốc gia, từ khóa chính xác và khách truy cập phải dùng toàn bộ mảng raw_data, không lấy mẫu.",
+    "Buyer ưu tiên phải dựa trên lead_tabs."
+  ],
+  "buyer_data_refreshed_at": "2026-09-12T00:00:00+07:00"
+}

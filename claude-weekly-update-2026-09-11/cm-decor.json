@@ -1,0 +1,2801 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-09-12T00:00:00+07:00",
+  "purpose": "Nguồn dữ liệu đầy đủ để Claude Code cập nhật app báo cáo tuần Alibaba; không cần đọc lại Google Sheets.",
+  "store": "CM Decor",
+  "app_path": "cm-decor/index.html",
+  "periods": {
+    "visitor_current": "Tuần này · Tổng quan · 03-09.09",
+    "visitor_previous": "Tuần trước · Tổng quan · 27.08-02.09",
+    "operations_note": "Bảng vận hành chứa toàn bộ các tuần; lấy cột tuần mới nhất và giữ lịch sử."
+  },
+  "source_manifest": {
+    "operations": {
+      "spreadsheet_id": "1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo",
+      "title": "CMDECOR BÁO CÁO TUẦN",
+      "sheet": "Trang tính1",
+      "url": "https://docs.google.com/spreadsheets/d/1d94o5XOL1fU1gHnJQQ6ki1uBu1mE2JbUShXm92RZsYo/edit?gid=0",
+      "range": "A1:AI60"
+    },
+    "visitors": {
+      "spreadsheet_id": "1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM",
+      "title": "CM Decor - Visitor Analyzer - Theo dõi hàng tuần",
+      "current_summary_sheet": "Tuần này · Tổng quan · 03-09.09",
+      "current_visitors_sheet": "Tuần này · Khách truy cập · 03-09.09",
+      "current_keywords_sheet": "Tuần này · Từ khóa · 03-09.09",
+      "current_countries_sheet": "Tuần này · Quốc gia · 03-09.09",
+      "previous_summary_sheet": "Tuần trước · Tổng quan · 27.08-02.09",
+      "url": "https://docs.google.com/spreadsheets/d/1Ct6zBQ0Ryuw5VnpagOnACZGu9OBwPG8msAtrU5jbLVM/edit?gid=2096000301"
+    },
+    "leads": {
+      "spreadsheet_id": "1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI",
+      "title": "CM Decor OneTalk Leads 2026-08-18",
+      "sheets": [
+        "Tong quan",
+        "Khach uu tien",
+        "Can theo doi",
+        "It phan hoi"
+      ],
+      "url": "https://docs.google.com/spreadsheets/d/1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI/edit?gid=605534665",
+      "read_scope": "Toàn bộ phạm vi A:Z của tất cả tab buyer"
+    }
+  },
+  "normalized_index": {
+    "current_visitor_summary": {
+      "CM Decor — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất": [],
+      "Thời gian dữ liệu: 2026-09-03 đến 2026-09-09 | Bộ lọc nguồn: Last 7 days": [],
+      "Số bản ghi khách truy cập": [
+        "35",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "22",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "20"
+      ],
+      "Tổng PV trên gian hàng": [
+        "88",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "15"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "69",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "27",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      "Số buyer L1+": [
+        "15",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "4",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      "Nguồn dữ liệu": [],
+      "https://data.alibaba.com/marketing/visitor": []
+    },
+    "previous_visitor_summary": {
+      "CM Decor — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất": [],
+      "Thời gian dữ liệu: 2026-08-27 đến 2026-09-02 | Bộ lọc nguồn: Last 7 days": [],
+      "Số bản ghi khách truy cập": [
+        "26",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      "Số quốc gia / vùng": [
+        "15",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "16"
+      ],
+      "Tổng PV trên gian hàng": [
+        "54",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "10"
+      ],
+      "Số bản ghi keyword chính xác": [
+        "42",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      "Số visitor có keyword": [
+        "15",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      "Số buyer L1+": [
+        "10",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      "Số trang nguồn đã lấy": [
+        "3",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      "Nguồn dữ liệu": [],
+      "https://data.alibaba.com/marketing/visitor": []
+    },
+    "row_counts": {
+      "current_visitors": 35,
+      "current_keywords": 69,
+      "current_countries": 22,
+      "lead_tabs": {
+        "Tong quan": 20,
+        "Khach uu tien": 21,
+        "Can theo doi": 15,
+        "It phan hoi": 18
+      }
+    }
+  },
+  "raw_data": {
+    "operations_all_weeks": [
+      [
+        "\nCMDECOR BÁO CÁO TUẦN"
+      ],
+      [
+        "Chỉ Số Chung"
+      ],
+      [
+        "Khung thời gian hoạt động",
+        "Tuần ",
+        "30-08-2026 đến 05-09-2026",
+        "23-08-2026 đến 29-08-2026",
+        "09-08-2026 đến 15-08-2026",
+        "02-08-2026 đến 08-08-2026",
+        "26-07-2026 đến 01-08-2026",
+        "19-07-2026 đến 25-07-2026",
+        "12-07-2026 đến 18-07-2026",
+        "05-07-2026 đến 11-07-2026",
+        "21-06-2026 đến 27-06-2026",
+        "14-06-2026 đến 20-06-2026",
+        "30-05-2026 đến 06-06-2026",
+        "17-05-2026 đến 23-05-2026",
+        "03-05-2026 đến 09-05-2026",
+        "26-4-2026 đến 2-05-2026",
+        "19-4-2026 đến 25-04-2026",
+        "12-4-2026 đến 18-4-2026"
+      ],
+      [
+        null,
+        "Số sao",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm",
+        "1060",
+        "1061",
+        "1061",
+        "1061",
+        "1061",
+        "1061",
+        "1060",
+        "1061",
+        "1061",
+        "1058",
+        "1058",
+        "1061",
+        "673",
+        "350",
+        "350",
+        "309"
+      ],
+      [
+        null,
+        "Tổng số sản phẩm mới đã đăng",
+        "-1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "1",
+        "-1",
+        "0",
+        "3",
+        "0",
+        "0",
+        "388",
+        "323",
+        "0",
+        "41",
+        "309"
+      ],
+      [
+        null,
+        "Tổng số người ghé thăm",
+        "62",
+        "37",
+        "196",
+        "74",
+        "58",
+        "57",
+        "50",
+        "15",
+        "122",
+        "100",
+        "52",
+        "119",
+        "70",
+        "65",
+        "106",
+        "61"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng",
+        "3",
+        "0",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "1",
+        "2",
+        "0",
+        "3",
+        "4",
+        "4",
+        "7",
+        "2",
+        "3"
+      ],
+      [
+        null,
+        "Tổng số thư hỏi hàng đã trả lời",
+        "3",
+        "0",
+        "1",
+        "2",
+        "1",
+        "1",
+        "0",
+        "1",
+        "2",
+        "0",
+        "3",
+        "4",
+        "4",
+        "7",
+        "2",
+        "3"
+      ],
+      [
+        null,
+        "Tổng số lượt đã báo giá RFQ",
+        "6",
+        "1",
+        "0",
+        "0",
+        "0",
+        "4",
+        "4",
+        "2",
+        "20",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượt báo giá RFQ còn lại",
+        "15",
+        "20",
+        "20",
+        "20",
+        "20",
+        "18",
+        "18",
+        "20",
+        "20",
+        "19",
+        "20",
+        "20",
+        "20",
+        "20",
+        "40",
+        "40"
+      ],
+      [
+        null,
+        "Thời gian phản hồi tin nhắn trung bình",
+        "0,01h",
+        "0h",
+        "0h",
+        "0h",
+        "0h",
+        "0h",
+        "0h",
+        "0 giờ",
+        "3,13h",
+        "6,45h",
+        "6,4h",
+        "5,43h",
+        "4,52h",
+        "3,75h",
+        "0,01h",
+        "0,01h"
+      ],
+      [
+        null,
+        "Tỉ lệ tin nhắn được phản hồi trong 24h",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100.00%",
+        "100,00%",
+        "87,50%",
+        "88.89%",
+        "87,50%",
+        "89,47%",
+        "92.31%",
+        "100%",
+        "100%",
+        "100%"
+      ],
+      [
+        null,
+        "Số lượng Super Product (win)",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        null,
+        "Số lượng Top Product (tiềm năng)",
+        "0",
+        "0",
+        "0",
+        "1",
+        "1",
+        "2",
+        "2",
+        "2",
+        "3",
+        "3",
+        "3",
+        "13",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Kế hoạch hành động cho tuần tiếp theo",
+        "Cập nhật sản phẩm mới",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn",
+        "Tập trung thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn",
+        "Đề xuất đăng thêm 10 sản phẩm mới Highdemand mỗi ngày",
+        "Đề xuất đăng thêm 10 sản phẩm mới mỗi ngày",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm "
+      ],
+      [
+        null,
+        "Tối ưu hoá các chỉ số",
+        "Tăng traffic và tỷ lệ chuyển đổi; tối ưu 59 sản phẩm điểm thấp; tăng sản phẩm RTS; xử lý sản phẩm rủi ro/gây hiểu nhầm; báo RFQ; nâng sản phẩm lên Top/Super Product",
+        "Tăng traffic; tối ưu 61 sản phẩm điểm thấp; báo RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm lỗi; sử dụng RFQ; nâng sản phẩm lên Top/Super Product; tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Tăng traffic; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Tăng traffic; cải thiện Service; xử lý sản phẩm rủi ro; tăng sản phẩm RTS; báo RFQ và tạo đơn Trade Assurance",
+        "Báo RFQ; tối ưu Marketing và Service để tăng sao",
+        "Thanh toán TA",
+        "Làm lại giá sản phẩm",
+        "Báo giá RFQ",
+        "Chỉnh sửa thêm video vào các sản phẩm đã đăng",
+        "Báo RFQ",
+        "Báo RFQ",
+        "Báo hết 40 RFQ trước 30/4",
+        "Báo hết 40 RFQ trước 30/4"
+      ],
+      [
+        null,
+        null,
+        "Chưa có đơn và GMV Trade Assurance, chỉ có 5 cơ hội kinh doanh trong 30 ngày; tỷ lệ sản phẩm RTS dưới 1%; có 5 sản phẩm rủi ro và 1 sản phẩm gây hiểu nhầm; Marketing và Service đều chỉ 1 sao; hiện chưa có Top/Super Product",
+        "Gian hàng hiện 0 sao do Marketing; chỉ có 98 khách trong 30 ngày; chưa có GMV Trade Assurance; 61 sản phẩm điểm thấp và chưa có Top/Super Product; quyền lợi RFQ còn ít được sử dụng",
+        "Gian hàng hiện 0 sao, Forecast 1 sao; Marketing chỉ có 115 khách và Service mới có 2 người mua phản hồi; chưa có GMV Trade Assurance; có 1 sản phẩm gặp vấn đề; 63 sản phẩm điểm thấp và chưa có Top/Super Product; chưa sử dụng RFQ",
+        "Chưa có đơn Trade Assurance, GMV và tỷ lệ chuyển đổi đơn hàng bằng 0; Marketing còn thiếu 18 khách và Service thiếu 2 người mua phản hồi lần hai; tỷ lệ sản phẩm RTS dưới 1%; có 5 sản phẩm rủi ro và 1 sản phẩm gây hiểu nhầm; chưa tận dụng hiệu quả RFQ và công cụ AI",
+        "Chưa có đơn Trade Assurance, GMV và tỷ lệ chuyển đổi đơn hàng bằng 0; Marketing còn thiếu 18 khách và Service thiếu 2 người mua phản hồi lần hai; tỷ lệ sản phẩm RTS dưới 1%; có 5 sản phẩm rủi ro và 1 sản phẩm gây hiểu nhầm; chưa tận dụng hiệu quả RFQ và điểm AI",
+        "Chưa có đơn Trade Assurance và GMV; tỷ lệ chuyển đổi giảm; có 1 sản phẩm rủi ro và chỉ 10 sản phẩm RTS; Marketing và Service hạn chế số sao; traffic lệch thị trường và System Recommendations thấp; RFQ chưa được tận dụng",
+        "Chưa có đơn Trade Assurance và GMV; tỷ lệ chuyển đổi giảm; có 1 sản phẩm rủi ro và chỉ 10 sản phẩm RTS; Marketing và Service kéo số sao xuống 0; traffic lệch thị trường và System Recommendations thấp; còn 18 lượt RFQ chưa sử dụng",
+        "Tăng giao dịch Trade Assurance; cải thiện chuyển đổi và tốc độ phản hồi; tăng sản phẩm RTS; tối ưu Marketing và Service để vượt 1 sao; nhắm đúng thị trường và tăng traffic từ System Recommendations",
+        "Làm lại giá sản phẩm",
+        "Thanh toán TA",
+        "Đẩy quảng cáo và làm nhiệm vụ lên 5 sao",
+        null,
+        "Anh chị đăng sản phẩm, thêm video giúp em, vì để tăng lượng thực tế và thu hút ngừoi xem hơn, video có thể khách ảnh sản phẩm",
+        "Đăng thêm sản phẩm RTS"
+      ],
+      [
+        null,
+        null,
+        null,
+        null,
+        null,
+        "Chạy quảng cáo nếu có thể",
+        null,
+        null,
+        "Vì bị chặn traffic 1 tuần trước nên không có đơn hỏi hàng nào, tuần này đã bắt đầu có traffic lại",
+        null,
+        "Tránh đăng các sản phẩm lỗi về logo tranh bóng đá dính bản quyền thương hiệu",
+        null,
+        "Thêm video 30s vào các sản phẩm, để trực quan, thêm video nhà máy vào phần mô tả ở dưới",
+        null,
+        null,
+        "Show case em đã xử lý, mọi người có thể vào phần Promotion để sửa lại show case"
+      ],
+      [],
+      [],
+      [
+        "Đánh giá sơ bộ",
+        "Vấn đề ưu tiên xử lý",
+        null,
+        null,
+        "Đăng thêm sản phẩm, hoạt động mạnh mẽ trong việc làm hình ảnh thật, video thật",
+        "Đăng thêm sản phẩm, hoạt động mạnh mẽ trong việc làm hình ảnh thật, video thật",
+        "Chỉnh sửa lại sản phẩm, đăng sản phẩm highdemand",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Đăng thêm 5-10 sản phẩm hot mỗi ngày",
+        "Thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn",
+        "Tập trung thêm video vào sản phẩm, đăng mới hoặc sửa sản phẩm có sẵn và làm lại giá sản phẩm",
+        "Đề xuất đăng thêm 10 sản phẩm mới Highdemand mỗi ngày",
+        "Chỉnh sửa thêm video vào các sản phẩm đã đăng",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm ",
+        "Báo hết 40 RFQ trước 30/4",
+        "Đề xuất đăng thêm 50 sản phẩm mới mỗi ngày để đạt 1000 sản phẩm "
+      ],
+      [
+        null,
+        "Báo cáo từ AI"
+      ]
+    ],
+    "visitor_current_summary": [
+      [
+        "CM Decor — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất"
+      ],
+      [],
+      [
+        "Thời gian dữ liệu: 2026-09-03 đến 2026-09-09 | Bộ lọc nguồn: Last 7 days"
+      ],
+      [],
+      [
+        "Số bản ghi khách truy cập",
+        "35",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      [
+        "Số quốc gia / vùng",
+        "22",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "20"
+      ],
+      [
+        "Tổng PV trên gian hàng",
+        "88",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "15"
+      ],
+      [
+        "Số bản ghi keyword chính xác",
+        "69",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số visitor có keyword",
+        "27",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số buyer L1+",
+        "15",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số trang nguồn đã lấy",
+        "4",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      [],
+      [],
+      [
+        "Nguồn dữ liệu"
+      ],
+      [
+        "https://data.alibaba.com/marketing/visitor"
+      ]
+    ],
+    "visitor_previous_summary": [
+      [
+        "CM Decor — Phân tích khách truy cập Alibaba.com — 7 ngày gần nhất"
+      ],
+      [],
+      [
+        "Thời gian dữ liệu: 2026-08-27 đến 2026-09-02 | Bộ lọc nguồn: Last 7 days"
+      ],
+      [],
+      [
+        "Số bản ghi khách truy cập",
+        "26",
+        null,
+        "Chú giải cấp người mua"
+      ],
+      [
+        "Số quốc gia / vùng",
+        "15",
+        null,
+        "L0",
+        "Người mua đã đăng ký",
+        null,
+        null,
+        "16"
+      ],
+      [
+        "Tổng PV trên gian hàng",
+        "54",
+        null,
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        null,
+        null,
+        "10"
+      ],
+      [
+        "Số bản ghi keyword chính xác",
+        "42",
+        null,
+        "L2",
+        "Người mua doanh nghiệp nhỏ (Scaleup)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số visitor có keyword",
+        "15",
+        null,
+        "L3",
+        "Người mua doanh nghiệp (Enterprise)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số buyer L1+",
+        "10",
+        null,
+        "L4",
+        "Người mua Enterprise Pro (nhóm triệu đô)",
+        null,
+        null,
+        "0"
+      ],
+      [
+        "Số trang nguồn đã lấy",
+        "3",
+        null,
+        "L1+ gồm L1, L2, L3 và L4, đại diện cho nhóm người mua chất lượng cao của Alibaba.com."
+      ],
+      [],
+      [],
+      [
+        "Nguồn dữ liệu"
+      ],
+      [
+        "https://data.alibaba.com/marketing/visitor"
+      ]
+    ],
+    "visitor_current_all_rows": [
+      [
+        "Ngày truy cập",
+        "Khách truy cập",
+        "Cấp người mua",
+        "Phân loại người mua",
+        "Quốc gia / vùng",
+        "PV",
+        "Thời gian lưu lại",
+        "Keyword tìm kiếm nhiều nhất",
+        "Hoạt động trên gian hàng",
+        "Hoạt động trên website",
+        "Trang nguồn"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "1",
+        "7s",
+        "christmas\nshandong\nequipment",
+        null,
+        "Tổng lượt xem: 513 trang\nĐã truy cập 419 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-09",
+        "D2609092",
+        "L0",
+        "Người mua đã đăng ký",
+        "Việt Nam",
+        "2",
+        "14s",
+        "stickers",
+        null,
+        "Tổng lượt xem: 308 trang\nĐã truy cập 14 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-09",
+        "D2609093",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hà Lan",
+        "3",
+        "7s",
+        "kroonluchter",
+        null,
+        "Tổng lượt xem: 19 trang\nĐã truy cập 3 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-09",
+        "D2609094",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Philippines",
+        "1",
+        "2s",
+        "pillar lamp\njapanese style pillar lamp and wall lamp outdoor\njapanesestyle lawn pillar lmp",
+        null,
+        "Tổng lượt xem: 252 trang\nĐã đăng 1 RFQ",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609081",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Pháp",
+        "1",
+        "-",
+        "-",
+        null,
+        "Tổng lượt xem: 1 trang\nĐã đăng 2 RFQ",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "1",
+        "2s",
+        "flower pot large for outdoor\npink and white checkered ceramics\ntool box pink\nlandscape a hill",
+        null,
+        "Tổng lượt xem: 101 trang\nĐã truy cập 25 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hà Lan",
+        "2",
+        "20s",
+        "zitbankkussen 40cm diep\nzitkussen 40cm diep\nschilderijen sport",
+        null,
+        "Tổng lượt xem: 90 trang\nĐã truy cập 23 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609084",
+        "L0",
+        "Người mua đã đăng ký",
+        "Kenya",
+        "2",
+        "6s",
+        "shandalia light ready to order",
+        null,
+        "Tổng lượt xem: 70 trang\nĐã truy cập 11 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609085",
+        "L0",
+        "Người mua đã đăng ký",
+        "Sri Lanka",
+        "9",
+        "116s",
+        "-",
+        null,
+        "Tổng lượt xem: 23 trang\nĐã truy cập 1 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-08",
+        "D2609086",
+        "L0",
+        "Người mua đã đăng ký",
+        "Thụy Điển",
+        "4",
+        "37s",
+        "laundry scent booster beads\nled flower\nfragrance booster beads\nvgglampa",
+        null,
+        "Tổng lượt xem: 20 trang\nĐã truy cập 4 nhà cung cấp",
+        "1"
+      ],
+      [
+        "2026-09-07",
+        "D2609071",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Romania",
+        "1",
+        "17s",
+        "home decor",
+        null,
+        "Tổng lượt xem: 42 trang\nĐã đăng 4 RFQ",
+        "2"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "1",
+        "7s",
+        "backpack\nhome gardening\noutdoor camping supplies",
+        null,
+        "Tổng lượt xem: 1104 trang\nĐã truy cập 908 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "2",
+        "45s",
+        "preserved flowers plants",
+        "Đã truy cập trang chủ",
+        "Tổng lượt xem: 3 trang\nĐã truy cập 2 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609062",
+        "L0",
+        "Người mua đã đăng ký",
+        "Pháp",
+        "2",
+        "8s",
+        "-",
+        null,
+        "Tổng lượt xem: 2 trang\nĐã truy cập 1 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "5",
+        "103s",
+        "baby beds for newborn\ny62 interior kit\nfrank muller watch",
+        "Đã gửi yêu cầu\nĐã gửi tin nhắn qua TM",
+        "Tổng lượt xem: 330 trang\nĐã truy cập 40 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Honduras",
+        "1",
+        "3s",
+        "wall modular living wall flower plt\ncuadros minimalistas",
+        null,
+        "Tổng lượt xem: 113 trang\nĐã truy cập 18 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609065",
+        "L0",
+        "Người mua đã đăng ký",
+        "Pháp",
+        "4",
+        "32s",
+        "-",
+        null,
+        "Tổng lượt xem: 7 trang\nĐã truy cập 1 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609066",
+        "L0",
+        "Người mua đã đăng ký",
+        "Pháp",
+        "15",
+        "552s",
+        "dco metal\nvietnam\ndcoupe laser metal",
+        "Đã truy cập trang chủ",
+        "Tổng lượt xem: 83 trang\nĐã truy cập 20 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "1",
+        "9s",
+        "garden lights\npillar lights\nsolar powered garden lights",
+        null,
+        "Tổng lượt xem: 397 trang\nĐã truy cập 33 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-06",
+        "D2609068",
+        "L0",
+        "Người mua đã đăng ký",
+        "Đức",
+        "1",
+        "-",
+        "-",
+        null,
+        "Tổng lượt xem: 5 trang\nĐã truy cập 1 nhà cung cấp",
+        "2"
+      ],
+      [
+        "2026-09-05",
+        "D2609051",
+        "L0",
+        "Người mua đã đăng ký",
+        "Mexico",
+        "1",
+        "9s",
+        "lsd acid cuadros",
+        null,
+        "Tổng lượt xem: 21 trang\nĐã truy cập 2 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ghana",
+        "1",
+        "5s",
+        "training bibs\ndodge ram driving hub shaft\nportable welding machine miler",
+        "Đã gửi tin nhắn qua TM",
+        "Tổng lượt xem: 310 trang\nĐã truy cập 18 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "1",
+        "11s",
+        "hotwheels\nwedding party decoration lights\nhotwheels f1\ndecorative room light",
+        null,
+        "Tổng lượt xem: 8 trang\nĐã truy cập 3 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609054",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hồng Kông (Đặc khu hành chính)",
+        "2",
+        "18s",
+        "-",
+        "Đã truy cập trang chủ",
+        "Tổng lượt xem: 2 trang\nĐã truy cập 1 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-05",
+        "D2609055",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "2",
+        "5s",
+        "mr16\n125",
+        null,
+        "Tổng lượt xem: 35 trang\nĐã truy cập 7 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609041",
+        "L0",
+        "Người mua đã đăng ký",
+        "Vương quốc Anh",
+        "2",
+        "3s",
+        "cosmetic\nelectronics\ninterior decoration",
+        null,
+        "Tổng lượt xem: 82 trang\nĐã truy cập 32 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609042",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "2",
+        "5s",
+        "son\nmr16\n125",
+        null,
+        "Tổng lượt xem: 72 trang\nĐã truy cập 15 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ba Lan",
+        "7",
+        "145s",
+        "outdoor lamp ip65 modern\noutdoor lamp ip65\noutdoor lamp ip65 japanese modern",
+        null,
+        "Tổng lượt xem: 78 trang\nĐã truy cập 14 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Vương quốc Anh",
+        "1",
+        "6s",
+        "faux natural fiber carpet\nhome rabbit faux rug\nnatural fur rug",
+        null,
+        "Tổng lượt xem: 495 trang\nĐã đăng 1 RFQ",
+        "3"
+      ],
+      [
+        "2026-09-03",
+        "D2609033",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "1",
+        "3s",
+        "custom handmade portrait oil paintings",
+        null,
+        "Tổng lượt xem: 63 trang\nĐã truy cập 4 nhà cung cấp",
+        "3"
+      ],
+      [
+        "2026-09-03",
+        "D2609034",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "3",
+        "9s",
+        "or plaqu 18k\nblouses lgantes pour femmes\nperruque vietnamienne original en gros\nportrait maison",
+        null,
+        "Tổng lượt xem: 17 trang\nĐã truy cập 1 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609035",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "1",
+        "35s",
+        "watches\nwatch\ndecorative lights",
+        null,
+        "Tổng lượt xem: 52 trang\nĐã truy cập 21 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609036",
+        "L0",
+        "Người mua đã đăng ký",
+        "Indonesia",
+        "1",
+        "38s",
+        "watch\ngaun pengantin putri duyung\ntiang lampu solar",
+        null,
+        "Tổng lượt xem: 15 trang\nĐã truy cập 3 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609037",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "3",
+        "9s",
+        "-",
+        null,
+        "Tổng lượt xem: 82 trang\nĐã truy cập 1 nhà cung cấp",
+        "4"
+      ],
+      [
+        "2026-09-03",
+        "D2609038",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Nga",
+        "1",
+        "5s",
+        "-",
+        null,
+        "Tổng lượt xem: 92 trang\nĐã đăng 25 RFQ",
+        "4"
+      ]
+    ],
+    "keyword_current_all_exact_rows": [
+      [
+        "Ngày truy cập",
+        "Khách truy cập",
+        "Cấp người mua",
+        "Phân loại người mua",
+        "Quốc gia / vùng",
+        "Keyword chính xác (giữ nguyên)",
+        "PV",
+        "Thời gian (giây)"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "christmas",
+        "1",
+        "7"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "shandong",
+        "1",
+        "7"
+      ],
+      [
+        "2026-09-09",
+        "D2609091",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "equipment",
+        "1",
+        "7"
+      ],
+      [
+        "2026-09-09",
+        "D2609092",
+        "L0",
+        "Người mua đã đăng ký",
+        "Việt Nam",
+        "stickers",
+        "2",
+        "14"
+      ],
+      [
+        "2026-09-09",
+        "D2609093",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hà Lan",
+        "kroonluchter",
+        "3",
+        "7"
+      ],
+      [
+        "2026-09-09",
+        "D2609094",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Philippines",
+        "pillar lamp",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-09",
+        "D2609094",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Philippines",
+        "japanese style pillar lamp and wall lamp outdoor",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-09",
+        "D2609094",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Philippines",
+        "japanesestyle lawn pillar lmp",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "flower pot large for outdoor",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "pink and white checkered ceramics",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "tool box pink",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-08",
+        "D2609082",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "landscape a hill",
+        "1",
+        "2"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hà Lan",
+        "zitbankkussen 40cm diep",
+        "2",
+        "20"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hà Lan",
+        "zitkussen 40cm diep",
+        "2",
+        "20"
+      ],
+      [
+        "2026-09-08",
+        "D2609083",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hà Lan",
+        "schilderijen sport",
+        "2",
+        "20"
+      ],
+      [
+        "2026-09-08",
+        "D2609084",
+        "L0",
+        "Người mua đã đăng ký",
+        "Kenya",
+        "shandalia light ready to order",
+        "2",
+        "6"
+      ],
+      [
+        "2026-09-08",
+        "D2609086",
+        "L0",
+        "Người mua đã đăng ký",
+        "Thụy Điển",
+        "laundry scent booster beads",
+        "4",
+        "37"
+      ],
+      [
+        "2026-09-08",
+        "D2609086",
+        "L0",
+        "Người mua đã đăng ký",
+        "Thụy Điển",
+        "led flower",
+        "4",
+        "37"
+      ],
+      [
+        "2026-09-08",
+        "D2609086",
+        "L0",
+        "Người mua đã đăng ký",
+        "Thụy Điển",
+        "fragrance booster beads",
+        "4",
+        "37"
+      ],
+      [
+        "2026-09-08",
+        "D2609086",
+        "L0",
+        "Người mua đã đăng ký",
+        "Thụy Điển",
+        "vgglampa",
+        "4",
+        "37"
+      ],
+      [
+        "2026-09-07",
+        "D2609071",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Romania",
+        "home decor",
+        "1",
+        "17"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "backpack",
+        "1",
+        "7"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "home gardening",
+        "1",
+        "7"
+      ],
+      [
+        "2026-09-07",
+        "D2609072",
+        "L0",
+        "Người mua đã đăng ký",
+        "Trung Quốc",
+        "outdoor camping supplies",
+        "1",
+        "7"
+      ],
+      [
+        "2026-09-06",
+        "D2609061",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Việt Nam",
+        "preserved flowers plants",
+        "2",
+        "45"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "baby beds for newborn",
+        "5",
+        "103"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "y62 interior kit",
+        "5",
+        "103"
+      ],
+      [
+        "2026-09-06",
+        "D2609063",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "frank muller watch",
+        "5",
+        "103"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Honduras",
+        "wall modular living wall flower plt",
+        "1",
+        "3"
+      ],
+      [
+        "2026-09-06",
+        "D2609064",
+        "L0",
+        "Người mua đã đăng ký",
+        "Honduras",
+        "cuadros minimalistas",
+        "1",
+        "3"
+      ],
+      [
+        "2026-09-06",
+        "D2609066",
+        "L0",
+        "Người mua đã đăng ký",
+        "Pháp",
+        "dco metal",
+        "15",
+        "552"
+      ],
+      [
+        "2026-09-06",
+        "D2609066",
+        "L0",
+        "Người mua đã đăng ký",
+        "Pháp",
+        "vietnam",
+        "15",
+        "552"
+      ],
+      [
+        "2026-09-06",
+        "D2609066",
+        "L0",
+        "Người mua đã đăng ký",
+        "Pháp",
+        "dcoupe laser metal",
+        "15",
+        "552"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "garden lights",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "pillar lights",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-06",
+        "D2609067",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "solar powered garden lights",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-05",
+        "D2609051",
+        "L0",
+        "Người mua đã đăng ký",
+        "Mexico",
+        "lsd acid cuadros",
+        "1",
+        "9"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ghana",
+        "training bibs",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ghana",
+        "dodge ram driving hub shaft",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-05",
+        "D2609052",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ghana",
+        "portable welding machine miler",
+        "1",
+        "5"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "hotwheels",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "wedding party decoration lights",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "hotwheels f1",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609053",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "decorative room light",
+        "1",
+        "11"
+      ],
+      [
+        "2026-09-05",
+        "D2609055",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "mr16",
+        "2",
+        "5"
+      ],
+      [
+        "2026-09-05",
+        "D2609055",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "125",
+        "2",
+        "5"
+      ],
+      [
+        "2026-09-04",
+        "D2609041",
+        "L0",
+        "Người mua đã đăng ký",
+        "Vương quốc Anh",
+        "cosmetic",
+        "2",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609041",
+        "L0",
+        "Người mua đã đăng ký",
+        "Vương quốc Anh",
+        "electronics",
+        "2",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609041",
+        "L0",
+        "Người mua đã đăng ký",
+        "Vương quốc Anh",
+        "interior decoration",
+        "2",
+        "3"
+      ],
+      [
+        "2026-09-04",
+        "D2609042",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "son",
+        "2",
+        "5"
+      ],
+      [
+        "2026-09-04",
+        "D2609042",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "mr16",
+        "2",
+        "5"
+      ],
+      [
+        "2026-09-04",
+        "D2609042",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Uzbekistan",
+        "125",
+        "2",
+        "5"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ba Lan",
+        "outdoor lamp ip65 modern",
+        "7",
+        "145"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ba Lan",
+        "outdoor lamp ip65",
+        "7",
+        "145"
+      ],
+      [
+        "2026-09-03",
+        "D2609031",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Ba Lan",
+        "outdoor lamp ip65 japanese modern",
+        "7",
+        "145"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Vương quốc Anh",
+        "faux natural fiber carpet",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Vương quốc Anh",
+        "home rabbit faux rug",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-03",
+        "D2609032",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Vương quốc Anh",
+        "natural fur rug",
+        "1",
+        "6"
+      ],
+      [
+        "2026-09-03",
+        "D2609033",
+        "L0",
+        "Người mua đã đăng ký",
+        "Hoa Kỳ",
+        "custom handmade portrait oil paintings",
+        "1",
+        "3"
+      ],
+      [
+        "2026-09-03",
+        "D2609034",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "or plaqu 18k",
+        "3",
+        "9"
+      ],
+      [
+        "2026-09-03",
+        "D2609034",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "blouses lgantes pour femmes",
+        "3",
+        "9"
+      ],
+      [
+        "2026-09-03",
+        "D2609034",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "perruque vietnamienne original en gros",
+        "3",
+        "9"
+      ],
+      [
+        "2026-09-03",
+        "D2609034",
+        "L1",
+        "Người mua tiềm năng (Seed)",
+        "Hoa Kỳ",
+        "portrait maison",
+        "3",
+        "9"
+      ],
+      [
+        "2026-09-03",
+        "D2609035",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "watches",
+        "1",
+        "35"
+      ],
+      [
+        "2026-09-03",
+        "D2609035",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "watch",
+        "1",
+        "35"
+      ],
+      [
+        "2026-09-03",
+        "D2609035",
+        "L0",
+        "Người mua đã đăng ký",
+        "Ấn Độ",
+        "decorative lights",
+        "1",
+        "35"
+      ],
+      [
+        "2026-09-03",
+        "D2609036",
+        "L0",
+        "Người mua đã đăng ký",
+        "Indonesia",
+        "watch",
+        "1",
+        "38"
+      ],
+      [
+        "2026-09-03",
+        "D2609036",
+        "L0",
+        "Người mua đã đăng ký",
+        "Indonesia",
+        "gaun pengantin putri duyung",
+        "1",
+        "38"
+      ],
+      [
+        "2026-09-03",
+        "D2609036",
+        "L0",
+        "Người mua đã đăng ký",
+        "Indonesia",
+        "tiang lampu solar",
+        "1",
+        "38"
+      ]
+    ],
+    "country_current_all_rows": [
+      [
+        "Quốc gia / vùng",
+        "Số visitor",
+        "Tổng PV",
+        "Visitor có keyword",
+        "Bản ghi keyword chính xác",
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L1+"
+      ],
+      [
+        "Ấn Độ",
+        "2",
+        "2",
+        "2",
+        "6",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Ba Lan",
+        "1",
+        "7",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Các Tiểu Vương quốc Ả Rập Thống nhất",
+        "1",
+        "5",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Đức",
+        "1",
+        "1",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Ghana",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Hà Lan",
+        "2",
+        "5",
+        "2",
+        "4",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Hoa Kỳ",
+        "4",
+        "6",
+        "4",
+        "13",
+        "1",
+        "3",
+        "0",
+        "0",
+        "0",
+        "3"
+      ],
+      [
+        "Honduras",
+        "1",
+        "1",
+        "1",
+        "2",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Hồng Kông (Đặc khu hành chính)",
+        "1",
+        "2",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Indonesia",
+        "1",
+        "1",
+        "1",
+        "3",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Kenya",
+        "1",
+        "2",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Mexico",
+        "1",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Nga",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Pháp",
+        "4",
+        "22",
+        "1",
+        "3",
+        "3",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Philippines",
+        "1",
+        "1",
+        "1",
+        "3",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Romania",
+        "1",
+        "1",
+        "1",
+        "1",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ],
+      [
+        "Sri Lanka",
+        "1",
+        "9",
+        "0",
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Thụy Điển",
+        "1",
+        "4",
+        "1",
+        "4",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Trung Quốc",
+        "2",
+        "2",
+        "2",
+        "6",
+        "2",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ],
+      [
+        "Uzbekistan",
+        "2",
+        "4",
+        "2",
+        "5",
+        "0",
+        "2",
+        "0",
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "Việt Nam",
+        "3",
+        "7",
+        "2",
+        "2",
+        "1",
+        "2",
+        "0",
+        "0",
+        "0",
+        "2"
+      ],
+      [
+        "Vương quốc Anh",
+        "2",
+        "3",
+        "2",
+        "6",
+        "1",
+        "1",
+        "0",
+        "0",
+        "0",
+        "1"
+      ]
+    ],
+    "lead_tabs": {
+      "Tong quan": [
+        [
+          "Hạng mục",
+          "Số lượng",
+          "Ghi chú vận hành"
+        ],
+        [
+          "11/09/2026 - bổ sung kiểm tra thiếu",
+          "Mốc 03-08 và 18-24 đã rà lại",
+          "Lead rõ: JUNAID WARIS 24/08, Hannahchiwendu Christopher 08/08. Không thấy lead rõ trong 18-23; Williams mark 08/08 thiên về promotion, chưa phải nhu cầu mua rõ."
+        ],
+        [
+          "Khoảng bổ sung",
+          "03/08-08/08 và 18/08-24/08/2026",
+          "Lọc các tin kéo email ngoài/off-platform vào nhóm cần thận trọng; chỉ đưa ưu tiên khi có quantity/sản phẩm/địa chỉ hoặc bước báo giá rõ."
+        ],
+        [
+          "Lead bổ sung ưu tiên",
+          "2 buyer",
+          "JUNAID WARIS, Hannahchiwendu Christopher."
+        ],
+        [
+          "11/09/2026 - cập nhật tuần mới",
+          "10 buyer rà soát trên OneTalk",
+          "6 khách ưu tiên; 3 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+        ],
+        [
+          "Khoảng đọc lại",
+          "04/09/2026 - 10/09/2026",
+          "Tập trung garden/solar/outdoor lighting, địa chỉ giao, chứng chỉ CE, màu đen, setup ngoài trời."
+        ],
+        [
+          "Trọng tâm tuần này",
+          "Solar LED/garden lighting dự án châu Âu",
+          "Lead tốt nhất có điểm đến Turin Italy, yêu cầu 2700K, black outdoor floor-standing, CE/logistics."
+        ],
+        [
+          "Rủi ro chính",
+          "Thiếu quantity + phương thức vận chuyển",
+          "Cần hỏi ngay số lượng, cấu hình, packing và địa chỉ để báo total cost."
+        ],
+        [
+          "03/09/2026 - cập nhật tuần mới",
+          "12 buyer rà soát",
+          "7 khách ưu tiên; 3 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+        ],
+        [
+          "Khoảng đọc lại",
+          "28/08/2026 - 03/09/2026",
+          "Tập trung khách hỏi đèn sân vườn/ngoài trời, dự án thương mại, vật liệu, chứng chỉ và vận chuyển."
+        ],
+        [
+          "Trọng tâm tuần này",
+          "Garden lighting / outdoor commercial display",
+          "Lead tốt nhất có thông số kỹ thuật rõ: UL driver, 120/277V, CRI≥90, IP65, vật liệu copper/steel/inox/acrylic."
+        ],
+        [
+          "Rủi ro chính",
+          "Thiếu địa chỉ ship + thiếu cấu hình vật liệu",
+          "Nhiều báo giá đang thiếu transport method, packaging, delivery address và xác nhận vật liệu."
+        ],
+        [
+          "25/08/2026 - cập nhật tuần mới",
+          "10",
+          "2 khách ưu tiên; 2 cần theo dõi; 6 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+        ],
+        [
+          "Tài khoản đã rà soát",
+          "CM Decor",
+          "Đã đăng nhập và đọc danh sách OneTalk ngày 18/08/2026."
+        ],
+        [
+          "Khách có phản hồi trong 30 ngày gần nhất",
+          "2 buyers",
+          "Số liệu hiển thị ngay trong OneTalk của tài khoản."
+        ],
+        [
+          "Khách có tín hiệu mua thật nên xử lý",
+          "3",
+          "Hannahchiwendu Christopher, Friedrich Donges, Kyei Kyei có nhu cầu sản phẩm hoặc inquiry rõ hơn các dòng còn lại."
+        ],
+        [
+          "Khách cần kiểm tra nhẹ",
+          "5",
+          "Williams mark, Nguyen Hung, Svetlana Kononiuk, Arnold Amet, nhóm hỏi tiêu chuẩn an toàn thị trường UK."
+        ],
+        [
+          "Tin ít chất lượng / nghi spam",
+          "Nhiều",
+          "Nhiều buyer yêu cầu gửi email ngoài Alibaba hoặc cùng một mẫu tin giống nhau; không nên đưa vào lead ưu tiên."
+        ],
+        [
+          "Vấn đề nổi bật",
+          "Cần phản hồi thủ công sâu hơn",
+          "AI reception hỏi tiếp nhưng thiếu báo giá, thiếu hình/spec, thiếu chi phí ship và chưa chốt bước tạo order."
+        ],
+        [
+          "Hành động ưu tiên",
+          "Báo giá nhanh + giữ giao dịch trên Alibaba",
+          "Lead thật cần được hỏi địa chỉ giao hàng, xác nhận SKU, gửi ảnh/spec/chứng chỉ và báo phí ship ngay trong nền tảng."
+        ]
+      ],
+      "Khach uu tien": [
+        [
+          "Ngày",
+          "Khách hàng",
+          "Quốc gia",
+          "Level",
+          "Sản phẩm / nhu cầu hỏi",
+          "Số lượng",
+          "Nội dung đã đọc trong tin nhắn",
+          "Mức ưu tiên",
+          "Đề xuất nhắn tiếp theo"
+        ],
+        [
+          "2026-09-10",
+          "Alessio Suppo",
+          "Italy / Turin",
+          "Có level tag",
+          "Solar LED lamp/garden lighting; giao tới Turin, cần total cost including shipping, CE certification",
+          "Chưa rõ",
+          "Buyer có địa điểm giao rõ ở Italy và cần tính giá + ship, sản phẩm đúng ngành",
+          "Rất cao",
+          "Hỏi quantity, model/size, packing, phương thức vận chuyển; gửi total quote tới Turin kèm CE"
+        ],
+        [
+          "2026-08-31",
+          "TEDDY KASSA",
+          "Chưa xác định",
+          "Có level tag",
+          "Outdoor lighting project; no-remote, UL driver, 120/277V, 3-tier sizes, 3000K, CRI≥90, matte black, reinforced pallet/crate packing",
+          "Chưa rõ",
+          "Buyer đưa thông số kỹ thuật rất rõ, phù hợp khách dự án/nhập khẩu chuyên nghiệp",
+          "Rất cao",
+          "Gửi bảng xác nhận spec, bản vẽ/kích thước 3 size, chứng chỉ driver UL, giá theo số lượng và lead time"
+        ],
+        [
+          "2026-08-28",
+          "Josh Chauvet",
+          "USA / Reno",
+          "Có level tag",
+          "Large commercial outdoor Christmas displays / festive photo-op frames, acrylic, solar battery/button control",
+          "8 bộ lớn",
+          "Buyer hỏi dự án thương mại ở Reno, cần packaging và yêu cầu ship; sản phẩm có tùy chỉnh OEM/ODM",
+          "Rất cao",
+          "Hỏi kích thước từng display, deadline event, địa chỉ Reno, yêu cầu chống thời tiết; gửi proposal dự án + freight estimate"
+        ],
+        [
+          "2026-08-08",
+          "Hannahchiwendu Christopher",
+          "India",
+          "Có level tag",
+          "Lantern M03.01 Chandelier and Pendant Light, giá hiển thị $32, MOQ 1.",
+          "2 pcs",
+          "Buyer gửi sản phẩm đèn treo Lantern M03.01 và trả lời số lượng 2 chiếc. AI đã hỏi địa chỉ giao hàng; order progress báo thiếu đơn giá và địa chỉ ship.",
+          "Rất cao",
+          "Gửi xác nhận: giá $32/chiếc, hỏi địa chỉ nhận hàng đầy đủ + mã bưu điện, báo phí ship 2 chiếc, thời gian giao và đề nghị tạo Trade Assurance order."
+        ],
+        [
+          "2026-09-09",
+          "Dc Caudor",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Wall lamps, lighting/decor, OEM/ODM, CCT 2700K; buyer yêu cầu price offer",
+          "Chưa rõ",
+          "Lead có spec 2700K và đang cần báo giá",
+          "Cao",
+          "Hỏi số lượng, kích thước, vật liệu, địa chỉ giao; gửi price tier và lead time"
+        ],
+        [
+          "2026-09-07",
+          "Daniel Rodriguez Gomez",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Garden lighting constant light, touch control, OEM/ODM, project requirements",
+          "Chưa rõ",
+          "Lead dự án có yêu cầu kỹ thuật nhưng thiếu số lượng/logistics",
+          "Cao",
+          "Hỏi quantity, installation environment, deadline, shipping address và có cần custom design không"
+        ],
+        [
+          "2026-09-05",
+          "Nana Kwame",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Outdoor floor-standing style màu black cho setup open-air 4-foot",
+          "Chưa rõ",
+          "Buyer có yêu cầu màu/ứng dụng rõ, cần chọn mẫu phù hợp",
+          "Cao",
+          "Gửi 2-3 mẫu outdoor floor-standing màu đen, hỏi số lượng và địa chỉ ship"
+        ],
+        [
+          "2026-09-05",
+          "lyly pansard",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Gentle breeze pattern, acrylic material, solar battery power; decor/outdoor light",
+          "Chưa rõ",
+          "Lead sản phẩm rõ nhưng thiếu số lượng",
+          "Cao",
+          "Gửi ảnh/spec, hỏi quantity, kích thước và địa chỉ giao"
+        ],
+        [
+          "2026-09-04",
+          "Catherine Maglasang",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "Gentle breeze pattern, multi-color acrylic design, solar battery",
+          "Chưa rõ",
+          "Lead đúng ngành, có nhu cầu về mẫu multi-color acrylic",
+          "Cao",
+          "Hỏi mẫu màu, số lượng, mục đích dùng và địa chỉ giao"
+        ],
+        [
+          "2026-09-03",
+          "Jacek ochal",
+          "Chưa xác định",
+          "Có level tag",
+          "Garden lighting solar power; hỏi vật liệu thân đèn plastic hay die-cast aluminum, bảo hành 3 năm, custom design",
+          "Chưa rõ",
+          "Buyer mới, đã được báo base price USD 20.80-28.00 nhưng thiếu vật liệu và logistics",
+          "Cao",
+          "Hỏi vật liệu mong muốn, số lượng, địa chỉ giao và gửi ảnh/video case tương tự"
+        ],
+        [
+          "2026-08-30",
+          "Herman Jacobs",
+          "Chưa xác định",
+          "Có level tag",
+          "RFQ copper outdoor lights / wall lamps, lifespan 30,000h, AutoCAD layout, warm white, touch control/CCT",
+          "5 units",
+          "Có RFQ rõ 5 units, nhưng vật liệu copper khác spec LED hiện tại; thiếu packaging/delivery address",
+          "Cao",
+          "Xác nhận có làm copper finish không, hỏi CCT/touch control, địa chỉ nhận hàng và gửi quote 5 units"
+        ],
+        [
+          "2026-08-30",
+          "Patrick Greier",
+          "Germany",
+          "Có level tag",
+          "Garden lighting decoration, OEM/ODM; hỏi installation height/weight, fixture type, chứng chỉ cho Germany",
+          "5 units",
+          "Buyer từ Đức, có yêu cầu kỹ thuật và logistics; phù hợp nhóm cần chứng chỉ EU",
+          "Cao",
+          "Gửi thông số height/weight, chứng chỉ phù hợp Đức/EU, hỏi địa chỉ và cấu hình fixture cuối"
+        ],
+        [
+          "2026-08-29",
+          "C S-P",
+          "France",
+          "Chưa thấy L",
+          "Garden lighting warm white CCT, IP65, steel/inox, shipping to France, detachable/fixed installation",
+          "Chưa rõ",
+          "Nhu cầu thật, có quốc gia nhận hàng France, cần làm rõ fixed hay detachable và phương thức ship",
+          "Cao",
+          "Hỏi số lượng, địa chỉ France, chọn fixed/detachable và đóng gói; gửi phí ship"
+        ],
+        [
+          "2026-08-28",
+          "GEORGE ZAVADSKY",
+          "Chưa xác định",
+          "Chưa thấy L",
+          "50W garden lighting, constant light, IP65, hỏi detachable hay semi-flush mount",
+          "15 pcs",
+          "Buyer đã có số lượng 15 pcs và thông số công suất/IP rõ",
+          "Cao",
+          "Hỏi phương thức vận chuyển, địa chỉ nhận hàng, kiểu lắp đặt cuối cùng và gửi báo giá 15 pcs"
+        ],
+        [
+          "2026-08-24",
+          "JUNAID WARIS",
+          "Karachi / Pakistan theo nội dung giao hàng",
+          "Hỏi chi tiết sản phẩm, specs, availability, pricing; requirement quantity 1500 pieces; delivery to Jinnah International Airport - Karachi. Có kéo email ngoài nên cần giữ giao dịch trên Alibaba.",
+          "1500 pieces",
+          "Lead có số lượng lớn và địa điểm giao rõ, nhưng rủi ro off-platform/email ngoài.",
+          "Cao nhưng cần thận trọng",
+          "Trả lời trên Alibaba: yêu cầu xác nhận product/SKU, material, finish, packing, Incoterms; không gửi báo giá qua email trước khi xác thực buyer."
+        ],
+        [
+          "2026-08-12",
+          "Friedrich Donges",
+          "Greece",
+          "Chưa thấy level",
+          "Gửi product card, chưa thấy buyer nhắn thêm nội dung trong phần đọc được.",
+          "Chưa rõ",
+          "Hội thoại đang unread 2 và có product inquiry. Cần mở/đọc sâu lại khi mạng OneTalk ổn định hơn để xác định mẫu sản phẩm.",
+          "Cao",
+          "Trả lời ngay trong Alibaba: hỏi buyer cần mẫu nào, số lượng, địa chỉ giao hàng; gửi catalogue nhóm sản phẩm liên quan và đề nghị báo giá trong ngày."
+        ],
+        [
+          "2026-08-08",
+          "Hannahchiwendu Christopher",
+          "Chưa xác định",
+          "L?",
+          "Quan tâm white leaf-style pendant light / Lantern M03.01 Chandelier & Pendant Light; hỏi số lượng, seller hỏi địa chỉ ship; sản phẩm có LED, bảo hành 2 năm, lifespan 25,000h",
+          "Trial order 1 pc hoặc chưa chốt",
+          "Có nhu cầu sản phẩm thật, đang thiếu địa chỉ giao hàng và xác nhận số lượng",
+          "Lead thật - ưu tiên cao",
+          "Xin địa chỉ giao hàng, xác nhận quantity, báo giá USD 32/pc MOQ 1 và lead time"
+        ],
+        [
+          "2026-08-08",
+          "Hannahchiwendu Christopher",
+          "Chưa xác định",
+          "Seller ghi nhận quantity và hỏi shipping address để báo vận chuyển.",
+          "Đã có quantity nhưng chưa thấy số cụ thể trong snapshot",
+          "Lead có bước báo giá/ship, cần địa chỉ giao hàng để tiếp tục.",
+          "Cao",
+          "Xin địa chỉ nhận, mã bưu chính, product/SKU, quantity chính xác; báo giá hàng + ship rõ ràng."
+        ],
+        [
+          "2026-07-19",
+          "Janez Korelc",
+          "UK / chưa xác định",
+          "L?",
+          "Quan tâm indoor lighting solutions cho UK market, hỏi tiêu chuẩn an toàn/safety regulations",
+          "Chưa nêu",
+          "Có nhu cầu B2B thật hơn nhóm scam; cần trả lời chứng nhận/tiêu chuẩn",
+          "Lead thật - ưu tiên cao",
+          "Gửi chứng nhận/tiêu chuẩn liên quan CE/UKCA/RoHS nếu có, hỏi dòng sản phẩm và số lượng"
+        ],
+        [
+          "2026-07-20",
+          "Kyei Kyei",
+          "Ghana",
+          "Có level tag",
+          "Đồng hồ treo tường tròn, quartz movement, single-face design, họa tiết geometric.",
+          "Chưa rõ",
+          "AI đã tư vấn sản phẩm theo nhu cầu modern circular wall clocks và hỏi buyer muốn kim hay digital readout. Chưa thấy phản hồi tiếp theo.",
+          "Trung bình-cao",
+          "Gửi 3 mẫu đồng hồ đang bán tốt, MOQ, giá mẫu, kích thước, vật liệu; hỏi khách cần kim hay digital và dự kiến số lượng nhập thử."
+        ]
+      ],
+      "Can theo doi": [
+        [
+          "Ngày",
+          "Khách hàng",
+          "Quốc gia",
+          "Nội dung",
+          "Đánh giá",
+          "Việc nên làm"
+        ],
+        [
+          "2026-08-08",
+          "Williams mark",
+          "Chưa xác định",
+          "Nội dung liên quan product promotion trên Alibaba.com, hỏi product và promotion goal; chưa thấy nhu cầu mua cụ thể.",
+          "Chưa rõ",
+          "Không phải lead mua hàng rõ, cần phân loại thận trọng."
+        ],
+        [
+          "2026-09-07",
+          "harib miran",
+          "Chưa xác định",
+          "Chỉ thấy auto-reception stopped, chưa đọc được nhu cầu rõ",
+          "Cần mở sâu khi có thời gian",
+          "Không đưa vào ưu tiên nếu chưa có sản phẩm/số lượng"
+        ],
+        [
+          "2026-09-03",
+          "Jacek ochal",
+          "Chưa xác định",
+          "Garden lighting solar power, bảo hành 3 năm, cần xác nhận vật liệu plastic/die-cast aluminum",
+          "Lead cũ cần follow",
+          "Hỏi vật liệu, số lượng, address; gửi báo giá cuối"
+        ],
+        [
+          "2026-09-01",
+          "Asaf Shemesh",
+          "Chưa xác định",
+          "Có nhiều tin nhưng snapshot chỉ thấy auto-reception stopped",
+          "Cần đọc sâu",
+          "Chưa tính lead chính nếu không thấy nhu cầu mới"
+        ],
+        [
+          "2026-08-29",
+          "Brian Norman",
+          "Chưa xác định",
+          "Abstract geometric wall clock, quartz movement; hỏi packaging và engraving/personalization",
+          "Lead đúng ngành décor nhưng chưa thấy số lượng",
+          "Hỏi số lượng, kích thước, yêu cầu đóng gói và có cần in logo/khắc riêng không"
+        ],
+        [
+          "2026-09-01",
+          "Asaf Shemesh",
+          "Chưa xác định",
+          "Hội thoại có 5 tin nhưng snapshot chỉ thấy auto-reception stopped, chưa thấy nội dung nhu cầu cụ thể",
+          "Cần mở sâu lại nếu muốn phân tích chính xác",
+          "Không đưa vào khách ưu tiên khi chưa đọc được sản phẩm/số lượng; mở lại khi mạng ổn"
+        ],
+        [
+          "2026-08-27",
+          "Maria Kazmi",
+          "Chưa xác định",
+          "Hội thoại có file đính kèm, snapshot chưa thấy nội dung đọc được",
+          "Cần kiểm tra file/nội dung nếu user muốn rà sâu",
+          "Mở lại hội thoại, xem file buyer gửi và xác định có RFQ thật hay không"
+        ],
+        [
+          "2026-07-20",
+          "Kyei Kyei",
+          "Chưa xác định",
+          "L?",
+          "Quan tâm modern circular wall clocks, quartz movement, single-face design; cần xác nhận needle display hay digital readout",
+          "Chưa nêu",
+          "Nhu cầu có vẻ đúng ngành décor, nhưng hiện chỉ follow-up/AI trả lời, chưa thấy chốt spec",
+          "Lead thật - ưu tiên vừa",
+          "Hỏi loại mặt đồng hồ, kích thước, chất liệu, MOQ, mẫu thiết kế cần custom"
+        ],
+        [
+          "2026-07-29",
+          "DK Gupta",
+          "Chưa xác định",
+          "L?",
+          "Hỏi mục đích sử dụng đèn (“what purpose do you need the lights for?”), chưa có buyer trả lời sâu",
+          "Chưa nêu",
+          "Có thể là lead thật nhưng thiếu nhu cầu cụ thể",
+          "Lead sớm",
+          "Follow ngắn: indoor/outdoor, project type, quantity, target price"
+        ],
+        [
+          "2026-08-08",
+          "Williams mark",
+          "United States",
+          "AI trả lời về product promotion trên Alibaba, hỏi sản phẩm và mục tiêu promotion.",
+          "Không giống buyer mua đèn; có thể là dịch vụ/marketing.",
+          "Không ưu tiên. Nếu trả lời lại, xác minh nhu cầu mua sản phẩm cụ thể trước."
+        ],
+        [
+          "2026-07-01",
+          "Nguyen Hung",
+          "Vietnam",
+          "Buyer nhắn 'đèn sân vườn ạ'.",
+          "Có nhu cầu nhưng quá ngắn, chưa có số lượng hoặc mẫu.",
+          "Hỏi loại đèn sân vườn, công suất, số lượng, địa điểm lắp và ngân sách; gửi 3 mẫu phù hợp."
+        ],
+        [
+          "2026-06-29",
+          "Svetlana Kononiuk",
+          "United States",
+          "AI follow-up về height/weight của solar lights.",
+          "Có nhu cầu hỏi thông số nhưng chưa thấy báo thông số hoàn chỉnh.",
+          "Gửi bảng thông số chiều cao, trọng lượng, packing size, ảnh thực tế và hỏi số lượng dự án."
+        ],
+        [
+          "2026-07-06",
+          "Arnold Amet",
+          "Papua New Guinea",
+          "AI tư vấn sản phẩm thiết kế nghệ thuật/metal construction và hỏi style/color.",
+          "Có thể là lead trang trí, nhưng chưa có phản hồi buyer tiếp theo.",
+          "Gửi mẫu theo 2-3 phong cách và hỏi kích thước, màu, số lượng."
+        ],
+        [
+          "2026-06-28",
+          "Sermarj Felipe và nhóm hỏi tiêu chuẩn UK",
+          "Nhiều quốc gia",
+          "Nhiều tài khoản dùng cùng một nội dung hỏi indoor lighting cho thị trường UK và yêu cầu safety standards.",
+          "Cần cẩn trọng vì mẫu tin lặp nhiều; vẫn có thể phản hồi chuẩn nếu muốn lọc.",
+          "Gửi một mẫu trả lời ngắn về CE/RoHS/UKCA nếu có, yêu cầu buyer xác nhận công ty, sản phẩm, số lượng và giữ trao đổi trên Alibaba."
+        ]
+      ],
+      "It phan hoi": [
+        [
+          "Ngày",
+          "Khách hàng",
+          "Quốc gia",
+          "Dấu hiệu",
+          "Kết luận"
+        ],
+        [
+          "2026-08-24",
+          "JUNAID WARIS / off-platform note",
+          "Pakistan / Karachi",
+          "Có số lượng lớn nhưng yêu cầu gửi báo giá ra email ngoài; cần giữ trao đổi và xác thực trong Alibaba để tránh rủi ro."
+        ],
+        [
+          "2026-09-07",
+          "harib miran",
+          "Chưa xác định",
+          "Chỉ thấy auto-reception stopped, chưa có nhu cầu rõ trong snapshot"
+        ],
+        [
+          "2026-09-01",
+          "Asaf Shemesh",
+          "Chưa xác định",
+          "Chưa thấy nội dung sản phẩm mới, cần mở sâu trước khi tính lead"
+        ],
+        [
+          "2026-09-01",
+          "Asaf Shemesh",
+          "Chưa xác định",
+          "Chỉ thấy hệ thống auto-reception stopped, chưa có sản phẩm/số lượng rõ trong phần đọc tuần này"
+        ],
+        [
+          "2026-08-27",
+          "Maria Kazmi",
+          "Chưa xác định",
+          "Chỉ thấy file đính kèm, chưa xác định nội dung lead từ snapshot; cần mở sâu trước khi tính lead"
+        ],
+        [
+          "2026-08-09",
+          "User name / Anny Yang - Luyal Communications",
+          "United States (Washington D.C.)",
+          "L?",
+          "Tự nhận sourcing OEM/ODM Garden Light, yêu cầu gửi quotation/company info qua email luyalcomunication@zohomail.com",
+          "Không nêu",
+          "Yêu cầu email ngoài nền tảng, tài khoản tên chung, có tag Scam",
+          "Rủi ro / Scam",
+          "Không gửi email ngoài; nếu xử lý thì yêu cầu trao đổi trong Alibaba và cung cấp company verification"
+        ],
+        [
+          "2026-08-12",
+          "Friedrich Donges",
+          "Chưa xác định / email .RU",
+          "L?",
+          "Yêu cầu catalog để lập order list, mua số lượng lớn, gửi qua SALESEXPORT@INTERNET.RU",
+          "Large quantities nhưng không nêu sản phẩm",
+          "Yêu cầu email ngoài nền tảng, thông tin chung chung",
+          "Rủi ro / Scam",
+          "Không gửi email; yêu cầu chọn sản phẩm, số lượng, quốc gia và giữ trên Alibaba"
+        ],
+        [
+          "2026-07-22",
+          "Jay Patel",
+          "Chưa xác định",
+          "L?",
+          "Yêu cầu gửi catalogue tới maxelectro05@gmail.com để chọn order list và thanh toán",
+          "Large quantities nhưng không nêu sản phẩm",
+          "Mẫu tin scam/off-platform điển hình",
+          "Rủi ro / Scam",
+          "Không gửi email ngoài, không phân tích sâu"
+        ],
+        [
+          "2026-07-17",
+          "Jackson Wine",
+          "USA",
+          "L?",
+          "Yêu cầu gửi quotation trực tiếp tới spencesales25@gmail.com, nói cần large quantity delivery to USA",
+          "Large quantity nhưng không nêu rõ",
+          "Off-platform risk cao",
+          "Rủi ro / Scam",
+          "Không gửi email, yêu cầu xác nhận sản phẩm/số lượng trong chat"
+        ],
+        [
+          "2026-08-08",
+          "Williams mark",
+          "Chưa xác định",
+          "L?",
+          "Trao đổi về product promotion trên Alibaba, không phải buyer mua sản phẩm décor rõ ràng",
+          "Không liên quan",
+          "Không thấy nhu cầu mua hàng décor",
+          "Không phù hợp",
+          "Không đưa vào follow bán hàng"
+        ],
+        [
+          "2026-08-01",
+          "sabreee jak",
+          "Chưa xác định",
+          "L?",
+          "Khách chia sẻ Stafir.com; seller giữ trao đổi trên Alibaba và hỏi quantity",
+          "Chưa nêu",
+          "Có khả năng off-platform/website ngoài, thiếu nhu cầu rõ",
+          "Rủi ro thấp / cần xác minh",
+          "Hỏi sản phẩm cụ thể, quantity, không truy cập/trao đổi ngoài nếu chưa cần"
+        ],
+        [
+          "2026-08-09",
+          "User name / Luyal Communications",
+          "China flag, nội dung ghi United States",
+          "Tin dài yêu cầu gửi quotation/catalog đến email zohomail ngoài Alibaba.",
+          "Nghi spam/off-platform, không đưa vào lead ưu tiên."
+        ],
+        [
+          "2026-08-01",
+          "sabreee jak",
+          "Bangladesh",
+          "Giới thiệu Stafir.com, nói resell/SEO sản phẩm; tài khoản đã bị hủy hoặc bị kiểm soát vi phạm.",
+          "Loại khỏi lead bán hàng."
+        ],
+        [
+          "2026-07-29",
+          "DK Gupta",
+          "India",
+          "Yêu cầu gửi catalog/địa chỉ đến email INFO.WORLDSUPPLY@INBOX.RU; seller hỏi mục đích dùng đèn.",
+          "Nghi spam/off-platform."
+        ],
+        [
+          "2026-07-22",
+          "Jay Patel",
+          "India",
+          "Yêu cầu gửi catalog tới email maxelectro05@gmail.com, không có SKU/số lượng cụ thể.",
+          "Nghi spam/off-platform."
+        ],
+        [
+          "2026-07-17",
+          "Jackson Wine",
+          "Vietnam flag, nội dung nói USA",
+          "Yêu cầu báo giá qua email spencesales25@gmail.com, không chốt sản phẩm cụ thể.",
+          "Nghi spam/off-platform."
+        ],
+        [
+          "2026-06-28",
+          "Nhiều contact hỏi safety standards giống nhau",
+          "ES/SN/FR/NO/IT/US...",
+          "Cùng một đoạn văn lặp về indoor lighting for UK market.",
+          "Xếp nhóm rà nhẹ, chỉ ưu tiên nếu buyer phản hồi riêng sau câu hỏi xác minh."
+        ]
+      ]
+    }
+  },
+  "claude_rules": [
+    "Không tự bịa hoặc làm tròn số liệu nguồn.",
+    "Cập nhật tuần mới nhưng giữ nguyên toàn bộ lịch sử nhiều tuần.",
+    "Hiển thị so sánh tuần này/tuần trước, điểm tốt, điểm nghẽn và hành động ưu tiên.",
+    "Quốc gia, từ khóa chính xác và khách truy cập phải dùng toàn bộ mảng raw_data, không lấy mẫu.",
+    "Buyer ưu tiên phải dựa trên lead_tabs."
+  ],
+  "buyer_data_refreshed_at": "2026-09-12T00:00:00+07:00"
+}

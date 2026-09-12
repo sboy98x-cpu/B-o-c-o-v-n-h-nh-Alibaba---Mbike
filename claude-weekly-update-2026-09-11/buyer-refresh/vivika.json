@@ -1,0 +1,848 @@
+{
+  "store": "Vivika",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "1grrkUcubFagMAkg98GTBjn6Er3Ou4sGl6kPBKlda59M",
+    "title": "vivika_onetalk_leads_2026-08-14_17",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 1755946579,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 1749444319,
+        "read_range": "A1:Z1022"
+      },
+      {
+        "title": "Can theo doi",
+        "sheetId": 1623249163,
+        "read_range": "A1:Z1022"
+      },
+      {
+        "title": "It phan hoi",
+        "sheetId": 334467190,
+        "read_range": "A1:Z1010"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú vận hành"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "Mốc 03-08 và 18-24 đã rà lại",
+        "Lead rõ nhất trong đúng mốc: riris Indah 23/08 về pink dress MOQ 70, giá 25.06$. Các dòng khác thiếu sản phẩm/số lượng hoặc kéo Zalo."
+      ],
+      [
+        "Khoảng bổ sung",
+        "03/08-08/08 và 18/08-24/08/2026",
+        "Đoạn 29/08 là AI follow-up hàng loạt, không thuộc khoảng yêu cầu và không đưa vào bổ sung."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "1 buyer",
+        "riris Indah."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "18 buyer rà soát trên OneTalk",
+        "7 khách ưu tiên; 7 cần theo dõi; 5 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "04/09/2026 - 11/09/2026",
+        "Tập trung fashion OEM/ODM, trial order, fabric GSM, size, sample, order confirmation."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Lightweight dress collection + sample/custom order",
+        "Lead mạnh nhất là Juri Alotaibi: trial 40 pcs/3 dress designs, hỏi tech pack, pattern, sample, revision từ mood board."
+      ],
+      [
+        "Rủi ro chính",
+        "Nhiều khách hỏi số lượng nhỏ/size đơn lẻ",
+        "Tách rõ retail/sample và wholesale; luôn hỏi tech pack, size chart, fabric, quantity, target price."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "18 buyer rà soát trên OneTalk",
+        "8 khách ưu tiên; 7 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "31/08/2026 - 03/09/2026",
+        "Tập trung khách hỏi áo/quần nữ, OEM/ODM, sample, size, MOQ 50 pcs và đơn Amazon FBA."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Private label / wholesale women's fashion",
+        "Lead mạnh nhất: Amazon FBA 3.500 pcs, puffer vest 50 pcs, kaftan Brazil 15 pcs, khách đã nhận hàng khen chất lượng."
+      ],
+      [
+        "Rủi ro chính",
+        "Nhiều khách hỏi lẻ 2 pcs hoặc chưa gửi size/design",
+        "Cần tách retail/test sample với wholesale; luôn hỏi tech pack, size chart, target price, quantity và shipping country."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "11 lead đã lọc",
+        "6 khách ưu tiên; 5 cần theo dõi; 0 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "Tuần 25/08/2026",
+        "Tập trung khách có bước payment/order link, shipping, size/stock/MOQ."
+      ],
+      [
+        "Khách ưu tiên",
+        "6",
+        "Lucy Flores, Maud Morris, Marygrace Sabanal, Melody Adepa, Kadiatou Barry, Sarah Sarah."
+      ],
+      [
+        "Khách cần theo dõi",
+        "5",
+        "Marisol, Caisha, Lorre, Riris, Sabriddin."
+      ],
+      [
+        "Khoảng thời gian đã cập nhật",
+        "14/08-17/08/2026",
+        "Đã rà sâu lại từng hội thoại chính bằng cách mở trực tiếp chat; dữ liệu bản tạm đã được sửa."
+      ],
+      [
+        "Khách có phản hồi/nội dung thật cần ưu tiên",
+        "6",
+        "Kety, Sarah, Dixit, Haifaa, Ha Nguyen, Jerry/Ha Nguyen nhóm catalog có nội dung rõ hơn."
+      ],
+      [
+        "Khách cần theo dõi nhẹ",
+        "7",
+        "Nhóm chỉ xin address/phone hoặc gửi link catalog, chưa thấy buyer phản hồi sâu."
+      ],
+      [
+        "Khách ít phản hồi/không ưu tiên",
+        "4",
+        "Tin tự động, can thiệp phiên, hoặc chưa có phản hồi buyer rõ."
+      ],
+      [
+        "Vấn đề nổi bật",
+        "Tin nhắn follow đang quá chung",
+        "Nhiều dòng lặp 'send address and phone number' trước khi chốt sản phẩm/số lượng, dễ làm buyer rơi."
+      ],
+      [
+        "Hành động ưu tiên",
+        "Chuẩn hóa câu hỏi B2B thời trang",
+        "Hỏi loại sản phẩm, số lượng, size range, chất liệu, nhãn riêng/OEM, cảng đến và deadline trước khi xin thông tin cá nhân."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Sản phẩm / nhu cầu hỏi",
+        "Số lượng",
+        "Nội dung đã đọc trong tin nhắn",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-10",
+        "Juri Alotaibi",
+        "Ả Rập Xê Út",
+        "Có level tag",
+        "Bộ sưu tập váy nhẹ: Tencel/Lyocell + Viscose 120-150 GSM, Viscose Crepe 100-130 GSM, Chiffon nhẹ có lót mềm; cần ODM từ mood board",
+        "40 chiếc / 3 thiết kế gốc",
+        "Buyer hỏi sâu về thiết kế nội bộ, sketch, tech pack, rập, mẫu và chỉnh sửa, swatch vải, chi phí/thời gian mẫu, nhãn-hangtag-bao bì. Email hồ sơ: jurialotaibi@gmail.com. Có 1 inquiry hợp lệ và 6 RFQ trong 90 ngày.",
+        "Rất cao",
+        "Xác nhận nhận trial 40 chiếc/3 mẫu; gửi quy trình mood board→sketch→tech pack→sample, bảng phí mẫu và thời gian, số lượng từng size/design, swatch vải và chi phí nhãn/bao bì."
+      ],
+      [
+        "2026-09-04",
+        "Dixit Bhatt",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller nhờ buyer mở order và click Confirm",
+        "Order / cần xác nhận",
+        "Có giao dịch đang cần buyer confirm, cần follow sát",
+        "Rất cao",
+        "Nhắc buyer confirm order, gửi hướng dẫn thao tác nếu cần"
+      ],
+      [
+        "2026-09-03",
+        "Lucy Flores",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Khách phản hồi đã nhận hàng và rất thích chất lượng",
+        "Đã nhận hàng / chưa rõ số lượng tiếp theo",
+        "Tín hiệu hậu mãi tốt, có thể xin review và khai thác đơn lặp lại",
+        "Rất cao",
+        "Cảm ơn, hỏi khách có muốn đặt thêm màu/size mới không; xin feedback/review và ảnh thực tế nếu tiện"
+      ],
+      [
+        "2026-08-31",
+        "Kevin elisma",
+        "Chưa xác định / Amazon FBA",
+        "Có level tag",
+        "Women's fashion OEM/ODM private label cho Amazon FBA; cần product sourcing, fabric/color, labels, hangtags, packaging, QC, logistics",
+        "3,500 pcs",
+        "Lead lớn, buyer nêu rõ đơn 3.500 pcs và yêu cầu private-label/Amazon FBA",
+        "Rất cao",
+        "Xin product reference, tech pack, size chart, target price, FBA packing requirement và timeline; đề xuất sample trước bulk"
+      ],
+      [
+        "2026-08-24",
+        "Lucy Flores",
+        "Chưa xác định",
+        "L?",
+        "Đã có ý định thanh toán/đặt hàng; cần gửi payment link mới, loại bỏ white pants",
+        "Chưa nêu",
+        "Khách ở bước thanh toán/order link",
+        "Lead nóng - ưu tiên rất cao",
+        "Gửi lại payment link đúng sản phẩm, xác nhận không có white pants"
+      ],
+      [
+        "2026-08-17",
+        "Kety Kety",
+        "Malabo / Spanish; có forwarder tại Guangzhou",
+        "Có level tag",
+        "Quan tâm sản phẩm nữ size XXL, muốn các mẫu/màu khác nhau; đã gửi địa chỉ air freight tại Guangzhou: Tongtong Commercial City, AB25, Catalina222100018 Malabo, contact Sun Feng 13287210797. Hỏi số điện thoại này là của seller hay forwarder.",
+        "Tối thiểu từng sản phẩm: dress MOQ 30, blazer vest MOQ 2",
+        "Buyer phản hồi thật nhiều lần: thích XXL, không muốn giống cùng một garment, muốn màu khác nhau, đã gửi địa chỉ nhận hàng/agent.",
+        "Rất cao",
+        "Nhắn tiếng Tây Ban Nha: xác nhận contact đó là forwarder/địa chỉ nhận hàng, gửi 5-8 mẫu XXL khác màu có sẵn, hỏi số lượng từng mẫu và chốt phương án ship về Malabo."
+      ],
+      [
+        "2026-08-14",
+        "Dixit Bhatt",
+        "India",
+        "Có level tag",
+        "Xem nhiều sản phẩm: MELA gray A-line skirt MOQ 50, NERINA wide-leg pants MOQ 2, MUSE mini denim dress MOQ 50, fringe cropped vest MOQ 2, black NERINA pants MOQ 2. Đã gửi shipping address tại Bengaluru, India và số điện thoại +91 9880872196.",
+        "Nhiều SKU; MOQ 2-50 tùy mẫu",
+        "Lead rất thật: đã gửi contact, địa chỉ ship, xem nhiều sản phẩm và có thể tạo freight quotation/start order.",
+        "Rất cao",
+        "Gửi bảng tóm tắt 5 mẫu đã xem, hỏi mẫu nào muốn đặt trước, size/color/qty; tính ship tới Bengaluru và tạo order/freight quotation."
+      ],
+      [
+        "2026-09-10",
+        "Sepe ADADEVOH",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer hỏi cotton; seller hỏi muốn 100% cotton hay cotton blend với spandex/rayon",
+        "Chưa rõ",
+        "Lead sản phẩm vải/áo rõ nhưng thiếu lựa chọn chất liệu",
+        "Cao",
+        "Hỏi muốn 100% cotton hay cotton blend, GSM, màu, size và quantity"
+      ],
+      [
+        "2026-09-10",
+        "Kumada Rikuto",
+        "Japan / Nhật Bản",
+        "Chưa thấy L",
+        "Seller xác nhận có thể hỗ trợ quantity này trong 2 size",
+        "Chưa rõ / 2 size",
+        "Lead có size breakdown, cần xác nhận số lượng từng size",
+        "Cao",
+        "Trả lời tiếng Nhật/Anh ngắn, hỏi quantity mỗi size, màu, fabric và shipping country"
+      ],
+      [
+        "2026-09-06",
+        "Jasmine v",
+        "Chưa xác định",
+        "Có level tag",
+        "Có thể làm sample nhưng sample cost cao do sourcing materials/accessories, tailoring kỹ thuật, pattern making lặp lại",
+        "Sample / nhiều designs",
+        "Lead custom phức tạp, cần quản kỳ vọng chi phí mẫu",
+        "Cao",
+        "Gửi báo giá sample theo từng design, nêu rõ cost/timeline và hỏi ưu tiên 1-2 mẫu trước"
+      ],
+      [
+        "2026-09-04",
+        "Najat Mohammed",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi buyer đã nhận order chưa và nhờ confirm successful delivery",
+        "Order đã giao / cần xác nhận",
+        "Hậu mãi quan trọng, có thể xin reorder/review",
+        "Cao",
+        "Hỏi đã nhận hàng chưa, xin confirm delivery, feedback và nhu cầu order tiếp"
+      ],
+      [
+        "2026-09-03",
+        "Lucy Flores",
+        "Chưa xác định",
+        "Có level tag",
+        "Khách cũ, seller hỏi muốn order item nào tiếp theo và hứa giá tốt",
+        "Repeat order / chưa rõ",
+        "Khách đã từng nhận hàng và khen chất lượng, vẫn là cơ hội reorder",
+        "Cao",
+        "Gửi catalogue/mẫu mới, hỏi item muốn đặt tiếp, size/color/quantity"
+      ],
+      [
+        "2026-09-02",
+        "LailaFernando Bouene",
+        "Bồ Đào Nha ngữ / chưa xác định",
+        "Chưa thấy L",
+        "Seller yêu cầu buyer gửi designs, tech pack, images/reference hoặc requirements để báo giá",
+        "Chưa rõ",
+        "Có khả năng OEM/ODM, đang chờ tài liệu thiết kế",
+        "Cao",
+        "Nhắc buyer gửi ảnh mẫu/tech pack, quantity, size range và deadline để chuẩn bị quote"
+      ],
+      [
+        "2026-08-31",
+        "Holly Delagardelle",
+        "Chưa xác định",
+        "Có level tag",
+        "Women's puffer vest nhiều màu red/green/gray, size S-3XL, custom label/logo/packaging",
+        "50 pcs trial order",
+        "Buyer có quantity 50 pcs và nhu cầu trial order rõ",
+        "Cao",
+        "Xin reference photo, màu mong muốn, size breakdown, logo/label requirement; báo sample cost và lead time"
+      ],
+      [
+        "2026-08-31",
+        "Rejane SilvadosSantos",
+        "Brazil",
+        "Có level tag",
+        "Long-sleeve Kaftan/Caftan blouses, beads/sequins/embroidery, plus sizes, samples, shipping Brazil",
+        "15 pcs ban đầu",
+        "Nhu cầu custom/wholesale rõ, có quốc gia Brazil, phù hợp sample trước bulk",
+        "Cao",
+        "Xin ảnh mẫu/design, số đo, chất liệu, embellishment details; báo sample và ship Brazil"
+      ],
+      [
+        "2026-08-31",
+        "Milan Sutariya",
+        "Chưa xác định",
+        "Có level tag",
+        "Woolen blouse; seller giới thiệu giá cạnh tranh từ USD 4/piece",
+        "Chưa rõ",
+        "Có inquiry sản phẩm cụ thể nhưng thiếu thông tin cuối trong snapshot",
+        "Cao",
+        "Hỏi số lượng, màu/size, chất liệu wool blend, target price và địa chỉ nhận hàng"
+      ],
+      [
+        "2026-08-24",
+        "Maud Morris",
+        "Chưa xác định",
+        "L?",
+        "Đang cần check shipping fee, seller yêu cầu gửi address",
+        "Chưa nêu",
+        "Khách chờ phí ship, có khả năng chốt nếu báo nhanh",
+        "Lead nóng - ưu tiên cao",
+        "Xin địa chỉ đầy đủ, tính ship, tạo order link"
+      ],
+      [
+        "2026-08-23",
+        "Marygrace Sabanal",
+        "Chưa xác định",
+        "L?",
+        "Seller hỏi số lượng để tạo shipment order",
+        "Chưa nêu",
+        "Đã gần bước tạo order/shipment, thiếu quantity",
+        "Lead nóng - ưu tiên cao",
+        "Hỏi số lượng, size/color, địa chỉ nhận hàng"
+      ],
+      [
+        "2026-08-23",
+        "Melody Adepa",
+        "Chưa xác định",
+        "L?",
+        "Seller yêu cầu shipping information để tạo order link và thanh toán trên Alibaba",
+        "Chưa nêu",
+        "Đang ở bước lấy thông tin giao hàng/order link",
+        "Lead nóng - ưu tiên cao",
+        "Thu address/phone, tạo order Alibaba"
+      ],
+      [
+        "2026-08-23",
+        "Kadiatou Barry",
+        "Pháp ngữ",
+        "L?",
+        "Blazer có stock, bán buôn từ 2 pcs, giá USD 31.9/pc",
+        "Từ 2 pcs, USD 31.9/pc",
+        "Lead có hàng sẵn và MOQ thấp",
+        "Lead thật - ưu tiên cao",
+        "Hỏi số lượng/size/color, tạo order link"
+      ],
+      [
+        "2026-08-23",
+        "Sarah Sarah",
+        "Chưa xác định",
+        "L?",
+        "Nếu mua thì cần phone number/address để tạo order và ship",
+        "Chưa nêu",
+        "Đang ở bước lấy thông tin đặt hàng",
+        "Lead nóng - cần chốt thông tin",
+        "Xin phone/address và item list"
+      ],
+      [
+        "2026-08-17",
+        "sarah sarah",
+        "Chưa xác định",
+        "Có level tag",
+        "Hỏi Women's Office Lady Two Piece Pants Set, giá USD22.20-36.90, MOQ 20. Buyer hỏi giá, cung cấp chiều cao 1.59m và cân nặng 62kg; seller đề xuất size XL và xin address/phone.",
+        "Chưa rõ; sản phẩm MOQ 20",
+        "Buyer có nhu cầu thật, hỏi giá và size; chưa thấy gửi địa chỉ/số lượng.",
+        "Cao",
+        "Trả lời giá theo MOQ 20, xác nhận size XL có phù hợp; hỏi khách cần 1 mẫu thử hay mua sỉ, màu/size breakdown và địa chỉ để báo ship."
+      ],
+      [
+        "2026-08-14",
+        "haifaa Aluweili",
+        "Middle East / Arabic name, cần xác minh quốc gia",
+        "Có level tag",
+        "Hỏi video sản phẩm: 'could you please take a video of this product please'; sau đó hỏi 'Hi why' khi seller xin company information, required quantity, destination port, delivery schedule.",
+        "Chưa rõ",
+        "Buyer có nhu cầu sản phẩm cụ thể và muốn video, nhưng bị hỏi thông tin quá sớm nên cần xử lý mềm hơn.",
+        "Cao",
+        "Gửi video/ảnh sản phẩm trước, giải thích cần qty/port/deadline để báo giá chính xác; hỏi buyer muốn mẫu, màu, size nào."
+      ],
+      [
+        "2026-08-17",
+        "Ha Nguyen",
+        "Việt Nam",
+        "Chưa thấy",
+        "Buyer gửi inquiry một sản phẩm thời trang nữ; seller đã gửi company profile dài của VIVI KA Clothing, catalog, wholesale price list, specs, size XS-XXL, packaging, MOQ, OEM/ODM, DDP.",
+        "Chưa rõ",
+        "Có inquiry nhưng seller trả lời quá dài, chưa đi thẳng vào nhu cầu của buyer.",
+        "Trung bình-cao",
+        "Follow ngắn bằng tiếng Việt/Anh: hỏi sản phẩm cụ thể, số lượng, size/màu, cần nhãn riêng không; gửi catalog đúng nhóm thay vì profile dài."
+      ],
+      [
+        "2026-08-15",
+        "Jerry King",
+        "Chưa xác định",
+        "Chưa thấy",
+        "Seller gửi link product list VIVI KA; chưa đọc được phản hồi buyer sâu trong lượt này.",
+        "Chưa rõ",
+        "Có thể cần catalog, nhưng chưa đủ bằng chứng buyer muốn sản phẩm nào.",
+        "Trung bình",
+        "Gửi 5 nhóm sản phẩm bán chạy kèm MOQ, hỏi buyer quan tâm dresses/tops/skirts/suits và số lượng dự kiến."
+      ],
+      [
+        "2026-09-03",
+        "Saima Zaidi",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi shirt; seller báo only shirt USD 15/pcs, nếu làm set sẽ giá tốt hơn",
+        "Chưa rõ",
+        "Lead sản phẩm thật nhưng có thể nhỏ lẻ",
+        "Hỏi số lượng shirt/set, size, màu; đề xuất set nếu muốn giá tốt hơn"
+      ],
+      [
+        "2026-09-02",
+        "Anette Naomie",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi pant; wholesale from 2 pcs, price USD 30/pcs",
+        "Từ 2 pcs",
+        "Lead có giá nhưng số lượng nhỏ; cần xác định khả năng wholesale",
+        "Hỏi số lượng thật, size/color, địa chỉ ship; nếu wholesale lớn báo giá tốt hơn"
+      ],
+      [
+        "2026-08-23",
+        "riris Indah",
+        "Chưa xác định",
+        "Hỏi/quan tâm mẫu pink dress; mẫu đang hết hàng, có thể sản xuất MOQ 70 pieces, giá 25.06 USD; hàng premium.",
+        "MOQ 70 pieces",
+        "Lead có sản phẩm, MOQ và giá rõ; cần chốt size/color/fabric/sample.",
+        "Cao",
+        "Xác nhận buyer có chấp nhận MOQ 70 không; hỏi size range, color, label/packaging, destination và sample need."
+      ]
+    ],
+    "Can theo doi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-24",
+        "Tuong Quangg",
+        "Việt Nam / Chưa xác định",
+        "Tin nhắn tiếng Việt bị lỗi gõ: “bên mình đã nhận thông tin…”; chưa thấy sản phẩm/số lượng rõ.",
+        "Chưa rõ",
+        "Có phản hồi nhưng thiếu nhu cầu cụ thể.",
+        "Trung bình",
+        "Hỏi lại mẫu sản phẩm, size, số lượng và mục tiêu đặt hàng."
+      ],
+      [
+        "2026-08-23",
+        "fysl aljhny",
+        "Chưa xác định",
+        "Seller hỏi có cần thêm thông tin không; có thể ship trực tiếp tới quốc gia buyer hoặc qua Shanghai.",
+        "Chưa rõ",
+        "Có trao đổi logistics nhưng thiếu sản phẩm/số lượng.",
+        "Trung bình",
+        "Hỏi sản phẩm, quantity, destination, muốn ship direct hay via Shanghai."
+      ],
+      [
+        "2026-08-06",
+        "Tuong HuynhQuang",
+        "Việt Nam",
+        "Tin nhắn “Em check Zalo nhé”, kéo qua kênh ngoài, không thấy nhu cầu trong Alibaba.",
+        "Chưa rõ",
+        "Rủi ro mất dữ liệu nếu chỉ trao đổi Zalo.",
+        "Trung bình-thấp",
+        "Yêu cầu buyer gửi lại sản phẩm/quantity trong Alibaba để lưu tiến độ."
+      ],
+      [
+        "2026-09-11",
+        "User name",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy product card, chưa có nội dung text buyer rõ",
+        "Cần mở sâu",
+        "Mở product card/hội thoại, hỏi buyer cần size, quantity và fabric nào"
+      ],
+      [
+        "2026-09-09",
+        "Maguy OMARI",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller báo MOQ 2 pieces và hỏi sizes muốn order",
+        "Từ 2 pcs",
+        "Lead nhỏ lẻ/test order, cần size",
+        "Hỏi size, màu, mẫu cụ thể và địa chỉ ship"
+      ],
+      [
+        "2026-09-07",
+        "Mireille Tatho",
+        "Pháp ngữ",
+        "Chưa thấy L",
+        "Seller nói mua càng nhiều giá càng tốt",
+        "Chưa rõ",
+        "Có thể đang đàm phán giá theo số lượng",
+        "Hỏi quantity, size/color breakdown và target price"
+      ],
+      [
+        "2026-09-06",
+        "indika randeni",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi muốn sản xuất size nào",
+        "Chưa rõ",
+        "Lead thiếu size",
+        "Hỏi size, quantity, mẫu sản phẩm và fabric"
+      ],
+      [
+        "2026-09-04",
+        "Lilyan Rolfson",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller báo giá USD 18.10 per ounce/once (cần kiểm tra lại đơn vị)",
+        "Chưa rõ",
+        "Có giá nhưng đơn vị không rõ, cần xác nhận sản phẩm",
+        "Hỏi sản phẩm, quantity, size và xác nhận lại unit price đúng là piece hay không"
+      ],
+      [
+        "2026-09-04",
+        "Alisha Jon Ode",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller sẽ gửi quotation trước khi làm sample",
+        "Sample",
+        "Lead cần báo giá mẫu",
+        "Gửi quote sample, sample timeline, yêu cầu design/size/material"
+      ],
+      [
+        "2026-09-03",
+        "Saima Zaidi",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Only shirt USD 15/pcs, làm set sẽ có giá tốt hơn",
+        "Chưa rõ",
+        "Lead áo/set, cần số lượng",
+        "Hỏi quantity, shirt hay set, size/color và ship country"
+      ],
+      [
+        "2026-09-02",
+        "Sepe ADADEVOH",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer gửi/nhắc file ảnh feather t-shirt",
+        "Lead cần mở ảnh để xác định spec",
+        "Xem ảnh, hỏi chất liệu, size, màu, quantity và target price"
+      ],
+      [
+        "2026-09-02",
+        "Kumada Rikuto",
+        "Japan / tiếng Nhật",
+        "Chưa thấy L",
+        "Buyer gửi hình ảnh, chưa có text nhu cầu rõ trong snapshot",
+        "Cần kiểm tra ảnh",
+        "Trả lời tiếng Nhật/ngắn, hỏi số lượng, size, chất liệu và gửi quote khi có ảnh rõ"
+      ],
+      [
+        "2026-09-02",
+        "hui abu",
+        "Japan / tiếng Nhật",
+        "Chưa thấy L",
+        "Seller hỏi cách liên hệ/đã gửi phản hồi, cần buyer kiểm tra",
+        "Lead cần kéo lại phản hồi",
+        "Trả lời lịch sự bằng tiếng Nhật, hỏi lại sản phẩm/số lượng và giữ trao đổi trên Alibaba"
+      ],
+      [
+        "2026-09-01",
+        "Gloria Nsita",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi pant; seller hỏi có muốn order không và MOQ 50 pcs",
+        "MOQ 50 pcs",
+        "Lead đúng sản phẩm, đang chờ buyer xác nhận MOQ",
+        "Hỏi size/color breakdown và có thể nhận MOQ 50 pcs không"
+      ],
+      [
+        "2026-09-01",
+        "Z samy",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller báo MOQ cho design là 50 pieces",
+        "MOQ 50 pcs",
+        "Lead cần xác nhận chấp nhận MOQ",
+        "Hỏi có thể bắt đầu 50 pcs không, cần custom label/size/color nào"
+      ],
+      [
+        "2026-09-01",
+        "Kanthi jasinghe",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi buyer muốn mua size nào",
+        "Chưa rõ",
+        "Lead thiếu size/số lượng",
+        "Hỏi size, quantity, sản phẩm cụ thể và country để báo ship"
+      ],
+      [
+        "2026-09-01",
+        "tien Minh",
+        "Việt Nam / tên Việt",
+        "Chưa thấy L",
+        "Seller hỏi size muốn order",
+        "Chưa rõ",
+        "Lead mở đầu thiếu size",
+        "Hỏi size, màu, quantity và sản phẩm muốn đặt"
+      ],
+      [
+        "2026-08-24",
+        "Marisol Daugherty",
+        "Chưa xác định",
+        "L?",
+        "Skirt hiện chỉ có size XL; nếu muốn full size run thì nhận production MOQ 50 pcs/design | SL: MOQ 50 pcs/design nếu sản xuất full size",
+        "Lead thật - cần chốt size/MOQ",
+        "Hỏi khách mua XL sẵn hay sản xuất full size run 50 pcs/design"
+      ],
+      [
+        "2026-08-24",
+        "Caisha Yusufcumar",
+        "Chưa xác định",
+        "L?",
+        "Pants out of stock; nhận production từ 50 pcs trở lên, giá USD 25/pc | SL: MOQ 50 pcs, USD 25/pc",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi màu/size/quantity, xác nhận sản xuất 50+ pcs"
+      ],
+      [
+        "2026-08-24",
+        "Lorre Griffiths",
+        "Chưa xác định",
+        "L?",
+        "Nếu mua sample thì hỗ trợ từ 1 pc/design | SL: Sample 1 pc/design",
+        "Lead mẫu - ưu tiên vừa",
+        "Gửi sample price/shipping, hỏi design/size/color"
+      ],
+      [
+        "2026-08-23",
+        "Riris Indah",
+        "Chưa xác định",
+        "L?",
+        "Pink dress out of stock; nhận production MOQ 70 pcs, giá USD 25.06, premium goods | SL: MOQ 70 pcs, USD 25.06/pc",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi có chấp nhận MOQ 70 không, size ratio, deadline"
+      ],
+      [
+        "2026-08-23",
+        "Sabriddin Nurimof",
+        "Chưa xác định",
+        "L?",
+        "Set out of stock; nhận new production MOQ 50 sets, giá USD 30.25/set | SL: MOQ 50 sets, USD 30.25/set",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi size/color/quantity, xác nhận production order"
+      ],
+      [
+        "2026-08-17",
+        "Parveen Parveen",
+        "Chưa xác định",
+        "Có level tag",
+        "Chỉ thấy seller/bot: We will contact you shortly.",
+        "Chưa thấy buyer nêu nhu cầu",
+        "Không tính lead nóng; follow lại bằng câu hỏi sản phẩm/số lượng."
+      ],
+      [
+        "2026-08-17",
+        "Thi Duong Nguyen",
+        "Việt Nam",
+        "Chưa thấy",
+        "Seller gửi link product list VIVI KA.",
+        "Có thể là gửi catalog, chưa thấy buyer trả lời",
+        "Hỏi khách cần nhóm sản phẩm nào, số lượng và size range."
+      ],
+      [
+        "2026-08-14",
+        "Sabriddin Nurimof / Nkamwesimira Chevon / ahmd syd / fysl aljhny / Marygrace Sabanal / Nurcan Cakmaz",
+        "Chưa xác định",
+        "Có/không rõ",
+        "Preview đều là seller/bot xin address and phone number.",
+        "Chưa đủ dữ liệu nhu cầu thật",
+        "Cần search từng tên nếu muốn xác minh; trước khi xin phone/address phải hỏi product, qty, size, destination."
+      ],
+      [
+        "2026-08-14",
+        "Ange Ndaya / riris Indah / Melody Adepa / Sultan Abdulaziz",
+        "Chưa xác định",
+        "Có/không rõ",
+        "Preview là automatic reception stopped, không có câu hỏi buyer rõ.",
+        "Không đủ phân tích",
+        "Chờ buyer phản hồi thật hoặc rà lịch sử bằng Search."
+      ],
+      [
+        "2026-08-14",
+        "Nkamwesimira Chevon",
+        "Uganda/East Africa (theo tên, cần xác minh)",
+        "Chưa thấy",
+        "Seller/bot hỏi address and phone number.",
+        "Chưa đủ nội dung",
+        "Rà lại bằng search tên; nếu buyer có sản phẩm cụ thể thì follow bằng catalogue + MOQ."
+      ],
+      [
+        "2026-08-14",
+        "ahmd syd / fysl aljhny / Marygrace Sabanal / Nurcan Cakmaz",
+        "Chưa xác định",
+        "Có/không rõ",
+        "Nhiều preview giống nhau: Could you please send me your address and phone number?",
+        "Tin lặp, cần xác minh nhu cầu thật",
+        "Không đưa lên ưu tiên cho tới khi thấy buyer hỏi sản phẩm/số lượng."
+      ],
+      [
+        "2026-08-14",
+        "Constance Prisca",
+        "Chưa xác định",
+        "Có level tag",
+        "Có tên trong danh sách nhưng chưa mở được phần preview cuối.",
+        "Cần rà tiếp",
+        "Tìm bằng search tên nếu cần mở rộng dữ liệu."
+      ],
+      [
+        "2026-08-14",
+        "Ange Ndaya",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview là automatic reception stopped.",
+        "Chưa đủ nhu cầu",
+        "Chờ buyer phản hồi thật hoặc rà lịch sử."
+      ]
+    ],
+    "It phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-08-06",
+        "Tuong HuynhQuang",
+        "Việt Nam",
+        "Chỉ kéo Zalo, chưa có nhu cầu sản phẩm/số lượng rõ trong Alibaba."
+      ],
+      [
+        "2026-09-04",
+        "Emilie Fatuma",
+        "Seller nói mẫu đã hết hàng sẵn, không bán lẻ 1 cái",
+        "Khách lẻ/stock issue, ưu tiên thấp"
+      ],
+      [
+        "2026-09-03",
+        "Zouhour Douah",
+        "Chỉ phản hồi “نعم / yes”, chưa có nhu cầu sản phẩm rõ",
+        "Ít dữ liệu"
+      ],
+      [
+        "2026-09-02",
+        "hui abu",
+        "Chỉ là nhắc buyer kiểm tra phản hồi, chưa có nhu cầu mới rõ",
+        "Cần ngữ cảnh trước khi tính lead"
+      ],
+      [
+        "2026-09-01",
+        "User name",
+        "Seller hỏi size muốn mua, chưa thấy buyer trả lời",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-09-07",
+        "Mireille Tatho",
+        "Chưa thấy sản phẩm/số lượng rõ trong snapshot",
+        "Chưa đưa vào ưu tiên nếu chưa có thông tin thêm"
+      ],
+      [
+        "2026-09-03",
+        "Mireille Tatho",
+        "Chỉ thấy [Message], chưa đọc được sản phẩm/số lượng cụ thể",
+        "Chưa tính lead chính, cần mở sâu nếu muốn xác định"
+      ],
+      [
+        "2026-09-03",
+        "Zouhour Douah",
+        "Chỉ phản hồi “نعم / yes”, chưa thấy nhu cầu sản phẩm cụ thể trong snapshot",
+        "Ít dữ liệu, cần hỏi lại sản phẩm/quantity"
+      ],
+      [
+        "2026-09-01",
+        "User name",
+        "Seller chỉ hỏi “what size do you want”, chưa thấy buyer trả lời",
+        "Ít phản hồi, chờ buyer gửi size"
+      ],
+      [
+        "2026-09-02",
+        "Kumada Rikuto",
+        "Chỉ thấy ảnh, chưa có nội dung mua hàng rõ trong snapshot",
+        "Chưa đưa vào khách ưu tiên cho đến khi đọc được ảnh/spec"
+      ],
+      [
+        "2026-08-14",
+        "Nhóm automatic reception stopped",
+        "Không có nhu cầu buyer trong phần đã đọc.",
+        "Không đưa vào lead ưu tiên."
+      ],
+      [
+        "2026-08-17",
+        "Nhóm chỉ xin phone/address hàng loạt",
+        "Tin seller/bot lặp lại, thiếu sản phẩm/số lượng.",
+        "Cần rà lại trước khi tính là lead thật."
+      ],
+      [
+        "2026-08-17",
+        "Tin gửi link productlist đơn thuần",
+        "Chưa có phản hồi của buyer trong khung preview.",
+        "Theo dõi nhẹ, không tính lead nóng."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 22,
+    "Khach uu tien": 29,
+    "Can theo doi": 31,
+    "It phan hoi": 14
+  }
+}

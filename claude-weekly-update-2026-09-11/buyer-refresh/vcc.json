@@ -1,0 +1,699 @@
+{
+  "store": "VCC",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "1hfqwG1AR1QPZXPgozWbjn4CCbl0dPzKpU0V8RhHvj4Q",
+    "title": "Viet ColdChain OneTalk Leads 2026-08-12_18",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 833925240,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 1592809126,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Can theo doi",
+        "sheetId": 876078327,
+        "read_range": "A1:Z1016"
+      },
+      {
+        "title": "It phan hoi",
+        "sheetId": 1648680269,
+        "read_range": "A1:Z1007"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú vận hành"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu 03-08",
+        "9 dòng buyer/tin nhắn quanh 03/08-08/08 đã rà lại",
+        "Lead rõ nhất: Gohar Shehzad hỏi địa chỉ để check; Anel Rizabek hỏi specification puree. Các dòng chỉ ok/không làm được/không rõ đưa vào theo dõi hoặc ít phản hồi."
+      ],
+      [
+        "Khoảng bổ sung đã xác thực",
+        "03/08-08/08/2026",
+        "Không thấy ngày 03,07,08 có lead rõ trong vùng đọc được; ngày 04-06 có một số phản hồi cần lọc."
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "Mốc 18/08-24/08 đã rà lại; mốc 03/08-08/08 cần quét tiếp",
+        "OneTalk của Viet ColdChain cuộn nhảy sâu về tháng 5 khi quét 03-08; đã cập nhật trước các lead 18-24 có nội dung rõ."
+      ],
+      [
+        "Khoảng bổ sung đã xác thực",
+        "18/08-24/08/2026",
+        "Có buyer hỏi yoghurt melts, container/lead time, báo giá/sourcing material và một số message/image-only cần theo dõi."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "3 buyer",
+        "1782835576, 7046424684, 278621850."
+      ],
+      [
+        "Lead cần theo dõi bổ sung",
+        "2 buyer",
+        "15021727543, 1574934060; nội dung ngắn hoặc chỉ [Message], cần mở sâu nếu cần xác minh thêm."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "5 buyer rà soát trên OneTalk",
+        "2 khách ưu tiên; 2 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "04/09/2026 - 11/09/2026",
+        "Tuần này ít lead mới; tập trung Serdar Durgun và follow-up khách cũ có sample/container."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Chất lượng mẫu + follow container",
+        "Có tín hiệu “quality approval” và một vài phản hồi ngắn; cần chủ động hỏi thông tin sản phẩm/số lượng/cảng nhận."
+      ],
+      [
+        "Rủi ro chính",
+        "Ít lead mới rõ ràng",
+        "Không đưa khách chỉ “ok” vào ưu tiên nếu không có sản phẩm/số lượng mới."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "10 buyer mới/đang mở lại",
+        "6 khách ưu tiên; 3 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "26/08/2026 - 03/09/2026",
+        "Tập trung buyer có phản hồi thật: hỏi mẫu, container, chứng chỉ, quy cách, vận chuyển và báo giá."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Mẫu IQF + đơn container + chứng chỉ thực phẩm",
+        "Khách Trung Quốc và khách bulk có tín hiệu tốt; cần phản hồi bằng đúng ngôn ngữ và hỏi rõ quy cách/địa chỉ/Incoterms."
+      ],
+      [
+        "Rủi ro chính",
+        "Một số hội thoại chỉ có email ngoài hoặc tài khoản bị hủy",
+        "Không đưa vào lead chính nếu account buyer bị khóa/hủy hoặc chỉ có tip dịch tự động."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "11",
+        "2 khách ưu tiên; 6 cần theo dõi; 3 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng thời gian đã rà soát",
+        "12/08-18/08/2026",
+        "Tài khoản sales@vietcoldchain.com, tên hiển thị OneTalk: Lam Tran Ngoc."
+      ],
+      [
+        "Khách có phản hồi thật, nên ưu tiên xử lý",
+        "4",
+        "Mary Jane, Keneth, Alviaa, Kirti có trao đổi thật về mẫu, hàng đông lạnh, giá, hoặc đặt hàng."
+      ],
+      [
+        "Khách cần theo dõi nhẹ",
+        "5",
+        "Có tín hiệu nhưng thiếu sản phẩm/số lượng hoặc chỉ là trả lời ngắn."
+      ],
+      [
+        "Khách ít phản hồi/không ưu tiên",
+        "5",
+        "Email ngoài, nhà cung cấp chào ngược, translation tip, auto follow-up hoặc không có nhu cầu mua rõ."
+      ],
+      [
+        "Vấn đề nổi bật",
+        "Cần báo phí mẫu và MOQ rõ hơn",
+        "Lead tốt đang kẹt ở phí ship sample, MOQ container, giá cạnh tranh tại India và yêu cầu email ngoài Alibaba."
+      ],
+      [
+        "Hành động ưu tiên",
+        "Báo mẫu + chốt thông tin nhanh",
+        "Với lead sample: chốt danh sách mẫu, pack size, trọng lượng, phí ship. Với lead container: báo MOQ, packing, giá/kg, lead time và chứng chỉ."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Sản phẩm / nhu cầu hỏi",
+        "Số lượng",
+        "Nội dung đã đọc trong tin nhắn",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-02",
+        "zhi ping chen",
+        "Trung Quốc / Qingdao",
+        "Chưa thấy L",
+        "IQF frozen seedless lime / calamansi; hỏi nguồn gốc, IQF, muốn lấy vài kg mẫu test chất lượng",
+        "Vài kg mẫu; MOQ sản phẩm 1000 kg",
+        "Buyer trao đổi thật bằng tiếng Trung, từng hỏi CIF Qingdao cho calamansi half-cut Philippines origin; sau đó chấp nhận trao đổi sản phẩm Việt Nam và hỏi lấy mẫu",
+        "Rất cao",
+        "Trả lời tiếng Trung: xác nhận hàng Việt Nam IQF, báo sample fee, quy cách đóng gói, thời gian chuẩn bị mẫu và hỏi địa chỉ nhận mẫu/port"
+      ],
+      [
+        "2026-08-31",
+        "HU JACK",
+        "Trung Quốc / Quý Dương, Quý Châu",
+        "Chưa thấy L",
+        "Sầu riêng bỏ hạt; buyer là thương nhân, hỏi giá FOB/CNF tới cửa khẩu Vân Nam và giá quy đổi RMB/tấn",
+        "1 x 40'RF = 24 tấn; cũng hỏi 20'RF = 10 tấn",
+        "Buyer phản hồi nhiều lần, có giấy phép nhập khẩu, đã đưa địa chỉ tại Quý Dương và thúc giục báo giá nhanh. Seller báo USD 9,70/kg nhưng trả lời chậm và đơn vị giá khiến buyer phải hỏi lại.",
+        "Rất cao",
+        "Phản hồi ngay bằng tiếng Trung: xác nhận giá chính xác theo RMB/tấn, điều kiện FOB/CNF, cửa khẩu/cảng giao, tải 20'RF và 40'RF; gửi bảng tổng tiền và hiệu lực báo giá."
+      ],
+      [
+        "2026-08-18",
+        "Mary Jane Zamora",
+        "Philippines",
+        "Có level tag",
+        "Xin sample các sản phẩm frozen fruits hiện có; pack 200g hoặc 500g.",
+        "Sample nhiều sản phẩm, chưa chốt số lượng từng SKU",
+        "Buyer hỏi update sample, muốn sample tất cả sản phẩm đông lạnh đang có stock, ưu tiên fruits. Đã gửi địa chỉ: Lot 91 A Bagsakan Rd., FTI Complex, Western Bicutan, Taguig City, Philippines 1630 và hỏi phí ship.",
+        "Rất cao",
+        "Gửi danh sách sample có thể gửi ngay, chọn 200g/500g, ước tính trọng lượng + dry ice, báo phí ship sample và phần phí shop hỗ trợ. Chốt ngày gửi mẫu."
+      ],
+      [
+        "2026-08-13",
+        "Keneth Adesulu",
+        "Chưa xác định",
+        "Có level tag",
+        "Frozen whole passion fruit, nguyên trái còn vỏ, dùng làm garnish cocktail; hỏi pack 1kg.",
+        "Muốn 1kg packs, nhưng MOQ seller báo 20' container",
+        "Buyer nhấn mạnh không cần pulp/puree/processed, cần whole fruit with skin intact. Hỏi 'How much is that?'. Seller đã phải sửa hiểu nhầm auto reply và báo frozen whole passion fruit cần tối thiểu 20' container.",
+        "Rất cao",
+        "Báo rõ có/không thể bán retail 1kg. Nếu chỉ nhận container: gửi MOQ 20' container, packing 1kg/10kg, giá/kg theo container, lead time và hỏi volume thật của buyer."
+      ],
+      [
+        "2026-09-12",
+        "Daniel vo",
+        "Hoa Kỳ / người Việt tại Mỹ",
+        "Chưa thấy L",
+        "Sầu riêng đông lạnh và tôm hùm; hỏi mua lẻ, mẫu thử, bảo quản lạnh, vận chuyển sang Mỹ và quy cách 10kg",
+        "Quan tâm 10kg; mẫu 1-2kg; hệ thống từng đề cập 1.000kg nhưng buyer chưa xác nhận",
+        "Buyer chủ động hỏi liên tục và phản hồi “Ok”. Nhu cầu thật nhưng đang ở giai đoạn mẫu/mua lẻ; cần tránh nhầm 10kg với 1.000kg và xác nhận địa chỉ tại Mỹ.",
+        "Cao",
+        "Xác nhận lại muốn mẫu 1-2kg hay thùng 10kg, sản phẩm sầu riêng hay tôm hùm, thành phố/mã bưu chính tại Mỹ; sau đó báo tổng phí cold-chain và thời gian giao."
+      ],
+      [
+        "2026-09-10",
+        "Serdar Durgun",
+        "Turkey / tiếng Thổ Nhĩ Kỳ",
+        "Chưa thấy L",
+        "Buyer nhắn “kalite onayı” nghĩa là xác nhận/duyệt chất lượng",
+        "Chưa rõ",
+        "Tín hiệu tốt: buyer quan tâm xác nhận chất lượng, có thể liên quan mẫu hoặc spec trước đó",
+        "Cao",
+        "Trả lời tiếng Anh/Thổ ngắn: hỏi muốn xác nhận chất lượng cho sản phẩm nào, cần COA/spec/photo/video hay sample approval"
+      ],
+      [
+        "2026-09-02",
+        "zhi ping chen",
+        "China / Qingdao",
+        "Chưa thấy L",
+        "IQF lime/calamansi; trước đó hỏi sample, nay hỏi coldchain express service",
+        "Vài kg mẫu / chưa rõ",
+        "Lead cũ vẫn có nhu cầu logistics/sample, cần xử lý cold-chain express hoặc giới thiệu phương án phù hợp",
+        "Cao",
+        "Trả lời tiếng Trung: xác nhận có thể hỗ trợ phương án vận chuyển lạnh/reefer hoặc forwarder, hỏi địa chỉ nhận mẫu và khối lượng"
+      ],
+      [
+        "2026-09-02",
+        "Oleg Golinsky",
+        "Chưa xác định",
+        "Có level tag",
+        "Premium IQF Frozen Durian Pulp Seeds Vietnam; hỏi mixed reefer container, cut size, packaging, chứng chỉ cho US market",
+        "≥1000 kg / cần xác nhận mix container",
+        "Đã gửi quotation USD 1.3/kg; buyer cần làm rõ số lượng từng loại trái cây, phương thức vận chuyển, 10kg bulk hay retail packaging",
+        "Cao",
+        "Hỏi bảng mix container theo từng SKU, Incoterms, cảng đến và yêu cầu bao bì để tính giá thực tế"
+      ],
+      [
+        "2026-09-01",
+        "sheng ma",
+        "Trung Quốc",
+        "Có level tag",
+        "BRC IQF Frozen Red Pitaya Halves; buyer nói là采购/purchaser, hỏi có phải nhà máy không và muốn hiểu chi tiết",
+        "MOQ được seller báo 10 tons",
+        "Buyer hỏi thật bằng tiếng Trung, quan tâm nhà máy, quy cách, MOQ, có thể cần trao đổi sâu hơn qua đúng ngôn ngữ",
+        "Cao",
+        "Trả lời tiếng Trung gọn: giới thiệu nhà máy, spec/cut size/packing/cert, hỏi target spec và khối lượng tháng"
+      ],
+      [
+        "2026-08-28",
+        "chris novaeo",
+        "Chưa xác định",
+        "Có level tag",
+        "Freeze-dried Hericium Erinaceus powder cho supplement; hỏi organic/food grade, chứng chỉ, OEM, Incoterms",
+        "Bulk / chưa rõ khối lượng",
+        "Đã trao đổi nhu cầu thực phẩm chức năng; seller nhắc HACCP, ISO, GlobalG.A.P và hỏi địa chỉ giao/bao bì",
+        "Cao",
+        "Gửi COA/spec sheet/cert, hỏi target purity, packing kg/bag, quantity và Incoterms để báo giá"
+      ],
+      [
+        "2026-08-28",
+        "Yessenia CabreraDiaz",
+        "Chưa xác định / tiếng Tây Ban Nha",
+        "Có level tag",
+        "Frozen bananas; hỏi vận chuyển, cut size 10mm/20mm, HACCP/ISO/GlobalG.A.P",
+        "Buyer ghi quantity “2” nhưng chưa rõ đơn vị",
+        "Nhu cầu thật nhưng thiếu đơn vị và địa chỉ; seller đã hỏi packaging và transport",
+        "Cao",
+        "Hỏi rõ 2 là pallet/carton/container hay kg, địa chỉ/cảng nhận và bao bì mong muốn"
+      ],
+      [
+        "2026-08-24",
+        "Carolina Santos",
+        "Chưa xác định",
+        "L?",
+        "Tìm Smart Food Kitchen Scales và Freeze-Dried Yogurt Melts; cần catalog, giá, lead time, mẫu; cần logo/packaging customization cho thị trường Mỹ",
+        "100-500 units/item",
+        "Khách trao đổi rõ, hỏi catalog/mẫu/tuỳ chỉnh. Seller phản hồi hiện chỉ có yoghurt melts",
+        "Lead tốt - ưu tiên cao",
+        "Gửi catalog yoghurt melts, báo rõ không có kitchen scales nếu không cung cấp; hỏi flavor, packing gram/bag, target market, sample address"
+      ],
+      [
+        "2026-08-18",
+        "Mary Jane Zamora",
+        "Philippines",
+        "L?",
+        "Hỏi lead time cho từng item, 01 x 40’RF, retail packaging, thời gian sourcing nguyên liệu",
+        "01 x 40’RF",
+        "Khách trao đổi sâu về sản xuất/lead time; có khả năng mua container nếu sản phẩm phù hợp",
+        "Lead tốt - ưu tiên cao",
+        "Chốt lại SKU, packing method, retail packaging yêu cầu; gửi timeline theo 2 phương án bulk/retail packaging"
+      ],
+      [
+        "2026-08-17",
+        "Kirti Jain Kothari",
+        "India",
+        "Chưa thấy level",
+        "Quan tâm hợp tác IQF/freeze dried fruits, hỏi giá để kiểm tra import cost.",
+        "Chưa rõ",
+        "Buyer từng yêu cầu share prices/proposal, nói India có demand cho all products nhưng phần lớn sản phẩm đã có ở India với giá rất tốt. Có gửi file freeze dryer final.",
+        "Trung bình-cao",
+        "Không bán chung chung. Chọn 3 SKU có lợi thế Vietnam, gửi giá FOB/container hoặc MOQ, chứng chỉ và lợi thế khác biệt; hỏi buyer đang nhập dòng nào tại India và target price."
+      ],
+      [
+        "2026-08-22",
+        "1782835576",
+        "Chưa xác định",
+        "Buyer hỏi/trao đổi về sản phẩm yoghurt melts; seller trả lời hiện chỉ có yoghurt melts.",
+        "Chưa rõ",
+        "Có nhu cầu sản phẩm cụ thể trong nhóm snack/freeze-dried; cần hỏi flavor, packing và order quantity.",
+        "Cao",
+        "Gửi catalogue yoghurt melts, hỏi vị/khối lượng đóng gói/số lượng, báo MOQ và sample nếu có."
+      ],
+      [
+        "2026-08-20",
+        "7046424684",
+        "Việt Nam / Chưa xác định",
+        "Trao đổi bằng tiếng Việt về số lượng dự kiến để xem cước tham khảo phù hợp.",
+        "Chưa rõ",
+        "Nhu cầu thật liên quan báo cước/ship; đang thiếu số lượng và địa chỉ.",
+        "Cao",
+        "Xin số lượng dự kiến, cảng/địa chỉ nhận, sản phẩm cụ thể; báo 2 phương án cước nhanh/tiết kiệm."
+      ],
+      [
+        "2026-08-18",
+        "278621850",
+        "Chưa xác định",
+        "Trao đổi về lead time 10-20 ngày làm việc cho 1 x 40’RF, phụ thuộc packing; có giải thích thời gian sourcing nguyên liệu và sản xuất.",
+        "01 x 40’RF",
+        "Lead chất lượng vì có container, lead time, packing method và sourcing material; cần chốt yêu cầu đóng gói.",
+        "Rất cao",
+        "Chốt sản phẩm/SKU, packing bulk hay retail, lịch giao mong muốn, cảng đến và Incoterms để báo giá hoàn chỉnh."
+      ],
+      [
+        "2026-08-15",
+        "Alviaa Alviaa",
+        "Chưa xác định",
+        "Có level tag",
+        "HALAL IQF Premium Frozen Taro Stem dices/chunks/sticks cho bubble tea/dim sum.",
+        "MOQ 1000, buyer chưa xác nhận số lượng",
+        "Buyer gửi product card, để lại email idscompanyltd@zohomail.com và nói Alibaba quá chậm, đang chờ mail để place order. Seller đã hỏi sản phẩm và specification.",
+        "Cao nhưng rủi ro off-platform",
+        "Giữ trên Alibaba: trả lời đã nhận yêu cầu, hỏi specification/cut size/packing/target quantity/destination port. Có thể gửi catalog trong Alibaba và nhắc báo giá chính thức qua Alibaba để bảo vệ giao dịch."
+      ],
+      [
+        "2026-08-06",
+        "Gohar Shehzad",
+        "Chưa xác định",
+        "Buyer/seller trao đổi về việc cung cấp địa chỉ để kiểm tra/calculate; nội dung: “Okay, just give me the address, I’ll check”.",
+        "Chưa rõ",
+        "Có khả năng nhu cầu thật liên quan báo giá/ship, cần địa chỉ để check.",
+        "Cao",
+        "Xin địa chỉ nhận hàng/cảng đến, sản phẩm, quantity, packing để báo phí và tổng giá."
+      ],
+      [
+        "2026-08-04",
+        "Anel Rizabek",
+        "Chưa xác định",
+        "Buyer hỏi/được yêu cầu gửi detailed specification regarding the puree.",
+        "Chưa rõ",
+        "Lead có nhu cầu puree nhưng thiếu specification: loại puree, brix, packing, quantity.",
+        "Cao",
+        "Gửi form spec puree: loại trái cây, Brix, seed/seedless, packing, MOQ, destination; đề xuất mẫu nếu cần."
+      ]
+    ],
+    "Can theo doi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-06",
+        "steven s",
+        "Chưa xác định",
+        "Seller trả lời “We cannot do that”, chưa thấy yêu cầu ban đầu.",
+        "Chưa rõ",
+        "Có thể là nhu cầu không phù hợp, cần kiểm tra yêu cầu gốc nếu muốn học lỗi sản phẩm.",
+        "Trung bình-thấp",
+        "Nếu follow lại, hỏi buyer có phương án spec thay thế không; nếu không, đánh dấu không phù hợp."
+      ],
+      [
+        "2026-08-06",
+        "samra Ali",
+        "Chưa xác định",
+        "Seller trả lời “It’s nearly the same to that”, có so sánh sản phẩm/spec nhưng thiếu ngữ cảnh.",
+        "Chưa rõ",
+        "Cần mở sâu nếu muốn xác định đúng sản phẩm.",
+        "Trung bình",
+        "Hỏi buyer xác nhận loại sản phẩm/spec đang so sánh và số lượng dự kiến."
+      ],
+      [
+        "2026-08-05",
+        "User name",
+        "Chưa xác định",
+        "Chỉ phản hồi “ok”, chưa có nhu cầu rõ.",
+        "Chưa rõ",
+        "Ít dữ liệu, không đưa vào ưu tiên.",
+        "Thấp",
+        "Chỉ follow nếu buyer từng hỏi sản phẩm cụ thể trước đó."
+      ],
+      [
+        "2026-08-22",
+        "15021727543",
+        "Chưa xác định",
+        "Buyer/seller có phản hồi “Okay I will”, chưa đủ ngữ cảnh sản phẩm/số lượng.",
+        "Chưa rõ",
+        "Có phản hồi nhưng cần mở sâu nếu muốn phân loại chính xác.",
+        "Trung bình",
+        "Follow nhẹ: hỏi buyer đã chuẩn bị thông tin sản phẩm, quantity, destination chưa."
+      ],
+      [
+        "2026-08-22",
+        "1574934060",
+        "Chưa xác định",
+        "Chỉ thấy [Message] trong danh sách, chưa đọc được nội dung text rõ.",
+        "Chưa rõ",
+        "Cần mở sâu để xác định có phải lead thật hay tin nhắn không đủ dữ liệu.",
+        "Trung bình",
+        "Mở lại hội thoại/ảnh nếu cần; nếu không có nhu cầu rõ thì không đưa vào ưu tiên."
+      ],
+      [
+        "2026-09-06",
+        "Ali MohamedAli",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer chỉ phản hồi ok, chưa thấy sản phẩm/số lượng mới trong snapshot",
+        "Có phản hồi nhưng thiếu nội dung",
+        "Follow bằng câu hỏi cụ thể: buyer đang quan tâm sản phẩm nào, số lượng và cảng nhận"
+      ],
+      [
+        "2026-09-04",
+        "Smart assistant reminder",
+        "N/A",
+        "N/A",
+        "Hệ thống nhắc follow important customer",
+        "Nhắc follow-up",
+        "Kiểm tra lại các lead cũ: zhi ping chen, Oleg, sheng ma, HU JACK để không bỏ sót khách container/sample"
+      ],
+      [
+        "2026-08-30",
+        "France Handy",
+        "Chưa xác định",
+        "Có level tag",
+        "Corn on cob; seller đã gửi quotation, khách chưa thấy phản hồi sâu trong phần đọc",
+        "Lead có báo giá nhưng thiếu phản hồi tiếp",
+        "Follow lại bằng giá trị: xác nhận spec, quantity, cảng nhận và thời gian cần hàng"
+      ],
+      [
+        "2026-08-31",
+        "Hendrychova Cost",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Premium soft dried mango slices; đã có quotation ≥8000 kg giá USD 3.95/kg, buyer yêu cầu gửi catalog qua email",
+        "Rủi ro: tài khoản buyer bị hủy/controlled nên không thể reply",
+        "Không ưu tiên chốt; nếu còn kênh Alibaba hợp lệ thì gửi catalog trong chat, tránh phụ thuộc email ngoài"
+      ],
+      [
+        "2026-08-26",
+        "Leo Li",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy cảnh báo ngôn ngữ/translation tip, chưa đọc được nhu cầu sản phẩm rõ",
+        "Cần kiểm tra lại khi mở đúng hội thoại",
+        "Chưa đưa vào lead chính cho đến khi thấy buyer hỏi sản phẩm/số lượng cụ thể"
+      ],
+      [
+        "2026-08-24",
+        "Maryorit",
+        "Chưa xác định",
+        "L?",
+        "Có order/mẫu số lượng 1 kg; hệ thống hiển thị order closed",
+        "1 kg",
+        "Đã có order closed, khả năng là đơn mẫu hoặc test nhỏ",
+        "Lead đã xử lý / theo dõi sau mẫu",
+        "Hỏi khách đã nhận/đánh giá mẫu chưa, lấy phản hồi vị/bao bì, đề xuất MOQ hoặc đơn tiếp theo"
+      ],
+      [
+        "2026-08-20",
+        "Thong Pham",
+        "Việt Nam / nội địa",
+        "L?",
+        "Trao đổi logistics/cước cho rau củ trái cây đông lạnh sang Trung Quốc, Hàn Quốc, Nhật, Trung Đông",
+        "Chưa nêu",
+        "Có trao đổi thật nhưng cần số lượng cụ thể để tính cước",
+        "Lead cần làm rõ",
+        "Hỏi lượng dự kiến, cảng đi/cảng đến, nhiệt độ, loại hàng, container LCL/FCL"
+      ],
+      [
+        "2026-08-18",
+        "ming ze ma",
+        "Trung Quốc",
+        "L?",
+        "Hỏi thông số đo bên trong sản phẩm; seller nói chưa đo, có thể cắt một mẫu và chụp ảnh ngày mai",
+        "Chưa nêu",
+        "Có nhu cầu kỹ thuật cụ thể, nhưng cần phản hồi ảnh/thông số để giữ khách",
+        "Lead thật - ưu tiên vừa",
+        "Cắt mẫu/chụp ảnh như đã hứa, gửi thông số rõ ràng, hỏi mục đích sử dụng"
+      ],
+      [
+        "2026-08-17",
+        "Kirti Jain Kothari",
+        "India",
+        "L?",
+        "Khách nói đa số sản phẩm đã có ở Ấn Độ và giá rất tốt",
+        "Chưa nêu",
+        "Rào cản giá/cạnh tranh nội địa Ấn Độ",
+        "Lead yếu / cần khác biệt hóa",
+        "Không cạnh tranh bằng giá; chỉ follow nếu có sản phẩm khác biệt, chứng nhận, chất lượng hoặc nguồn hàng đặc biệt"
+      ],
+      [
+        "2026-08-15",
+        "Alviaa Alviaa",
+        "Chưa xác định",
+        "L?",
+        "Seller hỏi khách quan tâm sản phẩm/spec nào; chưa thấy nhu cầu cụ thể",
+        "Chưa nêu",
+        "Thiếu thông tin sản phẩm, cần hỏi lại ngắn gọn",
+        "Lead rất sớm",
+        "Gửi menu sản phẩm chính và hỏi 1 dòng về SKU/quantity/spec"
+      ],
+      [
+        "2026-08-18",
+        "DOCK RACE WEAR",
+        "Chưa xác định",
+        "L?",
+        "Khách chỉ trả lời “Okay”, chưa thấy nhu cầu sản phẩm rõ",
+        "Chưa nêu",
+        "Có phản hồi nhưng chưa đủ thông tin mua hàng",
+        "Lead yếu",
+        "Không phân tích sâu; hỏi lại sản phẩm và số lượng nếu follow"
+      ],
+      [
+        "2026-08-14",
+        "ALVIN TAY",
+        "Singapore / FMCG supplier",
+        "Có level tag",
+        "Khách từng giới thiệu là FMCG supplier tại Singapore, cung cấp email/WhatsApp. Lần gần nhất trả lời 'No thanks', 'Sorry no need', sau đó 'ok'.",
+        "Không phải lead mua hàng nóng, có thể là đối tác/nhà cung cấp",
+        "Chỉ follow rất nhẹ theo chu kỳ, không đưa vào khách ưu tiên tuần này."
+      ],
+      [
+        "2026-08-15",
+        "Alviaa Alviaa",
+        "Chưa xác định",
+        "Có level tag",
+        "Có dấu hiệu muốn đặt hàng nhưng yêu cầu email ngoài Alibaba.",
+        "Theo dõi rủi ro",
+        "Nếu buyer quay lại, yêu cầu giữ trao đổi thông số và order trong Alibaba."
+      ],
+      [
+        "2026-08-06",
+        "steven s",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview chỉ thấy 'We cannot do that'. Lượt click sau bị giữ ở chat Keneth nên chưa đủ transcript riêng.",
+        "Cần rà lại nếu mở rộng",
+        "Tìm bằng search tên khi có thời gian, chỉ đưa lên ưu tiên nếu thấy nhu cầu sản phẩm thật."
+      ],
+      [
+        "2026-08-06",
+        "samra Ali",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview chỉ thấy 'It’s nearly the same to that'. Lượt click sau chưa tách được khỏi Keneth.",
+        "Cần rà lại",
+        "Mở lại bằng search tên để xác nhận sản phẩm và nhu cầu."
+      ],
+      [
+        "2026-08-04",
+        "Anel Rizabek",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview: 'Please send me your detailed specification regarding the puree.'",
+        "Có tín hiệu sản phẩm puree nhưng chưa mở sâu",
+        "Gửi specification sheet cho puree: Brix/pH/packing/MOQ/shelf life/chứng chỉ; hỏi loại puree và số lượng."
+      ],
+      [
+        "2026-08-06",
+        "Gohar Shehzad",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview: 'Okay, just give me the address, I’ll check'.",
+        "Có thể đang kiểm tra ship/địa chỉ",
+        "Rà lại hội thoại riêng; nếu buyer cần địa chỉ kho/nhà máy thì gửi đầy đủ và hỏi sản phẩm."
+      ]
+    ],
+    "It phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-09-06",
+        "Ali MohamedAli",
+        "Chỉ phản hồi “ok”, chưa thấy nhu cầu/sản phẩm/số lượng mới",
+        "Chưa tính lead ưu tiên"
+      ],
+      [
+        "2026-09-04",
+        "Smart assistant",
+        "Chỉ là nhắc hệ thống, không phải buyer",
+        "Không tính lead"
+      ],
+      [
+        "2026-08-31",
+        "Hendrychova Cost",
+        "Buyer để email ngoài và hệ thống báo tài khoản đã bị hủy/bị kiểm soát, không reply được",
+        "Không tính là lead ưu tiên dù có hỏi catalog/quotation"
+      ],
+      [
+        "2026-08-29",
+        "Anne Zhang",
+        "Chỉ thấy translation tip, chưa có nhu cầu buyer rõ trong phần đọc tuần này",
+        "Không đưa vào lead chính; kiểm tra lại nếu buyer nhắn sản phẩm/số lượng"
+      ],
+      [
+        "2026-08-18",
+        "zhi ping chen",
+        "Trung Quốc/Philippines liên quan",
+        "L?",
+        "Phản hồi: “Please ask a Philippines supplier”",
+        "Chưa nêu",
+        "Không phù hợp với nguồn cung Viet ColdChain hiện tại",
+        "Không phù hợp",
+        "Không ưu tiên; chỉ hỏi lại nếu khách vẫn cần nguồn Việt Nam"
+      ],
+      [
+        "2026-08-22",
+        "User name",
+        "Chưa xác định",
+        "L?",
+        "Yêu cầu gửi catalog tới email bên ngoài, nói mua số lượng lớn nhưng tên không rõ",
+        "Large quantities (không nêu cụ thể)",
+        "Dấu hiệu rủi ro/off-platform vì chỉ yêu cầu gửi email ngoài và không có thông tin công ty rõ",
+        "Rủi ro / không nên ra ngoài Alibaba",
+        "Giữ trao đổi trong Alibaba, yêu cầu tên công ty, sản phẩm, số lượng, quốc gia trước khi gửi catalog"
+      ],
+      [
+        "2026-08-24",
+        "Leo Li",
+        "Trung Quốc",
+        "L?",
+        "Tin giới thiệu plant extracts/herbal supplements từ nhà cung cấp khác",
+        "Không liên quan",
+        "Có vẻ seller/nhà cung cấp chào hàng, không phải buyer mua Viet ColdChain",
+        "Spam / không lấy",
+        "Không xử lý"
+      ],
+      [
+        "2026-08-18",
+        "DOCK RACE WEAR",
+        "Tin mẫu xin catalog và yêu cầu gửi tới email INFO.HACAMY@BK.RU.",
+        "Nghi spam/off-platform, không phân tích sâu."
+      ],
+      [
+        "2026-08-12",
+        "Tanima Mukherjee",
+        "Chỉ hiện Translation Tip.",
+        "Không tính lead thật."
+      ],
+      [
+        "2026-08-09",
+        "maxiansheng maxiansheng",
+        "Auto reception stopped, chưa thấy buyer hỏi sản phẩm.",
+        "Không ưu tiên."
+      ],
+      [
+        "2026-07-24",
+        "Muhammad Nafi / Rahma Agrebi",
+        "AI follow-up tự động, chưa thấy phản hồi buyer mới.",
+        "Theo dõi thấp."
+      ],
+      [
+        "2026-07-30",
+        "jiarui zhou",
+        "Chỉ hiện Translation Tip.",
+        "Không phân tích sâu."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 22,
+    "Khach uu tien": 21,
+    "Can theo doi": 23,
+    "It phan hoi": 13
+  }
+}

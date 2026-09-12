@@ -1,0 +1,1205 @@
+{
+  "store": "G8 Home",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "14UCEVfn8ECHJdpV0PGy21JGJLvPoGjLMy9dbEwWvJlE",
+    "title": "g8_home_onetalk_leads_2026-07-23_29",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 672888124,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 898250956,
+        "read_range": "A1:Z1030"
+      },
+      {
+        "title": "Can theo doi",
+        "sheetId": 46074388,
+        "read_range": "A1:Z1026"
+      },
+      {
+        "title": "It phan hoi",
+        "sheetId": 929218460,
+        "read_range": "A1:Z1018"
+      },
+      {
+        "title": "Tin nhan goi y",
+        "sheetId": 196406038,
+        "read_range": "A1:Z1000"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú vận hành"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "Mốc 03-08 và 18-24 đã rà lại",
+        "Lead ưu tiên tập trung LED bulb: A/T bulb, SKD bulb, DOB/aluminum housing, 6500K, A80, EXW price 5W/9W. Nhiều dòng chỉ “for the inquiry/sir” không đưa vào ưu tiên."
+      ],
+      [
+        "Khoảng bổ sung",
+        "03/08-08/08 và 18/08-24/08/2026",
+        "Dữ liệu mới chèn trên cùng, giữ nguyên dữ liệu cũ bên dưới."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "8 buyer",
+        "md hashem uddin, Jonas Ndinda, MD SHAMEM HOSSAN, billal hossain, Tarikul Islam, ramadan mo, Marcelo Choque, Rupesh Maharjan."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "20 buyer/tin nhắn rà soát trên OneTalk",
+        "4 khách ưu tiên; 7 cần theo dõi; 6 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "09/09/2026 - 11/09/2026",
+        "Tin mới nhiều nhưng đa số thiếu tên thật; chỉ ưu tiên khi có spec/số lượng/sản phẩm rõ."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "LED lamp + một số inquiry lẫn ngành khác",
+        "Có lead hỏi 8 strand, size 10-32mm và LED lamp aluminum body; cần làm rõ có đúng sản phẩm G8 không."
+      ],
+      [
+        "Rủi ro chính",
+        "Nhiều hội thoại chỉ “for inquiry”, “thank you”, “yes”",
+        "Cần hỏi chuẩn form: sản phẩm, watt/spec, quantity, country, MOQ."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "23 buyer rà soát trên OneTalk",
+        "6 khách ưu tiên; 8 cần theo dõi; 6 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "30/08/2026 - 03/09/2026",
+        "Tin nhắn mới khá nhiều, nhưng nhiều hội thoại chỉ là câu mở đầu/seller hỏi lại spec; chỉ tính lead khi có sản phẩm, MOQ, báo giá hoặc yêu cầu kỹ thuật."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "LED bulb / SKD bulb / finished bulb / DOB 18W",
+        "Nhu cầu tập trung vào bóng LED E27/B22, 12W/18W, màu 6500K/3200K, MOQ wholesale 5000 pcs."
+      ],
+      [
+        "Rủi ro chính",
+        "Khách nhỏ hỏi lẻ + thiếu spec",
+        "Cần chuẩn hóa câu hỏi nhanh: watt, base E27/B22, SKD hay finished, số lượng, quốc gia/cảng nhận."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "9 lead đã lọc",
+        "4 khách ưu tiên; 4 cần theo dõi; 1 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "Tuần 25/08/2026",
+        "Tập trung buyer có phản hồi thật, có nhu cầu rõ hoặc vướng bước báo giá/ship/MOQ."
+      ],
+      [
+        "Khách ưu tiên",
+        "4",
+        "Abdul Halim, Meelay Cho, Qazi Zia, Taraq Khan."
+      ],
+      [
+        "Khách cần theo dõi / ít phản hồi",
+        "5",
+        "4 lead cần khai thác thêm + 1 nhóm khách hỏi MOQ/khách nhỏ."
+      ],
+      [
+        "Khoảng thời gian đã cập nhật",
+        "23/07-17/08/2026",
+        "Bảng tích lũy: tuần mới được chèn lên trên cùng, dữ liệu cũ giữ nguyên bên dưới."
+      ],
+      [
+        "Khách có phản hồi/nội dung thật cần ưu tiên",
+        "23",
+        "15 lead cũ + 8 lead mới tuần 14-16/08."
+      ],
+      [
+        "Khách cần theo dõi nhẹ",
+        "12",
+        "10 dòng cũ + 2 dòng cần theo dõi mới."
+      ],
+      [
+        "Khách ít phản hồi/không ưu tiên",
+        "11",
+        "10 dòng cũ + 1 dòng ít phản hồi mới."
+      ],
+      [
+        "Vấn đề nổi bật",
+        "Specs/MOQ/báo giá cần chuẩn hóa",
+        "Nhiều buyer hỏi specs, wattage, MOQ, price list; cần chuẩn bị spec sheet và báo giá nhanh."
+      ],
+      [
+        "Hành động ưu tiên",
+        "Gửi specs + hỏi model/số lượng",
+        "Với khách hỏi kỹ thuật, gửi datasheet chính thức kèm ảnh, sau đó hỏi wattage, B22/E27, CCT, số lượng và cảng nhận hàng."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Sản phẩm / nhu cầu hỏi",
+        "Số lượng",
+        "Nội dung đã đọc trong tin nhắn",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-12",
+        "Vinod Kumar Katyal / KVR INTEXX",
+        "Ấn Độ",
+        "Có level tag",
+        "Dây PP 3 tao và 4 tao, màu nâu, đường kính 10-28mm, dùng cho đánh cá",
+        "15 tấn",
+        "Buyer nêu đầy đủ quy cách và nhắc hai lần đang chờ báo giá. Hồ sơ: KVR INTEXX, email info@kvrintexx.com, 90 ngày có 99 lượt xem sản phẩm và 90 ngày đăng nhập.",
+        "Rất cao",
+        "Gửi báo giá ngay theo từng đường kính 10-28mm, lực kéo/đóng gói, FOB/CIF tới cảng Ấn Độ, thời gian sản xuất và hiệu lực giá; xác nhận cơ cấu 3 tao/4 tao theo từng khối lượng."
+      ],
+      [
+        "2026-08-24",
+        "Abdul Halim",
+        "Chưa xác định",
+        "L?",
+        "Wholesale SKD LED Bulb 12W/18W/7W/5W, B22/E27, 6500K/3200K; đã có order card",
+        "5,000 pcs",
+        "Đã xác nhận order card: USD 0.13/pc, tổng USD 4,402.43; đang chờ thanh toán Alibaba",
+        "Lead nóng - ưu tiên rất cao",
+        "Follow thanh toán ngay, xác nhận cấu hình, nhắc Trade Assurance và lịch sản xuất"
+      ],
+      [
+        "2026-08-16",
+        "MD SHAMEM HOSSAN",
+        "Chưa xác định",
+        "Có level tag",
+        "Cần LED bulb SKD, hỏi catalogue/specs; muốn xem accessories 3W-50W; hỏi có manufacture SKD LED không.",
+        "Chưa chốt",
+        "Buyer phản hồi nhiều lần, đã nhận catalogue G8 Home_Catalogue.pdf, yêu cầu specs.",
+        "Rất cao",
+        "Gửi specs sheet ngắn cho SKD LED bulb 3W-50W; hỏi wattage ưu tiên, B22/E27, CCT, số lượng mỗi loại và cảng nhận hàng."
+      ],
+      [
+        "2026-08-15",
+        "Mohamed ElDawly",
+        "Egypt",
+        "Có level tag",
+        "Hỏi giá SKD 12W LED bulb; seller báo USD0.21/pcs EXW, qty 5000; buyer nói giá quá cao và có nguồn thấp hơn.",
+        "5000 pcs",
+        "Có quote gần hoàn chỉnh: product, unit price, qty, address Egypt; thiếu shipping fee.",
+        "Rất cao",
+        "Hỏi target price và tiêu chuẩn chất lượng nguồn rẻ hơn; nhấn mạnh 2 năm bảo hành/20.000 giờ; báo best price theo 5k/10k/20k và phí vận chuyển."
+      ],
+      [
+        "2026-08-14",
+        "Huseyin Temel",
+        "Turkey",
+        "Có level tag",
+        "Inquiry 9W warm white/white SKD LED bulb; lịch sử cũ từng hỏi giá 100.000 units và assembled product.",
+        "1 inquiry / lịch sử 100.000 pcs",
+        "Có lịch sử số lượng lớn, tuần này seller hỏi feedback giá USD0.211/pcs.",
+        "Rất cao",
+        "Follow tiếng Thổ/Anh: xác nhận nhu cầu 9W, assembled hay SKD, số lượng dự kiến; gửi lại giá theo 5k/20k/100k và điều kiện FOB/EXW."
+      ],
+      [
+        "2026-08-10",
+        "Sagar Hegde",
+        "Chưa thấy trong preview",
+        "Chưa thấy",
+        "Chargers/connectors: khách nói đã có chargers, cần connectors được soldered và assembled.",
+        "Chưa rõ",
+        "Preview rõ: 'we have the chargers, we need it the connectors to be soldered and assembled'.",
+        "Rất cao",
+        "Hỏi số lượng connectors, loại đầu nối, ảnh/bản vẽ, yêu cầu soldering/assembly, tiêu chuẩn test. Gửi xác nhận G8 có thể làm lắp ráp theo yêu cầu nếu đủ MOQ."
+      ],
+      [
+        "2026-07-29",
+        "Nanaopoku Yeboah",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Bóng LED 10W, 15W, 20W; buyer quay lại hỏi price list.",
+        "Chưa chốt",
+        "Buyer nhắn: cần price list. Lịch sử cũ từng hỏi bulbs 10W-20W và đã được báo giá 10W 0.186 USD, 15W 0.222 USD, 20W 0.282 USD.",
+        "Rất cao",
+        "Gửi lại bảng giá gọn, hỏi số lượng từng wattage, chân B22/E27, màu sáng và cảng/quốc gia nhận hàng. Nhấn mạnh MOQ bán buôn 5000 pcs/wattage nếu áp dụng."
+      ],
+      [
+        "2026-09-11",
+        "961253964",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer hỏi “how about 8strand? do you have?”",
+        "Chưa rõ",
+        "Có nhu cầu spec cụ thể nhưng có thể lệch ngành LED, cần xác định sản phẩm trước",
+        "Cao",
+        "Hỏi buyer đang hỏi 8-strand của sản phẩm nào, gửi ảnh/spec; nếu không thuộc LED thì lọc khỏi lead"
+      ],
+      [
+        "2026-09-11",
+        "979208978",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer nhắn “size 10mm to 32 mm”",
+        "Chưa rõ",
+        "Có thông số size rõ nhưng chưa chắc thuộc sản phẩm G8; cần làm rõ loại hàng",
+        "Cao",
+        "Hỏi sản phẩm gì cần size 10-32mm, số lượng và ứng dụng; nếu là LED thì xin watt/base"
+      ],
+      [
+        "2026-09-11",
+        "1789147456 / Yanuardi",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "LED lamp aluminum body, high luminous efficiency, office/home decoration; buyer hỏi shipping costs",
+        "Chưa rõ",
+        "Lead đúng ngành LED, có nhu cầu logistics/ship",
+        "Cao",
+        "Hỏi địa chỉ nhận hàng, quantity, model/watt và gửi quote + freight"
+      ],
+      [
+        "2026-09-11",
+        "7031621429",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Tin nhắn “1.8 CBM”",
+        "1.8 CBM",
+        "Có thông tin logistics/CBM, cần xác định đơn hàng tương ứng",
+        "Cao",
+        "Hỏi sản phẩm, số lượng carton và địa chỉ để tính vận chuyển/confirm packing"
+      ],
+      [
+        "2026-09-03",
+        "Rambinay Sah",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Đã gửi quotation, seller nhắc “Please check my quotation sir”",
+        "Chưa rõ",
+        "Có báo giá nhưng chưa thấy buyer phản hồi sau báo giá",
+        "Cao",
+        "Follow lại bằng câu ngắn: đã xem báo giá chưa, cần chỉnh watt/base/số lượng/ship không"
+      ],
+      [
+        "2026-09-03",
+        "Procurement Mineazy",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller nhắc buyer check price và feedback",
+        "Chưa rõ",
+        "Tên buyer có tín hiệu procurement, đã có giá nhưng thiếu phản hồi",
+        "Cao",
+        "Hỏi feedback về giá, quantity target, quốc gia nhận hàng; đề xuất giá theo MOQ 5000 pcs"
+      ],
+      [
+        "2026-09-02",
+        "Raju Beta",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "AC 220V LED bulb E27, 6500K/3200K, dùng residential/warehouse lighting",
+        "Chưa rõ",
+        "Đã có sản phẩm/spec tương đối rõ, cần khai thác dự án hoặc wholesale",
+        "Cao",
+        "Gửi spec sheet 12W/E27/B22, hỏi quantity và có cần hỗ trợ project installation không"
+      ],
+      [
+        "2026-09-01",
+        "Sugeng Lampoe",
+        "Indonesia / tiếng Indonesia",
+        "Chưa thấy L",
+        "LED bulb wholesale; buyer hỏi “klo cb moq nya 1000 pcs dulu bisa kah bos” tức muốn thử MOQ 1000 pcs trước",
+        "1000 pcs thử",
+        "Buyer có nhu cầu thật nhưng thấp hơn MOQ chuẩn; có thể là đơn test để mở rộng sau",
+        "Cao",
+        "Báo chính sách MOQ 5000 pcs, nếu muốn test 1000 pcs cần giá cao hơn hoặc mix model; hỏi watt/base và địa chỉ Indonesia"
+      ],
+      [
+        "2026-09-01",
+        "alsdyq mhjwb",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi SKD bulb hay finished bulb",
+        "Chưa rõ",
+        "Buyer có nhu cầu đúng ngành LED, đang ở bước xác định loại hàng",
+        "Cao",
+        "Hỏi buyer muốn SKD hay finished, watt/base/color temperature, quantity và cảng nhận"
+      ],
+      [
+        "2026-08-31",
+        "Fazle Pilu",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer/seller trao đổi về 18W DOB target",
+        "Chưa rõ",
+        "Lead đúng ngành, cần spec kỹ thuật DOB 18W",
+        "Cao",
+        "Xin ảnh/spec DOB target, base, lumen, PCB/driver yêu cầu và số lượng"
+      ],
+      [
+        "2026-08-23",
+        "Meelay Cho",
+        "Myanmar / Naypyidaw",
+        "L?",
+        "LED bulb, E27 base, mix 4000 pcs 6500K + 1000 pcs 3200K; cần tính shipping/landed cost để bán tại thị trường",
+        "5,000 pcs",
+        "Khách chấp nhận MOQ 5000 nếu chi phí vận chuyển hợp lý; cần báo shipping",
+        "Lead nóng - ưu tiên cao",
+        "Tính shipping đến Naypyidaw, gửi tổng landed cost, hỏi cách đóng gói/đơn vị nhận hàng"
+      ],
+      [
+        "2026-08-15",
+        "Md Mannan",
+        "Chưa xác định",
+        "Có level tag",
+        "Hỏi giá PCB cho mọi wattage, hỏi specs; từng nói 3000 pcs, seller báo MOQ 5000 pcs mỗi size.",
+        "3000 pcs / MOQ 5000 pcs",
+        "Buyer hỏi kỹ về wattage, PCB, A/T bulb; đang chờ specs.",
+        "Cao",
+        "Gửi bảng specs PCB/DOB theo wattage; giải thích MOQ 5000 pcs/size, có thể mix mẫu không; xin wattage chính để quote."
+      ],
+      [
+        "2026-08-14",
+        "archil inaishvili",
+        "Chưa xác định (tên Georgia)",
+        "Có level tag",
+        "Hỏi G8 HOME A70-12W/G01 LED bulb; quan tâm model/wattage 12-15-18-50, A bulb hoặc T bulb.",
+        "Chưa rõ",
+        "Buyer trả lời model/wattage nhưng chưa nói số lượng.",
+        "Cao",
+        "Gửi bảng chọn A/T bulb, wattage 12/15/18/50, B22/E27, CCT; hỏi số lượng mỗi wattage để báo giá tốt nhất."
+      ],
+      [
+        "2026-08-14",
+        "Twara David",
+        "Chưa xác định",
+        "Có level tag",
+        "Inquiry LED bulb 9W-12W warm white, muốn base screw, không phải loại 2-pin; hỏi sản phẩm B22/E27 220V.",
+        "1 piece inquiry",
+        "Buyer nêu specs rõ: warm white 9W-12W, base screw.",
+        "Cao",
+        "Xác nhận base E27/B22 dạng screw, gửi specs 9W/12W và MOQ bán buôn; hỏi số lượng order thật vì inquiry đang để 1 piece."
+      ],
+      [
+        "2026-08-14",
+        "Sohail Aftab",
+        "Chưa xác định",
+        "Có level tag",
+        "Cần DOB only, hỏi số lượng trong carton, trọng lượng, kích thước; buyer xác nhận 'yes' và seller nói 'this is my DOB'.",
+        "Chưa rõ",
+        "Buyer hỏi thông số đóng gói/kỹ thuật, có nhu cầu DOB.",
+        "Cao",
+        "Gửi carton packing: pcs/carton, GW/NW, carton size, DOB specs; hỏi wattage, base và số lượng."
+      ],
+      [
+        "2026-08-10",
+        "Rahul Yadav",
+        "Chưa thấy trong preview",
+        "Có level tag",
+        "LED bulb / MOQ bán buôn.",
+        "MOQ 5000 pcs",
+        "Preview: seller báo 'the MOQ is 5000pcs sir'.",
+        "Cao",
+        "Gửi bảng giá theo wattage, hỏi khách cần B22/E27, 6500K/3200K, số lượng từng wattage và cảng nhận hàng."
+      ],
+      [
+        "2026-08-08",
+        "AliRaza Ansari",
+        "Chưa thấy trong preview",
+        "Có level tag",
+        "Khách yêu cầu specs.",
+        "Chưa rõ",
+        "Preview: 'please send specs'.",
+        "Cao",
+        "Gửi spec sheet chuẩn cho dòng sản phẩm khách đang xem: wattage, lumen, CRI, PF, lifetime, packing, MOQ. Hỏi số lượng và thị trường bán."
+      ],
+      [
+        "2026-07-29",
+        "Nga Ta",
+        "Việt Nam / tiếng Việt",
+        "Có level tag",
+        "G8 HOME LED DOB Bulb SKD Parts 7W/9W/12W/15W, Aluminum, B22/E27, 6500K/3200K, CRI83.",
+        "Chưa rõ",
+        "Buyer chủ động hỏi có ai chat không; seller/auto reception hỏi lại cần hỗ trợ sản phẩm phần nào.",
+        "Cao",
+        "Nhắn tiếng Việt, hỏi khách cần linh kiện SKD hay bóng hoàn thiện, wattage nào, số lượng dự kiến và địa chỉ/kho nhận. Gửi catalog DOB bulb SKD."
+      ],
+      [
+        "2026-07-26",
+        "Karachi King",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "12W White DOB PCB, buyer đang so sánh nhà cung cấp.",
+        "500 pcs",
+        "Buyer nói đang so sánh supplier trước đơn đầu tiên, yêu cầu giá nhà máy ước tính cho 12W White DOB PCB 500 pcs.",
+        "Cao",
+        "Dù MOQ chuẩn có thể cao hơn, nên phản hồi chuyên nghiệp: MOQ bán buôn, giá tham khảo theo 500/5000/10000 pcs, thông số PCB, và hỏi có thể tăng số lượng hoặc gom model không."
+      ],
+      [
+        "2026-07-25",
+        "Son Min",
+        "Có tín hiệu Nga/Trung Quốc qua nội dung chat",
+        "Có level tag",
+        "Khách hỏi specs, địa điểm logistics như Yiwu/Guangzhou/Urumqi, nói mỗi size 5000 pcs.",
+        "5000 pcs mỗi size",
+        "Buyer trao đổi nhiều bằng tiếng Nga, hỏi specs là gì, nhắc tới Yiwu/Guangzhou/Urumqi và mỗi kích thước 5000 pcs.",
+        "Cao",
+        "Gửi ảnh + spec sheet dễ hiểu, không chỉ file chữ. Hỏi khách muốn nhận hàng tại Trung Quốc hay xuất trực tiếp, xác nhận từng wattage/size 5000 pcs."
+      ],
+      [
+        "2026-07-24",
+        "Deepak Maran",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Thông số kỹ thuật LED DOB Bulb 9W.",
+        "Chưa rõ",
+        "Có bảng specification chi tiết: 9W, 90-370VAC, PF >=0.95, THD <15%, 6500K, CRI >=80, 1000lm, lifetime 25,000h, warranty 2 years.",
+        "Cao",
+        "Khách đã quan tâm sâu về specs. Cần gửi datasheet chính thức, hỏi số lượng test/mass order, yêu cầu chuẩn thị trường và target price."
+      ],
+      [
+        "2026-07-24",
+        "Tanin Rahman",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Wholesale LED Bulb T10-60/G01 6500K DOB Driver, B22/E27, 97 Lm/W.",
+        "5000 pcs",
+        "Buyer từng nói please send specs; ngày 24/7 phản hồi: that is not specs.",
+        "Cao",
+        "Cần xử lý ngay vì khách đang không hài lòng về tài liệu. Gửi đúng spec sheet có bảng kỹ thuật, ảnh sản phẩm, packing, chứng nhận và hỏi khách cần thông số nào chưa có."
+      ],
+      [
+        "2026-08-21/24",
+        "Qazi Zia",
+        "Chưa xác định",
+        "L?",
+        "12W SKD LED bulb, hỏi giá 10,000 pcs; quan tâm top cover PP, yêu cầu video close-up",
+        "10,000 pcs",
+        "Khách hỏi sâu về sản phẩm, giá đã báo USD 0.23/pc EXW, thiếu địa chỉ nhận hàng",
+        "Lead tốt - ưu tiên cao",
+        "Gửi video/ảnh close-up top cover PP, hỏi địa chỉ nhận hàng, xác nhận standard white cover hay custom logo"
+      ],
+      [
+        "2026-08-20/24",
+        "Taraq Khan",
+        "Chưa xác định",
+        "L?",
+        "Hỏi giá 5,000 pcs, đang tư vấn 15W SKD, B22/E27, 6500K",
+        "5,000 pcs",
+        "MOQ đạt, đã có thông tin giá USD 0.13/pc; cần khách xác nhận model/watt",
+        "Lead tốt - ưu tiên cao",
+        "Chốt wattage/base, gửi proforma/order card nếu khách xác nhận"
+      ],
+      [
+        "2026-08-14",
+        "Sarang Ali",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi G8 HOME LED DOB Bulb 20W/15W/12W/9W; buyer nói cần 15W piece, seller hỏi số lượng.",
+        "Chưa rõ",
+        "Có nhu cầu sản phẩm cụ thể nhưng chưa có số lượng.",
+        "Trung bình-cao",
+        "Báo 15W có/không, MOQ và giá theo số lượng; hỏi B22/E27, màu sáng và qty."
+      ],
+      [
+        "2026-08-08",
+        "Md Fakhruddin",
+        "Chưa thấy trong preview",
+        "Có level tag",
+        "Khách hỏi lại sản phẩm/thông tin chưa hiểu.",
+        "Chưa rõ",
+        "Preview: 'what is that?'.",
+        "Trung bình-cao",
+        "Gửi lại ảnh sản phẩm + mô tả ngắn, hỏi khách đang cần bóng LED hoàn thiện, SKD parts hay PCB/DOB."
+      ],
+      [
+        "2026-08-08",
+        "Zamna Khan",
+        "Chưa thấy trong preview",
+        "Có level tag",
+        "Hỏi xuất xứ nhà cung cấp.",
+        "Chưa rõ",
+        "Preview: 'Are you from China sir?'.",
+        "Trung bình-cao",
+        "Nhấn mạnh G8 là nhà sản xuất/nguồn hàng từ Việt Nam, gửi ảnh nhà máy, chứng nhận và hỏi khách cần model/số lượng nào."
+      ],
+      [
+        "2026-07-29",
+        "Nausher Rasel",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "LED DOB Bulb B22/E27, 6500K/3200K, CRI>=83, 98 lm/W.",
+        "Chưa rõ",
+        "Buyer gửi inquiry sản phẩm, auto hỏi chọn base và màu sáng. Sau đó seller nhắn thank you/for the inquiry.",
+        "Trung bình-cao",
+        "Follow lại hỏi khách chọn B22 hay E27, cold/warm white, wattage, số lượng. Gửi 3 lựa chọn giá theo MOQ 5000/10000/20000 pcs nếu có."
+      ],
+      [
+        "2026-07-28",
+        "A.K.M Zaman",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Khách yêu cầu thông số kỹ thuật/specs.",
+        "Chưa rõ",
+        "Buyer nhắn ngày 14/7: please send specs; ngày 28/7 là AI follow-up.",
+        "Trung bình-cao",
+        "Gửi PDF/spec sheet chuẩn cho dòng khách đã hỏi, kèm bảng wattage, lumen, CRI, PF, lifetime, packing. Hỏi quantity và thị trường bán."
+      ],
+      [
+        "2026-07-24",
+        "Ezekia Msemwa",
+        "Tanzania",
+        "Có level tag",
+        "LED lights wholesale.",
+        "MOQ 5000 pcs/wattage",
+        "Buyer nói I’m from Tanzania. Seller trả lời là nhà sản xuất đèn LED từ Việt Nam và MOQ 5000 pcs mỗi wattage.",
+        "Trung bình-cao",
+        "Hỏi buyer đang nhập khẩu model nào tại Tanzania, số lượng theo wattage, cảng nhận hàng. Gửi MOQ + giá FOB/EXW và lead time."
+      ],
+      [
+        "2026-08-01",
+        "RafayAhmed Khan",
+        "Chưa thấy trong preview",
+        "Có level tag",
+        "Khách nói 'This is my LED bulb'.",
+        "Chưa rõ",
+        "Preview từ list: buyer có ảnh/thông tin bóng LED của họ.",
+        "Trung bình",
+        "Hỏi ảnh/spec đầy đủ, wattage, input voltage, base, CCT, số lượng. Nếu muốn làm tương tự, xin mẫu hoặc datasheet."
+      ],
+      [
+        "2026-08-22",
+        "md hashem uddin",
+        "Chưa xác định",
+        "Buyer/seller trao đổi chọn A bulb hay T bulb.",
+        "Chưa rõ",
+        "Có nhu cầu LED bulb cụ thể theo loại bóng A/T, cần spec wattage/base/quantity.",
+        "Cao",
+        "Hỏi A/T bulb, wattage, base E27/B22, CCT, quantity và destination để báo giá."
+      ],
+      [
+        "2026-08-21",
+        "Jonas Ndinda",
+        "Chưa xác định",
+        "Seller yêu cầu buyer gửi thêm specs và quantity.",
+        "Chưa rõ",
+        "Lead có nhu cầu nhưng thiếu spec/số lượng.",
+        "Cao",
+        "Gửi form spec LED: wattage, base, CCT, housing, quantity; kèm MOQ wholesale."
+      ],
+      [
+        "2026-08-21",
+        "MD SHAMEM HOSSAN",
+        "Chưa xác định",
+        "Seller gửi catalogue và hỏi buyer chọn item nào.",
+        "Chưa rõ",
+        "Đã tới bước chọn sản phẩm từ catalogue.",
+        "Cao",
+        "Follow bằng 3 model bán chạy + bảng MOQ/giá; yêu cầu buyer chọn wattage và quantity."
+      ],
+      [
+        "2026-08-18",
+        "billal hossain",
+        "Chưa xác định",
+        "Trao đổi về A80: buyer/seller nói “i have this A80”.",
+        "Chưa rõ",
+        "Có product code/spec A80, cần hỏi wattage/base/CCT.",
+        "Cao",
+        "Hỏi A80 wattage, base E27/B22, housing, quantity; báo MOQ và giá theo bậc."
+      ],
+      [
+        "2026-08-06",
+        "Tarikul Islam",
+        "Chưa xác định",
+        "Trao đổi “you want SKD bulb right?”",
+        "Chưa rõ",
+        "Lead đúng nhóm SKD bulb, cần chốt wattage và quantity.",
+        "Cao",
+        "Xác nhận SKD bulb, hỏi 5W/9W/12W/15W, base, CCT, quantity và cảng đến."
+      ],
+      [
+        "2026-08-06",
+        "ramadan mo",
+        "Chưa xác định",
+        "Trao đổi về chất lượng DOB và aluminum housing.",
+        "Chưa rõ",
+        "Có tiêu chí kỹ thuật rõ: DOB + aluminum housing.",
+        "Cao",
+        "Gửi spec sheet DOB/aluminum housing, hỏi wattage, CCT, quantity và yêu cầu chứng chỉ."
+      ],
+      [
+        "2026-08-06",
+        "Marcelo Choque",
+        "Chưa xác định",
+        "Trao đổi về nhiệt màu 6500K.",
+        "Chưa rõ",
+        "Có thông số CCT rõ, cần bổ sung wattage/base/quantity.",
+        "Trung bình-cao",
+        "Hỏi 6500K cho wattage nào, base nào, số lượng và thị trường nhập khẩu."
+      ],
+      [
+        "2026-08-03",
+        "Rupesh Maharjan",
+        "Chưa xác định",
+        "Đã báo SKD price: 5W = 0.15 USD, 9W = 0.2 USD, EXW price.",
+        "5W/9W; giá EXW",
+        "Lead đã tới bước báo giá cụ thể, cần chốt quantity/terms.",
+        "Rất cao",
+        "Hỏi số lượng theo wattage, packaging, destination; đề xuất PI/quotation chính thức."
+      ]
+    ],
+    "Can theo doi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-24",
+        "@hotmail.com NA",
+        "Chưa xác định",
+        "Seller nói hiện có 9W/12W/15W available.",
+        "9W/12W/15W",
+        "Có sản phẩm/wattage rõ nhưng thiếu buyer need.",
+        "Trung bình",
+        "Hỏi buyer chọn wattage nào, quantity và destination."
+      ],
+      [
+        "2026-08-24",
+        "Meelay Cho",
+        "Chưa xác định",
+        "Tin nhắn liên quan LED bulb buyer muốn, nhưng thiếu thông tin đầy đủ.",
+        "Chưa rõ",
+        "Cần hỏi lại spec LED bulb.",
+        "Trung bình",
+        "Xin wattage/base/CCT/quantity."
+      ],
+      [
+        "2026-08-18",
+        "importadora exportadoratecum",
+        "Chưa xác định",
+        "Seller yêu cầu buyer gửi specs.",
+        "Chưa rõ",
+        "Có khả năng lead thật nhưng thiếu thông số.",
+        "Trung bình",
+        "Gửi form spec và MOQ wholesale."
+      ],
+      [
+        "2026-08-08",
+        "AliRaza Ansari",
+        "Chưa xác định",
+        "Seller yêu cầu gửi specs.",
+        "Chưa rõ",
+        "Cần buyer phản hồi thông số.",
+        "Trung bình",
+        "Hỏi wattage/base/CCT/quantity/destination."
+      ],
+      [
+        "2026-08-04",
+        "Abul Kalam Azad",
+        "Chưa xác định",
+        "Buyer nói sẽ thông báo vào ngày mai.",
+        "Chưa rõ",
+        "Có phản hồi nhưng chưa chốt nhu cầu.",
+        "Trung bình",
+        "Follow lại hỏi đã xác nhận spec/quantity chưa."
+      ],
+      [
+        "2026-09-11",
+        "200528748",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Snapshot chỉ thấy tên/số, chưa có nội dung buyer rõ",
+        "Cần mở sâu",
+        "Không đưa vào ưu tiên nếu chưa thấy sản phẩm/số lượng"
+      ],
+      [
+        "2026-09-11",
+        "7054811183",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi “How can I help you sir?”",
+        "Lead mở đầu thiếu nhu cầu",
+        "Hỏi buyer cần loại LED nào, watt, quantity và country"
+      ],
+      [
+        "2026-09-11",
+        "7086210956",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy “for the inquiry”",
+        "Thiếu nội dung",
+        "Chờ buyer gửi sản phẩm/spec; follow bằng form hỏi ngắn"
+      ],
+      [
+        "2026-09-11",
+        "7097820280",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy “for the inquiry”",
+        "Thiếu nội dung",
+        "Hỏi sản phẩm, watt, quantity, destination"
+      ],
+      [
+        "2026-09-10",
+        "1789444163",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy “for the inquiry”",
+        "Thiếu nội dung",
+        "Follow nếu buyer có product card trước đó"
+      ],
+      [
+        "2026-09-09",
+        "985294370",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi “what you want sir?”",
+        "Lead mở đầu",
+        "Hỏi rõ loại bóng/đèn, công suất, số lượng"
+      ],
+      [
+        "2026-09-10",
+        "1703576956",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer trả lời “yes”",
+        "Có phản hồi nhưng thiếu nội dung",
+        "Cần xem ngữ cảnh trước khi báo giá tiếp"
+      ],
+      [
+        "2026-09-03",
+        "MD MAHIN",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi lại purchase quantity",
+        "Lead mới thiếu số lượng",
+        "Follow hỏi số lượng, watt/base, SKD hay finished; chỉ báo giá khi đủ thông tin"
+      ],
+      [
+        "2026-09-03",
+        "Hameed Kamal",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller gửi catalogue và hỏi buyer muốn model nào",
+        "Buyer cần chọn model",
+        "Gửi 3 model bán chạy + MOQ/giá tham khảo, hỏi watt/base và thị trường bán"
+      ],
+      [
+        "2026-09-02",
+        "Mdsohag Mia",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi purchase quantity",
+        "Lead mới thiếu số lượng",
+        "Hỏi quantity tối thiểu, có thể mix 12W/18W để đủ MOQ không"
+      ],
+      [
+        "2026-09-02",
+        "Rakiswende KIENDREBEOGO",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller yêu cầu buyer gửi specs",
+        "Lead thiếu thông số",
+        "Gửi form hỏi nhanh: watt, base, voltage, CCT, quantity, destination"
+      ],
+      [
+        "2026-09-01",
+        "Zafar Niazi",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller báo chỉ bán wholesale MOQ 5000 pcs",
+        "Có thể là khách hỏi số lượng nhỏ",
+        "Chờ buyer xác nhận đủ MOQ; nếu không đủ thì đề xuất mix model hoặc giữ ít ưu tiên"
+      ],
+      [
+        "2026-09-01",
+        "sangam electronics",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller yêu cầu gửi specs",
+        "Tên buyer có tín hiệu điện tử/đại lý nhưng thiếu thông tin",
+        "Gửi mẫu spec list và hỏi 12W/18W, E27/B22, quantity"
+      ],
+      [
+        "2026-09-01",
+        "Haroon Haroon",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller giới thiệu G8 là nhà sản xuất LED tại Việt Nam",
+        "Lead mở đầu, chưa rõ sản phẩm",
+        "Hỏi nhu cầu nhập khẩu: bulb type, watt, MOQ, country"
+      ],
+      [
+        "2026-08-30",
+        "Rakib Hasan",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi specification của LED bulb muốn mua",
+        "Lead mới thiếu spec",
+        "Hỏi watt/base/CCT/quantity và gửi catalogue ngắn"
+      ],
+      [
+        "2026-08-24",
+        "Adilet Sagynbaev",
+        "Kyrgyzstan / Nga ngữ",
+        "L?",
+        "G8 HOME LED Bulb 15W, 6500K, AC220V, CRI>84, 1370lm, E27/B22, bảo hành 2 năm; hỏi wattage/base | SL: chưa nêu, MOQ 5000",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi E27 hay B22, số lượng, địa chỉ nhận hàng; gửi spec sheet ngắn"
+      ],
+      [
+        "2026-08-22/24",
+        "Mary Henewaa",
+        "Chưa xác định",
+        "L?",
+        "SKD bulbs, B22 base; khách hỏi tăng quantity lên 1000 pcs each nhưng seller MOQ 5000 pcs | SL: 1,000 pcs each, thấp hơn MOQ 5000",
+        "Lead có rào cản MOQ",
+        "Giải thích MOQ factory 5000, đề xuất gom wattage/mix để đủ MOQ hoặc chọn mẫu RTS nếu có"
+      ],
+      [
+        "2026-08-24",
+        "@hotmail.com NA",
+        "Chưa xác định",
+        "L?",
+        "Hỏi/trao đổi wattage LED bulb, hiện chỉ có 9W/12W/15W available | SL: chưa nêu",
+        "Lead cần xác minh",
+        "Hỏi quantity và base E27/B22 trước khi báo giá"
+      ],
+      [
+        "2026-08-24",
+        "FahadAli Khan / Breeze Shah / Mahmoud sawan",
+        "Chưa xác định",
+        "L?",
+        "Tin ngắn “sir/yes sir/image”, chưa đủ nhu cầu cụ thể | SL: chưa nêu",
+        "Lead sớm",
+        "Hỏi spec, wattage, base, quantity, shipping country"
+      ],
+      [
+        "2026-08-14",
+        "aaron nambafu",
+        "Kenya (theo mã +254, cần xác minh Customer)",
+        "Có level tag",
+        "Hỏi SKD LED bulb 5W-60W, màu white/warm white/green/blue/red; gửi WhatsApp +254 746574134 và yêu cầu quote qua WhatsApp.",
+        "Có nhu cầu nhưng có rủi ro off-platform/cảnh báo tin bị thu hồi",
+        "Giữ trao đổi trên Alibaba, trả lời trong chat: xác nhận wattage/base/CCT và gửi quote; không kéo sang WhatsApp nếu platform cảnh báo."
+      ],
+      [
+        "2026-08-16",
+        "JosephNielsen Planilla / Smart assistant",
+        "Chưa xác định",
+        "Có level tag / Official",
+        "Preview chủ yếu là nhắc auto-quotation/off reminder, không thấy buyer hỏi hàng mới.",
+        "Không phải lead mới rõ ràng",
+        "Không đưa vào ưu tiên; chỉ bật/kiểm tra auto quotation nếu cần."
+      ],
+      [
+        "2026-07-28",
+        "Riyaz M",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Từng hỏi T bulb; trong tuần chỉ có AI reconnect, buyer chưa phản hồi mới.",
+        "Có lịch sử nhưng tuần này chưa đủ sâu",
+        "Gửi 1 tin follow có ảnh T bulb/specs và hỏi còn cần báo giá không."
+      ],
+      [
+        "2026-07-27",
+        "User Name",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Inquiry 12W Bombillos LED 6500K, min order 5000; buyer phản hồi thank you/for the inquiry.",
+        "Có tín hiệu nhưng chưa rõ nhu cầu",
+        "Hỏi số lượng, thị trường bán và chân đèn cần dùng. Nếu không phản hồi thêm thì follow nhẹ."
+      ],
+      [
+        "2026-07-26",
+        "Hassan Ramzan",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Inquiry A-shape LED bulb SKD 12W/18W/7W/5W; trước đó từng cần thông tin recipient để check cost.",
+        "Có lịch sử trao đổi, cần xác minh lại",
+        "Hỏi lại thông tin người nhận để tính phí, đồng thời gửi MOQ và bảng giá theo wattage."
+      ],
+      [
+        "2026-07-25",
+        "Prudence Houngue",
+        "Tiếng Pháp",
+        "Có level tag",
+        "Buyer hỏi bằng tiếng Pháp 'il est où?' và trả lời 'd'accord'.",
+        "Có phản hồi nhưng nội dung chưa đủ rõ",
+        "Follow tiếng Pháp, hỏi khách cần sản phẩm nào, số lượng, quốc gia/cảng nhận hàng."
+      ],
+      [
+        "2026-07-23",
+        "Fahad Ali",
+        "Chưa thấy trong khung đọc",
+        "Có level tag",
+        "Preview: seller hỏi buyer muốn giá ship hay giá bóng.",
+        "Cần mở lại nếu muốn xác nhận sâu",
+        "Follow hỏi rõ buyer cần bulb price hay shipping price, số lượng và địa chỉ nhận."
+      ],
+      [
+        "2026-08-10",
+        "Shubrata D",
+        "Chưa thấy",
+        "Có level tag",
+        "Preview: 'sir?'.",
+        "Có phản hồi nhưng chưa rõ nhu cầu",
+        "Hỏi khách cần báo giá, specs hay kiểm tra model nào; gửi catalog ngắn."
+      ],
+      [
+        "2026-08-10",
+        "Kossi AGBLEGAN",
+        "Chưa thấy",
+        "Có level tag",
+        "Preview: 'for the inquiry'.",
+        "Chưa phản hồi sâu",
+        "Follow 1 lần: hỏi wattage/base/số lượng/cảng nhận hàng."
+      ],
+      [
+        "2026-08-10",
+        "Rudi Rudi",
+        "Chưa thấy",
+        "Có level tag",
+        "Preview: 'for the inquiry'.",
+        "Chưa phản hồi sâu",
+        "Follow nhẹ bằng câu hỏi lựa chọn: LED bulb, SKD parts hay PCB/DOB?"
+      ],
+      [
+        "2026-08-09",
+        "It park",
+        "Chưa thấy",
+        "Có level tag",
+        "Preview: 'thank you'.",
+        "Lịch sự nhưng chưa có bước mua rõ",
+        "Nhắn tiếp: bạn muốn báo giá mẫu nào, số lượng và địa chỉ nhận hàng?"
+      ],
+      [
+        "2026-08-01",
+        "Safa Motors",
+        "Chưa thấy",
+        "Có level tag",
+        "Preview: 'USD'.",
+        "Có thể liên quan báo giá, cần mở lại nếu follow sâu",
+        "Hỏi lại khách xác nhận sản phẩm, số lượng và điều kiện giá USD/FOB/EXW."
+      ]
+    ],
+    "It phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-08-24",
+        "Taraq Khan / FahadAli Khan / Breeze Shah",
+        "Chưa xác định",
+        "Chỉ thank you/sir/yes sir; chưa đủ nhu cầu sản phẩm."
+      ],
+      [
+        "2026-08-21",
+        "Hasan Murat / MD Shahadathossinmilon",
+        "Chưa xác định",
+        "Chỉ for the inquiry hoặc yêu cầu specs chung; chưa thấy buyer phản hồi cụ thể."
+      ],
+      [
+        "2026-08-08",
+        "Md Fakhruddin / Asad TV",
+        "Chưa xác định",
+        "Nội dung “what is that?” hoặc “for the inquiry”, chưa đủ nhu cầu."
+      ],
+      [
+        "2026-08-07",
+        "Buddika Buddika / KHAKUREL",
+        "Chưa xác định",
+        "Không bán số lượng nhỏ hoặc chỉ for the inquiry; chưa phải lead ưu tiên."
+      ],
+      [
+        "2026-09-11",
+        "799",
+        "Chỉ phản hồi “thank you”, chưa có nhu cầu mới",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-09-10",
+        "1043039871",
+        "Seller nói không bán small quantity",
+        "Khách có khả năng hỏi lẻ, không ưu tiên nếu không đạt MOQ"
+      ],
+      [
+        "2026-09-10",
+        "7072105543",
+        "Chỉ thấy “nono”",
+        "Không đủ dữ liệu lead"
+      ],
+      [
+        "2026-09-09",
+        "7087974986",
+        "Chỉ thấy “yes, I talked to you”",
+        "Cần ngữ cảnh, chưa tính lead chính"
+      ],
+      [
+        "2026-09-10",
+        "1788118911",
+        "Chỉ thấy “for the infor”",
+        "Ít dữ liệu"
+      ],
+      [
+        "2026-09-10",
+        "Smart assistant",
+        "Nhắc follow-up hệ thống, không phải buyer",
+        "Không tính lead"
+      ],
+      [
+        "2026-09-03",
+        "jabed hosen",
+        "Chỉ nhắn “sir”, chưa có sản phẩm/số lượng",
+        "Không tính lead chính, chỉ hỏi lại nhu cầu nếu muốn khai thác"
+      ],
+      [
+        "2026-09-03",
+        "Marco Shidonge",
+        "Chỉ thấy seller trả lời “for the inquiry”, chưa có nội dung buyer rõ",
+        "Ít dữ liệu, chưa đưa vào lead ưu tiên"
+      ],
+      [
+        "2026-09-01",
+        "MR Madni",
+        "Chỉ thấy “for the inquiry”, chưa có sản phẩm/số lượng",
+        "Ít phản hồi, chưa đủ điều kiện lead"
+      ],
+      [
+        "2026-09-01",
+        "Awaisdaula Awaisdaula",
+        "Chỉ thấy “for the inquiry”, chưa có nội dung rõ",
+        "Ít phản hồi, chờ buyer gửi nhu cầu thật"
+      ],
+      [
+        "2026-09-01",
+        "saidur rahman",
+        "Chỉ phản hồi “fine”, chưa thấy nhu cầu sản phẩm cụ thể",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-08-31",
+        "Hassan Yaar",
+        "Chỉ thấy “thank you sir”, chưa có bước mua hàng rõ",
+        "Tạm xếp ít phản hồi"
+      ],
+      [
+        "2026-08-24",
+        "Munir Ahmad / các khách hỏi MOQ",
+        "Nhiều khách hỏi nhỏ lẻ, chưa đủ MOQ",
+        "Chuẩn hoá câu trả lời MOQ 5000 pcs + gợi ý mix model để đủ MOQ; chỉ nâng ưu tiên khi buyer xác nhận đủ số lượng."
+      ],
+      [
+        "2026-08-14",
+        "Các preview chỉ có 'for the inquiry', 'thank you', 'sir?' không kèm nhu cầu mới",
+        "Không đủ dữ liệu lead thật",
+        "Bỏ qua, chỉ follow khi buyer nêu specs/số lượng rõ."
+      ],
+      [
+        "2026-07-28",
+        "Rahul Yadav",
+        "Preview chỉ thấy 'for the inquiry', chưa mở được nội dung sâu ổn định.",
+        "Không đưa vào khách ưu tiên nếu chưa có thêm phản hồi."
+      ],
+      [
+        "2026-07-27",
+        "Fiaz Ali",
+        "Preview: seller nói MOQ 5000 pcs; chưa đọc được toàn bộ hội thoại trong phiên này.",
+        "Cần kiểm tra lại nếu muốn phân loại chính xác."
+      ],
+      [
+        "2026-07-27",
+        "Thiva Thiva",
+        "Preview chỉ thấy 'ok'.",
+        "Theo dõi nhẹ, chưa đủ dữ liệu để coi là lead mạnh."
+      ],
+      [
+        "2026-07-27",
+        "malick Diouf",
+        "Preview: seller nói MOQ 5000 pcs mỗi wattage; click mở chưa ổn định.",
+        "Cần kiểm tra lại trước khi đưa vào ưu tiên."
+      ],
+      [
+        "2026-07-24",
+        "Shahriar Ahmed",
+        "Tuần này chủ yếu là AI reconnect; lịch sử 06/7 có inquiry sản phẩm.",
+        "Không phân tích sâu trong tuần 23-29/7."
+      ],
+      [
+        "2026-07-24",
+        "TheNALM Industries",
+        "Preview có câu 'Kindly prepare me a quotation', nhưng phiên click chưa mở đúng ổn định.",
+        "Cần mở lại, có thể là lead tốt nhưng chưa đủ chứng cứ trong bảng này."
+      ],
+      [
+        "2026-08-09",
+        "User name",
+        "User recalled a message.",
+        "Không tính lead đến khi khách gửi lại nhu cầu."
+      ],
+      [
+        "2026-08-01",
+        "AkandDigital SevaCentre / usman tariq",
+        "Preview ngắn: for the inquiry / How can I help you sir.",
+        "Chưa đủ dữ liệu để phân tích sâu."
+      ],
+      [
+        "2026-08-01",
+        "7015638135",
+        "Chỉ thấy [Inquiry], chưa mở được nội dung sâu.",
+        "Cần kiểm tra lại nếu muốn đưa vào lead ưu tiên."
+      ],
+      [
+        "2026-08-08 đến 2026-08-10",
+        "Các dòng chỉ có cảm ơn/for the inquiry",
+        "Không có thông tin sản phẩm, số lượng, quốc gia/cảng nhận.",
+        "Theo dõi nhẹ, không tính lead nóng."
+      ]
+    ],
+    "Tin nhan goi y": [
+      [
+        "Tình huống",
+        "Tin nhắn gợi ý bằng tiếng Anh"
+      ],
+      [
+        "Khách hỏi giá/price list",
+        "Thank you for your interest. Could you please confirm the wattage, base type (B22/E27), color temperature, and quantity for each model? Our wholesale MOQ is 5,000 pcs per wattage. I can prepare the best quotation with packing details and lead time today."
+      ],
+      [
+        "Khách hỏi specs",
+        "I will send you the full specification sheet, including wattage, lumen, CRI, PF, lifetime, packing, and available base type. Please let me know your target market and quantity, so I can match the right model for you."
+      ],
+      [
+        "Khách chê MOQ cao",
+        "For stable factory pricing, our standard MOQ is 5,000 pcs per wattage. If this is your first trial order, please share your target quantity and market. I will check the best possible solution for a trial batch."
+      ],
+      [
+        "Khách ở Tanzania/châu Phi",
+        "Thanks for your message. We are a Vietnam LED lighting manufacturer. Please tell me your destination port/city and the wattage you import most often. I can quote FOB/EXW price and suggest the best models for your market."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 22,
+    "Khach uu tien": 47,
+    "Can theo doi": 37,
+    "It phan hoi": 29,
+    "Tin nhan goi y": 5
+  }
+}

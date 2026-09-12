@@ -1,0 +1,646 @@
+{
+  "store": "CM Decor",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "1mnEzH8wn-6ZboYRkYP3QmU3yX0LUqWs4s4L9WTcGYKI",
+    "title": "CM Decor OneTalk Leads 2026-08-18",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 605534665,
+        "read_range": "A1:Z1012"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 899876426,
+        "read_range": "A1:Z1017"
+      },
+      {
+        "title": "Can theo doi",
+        "sheetId": 1868954230,
+        "read_range": "A1:Z1009"
+      },
+      {
+        "title": "It phan hoi",
+        "sheetId": 591243318,
+        "read_range": "A1:Z1011"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú vận hành"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "Mốc 03-08 và 18-24 đã rà lại",
+        "Lead rõ: JUNAID WARIS 24/08, Hannahchiwendu Christopher 08/08. Không thấy lead rõ trong 18-23; Williams mark 08/08 thiên về promotion, chưa phải nhu cầu mua rõ."
+      ],
+      [
+        "Khoảng bổ sung",
+        "03/08-08/08 và 18/08-24/08/2026",
+        "Lọc các tin kéo email ngoài/off-platform vào nhóm cần thận trọng; chỉ đưa ưu tiên khi có quantity/sản phẩm/địa chỉ hoặc bước báo giá rõ."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "2 buyer",
+        "JUNAID WARIS, Hannahchiwendu Christopher."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "10 buyer rà soát trên OneTalk",
+        "6 khách ưu tiên; 3 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "04/09/2026 - 10/09/2026",
+        "Tập trung garden/solar/outdoor lighting, địa chỉ giao, chứng chỉ CE, màu đen, setup ngoài trời."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Solar LED/garden lighting dự án châu Âu",
+        "Lead tốt nhất có điểm đến Turin Italy, yêu cầu 2700K, black outdoor floor-standing, CE/logistics."
+      ],
+      [
+        "Rủi ro chính",
+        "Thiếu quantity + phương thức vận chuyển",
+        "Cần hỏi ngay số lượng, cấu hình, packing và địa chỉ để báo total cost."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "12 buyer rà soát",
+        "7 khách ưu tiên; 3 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "28/08/2026 - 03/09/2026",
+        "Tập trung khách hỏi đèn sân vườn/ngoài trời, dự án thương mại, vật liệu, chứng chỉ và vận chuyển."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Garden lighting / outdoor commercial display",
+        "Lead tốt nhất có thông số kỹ thuật rõ: UL driver, 120/277V, CRI≥90, IP65, vật liệu copper/steel/inox/acrylic."
+      ],
+      [
+        "Rủi ro chính",
+        "Thiếu địa chỉ ship + thiếu cấu hình vật liệu",
+        "Nhiều báo giá đang thiếu transport method, packaging, delivery address và xác nhận vật liệu."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "10",
+        "2 khách ưu tiên; 2 cần theo dõi; 6 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Tài khoản đã rà soát",
+        "CM Decor",
+        "Đã đăng nhập và đọc danh sách OneTalk ngày 18/08/2026."
+      ],
+      [
+        "Khách có phản hồi trong 30 ngày gần nhất",
+        "2 buyers",
+        "Số liệu hiển thị ngay trong OneTalk của tài khoản."
+      ],
+      [
+        "Khách có tín hiệu mua thật nên xử lý",
+        "3",
+        "Hannahchiwendu Christopher, Friedrich Donges, Kyei Kyei có nhu cầu sản phẩm hoặc inquiry rõ hơn các dòng còn lại."
+      ],
+      [
+        "Khách cần kiểm tra nhẹ",
+        "5",
+        "Williams mark, Nguyen Hung, Svetlana Kononiuk, Arnold Amet, nhóm hỏi tiêu chuẩn an toàn thị trường UK."
+      ],
+      [
+        "Tin ít chất lượng / nghi spam",
+        "Nhiều",
+        "Nhiều buyer yêu cầu gửi email ngoài Alibaba hoặc cùng một mẫu tin giống nhau; không nên đưa vào lead ưu tiên."
+      ],
+      [
+        "Vấn đề nổi bật",
+        "Cần phản hồi thủ công sâu hơn",
+        "AI reception hỏi tiếp nhưng thiếu báo giá, thiếu hình/spec, thiếu chi phí ship và chưa chốt bước tạo order."
+      ],
+      [
+        "Hành động ưu tiên",
+        "Báo giá nhanh + giữ giao dịch trên Alibaba",
+        "Lead thật cần được hỏi địa chỉ giao hàng, xác nhận SKU, gửi ảnh/spec/chứng chỉ và báo phí ship ngay trong nền tảng."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Level",
+        "Sản phẩm / nhu cầu hỏi",
+        "Số lượng",
+        "Nội dung đã đọc trong tin nhắn",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-10",
+        "Alessio Suppo",
+        "Italy / Turin",
+        "Có level tag",
+        "Solar LED lamp/garden lighting; giao tới Turin, cần total cost including shipping, CE certification",
+        "Chưa rõ",
+        "Buyer có địa điểm giao rõ ở Italy và cần tính giá + ship, sản phẩm đúng ngành",
+        "Rất cao",
+        "Hỏi quantity, model/size, packing, phương thức vận chuyển; gửi total quote tới Turin kèm CE"
+      ],
+      [
+        "2026-08-31",
+        "TEDDY KASSA",
+        "Chưa xác định",
+        "Có level tag",
+        "Outdoor lighting project; no-remote, UL driver, 120/277V, 3-tier sizes, 3000K, CRI≥90, matte black, reinforced pallet/crate packing",
+        "Chưa rõ",
+        "Buyer đưa thông số kỹ thuật rất rõ, phù hợp khách dự án/nhập khẩu chuyên nghiệp",
+        "Rất cao",
+        "Gửi bảng xác nhận spec, bản vẽ/kích thước 3 size, chứng chỉ driver UL, giá theo số lượng và lead time"
+      ],
+      [
+        "2026-08-28",
+        "Josh Chauvet",
+        "USA / Reno",
+        "Có level tag",
+        "Large commercial outdoor Christmas displays / festive photo-op frames, acrylic, solar battery/button control",
+        "8 bộ lớn",
+        "Buyer hỏi dự án thương mại ở Reno, cần packaging và yêu cầu ship; sản phẩm có tùy chỉnh OEM/ODM",
+        "Rất cao",
+        "Hỏi kích thước từng display, deadline event, địa chỉ Reno, yêu cầu chống thời tiết; gửi proposal dự án + freight estimate"
+      ],
+      [
+        "2026-08-08",
+        "Hannahchiwendu Christopher",
+        "India",
+        "Có level tag",
+        "Lantern M03.01 Chandelier and Pendant Light, giá hiển thị $32, MOQ 1.",
+        "2 pcs",
+        "Buyer gửi sản phẩm đèn treo Lantern M03.01 và trả lời số lượng 2 chiếc. AI đã hỏi địa chỉ giao hàng; order progress báo thiếu đơn giá và địa chỉ ship.",
+        "Rất cao",
+        "Gửi xác nhận: giá $32/chiếc, hỏi địa chỉ nhận hàng đầy đủ + mã bưu điện, báo phí ship 2 chiếc, thời gian giao và đề nghị tạo Trade Assurance order."
+      ],
+      [
+        "2026-09-09",
+        "Dc Caudor",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Wall lamps, lighting/decor, OEM/ODM, CCT 2700K; buyer yêu cầu price offer",
+        "Chưa rõ",
+        "Lead có spec 2700K và đang cần báo giá",
+        "Cao",
+        "Hỏi số lượng, kích thước, vật liệu, địa chỉ giao; gửi price tier và lead time"
+      ],
+      [
+        "2026-09-07",
+        "Daniel Rodriguez Gomez",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Garden lighting constant light, touch control, OEM/ODM, project requirements",
+        "Chưa rõ",
+        "Lead dự án có yêu cầu kỹ thuật nhưng thiếu số lượng/logistics",
+        "Cao",
+        "Hỏi quantity, installation environment, deadline, shipping address và có cần custom design không"
+      ],
+      [
+        "2026-09-05",
+        "Nana Kwame",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Outdoor floor-standing style màu black cho setup open-air 4-foot",
+        "Chưa rõ",
+        "Buyer có yêu cầu màu/ứng dụng rõ, cần chọn mẫu phù hợp",
+        "Cao",
+        "Gửi 2-3 mẫu outdoor floor-standing màu đen, hỏi số lượng và địa chỉ ship"
+      ],
+      [
+        "2026-09-05",
+        "lyly pansard",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Gentle breeze pattern, acrylic material, solar battery power; decor/outdoor light",
+        "Chưa rõ",
+        "Lead sản phẩm rõ nhưng thiếu số lượng",
+        "Cao",
+        "Gửi ảnh/spec, hỏi quantity, kích thước và địa chỉ giao"
+      ],
+      [
+        "2026-09-04",
+        "Catherine Maglasang",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Gentle breeze pattern, multi-color acrylic design, solar battery",
+        "Chưa rõ",
+        "Lead đúng ngành, có nhu cầu về mẫu multi-color acrylic",
+        "Cao",
+        "Hỏi mẫu màu, số lượng, mục đích dùng và địa chỉ giao"
+      ],
+      [
+        "2026-09-03",
+        "Jacek ochal",
+        "Chưa xác định",
+        "Có level tag",
+        "Garden lighting solar power; hỏi vật liệu thân đèn plastic hay die-cast aluminum, bảo hành 3 năm, custom design",
+        "Chưa rõ",
+        "Buyer mới, đã được báo base price USD 20.80-28.00 nhưng thiếu vật liệu và logistics",
+        "Cao",
+        "Hỏi vật liệu mong muốn, số lượng, địa chỉ giao và gửi ảnh/video case tương tự"
+      ],
+      [
+        "2026-08-30",
+        "Herman Jacobs",
+        "Chưa xác định",
+        "Có level tag",
+        "RFQ copper outdoor lights / wall lamps, lifespan 30,000h, AutoCAD layout, warm white, touch control/CCT",
+        "5 units",
+        "Có RFQ rõ 5 units, nhưng vật liệu copper khác spec LED hiện tại; thiếu packaging/delivery address",
+        "Cao",
+        "Xác nhận có làm copper finish không, hỏi CCT/touch control, địa chỉ nhận hàng và gửi quote 5 units"
+      ],
+      [
+        "2026-08-30",
+        "Patrick Greier",
+        "Germany",
+        "Có level tag",
+        "Garden lighting decoration, OEM/ODM; hỏi installation height/weight, fixture type, chứng chỉ cho Germany",
+        "5 units",
+        "Buyer từ Đức, có yêu cầu kỹ thuật và logistics; phù hợp nhóm cần chứng chỉ EU",
+        "Cao",
+        "Gửi thông số height/weight, chứng chỉ phù hợp Đức/EU, hỏi địa chỉ và cấu hình fixture cuối"
+      ],
+      [
+        "2026-08-29",
+        "C S-P",
+        "France",
+        "Chưa thấy L",
+        "Garden lighting warm white CCT, IP65, steel/inox, shipping to France, detachable/fixed installation",
+        "Chưa rõ",
+        "Nhu cầu thật, có quốc gia nhận hàng France, cần làm rõ fixed hay detachable và phương thức ship",
+        "Cao",
+        "Hỏi số lượng, địa chỉ France, chọn fixed/detachable và đóng gói; gửi phí ship"
+      ],
+      [
+        "2026-08-28",
+        "GEORGE ZAVADSKY",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "50W garden lighting, constant light, IP65, hỏi detachable hay semi-flush mount",
+        "15 pcs",
+        "Buyer đã có số lượng 15 pcs và thông số công suất/IP rõ",
+        "Cao",
+        "Hỏi phương thức vận chuyển, địa chỉ nhận hàng, kiểu lắp đặt cuối cùng và gửi báo giá 15 pcs"
+      ],
+      [
+        "2026-08-24",
+        "JUNAID WARIS",
+        "Karachi / Pakistan theo nội dung giao hàng",
+        "Hỏi chi tiết sản phẩm, specs, availability, pricing; requirement quantity 1500 pieces; delivery to Jinnah International Airport - Karachi. Có kéo email ngoài nên cần giữ giao dịch trên Alibaba.",
+        "1500 pieces",
+        "Lead có số lượng lớn và địa điểm giao rõ, nhưng rủi ro off-platform/email ngoài.",
+        "Cao nhưng cần thận trọng",
+        "Trả lời trên Alibaba: yêu cầu xác nhận product/SKU, material, finish, packing, Incoterms; không gửi báo giá qua email trước khi xác thực buyer."
+      ],
+      [
+        "2026-08-12",
+        "Friedrich Donges",
+        "Greece",
+        "Chưa thấy level",
+        "Gửi product card, chưa thấy buyer nhắn thêm nội dung trong phần đọc được.",
+        "Chưa rõ",
+        "Hội thoại đang unread 2 và có product inquiry. Cần mở/đọc sâu lại khi mạng OneTalk ổn định hơn để xác định mẫu sản phẩm.",
+        "Cao",
+        "Trả lời ngay trong Alibaba: hỏi buyer cần mẫu nào, số lượng, địa chỉ giao hàng; gửi catalogue nhóm sản phẩm liên quan và đề nghị báo giá trong ngày."
+      ],
+      [
+        "2026-08-08",
+        "Hannahchiwendu Christopher",
+        "Chưa xác định",
+        "L?",
+        "Quan tâm white leaf-style pendant light / Lantern M03.01 Chandelier & Pendant Light; hỏi số lượng, seller hỏi địa chỉ ship; sản phẩm có LED, bảo hành 2 năm, lifespan 25,000h",
+        "Trial order 1 pc hoặc chưa chốt",
+        "Có nhu cầu sản phẩm thật, đang thiếu địa chỉ giao hàng và xác nhận số lượng",
+        "Lead thật - ưu tiên cao",
+        "Xin địa chỉ giao hàng, xác nhận quantity, báo giá USD 32/pc MOQ 1 và lead time"
+      ],
+      [
+        "2026-08-08",
+        "Hannahchiwendu Christopher",
+        "Chưa xác định",
+        "Seller ghi nhận quantity và hỏi shipping address để báo vận chuyển.",
+        "Đã có quantity nhưng chưa thấy số cụ thể trong snapshot",
+        "Lead có bước báo giá/ship, cần địa chỉ giao hàng để tiếp tục.",
+        "Cao",
+        "Xin địa chỉ nhận, mã bưu chính, product/SKU, quantity chính xác; báo giá hàng + ship rõ ràng."
+      ],
+      [
+        "2026-07-19",
+        "Janez Korelc",
+        "UK / chưa xác định",
+        "L?",
+        "Quan tâm indoor lighting solutions cho UK market, hỏi tiêu chuẩn an toàn/safety regulations",
+        "Chưa nêu",
+        "Có nhu cầu B2B thật hơn nhóm scam; cần trả lời chứng nhận/tiêu chuẩn",
+        "Lead thật - ưu tiên cao",
+        "Gửi chứng nhận/tiêu chuẩn liên quan CE/UKCA/RoHS nếu có, hỏi dòng sản phẩm và số lượng"
+      ],
+      [
+        "2026-07-20",
+        "Kyei Kyei",
+        "Ghana",
+        "Có level tag",
+        "Đồng hồ treo tường tròn, quartz movement, single-face design, họa tiết geometric.",
+        "Chưa rõ",
+        "AI đã tư vấn sản phẩm theo nhu cầu modern circular wall clocks và hỏi buyer muốn kim hay digital readout. Chưa thấy phản hồi tiếp theo.",
+        "Trung bình-cao",
+        "Gửi 3 mẫu đồng hồ đang bán tốt, MOQ, giá mẫu, kích thước, vật liệu; hỏi khách cần kim hay digital và dự kiến số lượng nhập thử."
+      ]
+    ],
+    "Can theo doi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-08",
+        "Williams mark",
+        "Chưa xác định",
+        "Nội dung liên quan product promotion trên Alibaba.com, hỏi product và promotion goal; chưa thấy nhu cầu mua cụ thể.",
+        "Chưa rõ",
+        "Không phải lead mua hàng rõ, cần phân loại thận trọng."
+      ],
+      [
+        "2026-09-07",
+        "harib miran",
+        "Chưa xác định",
+        "Chỉ thấy auto-reception stopped, chưa đọc được nhu cầu rõ",
+        "Cần mở sâu khi có thời gian",
+        "Không đưa vào ưu tiên nếu chưa có sản phẩm/số lượng"
+      ],
+      [
+        "2026-09-03",
+        "Jacek ochal",
+        "Chưa xác định",
+        "Garden lighting solar power, bảo hành 3 năm, cần xác nhận vật liệu plastic/die-cast aluminum",
+        "Lead cũ cần follow",
+        "Hỏi vật liệu, số lượng, address; gửi báo giá cuối"
+      ],
+      [
+        "2026-09-01",
+        "Asaf Shemesh",
+        "Chưa xác định",
+        "Có nhiều tin nhưng snapshot chỉ thấy auto-reception stopped",
+        "Cần đọc sâu",
+        "Chưa tính lead chính nếu không thấy nhu cầu mới"
+      ],
+      [
+        "2026-08-29",
+        "Brian Norman",
+        "Chưa xác định",
+        "Abstract geometric wall clock, quartz movement; hỏi packaging và engraving/personalization",
+        "Lead đúng ngành décor nhưng chưa thấy số lượng",
+        "Hỏi số lượng, kích thước, yêu cầu đóng gói và có cần in logo/khắc riêng không"
+      ],
+      [
+        "2026-09-01",
+        "Asaf Shemesh",
+        "Chưa xác định",
+        "Hội thoại có 5 tin nhưng snapshot chỉ thấy auto-reception stopped, chưa thấy nội dung nhu cầu cụ thể",
+        "Cần mở sâu lại nếu muốn phân tích chính xác",
+        "Không đưa vào khách ưu tiên khi chưa đọc được sản phẩm/số lượng; mở lại khi mạng ổn"
+      ],
+      [
+        "2026-08-27",
+        "Maria Kazmi",
+        "Chưa xác định",
+        "Hội thoại có file đính kèm, snapshot chưa thấy nội dung đọc được",
+        "Cần kiểm tra file/nội dung nếu user muốn rà sâu",
+        "Mở lại hội thoại, xem file buyer gửi và xác định có RFQ thật hay không"
+      ],
+      [
+        "2026-07-20",
+        "Kyei Kyei",
+        "Chưa xác định",
+        "L?",
+        "Quan tâm modern circular wall clocks, quartz movement, single-face design; cần xác nhận needle display hay digital readout",
+        "Chưa nêu",
+        "Nhu cầu có vẻ đúng ngành décor, nhưng hiện chỉ follow-up/AI trả lời, chưa thấy chốt spec",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi loại mặt đồng hồ, kích thước, chất liệu, MOQ, mẫu thiết kế cần custom"
+      ],
+      [
+        "2026-07-29",
+        "DK Gupta",
+        "Chưa xác định",
+        "L?",
+        "Hỏi mục đích sử dụng đèn (“what purpose do you need the lights for?”), chưa có buyer trả lời sâu",
+        "Chưa nêu",
+        "Có thể là lead thật nhưng thiếu nhu cầu cụ thể",
+        "Lead sớm",
+        "Follow ngắn: indoor/outdoor, project type, quantity, target price"
+      ],
+      [
+        "2026-08-08",
+        "Williams mark",
+        "United States",
+        "AI trả lời về product promotion trên Alibaba, hỏi sản phẩm và mục tiêu promotion.",
+        "Không giống buyer mua đèn; có thể là dịch vụ/marketing.",
+        "Không ưu tiên. Nếu trả lời lại, xác minh nhu cầu mua sản phẩm cụ thể trước."
+      ],
+      [
+        "2026-07-01",
+        "Nguyen Hung",
+        "Vietnam",
+        "Buyer nhắn 'đèn sân vườn ạ'.",
+        "Có nhu cầu nhưng quá ngắn, chưa có số lượng hoặc mẫu.",
+        "Hỏi loại đèn sân vườn, công suất, số lượng, địa điểm lắp và ngân sách; gửi 3 mẫu phù hợp."
+      ],
+      [
+        "2026-06-29",
+        "Svetlana Kononiuk",
+        "United States",
+        "AI follow-up về height/weight của solar lights.",
+        "Có nhu cầu hỏi thông số nhưng chưa thấy báo thông số hoàn chỉnh.",
+        "Gửi bảng thông số chiều cao, trọng lượng, packing size, ảnh thực tế và hỏi số lượng dự án."
+      ],
+      [
+        "2026-07-06",
+        "Arnold Amet",
+        "Papua New Guinea",
+        "AI tư vấn sản phẩm thiết kế nghệ thuật/metal construction và hỏi style/color.",
+        "Có thể là lead trang trí, nhưng chưa có phản hồi buyer tiếp theo.",
+        "Gửi mẫu theo 2-3 phong cách và hỏi kích thước, màu, số lượng."
+      ],
+      [
+        "2026-06-28",
+        "Sermarj Felipe và nhóm hỏi tiêu chuẩn UK",
+        "Nhiều quốc gia",
+        "Nhiều tài khoản dùng cùng một nội dung hỏi indoor lighting cho thị trường UK và yêu cầu safety standards.",
+        "Cần cẩn trọng vì mẫu tin lặp nhiều; vẫn có thể phản hồi chuẩn nếu muốn lọc.",
+        "Gửi một mẫu trả lời ngắn về CE/RoHS/UKCA nếu có, yêu cầu buyer xác nhận công ty, sản phẩm, số lượng và giữ trao đổi trên Alibaba."
+      ]
+    ],
+    "It phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-08-24",
+        "JUNAID WARIS / off-platform note",
+        "Pakistan / Karachi",
+        "Có số lượng lớn nhưng yêu cầu gửi báo giá ra email ngoài; cần giữ trao đổi và xác thực trong Alibaba để tránh rủi ro."
+      ],
+      [
+        "2026-09-07",
+        "harib miran",
+        "Chưa xác định",
+        "Chỉ thấy auto-reception stopped, chưa có nhu cầu rõ trong snapshot"
+      ],
+      [
+        "2026-09-01",
+        "Asaf Shemesh",
+        "Chưa xác định",
+        "Chưa thấy nội dung sản phẩm mới, cần mở sâu trước khi tính lead"
+      ],
+      [
+        "2026-09-01",
+        "Asaf Shemesh",
+        "Chưa xác định",
+        "Chỉ thấy hệ thống auto-reception stopped, chưa có sản phẩm/số lượng rõ trong phần đọc tuần này"
+      ],
+      [
+        "2026-08-27",
+        "Maria Kazmi",
+        "Chưa xác định",
+        "Chỉ thấy file đính kèm, chưa xác định nội dung lead từ snapshot; cần mở sâu trước khi tính lead"
+      ],
+      [
+        "2026-08-09",
+        "User name / Anny Yang - Luyal Communications",
+        "United States (Washington D.C.)",
+        "L?",
+        "Tự nhận sourcing OEM/ODM Garden Light, yêu cầu gửi quotation/company info qua email luyalcomunication@zohomail.com",
+        "Không nêu",
+        "Yêu cầu email ngoài nền tảng, tài khoản tên chung, có tag Scam",
+        "Rủi ro / Scam",
+        "Không gửi email ngoài; nếu xử lý thì yêu cầu trao đổi trong Alibaba và cung cấp company verification"
+      ],
+      [
+        "2026-08-12",
+        "Friedrich Donges",
+        "Chưa xác định / email .RU",
+        "L?",
+        "Yêu cầu catalog để lập order list, mua số lượng lớn, gửi qua SALESEXPORT@INTERNET.RU",
+        "Large quantities nhưng không nêu sản phẩm",
+        "Yêu cầu email ngoài nền tảng, thông tin chung chung",
+        "Rủi ro / Scam",
+        "Không gửi email; yêu cầu chọn sản phẩm, số lượng, quốc gia và giữ trên Alibaba"
+      ],
+      [
+        "2026-07-22",
+        "Jay Patel",
+        "Chưa xác định",
+        "L?",
+        "Yêu cầu gửi catalogue tới maxelectro05@gmail.com để chọn order list và thanh toán",
+        "Large quantities nhưng không nêu sản phẩm",
+        "Mẫu tin scam/off-platform điển hình",
+        "Rủi ro / Scam",
+        "Không gửi email ngoài, không phân tích sâu"
+      ],
+      [
+        "2026-07-17",
+        "Jackson Wine",
+        "USA",
+        "L?",
+        "Yêu cầu gửi quotation trực tiếp tới spencesales25@gmail.com, nói cần large quantity delivery to USA",
+        "Large quantity nhưng không nêu rõ",
+        "Off-platform risk cao",
+        "Rủi ro / Scam",
+        "Không gửi email, yêu cầu xác nhận sản phẩm/số lượng trong chat"
+      ],
+      [
+        "2026-08-08",
+        "Williams mark",
+        "Chưa xác định",
+        "L?",
+        "Trao đổi về product promotion trên Alibaba, không phải buyer mua sản phẩm décor rõ ràng",
+        "Không liên quan",
+        "Không thấy nhu cầu mua hàng décor",
+        "Không phù hợp",
+        "Không đưa vào follow bán hàng"
+      ],
+      [
+        "2026-08-01",
+        "sabreee jak",
+        "Chưa xác định",
+        "L?",
+        "Khách chia sẻ Stafir.com; seller giữ trao đổi trên Alibaba và hỏi quantity",
+        "Chưa nêu",
+        "Có khả năng off-platform/website ngoài, thiếu nhu cầu rõ",
+        "Rủi ro thấp / cần xác minh",
+        "Hỏi sản phẩm cụ thể, quantity, không truy cập/trao đổi ngoài nếu chưa cần"
+      ],
+      [
+        "2026-08-09",
+        "User name / Luyal Communications",
+        "China flag, nội dung ghi United States",
+        "Tin dài yêu cầu gửi quotation/catalog đến email zohomail ngoài Alibaba.",
+        "Nghi spam/off-platform, không đưa vào lead ưu tiên."
+      ],
+      [
+        "2026-08-01",
+        "sabreee jak",
+        "Bangladesh",
+        "Giới thiệu Stafir.com, nói resell/SEO sản phẩm; tài khoản đã bị hủy hoặc bị kiểm soát vi phạm.",
+        "Loại khỏi lead bán hàng."
+      ],
+      [
+        "2026-07-29",
+        "DK Gupta",
+        "India",
+        "Yêu cầu gửi catalog/địa chỉ đến email INFO.WORLDSUPPLY@INBOX.RU; seller hỏi mục đích dùng đèn.",
+        "Nghi spam/off-platform."
+      ],
+      [
+        "2026-07-22",
+        "Jay Patel",
+        "India",
+        "Yêu cầu gửi catalog tới email maxelectro05@gmail.com, không có SKU/số lượng cụ thể.",
+        "Nghi spam/off-platform."
+      ],
+      [
+        "2026-07-17",
+        "Jackson Wine",
+        "Vietnam flag, nội dung nói USA",
+        "Yêu cầu báo giá qua email spencesales25@gmail.com, không chốt sản phẩm cụ thể.",
+        "Nghi spam/off-platform."
+      ],
+      [
+        "2026-06-28",
+        "Nhiều contact hỏi safety standards giống nhau",
+        "ES/SN/FR/NO/IT/US...",
+        "Cùng một đoạn văn lặp về indoor lighting for UK market.",
+        "Xếp nhóm rà nhẹ, chỉ ưu tiên nếu buyer phản hồi riêng sau câu hỏi xác minh."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 20,
+    "Khach uu tien": 21,
+    "Can theo doi": 15,
+    "It phan hoi": 18
+  }
+}

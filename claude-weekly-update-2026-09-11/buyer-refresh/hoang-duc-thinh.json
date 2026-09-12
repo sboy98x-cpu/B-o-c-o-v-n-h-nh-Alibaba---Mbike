@@ -1,0 +1,880 @@
+{
+  "store": "Hoang Duc Thinh",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "11-5KohzSJJWioLGKR8KU0W_cu-mcEQ12smLOEVJ72F8",
+    "title": "hoangducthinh_onetalk_leads_2026-08-12_17",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 1096319943,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 1803069837,
+        "read_range": "A1:Z1019"
+      },
+      {
+        "title": "Can theo doi",
+        "sheetId": 1093966046,
+        "read_range": "A1:Z1020"
+      },
+      {
+        "title": "It phan hoi",
+        "sheetId": 1446548999,
+        "read_range": "A1:Z1015"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú vận hành"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "Mốc 03-08 và 18-24 đã rà lại",
+        "Lead rõ: Marie Musangi 4 pcs Kinshasa, LittlePlayRentals hỏi color/material, HuynhQuang Tuong hỏi vận chuyển quốc tế, Jack Dempsey outdoor bench covers, John Taylor pre-screened clear request."
+      ],
+      [
+        "Khoảng bổ sung",
+        "03/08-08/08 và 18/08-24/08/2026",
+        "Các dòng visitor/pre-screened không có nội dung chi tiết được đưa vào cần theo dõi, không tính là ưu tiên nếu chưa có sản phẩm/spec/số lượng rõ."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "4 buyer + 1 cần mở sâu",
+        "Marie Musangi, LittlePlayRentals, HuynhQuang Tuong, Jack Dempsey; John Taylor cần mở sâu vì chỉ thấy pre-screened clear request."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "16 buyer rà soát trên OneTalk",
+        "5 khách ưu tiên; 6 cần theo dõi; 5 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "04/09/2026 - 11/09/2026",
+        "Tập trung sofa/bed/furniture, factory photos, kitchen island/cabinet quotation, Florida USA."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Nội thất số lượng nhỏ-vừa + dự án cabinet",
+        "Lead tốt nhất: Florida cabinet/quartz countertop, sofa sectional L-shape MOQ 20, khách hỏi ảnh nhà xưởng."
+      ],
+      [
+        "Rủi ro chính",
+        "Nhiều khách chỉ gửi ảnh hoặc mã số, chưa đọc được nhu cầu",
+        "Cần mở ảnh nếu muốn phân tích sâu hơn; chỉ ghi ưu tiên khi có nội dung text rõ."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "18 buyer rà soát trên OneTalk",
+        "6 khách ưu tiên; 6 cần theo dõi; 5 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "29/08/2026 - 03/09/2026",
+        "Tập trung khách hỏi sofa/sectional/bedroom set, packing size, CBM, vận chuyển và MOQ."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Sofa/sectional + đơn nội thất số lượng nhỏ đến vừa",
+        "Nhiều khách hỏi 1 set/4 pieces; cần phân loại mẫu lẻ với khách có thể lên MOQ 20 sets."
+      ],
+      [
+        "Rủi ro chính",
+        "MOQ cao + phí ship + kéo email ngoài",
+        "Cần giữ buyer trên Alibaba, báo rõ MOQ 20 sets; nếu khách nhỏ thì chuyển sang sample/RTS nếu có."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "10 lead đã lọc",
+        "4 khách ưu tiên; 4 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "Tuần 25/08/2026",
+        "Tập trung buyer có phản hồi thật, có nhu cầu sản phẩm/custom/ship rõ."
+      ],
+      [
+        "Khách ưu tiên",
+        "4",
+        "Shonedricka Kirven, William FitzGerald, Kyle CalgaryCustomPits, James Scott."
+      ],
+      [
+        "Khách cần theo dõi / ít phản hồi",
+        "6",
+        "4 lead cần khai thác thêm + 2 lead yếu/rủi ro."
+      ],
+      [
+        "Khoảng thời gian đã rà soát",
+        "12/08-17/08/2026",
+        "Đã mở sâu các hội thoại chính của tài khoản danchoihaynho2@gmail.com, gồm Laura, Shonedricka, Mato, Nico, Ana, James, Kyle và Yu."
+      ],
+      [
+        "Khách có phản hồi thật, nên ưu tiên xử lý",
+        "7",
+        "Chỉ tính khách có tin nhắn buyer rõ ràng về sản phẩm, số lượng, địa chỉ, yêu cầu kỹ thuật hoặc cách mua."
+      ],
+      [
+        "Khách cần theo dõi nhẹ",
+        "6",
+        "Có tín hiệu sản phẩm/visitor nhưng thiếu phản hồi buyer sâu hoặc thiếu thông tin chốt báo giá."
+      ],
+      [
+        "Khách ít phản hồi/không ưu tiên",
+        "5",
+        "Chỉ có translation tip, visitor, chào hỏi, AI tự trả hoặc không phải buyer mua hàng."
+      ],
+      [
+        "Vấn đề nổi bật",
+        "Thiếu báo giá nhanh, thiếu màu/MOQ/ship rõ",
+        "Lead tốt bị vướng màu đỏ, chống cháy, phí ship door delivery, custom size và xác nhận model."
+      ],
+      [
+        "Hành động ưu tiên",
+        "Báo giá + xác nhận điều kiện chốt",
+        "Với lead đã có số lượng/địa chỉ: báo giá, phí ship, thời gian giao. Với lead custom: tóm tắt spec và xin bản vẽ/số lượng."
+      ],
+      [
+        "Lưu ý dữ liệu",
+        "Không lấy spam",
+        "Các dòng trong nhóm ưu tiên đều có buyer phản hồi thật; khách chỉ có tin nhắn từ hệ thống/seller đã hạ nhóm."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Sản phẩm / nhu cầu hỏi",
+        "Số lượng",
+        "Nội dung đã đọc trong tin nhắn",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-12",
+        "Laila Abdallah",
+        "Comoros",
+        "Có level tag",
+        "Ba mẫu giường/tựa đầu giường: 2 mẫu tối giản và 1 mẫu trung bình; ưu tiên màu đen hoặc xám/kem phối đen",
+        "3 chiếc: 2 chiếc 150x200cm, 1 chiếc 180x200cm",
+        "Buyer phản hồi nhiều lượt ngày 09 và 12/09, chốt rõ số lượng, kích thước và màu. Hồ sơ 90 ngày có 786 lượt xem sản phẩm và 75 ngày đăng nhập; chưa có email/công ty công khai.",
+        "Rất cao",
+        "Gửi ngay 3 mẫu phù hợp kèm giá từng kích thước, vật liệu, MOQ, thời gian sản xuất và phí vận chuyển tới Comoros; hỏi địa chỉ/cảng nhận để chốt báo giá."
+      ],
+      [
+        "2026-09-06",
+        "7097261758",
+        "USA / Florida",
+        "Chưa thấy L",
+        "Cabinet và quartz countertop; cần quotation Florida USA theo HTSUS 9403.4000 và 6810.99, tách cabinet/countertop",
+        "Chưa rõ",
+        "Lead dự án tốt, có yêu cầu quote chuyên nghiệp và phân loại HS code",
+        "Rất cao",
+        "Xin final cabinet drawings/kích thước, material, quantity; báo giá riêng cabinet và quartz, kèm freight Florida"
+      ],
+      [
+        "2026-08-15",
+        "Laura Cosentino",
+        "Italy / tiếng Ý",
+        "Chưa thấy",
+        "Sofa chair MD05, hỏi có chống cháy không, có màu đỏ không và phí vận chuyển tới Italy.",
+        "30+ chiếc",
+        "Buyer gửi 13048 Santhia, sau đó chốt địa chỉ Via Matteotti 129G, CAP 13094 Gaglianico Biella. Buyer cần màu đỏ nhưng hiện chỉ có Yellow/Green/Grey; cũng hỏi sản phẩm có ignifughe/chống cháy không.",
+        "Rất cao",
+        "Trả lời tiếng Ý: xác nhận hiện chưa có đỏ/chống cháy nếu đúng vậy; đề xuất màu thay thế hoặc hỏi có nhận đặt riêng màu đỏ không, báo cước Italy theo 30 chiếc và thời gian giao."
+      ],
+      [
+        "2026-08-13",
+        "shonedricka Kirven",
+        "USA / Raleigh, North Carolina",
+        "Có level tag",
+        "Ghế ăn Contemporary Velvet Upholstered Dining Chair MD07; buyer muốn báo giá và phí ship.",
+        "2 chiếc",
+        "Buyer hỏi quote + shipping price cho dining table/chair, cung cấp ZIP 27610, Raleigh North Carolina, chọn phương án rẻ nhất, xác nhận sea freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610.",
+        "Rất cao",
+        "Báo ngay giá 2 chiếc, phí sea freight door delivery, thời gian dự kiến, điều kiện thuế/phụ phí. Hỏi lại màu/chất liệu để tạo đơn Alibaba."
+      ],
+      [
+        "2026-08-12",
+        "Kyle CalgaryCustomPits",
+        "Canada / Calgary theo tên buyer",
+        "Có level tag / Potential",
+        "Custom outdoor covers cho nhiều mẫu firepit: chống nước, chống UV, màu đen, vật liệu dày.",
+        "Custom, chưa chốt số lượng",
+        "Buyer cần cover cho Basic firepits, half lid, 2 half lids, full lids, thêm footrest, size 34/40 inch. Sau đó buyer gửi spec: base model 34 inch hexagon x 15 inch; bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inch wide every other side.",
+        "Rất cao",
+        "Tóm tắt spec thành bảng kỹ thuật, xin ảnh/bản vẽ từng model, hỏi số lượng mỗi size, xác nhận chất liệu/độ dày/màu đen rồi hẹn báo giá sau khi kỹ thuật kiểm."
+      ],
+      [
+        "2026-09-09",
+        "1537412978",
+        "Pháp ngữ",
+        "Chưa thấy L",
+        "Canapé sectionnel en L style scandinave, size 200x80x85 cm, Grey/Beige/Blue, MOQ 20 sets",
+        "20 sets / cần xác nhận",
+        "Buyer hỏi đúng sản phẩm sofa, seller đã giới thiệu MOQ và cấu hình",
+        "Cao",
+        "Hỏi có chấp nhận MOQ 20 sets không, màu cần chọn và cảng/địa chỉ nhận hàng"
+      ],
+      [
+        "2026-09-06",
+        "1697655948",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Compression L-shape sectional sofa, MOQ 20 sets, size 200x80x85, Grey/Beige/Blue",
+        "MOQ 20 sets",
+        "Lead sofa có cấu hình rõ, cần hỏi quantity",
+        "Cao",
+        "Hỏi buyer cần bao nhiêu sets, màu, địa chỉ ship và thời gian cần hàng"
+      ],
+      [
+        "2026-09-04",
+        "1648730811",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Kitchen island Natural/White/Black; seller có thể hỗ trợ 20 sets",
+        "20 sets",
+        "Lead nội thất đúng ngành, đang chờ chọn màu",
+        "Cao",
+        "Hỏi màu Natural/White/Black, số lượng chính xác, địa chỉ nhận hàng và yêu cầu packaging"
+      ],
+      [
+        "2026-08-31",
+        "phillip mukenge",
+        "Chưa xác định",
+        "Có level tag",
+        "Hỏi packing size/carton dimensions để tính CBM",
+        "Chưa rõ",
+        "Buyer quan tâm logistics/CBM, tín hiệu nghiêm túc cho vận chuyển container",
+        "Cao",
+        "Gửi packing size/carton dimensions, CBM theo 1 set và theo container; hỏi quantity final"
+      ],
+      [
+        "2026-08-30",
+        "Christian Ortiz",
+        "Mexico / Cancun CP 77505",
+        "Có level tag",
+        "Contemporary sectional sofa, hỏi shipping tới Cancun; quantity đang để 1 nhưng có thể cần bulk",
+        "1 set / cần xác nhận bulk",
+        "Buyer có địa chỉ khu vực rõ và đang hỏi logistics; seller đã hỏi phương thức vận chuyển/bao bì",
+        "Cao",
+        "Xác nhận 1 set hay bulk, báo MOQ, hỏi đóng gói và gửi freight option tới Cancun"
+      ],
+      [
+        "2026-08-30",
+        "Eric Danso",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Furniture/sofa inquiry; seller báo MOQ 20 sets, customization/packaging/logo MOQ 50 sets",
+        "20 sets hoặc 50 sets nếu custom",
+        "Buyer đang ở bước xác nhận MOQ, có khả năng đơn wholesale nếu chấp nhận số lượng",
+        "Cao",
+        "Hỏi buyer có chấp nhận 20 sets không; nếu cần logo/custom thì báo MOQ 50 sets và gửi price tier"
+      ],
+      [
+        "2026-08-29",
+        "Diana Wanzek",
+        "Đức / tiếng Đức",
+        "Chưa thấy L",
+        "Sofa L-Shape/Straight, size 200x80x85 cm, màu Grey/Beige/Blue, MOQ 20 sets",
+        "MOQ 20 sets",
+        "Buyer trao đổi bằng tiếng Đức, nhu cầu sản phẩm rõ, cần chọn kiểu L-shape hay Straight",
+        "Cao",
+        "Trả lời tiếng Đức, hỏi chọn L-Shape hay Straight, màu, quantity và địa chỉ giao EU"
+      ],
+      [
+        "2026-08-25",
+        "Chris Sizemore",
+        "Chưa xác định",
+        "Có level tag",
+        "Bedroom set direction: nightstand, dresser, maybe lounge chair in similar style",
+        "Chưa rõ",
+        "Buyer có concept mua combo phòng ngủ, cần lên danh sách sản phẩm và phong cách",
+        "Cao",
+        "Gửi bộ gợi ý nightstand/dresser/lounge chair, hỏi số lượng từng món, chất liệu, ngân sách và địa chỉ ship"
+      ],
+      [
+        "2026-08-21",
+        "William FitzGerald",
+        "Chưa xác định",
+        "L?",
+        "Grill cover, hỏi thêm requirement; có thông tin PFAS compliance US market, OEM/ODM, custom size/color, lead time 15-25 days",
+        "Chưa nêu",
+        "Tag Potential, nhu cầu đúng sản phẩm cover, cần spec/size/quantity",
+        "Lead tốt - ưu tiên cao",
+        "Hỏi kích thước, chất liệu, số lượng, thị trường; nhắc PFAS compliance nếu bán US"
+      ],
+      [
+        "2026-08-20",
+        "shonedricka Kirven",
+        "United States - Raleigh, NC",
+        "L?",
+        "Có báo giá sản phẩm, đang chờ freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610",
+        "Chưa rõ, có total hàng USD 176.00",
+        "Khách hỏi/đợi giá vận chuyển, có địa chỉ cụ thể; đang thiếu freight charge để chốt tổng",
+        "Lead nóng - ưu tiên cao",
+        "Chốt freight door delivery ngay, gửi total landed cost và nhắc đặt qua Alibaba"
+      ],
+      [
+        "2026-08-13",
+        "Nicoetjulie Boguslawski",
+        "Pháp / tiếng Pháp",
+        "Chưa thấy",
+        "Sectional sofa MD22, size 200x80x85 cm, màu Grey/Beige/Blue; buyer hỏi cách mua.",
+        "MOQ 20, buyer chưa chốt qty",
+        "Buyer hỏi bằng tiếng Pháp 'Comment acheté ce produit'. Sản phẩm hiện giá 194-224 USD, MOQ 20. Seller/AI đã hướng dẫn chọn số lượng và màu để đặt trên Alibaba.",
+        "Cao",
+        "Nhắn tiếng Pháp thật ngắn: xác nhận MOQ 20, giá theo bậc, hỏi màu Grey/Beige/Blue và số lượng, sau đó tạo order trực tiếp trên Alibaba."
+      ],
+      [
+        "2026-08-12",
+        "Ana Malila zau",
+        "Canada",
+        "Có level tag",
+        "Modern solid wood bed headboard MD02, Queen size, màu OFFWHITE.",
+        "1 chiếc",
+        "Buyer hỏi Queen, hỏi Price, nói 'I m in Canada', sau đó 'Just one piece'. Order progress thiếu unit price và shipping address; hệ thống gợi ý giá USD 699.",
+        "Cao",
+        "Gửi giá Queen USD 699 nếu đúng, hỏi địa chỉ nhận hàng tại Canada để tính ship, gửi ảnh thực tế/kích thước 29.5 H x 67.4 W x 88.9 L."
+      ],
+      [
+        "2026-08-12",
+        "Kyle CalgaryCustomPits",
+        "Chưa xác định",
+        "L?",
+        "Khách mô tả base model custom rất cụ thể: 34 inch hexagon x 15 inch tall, bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inches wide every other side",
+        "Custom size, chưa nêu qty",
+        "Nhu cầu custom rất rõ, nên follow kỹ bản vẽ/kích thước",
+        "Lead tốt - ưu tiên cao",
+        "Yêu cầu bản vẽ/ảnh mẫu, vật liệu, số lượng, mục đích dùng; xác nhận có thể custom"
+      ],
+      [
+        "2026-08-12",
+        "James Scott",
+        "Chưa xác định",
+        "L?",
+        "Khách có nhu cầu 40-70 pcs trong 4 tuần, seller hỏi product/model nào",
+        "40-70 pcs",
+        "Có quantity và deadline rõ nhưng thiếu model",
+        "Lead tốt - cần làm rõ",
+        "Hỏi sản phẩm/model, địa chỉ giao, xác nhận 4 tuần có kịp không"
+      ],
+      [
+        "2026-08-13",
+        "Mato Mihalic",
+        "Chưa xác định",
+        "Có level tag",
+        "Closed Foaming Lightweight Waterproof Air Mattress Outdoor MD04 Camping.",
+        "MOQ 50, chưa có qty buyer",
+        "Buyer gửi product card; seller/AI trả lời về waterproof camping mattress cover. Sản phẩm giá 16-19 USD, MOQ 50, OEM brand available; còn thiếu số lượng và unit price trong order progress.",
+        "Trung bình-cao",
+        "Gửi thông số 190x60x5 cm, giá 19 USD cho 50-99 pcs và 16 USD cho 100+ nếu đúng; hỏi buyer cần bao nhiêu, có cần logo/bao bì riêng không."
+      ],
+      [
+        "2026-08-11",
+        "Yu Chen Wei",
+        "Chưa xác định",
+        "Có level tag",
+        "Square Cushion Cover màu bright red, outdoor, waterproof UV resistant.",
+        "MOQ 100, chưa có qty buyer",
+        "Buyer gửi product card; seller/AI phản hồi mô tả màu đỏ. Giá 2.98-3.32 USD, MOQ 100. Chưa thấy buyer phản hồi tiếp sau báo giá.",
+        "Trung bình",
+        "Follow ngắn: gửi bảng giá theo bậc 100/300/1000 pcs, hỏi size và số lượng; nếu không trả lời sau 2 lần thì hạ ưu tiên."
+      ],
+      [
+        "2026-08-25",
+        "JUNAID WARIS",
+        "Pakistan / Karachi",
+        "Có level tag",
+        "RFQ yêu cầu thông tin/spec/availability/pricing, delivery tới Jinnah International Airport Karachi",
+        "1500 pieces",
+        "Số lượng lớn nhưng có dấu hiệu yêu cầu gửi quotation qua email ngoài; vẫn là inquiry có thông tin cụ thể",
+        "Cao nhưng rủi ro",
+        "Trả lời trong Alibaba, gửi quotation/spec, hỏi xác nhận sản phẩm cụ thể; không chuyển toàn bộ giao dịch ra email"
+      ],
+      [
+        "2026-08-24",
+        "Marie Musangi",
+        "Kinshasa / RDC",
+        "Buyer cần 4 pieces giao Kinshasa, RDC; seller hỏi muốn vận chuyển đường biển hay express.",
+        "4 pieces",
+        "Lead rõ có địa điểm và số lượng; đang chốt phương án vận chuyển.",
+        "Rất cao",
+        "Báo 2 phương án sea/express, hỏi product model, packing size, địa chỉ/cảng nhận để tính cước."
+      ],
+      [
+        "2026-08-12",
+        "James Scott",
+        "Chưa xác định",
+        "Chưa thấy",
+        "Buyer muốn mua một lô hàng, cần 40-70 items, giao trong khoảng 4 tuần.",
+        "40-70 chiếc",
+        "Buyer viết rõ kế hoạch mua batch 40-70 items và muốn follow up sớm. Tuy nhiên hệ thống báo tài khoản buyer đã tự hủy hoặc bị kiểm soát do vi phạm nền tảng, hiện không thể reply.",
+        "Cao nhưng rủi ro",
+        "Không thể nhắn trực tiếp nếu Alibaba khóa reply. Nếu còn kênh hợp lệ trong Alibaba/RFQ thì xác minh lại buyer; không đưa vào forecast đơn chắc chắn."
+      ],
+      [
+        "2026-08-06",
+        "LittlePlayRentals rentals",
+        "Chưa xác định",
+        "Buyer/seller trao đổi về màu sắc hoặc chất liệu cần dùng.",
+        "Chưa rõ",
+        "Có nhu cầu tuỳ chọn color/material, cần xác định product.",
+        "Cao",
+        "Hỏi sản phẩm cụ thể, color/material, quantity, destination; gửi bảng màu/chất liệu."
+      ],
+      [
+        "2026-08-04",
+        "HuynhQuang Tuong",
+        "Việt Nam / hỏi vận chuyển quốc tế",
+        "Hỏi tư vấn hướng vận chuyển phù hợp để tối ưu chi phí cho đơn hàng cụ thể, thị trường North/South America, Europe, SEA, Domestic.",
+        "Chưa rõ",
+        "Lead logistics/cross-border rõ, cần sản phẩm và điểm đến.",
+        "Cao",
+        "Xin sản phẩm, số lượng, kích thước đóng gói, quốc gia/cảng đến; tư vấn sea/air/express theo chi phí."
+      ],
+      [
+        "2026-08-04",
+        "Jack Dempsey",
+        "Chưa xác định",
+        "Follow-up outdoor bench covers; buyer từng hỏi waterproof rating và seam sealing.",
+        "Chưa rõ",
+        "Lead sản phẩm rõ, cần trả lời thông số chống nước/seam sealing.",
+        "Cao",
+        "Gửi thông số waterproof rating, seam sealing, chất liệu, kích thước và MOQ; hỏi quantity."
+      ]
+    ],
+    "Can theo doi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia / tín hiệu",
+        "Level",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-21",
+        "William FitzGerald",
+        "Chưa xác định",
+        "Dòng Potential; seller để WhatsApp liên hệ nếu có yêu cầu thêm.",
+        "Chưa rõ",
+        "Có tag Potential nhưng kéo off-platform, cần giữ thông tin trong Alibaba.",
+        "Trung bình-cao",
+        "Hỏi lại trên Alibaba về product/quantity/destination, tránh chuyển hoàn toàn qua WhatsApp."
+      ],
+      [
+        "2026-08-20",
+        "shonedricka Kirven",
+        "Chưa xác định",
+        "Buyer hỏi đã nhận được giá chưa: “Did you get the prices”.",
+        "Chưa rõ",
+        "Có trao đổi giá nhưng cần mở sâu để biết sản phẩm.",
+        "Trung bình-cao",
+        "Xác nhận đã nhận/chưa nhận giá, hỏi sản phẩm và quantity, gửi quotation rõ."
+      ],
+      [
+        "2026-08-19",
+        "Sharon Zhou",
+        "Chưa xác định",
+        "Hệ thống ghi buyer pre-screened và có clear request, cần phản hồi nhanh.",
+        "Chưa rõ",
+        "Cần mở sâu vì snapshot không hiển thị sản phẩm/số lượng.",
+        "Cao cần kiểm tra sâu",
+        "Mở lại hội thoại để lấy request; nếu chưa rõ, hỏi product model/quantity/destination."
+      ],
+      [
+        "2026-08-05",
+        "John Taylor",
+        "Chưa xác định",
+        "Hệ thống ghi buyer pre-screened và có clear request.",
+        "Chưa rõ",
+        "Có tín hiệu lead thật nhưng thiếu nội dung trong snapshot.",
+        "Cao cần kiểm tra sâu",
+        "Mở lại hội thoại để lấy product/spec; phản hồi theo yêu cầu cụ thể."
+      ],
+      [
+        "2026-09-11",
+        "7065688004",
+        "Chưa xác định",
+        "Chỉ thấy hình ảnh, chưa có nội dung text rõ",
+        "Cần mở ảnh",
+        "Mở hội thoại/ảnh để xác định sản phẩm; hỏi số lượng và địa chỉ ship"
+      ],
+      [
+        "2026-09-07",
+        "1587981110",
+        "Chưa xác định",
+        "Chỉ thấy hình ảnh",
+        "Cần kiểm tra thêm",
+        "Nếu ảnh là sản phẩm nội thất, hỏi kích thước, chất liệu, quantity"
+      ],
+      [
+        "2026-09-04",
+        "7065145023",
+        "Chưa xác định",
+        "Chỉ thấy hình ảnh",
+        "Lead chưa đủ dữ liệu",
+        "Mở ảnh hoặc hỏi lại buyer cần sản phẩm nào"
+      ],
+      [
+        "2026-09-04",
+        "1036788608",
+        "Chưa xác định",
+        "Buyer hỏi ảnh nhà xưởng",
+        "Lead cần xây dựng niềm tin",
+        "Gửi ảnh/video nhà xưởng, năng lực sản xuất, showroom nếu có; hỏi sản phẩm buyer đang quan tâm"
+      ],
+      [
+        "2026-09-02",
+        "276199989",
+        "Chưa xác định",
+        "Chỉ thấy hình ảnh",
+        "Cần mở sâu",
+        "Chưa đưa vào ưu tiên khi chưa có text sản phẩm/số lượng"
+      ],
+      [
+        "2026-08-31",
+        "166933919",
+        "Chưa xác định",
+        "Buyer hỏi packing size/carton dimensions để tính CBM",
+        "Lead logistics cũ cần follow",
+        "Gửi carton dimensions/CBM cho sản phẩm tương ứng, hỏi quantity cuối"
+      ],
+      [
+        "2026-09-02",
+        "rong bei",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy buyer gửi hình ảnh, chưa đọc được sản phẩm/số lượng trong snapshot",
+        "Cần mở sâu nếu ảnh là inquiry thật",
+        "Mở lại hội thoại, xem ảnh và hỏi sản phẩm/số lượng/địa chỉ ship"
+      ],
+      [
+        "2026-08-31",
+        "Ruth Woldu",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy hình ảnh, chưa có text nhu cầu rõ trong snapshot",
+        "Cần kiểm tra thêm",
+        "Mở chat, đọc ảnh/sản phẩm; nếu buyer có nhu cầu thì chuyển ưu tiên"
+      ],
+      [
+        "2026-08-31",
+        "Maria Kazmi",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hội thoại có product card, chưa thấy nội dung hỏi sâu",
+        "Lead cần khai thác",
+        "Hỏi buyer quan tâm model nào, số lượng và địa chỉ nhận hàng"
+      ],
+      [
+        "2026-08-28",
+        "CamachoLopez AnnyYhanell",
+        "Mexico / CP 77527",
+        "Có level tag",
+        "Hỏi shipping tới 77527, seller nói phí ship báo riêng theo đơn thật và air shipping",
+        "Chưa rõ",
+        "Lead thật nhưng vướng logistics/chi phí ship",
+        "Hỏi sản phẩm/số lượng cuối, báo sea vs air option và chốt total"
+      ],
+      [
+        "2026-08-24",
+        "Marie Musangi",
+        "DR Congo / Kinshasa",
+        "Có level tag",
+        "Khách Kinshasa, RDC, 4 pieces; seller hỏi muốn đi biển hay express",
+        "4 pieces",
+        "Lead có địa chỉ quốc gia và số lượng nhỏ, cần chốt phương thức ship",
+        "Hỏi chọn sea/express, gửi quote 4 pieces và thời gian dự kiến"
+      ],
+      [
+        "2026-08-23",
+        "yann sultan",
+        "Pháp ngữ",
+        "Có level tag",
+        "Muốn xem chất lượng sản phẩm/sofa",
+        "Chưa rõ",
+        "Lead cần chứng minh chất lượng trước khi hỏi giá",
+        "Gửi video thực tế, ảnh chi tiết chất liệu, technical sheet và hỏi số lượng"
+      ],
+      [
+        "2026-08-23",
+        "yann sultan",
+        "Chưa xác định / Pháp ngữ",
+        "L?",
+        "Muốn xem chất lượng sofa/sản phẩm; cần technical sheet, assembly instructions, model documents | SL: chưa nêu",
+        "Lead thật - ưu tiên vừa",
+        "Gửi ảnh/video chất lượng, technical sheet, hỏi số lượng/mẫu muốn xem"
+      ],
+      [
+        "2026-08-16",
+        "ShaikJafar Shareef",
+        "Chưa xác định",
+        "L?",
+        "MD04 coffee table; MOQ 50 pcs, giá từ USD 53 cho 50-99 pcs | SL: MOQ 50 pcs",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi số lượng mục tiêu và màu/chất liệu; gửi bảng giá theo bậc"
+      ],
+      [
+        "2026-08-15",
+        "Laura Cosentino",
+        "Ý / Italian",
+        "L?",
+        "Khách nói “nhưng bạn không có màu đỏ” | SL: chưa nêu",
+        "Lead có rào cản màu",
+        "Đề xuất màu gần nhất hoặc custom MOQ nếu có"
+      ],
+      [
+        "2026-08-13",
+        "Nicoetjulie Boguslawski",
+        "Pháp ngữ",
+        "L?",
+        "Sản phẩm kích thước 200x80x85 cm, màu Grey/Beige/Blue; cần quantity và màu | SL: chưa nêu",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi màu và số lượng, gửi link/order Alibaba"
+      ],
+      [
+        "2026-08-17",
+        "Alexander Magore",
+        "Chưa xác định",
+        "Có level tag",
+        "Buyer chỉ nhắn 'how are you doing today'.",
+        "Có phản hồi nhưng chưa có nhu cầu sản phẩm",
+        "Trả lời thân thiện, hỏi khách đang quan tâm sản phẩm nào, số lượng và thị trường nhập hàng."
+      ],
+      [
+        "2026-08-16",
+        "ShaikJafar Shareef",
+        "Chưa xác định",
+        "Có level tag",
+        "Trong preview chỉ thấy seller/AI báo regular order MOQ is 50 pieces.",
+        "Có khả năng buyer hỏi MOQ nhưng chưa mở sâu được nội dung buyer",
+        "Tìm lại hội thoại khi có thời gian; hỏi khách muốn sản phẩm nào, màu/size và số lượng dự kiến."
+      ],
+      [
+        "2026-08-15",
+        "Gert vandenBerg",
+        "Chưa xác định",
+        "Có level tag",
+        "Chỉ hiện visitor reminder.",
+        "Chưa phải lead thật",
+        "Chỉ follow nếu xem được sản phẩm đã xem hoặc khách có phản hồi mới."
+      ],
+      [
+        "2026-08-12",
+        "veronica lorena",
+        "Chưa xác định",
+        "Chưa thấy",
+        "Chỉ hiện visitor reminder.",
+        "Chưa phải lead thật",
+        "Không đưa vào nhóm khách ưu tiên nếu chưa có tin buyer."
+      ],
+      [
+        "2026-08-10",
+        "Kyle Tran",
+        "Việt Nam / logistics",
+        "Có level tag",
+        "Nội dung trao đổi về tuyến vận chuyển North America, South America, Europe, Southeast Asia và Domestic Market.",
+        "Có thể là hỏi logistics, không phải buyer mua sản phẩm",
+        "Xác minh loại hàng/tuyến đích; chỉ giữ nếu liên quan đơn hàng thật."
+      ],
+      [
+        "2026-08-09",
+        "Diaby Sankoun",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview chỉ thấy seller/AI hỏi lại số lượng cho modern solid wood king bed.",
+        "Có tín hiệu sản phẩm nhưng chưa đọc được buyer phản hồi sau đó",
+        "Theo dõi nhẹ; hỏi lại số lượng, kích thước, địa chỉ nếu buyer mở lại hội thoại."
+      ],
+      [
+        "2026-08-04",
+        "Jack Dempsey",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview cho thấy khách từng hỏi outdoor bench covers, waterproof rating và seam sealing.",
+        "Có tín hiệu kỹ thuật nhưng chưa mở sâu trong lượt này",
+        "Gửi lại thông số chống nước/seam sealing, hỏi buyer còn dự án hay số lượng cần mua không."
+      ],
+      [
+        "2026-07-28",
+        "Luisa Scandaglia",
+        "Italy / tiếng Ý",
+        "Chưa thấy",
+        "Preview cho thấy khách hỏi thiết kế sofa/3D; seller nói chưa có bản 3D, có thể gửi ảnh thật hoặc chuyển team.",
+        "Có tín hiệu sản phẩm nhưng chưa đọc sâu",
+        "Follow bằng tiếng Ý: hỏi khách muốn L-shape hay straight, gửi ảnh thật và timeline làm bản vẽ nếu có."
+      ],
+      [
+        "2026-07-28",
+        "Richard Logro",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview: MD08 garden chair foldable aluminum alloy, MOQ 50, OEM/ODM, màu Silver hoặc Black.",
+        "Cần theo dõi nếu buyer phản hồi màu/số lượng",
+        "Gửi ảnh 2 màu, hỏi số lượng, địa chỉ/cảng nhận để báo giá."
+      ]
+    ],
+    "It phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-08-23",
+        "yann sultan",
+        "Chưa xác định",
+        "Chỉ thấy “Pour voir la qualité”, chưa đủ product/quantity."
+      ],
+      [
+        "2026-08-18",
+        "Mehedi Enterprise / rajendra sukhralia",
+        "Chưa xác định",
+        "Chỉ “sir” hoặc “it’s ok”, chưa đủ nhu cầu."
+      ],
+      [
+        "2026-08-05",
+        "Friedrich Donges",
+        "Chưa xác định",
+        "Chỉ thấy translation tip, chưa có nội dung buyer rõ trong snapshot."
+      ],
+      [
+        "2026-09-04",
+        "7086775187",
+        "Chỉ thấy translation tip, chưa có nhu cầu rõ",
+        "Không tính lead chính"
+      ],
+      [
+        "2026-08-31",
+        "1780463099",
+        "Chỉ thấy hình ảnh, chưa có text nhu cầu",
+        "Cần mở sâu nếu muốn xác định"
+      ],
+      [
+        "2026-08-31",
+        "956793857",
+        "Chỉ phản hồi ok",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-08-31",
+        "1693247188",
+        "Chỉ thấy product card, chưa có nội dung mới",
+        "Chưa đủ dữ liệu"
+      ],
+      [
+        "2026-09-11",
+        "7065688004",
+        "Chỉ thấy hình ảnh",
+        "Tạm xếp thấp cho đến khi đọc được ảnh/spec"
+      ],
+      [
+        "2026-09-02",
+        "W N",
+        "Chỉ thấy translation tip, chưa có nhu cầu buyer rõ",
+        "Không tính lead chính tuần này"
+      ],
+      [
+        "2026-08-31",
+        "shahrokh shamloo",
+        "Chỉ phản hồi “ok”, chưa có sản phẩm/số lượng rõ",
+        "Ít phản hồi, chờ buyer nói nhu cầu cụ thể"
+      ],
+      [
+        "2026-08-27",
+        "Thitichaya Srisuk",
+        "Chỉ thấy hình ảnh, chưa có nội dung text rõ trong snapshot",
+        "Cần mở sâu nếu muốn xác định lead, hiện chưa đưa vào ưu tiên"
+      ],
+      [
+        "2026-08-25",
+        "Xamid Bobojanov",
+        "Chỉ thấy translation tip trong snapshot, chưa đọc được nhu cầu mới",
+        "Không cập nhật lead chính nếu không có nội dung mới"
+      ],
+      [
+        "2026-08-21",
+        "William FitzGerald",
+        "Seller kéo WhatsApp, không thấy nhu cầu mới trong tuần này",
+        "Không tính lead tuần mới; hạn chế kéo khỏi Alibaba nếu chưa chốt"
+      ],
+      [
+        "2026-08-12",
+        "Ana Malila zau",
+        "Nhu cầu nhỏ lẻ: chỉ cần 1 piece",
+        "Nếu có sample/RTS thì báo; nếu MOQ cao thì giải thích, ưu tiên thấp."
+      ],
+      [
+        "2026-08-05",
+        "Friedrich Donges",
+        "Translation tip/không thấy nhu cầu rõ trong tuần",
+        "Không follow nếu không có inquiry rõ."
+      ],
+      [
+        "2026-08-17",
+        "Faisal Latif",
+        "Preview chỉ hiện Translation Tip, không thấy buyer hỏi sản phẩm.",
+        "Không phân tích sâu, không tính lead."
+      ],
+      [
+        "2026-08-16",
+        "Safa Saeed",
+        "Auto reception đạt giới hạn, chưa thấy buyer hỏi mới trong preview.",
+        "Chỉ theo dõi nếu buyer phản hồi mới."
+      ],
+      [
+        "2026-08-11",
+        "DOCK RACE WEAR",
+        "Chỉ hiện Translation Tip.",
+        "Không tính lead tốt nếu chưa thấy nhu cầu mua."
+      ],
+      [
+        "2026-08-05",
+        "Friedrich Donges",
+        "Chỉ hiện Translation Tip.",
+        "Không ưu tiên."
+      ],
+      [
+        "2026-07-28",
+        "Frank Liang",
+        "Preview là nhà cung cấp sponge giới thiệu có 2 dây chuyền/2 nhà máy, daily capacity 2 container 40HQ, phục vụ Amazon sellers.",
+        "Không phải buyer mua hàng chính; không đưa vào lead bán hàng."
+      ],
+      [
+        "2026-07-28",
+        "Amanda Zhao",
+        "Chỉ thấy '你好'.",
+        "Chưa có nhu cầu sản phẩm."
+      ],
+      [
+        "2026-07-29",
+        "Abdumalik Musayev / Helene BLSLU",
+        "Chỉ hiện Translation Tip hoặc auto reception stopped.",
+        "Không tính lead ưu tiên."
+      ],
+      [
+        "2026-08-17",
+        "Visitor/auto reminder khác",
+        "Không có nội dung buyer thật.",
+        "Loại khỏi danh sách khách có phản hồi chất lượng."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 23,
+    "Khach uu tien": 28,
+    "Can theo doi": 30,
+    "It phan hoi": 24
+  }
+}

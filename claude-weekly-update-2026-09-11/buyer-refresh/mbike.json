@@ -1,0 +1,1747 @@
+{
+  "store": "Mbike",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "1JSk13YiFGMCgxgIC9W3TWSOAlME_7AjafAMBsYUIVSw",
+    "title": "mbike_onetalk_leads_2026-07-23_29",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 199033850,
+        "read_range": "A1:Z1016"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 1764990332,
+        "read_range": "A1:Z1046"
+      },
+      {
+        "title": "Can note",
+        "sheetId": 993874252,
+        "read_range": "A1:Z1047"
+      },
+      {
+        "title": "Spam it phan hoi",
+        "sheetId": 2062689835,
+        "read_range": "A1:Z1047"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "59 dòng buyer/tin nhắn trong 03-08 và 18-24 đã rà lại",
+        "Bổ sung các lead thật bị thiếu; loại các dòng auto, chỉ ok/thank you, hoặc hỏi nhầm mua xe nguyên chiếc."
+      ],
+      [
+        "Khoảng bổ sung",
+        "03/08-08/08 và 18/08-24/08/2026",
+        "Ưu tiên các buyer có sản phẩm/model/số lượng/ship/order rõ; các dòng chỉ một chiều từ seller đưa vào cần theo dõi hoặc ít phản hồi."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "8 buyer",
+        "riccardo civitani, Stephen Varley, rangsit gahawong, JUNAID WARIS, Gael tellez, ADAM KORZENIEWSKI, DANIEL SPISSO, Brett Mcdonnell."
+      ],
+      [
+        "Lead cần theo dõi bổ sung",
+        "6 buyer",
+        "Pablo Medovyk, Jec pangilinan, hdhhd hdhd, Qwesi Pappy, Kwizerimana Josue, Peter Dobsinsky/image-only."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "24 buyer rà soát trên OneTalk",
+        "6 khách ưu tiên; 7 cần theo dõi; 5 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "09/09/2026 - 11/09/2026",
+        "Tập trung buyer có phản hồi thật, order, hỏi giá, private label, ship và thông tin sản phẩm."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Phụ kiện xe máy + order đang xử lý",
+        "Có nhiều phản hồi ngắn “OK sir”, một số order mới/đang giao; cần ưu tiên khách có đơn và khách hỏi số lượng/giá cụ thể."
+      ],
+      [
+        "Rủi ro chính",
+        "Nhiều hội thoại chỉ auto-reception hoặc phản hồi ngắn",
+        "Không tính lead chính nếu chỉ có “ok”, “sir”, hoặc auto-reception stopped mà chưa có nhu cầu mới."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "30 buyer rà soát sâu",
+        "10 khách ưu tiên; 15 cần theo dõi; 5 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "26/08/2026 - 03/09/2026",
+        "Đọc từ OneTalk sau lần cập nhật 25/08; ưu tiên buyer có order, hỏi giá/ship, hỏi kỹ thuật và có phản hồi thật."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Đơn đã tạo/chờ ship + khách hỏi ship/fitment",
+        "Nhiều lead có order nhỏ nhưng thật; cần phản hồi nhanh phần giao hàng, ảnh/video lắp đặt, phí ship và thông số kỹ thuật."
+      ],
+      [
+        "Rủi ro chính",
+        "Phí ship cao + seller trả lời nhầm sản phẩm",
+        "Một số khách vướng ship cao hoặc tưởng mua xe; cần câu trả lời chuẩn hơn để không mất lead."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "57 buyer đọc sâu",
+        "Đã chèn vào 4 tab cũ; dữ liệu mới nằm trên cùng, không tạo sheet mới"
+      ],
+      [
+        "Khoảng đọc lại",
+        "06/08/2026 - 25/08/2026",
+        "Đã lọc buyer có phản hồi thật, bỏ spam/seller-only"
+      ],
+      [
+        "Tổng lead có thể xử lý",
+        "26",
+        "14 khách ưu tiên + 15 cần theo dõi, có một số trùng trạng thái chăm sóc/đơn"
+      ],
+      [
+        "Khách yếu/ít phản hồi",
+        "28",
+        "Vướng phí ship, không đúng sản phẩm, tưởng mua xe, phản hồi yếu"
+      ],
+      [
+        "Khoảng thời gian đã cập nhật",
+        "23/07-17/08/2026",
+        "Bảng tích lũy: tuần mới được chèn lên trên cùng, dữ liệu cũ giữ nguyên bên dưới."
+      ],
+      [
+        "Khách ưu tiên follow",
+        "26",
+        "18 lead cũ + 8 lead mới tuần 12-17/08."
+      ],
+      [
+        "Khách cần note/follow nhẹ",
+        "15",
+        "11 dòng cũ + 4 dòng cần rà/follow nhẹ tuần 12-17/08."
+      ],
+      [
+        "Spam/ít phản hồi",
+        "13",
+        "9 dòng cũ + 4 dòng spam/ít phản hồi mới."
+      ],
+      [
+        "Vấn đề chính",
+        "Phí ship + mua lẻ + hỏi nhầm xe máy",
+        "Nhiều khách mua 1 pcs, cần báo ship nhanh; nhiều khách hỏi mua xe thay vì phụ kiện."
+      ],
+      [
+        "Chiến lược đề xuất",
+        "Phân loại nhanh theo 3 nhóm",
+        "1) Có sản phẩm sẵn: báo giá + ship. 2) Custom: xin model/ảnh/kích thước/MOQ. 3) Hỏi mua xe: giải thích chỉ bán phụ kiện."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Level",
+        "Sản phẩm / nội dung hỏi",
+        "Số lượng",
+        "Tình trạng trao đổi",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-10",
+        "Ahmed Damarany",
+        "Ai Cập / Egypt",
+        "Chưa thấy L",
+        "Đơn CB150X Motorcycle Handle Bar Upper/Lower Anti-Roll Frame; giao Kharga, The New Valley Governorate, Ai Cập",
+        "1 đơn / USD 295",
+        "Buyer đã tạo đơn ngày 09/09; trạng thái Waiting for payment. Seller báo chưa thể dùng dịch vụ vận chuyển của nền tảng.",
+        "Rất cao",
+        "Liên hệ ngay để xác nhận phương án vận chuyển thay thế, tổng phí và thời hạn 7 ngày sau khi nhận tiền; gửi lại link thanh toán khi buyer đồng ý."
+      ],
+      [
+        "2026-09-10",
+        "Mohamad Alee Mohd Said",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Có order mới trong OneTalk",
+        "Order",
+        "Snapshot hiển thị [Order], khả năng đang chờ xử lý đơn",
+        "Rất cao",
+        "Kiểm tra order, xác nhận hàng/model/địa chỉ và cập nhật thời gian ship"
+      ],
+      [
+        "2026-09-02",
+        "Jess Eriksen",
+        "Denmark",
+        "Có level tag",
+        "M-Biker CB300R Front Motorcycle Headlight 2 Lens Powerful Auxiliary Light Assembly",
+        "1 order / USD 83.69",
+        "Đơn đã thanh toán, trạng thái Waiting for supplier to ship, địa chỉ Støvring Denmark",
+        "Rất cao",
+        "Ưu tiên giao hàng, gửi tracking và xác nhận thời gian ship"
+      ],
+      [
+        "2026-09-02",
+        "Jorge Gutierrez",
+        "Mexico",
+        "Có level tag",
+        "Genuine Mbiker CB350 H'ness CNC Bent Tube Rear Rack / CB350 Classic",
+        "1 order / USD 134.84",
+        "Buyer đã yêu cầu chuẩn bị đơn thanh toán; đơn đang Waiting for supplier to ship, địa chỉ Leon Guanajuato",
+        "Rất cao",
+        "Giao hàng đúng hẹn, gửi tracking, cảm ơn buyer và giữ chăm sóc sau bán"
+      ],
+      [
+        "2026-09-02",
+        "Wan Norhaidi Mohd Safian",
+        "Malaysia",
+        "Có level tag",
+        "Ph Kin Yamaha PG1 Rear Disc Brake Set",
+        "1 order / USD 103.03",
+        "Đơn đang Waiting for supplier to ship; buyer hỏi video/diagram lắp thắng đĩa",
+        "Rất cao",
+        "Gửi video/sơ đồ lắp đặt ngay, xác nhận model xe và cập nhật tracking"
+      ],
+      [
+        "2026-09-02",
+        "zhequan lin",
+        "Taiwan Province",
+        "Có level tag",
+        "Baga Plate Stainless Steel for Yamaha XSR155 Rear Motorcycle Luggage & Saddlebags",
+        "1 order / USD 80.98",
+        "Buyer nói đã đặt hàng, đơn đang Waiting for supplier to ship; trước đó phàn nàn seller phản hồi chậm",
+        "Rất cao",
+        "Xác nhận đã nhận đơn, cập nhật ship, xin lỗi nhẹ vì phản hồi chậm và giữ khách trên kênh chính thức"
+      ],
+      [
+        "2026-08-12",
+        "Ester Faldikova",
+        "Czech Republic",
+        "Có level tag",
+        "Order Rebel 300/500/1100 saddle bag holder, tổng USD71.90; trạng thái waiting for delivery confirmation, địa chỉ Zlin.",
+        "1 order",
+        "Đã có đơn, đang cần thông tin để nhập khẩu/thông quan.",
+        "Rất cao",
+        "Nhắn xác nhận đã giao/đang chờ xác nhận; xin thông tin còn thiếu cho hải quan và hướng dẫn buyer confirm delivery khi nhận hàng."
+      ],
+      [
+        "2026-08-07",
+        "Elmer Lopez",
+        "Philippines",
+        "Có level tag / khách cũ",
+        "CB150X Rear Side Box Frame Rack Full B, màu đen. Khách cũ quay lại inquiry lại cùng sản phẩm.",
+        "1 set",
+        "Khách hỏi 'Just one set?'. Seller báo 155 USD gồm phí ship, thuế nhập khẩu chưa gồm.",
+        "Rất cao",
+        "Gửi order link ngay cho 1 set, xác nhận màu đen và địa chỉ nhận. Nhắc rõ 155 USD gồm ship, chưa gồm import duties."
+      ],
+      [
+        "2026-07-27",
+        "Elmer Lopez",
+        "Philippines",
+        "Có level tag",
+        "CB150X Rear Side Box Frame Rack Full B. Khách từng có order USD 155 và nói muốn order lại.",
+        "1",
+        "Đã có order cũ, khách có nhu cầu mua lại.",
+        "Rất cao",
+        "Xác nhận đặt lại đúng mẫu cũ, màu đen, địa chỉ cũ hay địa chỉ mới. Gửi lại order link ngay."
+      ],
+      [
+        "2026-07-26",
+        "Billy Uy",
+        "Philippines",
+        "Có level tag",
+        "XSR155 crash guard / frame protection sliders. Đã tạo contract/order nhưng khách nói chưa thấy discount.",
+        "Chưa rõ",
+        "Khách muốn quay về account gốc để thanh toán, có ý định chốt.",
+        "Rất cao",
+        "Nhắn ở cả account này và account gốc: xác nhận đã chỉnh discount, gửi lại order đúng account, giữ giá trong 24h."
+      ],
+      [
+        "2026-09-11",
+        "perfect nation Music",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "M-Biker MT15 anti-dumping frame; buyer đã được báo giá bậc 1-9/10-99/100+ pcs",
+        "Chưa rõ",
+        "Lead mới có sản phẩm và giá cụ thể, đang chờ xác nhận số lượng",
+        "Cao",
+        "Hỏi số lượng cần mua, địa chỉ nhận hàng và model xe; gửi order link khi buyer xác nhận"
+      ],
+      [
+        "2026-09-11",
+        "Jing ja",
+        "China / CN",
+        "Chưa thấy L",
+        "Một set/phụ kiện giá USD 15.98; buyer được đề nghị hỗ trợ ship tới CN",
+        "1 piece / 1 set",
+        "Nhu cầu nhỏ nhưng thật, có quốc gia nhận hàng CN",
+        "Cao",
+        "Hỏi địa chỉ/warehouse tại CN và xác nhận sản phẩm để báo phí ship cuối"
+      ],
+      [
+        "2026-09-11",
+        "Sushant Tamng",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Private label cho sản phẩm phụ kiện xe máy; hỏi logo/packaging/brand name",
+        "Chưa rõ",
+        "Buyer có nhu cầu private label, khả năng B2B tốt hơn khách lẻ",
+        "Cao",
+        "Hỏi buyer muốn logo, bao bì hay brand name trước; xin quantity và ảnh/yêu cầu thương hiệu"
+      ],
+      [
+        "2026-09-11",
+        "TAKASHI YAMASAKI",
+        "Japan / Nhật Bản",
+        "Chưa thấy L",
+        "Buyer nói đang trong quá trình shipping",
+        "Đang xử lý giao hàng",
+        "Khách có tiến trình vận chuyển, cần chăm sóc để tránh rơi đơn/hậu mãi",
+        "Cao",
+        "Xác nhận tracking, thời gian giao dự kiến và hỏi có cần hỗ trợ chứng từ không"
+      ],
+      [
+        "2026-09-02",
+        "Rumput Hijau",
+        "Indonesia",
+        "Chưa thấy L",
+        "Mbiker Lucky MBC Stainless Steel Handlebar Grips",
+        "1 order / USD 73.19",
+        "Đơn Waiting for payment, buyer đã phản hồi ok",
+        "Cao",
+        "Nhắc thanh toán đơn Alibaba, xác nhận tổng tiền và bảo hành 1 năm"
+      ],
+      [
+        "2026-09-02",
+        "Tu Vo Van",
+        "Vietnam",
+        "Có level tag",
+        "M-Biker Yamaha PG-1 Plate-Type Rear Luggage Rack / PG1 LED Headlight Guard",
+        "1 pc",
+        "Buyer muốn đặt 1 cái giao Quảng Ngãi, đã gửi SĐT và địa chỉ nhưng thiếu số nhà/tên đường cụ thể",
+        "Cao",
+        "Xin địa chỉ đầy đủ lần cuối rồi tạo order 1 pc trong Alibaba"
+      ],
+      [
+        "2026-09-02",
+        "Andreas Maerz",
+        "Đức / tiếng Đức",
+        "Có level tag",
+        "M-Biker 28L Side Boxes cho Triumph Tiger 900 GT Pro 2025",
+        "1 set",
+        "Buyer hỏi fitment, đã gửi/nhắc ảnh giá đỡ zin; cần xác nhận điểm khóa/lắp",
+        "Cao",
+        "Xin ảnh cận điểm gá/khóa, đối chiếu thông số 52x52x41 cm rồi xác nhận có vừa không"
+      ],
+      [
+        "2026-09-02",
+        "Abbas Shah",
+        "Chưa xác định",
+        "Có level tag",
+        "Rebel 1100 saddle bags / Rebel 300/500/1100 leather waterproof saddle bag",
+        "Chưa rõ",
+        "Buyer hỏi có túi yên Rebel 1100 không và yêu cầu xem mọi góc ảnh",
+        "Cao",
+        "Gửi đủ ảnh/video các góc, hỏi số bộ cần mua và địa chỉ ship"
+      ],
+      [
+        "2026-09-02",
+        "SImpsons Sim",
+        "Malaysia / Kuching Sarawak",
+        "Chưa thấy L",
+        "MBIKER PG1 small motorcycle saddle bag PK.PG1.001",
+        "1 pc",
+        "Buyer hỏi cách order, hỏi key fitment, đã được báo ship USD 21.41 express 3-8 ngày",
+        "Cao",
+        "Gửi hướng dẫn đặt hàng/order link, xác nhận 1 pc đi Kuching và fitment PG1"
+      ],
+      [
+        "2026-08-31",
+        "Pernia Boris",
+        "Chưa xác định",
+        "Có level tag",
+        "Genuine MBiker 28L bucket/side box; hỏi chứng chỉ, giá, distributor quote",
+        "Chưa rõ",
+        "Buyer có tín hiệu B2B/distributor, hỏi chứng chỉ, giá, payment terms/proforma và packaging",
+        "Cao",
+        "Gửi chứng chỉ/tài liệu, bảng giá theo số lượng, hỏi đơn đầu tiên và yêu cầu đóng gói"
+      ],
+      [
+        "2026-08-24",
+        "Stephen Varley",
+        "Chưa xác định",
+        "Buyer cần tiếp tục trao đổi trong Alibaba; seller xin delivery city/state để xử lý bước tiếp theo.",
+        "Chưa rõ",
+        "Có ý định tiếp tục, trọng tâm là địa chỉ giao hàng và phương án ship.",
+        "Cao",
+        "Xin city/state, mã bưu chính, model sản phẩm và số lượng để báo ship + tổng chi phí."
+      ],
+      [
+        "2026-08-21",
+        "JUNAID WARIS",
+        "Chưa xác định",
+        "Buyer hỏi/quan tâm phụ kiện nhưng chưa rõ xe; seller hỏi “What vehicle do you need the product for?”",
+        "Chưa rõ",
+        "Lead có nhu cầu nhưng thiếu model xe và sản phẩm cụ thể.",
+        "Cao",
+        "Gửi form ngắn: brand/model/year, product needed, quantity, destination; kèm catalogue nhóm phù hợp."
+      ],
+      [
+        "2026-08-17",
+        "Yakup Bayraktar",
+        "Chưa xác định (ngôn ngữ Thổ Nhĩ Kỳ)",
+        "Chưa thấy L",
+        "Inquiry M-Biker CB300R Front Motorcycle Headlight 2 Lens. Buyer hỏi MOQ mẫu mới, hỏi sản phẩm là gì, hiển thị ban đêm và vùng sáng bao nhiêu mét.",
+        "1 pcs",
+        "Buyer đang hỏi kỹ thông số, seller mới trả lời chung, chưa báo giá rõ.",
+        "Cao",
+        "Trả lời rõ giá 1 pcs, ảnh/video test ban đêm nếu có, thông số vùng chiếu sáng; xin địa chỉ nhận hàng để báo ship."
+      ],
+      [
+        "2026-08-13",
+        "Ferdinand Bautista",
+        "Chưa xác định",
+        "Có level tag",
+        "Buyer xin bảng giá, sau đó nói muốn linh kiện cho xe máy điện VinFast. Seller đã gửi catalogue/price list Google Sheet.",
+        "Chưa rõ",
+        "Có nhu cầu thật, đã hỏi bảng giá nhiều lần và hỏi đúng nhóm phụ kiện.",
+        "Cao",
+        "Gửi lại catalogue gọn hơn kèm 5 nhóm hàng VinFast/e-bike có thể cung cấp; hỏi model xe, sản phẩm cần mua và số lượng dự kiến."
+      ],
+      [
+        "2026-08-13",
+        "User name",
+        "Chưa xác định",
+        "Có level tag",
+        "Hỏi sea shipping agent, muốn ship đường biển để rẻ hơn DHL; hỏi giá USD300, nhận báo 3 bộ USD144 + ship USD290; xin catalogue.",
+        "3 set",
+        "Nhu cầu thật, quan tâm mạnh đến chi phí vận chuyển và catalogue.",
+        "Cao",
+        "Báo 2 phương án: express nhanh và sea/forwarder rẻ hơn; gửi catalogue ngắn, hỏi cảng/thành phố nhận hàng và thời gian chấp nhận."
+      ],
+      [
+        "2026-08-13",
+        "Luis Arboleda",
+        "Colombia",
+        "Chưa thấy L",
+        "Hỏi MBiker 28L Aluminum Side Boxes; cho địa chỉ Tunja Colombia; hỏi ship chuẩn, giá sản phẩm USD180/pcs; seller nói ship cao.",
+        "1 pcs / 1 pair",
+        "Có địa chỉ và hỏi giá ship, khả năng mua thật nhưng nhạy cảm phí ship.",
+        "Cao",
+        "Báo lại tổng tiền rõ: hàng, ship, thời gian, thuế chưa gồm; đưa phương án hàng gom/ship tiết kiệm nếu có."
+      ],
+      [
+        "2026-08-10",
+        "Pablo Bautista",
+        "Tây Ban Nha/LatAm",
+        "Chưa thấy",
+        "Genuine M-Biker for Rebel 300/500 lower side mirror stand rearview motorcycle mirrors.",
+        "1 unidad",
+        "Buyer gửi inquiry bằng tiếng Tây Ban Nha hỏi sản phẩm. Auto đã hỏi khách cần hỏi tương thích, specs hay giá.",
+        "Cao",
+        "Nhắn tiếng Tây Ban Nha: xác nhận dùng cho Rebel 300/500, gửi giá 1 bộ + phí ship, hỏi địa chỉ nhận và đời xe."
+      ],
+      [
+        "2026-08-10",
+        "lin hong run",
+        "Trung Quốc",
+        "Có level tag",
+        "Hỏi custom chân chống/foot stand vì không có mẫu phù hợp xe của khách.",
+        "Chưa rõ",
+        "Buyer nói không có chân chống phù hợp nên hỏi có thể custom không; seller nói có thể làm nhưng cần tìm đúng model xe.",
+        "Cao",
+        "Xin model xe, năm sản xuất, ảnh vị trí lắp, kích thước; báo rõ custom cần bản vẽ/mẫu và MOQ/chi phí làm mẫu."
+      ],
+      [
+        "2026-08-07",
+        "DANIEL SPISSO",
+        "Chưa thấy",
+        "Có level tag",
+        "Genuine MBiker Stainless Steel Forklift Codes MB360/MB111 Rear Motorcycle Lift Ramps & Stands.",
+        "≥50 pcs",
+        "Đã gửi quotation USD 30/pcs và hỏi yêu cầu lắp đặt phía sau.",
+        "Cao",
+        "Đây là qty lớn hơn nhóm mua lẻ. Cần gửi spec, packing, lead time, hỏi cảng nhận và yêu cầu kỹ thuật lắp đặt."
+      ],
+      [
+        "2026-08-07",
+        "Pablo Medovyk",
+        "Ukraine / tiếng Ukraine",
+        "Có level tag",
+        "Rebel 300/500 saddle bag leather waterproof 35L; khách hỏi catalog moto accessories và gửi link Google Sheet.",
+        "Chưa rõ",
+        "Khách có lịch sử hỏi catalog, sau đó gửi link Google Sheet ngày 07/08.",
+        "Cao",
+        "Mở/xem danh sách khách gửi nếu có quyền; nếu không, xin khách gửi file/ảnh danh sách. Gửi catalog phụ kiện Rebel 300/500."
+      ],
+      [
+        "2026-08-07",
+        "ADAM KORZENIEWSKI",
+        "Chưa xác định",
+        "Quan tâm 50L aluminum alloy motorcycle tank/top box cho Honda/Ducati/Kawasaki/Suzuki/Yamaha, hỏi bracket/standard configuration.",
+        "Chưa rõ",
+        "Lead đúng ngành, cần xác nhận bracket và model xe để tránh báo sai.",
+        "Cao",
+        "Gửi ảnh cấu hình/bracket, hỏi model xe và số lượng; báo lead time và phí ship sau khi có địa chỉ."
+      ],
+      [
+        "2026-08-07",
+        "DANIEL SPISSO",
+        "Chưa xác định",
+        "Hỏi stainless steel components/rear placement cho model MB360/MB111, có yêu cầu mounting.",
+        "Chưa rõ",
+        "Lead kỹ thuật, có model cụ thể nhưng cần mounting requirements.",
+        "Cao",
+        "Xin ảnh vị trí lắp, kích thước, bản vẽ hoặc model đầy đủ; xác nhận vật liệu inox và số lượng."
+      ],
+      [
+        "2026-08-04",
+        "Brett Mcdonnell",
+        "Chưa xác định",
+        "Đang chờ tìm shipping carrier phù hợp.",
+        "Chưa rõ",
+        "Có nhu cầu thật, bị kẹt ở logistics/ship.",
+        "Cao",
+        "Cập nhật ngay 2 phương án ship: nhanh/tiết kiệm; hỏi lại địa chỉ và xác nhận sản phẩm để chốt phí."
+      ],
+      [
+        "2026-07-29",
+        "Kwizerimana Josue",
+        "Rwanda",
+        "Chưa thấy L",
+        "MBIKER Yamaha XSR155 Center Stand. Buyer có 22 product views, 13 valid inquiries trong 90 ngày.",
+        "10 pcs",
+        "Đã hỏi sản phẩm, seller cần xin địa chỉ và mã bưu chính để tính ship.",
+        "Cao",
+        "Gửi bảng giá 10-99 pcs USD 12, 100-199 pcs USD 11, 200+ pcs USD 10. Xin địa chỉ + postal code để báo ship và tạo quote."
+      ],
+      [
+        "2026-07-29",
+        "Guigma Charles",
+        "Burkina Faso",
+        "L1",
+        "Exciter 155, màu đen. Khách hỏi giá, chê express ship sang BF USD 175.76 quá cao, có đầu mối nhận hàng tại Trung Quốc.",
+        "1",
+        "Đã chấp nhận phương án giao tới đầu mối Trung Quốc.",
+        "Cao",
+        "Nhắn tiếng Pháp: xác nhận có thể giao tới contact ở Trung Quốc, xin địa chỉ kho/contact, báo phí nội địa Trung Quốc rẻ hơn express BF."
+      ],
+      [
+        "2026-07-27",
+        "Ibrahim Jamadar",
+        "Chưa thấy",
+        "Chưa thấy L",
+        "Yamaha XSR155 Motorcycle License Plate & Frames SKU PK.YA.XS.0022.",
+        "1 piece",
+        "Khách yêu cầu báo nhanh, seller nói có thể place order.",
+        "Cao",
+        "Gửi tổng giá gồm sản phẩm + ship, hỏi xác nhận màu/model, rồi tạo order 1 pcs nếu shop chấp nhận bán lẻ."
+      ],
+      [
+        "2026-08-24",
+        "riccardo civitani",
+        "Chưa xác định",
+        "Có trao đổi về đơn số lượng 10-20 units; seller trả lời số lượng này quá ít.",
+        "10-20 units",
+        "Buyer có số lượng cụ thể nhưng chưa đạt MOQ; cần chuyển hướng sample/trial hoặc MOQ tối thiểu.",
+        "Trung bình-cao",
+        "Hỏi lại model chính xác, đề xuất MOQ tối thiểu hoặc phương án gom đơn/sample có phí ship rõ."
+      ],
+      [
+        "2026-08-22",
+        "rangsit gahawong",
+        "Chưa xác định",
+        "Có phản hồi số/giá “6300”, cần mở lại để xác định đây là ngân sách, giá hay số lượng.",
+        "6300 chưa rõ đơn vị",
+        "Có tín hiệu trao đổi thật nhưng thiếu ngữ cảnh.",
+        "Trung bình-cao",
+        "Xác nhận 6300 là số lượng hay ngân sách; hỏi model xe và địa chỉ nhận hàng."
+      ],
+      [
+        "2026-08-07",
+        "Gael tellez",
+        "Chưa xác định",
+        "Hỏi/được tư vấn thùng nhôm xe máy 50L cho Honda/Ducati/Kawasaki/Suzuki/Yamaha; quantity 1.",
+        "1 pcs",
+        "Có sản phẩm rõ nhưng số lượng nhỏ; nên chốt mẫu hoặc retail trial nếu shop chấp nhận.",
+        "Trung bình-cao",
+        "Báo rõ giá 1 pcs + ship; hỏi model xe, màu, địa chỉ nhận; nếu MOQ cao thì chuyển sang sample paid."
+      ],
+      [
+        "2026-08-07",
+        "Gael tellez",
+        "Chưa thấy",
+        "Có level tag",
+        "M-Biker THNG 30L Aluminum Alloy Top Box / nhu cầu hành lý xe máy 50L/retro-fit.",
+        "1",
+        "Đã gửi quotation USD 80 và hỏi khách có cần chỉ 1 item không.",
+        "Trung bình-cao",
+        "Hỏi model xe, dung tích cần 30L hay 50L, địa chỉ nhận để báo phí ship; nếu mua 1 pcs thì cảnh báo ship cao."
+      ],
+      [
+        "2026-08-07",
+        "ADAM KORZENIEWSKI",
+        "Chưa thấy",
+        "Có level tag",
+        "Top box/luggage 50L cho Honda/Ducati/Kawasaki/Suzuki/Yamaha; hỏi có kèm bracket lắp đặt không.",
+        "1 piece",
+        "Đã gửi quotation USD 80 và hỏi cấu hình tiêu chuẩn có gồm bracket khách cần không.",
+        "Trung bình-cao",
+        "Gửi ảnh bracket/phụ kiện đi kèm, xác nhận xe khách, tạo báo giá gồm box + bracket + ship."
+      ],
+      [
+        "2026-07-25",
+        "FONKOU NARCISSE",
+        "Cameroon",
+        "Có level tag",
+        "Muốn khoảng 5 pcs sample, hỏi trọng lượng từng sản phẩm, vướng forwarder từ Vietnam sang Cameroon.",
+        "5 pcs sample",
+        "Đang kẹt phương án vận chuyển/forwarder.",
+        "Trung bình-cao",
+        "Gửi trọng lượng/kích thước đóng gói, đề xuất 2 phương án: buyer tự có forwarder hoặc seller check forwarder hỗ trợ Cameroon."
+      ],
+      [
+        "2026-08-16",
+        "Freddie Galera",
+        "Chưa xác định",
+        "Có level tag",
+        "Ducati 899 Panigale 2-Fork Heavy-Duty Motorcycle Lift Ramps/Stands MB366/MB360/MB111; hệ thống gửi ảnh sản phẩm MB366.",
+        "1 pcs",
+        "Có inquiry/sản phẩm cụ thể nhưng chưa thấy buyer hỏi sâu sau ảnh.",
+        "Trung bình",
+        "Follow hỏi khách cần loại MB366/MB360/MB111 nào, số lượng và địa chỉ nhận hàng để báo ship."
+      ],
+      [
+        "2026-08-13",
+        "Hermannfrankl Mangamba",
+        "Chưa xác định (tiếng Pháp)",
+        "Có level tag",
+        "Hỏi MT09 rear rack box frame, muốn 3 pcs, hỏi thêm thùng nhôm kiểu Yamaha. Seller báo không có đúng model xe.",
+        "3 pcs",
+        "Nhu cầu thật nhưng có rủi ro không khớp model/sản phẩm.",
+        "Trung bình",
+        "Xin ảnh xe/model năm sản xuất; đề xuất sản phẩm thay thế phù hợp hoặc xác nhận không có để tránh mất thời gian."
+      ],
+      [
+        "2026-08-12",
+        "Heriberto yissi",
+        "Chile",
+        "Có level tag",
+        "Hỏi crash bar và rear rack cho Honda CB350 Hness gửi Chile; 2 sản phẩm USD90, ship USD450; buyer nói quá đắt.",
+        "2 sản phẩm",
+        "Buyer chê phí ship cao sau khi báo giá, cơ hội giảm mạnh nhưng vẫn có nhu cầu sản phẩm.",
+        "Trung bình",
+        "Đề xuất phương án ship rẻ hơn/gom hàng; nếu không có, hỏi buyer có forwarder tại Trung Quốc không."
+      ],
+      [
+        "2026-08-06",
+        "Jec pangilinan",
+        "Philippines",
+        "Có level tag",
+        "Hỏi VinFast OEM parts.",
+        "Chưa rõ",
+        "Buyer hỏi shop có phụ tùng OEM VinFast không; seller hỏi cần sản phẩm gì và số lượng.",
+        "Trung bình",
+        "Hỏi rõ mã phụ tùng/ảnh, dòng xe VinFast, số lượng; nếu không thuộc danh mục Mbike thì giới thiệu phụ kiện có thể sản xuất/custom."
+      ],
+      [
+        "2026-07-29",
+        "Carlos MeroMera",
+        "Ecuador",
+        "Chưa thấy L",
+        "Hỏi ship tới Manta, Ecuador, muốn door-to-door, hỏi mã bưu chính; seller nói không bán lẻ 1 pcs.",
+        "1",
+        "Có nhu cầu nhưng thấp vì chỉ 1 pcs và kẹt ship.",
+        "Trung bình-thấp",
+        "Hỏi lại số lượng thực tế. Nếu chỉ 1 pcs thì note phí ship cao/khó; nếu mua nhiều thì báo door-to-door."
+      ],
+      [
+        "2026-07-24",
+        "Edel ContrerasOrtiz",
+        "USA / California",
+        "Chưa thấy L",
+        "Genuine Kawasaki Z1000 rack. Hỏi payment, địa chỉ California, sau đó nói phí ship quá cao.",
+        "1",
+        "Có nhu cầu thật nhưng mắc phí ship.",
+        "Trung bình",
+        "Đề xuất ship chậm hơn, gom hàng, hoặc gửi tới forwarder tại Mỹ/Trung Quốc. Hỏi mức phí ship buyer chấp nhận."
+      ],
+      [
+        "2026-07-23",
+        "juanma gonzalvez",
+        "Chưa thấy",
+        "Có level tag",
+        "Muốn làm custom cho Sherco 125 2026, tùy chỉnh kích thước và điểm bắt, ban đầu 10 units nhưng không có bản vẽ.",
+        "10 units",
+        "Có ý tưởng kinh doanh linh kiện/dàn áo, nhưng thiếu bản vẽ kỹ thuật.",
+        "Trung bình",
+        "Không chốt không làm được quá sớm. Xin ảnh xe, ảnh vị trí lắp, kích thước tay đo, video quanh xe; báo phí làm mẫu hoặc MOQ custom."
+      ],
+      [
+        "2026-07-23",
+        "Navin Roonwal",
+        "India / có kho Trung Quốc",
+        "Có level tag",
+        "Ducati Monster 821 motorcycle ramps/stands. Khách hỏi ship tới kho agent ở Yangkong/Trung Quốc và Ấn Độ, qty 1.",
+        "1",
+        "Quan tâm thật nhưng chê phí ship cao.",
+        "Trung bình-thấp",
+        "Nếu có kho Trung Quốc thì xin địa chỉ kho để báo phí nội địa; nếu gửi Ấn Độ thì khuyên gom số lượng vì 1 pcs ship cao."
+      ],
+      [
+        "2026-08-25",
+        "Wiro Lungwi",
+        "Indonesia",
+        "Chưa thấy L",
+        "Rebel 300/500/1100 rack; khách hỏi forwarder Indonesia",
+        "500",
+        "Lead nóng",
+        "Lead nóng",
+        "Báo ship/forwarder, xin city+postal code, lưu ý thuế nhập khẩu"
+      ],
+      [
+        "2026-08-25",
+        "gomes lopes",
+        "Brazil/Portugal",
+        "Chưa thấy L",
+        "Yamaha PG1 anti-roll/off-road part, muốn mua ngay",
+        "1 piece",
+        "Lead nóng",
+        "Lead nóng",
+        "Gửi quotation/order link ngay, hỏi địa chỉ nhận hàng"
+      ],
+      [
+        "2026-08-24",
+        "Elmer Lopez",
+        "Zambia",
+        "Chưa thấy L",
+        "Đã gửi quotation nhưng khách chưa thanh toán",
+        "1 piece; 20; 5",
+        "Lead nóng/chờ thanh toán",
+        "Lead nóng/chờ thanh toán",
+        "Follow thanh toán, xác nhận còn cần hàng không"
+      ],
+      [
+        "2026-08-24",
+        "Petr Svec",
+        "Kazakhstan",
+        "Chưa thấy L",
+        "Baga/trunk motorcycle, hỏi thanh toán khi nhận hàng",
+        "1 trunk",
+        "Lead nóng",
+        "Lead nóng",
+        "Giải thích trả trước qua Alibaba, cần postal code để tạo đơn"
+      ],
+      [
+        "2026-08-24",
+        "riccardo civitani",
+        "Italy",
+        "Chưa thấy L",
+        "Yêu cầu DDP price cho sample/5/10/20 units",
+        "1 sample; 5; 10; 20",
+        "Lead B2B tốt",
+        "Lead B2B tốt",
+        "Báo giá theo tier chuyên nghiệp; tránh trả lời 10-20 quá ít làm mất khách"
+      ],
+      [
+        "2026-08-18",
+        "User name",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi catalogue, xem thêm sản phẩm, đã tính 3 sets",
+        "3 sets",
+        "Lead B2B tốt",
+        "Lead B2B tốt",
+        "Follow catalogue theo dòng xe và tối ưu phí ship 290 USD"
+      ],
+      [
+        "2026-08-16",
+        "kitti kittikron",
+        "Thailand",
+        "Chưa thấy L",
+        "Yamaha PG1 front luggage rack/headlight mount",
+        "1 set",
+        "Lead nóng",
+        "Lead nóng",
+        "Khách hỏi bấm đặt ở đâu, cần tạo order và xin địa chỉ/SĐT/mã bưu chính"
+      ],
+      [
+        "2026-08-16",
+        "Jonathan Loh",
+        "Singapore",
+        "Chưa thấy L",
+        "MBIKER rear luggage rack Yamaha R15V4",
+        "USD 83.91",
+        "Đã có đơn/đang giao",
+        "Đã có đơn/đang giao",
+        "Theo dõi ship, báo khách phí/thuế nếu phát sinh"
+      ],
+      [
+        "2026-08-15",
+        "Ibrahim elkersh",
+        "Singapore",
+        "Chưa thấy L",
+        "MBIKER Stainless Steel Rear Luggage Rack Yamaha R15V4 Top Case Motorcycle Helmet Bag Saddle Bag-Retrofit/Upgrade 1-Year",
+        "Smart actions; 1 pcs; 100",
+        "Đã có đơn/đang giao",
+        "Đã có đơn/đang giao",
+        "Theo dõi vận chuyển, báo khách về thuế nhập khẩu và thời gian nhận."
+      ],
+      [
+        "2026-08-15",
+        "Ndoss Thomsoni",
+        "Singapore",
+        "Chưa thấy L",
+        "MBIKER Stainless Steel Rear Luggage Rack Yamaha R15V4 Top Case Motorcycle Helmet Bag Saddle Bag-Retrofit/Upgrade 1-Year",
+        "Smart actions; 1 pcs; 100",
+        "Đã có đơn/đang giao",
+        "Đã có đơn/đang giao",
+        "Theo dõi vận chuyển, báo khách về thuế nhập khẩu và thời gian nhận."
+      ],
+      [
+        "2026-08-14",
+        "HENKO IMPORT",
+        "Peru",
+        "Chưa thấy L",
+        "MBiker 16L aluminum side box, hỏi DHL Lima",
+        "1 pair",
+        "Lead nóng vướng ship",
+        "Lead nóng vướng ship",
+        "Ship 700-800 USD cao; đề xuất phương án ship khác/gom đơn"
+      ],
+      [
+        "2026-08-12",
+        "Ester Faldikova",
+        "Czech Republic",
+        "Chưa thấy L",
+        "Saddle bag holder Rebel 300/500/1100",
+        "USD 71.90",
+        "Đã có đơn hoàn tất",
+        "Đã có đơn hoàn tất",
+        "Chăm sóc sau bán, xin feedback/đánh giá"
+      ],
+      [
+        "2026-08-12",
+        "Raffy Barrios",
+        "Philippines",
+        "Chưa thấy L",
+        "Đơn bị UPS giữ do import duty/tax",
+        "5; 10; 20",
+        "Sau bán - vướng thuế",
+        "Sau bán - vướng thuế",
+        "Giải thích thuế nhập khẩu, tránh khách hiểu lầm đã bao gồm"
+      ],
+      [
+        "2026-08-07",
+        "DANIEL SPISSO",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Quotation rear motorcycle lift ramps/stands MB360/MB111",
+        ">=50 pieces",
+        "Lead B2B tiềm năng",
+        "Lead B2B tiềm năng",
+        "Hỏi mounting/spec, báo MOQ B2B"
+      ]
+    ],
+    "Can note": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Level",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-07",
+        "Pablo Medovyk",
+        "Chưa xác định",
+        "Gửi link Google Sheet bên ngoài; chưa thấy nội dung nhu cầu trực tiếp trong OneTalk.",
+        "Chưa rõ",
+        "Có thể là lead thật nhưng cần yêu cầu gửi nội dung/spec trực tiếp trên Alibaba để tránh mất thông tin.",
+        "Cao",
+        "Không mở/kéo dữ liệu ngoài nếu chưa cần; yêu cầu buyer gửi model, SKU, quantity, destination trực tiếp trong Alibaba."
+      ],
+      [
+        "2026-08-06",
+        "Jec pangilinan",
+        "Chưa xác định",
+        "Seller hỏi buyer cần sản phẩm nào và số lượng bao nhiêu.",
+        "Chưa rõ",
+        "Lead mở đầu, chưa đủ thông tin nhưng có thể tiếp tục nếu buyer trả lời.",
+        "Trung bình",
+        "Gửi form chọn nhóm hàng + ảnh 3 nhóm bán chạy, yêu cầu buyer chọn model và quantity."
+      ],
+      [
+        "2026-08-18",
+        "hdhhd hdhd",
+        "Chưa xác định",
+        "Trao đổi ngắn “not China”, có khả năng buyer hỏi nguồn hàng/xuất xứ.",
+        "Chưa rõ",
+        "Có phản hồi nhưng nhu cầu chưa rõ.",
+        "Trung bình",
+        "Xác nhận nhà máy ở Việt Nam, hỏi sản phẩm/model và quốc gia nhập khẩu."
+      ],
+      [
+        "2026-08-18",
+        "Qwesi Pappy",
+        "Chưa xác định",
+        "Seller trả lời “we are in Vietnam”, chưa thấy nhu cầu sâu.",
+        "Chưa rõ",
+        "Cần theo dõi nếu buyer hỏi nguồn gốc/xuất xứ.",
+        "Trung bình",
+        "Nêu lợi thế nhà máy Việt Nam, hỏi buyer cần phụ kiện nào và số lượng dự kiến."
+      ],
+      [
+        "2026-08-04",
+        "Kwizerimana Josue",
+        "Chưa xác định",
+        "Seller hỏi lại buyer có cần motorcycle hay không; khả năng buyer hỏi nhầm xe nguyên chiếc.",
+        "Chưa rõ",
+        "Cần lọc lại vì shop bán phụ kiện, không bán xe nguyên chiếc.",
+        "Trung bình-thấp",
+        "Giải thích chỉ bán phụ kiện; gửi catalogue phụ kiện nếu buyer vẫn quan tâm."
+      ],
+      [
+        "2026-08-03",
+        "Peter Dobsinsky",
+        "Chưa xác định",
+        "Tin nhắn dạng hình ảnh, chưa đọc được nhu cầu text rõ.",
+        "Chưa rõ",
+        "Cần mở sâu/đọc ảnh nếu buyer có gửi sản phẩm cần tìm.",
+        "Trung bình",
+        "Nếu mở lại được ảnh, xác định model/số lượng; nếu không, hỏi buyer gửi lại SKU hoặc ảnh kèm mô tả."
+      ],
+      [
+        "2026-09-11",
+        "Panha Voin",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller đang hỏi buyer cần bao nhiêu pieces",
+        "Lead thiếu số lượng",
+        "Hỏi lại sản phẩm cụ thể, số lượng, địa chỉ nhận hàng để báo giá"
+      ],
+      [
+        "2026-09-10",
+        "Jonathan Loh",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller hỏi buyer đã nhận order chưa",
+        "Hậu mãi / cần follow",
+        "Xác nhận tình trạng nhận hàng, nếu đã nhận thì xin feedback và nhu cầu order tiếp"
+      ],
+      [
+        "2026-09-10",
+        "Liseth Tejada",
+        "Tây Ban Nha / LatAm",
+        "Chưa thấy L",
+        "Hỏi buyer đang tìm sản phẩm gì hay muốn mua xe máy",
+        "Lead cần làm rõ nhu cầu",
+        "Hỏi lại buyer cần phụ kiện nào, model xe, ảnh sản phẩm và số lượng"
+      ],
+      [
+        "2026-09-09",
+        "mohamad katanji",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller báo khoảng 60-70 USD, khả năng đang nói phí/giá",
+        "Lead có trao đổi giá nhưng thiếu sản phẩm",
+        "Xác nhận sản phẩm, số lượng và địa chỉ ship để gửi quote chính xác"
+      ],
+      [
+        "2026-09-11",
+        "Anthony George",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer phản hồi OK sir",
+        "Có phản hồi nhưng nội dung ít",
+        "Follow bằng câu hỏi cụ thể về sản phẩm/số lượng nếu trước đó đã báo giá"
+      ],
+      [
+        "2026-09-11",
+        "Aaron F",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer phản hồi OK sir",
+        "Có phản hồi nhưng chưa đủ thông tin",
+        "Hỏi tiếp bước đặt hàng: quantity, model, address hoặc có cần order link không"
+      ],
+      [
+        "2026-09-11",
+        "hermawan setya budi",
+        "Indonesia / tên Indonesia",
+        "Chưa thấy L",
+        "Buyer phản hồi OK sir",
+        "Có phản hồi nhưng thiếu nhu cầu mới",
+        "Hỏi sản phẩm/model xe và số lượng muốn đặt"
+      ],
+      [
+        "2026-09-03",
+        "Josue Baraka",
+        "Chưa xác định",
+        "Có level tag",
+        "CB300R crash protection set; hỏi ảnh/sản phẩm, chưa nêu số lượng",
+        "Lead mới cần hỏi số lượng",
+        "Hỏi quantity, quốc gia/city nhận hàng và gửi giá theo bậc"
+      ],
+      [
+        "2026-09-03",
+        "Mark Lara",
+        "Chưa xác định",
+        "Có level tag",
+        "Yamaha PG1 Front Luggage Rack Headlight Mount; buyer gửi product/image, chưa nêu số lượng",
+        "Lead mới cần khai thác",
+        "Hỏi số lượng và địa chỉ ship, gửi price tier 1-9/10-99/100+"
+      ],
+      [
+        "2026-09-03",
+        "Edisson Bautista",
+        "Chưa xác định",
+        "Có level tag",
+        "Quotation Mbiker MB143 Rear Mobile Lift, unit price USD 96; thiếu shipping address",
+        "Lead có báo giá",
+        "Ưu tiên hỏi địa chỉ ship và model xe để chốt phí vận chuyển"
+      ],
+      [
+        "2026-09-02",
+        "degons mbiye",
+        "Pháp ngữ",
+        "Có level tag",
+        "XSR155 rear fender, giá USD 10/pc; buyer muốn 1 pc và hỏi net/packed weight/carton",
+        "Lead thật cần thông số",
+        "Gửi net weight, packed weight, carton size; hỏi quốc gia/city để báo ship"
+      ],
+      [
+        "2026-08-27",
+        "Sl thamizhan",
+        "Sri Lanka / tín hiệu ship",
+        "Có level tag",
+        "MBIKER Crash Bars Yamaha MT-15, buyer cân nhắc đặt 10 pieces",
+        "Lead có số lượng 10 pcs",
+        "Kiểm tra ship Sri Lanka, gửi total price + lead time và hỏi xác nhận order"
+      ],
+      [
+        "2026-08-27",
+        "Xamid Bobojanov",
+        "Chưa xác định",
+        "Có level tag",
+        "Rebel 300/500/1100 luggage rack; buyer nói muốn mua số lượng lớn, xin catalog",
+        "Lead tiềm năng nhưng kéo qua email",
+        "Gửi catalog ngay trong Alibaba, hỏi danh sách mã hàng và quantity; hạn chế chuyển kênh ngoài"
+      ],
+      [
+        "2026-08-26",
+        "Rogate Rogate",
+        "Indonesia",
+        "Chưa thấy L",
+        "Yamaha NVX side box frame, hỏi mua 1 set và vận chuyển, đã báo total goods+ship USD 160",
+        "Buyer đã có địa chỉ Jakarta, nói sẽ suy nghĩ vì chi phí",
+        "Follow lại nhẹ, đề xuất phương án ship rẻ/gom hàng và hỏi còn muốn invoice không"
+      ],
+      [
+        "2026-08-28",
+        "Sopan Lonare",
+        "India / từ inquiry cũ",
+        "Chưa thấy L",
+        "Yamaha XSR155 seat lowering pad 1 set; trước đó từng hỏi bulk 10 pcs XSR155 holder",
+        "Lead cũ có nhu cầu lặp lại",
+        "Xác nhận sản phẩm cuối cùng, số lượng thật và báo ship India"
+      ],
+      [
+        "2026-09-03",
+        "davy hok",
+        "Trung Quốc / tiếng Trung",
+        "Có level tag",
+        "Hỏi có thể dùng tiếng Trung không và có giao từ Việt Nam không",
+        "Lead mới chưa có sản phẩm",
+        "Trả lời tiếng Trung: có thể dùng tiếng Trung, hàng từ Việt Nam; hỏi sản phẩm/link/số lượng"
+      ],
+      [
+        "2026-08-27",
+        "Alex Gezha",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi trọng lượng trunk mount không bao bì, buyer đang chờ thông số",
+        "Lead kỹ thuật đang chờ phản hồi",
+        "Cung cấp net weight chính xác hoặc xin mã sản phẩm/ảnh để check"
+      ],
+      [
+        "2026-08-26",
+        "Eddy Calderon",
+        "Guatemala",
+        "Chưa thấy L",
+        "CB350 Hness anti-roll frame 30mm; buyer hỏi phí ship cho 1 unidad",
+        "Lead có inquiry, thiếu city/postal code",
+        "Hỏi thành phố/mã bưu chính Guatemala để báo freight"
+      ],
+      [
+        "2026-08-26",
+        "Samuel Doku",
+        "Belgium / Opwijk",
+        "Chưa thấy L",
+        "Buyer muốn màu đỏ, hỏi phí ship và thời gian; tổng ship quá cao, lowest total USD 450",
+        "Lead vướng phí ship cao",
+        "Đề xuất ship rẻ hơn/gom hàng, xác nhận có chấp nhận total 450 USD không"
+      ],
+      [
+        "2026-08-27",
+        "Marcos Queta",
+        "Angola / Luanda",
+        "Chưa thấy L",
+        "CB150X Motorcycle Bag Frame, hỏi shipping MOQ 1 tới Luanda",
+        "Lead thật nhưng seller trả lời nhầm “không bán xe máy”",
+        "Cần xin lỗi/clarify là phụ kiện, hỏi postal code đúng và báo ship"
+      ],
+      [
+        "2026-08-31",
+        "Enrique Guzman",
+        "Tây Ban Nha/LatAm",
+        "Chưa thấy L",
+        "NX500 side rack black powder-coated steel, đã báo USD 56/pc cho 10 units",
+        "Lead cần xác nhận đơn 10 pcs",
+        "Hỏi địa chỉ nhận hàng và xác nhận đặt 10 pcs để báo ship/order"
+      ],
+      [
+        "2026-08-28",
+        "KemaxPS Network",
+        "Chưa xác định",
+        "Có level tag",
+        "Yamaha PG1 Anti-Roll Off-Road underbody protection, MOQ 1; chưa nêu quantity",
+        "Lead mới nhưng chưa phản hồi sâu",
+        "Hỏi số lượng, xe PG1 đúng model không và địa chỉ ship"
+      ],
+      [
+        "2026-08-14",
+        "EmilT Cruz",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi payment terms, shipping fee, số lượng 1 | SL: 1",
+        "Lead cần báo ship",
+        "Khách hỏi update phí ship; cần báo lại ngay"
+      ],
+      [
+        "2026-08-12",
+        "GEORGE WILLIAM MATOVU",
+        "Uganda",
+        "Chưa thấy L",
+        "Front paddock stand MB2021, hỏi front/rear set và giá | SL: 100; 10; 1",
+        "Lead cần báo giá",
+        "Báo rõ option/version USD 100-180, hỏi số lượng"
+      ],
+      [
+        "2026-08-24",
+        "Stephen Varley",
+        "Zambia",
+        "Chưa thấy L",
+        "Seller kéo khách về Alibaba; cần delivery city/state | SL: 1 piece; 20; 5",
+        "Lead cần follow",
+        "Giữ chat trong Alibaba, hỏi địa chỉ giao"
+      ],
+      [
+        "2026-08-07",
+        "ADAM KORZENIEWSKI",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Quotation top box/luggage 30L/50L | SL: 1 piece",
+        "Lead cần khai thác",
+        "Xác nhận cần bracket/installation kit"
+      ],
+      [
+        "2026-08-12",
+        "Abdarman Abakar",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Missing quantity and unit price | SL: Chưa rõ",
+        "Lead cần khai thác",
+        "Cần hỏi đủ mẫu xe, năm xe, số lượng, địa chỉ nhận hàng; sau đó gửi báo giá trong Alibaba."
+      ],
+      [
+        "2026-08-21",
+        "Ferdinand Bautista",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "i want parts for vinfast e motorcycles | SL: Chưa rõ",
+        "Lead cần khai thác",
+        "Cần hỏi đủ mẫu xe, năm xe, số lượng, địa chỉ nhận hàng; sau đó gửi báo giá trong Alibaba."
+      ],
+      [
+        "2026-08-07",
+        "Gael tellez",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Quotation top box 30L/50L | SL: 1",
+        "Lead cần khai thác",
+        "Hỏi xác nhận chỉ mua 1 item và địa chỉ ship"
+      ],
+      [
+        "2026-08-06",
+        "Jec pangilinan",
+        "Philippines",
+        "Chưa thấy L",
+        "Hỏi Vinfast OEM parts/Vinfast accessories | SL: Chưa rõ",
+        "Lead cần khai thác",
+        "Hỏi rõ model Vinfast và phụ kiện cần mua"
+      ],
+      [
+        "2026-08-10",
+        "Martin Bagheni",
+        "France/French-speaking",
+        "Chưa thấy L",
+        "Yamaha PG1 anti-roll frame/underbody protection; khách hỏi sản phẩm là gì | SL: 1 pièce; 9 pièce; 5",
+        "Lead cần khai thác",
+        "Cần hỏi đủ mẫu xe, năm xe, số lượng, địa chỉ nhận hàng; sau đó gửi báo giá trong Alibaba."
+      ],
+      [
+        "2026-08-09",
+        "Melvin Mendoza",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Rear paddock stand; hỏi single sided swingarm | SL: MOQ 10",
+        "Lead cần kỹ thuật",
+        "Cần xác nhận swingarm model/ảnh"
+      ],
+      [
+        "2026-08-07",
+        "Pablo Medovyk",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Hỏi catalogue moto accessories, gửi Google Sheet | SL: 20; 500; 25",
+        "Lead catalogue",
+        "Gửi catalogue có phân nhóm mẫu xe và hỏi model/số lượng"
+      ],
+      [
+        "2026-08-08",
+        "aljulanda alshaqsi",
+        "Oman",
+        "Chưa thấy L",
+        "Khách gửi số +96899482153 và shipping mark LUBAN-ALJ153 | SL: Chưa rõ",
+        "Lead có thông tin liên hệ",
+        "Xác nhận sản phẩm cụ thể/order; có số điện thoại"
+      ],
+      [
+        "2026-08-12",
+        "Chris Woglo",
+        "Togo",
+        "Chưa thấy L",
+        "Order Yamaha PG1 giá ~9,925 USD nhưng order closed | SL: Order closed",
+        "Lead nghi ngờ/đơn đóng",
+        "Xác minh spam/đơn ảo trước khi tốn thời gian"
+      ],
+      [
+        "2026-08-10",
+        "Pablo Bautista",
+        "Spanish-speaking",
+        "Chưa thấy L",
+        "Inquiry rearview/lower side mirror Rebel 300/500 | SL: 1 unit",
+        "Lead thấp",
+        "Cần báo giá/compatibility rõ hơn"
+      ],
+      [
+        "2026-08-16",
+        "lin hong run",
+        "China/Chinese-speaking",
+        "Chưa thấy L",
+        "Hỏi custom kickstand/chân chống cho xe chưa có mẫu | SL: Chưa rõ",
+        "Lead custom khó",
+        "Yêu cầu bản vẽ kỹ thuật/ảnh/kích thước; không có bản vẽ thì khó làm"
+      ],
+      [
+        "2026-08-16",
+        "lin hong run",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview chỉ thấy buyer trả lời OK, boss; chưa mở ổn định được hội thoại riêng do giao diện giữ chat Freddie.",
+        "Có phản hồi nhưng chưa đủ dữ liệu",
+        "Rà lại bằng ô Search tên khách trước khi follow; không đưa vào ưu tiên khi chưa đọc đủ."
+      ],
+      [
+        "2026-08-16",
+        "kitti kittikron",
+        "Chưa xác định (tiếng Thái)",
+        "Chưa thấy L",
+        "Preview seller yêu cầu địa chỉ, số điện thoại, mã bưu chính để tạo đơn.",
+        "Có tín hiệu nhưng chưa đọc sâu",
+        "Rà lại hội thoại; nếu buyer đã gửi địa chỉ thì báo phí ship/tạo order ngay."
+      ],
+      [
+        "2026-08-16",
+        "Jonathan Loh",
+        "Chưa xác định",
+        "Có level tag",
+        "Preview seller nói sẽ kiểm tra lại phí vận chuyển.",
+        "Có khả năng đang chờ ship",
+        "Rà lại hội thoại; gửi phí ship trong 24h kèm thời gian giao và điều kiện thuế."
+      ],
+      [
+        "2026-08-15",
+        "Ndoss Thomsoni / HENKO IMPORT / EmilT Cruz",
+        "Chưa xác định",
+        "Có/không rõ",
+        "Preview có hỏi số lượng, ngân sách 700-800 USD hoặc xin địa chỉ tính phí.",
+        "Cần mở lại bằng Search để xác minh",
+        "Không đưa vào ưu tiên cho tới khi đọc được buyer đã phản hồi nhu cầu rõ ràng."
+      ],
+      [
+        "2026-07-29",
+        "Edwar Morales",
+        "USA",
+        "Chưa thấy",
+        "Inquiry Yamaha PG1 Anti-Roll, qty 1. Mới có inquiry và câu chào tiếng Tây Ban Nha.",
+        "Chưa phản hồi sâu",
+        "Follow 1 lần bằng tiếng Tây Ban Nha, hỏi model xe, số lượng và địa chỉ nhận hàng."
+      ],
+      [
+        "2026-07-29",
+        "Bernabel TorrijosBautista",
+        "Bolivia",
+        "L3",
+        "Xem Yamaha PG1 Anti-Roll $58-60, min order 1.",
+        "Có tín hiệu nhưng chưa nói sâu",
+        "Follow nhẹ hỏi số lượng + địa chỉ nhận hàng để báo ship."
+      ],
+      [
+        "2026-07-24",
+        "Luis Mayorga",
+        "Chưa thấy",
+        "Có level tag",
+        "Quan tâm Yamaha WR155 accessories/catalog/pictures từ 20/7; 24/7 chỉ là AI follow-up.",
+        "Chưa có phản hồi mới",
+        "Gửi ảnh/catalog WR155 một lần, hỏi sản phẩm và số lượng cụ thể."
+      ],
+      [
+        "2026-07-23",
+        "jioas adjadja",
+        "Chưa thấy",
+        "Có level tag",
+        "Hỏi Yamaha Sirius luggage rack nhưng muốn mua cả xe máy kèm baga.",
+        "Sai sản phẩm, tiềm năng thấp",
+        "Giải thích Mbike chỉ bán phụ kiện, hỏi lại nếu chỉ cần baga."
+      ],
+      [
+        "2026-07-23",
+        "Yohann Toto",
+        "Chưa thấy",
+        "Chưa thấy",
+        "Hỏi có bán Winer/Winner 2026 không.",
+        "Sai sản phẩm",
+        "Note không bán xe máy; chỉ giới thiệu phụ kiện nếu buyer cần."
+      ],
+      [
+        "2026-07-26",
+        "Cristian Miguel Apaza Arapa",
+        "Chưa thấy",
+        "Có level tag",
+        "Hỏi CB350 anti-roll frame, màu chrome và tapabarro phía dưới; seller trả lời không có.",
+        "Có nhu cầu nhưng sản phẩm chưa khớp",
+        "Nếu có sản phẩm thay thế, gửi ảnh; nếu không có thì đóng lead."
+      ],
+      [
+        "2026-08-10",
+        "Martin Bagheni",
+        "Tiếng Pháp",
+        "Chưa thấy",
+        "Khách nhìn ảnh thấy xe máy và hỏi; seller giải thích không bán xe máy.",
+        "Sai nhu cầu, không phải lead phụ kiện mạnh",
+        "Gửi 1 tin chốt: shop chỉ bán phụ kiện, nếu cần baga/gương/thùng thì gửi model xe."
+      ],
+      [
+        "2026-08-10",
+        "Ali Sory",
+        "Tiếng Pháp",
+        "Chưa thấy",
+        "Khách hỏi giá/giao dịch và hỏi shop bán gì; seller nói bán phụ kiện xe máy, không bán xe.",
+        "Cần giáo dục danh mục",
+        "Gửi catalog phụ kiện bằng tiếng Pháp, hỏi khách cần phụ kiện cho dòng xe nào."
+      ],
+      [
+        "2026-08-10",
+        "Gansonre Cheik",
+        "Tiếng Pháp",
+        "Chưa thấy",
+        "Khách gửi ảnh/hỏi Single Luggage Rack Saddlebag nhưng nói muốn chiếc xe máy trong ảnh.",
+        "Nhầm sản phẩm",
+        "Nhắc không bán xe máy; nếu cần rack/saddlebag thì hỏi model xe và số lượng."
+      ],
+      [
+        "2026-08-08",
+        "aljulanda alshaqsi",
+        "Oman / tiếng Ả Rập",
+        "Có level tag",
+        "Khách gửi số điện thoại và hỏi có thiếu thông tin không; seller hỏi cần sản phẩm gì.",
+        "Có thông tin liên hệ nhưng nhu cầu chưa rõ",
+        "Không chuyển kênh vội; hỏi sản phẩm cụ thể, model xe, số lượng ngay trong Alibaba."
+      ],
+      [
+        "2026-08-08",
+        "Sopan Lonare / Melvin Mendoza / Chris Woglo",
+        "Chưa thấy",
+        "Có/không rõ",
+        "Preview ngắn: ok, ảnh, hoặc seller hỏi có đặt thật không.",
+        "Cần kiểm tra thêm nếu muốn phân tích sâu",
+        "Chỉ follow nếu khách phản hồi thêm bằng model xe/số lượng/địa chỉ."
+      ]
+    ],
+    "Spam it phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-08-24",
+        "Petr Svec",
+        "Chưa xác định",
+        "Trao đổi về quy định nền tảng, chưa thấy nhu cầu mua rõ."
+      ],
+      [
+        "2026-08-24",
+        "Mohamed Compaore",
+        "Chưa xác định",
+        "Chỉ phản hồi “d'accord”, chưa đủ thông tin nhu cầu."
+      ],
+      [
+        "2026-08-21",
+        "Junior kabanga / Bachir Sow",
+        "Chưa xác định",
+        "Chỉ “ok”, chưa có sản phẩm/số lượng."
+      ],
+      [
+        "2026-08-08",
+        "Bakari TENKODOGO",
+        "Chưa xác định",
+        "Chỉ “thank you”, chưa có nhu cầu tiếp."
+      ],
+      [
+        "2026-08-08",
+        "Md Shohelrana / aljulanda alshaqsi",
+        "Chưa xác định",
+        "Hỏi nhầm xe nguyên chiếc/nguồn gốc; seller trả lời không bán motorcycles hoặc ở Việt Nam."
+      ],
+      [
+        "2026-09-11",
+        "Etita Rubi",
+        "Chỉ thấy automatic reception stopped, chưa có nội dung buyer mới",
+        "Không tính lead chính tuần này"
+      ],
+      [
+        "2026-09-11",
+        "Marcel Tieba",
+        "Chỉ thấy automatic reception stopped, chưa có nội dung nhu cầu",
+        "Ít dữ liệu, không đưa vào ưu tiên"
+      ],
+      [
+        "2026-09-10",
+        "Eko Prasetiyo",
+        "Chỉ thấy automatic reception stopped, chưa có nội dung buyer mới",
+        "Không tính lead chính"
+      ],
+      [
+        "2026-09-10",
+        "Isea Yohander",
+        "Chỉ phản hồi “ok”, chưa có nhu cầu mới rõ",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-09-09",
+        "Jade Tan",
+        "Chỉ phản hồi “ok”, chưa có nhu cầu mới rõ",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-08-28",
+        "InfoPrime EnergyService",
+        "Không phải buyer sản phẩm; nội dung là chào dịch vụ vay vốn",
+        "Loại khỏi lead bán hàng, không follow theo quy trình bán sản phẩm"
+      ],
+      [
+        "2026-08-26",
+        "John Lwaboshizihire",
+        "Hỏi giá xe máy, seller đã giải thích chỉ bán phụ kiện",
+        "Không phù hợp, chỉ follow nếu khách chuyển sang phụ kiện"
+      ],
+      [
+        "2026-08-28",
+        "David Igwe",
+        "Chỉ có “Hello”/visitor follow, chưa nêu sản phẩm",
+        "Không tính lead ưu tiên; hỏi sản phẩm nếu muốn thử khai thác"
+      ],
+      [
+        "2026-08-31",
+        "Giuseppe Roberto Rizzo",
+        "Khách nói “Ok grazie lo stesso”, chưa còn nhu cầu rõ",
+        "Tạm đóng/ít phản hồi"
+      ],
+      [
+        "2026-08-29",
+        "maldives crazy online shoper",
+        "Chỉ thấy auto-reception stopped, chưa có nhu cầu trong phần đọc",
+        "Không đưa vào lead chính"
+      ],
+      [
+        "2026-08-13",
+        "Luis Arboleda",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-12",
+        "Heriberto yissi",
+        "Mất do phí ship cao",
+        "Ship 450 USD quá cao; đề xuất gom hàng hoặc sản phẩm nhẹ hơn"
+      ],
+      [
+        "2026-08-11",
+        "Salvatore Iacono",
+        "Chưa có mẫu phù hợp",
+        "Chưa có, nên lưu nhu cầu phát triển sản phẩm"
+      ],
+      [
+        "2026-08-11",
+        "Fendi Chen",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-11",
+        "zhangweiwei zhangweiwei",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-11",
+        "Ergana Stpg",
+        "Không phù hợp/chưa có mẫu",
+        "Lưu nhu cầu theo dòng xe để phát triển sản phẩm; hỏi ảnh xe/năm xe nếu có thể làm custom."
+      ],
+      [
+        "2026-08-11",
+        "jania mark",
+        "Không phù hợp/chưa có mẫu",
+        "Lưu nhu cầu theo dòng xe để phát triển sản phẩm; hỏi ảnh xe/năm xe nếu có thể làm custom."
+      ],
+      [
+        "2026-08-10",
+        "Ali Sory",
+        "Không phù hợp - khách tưởng mua xe",
+        "Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."
+      ],
+      [
+        "2026-08-09",
+        "samir khanji",
+        "Lead chưa phù hợp mẫu xe",
+        "Có nhu cầu mua và xin link thanh toán nhưng chưa có fitment Tekken 250"
+      ],
+      [
+        "2026-08-09",
+        "Ramanantsoa Andriamifaly",
+        "Chưa có mẫu phù hợp",
+        "Chưa có mẫu; lưu nhu cầu theo dòng xe"
+      ],
+      [
+        "2026-08-08",
+        "Bakari TENKODOGO",
+        "Chưa có mẫu phù hợp",
+        "Không có center stand cho bike"
+      ],
+      [
+        "2026-08-08",
+        "Md Shohelrana",
+        "Không phù hợp - tưởng mua xe",
+        "Giải thích phụ kiện, không bán xe"
+      ],
+      [
+        "2026-08-08",
+        "Sopan Lonare",
+        "Không phù hợp - khách tưởng mua xe",
+        "Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."
+      ],
+      [
+        "2026-08-25",
+        "Xamid Bobojanov",
+        "Chưa đủ dữ liệu",
+        "Đã mở đọc nhưng nội dung chưa đủ để xác định; cần kiểm tra lại nếu seller thấy khách quan trọng."
+      ],
+      [
+        "2026-08-24",
+        "Patrick Chikasha",
+        "Không phù hợp - khách tưởng mua xe",
+        "Giải thích chỉ bán phụ kiện, không bán xe máy"
+      ],
+      [
+        "2026-08-24",
+        "sungjun hong",
+        "Không phù hợp - khách tưởng mua xe",
+        "Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."
+      ],
+      [
+        "2026-08-24",
+        "Mohamed Compaore",
+        "Không phù hợp - khách tưởng mua xe",
+        "Giải thích Mbike bán phụ kiện, gửi catalogue phụ kiện đúng dòng xe."
+      ],
+      [
+        "2026-08-22",
+        "Razmik Gyurjyan",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-22",
+        "rangsit gahawong",
+        "Phản hồi yếu",
+        "Có phản hồi nhưng chưa đủ nhu cầu; follow lại bằng câu hỏi cụ thể về sản phẩm/số lượng."
+      ],
+      [
+        "2026-08-21",
+        "Junior kabanga",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-21",
+        "Bachir Sow",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-19",
+        "Famili GomezPina",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-18",
+        "Leshao Robert",
+        "Không phù hợp/chưa có hàng",
+        "Mbike không bán ống xả, lốp hết hàng"
+      ],
+      [
+        "2026-08-18",
+        "Qwesi Pappy",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-17",
+        "Yakup Bayraktar",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-17",
+        "MKhalil Fadhli",
+        "Vướng phí ship/thuế",
+        "Cần báo giá tổng tiền rõ: hàng + ship + lưu ý thuế, đề xuất gom đơn/MOQ để giảm phí/chiếc."
+      ],
+      [
+        "2026-08-17",
+        "Radomir Pjevic",
+        "Lead yếu - hỏi COD",
+        "Giải thích chỉ thanh toán qua Alibaba trước"
+      ],
+      [
+        "2026-08-13",
+        "Hermannfrankl Mangamba",
+        "Lead chuyển thành chưa phù hợp",
+        "Có nhu cầu ban đầu, nhưng sản phẩm box nhôm chưa đúng mẫu"
+      ],
+      [
+        "2026-08-17",
+        "Pappy Gh đé ãmģ",
+        "Chỉ thấy preview 'Hello', chưa có nhu cầu sản phẩm.",
+        "Không phân tích sâu, chờ phản hồi thật."
+      ],
+      [
+        "2026-08-17",
+        "Minh Ngữ Thân / AimeConstant TIRA / Razmik / Hoang",
+        "Preview là tin hệ thống 'automatic reception...' không phải buyer hỏi hàng.",
+        "Bỏ qua khi không có phản hồi người mua."
+      ],
+      [
+        "2026-08-17",
+        "MKhalil Fadhli / Radomir Pjevic",
+        "Preview là câu seller/bot 'How can we help you?', chưa thấy buyer nêu nhu cầu.",
+        "Không đưa vào lead thật cho tới khi buyer phản hồi."
+      ],
+      [
+        "2026-08-12",
+        "Chris Woglo / Abdarman Abakar",
+        "Batch mở bị dính hội thoại Ester, chưa đủ bằng chứng có phản hồi thật.",
+        "Không ghi vào ưu tiên để tránh sai dữ liệu."
+      ],
+      [
+        "2026-07-29",
+        "Faisal Latif",
+        "Tin mẫu yêu cầu gửi catalogue qua email salesmanager001@inbox.ru.",
+        "Spam/off-platform, không phân tích sâu."
+      ],
+      [
+        "2026-07-25",
+        "Jay Patel",
+        "Tin mẫu yêu cầu gửi catalogue qua email ngoài, tài khoản bị Alibaba cảnh báo/cannot reply.",
+        "Spam/off-platform."
+      ],
+      [
+        "2026-07-23",
+        "Jackson Wine",
+        "Yêu cầu gửi quotation tới email info@iecgonagin.online, nội dung mẫu large quantity.",
+        "Nghi spam/off-platform."
+      ],
+      [
+        "2026-07-25",
+        "Mohamed Irfan",
+        "Ngày 25 chỉ là AI reconnect, không có phản hồi mới trong tuần.",
+        "Không phân tích sâu."
+      ],
+      [
+        "2026-07-28",
+        "SOKSAN SUN / abohamza bakht / Ariel / Pablo / Mikail / Ilboudo",
+        "Chủ yếu auto reception/AI follow-up hoặc chưa có phản hồi rõ.",
+        "Không phân tích sâu."
+      ],
+      [
+        "2026-08-10",
+        "OllySilvereFranklin ANGBA / Sobir Samadov / SergioDavid MendozaFlores / AGBODJI KOMI ERIC",
+        "Preview chỉ hiện thông báo auto reception/intervened, chưa thấy buyer phản hồi sâu.",
+        "Không đưa vào lead ưu tiên."
+      ],
+      [
+        "2026-08-07",
+        "Một số quotation auto",
+        "Có báo giá tự động nhưng chưa thấy buyer phản hồi sau báo giá.",
+        "Follow nhẹ, không tính là lead nóng nếu buyer chưa trả lời."
+      ],
+      [
+        "2026-08-10",
+        "Khách hỏi mua xe máy",
+        "Martin/Gansonre có xu hướng hỏi chiếc xe trong ảnh.",
+        "Sai sản phẩm; chỉ giữ nếu chuyển sang hỏi phụ kiện."
+      ],
+      [
+        "2026-08-06 đến 2026-08-10",
+        "Tin rất ngắn",
+        "ok, ảnh không rõ, hoặc chưa trả lời câu hỏi số lượng.",
+        "Chờ phản hồi thêm trước khi đầu tư tư vấn sâu."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 23,
+    "Khach uu tien": 65,
+    "Can note": 59,
+    "Spam it phan hoi": 57
+  }
+}

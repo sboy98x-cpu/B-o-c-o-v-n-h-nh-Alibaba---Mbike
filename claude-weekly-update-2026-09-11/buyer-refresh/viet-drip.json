@@ -1,0 +1,662 @@
+{
+  "store": "Viet Drip",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "15fmMDH4sgckIHN9GseZoe5NIoL6abepXU2X3raFb5TA",
+    "title": "Viet Drip OneTalk Leads 2026-08-18",
+    "sheets": [
+      {
+        "title": "Tong quan",
+        "sheetId": 661916390,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Khach uu tien",
+        "sheetId": 1106747868,
+        "read_range": "A1:Z1010"
+      },
+      {
+        "title": "Can theo doi",
+        "sheetId": 876645536,
+        "read_range": "A1:Z1017"
+      },
+      {
+        "title": "It phan hoi",
+        "sheetId": 2079445219,
+        "read_range": "A1:Z1011"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan": [
+      [
+        "Hạng mục",
+        "Số lượng",
+        "Ghi chú vận hành"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu",
+        "Mốc 03-08 và 18-24 đã rà lại",
+        "Không thấy lead mua hàng rõ trong 18-24. Mốc 03-08 chỉ thấy Alviaa Alviaa ngày 07/08 kéo WhatsApp, chưa có sản phẩm/số lượng trong snapshot."
+      ],
+      [
+        "Khoảng bổ sung",
+        "03/08-08/08 và 18/08-24/08/2026",
+        "Các ngày gần mốc: 17/08 có shipping rates Peru nhưng ngoài khoảng; 12/08 có 16mm drip connector nhưng ngoài khoảng nên không đưa vào bổ sung lần này."
+      ],
+      [
+        "Lead bổ sung ưu tiên",
+        "0 buyer",
+        "Không có lead đủ tiêu chí ưu tiên trong đúng hai khoảng ngày."
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới",
+        "12 buyer rà soát trên OneTalk",
+        "4 khách ưu tiên; 6 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "06/09/2026 - 11/09/2026",
+        "Tập trung drip/LDPE/irrigation fitting, sample/test product, thickness/flow rate, đơn nhỏ 10 pcs."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "Irrigation fitting + LDPE pipe + sample/test",
+        "Jake có tín hiệu đang xác nhận sản phẩm cần thử; Francisco hỏi fitting với spec kỹ thuật."
+      ],
+      [
+        "Rủi ro chính",
+        "Một số khách chuyển email hoặc chỉ nhắn ok",
+        "Ưu tiên giữ trao đổi trên Alibaba và hỏi diameter/thickness/flow/quantity."
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới",
+        "11 buyer rà soát trên OneTalk",
+        "4 khách ưu tiên; 6 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "29/08/2026 - 03/09/2026",
+        "Tập trung khách hỏi ống tưới LDPE, drip/irrigation pipe, giá theo roll/metre, ship Japan và thanh toán."
+      ],
+      [
+        "Trọng tâm tuần này",
+        "LDPE irrigation pipe / drip tape / payment",
+        "Lead tốt nhất là khách đã hỏi cách thanh toán và khách Nhật đã nhận báo giá + phí ship."
+      ],
+      [
+        "Rủi ro chính",
+        "Nhiều khách chưa rõ đường kính/số lượng",
+        "Cần hỏi nhanh diameter 6-32mm, warranty 3/5/10 years, roll length, quantity, destination."
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới",
+        "8 lead đã lọc",
+        "2 khách ưu tiên; 4 cần theo dõi; 2 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng."
+      ],
+      [
+        "Khoảng đọc lại",
+        "Tuần 25/08/2026",
+        "Lọc buyer có phản hồi thật; chú ý khách hỏi kỹ thuật và khách kéo sang kênh ngoài."
+      ],
+      [
+        "Khách ưu tiên",
+        "2",
+        "Jake Tartaglia, Jose RodriguezGiraldo."
+      ],
+      [
+        "Khách cần theo dõi / ít phản hồi",
+        "6",
+        "4 lead cần khai thác thêm + 2 lead rủi ro/off-platform."
+      ],
+      [
+        "Tài khoản đã rà soát",
+        "PHUONG DO MINH / Viet Drip",
+        "Đã đăng nhập và đọc OneTalk ngày 18/08/2026."
+      ],
+      [
+        "Khách có phản hồi trong 30 ngày gần nhất",
+        "8 buyers",
+        "Số liệu hiển thị trong OneTalk."
+      ],
+      [
+        "Khách có phản hồi thật, nên ưu tiên xử lý",
+        "5",
+        "Jose, Emmanuel, Jessica, Christopher, Maksim có nhu cầu sản phẩm/đơn hàng rõ hơn."
+      ],
+      [
+        "Khách cần theo dõi",
+        "7",
+        "Wanderson, Muhammad, Thucyen, Daniel, Rinaldi, Lip Pon, Yakir có trao đổi nhưng thiếu thông tin hoặc phản hồi ngắn."
+      ],
+      [
+        "Khách ít phản hồi / không ưu tiên",
+        "Nhiều",
+        "Một số chỉ hỏi WhatsApp/Zalo hoặc seller gửi tin hàng loạt, chưa có phản hồi mua rõ."
+      ],
+      [
+        "Vấn đề nổi bật",
+        "Cần chốt bước order",
+        "Nhiều lead đã hỏi đúng sản phẩm nhưng đang thiếu địa chỉ ship, thông số, số lượng hoặc bị kéo ra WhatsApp."
+      ],
+      [
+        "Hành động ưu tiên",
+        "Báo giá + phí ship trong Alibaba",
+        "Với lead có số lượng: tạo báo giá/Trade Assurance order ngay; với lead thiếu thông tin: hỏi SKU, size, quantity, destination."
+      ]
+    ],
+    "Khach uu tien": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Sản phẩm / nhu cầu hỏi",
+        "Số lượng",
+        "Nội dung đã đọc trong tin nhắn",
+        "Mức ưu tiên",
+        "Đề xuất nhắn tiếp theo"
+      ],
+      [
+        "2026-09-11",
+        "Jake Tartaglia",
+        "Chưa xác định",
+        "Khách hàng tiềm năng",
+        "Buyer xác nhận “Yes, that's right. This is the product you need to try.”",
+        "Sample/test product",
+        "Lead nóng vì buyer đã xác nhận sản phẩm cần thử, tuần trước đã hỏi payment by card",
+        "Rất cao",
+        "Gửi lại order/payment link Alibaba, xác nhận sản phẩm test, quantity, địa chỉ nhận hàng và cách thanh toán bằng card"
+      ],
+      [
+        "2026-09-02",
+        "Jake Tartaglia",
+        "Chưa xác định",
+        "Khách hàng tiềm năng",
+        "Buyer hỏi “How can I make the payment by card?”",
+        "Chưa rõ / đang ở bước thanh toán",
+        "Tín hiệu rất nóng vì buyer hỏi cách thanh toán, cần xử lý ngay để không rơi đơn",
+        "Rất cao",
+        "Hướng dẫn thanh toán qua Alibaba/Trade Assurance bằng card, xác nhận lại đơn hàng và tổng tiền"
+      ],
+      [
+        "2026-08-29",
+        "weicengzhu zheng",
+        "Japan / Osaka",
+        "Có level tag",
+        "32mm LDPE Pipe 100m/roll, bảo hành 10/5/3 năm; đã báo giá từng loại và ship Vietnam-Osaka",
+        "Theo roll / chưa rõ số roll",
+        "Đã có báo giá rõ: 10 năm USD 43.92/roll, 5 năm USD 38.90, 3 năm USD 37.64; ship Osaka khoảng USD 40-80/roll",
+        "Rất cao",
+        "Hỏi buyer chọn loại bảo hành nào, số roll, địa chỉ Osaka; gửi order link/quotation cuối"
+      ],
+      [
+        "2026-08-17",
+        "Jose RodriguezGiraldo",
+        "Peru",
+        "Spraying Filter 16mm/20mm Chamber, irrigation fitting black color Vietdrip Brand.",
+        "5,000 pcs",
+        "Order progress 80%: đơn giá USD 0.218, item subtotal USD 1,090, phí ship express USD 42.11, tổng USD 1,132.11. Đã có địa chỉ Cusco, Peru.",
+        "Rất cao",
+        "Xác nhận lại tổng tiền USD 1,132.11, thời gian giao express, packing; đề nghị tạo Trade Assurance order ngay và xin xác nhận thanh toán."
+      ],
+      [
+        "2026-08-12",
+        "Emmanuel Nhandara",
+        "Zimbabwe",
+        "16mm drip connector/coupling, irrigation set.",
+        "300-500 pcs",
+        "Buyer hỏi có couplings không và nói 'yes please send quote'. Smart action hiển thị giá USD 0.05/pc cho 1-500 pcs, order progress thiếu địa chỉ ship.",
+        "Rất cao",
+        "Báo rõ có coupling 16mm, giá USD 0.05/pc, hỏi chốt 300 hay 500 pcs và địa chỉ giao hàng để báo phí ship."
+      ],
+      [
+        "2026-09-09",
+        "FRANCISCO Chirrute",
+        "Chưa xác định",
+        "Có level tag",
+        "Black virgin plastic irrigation fitting, OEM logo, hỏi thickness 0.16-0.5mm và flow rate phù hợp farm/garden",
+        "Chưa rõ",
+        "Lead đúng ngành, có spec kỹ thuật rõ về độ dày/flow rate",
+        "Cao",
+        "Hỏi exact thickness, flow rate, size/diameter, quantity và địa chỉ ship; gửi spec sheet"
+      ],
+      [
+        "2026-09-08",
+        "naveen naani",
+        "Chưa xác định",
+        "Có level tag",
+        "Follow order trước, seller nói hy vọng buyer hài lòng với order lần này",
+        "Order cũ / repeat",
+        "Khách đã có order, cần chăm sóc hậu mãi và mở đơn tiếp theo",
+        "Cao",
+        "Hỏi đã nhận hàng chưa, feedback chất lượng, có cần reorder size khác không"
+      ],
+      [
+        "2026-09-06",
+        "Narcisse Assanvo",
+        "Pháp ngữ",
+        "Chưa thấy L",
+        "Đã báo giá 10 pcs, exact price USD 0.22/pc cho tranche 1-500 pcs",
+        "10 pieces",
+        "Lead có số lượng và giá rõ, đơn nhỏ nhưng thật",
+        "Cao",
+        "Xác nhận chốt 10 pcs, hỏi địa chỉ nhận hàng và phương thức ship"
+      ],
+      [
+        "2026-09-02",
+        "naveen naani",
+        "Chưa xác định",
+        "Có level tag",
+        "Hỏi giá theo meter/roll, nhiều size pipe khác nhau",
+        "Chưa rõ",
+        "Buyer đang hỏi cấu trúc giá, cần map size trước khi báo chính xác",
+        "Cao",
+        "Gửi bảng size phổ biến + giá theo roll, hỏi diameter/length/quantity và warranty cần dùng"
+      ],
+      [
+        "2026-08-30",
+        "Juan Anahua",
+        "Chưa xác định",
+        "Có level tag",
+        "LDPE irrigation pipes 6mm-32mm cho nông nghiệp/drip tape; hỏi diameter và packaging",
+        "5 units",
+        "Buyer có quantity 5 unit, cần xác định đường kính và quy cách đóng gói",
+        "Cao",
+        "Hỏi đường kính 6-32mm, loại drip tape đang dùng, packing và địa chỉ nhận hàng"
+      ],
+      [
+        "2026-08-19",
+        "Jake Tartaglia",
+        "Chưa xác định",
+        "Hỏi sự khác nhau giữa X1000 và X2000 range, 37L/h, mã X137A và X237A",
+        "Chưa nêu",
+        "Khách hỏi kỹ thuật sản phẩm rất cụ thể",
+        "Lead tốt - ưu tiên cao",
+        "Trả lời bảng so sánh: flow rate, coverage, connection size, hose/stake included; hỏi quantity và ứng dụng"
+      ],
+      [
+        "2026-08-17",
+        "Jessica Mbibi",
+        "Netherlands",
+        "Black PP Coupling 32mm và nhiều loại pipe fittings: elbows, tees, reducers, couplings, unions, caps, flanges...",
+        "Inquiry ghi 1 piece nhưng nội dung là yêu cầu danh mục/mua hàng",
+        "Buyer gửi inquiry đầy đủ và yêu cầu model, specs, MOQ, pricing, packaging; có email ngoài Alibaba trong nội dung.",
+        "Cao nhưng rủi ro off-platform",
+        "Trả lời trực tiếp trong Alibaba: gửi thông số Black PP Coupling 32mm, bảng giá theo bậc 1-500/501-5000/5001+, hỏi target quantity và nhắc báo giá/order qua Alibaba để bảo vệ giao dịch."
+      ],
+      [
+        "2026-08-17",
+        "Jose RodriguezGiraldo",
+        "Peru - Cusco",
+        "Hỏi phí ship từ Việt Nam tới Peru theo kg có hợp lý không; đang check freight tới Cusco; sản phẩm 5,000 pcs giá USD 0.218/pc",
+        "5,000 pcs",
+        "Khách quan tâm giá vận chuyển và tổng landed cost",
+        "Lead tốt - ưu tiên cao",
+        "Tính freight Cusco, so sánh air/sea nếu có, gửi tổng giá CIF/DDP nếu làm được"
+      ],
+      [
+        "2026-07-28",
+        "Christopher Velonis",
+        "Vietnam flag hiển thị",
+        "Center pivot irrigation hose pivot boot/flexible boot coupling, 4-ply tire cord reinforced.",
+        "Chưa rõ",
+        "Buyer gửi specification rất chi tiết: ID 6 5/8 inch, OD 7 inch, length 16 inch, dùng cho pivot tower connection/elbow.",
+        "Cao",
+        "Xác nhận có thể sản xuất/cung cấp theo spec hay không; nếu được, hỏi áp suất làm việc, số lượng, bản vẽ/ảnh mẫu và địa chỉ giao hàng."
+      ],
+      [
+        "2026-07-16",
+        "Maksim Mikhailencko",
+        "Belarus",
+        "LDPE pipes.",
+        "Chưa rõ",
+        "Tin gần nhất seller hỏi khách còn quan tâm mua LDPE pipes không; được tag khách hàng tiềm năng.",
+        "Trung bình-cao",
+        "Follow-up bằng 3 lựa chọn size LDPE, MOQ, giá tham khảo; hỏi đường kính, độ dày, chiều dài cuộn và số lượng dự kiến."
+      ]
+    ],
+    "Can theo doi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Nội dung",
+        "Đánh giá",
+        "Việc nên làm"
+      ],
+      [
+        "2026-08-07",
+        "Alviaa Alviaa",
+        "Chưa xác định",
+        "Buyer/seller để lại WhatsApp: +84 961 477 423; chưa thấy sản phẩm, số lượng hoặc yêu cầu kỹ thuật trong snapshot.",
+        "Chưa rõ",
+        "Có rủi ro off-platform, chưa đủ điều kiện lead ưu tiên.",
+        "Trung bình-thấp",
+        "Giữ trao đổi trên Alibaba; hỏi buyer cần sản phẩm nào, size/quantity/destination trước khi chuyển kênh."
+      ],
+      [
+        "2026-09-10",
+        "Pascal Mghanga",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy automatic reception stopped, chưa có nhu cầu rõ",
+        "Cần mở sâu",
+        "Hỏi lại sản phẩm tưới nào buyer cần, size và số lượng"
+      ],
+      [
+        "2026-09-06",
+        "Mahbuba Maha",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer phản hồi ok",
+        "Có phản hồi nhưng thiếu sản phẩm",
+        "Follow nếu trước đó đã báo giá; hỏi muốn đặt hàng không"
+      ],
+      [
+        "2026-09-02",
+        "Gunveer Singh",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ mở đầu “Helloo”",
+        "Lead mở đầu",
+        "Hỏi buyer cần LDPE pipe/drip connector/nozzle nào, size và quantity"
+      ],
+      [
+        "2026-09-02",
+        "Giovanni Capostagno",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ thấy translation tip",
+        "Cần kiểm tra lại",
+        "Chưa đưa vào lead chính"
+      ],
+      [
+        "2026-08-30",
+        "Juan Anahua",
+        "Chưa xác định",
+        "Có level tag",
+        "LDPE irrigation pipes 6-32mm, quantity 5 units, cần chọn diameter/packaging",
+        "5 units",
+        "Lead cũ vẫn nên follow nếu chưa chốt",
+        "Hỏi đường kính và địa chỉ, gửi quotation cuối"
+      ],
+      [
+        "2026-08-29",
+        "weicengzhu zheng",
+        "Japan / Osaka",
+        "Có level tag",
+        "32mm LDPE Pipe 100m/roll, báo giá 3/5/10 năm và ship Osaka USD 40-80/roll",
+        "Theo roll",
+        "Lead cũ tốt, cần follow chọn bảo hành/số roll",
+        "Hỏi chọn 3/5/10 năm, số roll và địa chỉ Osaka"
+      ],
+      [
+        "2026-09-02",
+        "Gunveer Singh",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Chỉ mở đầu “Helloo”, chưa có sản phẩm/số lượng",
+        "Lead mở đầu",
+        "Hỏi buyer đang cần loại ống tưới/drip nào, đường kính và số lượng"
+      ],
+      [
+        "2026-09-02",
+        "Giovanni Capostagno",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Snapshot chỉ thấy translation tip, chưa có nội dung nhu cầu rõ",
+        "Cần kiểm tra lại nếu có tin mới",
+        "Chưa đưa vào lead chính cho đến khi thấy sản phẩm/số lượng"
+      ],
+      [
+        "2026-08-28",
+        "Abdulaziz A",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Buyer nói đã gửi vào email",
+        "Có nguy cơ chuyển kênh ngoài",
+        "Trả lời giữ trên Alibaba, hỏi lại sản phẩm/số lượng và yêu cầu gửi thông tin trong chat"
+      ],
+      [
+        "2026-08-25",
+        "yinghe chen",
+        "Trung Quốc / tiếng Trung",
+        "Có level tag",
+        "Quan tâm PE pipes, sprinkler nozzles, accessories từ nhựa nguyên sinh 100%",
+        "Chưa rõ",
+        "Lead đúng ngành nhưng thiếu số lượng/spec",
+        "Trả lời tiếng Trung, gửi danh mục PE pipe/nozzle/accessories và hỏi spec/quantity"
+      ],
+      [
+        "2026-08-25",
+        "ROBERT GO",
+        "Chưa xác định",
+        "Chưa thấy L",
+        "Seller gửi catalog, chưa thấy buyer phản hồi rõ",
+        "Lead cần follow",
+        "Hỏi buyer chọn model nào trong catalog, số lượng và địa chỉ nhận hàng"
+      ],
+      [
+        "2026-08-17",
+        "Jose RodriguezGiraldo",
+        "Peru",
+        "Khách hàng tiềm năng",
+        "Đã có shipping rates Vietnam-Peru tính theo kg; hỏi buyer thấy VND rates có hợp lý không",
+        "Chưa rõ",
+        "Lead cũ cần follow vì đang vướng phí ship",
+        "Follow xem buyer chấp nhận phí chưa, đề xuất gom hàng/sea nếu air quá cao"
+      ],
+      [
+        "2026-08-12",
+        "Emmanuel Nhandara",
+        "Chưa xác định",
+        "Cần 16mm drip connector / straight coupling valve cho irrigation set | SL: chưa nêu",
+        "Lead thật - ưu tiên vừa",
+        "Hỏi quantity, gửi giá theo bậc 1-500 pcs và MOQ nếu có"
+      ],
+      [
+        "2026-07-28",
+        "Christopher Velonis",
+        "Chưa xác định",
+        "Center pivot irrigation hose pivot boot/flexible boot coupling; specs: 4-ply tire cord, ID 6 5/8”, OD 7”, length 16” | SL: chưa nêu",
+        "Lead kỹ thuật - cần kiểm tra sản xuất",
+        "Xác nhận có sản xuất được không, hỏi quantity, material, pressure, drawing/photo"
+      ],
+      [
+        "2026-08-02",
+        "Daniel Gabbay",
+        "Chưa xác định",
+        "Chỉ trả lời “okay, thank you sir” | SL: chưa nêu",
+        "Lead yếu",
+        "Không phân tích sâu; follow nếu có inquiry mới"
+      ],
+      [
+        "2026-07-16",
+        "Maksim Mikhailencko",
+        "Chưa xác định",
+        "Seller follow LDPE pipes: “Are you still interested...” | SL: chưa nêu",
+        "Lead cũ",
+        "Gửi catalogue/giá LDPE theo size nếu buyer phản hồi"
+      ],
+      [
+        "2026-07-17",
+        "WANDERSON EIDS DE OLIVEIRA",
+        "Brazil",
+        "Khách nói sẽ liên hệ qua WhatsApp, được tag khách hàng tiềm năng.",
+        "Có tiềm năng nhưng có nguy cơ rời nền tảng.",
+        "Giữ trao đổi chính trên Alibaba, hỏi sản phẩm/số lượng và nhắc có thể tạo order để bảo vệ giao dịch."
+      ],
+      [
+        "2026-07-15",
+        "MUHAMMAD ARSLAN",
+        "Pakistan",
+        "Seller hỏi quantity/size và đề nghị WhatsApp/Zalo; có 2 dòng hội thoại gần nhau.",
+        "Thiếu thông tin sản phẩm, chưa đủ lead ưu tiên.",
+        "Hỏi lại size, quantity, destination; chỉ chuyển WhatsApp sau khi đã lưu đủ thông tin trên sheet."
+      ],
+      [
+        "2026-07-10",
+        "Thucyen Ho",
+        "Australia",
+        "Nội dung tiếng Việt: 'Chỉ có cố định que với dây 5x3mm ạ', được tag khách hàng tiềm năng.",
+        "Có trao đổi thật nhưng chưa rõ buyer/seller nói về sản phẩm nào.",
+        "Hỏi khách cần phụ kiện cố định que hay dây 5x3mm, số lượng và địa chỉ nhận."
+      ],
+      [
+        "2026-08-01",
+        "Daniel Gabbay",
+        "United States",
+        "Khách trả lời 'okay, thank you sir'.",
+        "Phản hồi thật nhưng chưa có nhu cầu hiện tại.",
+        "Follow nhẹ, hỏi có cần thêm báo giá hoặc mẫu sản phẩm nào không."
+      ],
+      [
+        "2026-07-25",
+        "Rinaldi Febrian",
+        "Indonesia",
+        "AI follow-up đề xuất sample barb connectors.",
+        "Có thể là lead cũ, chưa thấy phản hồi mới.",
+        "Gửi 2-3 mẫu barb connector bán tốt và hỏi có cần sample không."
+      ],
+      [
+        "2026-07-24",
+        "Lip Pon",
+        "Thailand",
+        "AI follow-up hỏi có nhu cầu/dự án mới không.",
+        "Lead cũ, chưa có phản hồi cụ thể.",
+        "Theo dõi nhẹ, gửi catalogue irrigation fittings theo nhóm sản phẩm."
+      ],
+      [
+        "2026-07-07",
+        "Yakir shitrit",
+        "Israel",
+        "Khách/seller trả lời 'I'm afraid I don't know either. Sorry about that.'",
+        "Không đủ thông tin để ưu tiên.",
+        "Chỉ rà lại nếu có lịch sử trước đó quan trọng."
+      ]
+    ],
+    "It phan hoi": [
+      [
+        "Ngày",
+        "Khách hàng",
+        "Quốc gia",
+        "Dấu hiệu",
+        "Kết luận"
+      ],
+      [
+        "2026-08-07",
+        "Alviaa Alviaa",
+        "Chưa xác định",
+        "Chỉ thấy WhatsApp, không có nhu cầu sản phẩm/số lượng rõ trong snapshot."
+      ],
+      [
+        "2026-09-10",
+        "Pascal Mghanga",
+        "Chỉ thấy auto-reception stopped, chưa có sản phẩm/số lượng",
+        "Không tính lead chính"
+      ],
+      [
+        "2026-09-06",
+        "Mahbuba Maha",
+        "Chỉ phản hồi ok, chưa có nhu cầu mới",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-09-02",
+        "Giovanni Capostagno",
+        "Chỉ thấy translation tip, chưa có nội dung buyer rõ",
+        "Không tính lead chính"
+      ],
+      [
+        "2026-08-28",
+        "Abdulaziz A",
+        "Buyer nói đã gửi email, có nguy cơ kéo ngoài nền tảng",
+        "Giữ trao đổi trên Alibaba; chưa tính ưu tiên nếu thiếu nội dung mới"
+      ],
+      [
+        "2026-09-02",
+        "W N",
+        "Chỉ thấy translation tip, chưa có nhu cầu rõ",
+        "Không tính lead chính"
+      ],
+      [
+        "2026-08-30",
+        "Penny Penny",
+        "Chỉ thấy translation tip, chưa có sản phẩm/số lượng rõ",
+        "Không tính lead chính tuần này"
+      ],
+      [
+        "2026-08-17",
+        "Jessica Mbibi",
+        "Hội thoại chỉ báo auto-reception stopped, chưa thấy nhu cầu mới",
+        "Ít phản hồi"
+      ],
+      [
+        "2026-08-02",
+        "FHhf Gjffd",
+        "Chỉ là visitor follow-up, không có nhu cầu sản phẩm",
+        "Không tính lead"
+      ],
+      [
+        "2026-08-12",
+        "jania mark",
+        "Chưa xác định",
+        "Đề xuất chuyển sang WhatsApp/Zalo vì email phản hồi chậm; có thể là lead thật nhưng rủi ro/off-platform nhẹ."
+      ],
+      [
+        "2026-08-11",
+        "W N",
+        "Chưa xác định",
+        "Hỏi chat trên WhatsApp; chưa có nhu cầu sản phẩm, chỉ xin kênh ngoài."
+      ],
+      [
+        "2026-08-12",
+        "jania mark",
+        "Vietnam",
+        "Chỉ xin trao đổi qua WhatsApp/Zalo.",
+        "Không phân tích sâu nếu chưa có SKU/số lượng."
+      ],
+      [
+        "2026-08-11",
+        "W N",
+        "India",
+        "Chỉ hỏi chat WhatsApp.",
+        "Thiếu nhu cầu sản phẩm."
+      ],
+      [
+        "2026-08-07",
+        "Alviaa Alviaa",
+        "Pakistan",
+        "Chỉ để lại WhatsApp.",
+        "Không đủ lead ưu tiên."
+      ],
+      [
+        "2026-08-02",
+        "FHhf Gjffd",
+        "Saudi Arabia",
+        "Chỉ hiện visitor follow-up.",
+        "Không phải lead có phản hồi rõ."
+      ],
+      [
+        "2026-07-04",
+        "Mark Alhovirta / Kevin Nabwire / Stas Baciu",
+        "US/Kenya/UK",
+        "Tin seller gửi hàng loạt về Hanging Flower Pots, chưa thấy buyer phản hồi rõ.",
+        "Không đưa vào khách ưu tiên tuần này."
+      ],
+      [
+        "2026-07-02",
+        "Silent Auction",
+        "United States",
+        "Seller hỏi số điện thoại để nhắn WhatsApp/Zalo.",
+        "Không đủ nhu cầu mua."
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan": 23,
+    "Khach uu tien": 16,
+    "Can theo doi": 25,
+    "It phan hoi": 18
+  }
+}

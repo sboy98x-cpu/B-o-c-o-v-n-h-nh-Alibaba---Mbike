@@ -1,0 +1,753 @@
+{
+  "store": "Riken",
+  "refreshed_at": "2026-09-12T00:00:00+07:00",
+  "source": {
+    "spreadsheet_id": "1lgfpYWEQconuxATb3E0Z717nCgsmQrnyGdSZyzunYRE",
+    "title": "RIKEN OneTalk Leads Song ngu Viet Trung 2026-08-18",
+    "sheets": [
+      {
+        "title": "Tong quan 总览",
+        "sheetId": 247955017,
+        "read_range": "A1:Z1015"
+      },
+      {
+        "title": "Khach uu tien 重点客户",
+        "sheetId": 366473859,
+        "read_range": "A1:Z1019"
+      },
+      {
+        "title": "Can theo doi 继续跟进",
+        "sheetId": 725305589,
+        "read_range": "A1:Z1016"
+      },
+      {
+        "title": "It phan hoi 低优先级",
+        "sheetId": 969678299,
+        "read_range": "A1:Z1009"
+      }
+    ]
+  },
+  "lead_tabs": {
+    "Tong quan 总览": [
+      [
+        "Hạng mục / 项目",
+        "Số liệu / 数据",
+        "Ghi chú vận hành / 运营备注"
+      ],
+      [
+        "11/09/2026 - bổ sung kiểm tra thiếu / 补充检查遗漏区间",
+        "03/08-08/08 và 18/08-24/08 đã rà lại / 已复查03/08-08/08和18/08-24/08",
+        "Lead rõ nhất trong đúng mốc: michael tigano 03/08. Một số dòng 18-24 trong OneTalk chỉ thấy ngày/tên, chưa đủ nội dung nên không đưa thành lead ưu tiên giả. / 明确线索：michael tigano 03/08。18-24部分仅看到日期/姓名，内容不足，因此不作为重点线索。"
+      ],
+      [
+        "Lead bổ sung ưu tiên / 新增重点线索",
+        "1 buyer / 1位买家",
+        "michael tigano: Silicon Carbide Waterproof Sandpaper 230x280mm, target USD 0.09/pc, 1,000 pcs, cần xác nhận grit và sample. / 230x280mm碳化硅水砂纸，目标价0.09美元/片，1000片，需确认粒度和样品。"
+      ],
+      [
+        "Lead cần theo dõi / 继续跟进线索",
+        "2 buyer / 2位买家",
+        "Mina Hakem, jojo delio madrid: phản hồi quá ngắn/auto stopped, chưa đủ nhu cầu. / 回复过短或自动接待停止，需求不明确。"
+      ],
+      [
+        "11/09/2026 - cập nhật tuần mới / 本周更新",
+        "14 buyer đã rà soát / 已检查14位买家",
+        "6 khách ưu tiên; 6 cần theo dõi; 4 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng. / 6个重点客户；6个继续跟进；4个低优先级/风险，已插入最上方。"
+      ],
+      [
+        "Khoảng đọc lại / 检查周期",
+        "04/09/2026 - 11/09/2026",
+        "Tập trung abrasive roll, sanding sheet, abrasive belt, waterproof abrasive paper, film abrasive và PI. / 聚焦砂卷、砂纸、砂带、防水砂纸、薄膜砂材和PI。"
+      ],
+      [
+        "Trọng tâm tuần này / 本周重点",
+        "Aluminum Oxide roll/sheet + custom belts / 氧化铝砂卷/砂纸+定制砂带",
+        "Lead tốt có thông số rõ: 15mm x 2100mm, 80 grit, 610 x 10000mm, 100 pcs packing. / 优质线索有明确规格：15mm x 2100mm、80目、610 x 10000mm、100片包装。"
+      ],
+      [
+        "Rủi ro chính / 主要风险",
+        "Một số khách kéo link/email ngoài / 部分客户使用外链/邮件",
+        "Yêu cầu buyer upload specs/drawings trực tiếp Alibaba, không mở short link. / 要求买家在Alibaba内上传规格/图纸，不打开短链接。"
+      ],
+      [
+        "03/09/2026 - cập nhật tuần mới / 本周更新",
+        "14 buyer đã rà soát / 已检查14位买家",
+        "7 khách ưu tiên; 5 cần theo dõi; 3 ít phản hồi/rủi ro. Dữ liệu mới chèn lên trên cùng. / 7个重点客户；5个继续跟进；3个低优先级/风险，已插入最上方。"
+      ],
+      [
+        "Khoảng đọc lại / 检查周期",
+        "29/08/2026 - 03/09/2026",
+        "Tập trung khách hỏi sanding discs, abrasive belts, spray gun, grit/diameter, sample và shipping. / 聚焦砂碟、砂带、喷枪、粒度/直径、样品和物流询盘。"
+      ],
+      [
+        "Trọng tâm tuần này / 本周重点",
+        "Abrasive discs + abrasive belts / 砂碟与砂带",
+        "Lead tốt có thông số rõ: 6 inch 150mm, grit P120/P150/P320/P1000, GXK51 belt, 240 grit, 150-250 pcs, sample. / 优质线索有明确规格与数量。"
+      ],
+      [
+        "Rủi ro chính / 主要风险",
+        "Thiếu grit/quantity/destination hoặc kéo sai ngành / 缺少粒度、数量、目的地或品类不匹配",
+        "Cần hỏi nhanh grit, diameter, hole pattern, backing, quantity, destination và có cần sample không. / 快速确认粒度、尺寸、孔型、背基、数量、目的地及样品需求。"
+      ],
+      [
+        "25/08/2026 - cập nhật tuần mới / 本周更新",
+        "7 lead / 7条线索",
+        "Dữ liệu song ngữ Việt-Trung, chèn lên trên cùng / 越中双语数据，已插入最上方。"
+      ],
+      [
+        "Khoảng đọc lại / 检查周期",
+        "Tuần 25/08/2026 / 2026年8月25日周",
+        "Tập trung khách có phản hồi thật / 聚焦真实回复客户。"
+      ],
+      [
+        "Khách ưu tiên / 重点客户",
+        "4",
+        "Antonio Majano, Ali Lali, Zephy Lubwela, yael Ramirez."
+      ],
+      [
+        "Khách cần theo dõi / 继续跟进",
+        "3",
+        "balaji Selvam, MARCOS RODRIGUES, Victor Pedrozo."
+      ],
+      [
+        "Tài khoản đã rà soát / 已检查账号",
+        "RIKEN - DING YI WEI",
+        "Đã đọc OneTalk ngày 18/08/2026. / 已于2026年8月18日查看OneTalk消息。"
+      ],
+      [
+        "Khách có phản hồi trong 30 ngày / 近30天回复买家",
+        "14 buyers / 14位买家",
+        "Số liệu hiển thị trong OneTalk. / 数据来自OneTalk页面。"
+      ],
+      [
+        "Thời gian phản hồi trung bình / 平均回复时长",
+        "0.63 giờ / 0.63小时",
+        "Tốc độ phản hồi tốt, cần tập trung chất lượng chốt đơn. / 回复速度较好，重点应放在订单推进质量。"
+      ],
+      [
+        "Khách ưu tiên xử lý / 优先跟进客户",
+        "7",
+        "Victor, Balaji, Yael, Michael, Ruby, Raymond, Javier/David nhóm abrasive có nhu cầu rõ. / 这些客户需求相对明确。"
+      ],
+      [
+        "Khách cần theo dõi / 需继续跟进客户",
+        "8",
+        "Faisal, Roman, I RIN LEE, Even, Jake, Comprasferreteriakoala, MauroCesar, Tee có tín hiệu nhưng thiếu thông tin. / 有信号但信息不足。"
+      ],
+      [
+        "Tin ít giá trị / 低价值消息",
+        "Nhiều / 较多",
+        "Chỉ chào hỏi, auto follow-up, yêu cầu email, hoàn tiền hoặc không có SKU/số lượng. / 仅问候、自动跟进、邮箱、退款或无明确需求。"
+      ],
+      [
+        "Vấn đề nổi bật / 核心问题",
+        "Cần chốt thông số + báo giá nhanh / 需快速确认规格并报价",
+        "Nhiều lead đang thiếu grit, size, quantity, packing, destination và yêu cầu mẫu. / 多数线索缺少粒度、尺寸、数量、包装、目的地和样品确认。"
+      ],
+      [
+        "Hành động ưu tiên / 优先动作",
+        "Tạo báo giá trong Alibaba / 在阿里内生成报价",
+        "Không kéo khách ra ngoài nền tảng trước khi đủ thông tin. / 信息未完整前，尽量在平台内完成沟通和报价。"
+      ]
+    ],
+    "Khach uu tien 重点客户": [
+      [
+        "Ngày / 日期",
+        "Khách hàng / 客户",
+        "Quốc gia / 国家",
+        "Sản phẩm & nhu cầu / 产品与需求",
+        "Số lượng / 数量",
+        "Nội dung đã đọc / 已读内容",
+        "Ưu tiên / 优先级",
+        "Đề xuất nhắn tiếp / 建议回复"
+      ],
+      [
+        "2026-09-09",
+        "Tom Godebout",
+        "Chưa xác định / 未确认",
+        "VI: Abrasive belts/strips 80 grit, cut 15mm width x 2100mm length. CN: 80目砂带/砂条，切割尺寸15mm宽 x 2100mm长。",
+        "Chưa rõ / 未确认",
+        "VI: Spec rất rõ, cần packaging và quantity để báo giá. CN: 规格清晰，需要包装和数量报价。",
+        "Rất cao / 很高",
+        "VI: Hỏi quantity, backing/material, joint type, packing và destination. CN: 确认数量、背基材料、接头类型、包装和目的地。"
+      ],
+      [
+        "2026-09-03",
+        "simon stallard",
+        "United Kingdom / 英国",
+        "VI: Đĩa nhám ceramic 150mm, 15 lỗ, dùng cho thân vỏ và sơn ô tô; grit 120/180/240. CN: 150mm陶瓷砂碟，15孔，用于汽车钣金和油漆，粒度120/180/240。",
+        "500 pcs mỗi grit (1,500 pcs tổng) / 每个粒度500片（共1500片）",
+        "VI: Buyer xác nhận 500 pcs mỗi grit, giao tới Salcombe Boat Company, UK; đã cung cấp email và yêu cầu PI. CN: 买家确认每个粒度500片，寄往英国Salcombe Boat Company，已提供邮箱并等待PI。",
+        "Rất cao / 很高",
+        "VI: Lập PI chính thức 1,500 pcs, xác nhận đơn giá, đóng gói, phí vận chuyển và thời gian giao; gửi qua Alibaba và email đã cung cấp. CN: 制作1500片正式PI，确认单价、包装、运费和交期，并通过Alibaba及买家邮箱发送。"
+      ],
+      [
+        "2026-09-03",
+        "MD Mithun",
+        "Chưa xác định / 未确认",
+        "VI: Cuộn nhám 610x10000mm, khoảng 30kg; jumbo 1230mm. Buyer hỏi giá, muốn thử 1 cuộn rồi đề nghị mua 3 cuộn. CN: 砂卷610x10000mm，约30kg；大卷1230mm。买家询价，先问1卷样品，随后提出购买3卷。",
+        "Buyer đề nghị 3 rolls / 买家提出3卷",
+        "VI: Buyer phản hồi nhiều lần, xác nhận kích thước 2 ft x 100 ft, hỏi trọng lượng 3 cuộn và muốn trả tiền mua 3 cuộn; seller đã báo FOB USD112.5/roll cho P100-P400. CN: 买家多次回复，确认2英尺x100英尺，询问3卷重量并愿意付费购买3卷；卖家已报P100-P400每卷FOB 112.5美元。",
+        "Rất cao / 很高",
+        "VI: Xác nhận grit, 3 cuộn, tổng FOB USD337.5; xin công ty, địa chỉ, điện thoại và email để tính vận chuyển và lập PI. CN: 确认粒度及3卷，总FOB 337.5美元；索取公司、地址、电话和邮箱，核算运费并制作PI。"
+      ],
+      [
+        "2026-09-03",
+        "James Thomson",
+        "Chưa xác định / 未确认",
+        "VI: 6 Inch (150mm) Multi-Hole White Sanding Discs; cần ceramic/aluminum oxide, hole 0/6/8/17/49, OEM label, có thể test sample. CN: 6英寸150mm多孔白色砂碟，需确认陶瓷/氧化铝、孔型和OEM贴牌，可提供样品测试。",
+        "Chưa rõ, gợi ý 1,000/3,000/5,000+ pcs / 数量未定，建议确认1000/3000/5000+片",
+        "VI: Buyer có inquiry rất rõ về sản phẩm; seller đã hỏi grit, quantity, destination/forwarder. CN: 买家需求明确，需确认粒度、数量、目的地/货代仓。",
+        "Rất cao / 很高",
+        "VI: Hỏi grit size, số lượng từng grit, destination city/postal code hoặc warehouse; đề xuất free sample. CN: 询问粒度、各粒度数量、目的地/仓库，并推荐免费样品。"
+      ],
+      [
+        "2026-09-02",
+        "Jackeline Gonzalez",
+        "USA / Lynnwood",
+        "VI: Muốn sample grit 180 và 220 cùng nhau. CN: 需要180目和220目样品一起寄送。",
+        "Sample 180 + 220 / 样品180+220",
+        "VI: Seller đã đồng ý arrange sample, đang thiếu full street address Lynnwood để tính ship. CN: 已同意安排样品，缺少Lynnwood完整街道地址以确认运费。",
+        "Rất cao / 很高",
+        "VI: Xin full address + phone, báo sample/ship fee và thời gian gửi mẫu. CN: 索要完整地址和电话，确认样品费/运费与寄送时间。"
+      ],
+      [
+        "2026-08-18",
+        "Victor Pedrozo",
+        "Mexico / 墨西哥",
+        "Abrasive/sandpaper nhiều grit, grit range 320-3000; grit 80 không có. / 多种粒度砂纸，现有320-3000目，80目不可供。",
+        "Khoảng 500 pcs, muốn nhiều grit; MOQ 100 pcs/mỗi grit. / 约500片，多个粒度；每个粒度MOQ 100片。",
+        "Buyer hỏi bằng tiếng Tây Ban Nha: muốn nhiều loại grit, tối thiểu mỗi grit bao nhiêu, muốn khoảng 500 chiếc. Smart action gợi ý giá $1.20/pc. / 买家询问不同粒度的起订量，约500片，系统建议价格$1.20/片。",
+        "Rất cao / 最高",
+        "VI: Xác nhận có thể mix grit, mỗi grit tối thiểu 100 pcs, hỏi khách muốn chia 500 pcs theo grit nào và báo giá chính thức. ZH: 可以混合粒度，每个粒度最低100片。请确认500片分别需要哪些粒度，我们马上给您正式报价。"
+      ],
+      [
+        "2026-08-17",
+        "balaji Selvam",
+        "India / 印度",
+        "RIKEN Aluminum Oxide Sandpaper thay thế Rhynowet; grit 80-800, easy-tear. / RIKEN氧化铝砂纸替代Rhynowet，80-800目，易撕。",
+        "RFQ ≥20,000 pcs; quotation USD 0.20/pc. / 询盘≥20,000片，报价USD 0.20/片。",
+        "Seller đã gửi báo giá cho Wolverine RW-A36 Aluminum Oxide Sanding Sheet; order progress thiếu địa chỉ ship. / 已发送报价，订单信息缺少收货地址。",
+        "Rất cao / 最高",
+        "VI: Hỏi xác nhận có chấp nhận RIKEN thay thế Rhynowet không, cần grit/size cụ thể và địa chỉ nhận hàng. ZH: 请确认是否接受RIKEN作为Rhynowet替代品，并提供具体粒度、尺寸及收货地址以便核算运费。"
+      ],
+      [
+        "2026-08-03",
+        "michael tigano",
+        "Chưa xác định / 未确认",
+        "VI: 230x280mm Silicon Carbide Waterproof Sandpaper; target price USD 0.09/pc cho 1,000 pcs; Riken C35P, grit P60-P2000. CN: 230x280mm碳化硅防水砂纸；目标价0.09美元/片，1000片；推荐Riken C35P，粒度P60-P2000。",
+        "1,000 pcs / 1000片",
+        "VI: Đã gửi báo giá trong hệ thống, hỏi grit cụ thể như P800/P1000/P2000 và có cần free samples không. CN: 已在系统内发送报价，需确认具体粒度如P800/P1000/P2000及是否需要免费样品。",
+        "Rất cao / 很高",
+        "VI: Xác nhận grit, packing, destination, sample address; nếu đồng ý target thì gửi PI/order trên Alibaba. CN: 确认粒度、包装、目的地、样品地址；如接受目标价，在Alibaba内发送PI/订单。"
+      ],
+      [
+        "2026-09-11",
+        "Ulises Iribarren",
+        "Chưa xác định / 未确认",
+        "VI: Aluminum Oxide roll cho motorcycle grip kits, cần widths/material specs/packaging. CN: 氧化铝砂卷，用于摩托车握把套件，需要确认宽度、材料规格和包装。",
+        "Chưa rõ / 未确认",
+        "VI: Buyer có nhu cầu đúng ngành, cần xác nhận dimension và packing để báo giá. CN: 买家需求匹配，需要确认尺寸和包装后报价。",
+        "Cao / 高",
+        "VI: Hỏi exact width, length, grit, backing, quantity, packaging và destination. CN: 确认宽度、长度、粒度、背基、数量、包装和目的地。"
+      ],
+      [
+        "2026-09-10",
+        "hugo beltran",
+        "Chưa xác định / 未确认",
+        "VI: Aluminum Oxide sanding sheets, 100-piece packing unit, dùng cho sanding machines. CN: 氧化铝砂纸，100片包装，用于砂光机。",
+        "100 pcs/pack / 100片/包",
+        "VI: Seller đã hỏi transport và packaging preference, cần chốt spec. CN: 已询问运输和包装偏好，需要确认规格。",
+        "Cao / 高",
+        "VI: Hỏi grit, size sheet, order quantity, transport method và packing. CN: 确认粒度、尺寸、订购数量、运输方式和包装。"
+      ],
+      [
+        "2026-09-05",
+        "Md Saiful Islam",
+        "Chưa xác định / 未确认",
+        "VI: Waterproof Abrasive Paper, OEM support, standard packing 100 pcs; hỏi manufacturer. CN: 防水砂纸，支持OEM，标准100片包装，询问厂家身份。",
+        "100 pcs packing / 100片包装",
+        "VI: Buyer tìm manufacturer, seller đã xác nhận là Custom Manufacturer. CN: 买家寻找厂家，已确认定制制造商身份。",
+        "Cao / 高",
+        "VI: Gửi company/factory profile, hỏi grit/size/quantity và sample need. CN: 发送工厂资料，确认粒度、尺寸、数量和样品需求。"
+      ],
+      [
+        "2026-09-05",
+        "wilmark wilmark",
+        "Spanish / Tây Ban Nha ngữ",
+        "VI: Film Abrasive: aluminum oxide grain, film backing, sheet/roll/disc, anti-clogging, anti-static. CN: 薄膜砂材：氧化铝磨料、薄膜基材，可做片/卷/碟，防堵塞、防静电。",
+        "Chưa rõ / 未确认",
+        "VI: Lead đúng ngành bằng tiếng Tây Ban Nha, cần hỏi ứng dụng và quy cách. CN: 西语买家，品类匹配，需要确认用途和规格。",
+        "Cao / 高",
+        "VI: Trả lời tiếng Tây Ban Nha/Anh, hỏi grit, format sheet/roll/disc, size và quantity. CN: 用西语/英语回复，确认粒度、形式、尺寸和数量。"
+      ],
+      [
+        "2026-09-02",
+        "Gerald Nduwuchi",
+        "Chưa xác định / 未确认",
+        "VI: Riken GXK51 abrasive belt cho wood/metal sanding, hỏi 1.2mm thickness và paper packing. CN: GXK51砂带用于木材/金属打磨，需确认1.2mm厚度和纸包装。",
+        "150 units / 150件",
+        "VI: Buyer có quantity 150 units, cần xác nhận có cần sample kiểm tra hay đơn sản xuất luôn. CN: 买家数量150件，需确认是否先测样或直接下单。",
+        "Cao / 高",
+        "VI: Gửi spec GXK51, hỏi size belt, grit, backing, có cần sample không. CN: 发送GXK51规格，确认砂带尺寸、粒度、背基及样品需求。"
+      ],
+      [
+        "2026-08-30",
+        "SyedMeer UzaifAli",
+        "Chưa xác định / 未确认",
+        "VI: 240-grit abrasive belts GXK51 cho wood/metal; hỏi vận chuyển và order một lần hay lặp lại. CN: 240目GXK51砂带，用于木材/金属，需确认运输方式和是否长期采购。",
+        "250 pieces / 250件",
+        "VI: Buyer có số lượng 250 pcs, sản phẩm đúng ngành, cần khai thác recurring volume. CN: 买家数量250件，品类匹配，可挖掘长期采购。",
+        "Cao / 高",
+        "VI: Hỏi belt size, backing, destination, transport method và monthly volume. CN: 确认砂带尺寸、背基、目的地、运输方式和月采购量。"
+      ],
+      [
+        "2026-08-29",
+        "Ricardo Tovar",
+        "China / Trung Quốc",
+        "VI: HVLP Gravity Feed Air Paint Spray Gun J-15/W-101 type; nozzle 1.2/1.3/1.4mm, automotive/furniture finishing. CN: HVLP重力喷枪J-15/W-101，喷嘴1.2/1.3/1.4mm，用于汽车/家具喷涂。",
+        "10 pcs / 10件",
+        "VI: Đã có đơn 10 pcs, cần xác nhận nozzle size và shipping city/warehouse ở China. CN: 已有10件需求，需确认喷嘴规格和中国收货城市/仓库。",
+        "Cao / 高",
+        "VI: Hỏi nozzle configuration 1.3/1.4mm và địa chỉ kho Trung Quốc để finalize order. CN: 确认喷嘴配置和中国仓库地址以完成订单。"
+      ],
+      [
+        "2026-08-29",
+        "Abdus Samad",
+        "Chưa xác định / 未确认",
+        "VI: Round Yellow Abrasive Sanding Discs AP33M Gold, 5 inch/6 inch, multi-hole, OEM box. CN: 黄色圆形砂碟AP33M Gold，5/6英寸，多孔，支持OEM包装。",
+        "Chưa rõ / 未确认",
+        "VI: Buyer hỏi đúng sản phẩm; cần diameter, grit, quantity; có thể gửi free sample. CN: 需求匹配，需确认直径、粒度和数量，可寄样测试。",
+        "Cao / 高",
+        "VI: Hỏi 5 inch hay 6 inch, grit size, số lượng; đề xuất sample test. CN: 确认5英寸或6英寸、粒度、数量，并推荐样品测试。"
+      ],
+      [
+        "2026-08-27",
+        "Bryce Collins",
+        "Chưa xác định / 未确认",
+        "VI: 6 Inch Purple Multi-Hole Ceramic Sanding Discs, grit P120/P150/P320/P1000, OEM/private label. CN: 6英寸紫色多孔陶瓷砂碟，P120/P150/P320/P1000，支持OEM/自有品牌。",
+        "MOQ 1,000 pcs; tier tốt 3,000-5,000 pcs / MOQ1000片，最佳阶梯3000-5000片",
+        "VI: Buyer có grit cụ thể và quan tâm so sánh tier 1,000 vs 3,000 pcs. CN: 买家粒度明确，适合报价1000与3000片阶梯。",
+        "Cao / 高",
+        "VI: Gửi tiered quotation 1,000/3,000/5,000 pcs, hỏi destination và packaging logo. CN: 发送1000/3000/5000片阶梯报价，确认目的地和包装logo。"
+      ],
+      [
+        "2026-08-24",
+        "Antonio Majano",
+        "Chưa xác định / 未确认",
+        "VI: Hỏi Riken là nhà sản xuất hay thương mại. CN: 询问 Riken 是生产厂家还是贸易公司。",
+        "Chưa nêu / 未说明",
+        "VI: Buyer hỏi trực tiếp năng lực công ty, cần trả lời rõ factory/manufacturer. CN: 买家关注公司性质，需要明确回复工厂/厂家身份。",
+        "Lead thật - ưu tiên cao / 真实询盘-高优先级",
+        "VI: Trả lời là nhà máy/chuyên abrasive, nêu năm thành lập/năng lực, hỏi sản phẩm và số lượng. CN: 回复工厂身份、研磨材料能力，并询问产品和数量。"
+      ],
+      [
+        "2026-08-20",
+        "Ali Lali",
+        "Chưa xác định / 未确认",
+        "VI: Cần 20 rolls sandpaper, grit 120 và 180, medium sanding paper; có thể cần backing/coating theo ảnh. CN: 需要20卷砂纸，120/180目，中等打磨用途，需确认背基/涂层。",
+        "20 rolls / 20卷",
+        "VI: Đã có nhu cầu sản phẩm, thiếu thông tin backing/coating, size, địa chỉ ship. CN: 需求明确，但缺少背基/涂层、尺寸和收货地址。",
+        "Lead thật - ưu tiên cao / 真实询盘-高优先级",
+        "VI: Hỏi backing material/coating, width/length, destination; gửi quote 120/180 grit. CN: 确认背基、涂层、宽度长度、目的地后报价。"
+      ],
+      [
+        "2026-08-18",
+        "Zephy Lubwela",
+        "Pháp ngữ / 法语区",
+        "VI: Cần 25 rolls P100 + 25 rolls P120, mỗi roll dài 50m. CN: 需要25卷P100和25卷P120，每卷50米。",
+        "50 rolls total / 共50卷",
+        "VI: Nhu cầu rất rõ, đang hỏi thêm công ty/email/type/application/destination/trial hay regular. CN: 数量规格清楚，需补充公司信息、用途、目的地以及试单/长期采购。",
+        "Lead tốt - ưu tiên cao / 优质线索-高优先级",
+        "VI: Lấy đủ company, application, delivery address; gửi quote + freight. CN: 收集公司、用途、收货地址后发送报价和运费。"
+      ],
+      [
+        "2026-08-11",
+        "yael Ramirez",
+        "Dominican Republic / 多米尼加",
+        "Blue abrasive sponge 100 x 120 x 12 mm, grit 60-400#, medium hardness, dùng cho ô tô và gỗ. / 蓝色海绵砂块100x120x12mm，60-400目，中等硬度，用于汽车和木材。",
+        "1,000 pcs / 1000片",
+        "Seller đã hỏi company name, website, business type, destination city/port, schedule, target price và xác nhận YINLI hay OEM. / 已询问公司、网站、业务类型、目的港、采购计划、目标价以及YINLI或OEM。",
+        "Cao / 高",
+        "VI: Follow lại bằng bảng thông tin cần khách điền, kèm cam kết báo giá trong ngày. ZH: 请客户补充公司信息、目的港、采购时间和品牌要求，收到后当天提供正式报价。"
+      ],
+      [
+        "2026-08-11",
+        "yael Ramirez",
+        "Dominican Republic / 多米尼加",
+        "VI: Cần abrasive sponge xanh 100x120x12mm, grit 60-400#, hardness medium, dùng cho car/wood; số lượng 1,000 pcs. CN: 需要蓝色海绵砂块100x120x12mm，60-400目，中等硬度，用于汽车/木材，数量1000个。",
+        "1,000 pcs / 1000个",
+        "VI: Specs rất rõ, cần company/destination/schedule/target price. CN: 规格明确，需要公司、目的地、采购时间和目标价。",
+        "Lead tốt - ưu tiên cao / 优质线索-高优先级",
+        "VI: Xin destination city/port và target price, gửi quote. CN: 获取目的城市/港口和目标价后报价。"
+      ],
+      [
+        "2026-08-03",
+        "michael tigano",
+        "United States / 美国",
+        "230x280mm Silicon Carbide Waterproof Sandpaper, Riken C35P, P60-P2000. / 230x280mm碳化硅水砂纸，Riken C35P，P60-P2000。",
+        "1,000 pcs / 1000片",
+        "Buyer có target price $0.09/pc. Seller đã giới thiệu C35P, hỏi grit cụ thể và đề nghị gửi free samples. / 买家目标价$0.09/片；已介绍C35P并询问具体粒度，建议寄样。",
+        "Cao / 高",
+        "VI: Nhắc lại ưu thế C35P, hỏi grit cần test và địa chỉ nhận mẫu. ZH: 再次强调C35P防水纸基和切削优势，请客户确认测试粒度和样品收货地址。"
+      ],
+      [
+        "2026-07-18",
+        "Javier Garcia",
+        "Chưa mở riêng, preview trong chat / 未单独打开，来自预览",
+        "Aluminum Oxide Flap Disc 4 inch/100mm, grit 40/60, carbon steel polishing, OEM packaging. / 4英寸/100mm氧化铝百叶片，40/60目，碳钢打磨，支持OEM包装。",
+        "1,000 pcs / 1000片",
+        "Seller đã viết proposal khá đầy đủ: chất lượng, OEM/ODM, lead time 5-10 ngày, free samples. / 已发送完整方案，包含质量、OEM、交期5-10天和免费样品。",
+        "Cao / 高",
+        "VI: Tách thành báo giá ngắn, hỏi logo/packing và địa chỉ mẫu. ZH: 简化成正式报价，确认LOGO/包装要求和样品地址。"
+      ],
+      [
+        "2026-07-28",
+        "Ruby N",
+        "Vietnam flag / 越南标识",
+        "Corundum sanding paper rolls, medium hardness, 80-800 grit, dùng xử lý aluminum. / 刚玉砂纸卷，中等硬度，80-800目，用于铝材加工。",
+        "1,000 pcs / 1000片",
+        "Seller đã hỏi khách cần đóng gói từng tờ hay dạng cuộn. / 已询问需要单张包装还是卷装。",
+        "Trung bình-cao / 中高",
+        "VI: Gửi 2 phương án đóng gói và giá theo từng phương án. ZH: 提供单张包装和卷装两个方案，并分别报价。"
+      ],
+      [
+        "2026-07-28",
+        "Raymond lockett",
+        "United States / 美国",
+        "Spray gun 600mL gravity feed, dùng ô tô/nội thất/xây dựng. / 600mL上壶喷枪，用于汽车、家具和建筑。",
+        "1 unit test / 1台测试",
+        "Buyer hỏi shipping time tới US; seller hỏi phương thức vận chuyển và xác nhận chỉ mua 1 chiếc để test. / 买家询问到美国运输时间，已询问运输方式并确认是否只买1台测试。",
+        "Trung bình-cao / 中高",
+        "VI: Báo 2 lựa chọn ship mẫu: express và economy, kèm thời gian. ZH: 提供快递和经济运输两种样品运输方案及预计时效。"
+      ]
+    ],
+    "Can theo doi 继续跟进": [
+      [
+        "Ngày / 日期",
+        "Khách hàng / 客户",
+        "Quốc gia / 国家",
+        "Nội dung / 内容",
+        "Đánh giá / 判断",
+        "Việc nên làm / 下一步"
+      ],
+      [
+        "2026-08-05",
+        "Mina Hakem",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy auto-reception stopped, chưa có nhu cầu rõ. CN: 仅看到自动接待停止，需求不明确。 | SL: Chưa rõ / 未确认",
+        "VI: Cần mở sâu nếu muốn xác minh; hiện chưa đủ tiêu chuẩn đưa vào khách ưu tiên. CN: 如需确认需打开对话；目前不足以列为重点客户。",
+        "VI: Hỏi lại product/grit/quantity nếu buyer còn quan tâm. CN: 如买家仍有兴趣，追问产品/粒度/数量。"
+      ],
+      [
+        "2026-08-04",
+        "jojo delio madrid",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy câu 'You are welcome', chưa có nhu cầu cụ thể. CN: 仅看到 'You are welcome'，无明确需求。 | SL: Chưa rõ / 未确认",
+        "VI: Phản hồi xã giao, chưa phải lead ưu tiên. CN: 礼貌回复，暂非重点线索。",
+        "VI: Chỉ follow nếu có lịch sử sản phẩm trước đó. CN: 仅在有前序产品需求时跟进。"
+      ],
+      [
+        "2026-09-11",
+        "nziza bgoya",
+        "Chưa xác định / 未确认",
+        "VI: Seller hỏi size, grit, quantity để báo giá. CN: 已询问尺寸、粒度和数量以报价。 | SL: Chưa rõ / 未确认",
+        "VI: Lead mở đầu, thiếu spec. CN: 初步线索，缺少规格。",
+        "VI: Follow bằng form size/grit/quantity/destination. CN: 用尺寸/粒度/数量/目的地表单追问。"
+      ],
+      [
+        "2026-09-08",
+        "Scolly Remic",
+        "Chưa xác định / 未确认",
+        "VI: Có shortened external links; seller từ chối mở vì bảo mật và yêu cầu upload specs/drawings trực tiếp Alibaba. CN: 买家发短链接，因安全原因要求在Alibaba上传规格/图纸。 | SL: Chưa rõ / 未确认",
+        "VI: Có thể là lead thật nhưng cần tài liệu trong nền tảng. CN: 可能是真实线索，但需平台内资料。",
+        "VI: Nhắc upload file/specs trực tiếp, không dùng short link. CN: 提醒直接上传文件/规格，不使用短链接。"
+      ],
+      [
+        "2026-09-10",
+        "Alan Fan",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ phản hồi OK. CN: 仅回复OK。 | SL: Chưa rõ / 未确认",
+        "VI: Có phản hồi nhưng thiếu thông tin. CN: 有回复但信息不足。",
+        "VI: Hỏi tiếp sản phẩm, grit, quantity. CN: 追问产品、粒度、数量。"
+      ],
+      [
+        "2026-09-04",
+        "Andraz Ocvirk",
+        "Chưa xác định / 未确认",
+        "VI: Snapshot chỉ thấy [Message], chưa đọc được nội dung. CN: 仅看到[Message]，未读到具体内容。 | SL: Chưa rõ / 未确认",
+        "VI: Cần mở sâu. CN: 需要进一步打开查看。",
+        "VI: Kiểm tra hội thoại nếu cần phân tích sâu. CN: 如需深度分析需打开对话。"
+      ],
+      [
+        "2026-09-03",
+        "simon stallard",
+        "Chưa xác định / 未确认",
+        "VI: Seller nói sẽ gửi PI qua email sau. CN: 卖家表示稍后通过邮件发送PI。 | SL: Chưa rõ / 未确认",
+        "VI: Có PI nhưng kéo qua email, cần giữ thông tin trong Alibaba. CN: 有PI机会但转到邮件，需保留平台记录。",
+        "VI: Gửi tóm tắt PI/order trong Alibaba và hỏi xác nhận. CN: 在Alibaba内发送PI/订单摘要并确认。"
+      ],
+      [
+        "2026-09-03",
+        "James Thomson",
+        "Chưa xác định / 未确认",
+        "VI: 6 inch white sanding discs lead cũ, đã hỏi grit/quantity/destination. CN: 6英寸白色砂碟旧线索，已询问粒度/数量/目的地。 | SL: 1,000/3,000/5,000+ gợi ý",
+        "VI: Lead cũ vẫn tốt, cần follow nếu chưa trả lời. CN: 旧线索仍有价值，如未回复需跟进。",
+        "VI: Follow lại bằng sample + tier quotation. CN: 用样品和阶梯报价跟进。"
+      ],
+      [
+        "2026-09-03",
+        "Rajabu Kitema",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy buyer gửi hình ảnh, có level tag nhưng chưa đọc được text sản phẩm. CN: 仅看到图片，有level标签，但未看到明确文字需求。 | SL: Chưa rõ / 未确认",
+        "VI: Cần mở ảnh/xác nhận sản phẩm trước khi đưa vào khách ưu tiên. CN: 需查看图片并确认产品后再列为重点客户。",
+        "VI: Hỏi buyer cần loại abrasive nào, size/grit/quantity/destination. CN: 询问需要哪类研磨产品、尺寸、粒度、数量和目的地。"
+      ],
+      [
+        "2026-09-03",
+        "ghgv vhh",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy hình ảnh, chưa có nhu cầu text rõ. CN: 仅看到图片，无明确文字需求。 | SL: Chưa rõ / 未确认",
+        "VI: Lead chưa đủ dữ liệu, cần đọc ảnh hoặc hỏi lại. CN: 线索信息不足，需要看图或追问。",
+        "VI: Hỏi sản phẩm, quy cách và số lượng; nếu không phản hồi thì xếp thấp. CN: 追问产品、规格和数量；无回复则降优先级。"
+      ],
+      [
+        "2026-09-01",
+        "Pavel Haurilchik",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy auto-reception stopped, chưa có nội dung sản phẩm trong snapshot. CN: 仅看到自动接待停止，未见明确产品内容。 | SL: Chưa rõ / 未确认",
+        "VI: Cần mở sâu nếu có lịch sử chat trước. CN: 如有历史聊天需进一步打开查看。",
+        "VI: Chưa tính lead chính; follow hỏi nhu cầu abrasive cụ thể. CN: 暂不列重点，追问具体研磨产品需求。"
+      ],
+      [
+        "2026-08-27",
+        "Emanuel Liska",
+        "Chưa xác định / 未确认",
+        "VI: Aluminum Oxide abrasive product, diameter 6-115mm, hỏi certificate, dùng xử lý copper, blade length 20mm. CN: 氧化铝研磨产品，直径6-115mm，询问证书，用于铜材加工，需确认20mm长度。 | SL: Chưa rõ / 未确认",
+        "VI: Lead kỹ thuật, cần xác nhận quy cách trước khi báo giá. CN: 技术型线索，报价前需确认规格。",
+        "VI: Hỏi application, grit, diameter, length 20mm có đúng không, packing/transport. CN: 确认用途、粒度、直径、20mm长度是否正确及包装/运输。"
+      ],
+      [
+        "2026-08-27",
+        "omar tmezeh",
+        "Chưa xác định / 未确认",
+        "VI: OEM/ODM/OBM abrasive discs, medium hardness, thickness 3.0mm, xử lý aluminum, buyer có item count nhưng thiếu total volume/logistics. CN: OEM/ODM/OBM砂碟，中等硬度、3.0mm厚，用于铝材加工，有数量但缺总量和物流。 | SL: Chưa rõ / 未确认",
+        "VI: Lead đúng ngành nhưng còn thiếu dimension và delivery address. CN: 品类匹配，但缺尺寸和收货地址。",
+        "VI: Hỏi surface dimension, grit, total quantity, delivery address và transport method. CN: 询问工作面尺寸、粒度、总量、地址和运输方式。"
+      ],
+      [
+        "2026-08-17",
+        "balaji Selvam",
+        "Ấn Độ / 印度",
+        "VI: RFQ tìm Rhynowet sandpaper; Riken đề xuất Aluminum Oxide Sandpaper thay thế, cần grit/size/quantity. CN: RFQ寻找Rhynowet砂纸，Riken可推荐氧化铝砂纸替代，需要确认粒度、尺寸、数量。 | SL: Chưa nêu / 未说明",
+        "Lead thật - ưu tiên vừa / 真实询盘-中优先级",
+        "VI: Hỏi có chấp nhận Riken alternative không, yêu cầu grit/size/quantity. CN: 询问是否接受Riken替代品，并确认粒度尺寸数量。"
+      ],
+      [
+        "2026-08-13",
+        "MARCOS RODRIGUES",
+        "Brazil / 巴西",
+        "VI: Seller follow: Riken là factory sản xuất abrasive materials số lượng lớn, hỏi buyer còn nhu cầu không. CN: 卖家跟进：Riken是大批量研磨材料工厂，询问买家是否仍有采购需求。 | SL: Chưa nêu / 未说明",
+        "Lead cũ / 老线索",
+        "VI: Follow bằng câu hỏi sản phẩm cụ thể, grit/quantity. CN: 跟进具体产品、粒度和数量。"
+      ],
+      [
+        "2026-08-22",
+        "Victor Pedrozo",
+        "Spanish / 西语区",
+        "VI: Buyer nói công ty sẽ phản hồi qua email sớm. CN: 买家表示公司将通过邮件回复。 | SL: Chưa nêu / 未说明",
+        "Cần xác minh / 需核实",
+        "VI: Mời tiếp tục trao đổi trong Alibaba, hỏi sản phẩm/quantity. CN: 引导在阿里巴巴内沟通，询问产品和数量。"
+      ],
+      [
+        "2026-08-17",
+        "Faisal Latif",
+        "Pakistan / 巴基斯坦",
+        "Buyer hỏi 'which product, sir'. / 买家问具体是什么产品。",
+        "Có phản hồi nhưng chưa rõ nhu cầu. / 有回复但需求不明确。",
+        "VI: Gửi lại ảnh/link sản phẩm đã hỏi và hỏi application, grit, quantity. ZH: 发送对应产品图/链接，并询问用途、粒度和数量。"
+      ],
+      [
+        "2026-07-30",
+        "Roman Zebzeev",
+        "Russia / 俄罗斯",
+        "Seller hỏi còn nhu cầu mua không. / 卖家询问是否仍有采购需求。",
+        "Lead cũ, cần kích hoạt lại. / 老线索需重新激活。",
+        "VI: Gửi 3 SKU bán tốt và hỏi nhu cầu hiện tại. ZH: 发送3个热销SKU并确认当前采购需求。"
+      ],
+      [
+        "2026-07-30",
+        "I RIN LEE",
+        "Korea / 韩国",
+        "Seller hỏi đã nhận email chưa. / 卖家询问是否收到邮件。",
+        "Có trao đổi ngoài email, cần kéo về Alibaba. / 已转邮件，建议回到平台。",
+        "VI: Nhắn lại trong Alibaba tóm tắt báo giá và hỏi phản hồi. ZH: 在阿里内重新总结报价并询问反馈。"
+      ],
+      [
+        "2026-07-29",
+        "Even Christan",
+        "Netherlands / 荷兰",
+        "Hỏi hỗ trợ chọn sản phẩm, tài liệu kỹ thuật và lắp đặt pump. / 涉及泵产品选型、技术资料和安装支持。",
+        "Có nhu cầu kỹ thuật nhưng có thể lệch ngành mài mòn. / 有技术需求但可能非核心品类。",
+        "VI: Xác minh loại pump/sản phẩm có thuộc danh mục Riken không. ZH: 先确认该泵是否属于RIKEN可供产品范围。"
+      ],
+      [
+        "2026-07-25",
+        "Jake Wilson",
+        "United States / 美国",
+        "Buyer hỏi 'Can we discuss further?'. / 买家要求进一步沟通。",
+        "Có tín hiệu thật nhưng thiếu SKU. / 有真实沟通信号但缺SKU。",
+        "VI: Hỏi khách đang quan tâm sản phẩm nào, grit/size/quantity. ZH: 询问具体产品、粒度、尺寸和采购数量。"
+      ],
+      [
+        "2026-07-22",
+        "Comprasferreteriakoala Dosquebradas",
+        "Chưa mở riêng / 未单独打开",
+        "Seller hỏi estimated order quantity và OEM/private label packaging. / 已询问数量及是否需要OEM/自有品牌包装。",
+        "Lead phụ kiện/abrasive có thể tốt. / 可能有潜力。",
+        "VI: Cần mở riêng tuần sau nếu có thời gian. ZH: 下次可单独打开核查完整对话。"
+      ],
+      [
+        "2026-07-20",
+        "MauroCesar Andrade",
+        "Chưa mở riêng / 未单独打开",
+        "RFQ Silicon Carbide waterproof sandpaper P60-P3000, OEM. / 碳化硅水砂纸P60-P3000，支持OEM。",
+        "Có sản phẩm khớp ngành. / 产品匹配度高。",
+        "VI: Follow lại bằng bảng grit/size/packing. ZH: 用粒度、尺寸、包装表格跟进。"
+      ],
+      [
+        "2026-07-20",
+        "Tee Poungkaew",
+        "Chưa mở riêng / 未单独打开",
+        "Trao đổi về chi phí vận chuyển nhanh, cần số lượng để ước tính. / 快递运费需数量才能估算。",
+        "Kẹt ở phí ship. / 卡在运费核算。",
+        "VI: Hỏi số lượng và kích thước kiện để báo DHL/FedEx. ZH: 询问数量和包装尺寸以核算DHL/FedEx费用。"
+      ]
+    ],
+    "It phan hoi 低优先级": [
+      [
+        "Ngày / 日期",
+        "Khách hàng / 客户",
+        "Quốc gia / 国家",
+        "Dấu hiệu / 信号",
+        "Kết luận / 结论"
+      ],
+      [
+        "2026-08-05",
+        "Mina Hakem",
+        "Chưa xác định / 未确认",
+        "VI: Auto-reception stopped, chưa đọc được nhu cầu cụ thể. CN: 自动接待停止，未看到具体需求。"
+      ],
+      [
+        "2026-08-04",
+        "jojo delio madrid",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ 'You are welcome', không đủ dữ liệu lead. CN: 仅'You are welcome'，线索信息不足。"
+      ],
+      [
+        "2026-09-10",
+        "Alan Fan",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ “OK”, chưa đủ nhu cầu. CN: 仅回复OK，需求不足。"
+      ],
+      [
+        "2026-09-04",
+        "Andraz Ocvirk",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy [Message], không có nội dung rõ trong snapshot. CN: 仅看到[Message]，无明确内容。"
+      ],
+      [
+        "2026-09-03",
+        "ghgv vhh / Rajabu Kitema",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy hình ảnh, chưa có nhu cầu text rõ. CN: 仅看到图片，无明确文字需求。"
+      ],
+      [
+        "2026-09-08",
+        "Scolly Remic",
+        "Chưa xác định / 未确认",
+        "VI: Dùng shortened external links, cần yêu cầu upload trực tiếp Alibaba. CN: 使用短链接，需要求在Alibaba内直接上传。"
+      ],
+      [
+        "2026-08-27",
+        "User name / Anny Yang",
+        "United States / 美国",
+        "VI: Nội dung hỏi PUMPS, không đúng ngành abrasive; yêu cầu gửi email ngoài. CN: 询问PUMPS泵类产品，非研磨品类，并要求邮件外部联系。"
+      ],
+      [
+        "2026-09-03",
+        "ghgv vhh",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ có hình ảnh, chưa có nhu cầu rõ trong phần đọc. CN: 仅有图片，未见明确需求。"
+      ],
+      [
+        "2026-09-01",
+        "Pavel Haurilchik",
+        "Chưa xác định / 未确认",
+        "VI: Chỉ thấy hệ thống báo automatic reception stopped, chưa đủ thông tin lead. CN: 仅看到自动接待停止，线索信息不足。"
+      ],
+      [
+        "2026-08-13",
+        "Cham Reoun",
+        "Cambodia / 柬埔寨",
+        "Chỉ thấy video, chưa đọc được nhu cầu văn bản. / 仅看到视频，无明确文字需求。",
+        "Theo dõi thấp nếu không có phản hồi thêm. / 无进一步回复则低优先级。"
+      ],
+      [
+        "2026-08-13",
+        "MARCOS RODRIGUES",
+        "Brazil / 巴西",
+        "Seller hỏi khách còn nhu cầu mua không. / 卖家询问是否仍采购。",
+        "Chưa có phản hồi mới. / 暂无新回复。"
+      ],
+      [
+        "2026-08-13",
+        "Maurosalgadolucas Lucas",
+        "United States / 美国",
+        "Auto reception stopped. / 自动接待停止。",
+        "Không đủ lead. / 信息不足。"
+      ],
+      [
+        "2026-08-11",
+        "Hector Escobar",
+        "Panama / 巴拿马",
+        "Auto reception stopped. / 自动接待停止。",
+        "Không đủ lead. / 信息不足。"
+      ],
+      [
+        "2026-08-05",
+        "Mina Hakem",
+        "Egypt / 埃及",
+        "Auto reception stopped. / 自动接待停止。",
+        "Không đủ lead. / 信息不足。"
+      ],
+      [
+        "2026-07-30",
+        "David Rod",
+        "United States / 美国",
+        "Liên quan hủy đơn và hoàn tiền. / 涉及取消订单和退款。",
+        "Không phải lead bán mới. / 非新增销售线索。"
+      ],
+      [
+        "2026-07-28",
+        "Miriel / Aliasger / Pablo",
+        "US/AE/ES",
+        "Chỉ chào hỏi hoặc cảm ơn. / 仅问候或致谢。",
+        "Không phân tích sâu. / 不做重点分析。"
+      ],
+      [
+        "2026-07-27",
+        "Susan Forrest",
+        "Nepal / 尼泊尔",
+        "Seller chỉ gửi website công ty. / 仅发送公司网站。",
+        "Cần có phản hồi mua mới đưa lên ưu tiên. / 需买家回复后再提升优先级。"
+      ]
+    ]
+  },
+  "row_counts": {
+    "Tong quan 总览": 24,
+    "Khach uu tien 重点客户": 27,
+    "Can theo doi 继续跟进": 25,
+    "It phan hoi 低优先级": 18
+  }
+}
