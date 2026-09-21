@@ -1,473 +1,580 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Báo cáo tuần - Hoàng Đức Thịnh</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Hoàng Đức Thịnh · Báo cáo vận hành Alibaba</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
 <style>
-:root{--navy:#1f3a2e;--blue:#3e8a5a;--blue2:#e7f5eb;--ink:#202938;--muted:#788394;--line:#e7ebf1;--bg:#f5f7fa;--green:#1f9a6d;--green2:#eaf8f1;--amber:#ca7b1b;--amber2:#fff5df;--red:#d95761;--red2:#fff0f2;--shadow:0 2px 8px rgba(30,50,85,.07)}
+:root{--navy:#102A43;--blue:#2563EB;--blue2:#DBEAFE;--green:#16A34A;--green2:#DCFCE7;--amber:#D97706;--amber2:#FEF3C7;--red:#DC2626;--red2:#FEE2E2;--bg:#F3F6FA;--ink:#172033;--muted:#5b6678;--line:#E4EAF1;--shadow:0 2px 8px rgba(16,42,67,.07);--h1:#4a3428;--h2:#a16207}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
-.wrap{max-width:1320px;margin:auto;padding:26px 30px 48px}
-.hero{background:linear-gradient(120deg,#1f3a2e,#3e6b4f);color:#fff;border-radius:15px;padding:23px 28px;margin-bottom:16px;position:relative}
-.hero h1{font-size:23px;margin:0 170px 9px 0;letter-spacing:-.02em}
-.hero .sub{display:flex;gap:7px;flex-wrap:wrap;color:#dcf0e3}
-.badge{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.2)}
-.period{position:absolute;right:24px;top:22px;text-align:right;font-size:12px;color:#dcf0e3}
-.period b{display:block;color:#fff;font-size:14px;margin-top:2px}
-.kpis{display:grid;grid-template-columns:repeat(6,1fr);gap:11px;margin-bottom:8px}
-.kpi{background:#fff;border-radius:11px;padding:13px 15px;box-shadow:var(--shadow);min-width:0}
-.kpi .label{font-size:11px;color:var(--muted);margin-bottom:5px}
-.kpi .value{font-size:21px;font-weight:850;letter-spacing:-.04em}
-.kpi .note{font-size:11px;color:var(--muted);margin-top:2px;display:flex;align-items:center;gap:4px;flex-wrap:wrap}
-.kpi.good .value{color:var(--green)}.kpi.warn .value{color:var(--amber)}.kpi.bad .value{color:var(--red)}
-.delta{font-weight:800;font-size:11px;padding:1px 6px;border-radius:20px}
-.delta.up{color:var(--green);background:var(--green2)}.delta.down{color:var(--red);background:var(--red2)}.delta.flat{color:var(--muted);background:#eef1f5}
-.kpi-note-line{font-size:11px;color:var(--muted);margin:2px 0 16px}
-.tabs-hint{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--blue);font-weight:750;margin:2px 0 8px}
-.tabs-hint .arrow{animation:bounce-x 1.3s infinite}
-@keyframes bounce-x{0%,100%{transform:translateX(0)}50%{transform:translateX(5px)}}
-.tabs{display:flex;gap:10px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
-.tab{border:2px solid #dbe1ec;border-radius:11px;padding:13px 20px;background:#fff;color:#3a4556;white-space:nowrap;font:inherit;font-size:14px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(30,50,85,.06);transition:transform .12s,box-shadow .12s,background .12s;flex:none}
-.tab:hover{transform:translateY(-2px);box-shadow:0 6px 14px rgba(30,50,85,.14);border-color:var(--blue)}
-.tab.active{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 6px 16px rgba(31,58,46,.35)}
-.pane{display:none}.pane.active{display:block}
-.section{background:#fff;border-radius:13px;padding:19px 21px;margin-bottom:15px;box-shadow:var(--shadow)}
-.section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--navy);padding-left:10px}
-.section h3{font-size:14px;margin:0 0 10px}
-.note-line{font-size:12px;color:var(--muted);margin:8px 0 14px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:15px}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.priority-box{background:linear-gradient(120deg,#fff5df,#ffeccb);border:1px solid #f0c98a;border-radius:11px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:flex-start}
-.priority-box .pico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--amber);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:15px}
-.priority-box .ptxt b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#8d641f;margin-bottom:3px}
-.priority-box .ptxt ul{margin:6px 0 0;padding-left:18px}
-.priority-box .ptxt li{font-size:13px;color:#4a3410;margin-bottom:3px}
-.legend-note{display:flex;gap:16px;flex-wrap:wrap;background:#f6f8fb;border:1px solid var(--line);border-radius:9px;padding:10px 14px;margin-bottom:14px}
-.legend-chip{display:flex;align-items:center;gap:7px;font-size:12px;color:#4a5566;font-weight:650}
-.ops-heading{font-size:17px;font-weight:900;color:var(--navy);text-transform:uppercase;letter-spacing:.02em}
-.table.ops-table th{background:var(--navy);color:#fff}
-.table.ops-table td:first-child{font-weight:800;color:var(--navy);background:#f6f9fc}
-.focus{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:12px}
-.focus-card{border-radius:11px;border:1px solid var(--line);padding:15px;min-height:120px}
-.focus-card.red{background:var(--red2);border-color:#ffd7dc}
-.focus-card.amber{background:var(--amber2);border-color:#f5dfae}
-.focus-card.blue{background:var(--blue2);border-color:#c3e3cd}
-.focus-card h3{font-size:15px;margin:0 0 9px}
-.focus-card p{color:#657186;margin:0 0 13px;font-size:13px}
-.tag{display:inline-flex;border-radius:20px;padding:3px 8px;font-size:11px;font-weight:800;white-space:nowrap}
-.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:var(--green);background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:var(--muted);background:#eef1f5}
-.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.metric{border:1px solid var(--line);border-radius:10px;padding:12px}
-.metric .n{font-size:22px;font-weight:850}
-.metric .l{font-size:11px;color:var(--muted)}
-.chart{width:100%;height:280px}
-.chart.sm{height:220px}
-.table-wrap{overflow:auto}
-.table{border-collapse:collapse;width:100%;min-width:640px;font-size:12px}
-.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
-.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap}
-.table th.num,.table td.num{text-align:right}
-.table tr:hover td{background:#fafcff}
-.hint{font-size:11px;color:var(--muted)}
-.kw-group{margin-bottom:14px}
-.kw-group h3{font-size:13px;color:var(--navy);margin:0 0 8px}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{background:var(--green2);color:var(--green);border-radius:20px;padding:6px 12px;font-size:12.5px;font-weight:700}
-.chip.gray{background:#eef1f5;color:var(--muted)}
-.buyer-card{border:1px solid var(--line);border-radius:11px;padding:14px;margin-bottom:10px}
-.buyer-card .bh{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:8px;flex-wrap:wrap}
-.buyer-card .bh b{font-size:14.5px}
-.buyer-card .bc{color:var(--muted);font-size:12px}
-.buyer-card .row{font-size:13px;margin-top:5px}
-.buyer-card .row b{font-weight:750;color:#4a5566}
-.copy-btn{margin-top:9px;border:1px solid var(--blue);background:var(--blue2);color:#2b6b45;border-radius:8px;padding:6px 12px;font:inherit;font-size:12px;font-weight:750;cursor:pointer}
-.copy-btn.copied{background:var(--green2);border-color:var(--green);color:var(--green)}
-.simple-list{display:grid;gap:9px}
-.simple-item{border-bottom:1px dashed var(--line);padding:9px 0;font-size:13px}
-.simple-item:last-child{border-bottom:0}
-.simple-item b{font-weight:800}
-.diag{display:grid;gap:9px}
-.diag-item{display:grid;grid-template-columns:55px 1fr;gap:10px;align-items:start;padding:11px 0;border-bottom:1px dashed var(--line);font-size:13px}
-.diag-item:last-child{border-bottom:0}
-.diag-tag{border-radius:6px;text-align:center;padding:4px 3px;font-size:11px;font-weight:850}
-.diag-tag.p0{color:var(--red);background:var(--red2)}.diag-tag.p1{color:var(--amber);background:var(--amber2)}.diag-tag.info{color:var(--blue);background:var(--blue2)}
-.sources{display:flex;gap:8px;flex-wrap:wrap}
-.sources a{color:var(--blue);background:var(--blue2);border-radius:8px;padding:7px 10px;text-decoration:none;font-size:12px;font-weight:750}
-.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:22px;line-height:1.9}
-.top-actions{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:-5px 0 10px;flex-wrap:wrap}
-.need{color:var(--muted);font-size:12px}
-.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
-.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:#536074}
-.subtab.active{background:var(--navy);color:#fff;border-color:var(--navy)}
-.subpane{display:none}.subpane.active{display:block}
-.searchbar{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap;align-items:center}
-.searchbar input{flex:1;min-width:200px;border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 Inter,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}
+.wrap{max-width:1440px;margin:auto;padding:20px 28px 48px}
+.langbar{display:none;justify-content:flex-end;gap:8px;margin-bottom:10px}
+.langbar.on{display:flex}
+.langbar button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:9px 18px;font:inherit;font-weight:800;font-size:13px;cursor:pointer;min-height:44px;color:var(--navy)}
+.langbar button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));color:#fff;border-radius:18px;padding:24px 28px}
+.hero .kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.hero h1{font-size:24px;margin:4px 0 8px;letter-spacing:-.02em;line-height:1.25}
+.hero .headline{font-size:18px;font-weight:800;margin:6px 0 10px;max-width:900px;line-height:1.4}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px;max-width:980px}
+.pn div{border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.45;font-weight:600}
+.pn b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.pn .p{background:rgba(34,197,94,.22);border:1px solid rgba(134,239,172,.55)}
+.pn .n{background:rgba(251,146,60,.25);border:1px solid rgba(253,186,116,.6)}
+.periods{font-size:11.5px;opacity:.85;margin:0 0 14px}
+.hk{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.hkc{background:rgba(255,255,255,.96);color:var(--ink);border-radius:14px;padding:12px 14px}
+.hkc .l{font-size:12px;color:var(--muted);font-weight:700}
+.hkc .v{font-size:26px;font-weight:900;letter-spacing:-.04em;line-height:1.15;margin:2px 0}
+.hkc .s{font-size:11.5px;color:var(--muted)}
+.hkc.pos .v{color:var(--green)}.hkc.urg .v{color:var(--red)}.hkc.mid .v{color:var(--amber)}
+.owner{background:linear-gradient(135deg,#f97316,#dc2626);border-radius:14px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.owner b{font-size:15px;display:block}.owner span{font-size:13px;opacity:.95}
+.owner a{background:#fff;color:#b91c1c;font-weight:850;text-decoration:none;padding:12px 18px;border-radius:12px;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.nav{position:sticky;top:0;z-index:50;background:rgba(243,246,250,.95);backdrop-filter:blur(6px);display:flex;gap:8px;padding:10px 0;margin-bottom:8px}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:750;font-size:13px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:20px}
+.nav a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.area-title{font-size:21px;font-weight:850;color:var(--navy);margin:24px 0 4px;letter-spacing:-.02em}
+.area-lead{font-size:14.5px;color:#33415c;font-weight:700;margin:0 0 14px}
+.section{background:#fff;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 6px}
+.lead{font-weight:800;font-size:15px;color:var(--navy);background:linear-gradient(90deg,#e8f0ff,#fff);border-left:4px solid var(--blue);padding:10px 14px;border-radius:8px;line-height:1.5;margin:0 0 14px}
+.note{font-size:12px;color:var(--muted);margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tag{display:inline-flex;align-items:center;border-radius:20px;padding:3px 10px;font-size:11.5px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:#166534;background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:#536074;background:#eef1f5}
+.bgroup h2{display:flex;align-items:center;gap:10px;font-size:18px;margin:0 0 4px;flex-wrap:wrap}
+.bgroup h2 i{font-style:normal;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;color:#fff}
+.bgroup.big h2 i{background:var(--red)}.bgroup.paid h2 i{background:var(--green)}
+.bdef{font-size:13px;color:var(--muted);margin:0 0 12px}
+.bcard{border-radius:16px;padding:14px 16px;margin-bottom:12px;border:1px solid var(--line);border-left:6px solid #94a3b8;background:#fff;box-shadow:0 1px 4px rgba(16,42,67,.06)}
+.big .bcard{border-left-color:var(--amber);background:linear-gradient(90deg,#fffbeb,#fff 45%)}
+.big .bcard.top{border-left-color:var(--red);background:linear-gradient(90deg,#fff5f5,#fff 45%)}
+.paid .bcard{border-left-color:var(--green);background:linear-gradient(90deg,#f0fdf4,#fff 45%)}
+.bh{display:flex;gap:10px;align-items:flex-start}
+.rank{flex:none;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+.big .top .rank{background:var(--red)}.paid .rank{background:var(--green)}
+.who{flex:1 1 0;min-width:90px}
+.bn{font-size:16.5px;font-weight:850;color:var(--navy);line-height:1.3;word-break:break-word}
+.ctry{display:inline-block;margin-top:3px;font-size:12px;color:#475569;background:#f1f5f9;border-radius:20px;padding:2px 9px}
+.pill{flex:none}
+.sig{margin:10px 0 4px}
+.chip{display:inline-block;background:var(--blue2);color:#1e40af;font-weight:800;border-radius:8px;padding:3px 10px;font-size:13px;line-height:1.4}
+.row{font-size:14px;margin:8px 0;line-height:1.5}
+.row b,.nextbox b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#7a8699;margin-bottom:1px}
+.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bcard.open .clamp{display:block;-webkit-line-clamp:unset}
+.nextbox{margin-top:8px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600;color:#1e3a8a}
+.big .nextbox{background:#fffbeb;border-color:#fde68a;color:#78350f}
+.paid .nextbox{background:#f0fdf4;border-color:#bbf7d0;color:#14532d}
+.nextbox b{opacity:.7;color:inherit}
+.more-detail{display:none}
+.bcard.open .more-detail{display:block}
+.tl{margin:6px 0 0;padding-left:16px;font-size:13px;color:#455066}
+.bf{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:8px;flex-wrap:wrap}
+.dt{font-size:12.5px;font-weight:750;color:var(--muted)}
+.lnk{border:0;background:transparent;color:var(--blue);font:inherit;font-size:13px;font-weight:800;cursor:pointer;padding:10px 4px;min-height:44px}
+.extra{display:none}
+.extra.show{display:block;animation:fd .22s ease}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-family:inherit;min-height:46px}
+.btn.wide{width:100%}.btn.ghost{background:#eef2f7;color:var(--navy)}
+.empty{background:#f0fdf4;border:1px dashed #86efac;border-radius:14px;padding:16px;font-weight:700;color:#166534;font-size:14px}
+.rule{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.bm{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.bmc{border:1px solid var(--line);border-radius:14px;padding:15px;border-top:4px solid var(--blue)}
+.bmc.green{border-top-color:var(--green)}.bmc.amber{border-top-color:var(--amber);background:#fffdf5}
+.bmc h3{margin:0 0 10px;font-size:15px}
+.bar{margin:8px 0}
+.bar .bl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:3px;gap:8px}
+.bar .bl b{color:var(--ink)}
+.bar .tr{height:10px;background:#eef2f7;border-radius:6px;overflow:hidden}
+.bar .fl{height:100%;border-radius:6px}
+.pcts{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px}
+.bmc p{font-size:13px;color:#1f2a44;font-weight:700;margin:0}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metric{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.metric .n{font-size:24px;font-weight:850}
+.metric .l{font-size:12px;color:var(--muted)}
+.metric .d{font-size:12px;font-weight:800;margin-top:2px}
+.up{color:var(--green)}.down{color:var(--red)}
+.chart{width:100%;height:320px}
+.chart.cty{height:440px}.chart.kw{height:440px}.chart.lg{height:320px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin-bottom:8px;color:#455066}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.warn{background:var(--amber2);border:1px solid #fde68a;border-radius:12px;padding:12px 14px;font-size:13.5px;font-weight:650;color:#78350f;margin-bottom:12px}
+.pcard{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.pcard .rank{background:var(--blue)}
+.pcard .nm{font-weight:750;font-size:14.5px;color:var(--navy);text-decoration:none;line-height:1.4;word-break:break-word}
+.pcard .pid{font-size:11.5px;color:var(--muted)}
+.pcard .uv{font-size:30px;font-weight:900;color:var(--blue);letter-spacing:-.04em}
+.pcard .uv small{font-size:12px;color:var(--muted);font-weight:700}
+.searchbar{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:16px}
 .count-pill{font-size:11px;color:var(--muted);background:#f3f5f8;border-radius:20px;padding:4px 10px;white-space:nowrap}
-.chart.lg{height:320px}
-@media(max-width:1000px){.kpis{grid-template-columns:repeat(3,1fr)}.focus{grid-template-columns:1fr 1fr}.focus-card:first-child{grid-column:1/-1}.grid3{grid-template-columns:1fr 1fr}.period{position:static;text-align:left;margin-top:10px}.hero h1{margin-right:0}}
-@media(max-width:620px){.wrap{padding:17px 12px 35px}.kpis,.focus,.grid2,.grid3,.metric-row{grid-template-columns:1fr}.focus-card:first-child{grid-column:auto}.hero{padding:18px}.hero h1{font-size:20px}.period{font-size:11px}.tabs{margin-left:-2px;margin-right:-2px}}
+details.dx summary{cursor:pointer;font-weight:800;color:var(--navy);padding:12px 0;min-height:44px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:460px;-webkit-overflow-scrolling:touch}
+.table{border-collapse:collapse;width:100%;min-width:620px;font-size:12.5px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap;z-index:1}
+.table th.num,.table td.num{text-align:right}
+.owner-sum{font-weight:800;font-size:15px;color:var(--navy);background:linear-gradient(90deg,#e8f0ff,#fff);border-left:4px solid var(--blue);padding:12px 14px;border-radius:10px;line-height:1.55;margin:0 0 14px}
+.tri{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.col{border-radius:14px;padding:16px;border:1px solid}
+.col h3{margin:0 0 8px;font-size:15px}
+.col p{margin:0;font-size:14px;font-weight:650}
+.col.g{background:var(--green2);border-color:#bbf7d0}.col.g h3{color:#166534}
+.col.a{background:var(--amber2);border-color:#fde68a}.col.a h3{color:#92400e}
+.act{border-radius:14px;padding:16px;background:var(--blue2);border:1px solid #bfdbfe}
+.act.note2{background:var(--amber2);border-color:#fde68a}
+.act h3{margin:0 0 6px;font-size:15px;display:flex;gap:8px;align-items:center}
+.act p{margin:0;font-size:13.5px}
+.ops-table th{background:var(--navy);color:#fff}
+.ops-table td:first-child,.ops-table th:first-child{position:sticky;left:0;font-weight:800;color:var(--navy);background:#f6f9fc;z-index:2}
+.ops-table th:first-child{background:var(--navy);color:#fff}
+.notes p{font-size:13px;margin:6px 0}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:26px;line-height:1.9}
+.lb{position:fixed;inset:0;background:rgba(10,20,35,.88);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
+@media(min-width:1000px){.blist,.extra.show{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:start}}
+@media(max-width:1100px){.bm{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.hk{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+ .wrap{padding:10px 12px 20px}
+ .hero{padding:16px 14px;border-radius:16px}.hero h1{font-size:20px}.hero .headline{font-size:16px}
+ .pn{grid-template-columns:1fr}
+ .hk{gap:8px}.hkc{padding:10px 12px}.hkc .v{font-size:23px}
+ .owner{padding:12px 14px}.owner a{width:100%;justify-content:center}
+ .nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:80;margin:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom));gap:4px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(16,42,67,.1)}
+ .nav a{flex:1;text-align:center;border:0;border-radius:12px;padding:0 4px;min-height:48px;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:transparent}
+ .nav a.on{background:var(--navy);color:#fff}
+ .area-title{font-size:20px;margin-top:20px}
+ .section{padding:15px 14px;border-radius:14px}
+ .bm,.grid2,.grid3,.tri{grid-template-columns:1fr}
+ .metric-row{grid-template-columns:1fr 1fr;gap:8px}.metric .n{font-size:21px}
+ .chart{height:300px}.chart.cty{height:420px}.chart.lg{height:300px}
+ .btn{width:100%}.bcard{padding:13px}
+ .pcard .uv{font-size:26px}
+}
+@media(max-width:420px){.hkc .v{font-size:21px}.hkc .l{font-size:11.5px}}
 </style>
 </head>
 <body>
 <main class="wrap">
+  <div class="langbar" id="langbar"><button type="button" data-l="vi">Tiếng Việt</button><button type="button" data-l="zh">中文</button></div>
   <header class="hero">
-    <h1>HOÀNG ĐỨC THỊNH <span style="font-size:13px;opacity:.7">&middot; Báo cáo tuần</span></h1>
-    <div class="sub"><span class="badge">Ngành: Furniture / Home &amp; Outdoor</span><span class="badge">Nguồn: Vận hành · Visitor Analyzer · OneTalk Leads</span></div>
-    <div class="period">Xem chi tiết kỳ dữ liệu<b>từng mục bên dưới</b></div>
+    <div class="kick" id="kick"></div>
+    <h1 id="storeName"></h1>
+    <div class="headline" id="headline"></div>
+    <div class="pn"><div class="p"><b id="pl"></b><span id="pt"></span></div><div class="n"><b id="bl"></b><span id="bt"></span></div></div>
+    <p class="periods" id="periods"></p>
+    <div class="hk" id="hk"></div>
+    <div class="owner"><div><b id="owner_t"></b><span id="owner_s"></span></div><a href="#buyer" id="owner_a"></a></div>
   </header>
+  <nav class="nav" id="nav"><a href="#buyer" id="n1"></a><a href="#traffic" id="n2"></a><a href="#san-pham" id="n3"></a><a href="#van-hanh" id="n4"></a></nav>
 
-  <div class="top-actions">
-    <span class="need">Toàn bộ dữ liệu chi tiết từ 3 nguồn đã được nhúng sẵn trong trang này &mdash; không cần mở Google Sheet.</span>
-    <div class="sources">
-      <a href="https://docs.google.com/spreadsheets/d/19WZKZlW2NOLJqdaNroG3rReagIWcqOCDpgXO9edqhJs/edit" target="_blank">&#8599; Sheet Vận hành (gốc)</a>
-      <a href="https://docs.google.com/spreadsheets/d/1qDXhvdMg0Eip8djGJPOUPhNHhPUbRpElsCJ2ZOiRv4I/edit" target="_blank">&#8599; Sheet Visitor Analyzer (gốc)</a>
-      <a href="https://docs.google.com/spreadsheets/d/11-5KohzSJJWioLGKR8KU0W_cu-mcEQ12smLOEVJ72F8/edit" target="_blank">&#8599; Sheet OneTalk Leads (gốc)</a>
-    </div>
-  </div>
+  <section id="buyer">
+    <div class="area-title" id="t1"></div>
+    <p class="area-lead" id="buyer_lead"></p>
+    <div class="section"><div class="bgroup big">
+      <h2><span id="h_big"></span> <i id="cnt_big"></i></h2>
+      <p class="bdef" id="d_big"></p>
+      <div class="blist" id="l_big"></div><div class="extra blist" id="x_big"></div>
+      <button class="btn ghost wide" id="t_big" type="button"></button>
+    </div></div>
+    <div class="section"><div class="bgroup paid">
+      <h2><span id="h_paid"></span> <i id="cnt_paid"></i></h2>
+      <p class="bdef" id="d_paid"></p>
+      <div class="blist" id="l_paid"></div>
+      <div id="paid_empty"></div>
+      <p class="rule" id="pay_rule"></p>
+    </div></div>
+  </section>
 
-  <section class="kpis" id="kpis"></section>
-  <div class="kpi-note-line" id="kpi_note"></div>
-
-  <div class="tabs-hint"><span class="arrow">&#128072;</span> Bấm vào từng mục bên dưới để xem chi tiết</div>
-  <nav class="tabs">
-    <button class="tab active" data-pane="view">01 · Người xem</button>
-    <button class="tab" data-pane="buyers">02 · Buyer &amp; tin nhắn</button>
-    <button class="tab" data-pane="diag">03 · Kết luận &amp; action</button>
-    <button class="tab" data-pane="ops">04 · Vận hành</button>
-  </nav>
-
-  <section class="pane active" id="view">
+  <section id="traffic">
+    <div class="area-title" id="t2"></div>
+    <p class="area-lead" id="traffic_lead"></p>
     <div class="section">
-      <h2>Người xem: đến từ đâu và chất lượng thế nào?</h2>
-      <div class="note-line">Kỳ dữ liệu: <b id="view_period"></b> · nguồn sheet Visitor Analyzer · so với tuần trước (<span id="view_period_prev"></span>) trong ngoặc</div>
-      <div class="metric-row" id="view_metrics"></div>
+      <h2 id="bm_h"></h2>
+      <p class="lead" id="bm_lead"></p>
+      <p class="note" id="bm_note"></p>
+      <div class="bm" id="bm"></div>
     </div>
     <div class="section">
-      <div class="priority-box"><div class="pico">&#128161;</div><div class="ptxt"><b>Insight cần chú ý</b><ul id="view_insights"></ul></div></div>
+      <h2 id="vs_h"></h2>
+      <p class="lead" id="vs_lead"></p>
+      <p class="note" id="vs_note"></p>
+      <div class="metric-row" id="vs_metrics"></div>
     </div>
     <div class="grid2">
-      <div class="section">
-        <h2>Cấp người mua (phễu chất lượng)</h2>
-        <div id="ch_funnel" class="chart"></div>
-      </div>
-      <div class="section">
-        <h2>Quốc gia (nhóm L1+ ưu tiên trước)</h2>
-        <div id="ch_country" class="chart"></div>
-      </div>
+      <div class="section"><h2 id="fn_h"></h2><p class="note" id="fn_n"></p><div id="ch_funnel" class="chart"></div></div>
+      <div class="section"><h2 id="ct_h"></h2><p class="note" id="ct_n"></p><div id="ch_country" class="chart cty"></div>
+        <details class="dx"><summary id="ct_all"></summary><div class="table-wrap"><table class="table" id="tbl_country"></table></div></details></div>
     </div>
+    <div class="section"><h2 id="vh_h"></h2><p class="note" id="vh_n"></p><div id="ch_vhist" class="chart"></div></div>
+  </section>
+
+  <section id="san-pham">
+    <div class="area-title" id="t3"></div>
+    <p class="area-lead" id="prod_lead"></p>
+    <div class="section"><h2 id="tp_h"></h2><p class="lead" id="tp_lead"></p><div class="grid3" id="tp_cards"></div><p class="note" id="tp_note" style="margin-top:10px"></p></div>
     <div class="section">
-      <h2>Toàn bộ quốc gia / vùng có khách ghé thăm</h2>
-      <div class="note-line">Bấm vào tiêu đề cột để sắp xếp. Dữ liệu đầy đủ từ sheet Visitor Analyzer, tuần hiện tại.</div>
-      <div class="searchbar"><input id="country_search" placeholder="Tìm quốc gia..."><span class="count-pill" id="country_count"></span></div>
-      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_country"></table></div>
-    </div>
-    <div class="section">
-      <h2>Từ khoá theo nhóm sản phẩm</h2>
-      <div class="note-line">Traffic đến từ nhiều nhóm sản phẩm khác nhau — không coi mọi visitor là buyer nội thất phù hợp.</div>
-      <div id="kw_groups"></div>
-    </div>
-    <div class="section">
-      <h2>Toàn bộ từ khoá tìm kiếm thật của khách</h2>
-      <div class="note-line">Nguyên văn từ khoá khách gõ để tìm ra gian hàng, sắp xếp theo số lần xuất hiện nhiều nhất.</div>
-      <div class="searchbar"><input id="kw_search" placeholder="Tìm từ khoá..."><span class="count-pill" id="kw_count"></span></div>
-      <div class="table-wrap" style="max-height:520px;overflow:auto"><table class="table" id="tbl_kw"></table></div>
+      <h2 id="kw_h"></h2>
+      <p class="lead" id="kw_lead"></p>
+      <p class="note" id="kw_note"></p>
+      <div id="kw_warn"></div>
+      <div class="legend" id="kw_legend"></div>
+      <div id="ch_kw" class="chart kw"></div>
+      <details class="dx" id="kw_all"><summary id="kw_all_s"></summary>
+        <div class="searchbar"><input id="kw_q" type="search"><span class="count-pill" id="kw_cnt"></span></div>
+        <div class="table-wrap"><table class="table" id="tbl_kw"></table></div>
+      </details>
     </div>
   </section>
 
-  <section class="pane" id="buyers">
+  <section id="van-hanh">
+    <div class="area-title" id="t4"></div>
     <div class="section">
-      <h2>Buyer cần follow &mdash; tổng hợp từ OneTalk Leads</h2>
-      <div class="metric-row">
-        <div class="metric"><div class="n" style="color:var(--red)" id="m_priority"></div><div class="l">Ưu tiên xử lý ngay</div></div>
-        <div class="metric"><div class="n" style="color:var(--amber)" id="m_follow"></div><div class="l">Cần theo dõi</div></div>
-        <div class="metric"><div class="n" id="m_low"></div><div class="l">Ít phản hồi / rủi ro</div></div>
-        <div class="metric"><div class="n" style="color:var(--blue)" id="m_real"></div><div class="l">Có phản hồi thật</div></div>
-      </div>
+      <h2 id="oc_h"></h2>
+      <p class="owner-sum" id="oc_sum"></p>
+      <div class="tri"><div class="col g"><h3 id="g_h"></h3><p id="g_t"></p></div><div class="col a"><h3 id="a_h"></h3><p id="a_t"></p></div></div>
     </div>
-    <div class="section">
-      <h2>Danh sách buyer</h2>
-      <div class="subtabs">
-        <button class="subtab active" data-sub="pri">Làm ngay (<span id="cnt_pri"></span>)</button>
-        <button class="subtab" data-sub="exp">Theo dõi (<span id="cnt_exp"></span>)</button>
-        <button class="subtab" data-sub="sig">Không ưu tiên (<span id="cnt_sig"></span>)</button>
-      </div>
-      <div class="subpane active" id="sub_pri"><div id="cards_pri"></div></div>
-      <div class="subpane" id="sub_exp"><ul class="simple-list" id="list_exp"></ul></div>
-      <div class="subpane" id="sub_sig"><ul class="simple-list" id="list_sig"></ul></div>
-    </div>
-  </section>
-
-  <section class="pane" id="diag">
-    <div class="section">
-      <h2>Kết luận tuần này</h2>
-      <div class="legend-note">
-        <span class="legend-chip"><span class="diag-tag p0">P0</span> Ưu tiên xử lý ngay &mdash; ảnh hưởng trực tiếp tới đơn hàng/doanh thu</span>
-        <span class="legend-chip"><span class="diag-tag p1">P1</span> Quan trọng, xử lý trong tuần &mdash; chưa khẩn cấp bằng P0</span>
-        <span class="legend-chip"><span class="diag-tag info">DATA</span> Thông tin tham khảo / cần thêm dữ liệu để kết luận sâu hơn</span>
-      </div>
-      <div class="diag"><div class="diag-item"><span class="diag-tag p0">P0</span><div><b>Gian hàng 2 sao.</b> Visitor vận hành tuần này 270 so với 233 tuần trước.</div></div><div class="diag-item"><span class="diag-tag p0">P0</span><div><b>4 buyer mức &quot;rất cao&quot; cần follow ngay</b> (Laila Abdallah, 7097261758, Laura Cosentino, shonedricka Kirven) &mdash; đều có nhu cầu rõ, cần thông tin cụ thể để tiến tới đặt hàng.</div></div><div class="diag-item"><span class="diag-tag p1">P1</span><div><b>RFQ mới báo 0/20 lượt trong tuần</b> &mdash; còn 20 lượt miễn phí chưa dùng, chưa có tín hiệu GMV/Trade Assurance mới nào trong kỳ.</div></div><div class="diag-item"><span class="diag-tag p1">P1</span><div><b>Buyer L1+ tăng (56 so với 54)</b>, PV giảm (217 so với 252) &mdash; cần ưu tiên chất lượng traffic hơn tổng lượt ghé thăm.</div></div><div class="diag-item"><span class="diag-tag info">DATA</span><div><b>Thị trường dẫn đầu L1+:</b> Hoa Kỳ (11), Canada (6), Philippines (5).</div></div></div>
-      </div>
-    </div>
-    <div class="section">
-      <h2>Action plan 7 ngày</h2>
-      <div class="grid3"><div class="focus-card red"><h3>Trong 48 giờ</h3><p>Follow 4 buyer &quot;rất cao&quot; (Laila Abdallah, 7097261758, Laura Cosentino, shonedricka Kirven) với thông tin/mẫu cụ thể theo yêu cầu.</p><span class="tag red">Sales</span></div><div class="focus-card amber"><h3>Trong 7 ngày</h3><p>Đăng 5&ndash;10 sản phẩm mới mỗi ngày; báo nốt 20 lượt RFQ còn lại cho buyer đủ điều kiện.</p><span class="tag amber">Ops + Sales</span></div><div class="focus-card blue"><h3>Tuần kế tiếp</h3><p>Tạo đơn Trade Assurance đầu tiên; đẩy sản phẩm đủ điều kiện lên Top/Super Product; theo dõi nhóm 27 buyer cần theo dõi.</p><span class="tag blue">Manager</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pane" id="ops">
-    <div class="section">
-      <h2 class="ops-heading">Vấn đề lớn nhất tuần này</h2>
-      <div class="note-line">Kỳ dữ liệu: <b id="ops_period"></b> · nguồn sheet Vận hành</div>
-      <div class="priority-box"><div class="pico">!</div><div class="ptxt"><b>Cảnh báo vận hành</b><ul id="ops_alerts"></ul></div></div>
-    </div>
-    <div class="section">
-      <h2 class="ops-heading">Hành động tuần tới</h2>
-      <div class="simple-list" id="ops_actions_list"></div>
-    </div>
+    <div class="section"><h2 id="ac_h"></h2><div class="grid3" id="actions" style="margin-top:12px"></div></div>
+    <div class="section"><h2 id="om_h"></h2><p class="note" id="om_n"></p><div class="metric-row" id="ops_metrics"></div>
+      <details class="dx notes"><summary id="sn_h"></summary><div id="sn_body"></div></details></div>
     <div class="grid2">
-      <div class="section">
-        <h2 class="ops-heading">Nhịp vận hành nhiều tuần</h2>
-        <div class="note-line">Lượt ghé thăm và tỷ lệ phản hồi trong 24h theo từng tuần &mdash; toàn bộ lịch sử có trong sheet Vận hành.</div>
-        <div id="ch_trend" class="chart lg"></div>
-      </div>
-      <div class="section">
-        <h2 class="ops-heading">Sản phẩm &amp; RFQ nhiều tuần</h2>
-        <div id="ch_products" class="chart lg"></div>
-      </div>
+      <div class="section"><h2 id="c1_h"></h2><p class="note" id="c1_n"></p><div id="ch_trend" class="chart lg"></div></div>
+      <div class="section"><h2 id="c2_h"></h2><p class="note" id="c2_n"></p><div id="ch_products" class="chart lg"></div></div>
     </div>
-    <div class="section">
-      <h2 class="ops-heading">Bảng KPI vận hành toàn bộ lịch sử tuần</h2>
-      <div class="table-wrap"><table class="table ops-table" id="tbl_ops"></table></div>
-    </div>
+    <div class="section"><h2 id="tb_h"></h2><p class="note" id="tb_n"></p><div class="table-wrap" style="max-height:none"><table class="table ops-table" id="tbl_ops"></table></div></div>
   </section>
-
-  <div class="foot">Báo cáo tuần · thiết kế theo cấu trúc success case · dữ liệu được nhúng trực tiếp từ 3 sheet nguồn</div>
+  <div class="foot" id="foot"></div>
 </main>
+
 <script>
-const D = {"profile":{"name":"HOANG DUC THINH IMPORTEXPORT TRADING CO LTD","industry":"Furniture / Home & Outdoor","brand":"Hoang Duc Thinh"},"ops":{"latest":{"period":"30-08-2026 đến 05-09-2026","stars":2,"visitors":270,"inquiries":8,"inquiries_replied":8,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":1.57,"reply_24h_rate":93.75,"top_products":16,"super_products":0,"total_products":596,"new_products":0},"previous":{"period":"23-08-2026 đến 29-08-2026","stars":2,"visitors":233,"inquiries":8,"inquiries_replied":8,"rfq_quoted":0,"rfq_remaining":20,"avg_reply_hours":2.68,"reply_24h_rate":89.29,"top_products":16,"super_products":1,"total_products":596,"new_products":0},"alerts":["Gian hàng 2 sao, phản hồi 24h đạt 93.75%.","Chưa dùng RFQ tuần này — còn 20 lượt miễn phí chưa dùng.","Visitor vận hành 270 so với 233 tuần trước.","Chưa có tín hiệu GMV/Trade Assurance mới trong kỳ."],"actions":["Đăng 5-10 sản phẩm mới mỗi ngày.","Báo giá các RFQ còn lại cho buyer đủ điều kiện.","Follow các buyer mức \"rất cao\": Laila Abdallah, 7097261758, Laura Cosentino, shonedricka Kirven.","Tạo đơn Trade Assurance đầu tiên, ưu tiên đơn mẫu cho buyer lớn."],"weeks_full":[{"period":"19-4-2026 đến 25-04-2026","stars":"0","products":"101","newProducts":"101","visitors":"159","inquiries":"2","repliedInquiries":"1","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"0.01","reply24h":"100","superProduct":"0","topProduct":"0"},{"period":"26-4-2026 đến 2-05-2026","stars":"1","products":"115","newProducts":"14","visitors":"51","inquiries":"6","repliedInquiries":"5","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"8.25","reply24h":"67","superProduct":"0","topProduct":"0"},{"period":"17-05-2026 đến 23-05-2026","stars":"1","products":"500","newProducts":"385","visitors":"96","inquiries":"6","repliedInquiries":"6","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"7.15","reply24h":"71.43","superProduct":"0","topProduct":"0"},{"period":"30-05-2026 đến 06-06-2026","stars":"1","products":"600","newProducts":"100","visitors":"411","inquiries":"7","repliedInquiries":"6","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"0.12","reply24h":"100","superProduct":"0","topProduct":"3"},{"period":"14-06-2026 đến 20-06-2026","stars":"2","products":"599","newProducts":"0","visitors":"464","inquiries":"10","repliedInquiries":"6","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"1.58","reply24h":"94","superProduct":"0","topProduct":"9"},{"period":"21-06-2026 đến 27-06-2026","stars":"3","products":"599","newProducts":"0","visitors":"604","inquiries":"20","repliedInquiries":"20","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"2.27","reply24h":"91.11","superProduct":"0","topProduct":"13"},{"period":"05-07-2026 đến 11-07-2026","stars":"3","products":"596","newProducts":"-3","visitors":"296","inquiries":"16","repliedInquiries":"14","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"1.86","reply24h":"92.59","superProduct":"0","topProduct":"15"},{"period":"12-07-2026 đến 18-07-2026","stars":"3","products":"596","newProducts":"0","visitors":"187","inquiries":"8","repliedInquiries":"8","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"2","reply24h":"92.00","superProduct":"0","topProduct":"16"},{"period":"19-07-2026 đến 25-07-2026","stars":"3","products":"596","newProducts":"0","visitors":"133","inquiries":"12","repliedInquiries":"12","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"2.18","reply24h":"91.30","superProduct":"1","topProduct":"16"},{"period":"26-07-2026 đến 01-08-2026","stars":"2","products":"596","newProducts":"0","visitors":"195","inquiries":"12","repliedInquiries":"12","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"3.13","reply24h":"87.50","superProduct":"0","topProduct":"17"},{"period":"02-08-2026 đến 08-08-2026","stars":"2","products":"596","newProducts":"0","visitors":"272","inquiries":"8","repliedInquiries":"8","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"4.42","reply24h":"82.35","superProduct":"1","topProduct":"17"},{"period":"09-08-2026 đến 15-08-2026","stars":"2","products":"596","newProducts":"0","visitors":"252","inquiries":"10","repliedInquiries":"10","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"5","reply24h":"80.00","superProduct":"1","topProduct":"17"},{"period":"23-08-2026 đến 29-08-2026","stars":"2","products":"596","newProducts":"0","visitors":"233","inquiries":"8","repliedInquiries":"8","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"2.68","reply24h":"89.29","superProduct":"1","topProduct":"16"},{"period":"30-08-2026 đến 05-09-2026","stars":"2","products":"596","newProducts":"0","visitors":"270","inquiries":"8","repliedInquiries":"8","rfqQuoted":"0","rfqRemaining":"20","avgResponse":"1.57","reply24h":"93.75","superProduct":"0","topProduct":"16"}]},"visitors":{"latest":{"period":"03-09/09/2026","visitor_records":139,"countries":60,"store_pv":217,"exact_keyword_records":275,"visitors_with_keyword":111,"buyer_l1_plus":56,"levels":{"L0":83,"L1":56,"L2":0,"L3":0,"L4":0}},"previous":{"period":"27/08-02/09/2026","visitor_records":156,"countries":60,"store_pv":252,"exact_keyword_records":318,"visitors_with_keyword":117,"buyer_l1_plus":54,"levels":{"L0":102,"L1":54,"L2":0,"L3":0,"L4":0}},"insights":["Visitor 156 → 139; PV 252 → 217; keyword 318 → 275.","Buyer L1+ tăng 56 (tuần trước 54).","Thị trường dẫn đầu L1+: Hoa Kỳ (11 L1+/19 visitor), Canada (6 L1+/7 visitor), Philippines (5 L1+/8 visitor).","Ưu tiên buyer L1+ và keyword đúng ngành hơn là chạy theo tổng visitor."],"countries":[{"country":"Hoa Kỳ","visitors":19,"pv":28,"l1Plus":11},{"country":"Canada","visitors":7,"pv":25,"l1Plus":6},{"country":"Philippines","visitors":8,"pv":17,"l1Plus":5},{"country":"Ả Rập Xê-út","visitors":4,"pv":6,"l1Plus":4},{"country":"Mexico","visitors":10,"pv":14,"l1Plus":2},{"country":"Việt Nam","visitors":5,"pv":7,"l1Plus":2},{"country":"Nam Phi","visitors":5,"pv":6,"l1Plus":2},{"country":"Romania","visitors":2,"pv":3,"l1Plus":2},{"country":"Bonaire","visitors":1,"pv":5,"l1Plus":1},{"country":"Comoros","visitors":1,"pv":3,"l1Plus":1},{"country":"Ghana","visitors":2,"pv":3,"l1Plus":1},{"country":"Hồng Kông (Đặc khu hành chính)","visitors":3,"pv":3,"l1Plus":1}],"countries_full":[{"country":"Hoa Kỳ","visitors":19,"pv":28,"keywordVisitors":17,"exactKeywordRecords":47,"L0":8,"L1":11,"L2":0,"L3":0,"L4":0,"L1Plus":11},{"country":"Canada","visitors":7,"pv":25,"keywordVisitors":7,"exactKeywordRecords":17,"L0":1,"L1":6,"L2":0,"L3":0,"L4":0,"L1Plus":6},{"country":"Philippines","visitors":8,"pv":17,"keywordVisitors":6,"exactKeywordRecords":12,"L0":3,"L1":5,"L2":0,"L3":0,"L4":0,"L1Plus":5},{"country":"Ả Rập Xê-út","visitors":4,"pv":6,"keywordVisitors":2,"exactKeywordRecords":7,"L0":0,"L1":4,"L2":0,"L3":0,"L4":0,"L1Plus":4},{"country":"Mexico","visitors":10,"pv":14,"keywordVisitors":7,"exactKeywordRecords":17,"L0":8,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":"Việt Nam","visitors":5,"pv":7,"keywordVisitors":1,"exactKeywordRecords":1,"L0":3,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":"Nam Phi","visitors":5,"pv":6,"keywordVisitors":5,"exactKeywordRecords":15,"L0":3,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":"Romania","visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":6,"L0":0,"L1":2,"L2":0,"L3":0,"L4":0,"L1Plus":2},{"country":"Bonaire","visitors":1,"pv":5,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Comoros","visitors":1,"pv":3,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Ghana","visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":6,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Hồng Kông (Đặc khu hành chính)","visitors":3,"pv":3,"keywordVisitors":2,"exactKeywordRecords":3,"L0":2,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"New Zealand","visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":5,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Senegal","visitors":1,"pv":3,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Thái Lan","visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":2,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Úc","visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":6,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Ý","visitors":3,"pv":3,"keywordVisitors":1,"exactKeywordRecords":3,"L0":2,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Bồ Đào Nha","visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":4,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Croatia (local name: Hrvatska)","visitors":1,"pv":2,"keywordVisitors":0,"exactKeywordRecords":0,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Iraq","visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":2,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Nga","visitors":2,"pv":2,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Slovenia","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Tây Ban Nha","visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":6,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Togo","visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":7,"L0":1,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Chile","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Colombia","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":2,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Đài Loan","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Jamaica","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Kenya","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Nhật Bản","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":0,"L1":1,"L2":0,"L3":0,"L4":0,"L1Plus":1},{"country":"Trung Quốc","visitors":6,"pv":10,"keywordVisitors":5,"exactKeywordRecords":9,"L0":6,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Ấn Độ","visitors":3,"pv":5,"keywordVisitors":2,"exactKeywordRecords":5,"L0":3,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Brazil","visitors":3,"pv":4,"keywordVisitors":3,"exactKeywordRecords":5,"L0":3,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Vương quốc Anh","visitors":3,"pv":4,"keywordVisitors":2,"exactKeywordRecords":6,"L0":3,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Botswana","visitors":1,"pv":3,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Guinea","visitors":1,"pv":3,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Indonesia","visitors":2,"pv":3,"keywordVisitors":2,"exactKeywordRecords":5,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Argentina","visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":6,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Armenia","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Cộng hòa Dominica","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Georgia","visitors":2,"pv":2,"keywordVisitors":2,"exactKeywordRecords":2,"L0":2,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Peru","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Pháp","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"SERBIA","visitors":1,"pv":2,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Belize","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Bỉ","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Bờ Biển Ngà","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":4,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Các Tiểu Vương quốc Ả Rập Thống nhất","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Đức","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"El Salvador","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Greenland","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":3,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Hà Lan","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Luxembourg","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Mozambique","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Pakistan","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Puerto Rico","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":2,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Tanzania","visitors":1,"pv":1,"keywordVisitors":1,"exactKeywordRecords":1,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"The former Yugoslav Republic of Macedonia","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Thổ Nhĩ Kỳ","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0},{"country":"Uruguay","visitors":1,"pv":1,"keywordVisitors":0,"exactKeywordRecords":0,"L0":1,"L1":0,"L2":0,"L3":0,"L4":0,"L1Plus":0}],"keywords_full":[{"keyword":"modern italian sofa","occurrences":3,"pv":8,"top_country":"Philippines"},{"keyword":"expandable dining table","occurrences":3,"pv":8,"top_country":"Philippines"},{"keyword":"sofa","occurrences":3,"pv":3,"top_country":"Hoa Kỳ"},{"keyword":"compressed bed frame","occurrences":2,"pv":7,"top_country":"Philippines"},{"keyword":"bean bag","occurrences":2,"pv":4,"top_country":"Philippines"},{"keyword":"bean bag sofas","occurrences":2,"pv":4,"top_country":"Đài Loan"},{"keyword":"bedroom sets","occurrences":2,"pv":3,"top_country":"Các Tiểu Vương quốc Ả Rập Thống nhất"},{"keyword":"sofa bed","occurrences":2,"pv":3,"top_country":"Trung Quốc"},{"keyword":"sofa set furniture living room","occurrences":2,"pv":3,"top_country":"Vương quốc Anh"},{"keyword":"womens intimates","occurrences":2,"pv":2,"top_country":"Hoa Kỳ"},{"keyword":"mini thumb camera","occurrences":1,"pv":15,"top_country":"Canada"},{"keyword":"bidet portable electric","occurrences":1,"pv":15,"top_country":"Canada"},{"keyword":"magnet sticker","occurrences":1,"pv":15,"top_country":"Canada"},{"keyword":"island for kitchen","occurrences":1,"pv":15,"top_country":"Canada"},{"keyword":"solar powered air conditioner","occurrences":1,"pv":5,"top_country":"Bonaire"},{"keyword":"bath tub","occurrences":1,"pv":5,"top_country":"Bonaire"},{"keyword":"solar washing machine and dryer","occurrences":1,"pv":5,"top_country":"Bonaire"},{"keyword":"metal kitchen unit","occurrences":1,"pv":4,"top_country":"Philippines"},{"keyword":"buttock enhancer gummies","occurrences":1,"pv":4,"top_country":"Canada"},{"keyword":"maca gummies","occurrences":1,"pv":4,"top_country":"Canada"},{"keyword":"pin loaded assist dip chin machine","occurrences":1,"pv":4,"top_country":"Hoa Kỳ"},{"keyword":"dip chin assist machine","occurrences":1,"pv":4,"top_country":"Hoa Kỳ"},{"keyword":"gym accessories","occurrences":1,"pv":4,"top_country":"Hoa Kỳ"},{"keyword":"kitchen island with seating","occurrences":1,"pv":4,"top_country":"Hoa Kỳ"},{"keyword":"porte en acier","occurrences":1,"pv":3,"top_country":"Comoros"},{"keyword":"armoire chambre","occurrences":1,"pv":3,"top_country":"Comoros"},{"keyword":"fentres en aluminium","occurrences":1,"pv":3,"top_country":"Comoros"},{"keyword":"tte de lit","occurrences":1,"pv":3,"top_country":"Comoros"},{"keyword":"human hair extensions 50g 12 inch","occurrences":1,"pv":3,"top_country":"Senegal"},{"keyword":"twist naturelle humain","occurrences":1,"pv":3,"top_country":"Senegal"},{"keyword":"hair accessories","occurrences":1,"pv":3,"top_country":"Senegal"},{"keyword":"modern bedroom furniture set","occurrences":1,"pv":3,"top_country":"Guinea"},{"keyword":"canap compress","occurrences":1,"pv":3,"top_country":"Guinea"},{"keyword":"baskets dcontractes pour hommes","occurrences":1,"pv":3,"top_country":"Guinea"},{"keyword":"backbedroom bench","occurrences":1,"pv":3,"top_country":"Botswana"},{"keyword":"coffe table","occurrences":1,"pv":3,"top_country":"Botswana"},{"keyword":"cushions","occurrences":1,"pv":3,"top_country":"Botswana"},{"keyword":"bean bag chair","occurrences":1,"pv":3,"top_country":"Trung Quốc"},{"keyword":"设计师测量套装","occurrences":1,"pv":3,"top_country":"Trung Quốc"},{"keyword":"cocina infantil","occurrences":1,"pv":2,"top_country":"Mexico"},{"keyword":"cama de murphy","occurrences":1,"pv":2,"top_country":"Mexico"},{"keyword":"insulin pen needle v4","occurrences":1,"pv":2,"top_country":"New Zealand"},{"keyword":"insulin pen needle","occurrences":1,"pv":2,"top_country":"New Zealand"},{"keyword":"v2 injection pen with case","occurrences":1,"pv":2,"top_country":"New Zealand"},{"keyword":"laser 10w rgb","occurrences":1,"pv":2,"top_country":"Slovenia"},{"keyword":"trunk liner","occurrences":1,"pv":2,"top_country":"Slovenia"},{"keyword":"600d polyester oxford fabric","occurrences":1,"pv":2,"top_country":"Slovenia"},{"keyword":"ford mustang oem carbon fiber 2023","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"mustang carbon fiber fenders","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"mustang oem style carbon fiber","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"bean bags","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"massage table","occurrences":1,"pv":2,"top_country":"SERBIA"},{"keyword":"metal storage shed","occurrences":1,"pv":2,"top_country":"SERBIA"},{"keyword":"wedding decoration & supplies","occurrences":1,"pv":2,"top_country":"SERBIA"},{"keyword":"faux leather pattern rolls","occurrences":1,"pv":2,"top_country":"Canada"},{"keyword":"faux leather cartoon","occurrences":1,"pv":2,"top_country":"Canada"},{"keyword":"estantes","occurrences":1,"pv":2,"top_country":"Brazil"},{"keyword":"一体式可调节手枪哑铃","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"swing chair for adult soothing","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"bedside lamp gold","occurrences":1,"pv":2,"top_country":"Ả Rập Xê-út"},{"keyword":"pools swimming outdoor","occurrences":1,"pv":2,"top_country":"Úc"},{"keyword":"above ground pool","occurrences":1,"pv":2,"top_country":"Úc"},{"keyword":"o thun nam","occurrences":1,"pv":2,"top_country":"Việt Nam"},{"keyword":"sof en forma de l cmodo","occurrences":1,"pv":2,"top_country":"Peru"},{"keyword":"cama nube montessori","occurrences":1,"pv":2,"top_country":"Peru"},{"keyword":"cama boxet queen","occurrences":1,"pv":2,"top_country":"Peru"},{"keyword":"2026","occurrences":1,"pv":2,"top_country":"Armenia"},{"keyword":"casas prefabricadas","occurrences":1,"pv":2,"top_country":"Mexico"},{"keyword":"reptile pvc enclosure","occurrences":1,"pv":2,"top_country":"Mexico"},{"keyword":"terrazas exterior","occurrences":1,"pv":2,"top_country":"Mexico"},{"keyword":"casa de campaa grande","occurrences":1,"pv":2,"top_country":"Mexico"},{"keyword":"high end bedroom furniture","occurrences":1,"pv":2,"top_country":"Nam Phi"},{"keyword":"luxurious bedroom furniture","occurrences":1,"pv":2,"top_country":"Nam Phi"},{"keyword":"luxurious lounge suite","occurrences":1,"pv":2,"top_country":"Nam Phi"},{"keyword":"碳纤维引擎机盖","occurrences":1,"pv":2,"top_country":"Vương quốc Anh"},{"keyword":"音响","occurrences":1,"pv":2,"top_country":"Vương quốc Anh"},{"keyword":"媛凯","occurrences":1,"pv":2,"top_country":"Vương quốc Anh"},{"keyword":"72v","occurrences":1,"pv":2,"top_country":"Thái Lan"},{"keyword":"bunk bed","occurrences":1,"pv":2,"top_country":"Romania"},{"keyword":"shipping company","occurrences":1,"pv":2,"top_country":"Romania"},{"keyword":"corn harvester","occurrences":1,"pv":2,"top_country":"Pháp"},{"keyword":"commercial kitchen refrigerator","occurrences":1,"pv":2,"top_country":"Pháp"},{"keyword":"furniture","occurrences":1,"pv":2,"top_country":"Ấn Độ"},{"keyword":"antique items","occurrences":1,"pv":2,"top_country":"Ấn Độ"},{"keyword":"canteen for kids","occurrences":1,"pv":2,"top_country":"Ghana"},{"keyword":"best selling products","occurrences":1,"pv":2,"top_country":"Ghana"},{"keyword":"baby products in demand","occurrences":1,"pv":2,"top_country":"Ghana"},{"keyword":"elastic waistband","occurrences":1,"pv":2,"top_country":"Philippines"},{"keyword":"tas pendaki","occurrences":1,"pv":2,"top_country":"Indonesia"},{"keyword":"tenda","occurrences":1,"pv":2,"top_country":"Indonesia"},{"keyword":"perlengkapan mendaki","occurrences":1,"pv":2,"top_country":"Indonesia"},{"keyword":"tent","occurrences":1,"pv":2,"top_country":"Indonesia"},{"keyword":"forro para sillas de comedor","occurrences":1,"pv":2,"top_country":"Cộng hòa Dominica"},{"keyword":"forro para silas","occurrences":1,"pv":2,"top_country":"Cộng hòa Dominica"},{"keyword":"bolsos escolares","occurrences":1,"pv":2,"top_country":"Cộng hòa Dominica"},{"keyword":"spinal decompression machine","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"korean beauty machines","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"household items","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"ballon pour femme enceinte","occurrences":1,"pv":1,"top_country":"Bờ Biển Ngà"},{"keyword":"vtements enfants en gros","occurrences":1,"pv":1,"top_country":"Bờ Biển Ngà"},{"keyword":"rangement cuisine","occurrences":1,"pv":1,"top_country":"Bờ Biển Ngà"},{"keyword":"fauteuil compress","occurrences":1,"pv":1,"top_country":"Bờ Biển Ngà"},{"keyword":"sof azul marinho","occurrences":1,"pv":1,"top_country":"Brazil"},{"keyword":"sof cama azul marinho","occurrences":1,"pv":1,"top_country":"Brazil"},{"keyword":"rack terracota tv 65 polegadas","occurrences":1,"pv":1,"top_country":"Brazil"},{"keyword":"king bed","occurrences":1,"pv":1,"top_country":"Các Tiểu Vương quốc Ả Rập Thống nhất"},{"keyword":"bedroom sets king size","occurrences":1,"pv":1,"top_country":"Các Tiểu Vương quốc Ả Rập Thống nhất"},{"keyword":"modern crystal chandeliers","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"living room curtains luxury","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"living room curtains set","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"raiders jacket","occurrences":1,"pv":1,"top_country":"Tanzania"},{"keyword":"kitchen cabinets","occurrences":1,"pv":1,"top_country":"Trung Quốc"},{"keyword":"铝箔餐盒","occurrences":1,"pv":1,"top_country":"Trung Quốc"},{"keyword":"kitchen cabinet","occurrences":1,"pv":1,"top_country":"Trung Quốc"},{"keyword":"modern bedroom wardrobe","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"closet system","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"firewood shed","occurrences":1,"pv":1,"top_country":"New Zealand"},{"keyword":"wood shed","occurrences":1,"pv":1,"top_country":"New Zealand"},{"keyword":"living room furniture","occurrences":1,"pv":1,"top_country":"Thái Lan"},{"keyword":"ob22  gps tracker","occurrences":1,"pv":1,"top_country":"Philippines"},{"keyword":"the bird coffee maker","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"the bird coffee","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"meraki espresso machine","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"keratin hair extensions","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"black kitchen island","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"nia y nio cama 10 aos","occurrences":1,"pv":1,"top_country":"Colombia"},{"keyword":"nia cama","occurrences":1,"pv":1,"top_country":"Colombia"},{"keyword":"modern armchair","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"accent chair","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"bin bag chair","occurrences":1,"pv":1,"top_country":"Đài Loan"},{"keyword":"6seater dining table","occurrences":1,"pv":1,"top_country":"Đài Loan"},{"keyword":"cctv camera home security","occurrences":1,"pv":1,"top_country":"Đài Loan"},{"keyword":"vi","occurrences":1,"pv":1,"top_country":"Bồ Đào Nha"},{"keyword":"nl","occurrences":1,"pv":1,"top_country":"Bồ Đào Nha"},{"keyword":"厨房岛","occurrences":1,"pv":1,"top_country":"Bồ Đào Nha"},{"keyword":"2024 85in samsung neo qled  4 k qn90d","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"samsung neo qled 8k","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"tv smart 85 inch","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"robes de soire","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"connecteur de perle rouge rond","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"machine a presse tee shirt","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"aveeno","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"tree hut body scrub","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"body butter","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"traditional bookcase","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"slipcovered dining chairs","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"upholstered chair high back","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"49 inch floating shelf","occurrences":1,"pv":1,"top_country":"Kenya"},{"keyword":"pink gold chairs","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"hot pink gold chairs","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"bright pink chairs","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"gift boxes for small business","occurrences":1,"pv":1,"top_country":"El Salvador"},{"keyword":"gift box packaging","occurrences":1,"pv":1,"top_country":"El Salvador"},{"keyword":"bone straight human hair wig","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"sneakers unisex high quality","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"sdd bone straight human hair 24  wig inches","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"furniture moving robot","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"mattresses","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"dark brown leather chair","occurrences":1,"pv":1,"top_country":"Úc"},{"keyword":"leather brown dining chair metal frame","occurrences":1,"pv":1,"top_country":"Úc"},{"keyword":"accent chair brown","occurrences":1,"pv":1,"top_country":"Úc"},{"keyword":"tempered glass garage door","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"occasional chair","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"lounge seating","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"plastic cups with lids and straws","occurrences":1,"pv":1,"top_country":"Jamaica"},{"keyword":"storage stool","occurrences":1,"pv":1,"top_country":"Jamaica"},{"keyword":"mirror door salon cabinet","occurrences":1,"pv":1,"top_country":"Jamaica"},{"keyword":"women dresses factory  in yiwu","occurrences":1,"pv":1,"top_country":"Ghana"},{"keyword":"money box","occurrences":1,"pv":1,"top_country":"Ghana"},{"keyword":"umbrellas wholesale yiwu","occurrences":1,"pv":1,"top_country":"Ghana"},{"keyword":"accent chair purple","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"modular house","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"mid century modern furniture","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"bedroom furniture set","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"cuatrimoto 4x4","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"timbre bicicleta","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"scooter elctrico de 3 ruedas","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"fundas paraxca","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"night stand","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"bedroom furniture","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"king headboards","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"sofas modernos","occurrences":1,"pv":1,"top_country":"Brazil"},{"keyword":"hairui international sdn bhd","occurrences":1,"pv":1,"top_country":"Hồng Kông (Đặc khu hành chính)"},{"keyword":"cushion cover exterior","occurrences":1,"pv":1,"top_country":"Tây Ban Nha"},{"keyword":"alibaba spain","occurrences":1,"pv":1,"top_country":"Tây Ban Nha"},{"keyword":"cushion cover exterior 60x60","occurrences":1,"pv":1,"top_country":"Tây Ban Nha"},{"keyword":"5","occurrences":1,"pv":1,"top_country":"Nga"},{"keyword":"watch","occurrences":1,"pv":1,"top_country":"Nga"},{"keyword":"what is the goldern  piping for the couces called","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"steelgolden piping for the couches","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"white wool vown couches throw","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"a white tv stand with a goldern stand","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"scaffolding on steef ground","occurrences":1,"pv":1,"top_country":"Greenland"},{"keyword":"boat","occurrences":1,"pv":1,"top_country":"Greenland"},{"keyword":"hanging scaffold","occurrences":1,"pv":1,"top_country":"Greenland"},{"keyword":"pantalones de mujer casual  blanco pierna ancha","occurrences":1,"pv":1,"top_country":"Puerto Rico"},{"keyword":"pantalones de mujer","occurrences":1,"pv":1,"top_country":"Puerto Rico"},{"keyword":"体操  修繕","occurrences":1,"pv":1,"top_country":"Nhật Bản"},{"keyword":"透明 強力","occurrences":1,"pv":1,"top_country":"Nhật Bản"},{"keyword":"体操","occurrences":1,"pv":1,"top_country":"Nhật Bản"},{"keyword":"柔","occurrences":1,"pv":1,"top_country":"Nhật Bản"},{"keyword":"extendable dining table set","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"tower room color cover","occurrences":1,"pv":1,"top_country":"Pakistan"},{"keyword":"charger plates","occurrences":1,"pv":1,"top_country":"Vương quốc Anh"},{"keyword":"salas para interior","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"salas de lujo modernas","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"moblia do conjunto completo de quarto","occurrences":1,"pv":1,"top_country":"Bồ Đào Nha"},{"keyword":"sombrillas","occurrences":1,"pv":1,"top_country":"Belize"},{"keyword":"moto electrica","occurrences":1,"pv":1,"top_country":"Belize"},{"keyword":"sombras","occurrences":1,"pv":1,"top_country":"Belize"},{"keyword":"sombrillas para jardn","occurrences":1,"pv":1,"top_country":"Belize"},{"keyword":"kitchen island","occurrences":1,"pv":1,"top_country":"Georgia"},{"keyword":"prsentoir rotatif pour les montres","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"support de prsentation rotatif","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"coupe cble  batterie","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"canap bubble","occurrences":1,"pv":1,"top_country":"Togo"},{"keyword":"bedroom nightstand 197 wide wood bedside table with 2 storage drawers and metal handle large mid century end table for bedroom living room and","occurrences":1,"pv":1,"top_country":"Canada"},{"keyword":"solid wood dining chair","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"mattress topper","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"mattress protector","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"compressed sofa","occurrences":1,"pv":1,"top_country":"Hồng Kông (Đặc khu hành chính)"},{"keyword":"真皮沙发","occurrences":1,"pv":1,"top_country":"Hồng Kông (Đặc khu hành chính)"},{"keyword":"sillas de sala de estar","occurrences":1,"pv":1,"top_country":"Argentina"},{"keyword":"duchas","occurrences":1,"pv":1,"top_country":"Argentina"},{"keyword":"cafeteras","occurrences":1,"pv":1,"top_country":"Argentina"},{"keyword":"isla de cocina","occurrences":1,"pv":1,"top_country":"Argentina"},{"keyword":"desayunador","occurrences":1,"pv":1,"top_country":"Argentina"},{"keyword":"oficina","occurrences":1,"pv":1,"top_country":"Argentina"},{"keyword":"fundas para sofa en forma de u","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"sofa cover","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"tenda dome 12 orang","occurrences":1,"pv":1,"top_country":"Indonesia"},{"keyword":"flash detail","occurrences":1,"pv":1,"top_country":"Romania"},{"keyword":"prosp flag detail","occurrences":1,"pv":1,"top_country":"Romania"},{"keyword":"flash detail towel","occurrences":1,"pv":1,"top_country":"Romania"},{"keyword":"women coats winter and autumn","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"ladies bag","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"hand bag","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"modern luxury sofa set","occurrences":1,"pv":1,"top_country":"Tây Ban Nha"},{"keyword":"home furniture","occurrences":1,"pv":1,"top_country":"Tây Ban Nha"},{"keyword":"cabecero de cama","occurrences":1,"pv":1,"top_country":"Tây Ban Nha"},{"keyword":"plastic wadrobe","occurrences":1,"pv":1,"top_country":"Ấn Độ"},{"keyword":"small center table","occurrences":1,"pv":1,"top_country":"Ấn Độ"},{"keyword":"visitor chair","occurrences":1,"pv":1,"top_country":"Ấn Độ"},{"keyword":"heaadboard","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"ceiling lights","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"headboard for beds","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"mortise chain set","occurrences":1,"pv":1,"top_country":"Iraq"},{"keyword":"gabinetes de cocina","occurrences":1,"pv":1,"top_country":"Mexico"},{"keyword":"food risers","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"nightstands","occurrences":1,"pv":1,"top_country":"Nam Phi"},{"keyword":"waterfall fountain outdoor","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"resin water fountain","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"cowhide rug","occurrences":1,"pv":1,"top_country":"Hoa Kỳ"},{"keyword":"u shape sofa cover","occurrences":1,"pv":1,"top_country":"Hà Lan"},{"keyword":"bench","occurrences":1,"pv":1,"top_country":"Georgia"},{"keyword":"monaghan sofa ashly","occurrences":1,"pv":1,"top_country":"Iraq"},{"keyword":"arredo casa","occurrences":1,"pv":1,"top_country":"Ý"},{"keyword":"pannello effetto pietra","occurrences":1,"pv":1,"top_country":"Ý"},{"keyword":"golf 7 accessori","occurrences":1,"pv":1,"top_country":"Ý"},{"keyword":"moto sierra de poda","occurrences":1,"pv":1,"top_country":"Chile"},{"keyword":"remolque para mini excavadora","occurrences":1,"pv":1,"top_country":"Chile"},{"keyword":"cerco para ganaderia","occurrences":1,"pv":1,"top_country":"Chile"}],"keyword_groups":{"Furniture/Home":["modern italian sofa","expandable dining table","sofa","compressed bed frame","bean bag sofas","bedroom sets","sofa bed","sofa set furniture living room","bidet portable electric","modern bedroom furniture set","backbedroom bench","coffe table","bean bag chair","massage table","swing chair for adult soothing","bedside lamp gold","high end bedroom furniture","luxurious bedroom furniture","bunk bed","furniture"],"Outdoor/Custom":["pools swimming outdoor","waterfall fountain outdoor"],"Cần xác minh / không liên quan":["bean bag","womens intimates","mini thumb camera","magnet sticker","island for kitchen","solar powered air conditioner","bath tub","solar washing machine and dryer","metal kitchen unit","buttock enhancer gummies","maca gummies","pin loaded assist dip chin machine","dip chin assist machine","gym accessories","kitchen island with seating","porte en acier","armoire chambre","fentres en aluminium","tte de lit","human hair extensions 50g 12 inch"]}},"leads":{"priority":[{"name":"Laila Abdallah","country":"Comoros","need":"Ba mẫu giường/tựa đầu giường: 2 mẫu tối giản và 1 mẫu trung bình; ưu tiên màu đen hoặc xám/kem phối đen — SL: 3 chiếc: 2 chiếc 150x200cm, 1 chiếc 180x200cm","blocker":"Buyer phản hồi nhiều lượt ngày 09 và 12/09, chốt rõ số lượng, kích thước và màu. Hồ sơ 90 ngày có 786 lượt xem sản phẩm và 75 ngày đăng nhập; chưa có email/công ty công khai.","next":"Gửi ngay 3 mẫu phù hợp kèm giá từng kích thước, vật liệu, MOQ, thời gian sản xuất và phí vận chuyển tới Comoros; hỏi địa chỉ/cảng nhận để chốt báo giá.","date":"2026-09-12"},{"name":"7097261758","country":"USA / Florida","need":"Cabinet và quartz countertop; cần quotation Florida USA theo HTSUS 9403.4000 và 6810.99, tách cabinet/countertop — SL: Chưa rõ","blocker":"Lead dự án tốt, có yêu cầu quote chuyên nghiệp và phân loại HS code","next":"Xin final cabinet drawings/kích thước, material, quantity; báo giá riêng cabinet và quartz, kèm freight Florida","date":"2026-09-06"},{"name":"Laura Cosentino","country":"Italy / tiếng Ý","need":"Sofa chair MD05, hỏi có chống cháy không, có màu đỏ không và phí vận chuyển tới Italy. — SL: 30+ chiếc","blocker":"Buyer gửi 13048 Santhia, sau đó chốt địa chỉ Via Matteotti 129G, CAP 13094 Gaglianico Biella. Buyer cần màu đỏ nhưng hiện chỉ có Yellow/Green/Grey; cũng hỏi sản phẩm có ignifughe/chống cháy không.","next":"Trả lời tiếng Ý: xác nhận hiện chưa có đỏ/chống cháy nếu đúng vậy; đề xuất màu thay thế hoặc hỏi có nhận đặt riêng màu đỏ không, báo cước Italy theo 30 chiếc và thời gian giao.","date":"2026-08-15"},{"name":"shonedricka Kirven","country":"USA / Raleigh, North Carolina","need":"Ghế ăn Contemporary Velvet Upholstered Dining Chair MD07; buyer muốn báo giá và phí ship. — SL: 2 chiếc","blocker":"Buyer hỏi quote + shipping price cho dining table/chair, cung cấp ZIP 27610, Raleigh North Carolina, chọn phương án rẻ nhất, xác nhận sea freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610.","next":"Báo ngay giá 2 chiếc, phí sea freight door delivery, thời gian dự kiến, điều kiện thuế/phụ phí. Hỏi lại màu/chất liệu để tạo đơn Alibaba.","_history":"Có báo giá sản phẩm, đang chờ freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610 — SL: Chưa rõ, có total hàng USD 176.00 | Khách hỏi/đợi giá vận chuyển, có địa chỉ cụ thể; đang thiếu freight charge để chốt tổng | Chốt freight door delivery ngay, gửi total landed cost và nhắc đặt qua Alibaba","date":"2026-08-13"},{"name":"Kyle CalgaryCustomPits","country":"Canada / Calgary theo tên buyer","need":"Custom outdoor covers cho nhiều mẫu firepit: chống nước, chống UV, màu đen, vật liệu dày. — SL: Custom, chưa chốt số lượng","blocker":"Buyer cần cover cho Basic firepits, half lid, 2 half lids, full lids, thêm footrest, size 34/40 inch. Sau đó buyer gửi spec: base model 34 inch hexagon x 15 inch; bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inch wide every other side.","next":"Tóm tắt spec thành bảng kỹ thuật, xin ảnh/bản vẽ từng model, hỏi số lượng mỗi size, xác nhận chất liệu/độ dày/màu đen rồi hẹn báo giá sau khi kỹ thuật kiểm.","_history":"Khách mô tả base model custom rất cụ thể: 34 inch hexagon x 15 inch tall, bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inches wide every other side — SL: Custom size, chưa nêu qty | Nhu cầu custom rất rõ, nên follow kỹ bản vẽ/kích thước | Yêu cầu bản vẽ/ảnh mẫu, vật liệu, số lượng, mục đích dùng; xác nhận có thể custom","date":"2026-08-12"},{"name":"1537412978","country":"Pháp ngữ","need":"Canapé sectionnel en L style scandinave, size 200x80x85 cm, Grey/Beige/Blue, MOQ 20 sets — SL: 20 sets / cần xác nhận","blocker":"Buyer hỏi đúng sản phẩm sofa, seller đã giới thiệu MOQ và cấu hình","next":"Hỏi có chấp nhận MOQ 20 sets không, màu cần chọn và cảng/địa chỉ nhận hàng","date":"2026-09-09"},{"name":"1697655948","country":"Chưa xác định","need":"Compression L-shape sectional sofa, MOQ 20 sets, size 200x80x85, Grey/Beige/Blue — SL: MOQ 20 sets","blocker":"Lead sofa có cấu hình rõ, cần hỏi quantity","next":"Hỏi buyer cần bao nhiêu sets, màu, địa chỉ ship và thời gian cần hàng","date":"2026-09-06"},{"name":"1648730811","country":"Chưa xác định","need":"Kitchen island Natural/White/Black; seller có thể hỗ trợ 20 sets — SL: 20 sets","blocker":"Lead nội thất đúng ngành, đang chờ chọn màu","next":"Hỏi màu Natural/White/Black, số lượng chính xác, địa chỉ nhận hàng và yêu cầu packaging","date":"2026-09-04"},{"name":"phillip mukenge","country":"Chưa xác định","need":"Hỏi packing size/carton dimensions để tính CBM — SL: Chưa rõ","blocker":"Buyer quan tâm logistics/CBM, tín hiệu nghiêm túc cho vận chuyển container","next":"Gửi packing size/carton dimensions, CBM theo 1 set và theo container; hỏi quantity final","date":"2026-08-31"},{"name":"Christian Ortiz","country":"Mexico / Cancun CP 77505","need":"Contemporary sectional sofa, hỏi shipping tới Cancun; quantity đang để 1 nhưng có thể cần bulk — SL: 1 set / cần xác nhận bulk","blocker":"Buyer có địa chỉ khu vực rõ và đang hỏi logistics; seller đã hỏi phương thức vận chuyển/bao bì","next":"Xác nhận 1 set hay bulk, báo MOQ, hỏi đóng gói và gửi freight option tới Cancun","date":"2026-08-30"},{"name":"Eric Danso","country":"Chưa xác định","need":"Furniture/sofa inquiry; seller báo MOQ 20 sets, customization/packaging/logo MOQ 50 sets — SL: 20 sets hoặc 50 sets nếu custom","blocker":"Buyer đang ở bước xác nhận MOQ, có khả năng đơn wholesale nếu chấp nhận số lượng","next":"Hỏi buyer có chấp nhận 20 sets không; nếu cần logo/custom thì báo MOQ 50 sets và gửi price tier","date":"2026-08-30"},{"name":"Diana Wanzek","country":"Đức / tiếng Đức","need":"Sofa L-Shape/Straight, size 200x80x85 cm, màu Grey/Beige/Blue, MOQ 20 sets — SL: MOQ 20 sets","blocker":"Buyer trao đổi bằng tiếng Đức, nhu cầu sản phẩm rõ, cần chọn kiểu L-shape hay Straight","next":"Trả lời tiếng Đức, hỏi chọn L-Shape hay Straight, màu, quantity và địa chỉ giao EU","date":"2026-08-29"},{"name":"Chris Sizemore","country":"Chưa xác định","need":"Bedroom set direction: nightstand, dresser, maybe lounge chair in similar style — SL: Chưa rõ","blocker":"Buyer có concept mua combo phòng ngủ, cần lên danh sách sản phẩm và phong cách","next":"Gửi bộ gợi ý nightstand/dresser/lounge chair, hỏi số lượng từng món, chất liệu, ngân sách và địa chỉ ship","date":"2026-08-25"},{"name":"William FitzGerald","country":"Chưa xác định","need":"Grill cover, hỏi thêm requirement; có thông tin PFAS compliance US market, OEM/ODM, custom size/color, lead time 15-25 days — SL: Chưa nêu","blocker":"Tag Potential, nhu cầu đúng sản phẩm cover, cần spec/size/quantity","next":"Hỏi kích thước, chất liệu, số lượng, thị trường; nhắc PFAS compliance nếu bán US","date":"2026-08-21"},{"name":"Nicoetjulie Boguslawski","country":"Pháp / tiếng Pháp","need":"Sectional sofa MD22, size 200x80x85 cm, màu Grey/Beige/Blue; buyer hỏi cách mua. — SL: MOQ 20, buyer chưa chốt qty","blocker":"Buyer hỏi bằng tiếng Pháp 'Comment acheté ce produit'. Sản phẩm hiện giá 194-224 USD, MOQ 20. Seller/AI đã hướng dẫn chọn số lượng và màu để đặt trên Alibaba.","next":"Nhắn tiếng Pháp thật ngắn: xác nhận MOQ 20, giá theo bậc, hỏi màu Grey/Beige/Blue và số lượng, sau đó tạo order trực tiếp trên Alibaba.","date":"2026-08-13"},{"name":"Ana Malila zau","country":"Canada","need":"Modern solid wood bed headboard MD02, Queen size, màu OFFWHITE. — SL: 1 chiếc","blocker":"Buyer hỏi Queen, hỏi Price, nói 'I m in Canada', sau đó 'Just one piece'. Order progress thiếu unit price và shipping address; hệ thống gợi ý giá USD 699.","next":"Gửi giá Queen USD 699 nếu đúng, hỏi địa chỉ nhận hàng tại Canada để tính ship, gửi ảnh thực tế/kích thước 29.5 H x 67.4 W x 88.9 L.","date":"2026-08-12"},{"name":"James Scott","country":"Chưa xác định","need":"Khách có nhu cầu 40-70 pcs trong 4 tuần, seller hỏi product/model nào — SL: 40-70 pcs","blocker":"Có quantity và deadline rõ nhưng thiếu model","next":"Hỏi sản phẩm/model, địa chỉ giao, xác nhận 4 tuần có kịp không","_history":"Buyer muốn mua một lô hàng, cần 40-70 items, giao trong khoảng 4 tuần. — SL: 40-70 chiếc | Buyer viết rõ kế hoạch mua batch 40-70 items và muốn follow up sớm. Tuy nhiên hệ thống báo tài khoản buyer đã tự hủy hoặc bị kiểm soát do vi phạm nền tảng, hiện không thể reply. | Không thể nhắn trực tiếp nếu Alibaba khóa reply. Nếu còn kênh hợp lệ trong Alibaba/RFQ thì xác minh lại buyer; không đưa vào forecast đơn chắc chắn.","date":"2026-08-12"},{"name":"Mato Mihalic","country":"Chưa xác định","need":"Closed Foaming Lightweight Waterproof Air Mattress Outdoor MD04 Camping. — SL: MOQ 50, chưa có qty buyer","blocker":"Buyer gửi product card; seller/AI trả lời về waterproof camping mattress cover. Sản phẩm giá 16-19 USD, MOQ 50, OEM brand available; còn thiếu số lượng và unit price trong order progress.","next":"Gửi thông số 190x60x5 cm, giá 19 USD cho 50-99 pcs và 16 USD cho 100+ nếu đúng; hỏi buyer cần bao nhiêu, có cần logo/bao bì riêng không.","date":"2026-08-13"},{"name":"Yu Chen Wei","country":"Chưa xác định","need":"Square Cushion Cover màu bright red, outdoor, waterproof UV resistant. — SL: MOQ 100, chưa có qty buyer","blocker":"Buyer gửi product card; seller/AI phản hồi mô tả màu đỏ. Giá 2.98-3.32 USD, MOQ 100. Chưa thấy buyer phản hồi tiếp sau báo giá.","next":"Follow ngắn: gửi bảng giá theo bậc 100/300/1000 pcs, hỏi size và số lượng; nếu không trả lời sau 2 lần thì hạ ưu tiên.","date":"2026-08-11"},{"name":"JUNAID WARIS","country":"Pakistan / Karachi","need":"RFQ yêu cầu thông tin/spec/availability/pricing, delivery tới Jinnah International Airport Karachi — SL: 1500 pieces","blocker":"Số lượng lớn nhưng có dấu hiệu yêu cầu gửi quotation qua email ngoài; vẫn là inquiry có thông tin cụ thể","next":"Trả lời trong Alibaba, gửi quotation/spec, hỏi xác nhận sản phẩm cụ thể; không chuyển toàn bộ giao dịch ra email","date":"2026-08-25"},{"name":"Marie Musangi","country":"Kinshasa / RDC","need":"Buyer cần 4 pieces giao Kinshasa, RDC; seller hỏi muốn vận chuyển đường biển hay express. — SL: 4 pieces","blocker":"Lead rõ có địa điểm và số lượng; đang chốt phương án vận chuyển.","next":"Báo 2 phương án sea/express, hỏi product model, packing size, địa chỉ/cảng nhận để tính cước.","date":"2026-08-24"},{"name":"LittlePlayRentals rentals","country":"Chưa xác định","need":"Buyer/seller trao đổi về màu sắc hoặc chất liệu cần dùng. — SL: Chưa rõ","blocker":"Có nhu cầu tuỳ chọn color/material, cần xác định product.","next":"Hỏi sản phẩm cụ thể, color/material, quantity, destination; gửi bảng màu/chất liệu.","date":"2026-08-06"},{"name":"HuynhQuang Tuong","country":"Việt Nam / hỏi vận chuyển quốc tế","need":"Hỏi tư vấn hướng vận chuyển phù hợp để tối ưu chi phí cho đơn hàng cụ thể, thị trường North/South America, Europe, SEA, Domestic. — SL: Chưa rõ","blocker":"Lead logistics/cross-border rõ, cần sản phẩm và điểm đến.","next":"Xin sản phẩm, số lượng, kích thước đóng gói, quốc gia/cảng đến; tư vấn sea/air/express theo chi phí.","date":"2026-08-04"},{"name":"Jack Dempsey","country":"Chưa xác định","need":"Follow-up outdoor bench covers; buyer từng hỏi waterproof rating và seam sealing. — SL: Chưa rõ","blocker":"Lead sản phẩm rõ, cần trả lời thông số chống nước/seam sealing.","next":"Gửi thông số waterproof rating, seam sealing, chất liệu, kích thước và MOQ; hỏi quantity.","date":"2026-08-04"}],"followup":[{"name":"William FitzGerald","note":"Chưa rõ Có tag Potential nhưng kéo off-platform, cần giữ thông tin trong Alibaba. — Trung bình-cao. Hỏi lại trên Alibaba về product/quantity/destination, tránh chuyển hoàn toàn qua WhatsApp.","date":"2026-08-21"},{"name":"shonedricka Kirven","note":"Chưa rõ Có trao đổi giá nhưng cần mở sâu để biết sản phẩm. — Trung bình-cao. Xác nhận đã nhận/chưa nhận giá, hỏi sản phẩm và quantity, gửi quotation rõ.","date":"2026-08-20"},{"name":"Sharon Zhou","note":"Chưa rõ Cần mở sâu vì snapshot không hiển thị sản phẩm/số lượng. — Cao cần kiểm tra sâu. Mở lại hội thoại để lấy request; nếu chưa rõ, hỏi product model/quantity/destination.","date":"2026-08-19"},{"name":"John Taylor","note":"Chưa rõ Có tín hiệu lead thật nhưng thiếu nội dung trong snapshot. — Cao cần kiểm tra sâu. Mở lại hội thoại để lấy product/spec; phản hồi theo yêu cầu cụ thể.","date":"2026-08-05"},{"name":"7065688004","note":"Chỉ thấy hình ảnh, chưa có nội dung text rõ — Cần mở ảnh. Mở hội thoại/ảnh để xác định sản phẩm; hỏi số lượng và địa chỉ ship","date":"2026-09-11"},{"name":"1587981110","note":"Chỉ thấy hình ảnh — Cần kiểm tra thêm. Nếu ảnh là sản phẩm nội thất, hỏi kích thước, chất liệu, quantity","date":"2026-09-07"},{"name":"7065145023","note":"Chỉ thấy hình ảnh — Lead chưa đủ dữ liệu. Mở ảnh hoặc hỏi lại buyer cần sản phẩm nào","date":"2026-09-04"},{"name":"1036788608","note":"Buyer hỏi ảnh nhà xưởng — Lead cần xây dựng niềm tin. Gửi ảnh/video nhà xưởng, năng lực sản xuất, showroom nếu có; hỏi sản phẩm buyer đang quan tâm","date":"2026-09-04"},{"name":"276199989","note":"Chỉ thấy hình ảnh — Cần mở sâu. Chưa đưa vào ưu tiên khi chưa có text sản phẩm/số lượng","date":"2026-09-02"},{"name":"166933919","note":"Buyer hỏi packing size/carton dimensions để tính CBM — Lead logistics cũ cần follow. Gửi carton dimensions/CBM cho sản phẩm tương ứng, hỏi quantity cuối","date":"2026-08-31"},{"name":"rong bei","note":"Chỉ thấy buyer gửi hình ảnh, chưa đọc được sản phẩm/số lượng trong snapshot — Cần mở sâu nếu ảnh là inquiry thật. Mở lại hội thoại, xem ảnh và hỏi sản phẩm/số lượng/địa chỉ ship","date":"2026-09-02"},{"name":"Ruth Woldu","note":"Chỉ thấy hình ảnh, chưa có text nhu cầu rõ trong snapshot — Cần kiểm tra thêm. Mở chat, đọc ảnh/sản phẩm; nếu buyer có nhu cầu thì chuyển ưu tiên","date":"2026-08-31"},{"name":"Maria Kazmi","note":"Hội thoại có product card, chưa thấy nội dung hỏi sâu — Lead cần khai thác. Hỏi buyer quan tâm model nào, số lượng và địa chỉ nhận hàng","date":"2026-08-31"},{"name":"CamachoLopez AnnyYhanell","note":"Hỏi shipping tới 77527, seller nói phí ship báo riêng theo đơn thật và air shipping Chưa rõ — Lead thật nhưng vướng logistics/chi phí ship. Hỏi sản phẩm/số lượng cuối, báo sea vs air option và chốt total","date":"2026-08-28"},{"name":"Marie Musangi","note":"Khách Kinshasa, RDC, 4 pieces; seller hỏi muốn đi biển hay express 4 pieces — Lead có địa chỉ quốc gia và số lượng nhỏ, cần chốt phương thức ship. Hỏi chọn sea/express, gửi quote 4 pieces và thời gian dự kiến","date":"2026-08-24"},{"name":"yann sultan","note":"Muốn xem chất lượng sản phẩm/sofa Chưa rõ — Lead cần chứng minh chất lượng trước khi hỏi giá. Gửi video thực tế, ảnh chi tiết chất liệu, technical sheet và hỏi số lượng","_history":"Muốn xem chất lượng sofa/sản phẩm; cần technical sheet, assembly instructions, model documents | SL: chưa nêu — Lead thật - ưu tiên vừa. Gửi ảnh/video chất lượng, technical sheet, hỏi số lượng/mẫu muốn xem","date":"2026-08-23"},{"name":"ShaikJafar Shareef","note":"MD04 coffee table; MOQ 50 pcs, giá từ USD 53 cho 50-99 pcs | SL: MOQ 50 pcs — Lead thật - ưu tiên vừa. Hỏi số lượng mục tiêu và màu/chất liệu; gửi bảng giá theo bậc","_history":"Trong preview chỉ thấy seller/AI báo regular order MOQ is 50 pieces. — Có khả năng buyer hỏi MOQ nhưng chưa mở sâu được nội dung buyer. Tìm lại hội thoại khi có thời gian; hỏi khách muốn sản phẩm nào, màu/size và số lượng dự kiến.","date":"2026-08-16"},{"name":"Laura Cosentino","note":"Khách nói “nhưng bạn không có màu đỏ” | SL: chưa nêu — Lead có rào cản màu. Đề xuất màu gần nhất hoặc custom MOQ nếu có","date":"2026-08-15"},{"name":"Nicoetjulie Boguslawski","note":"Sản phẩm kích thước 200x80x85 cm, màu Grey/Beige/Blue; cần quantity và màu | SL: chưa nêu — Lead thật - ưu tiên vừa. Hỏi màu và số lượng, gửi link/order Alibaba","date":"2026-08-13"},{"name":"Alexander Magore","note":"Buyer chỉ nhắn 'how are you doing today'. — Có phản hồi nhưng chưa có nhu cầu sản phẩm. Trả lời thân thiện, hỏi khách đang quan tâm sản phẩm nào, số lượng và thị trường nhập hàng.","date":"2026-08-17"},{"name":"Gert vandenBerg","note":"Chỉ hiện visitor reminder. — Chưa phải lead thật. Chỉ follow nếu xem được sản phẩm đã xem hoặc khách có phản hồi mới.","date":"2026-08-15"},{"name":"veronica lorena","note":"Chỉ hiện visitor reminder. — Chưa phải lead thật. Không đưa vào nhóm khách ưu tiên nếu chưa có tin buyer.","date":"2026-08-12"},{"name":"Kyle Tran","note":"Nội dung trao đổi về tuyến vận chuyển North America, South America, Europe, Southeast Asia và Domestic Market. — Có thể là hỏi logistics, không phải buyer mua sản phẩm. Xác minh loại hàng/tuyến đích; chỉ giữ nếu liên quan đơn hàng thật.","date":"2026-08-10"},{"name":"Diaby Sankoun","note":"Preview chỉ thấy seller/AI hỏi lại số lượng cho modern solid wood king bed. — Có tín hiệu sản phẩm nhưng chưa đọc được buyer phản hồi sau đó. Theo dõi nhẹ; hỏi lại số lượng, kích thước, địa chỉ nếu buyer mở lại hội thoại.","date":"2026-08-09"},{"name":"Jack Dempsey","note":"Preview cho thấy khách từng hỏi outdoor bench covers, waterproof rating và seam sealing. — Có tín hiệu kỹ thuật nhưng chưa mở sâu trong lượt này. Gửi lại thông số chống nước/seam sealing, hỏi buyer còn dự án hay số lượng cần mua không.","date":"2026-08-04"},{"name":"Luisa Scandaglia","note":"Preview cho thấy khách hỏi thiết kế sofa/3D; seller nói chưa có bản 3D, có thể gửi ảnh thật hoặc chuyển team. — Có tín hiệu sản phẩm nhưng chưa đọc sâu. Follow bằng tiếng Ý: hỏi khách muốn L-shape hay straight, gửi ảnh thật và timeline làm bản vẽ nếu có.","date":"2026-07-28"},{"name":"Richard Logro","note":"Preview: MD08 garden chair foldable aluminum alloy, MOQ 50, OEM/ODM, màu Silver hoặc Black. — Cần theo dõi nếu buyer phản hồi màu/số lượng. Gửi ảnh 2 màu, hỏi số lượng, địa chỉ/cảng nhận để báo giá.","date":"2026-07-28"}],"lowResponse":["2026-08-23 · yann sultan: Chỉ thấy “Pour voir la qualité”, chưa đủ product/quantity.","2026-08-18 · Mehedi Enterprise / rajendra sukhralia: Chỉ “sir” hoặc “it’s ok”, chưa đủ nhu cầu.","2026-08-05 · Friedrich Donges: Chỉ thấy translation tip, chưa có nội dung buyer rõ trong snapshot.","2026-09-04 · 7086775187: Không tính lead chính","2026-08-31 · 1780463099: Cần mở sâu nếu muốn xác định","2026-08-31 · 956793857: Ít phản hồi","2026-08-31 · 1693247188: Chưa đủ dữ liệu","2026-09-11 · 7065688004: Tạm xếp thấp cho đến khi đọc được ảnh/spec","2026-09-02 · W N: Không tính lead chính tuần này","2026-08-31 · shahrokh shamloo: Ít phản hồi, chờ buyer nói nhu cầu cụ thể","2026-08-27 · Thitichaya Srisuk: Cần mở sâu nếu muốn xác định lead, hiện chưa đưa vào ưu tiên","2026-08-25 · Xamid Bobojanov: Không cập nhật lead chính nếu không có nội dung mới","2026-08-21 · William FitzGerald: Không tính lead tuần mới; hạn chế kéo khỏi Alibaba nếu chưa chốt","2026-08-12 · Ana Malila zau: Nếu có sample/RTS thì báo; nếu MOQ cao thì giải thích, ưu tiên thấp.","2026-08-05 · Friedrich Donges: Không follow nếu không có inquiry rõ.","2026-08-17 · Faisal Latif: Không phân tích sâu, không tính lead.","2026-08-16 · Safa Saeed: Chỉ theo dõi nếu buyer phản hồi mới.","2026-08-11 · DOCK RACE WEAR: Không tính lead tốt nếu chưa thấy nhu cầu mua.","2026-08-05 · Friedrich Donges: Không ưu tiên.","2026-07-28 · Frank Liang: Không phải buyer mua hàng chính; không đưa vào lead bán hàng.","2026-07-28 · Amanda Zhao: Chưa có nhu cầu sản phẩm.","2026-07-29 · Abdumalik Musayev / Helene BLSLU: Không tính lead ưu tiên.","2026-08-17 · Visitor/auto reminder khác: Loại khỏi danh sách khách có phản hồi chất lượng."],"summary":{"real_signal_leads":56}},"sources":{"ops_url":"https://docs.google.com/spreadsheets/d/19WZKZlW2NOLJqdaNroG3rReagIWcqOCDpgXO9edqhJs/edit","visitor_url":"https://docs.google.com/spreadsheets/d/1qDXhvdMg0Eip8djGJPOUPhNHhPUbRpElsCJ2ZOiRv4I/edit","message_url":"https://docs.google.com/spreadsheets/d/11-5KohzSJJWioLGKR8KU0W_cu-mcEQ12smLOEVJ72F8/edit"}};
+const SPEC = {"spec_version": "3.0-mobile-owner", "prepared_at": "2026-09-21", "project": {"store_name": "Hoàng Đức Thịnh", "target_app": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/hoang-duc-thinh/index.html", "reference_mb_v3": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/CLAUDE_CODE_MBIKE_MOBILE_OWNER_UPDATE_2026-09-19.json", "language": "Tiếng Việt", "audience": "Ông chủ doanh nghiệp", "viewport_priority": "Mobile 390×844, sau đó desktop 1440px"}, "implementation_contract": {"page": "Một trang dọc duy nhất; cuộn xuống xem hết 4 khu vực, không có tab phải bấm.", "mobile_first": "Hero và buyer Top 5 phải gọn, hấp dẫn, dễ đọc bằng một tay; card 2 cột cho KPI, 1 cột cho buyer.", "order": ["Hero — câu chuyện kinh doanh/traffic/khách lớn", "01 · Buyer cần follow", "02 · Traffic & Thị trường", "03 · Sản phẩm & Buyer đang tìm gì thật tuần này?", "04 · Vận hành & Hành động"], "hero": {"headline": "Buyer đang chờ báo giá thật cho 20 bộ sofa tới Beira và các yêu cầu nội thất theo thông số; ưu tiên chốt quotation.", "positive": "Inquiry vận hành tăng 8 → 11; tỷ lệ phản hồi trong 24h đạt 100%.", "bottleneck": "Visitor vận hành giảm 270 → 191; PV 191 so với ngành 1.228; chưa có sản phẩm mới.", "kpis": ["Search Impressions", "Search Clicks", "Page Views", "Buyer L1+"], "rule": "Không lấy inquiry tổng làm kết luận duy nhất; nhấn traffic, buyer lớn, trạng thái đơn và nhu cầu thương mại."}, "buyer_section": {"title": "01 · Buyer cần follow", "top5_first": true, "show_more": "Chỉ hiện 5 buyer lớn, các buyer khác qua nút Xem thêm inline.", "subsection_paid": "Khách đã thanh toán/chốt đơn chỉ hiện buyer có bằng chứng rõ; nếu chưa có, dùng empty state 'Chưa xác nhận đơn đã thanh toán trong dữ liệu này'.", "do_not_duplicate": "Gộp cùng buyer xuất hiện nhiều dòng chat thành một card, giữ timeline và lần trao đổi mới nhất.", "card_fields": ["quốc gia/cờ nếu có", "nhu cầu và số lượng", "dẫn chứng từ hội thoại", "rào cản chốt đơn", "việc cụ thể tiếp theo", "ngày cập nhật", "trạng thái xác minh"]}, "traffic_section": {"benchmark": "Biểu đồ thanh ngang 3 cột Gian hàng / Trung bình ngành / Nhóm dẫn đầu cho PV, Search Impressions, Search Clicks, Visitors with Inquiries.", "visitor": "Buyer L1+, quốc gia có đủ L0–L4, so sánh visitor tuần hiện tại với tuần trước cùng nguồn.", "method": "Chỉ tính % với cùng chỉ số, cùng kỳ và cùng nguồn; không trộn PV vận hành với PV sheet visitor. Dán nhãn kỳ riêng cho từng bộ dữ liệu."}, "product_section": {"top3": "Thẻ ảnh/link, title, UV; không biến UV sản phẩm thành order.", "keywords": "Đặt tên 'Buyer đang tìm gì thật tuần này?' với biểu đồ từ khóa chính xác giữ nguyên; xếp theo số lần xuất hiện, lọc và đánh dấu từ khóa lệch ngành. Hiển thị Top 10 phù hợp ngành, có Xem tất cả để mở đầy đủ.", "keyword_pv_warning": "PV ở mỗi bản ghi từ khóa có thể là PV của visitor, không cộng rồi gọi là PV của từ khóa độc lập.", "image": "Nếu có ảnh Product Analysis gốc trong app thì giữ, dùng ảnh cắt gọn, tải lười."}, "operations_section": {"trend": "Vẽ line/bar cho toàn bộ tuần có trong sheet operations, không chỉ 2 tuần; đủ 12 KPI mỗi tuần.", "include": ["Điểm tốt", "Điểm nghẽn có số liệu", "Action 24/48 giờ, 7 ngày, tuần tiếp theo", "Benchmark ngành và xu hướng nhiều tuần"], "source_note": "Giữ nguyên ghi chú chẩn đoán của sheet, trình bày như ghi chú nguồn thay vì fact hiện tại nếu kỳ khác."}, "controls": {"remove_copy_button": true, "no_fake_live_sync": true, "allow_source_links": true, "accessible_contrast": true, "avoid_horizontal_scroll": true}}, "owner_readout": {"positive": "Inquiry vận hành tăng 8 → 11; tỷ lệ phản hồi trong 24h đạt 100%.", "bottleneck": "Visitor vận hành giảm 270 → 191; PV 191 so với ngành 1.228; chưa có sản phẩm mới.", "next_actions": ["24 giờ: gửi báo giá cảng-cảng Beira cho Bs filmeseseries; trả lời báo giá tách cabinet/countertop cho 7097261758.", "7 ngày: báo cước/spec cho Laura và Laila, bổ sung sản phẩm/RTS, kiểm tra 596 sản phẩm thiếu EU Responsible Person theo báo cáo.", "Không biến nhu cầu báo giá hoặc địa chỉ ship thành đơn đã thanh toán."]}, "data": {"operations": {"weeks": [{"period": "06-09-2026 đến 12-09-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "191", "Tổng số thư hỏi hàng": "11", "Tổng số thư hỏi hàng đã trả lời": "11", "Tổng số lượt đã báo giá RFQ": "1", "Số lượt báo giá RFQ còn lại": "19", "Thời gian phản hồi tin nhắn trung bình": "0,01h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "100.00%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "16"}}, {"period": "30-08-2026 đến 05-09-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "270", "Tổng số thư hỏi hàng": "8", "Tổng số thư hỏi hàng đã trả lời": "8", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "1,57h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "93.75%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "16"}}, {"period": "23-08-2026 đến 29-08-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "233", "Tổng số thư hỏi hàng": "8", "Tổng số thư hỏi hàng đã trả lời": "8", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "2,68h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "89.29%", "Số lượng Super Product (win)": "1", "Số lượng Top Product (tiềm năng)": "16"}}, {"period": "09-08-2026 đến 15-08-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "252", "Tổng số thư hỏi hàng": "10", "Tổng số thư hỏi hàng đã trả lời": "10", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "5h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "80.00%", "Số lượng Super Product (win)": "1", "Số lượng Top Product (tiềm năng)": "17"}}, {"period": "02-08-2026 đến 08-08-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "272", "Tổng số thư hỏi hàng": "8", "Tổng số thư hỏi hàng đã trả lời": "8", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "4,42h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "82.35%", "Số lượng Super Product (win)": "1", "Số lượng Top Product (tiềm năng)": "17"}}, {"period": "26-07-2026 đến 01-08-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "195", "Tổng số thư hỏi hàng": "12", "Tổng số thư hỏi hàng đã trả lời": "12", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "3,13h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "87.50%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "17"}}, {"period": "19-07-2026 đến 25-07-2026", "kpis": {"Số sao": "3", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "133", "Tổng số thư hỏi hàng": "12", "Tổng số thư hỏi hàng đã trả lời": "12", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "2,18h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "91.30%", "Số lượng Super Product (win)": "1", "Số lượng Top Product (tiềm năng)": "16"}}, {"period": "12-07-2026 đến 18-07-2026", "kpis": {"Số sao": "3", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "187", "Tổng số thư hỏi hàng": "8", "Tổng số thư hỏi hàng đã trả lời": "8", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "2h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "92.00%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "16"}}, {"period": "05-07-2026 đến 11-07-2026", "kpis": {"Số sao": "3", "Tổng số sản phẩm": "596", "Tổng số sản phẩm mới đã đăng": "-3", "Tổng số người ghé thăm": "296", "Tổng số thư hỏi hàng": "16", "Tổng số thư hỏi hàng đã trả lời": "14", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "1,86h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "92.59%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "15"}}, {"period": "21-06-2026 đến 27-06-2026", "kpis": {"Số sao": "3", "Tổng số sản phẩm": "599", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "604", "Tổng số thư hỏi hàng": "20", "Tổng số thư hỏi hàng đã trả lời": "20", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "2,27h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "91.11%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "13"}}, {"period": "14-06-2026 đến 20-06-2026", "kpis": {"Số sao": "2", "Tổng số sản phẩm": "599", "Tổng số sản phẩm mới đã đăng": "0", "Tổng số người ghé thăm": "464", "Tổng số thư hỏi hàng": "10", "Tổng số thư hỏi hàng đã trả lời": "6", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "1,58h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "94%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "9"}}, {"period": "30-05-2026 đến 06-06-2026", "kpis": {"Số sao": "1", "Tổng số sản phẩm": "600", "Tổng số sản phẩm mới đã đăng": "100", "Tổng số người ghé thăm": "411", "Tổng số thư hỏi hàng": "7", "Tổng số thư hỏi hàng đã trả lời": "6", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "0,12h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "3"}}, {"period": "17-05-2026 đến 23-05-2026", "kpis": {"Số sao": "1", "Tổng số sản phẩm": "500", "Tổng số sản phẩm mới đã đăng": "385", "Tổng số người ghé thăm": "96", "Tổng số thư hỏi hàng": "6", "Tổng số thư hỏi hàng đã trả lời": "6", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "7,15h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "71.43%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "0"}}, {"period": "26-4-2026 đến 2-05-2026", "kpis": {"Số sao": "1", "Tổng số sản phẩm": "115", "Tổng số sản phẩm mới đã đăng": "14", "Tổng số người ghé thăm": "51", "Tổng số thư hỏi hàng": "6", "Tổng số thư hỏi hàng đã trả lời": "5", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "8,25h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "67%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "0"}}, {"period": "19-4-2026 đến 25-04-2026", "kpis": {"Số sao": "0", "Tổng số sản phẩm": "101", "Tổng số sản phẩm mới đã đăng": "101", "Tổng số người ghé thăm": "159", "Tổng số thư hỏi hàng": "2", "Tổng số thư hỏi hàng đã trả lời": "1", "Tổng số lượt đã báo giá RFQ": "0", "Số lượt báo giá RFQ còn lại": "20", "Thời gian phản hồi tin nhắn trung bình": "0,01h", "Tỉ lệ tin nhắn được phản hồi trong 24h": "100%", "Số lượng Super Product (win)": "0", "Số lượng Top Product (tiềm năng)": "0"}}], "benchmark": {"industry": "Furniture > Furniture", "page_views": {"store": 191, "industry_average": 1228, "industry_leaders": 9520}, "search_impressions": {"store": 4068, "industry_average": 13107, "industry_leaders": 81515}, "search_clicks": {"store": 58, "industry_average": 301, "industry_leaders": 1911}, "visitors_with_inquiries": {"store": 3, "industry_average": 15, "industry_leaders": 116}}, "top_products": [{"rank": 1, "title": "Modern Kitchen Islands Dining Room Vietnam MDF + Stainless Steel Natural/White/Black Color Storage Movable 2 Drawers 2 Shelves", "uv": 18, "url": "https://www.alibaba.com/product-detail/Modern-Kitchen-Islands-Dining-Room-Vietnam_10000042729760.html", "product_id": "10000042729760"}, {"rank": 2, "title": "Compression L-Shape Sofa Living Room Modern MD15 Linen Fabric Sectional Sofa OEM Brand Name High Density Sponge Solid Wood Legs", "uv": 9, "url": "https://www.alibaba.com/product-detail/Compression-L-Shape-Sofa-Living-Room_10000042750936.html", "product_id": "10000042750936"}, {"rank": 3, "title": "Kitchen Islands Modern Vietnam Pine Wood Metal Natural/White/Black Color Storage Movable 2 Drawers 2 Shelves OEM Brand", "uv": 5, "url": "https://www.alibaba.com/product-detail/Kitchen-Islands-Modern-Vietnam-Pine-Wood_10000042734769.html", "product_id": "10000042734769"}], "source_action_notes": [{"label": "Cập nhật sản phẩm mới", "current": "Đăng thêm 5-10 sản phẩm hot mỗi ngày", "previous": "Đăng thêm 5-10 sản phẩm hot mỗi ngày"}, {"label": "Tối ưu hoá các chỉ số", "current": "Tăng buyer phản hồi; tận dụng RFQ và AI; đăng sản phẩm mới/RTS; chốt đơn Trade Assurance; nâng sản phẩm lên Top/Super Product", "previous": "Phản hồi đầy đủ người mua; sử dụng RFQ; phát triển sản phẩm mới và RTS; nâng Top/Super Product; tạo đơn Trade Assurance"}, {"label": null, "current": "Chưa có đơn Trade Assurance và GMV; Service Star còn hạn chế xếp hạng, cần thêm buyer phản hồi; chưa đăng sản phẩm mới và chưa có RTS; RFQ, tài khoản phụ và công cụ AI chưa được tận dụng", "previous": "Service đang giới hạn gian hàng ở 2 sao và cần thêm 3 người mua phản hồi; chưa có đơn/GMV Trade Assurance; chưa đăng sản phẩm mới và chưa có RTS; 596 sản phẩm chưa liên kết EU Responsible Person; RFQ, tài khoản phụ và AI chưa được tận dụng; có 1 sản phẩm Issues cần xử lý"}]}, "visitors": {"visitor_history": [{"tab": "Tuần này · Tổng quan · 11-17.09", "period": "Thời gian dữ liệu: 2026-09-11 đến 2026-09-17 | Bộ lọc nguồn: Last 7 days", "visitor_records": 115, "countries": 45, "pv": 210, "exact_keyword_records": 221, "visitors_with_keyword": 88, "L1_plus": 37}, {"tab": "Tuần trước · Tổng quan · 03-09.09", "period": "Thời gian dữ liệu: 2026-09-03 đến 2026-09-09 | Bộ lọc nguồn: Last 7 days", "visitor_records": 139, "countries": 60, "pv": 217, "exact_keyword_records": 275, "visitors_with_keyword": 111, "L1_plus": 56}, {"tab": "Lịch sử · Tổng quan · 27.08-02.09", "period": "Thời gian dữ liệu: 2026-08-27 đến 2026-09-02 | Bộ lọc nguồn: Last 7 days", "visitor_records": 156, "countries": 60, "pv": 252, "exact_keyword_records": 318, "visitors_with_keyword": 117, "L1_plus": 54}, {"tab": "Lịch sử · Tổng quan · 16-22.08", "period": "Thời gian dữ liệu: 2026-08-16 đến 2026-08-22 | Bộ lọc nguồn: Last 7 days", "visitor_records": 177, "countries": 58, "pv": 315, "exact_keyword_records": 328, "visitors_with_keyword": 130, "L1_plus": 55}, {"tab": "Lịch sử · Tổng quan · 09-15.08", "period": "Thời gian dữ liệu: 2026-08-09 đến 2026-08-15 | Bộ lọc nguồn: Last 7 days", "visitor_records": 140, "countries": 47, "pv": 252, "exact_keyword_records": 310, "visitors_with_keyword": 117, "L1_plus": 55}, {"tab": "Lịch sử · Tổng quan · 02-08.08", "period": "Thời gian dữ liệu: 2026-08-02 đến 2026-08-08 | Bộ lọc nguồn: Last 7 days", "visitor_records": 159, "countries": 67, "pv": 272, "exact_keyword_records": 331, "visitors_with_keyword": 136, "L1_plus": 44}, {"tab": "Lịch sử · Tổng quan · 24-30.07", "period": "Thời gian dữ liệu: 2026-07-24 đến 2026-07-30 | Bộ lọc nguồn: Last 7 days", "visitor_records": 137, "countries": 64, "pv": 213, "exact_keyword_records": 289, "visitors_with_keyword": 119, "L1_plus": 62}, {"tab": "Lịch sử · Tổng quan · 16-22.07", "period": "Thời gian dữ liệu: 2026-07-16 đến 2026-07-22 | Bộ lọc nguồn: Last 7 days", "visitor_records": 131, "countries": 58, "pv": 198, "exact_keyword_records": 245, "visitors_with_keyword": 99, "L1_plus": 27}], "current_summary": {"period": "Thời gian dữ liệu: 2026-09-11 đến 2026-09-17 | Bộ lọc nguồn: Last 7 days", "visitor_records": 115, "countries": 45, "pv": 210, "exact_keyword_records": 221, "visitors_with_keyword": 88, "L1_plus": 37, "levels": {"L0": 78, "L1": 37, "L2": 0, "L3": 0, "L4": 0}}, "previous_summary": {"period": "Thời gian dữ liệu: 2026-09-03 đến 2026-09-09 | Bộ lọc nguồn: Last 7 days", "visitor_records": 139, "countries": 60, "pv": 217, "exact_keyword_records": 275, "visitors_with_keyword": 111, "L1_plus": 56}, "all_countries": [{"country": "Hoa Kỳ", "visitors": 24, "pv": 36, "keyword_visitors": 20, "exact_keyword_records": 57, "L0": 12, "L1": 12, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 12}, {"country": "Trung Quốc", "visitors": 14, "pv": 17, "keyword_visitors": 10, "exact_keyword_records": 27, "L0": 14, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Colombia", "visitors": 4, "pv": 26, "keyword_visitors": 4, "exact_keyword_records": 10, "L0": 2, "L1": 2, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 2}, {"country": "Canada", "visitors": 4, "pv": 16, "keyword_visitors": 4, "exact_keyword_records": 11, "L0": 3, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "New Zealand", "visitors": 4, "pv": 4, "keyword_visitors": 3, "exact_keyword_records": 5, "L0": 3, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Australia", "visitors": 4, "pv": 4, "keyword_visitors": 3, "exact_keyword_records": 9, "L0": 1, "L1": 3, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 3}, {"country": "Nam Phi", "visitors": 4, "pv": 4, "keyword_visitors": 4, "exact_keyword_records": 7, "L0": 4, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "The former Yugoslav Republic of Macedonia", "visitors": 4, "pv": 4, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 4, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Venezuela", "visitors": 3, "pv": 4, "keyword_visitors": 3, "exact_keyword_records": 9, "L0": 2, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Israel", "visitors": 3, "pv": 4, "keyword_visitors": 1, "exact_keyword_records": 2, "L0": 1, "L1": 2, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 2}, {"country": "Vương quốc Anh", "visitors": 3, "pv": 3, "keyword_visitors": 2, "exact_keyword_records": 3, "L0": 3, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Các Tiểu vương quốc Ả Rập Thống nhất", "visitors": 3, "pv": 3, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 2, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Ả Rập Xê Út", "visitors": 3, "pv": 3, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 1, "L1": 2, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 2}, {"country": "Hàn Quốc", "visitors": 2, "pv": 15, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Burkina Faso", "visitors": 2, "pv": 9, "keyword_visitors": 2, "exact_keyword_records": 4, "L0": 1, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Russian Federation", "visitors": 2, "pv": 6, "keyword_visitors": 2, "exact_keyword_records": 4, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Puerto Rico", "visitors": 2, "pv": 4, "keyword_visitors": 2, "exact_keyword_records": 5, "L0": 1, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Haiti", "visitors": 2, "pv": 3, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Mexico", "visitors": 2, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Guinea", "visitors": 1, "pv": 5, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Jamaica", "visitors": 1, "pv": 4, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Congo", "visitors": 1, "pv": 4, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Turkmenistan", "visitors": 1, "pv": 3, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Indonesia", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Thailand", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Mongolia", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Kazakhstan", "visitors": 1, "pv": 2, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Ghana", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "France", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Ethiopia", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Thổ Nhĩ Kỳ", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Honduras", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Việt Nam", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Maldives", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Argentina", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "The Democratic Republic of the Congo", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Brazil", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Senegal", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Peru", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Bulgaria", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Dominican Republic", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Madagascar", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Cote D'Ivoire", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Nepal", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Malaysia", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}], "exact_keyword_aggregates": [{"exact_keyword": "压缩沙发", "occurrences": 3, "source_row_pv_sum": 4}, {"exact_keyword": "structubefurniture", "occurrences": 2, "source_row_pv_sum": 11}, {"exact_keyword": "structube style", "occurrences": 2, "source_row_pv_sum": 11}, {"exact_keyword": "tv cabinet living room", "occurrences": 2, "source_row_pv_sum": 11}, {"exact_keyword": "watch", "occurrences": 2, "source_row_pv_sum": 3}, {"exact_keyword": "rideaux", "occurrences": 2, "source_row_pv_sum": 3}, {"exact_keyword": "canaps de salon", "occurrences": 2, "source_row_pv_sum": 3}, {"exact_keyword": "canap compress", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "reception desk", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "897234350", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "897585172", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "898125402", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "complete hotel bedroom set", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "display cabinet", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "jia shun company limited", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "家具", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "灯芯绒豆袋椅", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "reloj 3d pegatinas", "occurrences": 1, "source_row_pv_sum": 20}, {"exact_keyword": "base cama sencilla", "occurrences": 1, "source_row_pv_sum": 20}, {"exact_keyword": "reloj 3d", "occurrences": 1, "source_row_pv_sum": 20}, {"exact_keyword": "muebles comprimidos", "occurrences": 1, "source_row_pv_sum": 20}, {"exact_keyword": "mi stick 4k", "occurrences": 1, "source_row_pv_sum": 13}, {"exact_keyword": "alr screen", "occurrences": 1, "source_row_pv_sum": 13}, {"exact_keyword": "170", "occurrences": 1, "source_row_pv_sum": 13}, {"exact_keyword": "canap convertible 3 places", "occurrences": 1, "source_row_pv_sum": 8}, {"exact_keyword": "tunique homme africain", "occurrences": 1, "source_row_pv_sum": 8}, {"exact_keyword": "costume homme", "occurrences": 1, "source_row_pv_sum": 8}, {"exact_keyword": "cabeceiras de cama king", "occurrences": 1, "source_row_pv_sum": 7}, {"exact_keyword": "cabeceiras de cama", "occurrences": 1, "source_row_pv_sum": 7}, {"exact_keyword": "mesa lateral", "occurrences": 1, "source_row_pv_sum": 7}, {"exact_keyword": "mesas de cabeceira", "occurrences": 1, "source_row_pv_sum": 7}, {"exact_keyword": "lit hopital", "occurrences": 1, "source_row_pv_sum": 5}, {"exact_keyword": "microscope", "occurrences": 1, "source_row_pv_sum": 5}, {"exact_keyword": "fauteille de salon a la maison compresse", "occurrences": 1, "source_row_pv_sum": 5}, {"exact_keyword": "7", "occurrences": 1, "source_row_pv_sum": 5}, {"exact_keyword": "pumpkin", "occurrences": 1, "source_row_pv_sum": 5}, {"exact_keyword": "palworld chillet 180cm", "occurrences": 1, "source_row_pv_sum": 5}, {"exact_keyword": "interlocking tiles", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "dyi acacia wood tiles", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "rattan backed dining chair", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "king size storage bed", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "shoe racks for home", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "blackout curtain", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "bouble bed mattress with spring", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "bed headboard", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "brasero jikokoa", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "sof compresin al vaco", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "parking barrier", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "kugoo kirin m4 pro", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "meta quest 3", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "kugoo kirin m4", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "solar energy panel", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "sofa", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "solar system", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "sofa comprimi", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "water and fire proof biometric money safe with strong security features", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "glass side table set", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "lace", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "living room wall decoration for living room", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "papiers peints murals marbre", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "les mches onduls", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "housses de canap pour le salon", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "lahan daerah pulau jawa", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "hoodie", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "轻薄毛衣", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "女士毛织开衫", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "dining chairs set of 4", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "brown velvet cloud sofa low profile", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "velvet cloud sofa luxury design", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "single sofa chair", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "living room furniture", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "track my shipment", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "carbon fiber phone case", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "compressed sofa", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "pedicure spa chair", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "ensemble de literie en lin", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "pandora bracelet 925 silver", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "purse coach", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camping mattress", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camping mattress foam", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "golf clothing", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bedroom furniture", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "furniture", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "office chair", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "vanity table", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "compress sofa", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "hot iron presser", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "hotel room accessories", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bean bags for adults", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mesa de entrada plateada", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sombrillas de jardn sombrillas al aire libre", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mesa de entrada", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sillon para dormitorio", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "children compression bed", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "outdoor compression sofa for children", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "rotational molds", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cabinet with doors", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "31 imch tall caninet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "31 inch tall cabinet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "vietnam coffee", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "me trang coffee joint stock company", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sai gon tien doan group corporation", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "kitchen table with hidden chairs", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "webber q", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bbq cover", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa sectional reclinable", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa sectional reclinable en tela", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa sectional reclinable rn tela", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sof de tela reclinable", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "meuble de salon", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "vanity", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "king bedroom furniture", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "modern wooden bed", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "packaging & printing", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "water hyacinth", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "handicraft", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "loft style bedroom", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "portable power bank", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "walking pad treadmill", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "餐桌椅", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "minimalist bubble sofa compressed with vacuum packed technology  easy assembly for modern home office apartment", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "nautech  marine bimini tops", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "600d polyester oxford fabric with pu coating", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tempotest fabric", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "600d oxford fabric roll waterproof", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "v60 grinder", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "machine for ice cream automatic", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "v60 manual coffee grinder gift set box", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "backdrop stand for wedding events", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "reception desk counter", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "vietnam bedroom furniture", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "vietnam bedroom suits", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "plastic flooring", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "pest control", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "kitchen furniture", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "foot protection", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "maquinas de coser industrial de brazo largo", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "collar colgante de libro", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "gel nail polish set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "muebles para sala comprimido", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "kitchen island", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "muebles de cocina", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "壁挂式钉板", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "隔音板", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "卷发棒", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "waiting room furniture", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "reception desk beauty salon", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "kitchen island oak", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "silla con ruedas para perro grande de 2 llantas", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa cama matrimonial", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camas elevadas para perros", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "comedores 4 puestos", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moto", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camaras 360 para moto", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa en l pequeo", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "kamado grill", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "body kit", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "hair braiding machine for women", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "luxury modular sofa set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "hair braids making machine", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fauteuil compress", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fauteuil de massage", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tente de camping  2 chambres", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "headboard for beds", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camping table and chairs", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "paint sprayer", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camas inteligentes", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bolsas de senderismo", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "camping", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bath tub", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bath tub and wall panel set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "king headboard", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sandalias planas", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "vestidos para mujer", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "flat sandals", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "saddle chair", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "teal blue sofa bed", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa corduroy", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bean bag vintage", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "glucosamine chondrotine msm", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cosmtique", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "capsule home", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fx3", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "15mm carbon fiber rods camera", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "oncamera field monitor", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "canap", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "uv black light", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "trophy base ma", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sofa cover", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "protectores de puertas de carros", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "carpas", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "filtro de paja", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "waterproof camping tent", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "high back leather d8ning chairs", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "marble bedside table with drawer", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "velvet ottoman", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "leather dining chair", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "outdoor cover", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "outdoor cover set custion 52x52x10", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "outdoor cushion cover water proof 10inches", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "扶手椅套", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "衣服", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "飞机", "occurrences": 1, "source_row_pv_sum": 1}]}, "buyers": {"top5_priority": [{"rank": 1, "date": "2026-09-19", "name": "Bs filmeseseries", "country": "Mozambique", "level": "Chưa thấy level tag", "need": "Sofa đóng nén; yêu cầu báo giá vận chuyển đường biển, cảng đến Beira", "quantity": "20 bộ", "evidence": "Buyer liên tục xác nhận muốn báo giá, chọn phương án biển tiết kiệm, cảng-cảng tới Beira và nhiều lần yêu cầu tiếp tục. Đây là nhu cầu rõ, đang chờ báo giá thật chứ không phải trả lời tự động.", "priority": "Rất cao", "next_action": "Gửi báo giá sản phẩm + cước biển cảng-cảng tới Beira, CBM/packing, thời gian sản xuất, lịch tàu dự kiến và điều kiện thanh toán; tạo quotation trên Alibaba."}, {"rank": 2, "date": "2026-09-06", "name": "7097261758", "country": "USA / Florida", "level": "Chưa thấy L", "need": "Cabinet và quartz countertop; cần quotation Florida USA theo HTSUS 9403.4000 và 6810.99, tách cabinet/countertop", "quantity": "Chưa rõ", "evidence": "Lead dự án tốt, có yêu cầu quote chuyên nghiệp và phân loại HS code", "priority": "Rất cao", "next_action": "Xin final cabinet drawings/kích thước, material, quantity; báo giá riêng cabinet và quartz, kèm freight Florida"}, {"rank": 3, "date": "2026-08-15", "name": "Laura Cosentino", "country": "Italy / tiếng Ý", "level": "Chưa thấy", "need": "Sofa chair MD05, hỏi có chống cháy không, có màu đỏ không và phí vận chuyển tới Italy.", "quantity": "30+ chiếc", "evidence": "Buyer gửi 13048 Santhia, sau đó chốt địa chỉ Via Matteotti 129G, CAP 13094 Gaglianico Biella. Buyer cần màu đỏ nhưng hiện chỉ có Yellow/Green/Grey; cũng hỏi sản phẩm có ignifughe/chống cháy không.", "priority": "Rất cao", "next_action": "Trả lời tiếng Ý: xác nhận hiện chưa có đỏ/chống cháy nếu đúng vậy; đề xuất màu thay thế hoặc hỏi có nhận đặt riêng màu đỏ không, báo cước Italy theo 30 chiếc và thời gian giao."}, {"rank": 4, "date": "2026-09-12", "name": "Laila Abdallah", "country": "Comoros", "level": "Có level tag", "need": "Ba mẫu giường/tựa đầu giường: 2 mẫu tối giản và 1 mẫu trung bình; ưu tiên màu đen hoặc xám/kem phối đen", "quantity": "3 chiếc: 2 chiếc 150x200cm, 1 chiếc 180x200cm", "evidence": "Buyer phản hồi nhiều lượt ngày 09 và 12/09, chốt rõ số lượng, kích thước và màu. Hồ sơ 90 ngày có 786 lượt xem sản phẩm và 75 ngày đăng nhập; chưa có email/công ty công khai.", "priority": "Rất cao", "next_action": "Gửi ngay 3 mẫu phù hợp kèm giá từng kích thước, vật liệu, MOQ, thời gian sản xuất và phí vận chuyển tới Comoros; hỏi địa chỉ/cảng nhận để chốt báo giá."}, {"rank": 5, "date": "2026-08-12", "name": "Kyle CalgaryCustomPits", "country": "Canada / Calgary theo tên buyer", "level": "Có level tag / Potential", "need": "Custom outdoor covers cho nhiều mẫu firepit: chống nước, chống UV, màu đen, vật liệu dày.", "quantity": "Custom, chưa chốt số lượng", "evidence": "Buyer cần cover cho Basic firepits, half lid, 2 half lids, full lids, thêm footrest, size 34/40 inch. Sau đó buyer gửi spec: base model 34 inch hexagon x 15 inch; bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inch wide every other side.", "priority": "Rất cao", "next_action": "Tóm tắt spec thành bảng kỹ thuật, xin ảnh/bản vẽ từng model, hỏi số lượng mỗi size, xác nhận chất liệu/độ dày/màu đen rồi hẹn báo giá sau khi kỹ thuật kiểm."}], "all_priority_rows": [{"date": "2026-09-19", "name": "Bs filmeseseries", "country": "Mozambique", "level": "Chưa thấy level tag", "need": "Sofa đóng nén; yêu cầu báo giá vận chuyển đường biển, cảng đến Beira", "quantity": "20 bộ", "evidence": "Buyer liên tục xác nhận muốn báo giá, chọn phương án biển tiết kiệm, cảng-cảng tới Beira và nhiều lần yêu cầu tiếp tục. Đây là nhu cầu rõ, đang chờ báo giá thật chứ không phải trả lời tự động.", "priority": "Rất cao", "next_action": "Gửi báo giá sản phẩm + cước biển cảng-cảng tới Beira, CBM/packing, thời gian sản xuất, lịch tàu dự kiến và điều kiện thanh toán; tạo quotation trên Alibaba."}, {"date": "2026-09-21", "name": "yanieis valenzuela", "country": "Cộng hòa Dominica", "level": "Chưa thấy level tag", "need": "Ghế ăn bọc nhung màu kem, khung kim loại đen, kích thước 28 x 23,5 x 18,5 inch", "quantity": "6 chiếc", "evidence": "Buyer xác nhận đúng màu kem/khung đen và hỏi tổng giá cho cả 6 ghế. Chưa có báo giá thực tế.", "priority": "Cao", "next_action": "Báo giá 6 ghế, MOQ, phí giao đến thành phố/mã bưu chính của buyer, kích thước kiện và thời gian giao; xác nhận mẫu/màu bằng ảnh thật."}, {"date": "2026-09-19", "name": "SiaMata Koundouno", "country": "Guinea", "level": "Có level tag", "need": "Kệ TV gỗ xoài 150 x 40 x 50 cm; hỏi các màu walnut, trắng và oak", "quantity": "5 chiếc", "evidence": "Buyer xác nhận số lượng 5, hỏi màu và kích thước rồi yêu cầu ảnh thực tế của từng màu. Nhu cầu cụ thể, chưa đến bước giá/ship.", "priority": "Cao", "next_action": "Gửi ngay ảnh thật hoặc bảng màu của walnut/trắng/oak, xác nhận 5 chiếc cùng màu hay phối màu; báo giá và hỏi địa chỉ/cảng nhận."}, {"date": "2026-09-12", "name": "Laila Abdallah", "country": "Comoros", "level": "Có level tag", "need": "Ba mẫu giường/tựa đầu giường: 2 mẫu tối giản và 1 mẫu trung bình; ưu tiên màu đen hoặc xám/kem phối đen", "quantity": "3 chiếc: 2 chiếc 150x200cm, 1 chiếc 180x200cm", "evidence": "Buyer phản hồi nhiều lượt ngày 09 và 12/09, chốt rõ số lượng, kích thước và màu. Hồ sơ 90 ngày có 786 lượt xem sản phẩm và 75 ngày đăng nhập; chưa có email/công ty công khai.", "priority": "Rất cao", "next_action": "Gửi ngay 3 mẫu phù hợp kèm giá từng kích thước, vật liệu, MOQ, thời gian sản xuất và phí vận chuyển tới Comoros; hỏi địa chỉ/cảng nhận để chốt báo giá."}, {"date": "2026-09-06", "name": "7097261758", "country": "USA / Florida", "level": "Chưa thấy L", "need": "Cabinet và quartz countertop; cần quotation Florida USA theo HTSUS 9403.4000 và 6810.99, tách cabinet/countertop", "quantity": "Chưa rõ", "evidence": "Lead dự án tốt, có yêu cầu quote chuyên nghiệp và phân loại HS code", "priority": "Rất cao", "next_action": "Xin final cabinet drawings/kích thước, material, quantity; báo giá riêng cabinet và quartz, kèm freight Florida"}, {"date": "2026-08-15", "name": "Laura Cosentino", "country": "Italy / tiếng Ý", "level": "Chưa thấy", "need": "Sofa chair MD05, hỏi có chống cháy không, có màu đỏ không và phí vận chuyển tới Italy.", "quantity": "30+ chiếc", "evidence": "Buyer gửi 13048 Santhia, sau đó chốt địa chỉ Via Matteotti 129G, CAP 13094 Gaglianico Biella. Buyer cần màu đỏ nhưng hiện chỉ có Yellow/Green/Grey; cũng hỏi sản phẩm có ignifughe/chống cháy không.", "priority": "Rất cao", "next_action": "Trả lời tiếng Ý: xác nhận hiện chưa có đỏ/chống cháy nếu đúng vậy; đề xuất màu thay thế hoặc hỏi có nhận đặt riêng màu đỏ không, báo cước Italy theo 30 chiếc và thời gian giao."}, {"date": "2026-08-13", "name": "shonedricka Kirven", "country": "USA / Raleigh, North Carolina", "level": "Có level tag", "need": "Ghế ăn Contemporary Velvet Upholstered Dining Chair MD07; buyer muốn báo giá và phí ship.", "quantity": "2 chiếc", "evidence": "Buyer hỏi quote + shipping price cho dining table/chair, cung cấp ZIP 27610, Raleigh North Carolina, chọn phương án rẻ nhất, xác nhận sea freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610.", "priority": "Rất cao", "next_action": "Báo ngay giá 2 chiếc, phí sea freight door delivery, thời gian dự kiến, điều kiện thuế/phụ phí. Hỏi lại màu/chất liệu để tạo đơn Alibaba."}, {"date": "2026-08-12", "name": "Kyle CalgaryCustomPits", "country": "Canada / Calgary theo tên buyer", "level": "Có level tag / Potential", "need": "Custom outdoor covers cho nhiều mẫu firepit: chống nước, chống UV, màu đen, vật liệu dày.", "quantity": "Custom, chưa chốt số lượng", "evidence": "Buyer cần cover cho Basic firepits, half lid, 2 half lids, full lids, thêm footrest, size 34/40 inch. Sau đó buyer gửi spec: base model 34 inch hexagon x 15 inch; bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inch wide every other side.", "priority": "Rất cao", "next_action": "Tóm tắt spec thành bảng kỹ thuật, xin ảnh/bản vẽ từng model, hỏi số lượng mỗi size, xác nhận chất liệu/độ dày/màu đen rồi hẹn báo giá sau khi kỹ thuật kiểm."}, {"date": "2026-09-09", "name": "1537412978", "country": "Pháp ngữ", "level": "Chưa thấy L", "need": "Canapé sectionnel en L style scandinave, size 200x80x85 cm, Grey/Beige/Blue, MOQ 20 sets", "quantity": "20 sets / cần xác nhận", "evidence": "Buyer hỏi đúng sản phẩm sofa, seller đã giới thiệu MOQ và cấu hình", "priority": "Cao", "next_action": "Hỏi có chấp nhận MOQ 20 sets không, màu cần chọn và cảng/địa chỉ nhận hàng"}, {"date": "2026-09-06", "name": "1697655948", "country": "Chưa xác định", "level": "Chưa thấy L", "need": "Compression L-shape sectional sofa, MOQ 20 sets, size 200x80x85, Grey/Beige/Blue", "quantity": "MOQ 20 sets", "evidence": "Lead sofa có cấu hình rõ, cần hỏi quantity", "priority": "Cao", "next_action": "Hỏi buyer cần bao nhiêu sets, màu, địa chỉ ship và thời gian cần hàng"}, {"date": "2026-09-04", "name": "1648730811", "country": "Chưa xác định", "level": "Chưa thấy L", "need": "Kitchen island Natural/White/Black; seller có thể hỗ trợ 20 sets", "quantity": "20 sets", "evidence": "Lead nội thất đúng ngành, đang chờ chọn màu", "priority": "Cao", "next_action": "Hỏi màu Natural/White/Black, số lượng chính xác, địa chỉ nhận hàng và yêu cầu packaging"}, {"date": "2026-08-31", "name": "phillip mukenge", "country": "Chưa xác định", "level": "Có level tag", "need": "Hỏi packing size/carton dimensions để tính CBM", "quantity": "Chưa rõ", "evidence": "Buyer quan tâm logistics/CBM, tín hiệu nghiêm túc cho vận chuyển container", "priority": "Cao", "next_action": "Gửi packing size/carton dimensions, CBM theo 1 set và theo container; hỏi quantity final"}, {"date": "2026-08-30", "name": "Christian Ortiz", "country": "Mexico / Cancun CP 77505", "level": "Có level tag", "need": "Contemporary sectional sofa, hỏi shipping tới Cancun; quantity đang để 1 nhưng có thể cần bulk", "quantity": "1 set / cần xác nhận bulk", "evidence": "Buyer có địa chỉ khu vực rõ và đang hỏi logistics; seller đã hỏi phương thức vận chuyển/bao bì", "priority": "Cao", "next_action": "Xác nhận 1 set hay bulk, báo MOQ, hỏi đóng gói và gửi freight option tới Cancun"}, {"date": "2026-08-30", "name": "Eric Danso", "country": "Chưa xác định", "level": "Chưa thấy L", "need": "Furniture/sofa inquiry; seller báo MOQ 20 sets, customization/packaging/logo MOQ 50 sets", "quantity": "20 sets hoặc 50 sets nếu custom", "evidence": "Buyer đang ở bước xác nhận MOQ, có khả năng đơn wholesale nếu chấp nhận số lượng", "priority": "Cao", "next_action": "Hỏi buyer có chấp nhận 20 sets không; nếu cần logo/custom thì báo MOQ 50 sets và gửi price tier"}, {"date": "2026-08-29", "name": "Diana Wanzek", "country": "Đức / tiếng Đức", "level": "Chưa thấy L", "need": "Sofa L-Shape/Straight, size 200x80x85 cm, màu Grey/Beige/Blue, MOQ 20 sets", "quantity": "MOQ 20 sets", "evidence": "Buyer trao đổi bằng tiếng Đức, nhu cầu sản phẩm rõ, cần chọn kiểu L-shape hay Straight", "priority": "Cao", "next_action": "Trả lời tiếng Đức, hỏi chọn L-Shape hay Straight, màu, quantity và địa chỉ giao EU"}, {"date": "2026-08-25", "name": "Chris Sizemore", "country": "Chưa xác định", "level": "Có level tag", "need": "Bedroom set direction: nightstand, dresser, maybe lounge chair in similar style", "quantity": "Chưa rõ", "evidence": "Buyer có concept mua combo phòng ngủ, cần lên danh sách sản phẩm và phong cách", "priority": "Cao", "next_action": "Gửi bộ gợi ý nightstand/dresser/lounge chair, hỏi số lượng từng món, chất liệu, ngân sách và địa chỉ ship"}, {"date": "2026-08-21", "name": "William FitzGerald", "country": "Chưa xác định", "level": "L?", "need": "Grill cover, hỏi thêm requirement; có thông tin PFAS compliance US market, OEM/ODM, custom size/color, lead time 15-25 days", "quantity": "Chưa nêu", "evidence": "Tag Potential, nhu cầu đúng sản phẩm cover, cần spec/size/quantity", "priority": "Lead tốt - ưu tiên cao", "next_action": "Hỏi kích thước, chất liệu, số lượng, thị trường; nhắc PFAS compliance nếu bán US"}, {"date": "2026-08-20", "name": "shonedricka Kirven", "country": "United States - Raleigh, NC", "level": "L?", "need": "Có báo giá sản phẩm, đang chờ freight door delivery tới 3241 Calumet Drive, Raleigh, NC 27610", "quantity": "Chưa rõ, có total hàng USD 176.00", "evidence": "Khách hỏi/đợi giá vận chuyển, có địa chỉ cụ thể; đang thiếu freight charge để chốt tổng", "priority": "Lead nóng - ưu tiên cao", "next_action": "Chốt freight door delivery ngay, gửi total landed cost và nhắc đặt qua Alibaba"}, {"date": "2026-08-13", "name": "Nicoetjulie Boguslawski", "country": "Pháp / tiếng Pháp", "level": "Chưa thấy", "need": "Sectional sofa MD22, size 200x80x85 cm, màu Grey/Beige/Blue; buyer hỏi cách mua.", "quantity": "MOQ 20, buyer chưa chốt qty", "evidence": "Buyer hỏi bằng tiếng Pháp 'Comment acheté ce produit'. Sản phẩm hiện giá 194-224 USD, MOQ 20. Seller/AI đã hướng dẫn chọn số lượng và màu để đặt trên Alibaba.", "priority": "Cao", "next_action": "Nhắn tiếng Pháp thật ngắn: xác nhận MOQ 20, giá theo bậc, hỏi màu Grey/Beige/Blue và số lượng, sau đó tạo order trực tiếp trên Alibaba."}, {"date": "2026-08-12", "name": "Ana Malila zau", "country": "Canada", "level": "Có level tag", "need": "Modern solid wood bed headboard MD02, Queen size, màu OFFWHITE.", "quantity": "1 chiếc", "evidence": "Buyer hỏi Queen, hỏi Price, nói 'I m in Canada', sau đó 'Just one piece'. Order progress thiếu unit price và shipping address; hệ thống gợi ý giá USD 699.", "priority": "Cao", "next_action": "Gửi giá Queen USD 699 nếu đúng, hỏi địa chỉ nhận hàng tại Canada để tính ship, gửi ảnh thực tế/kích thước 29.5 H x 67.4 W x 88.9 L."}, {"date": "2026-08-12", "name": "Kyle CalgaryCustomPits", "country": "Chưa xác định", "level": "L?", "need": "Khách mô tả base model custom rất cụ thể: 34 inch hexagon x 15 inch tall, bản có lids 35 inch hexagon, handle 2 inch up/out, 6 inches wide every other side", "quantity": "Custom size, chưa nêu qty", "evidence": "Nhu cầu custom rất rõ, nên follow kỹ bản vẽ/kích thước", "priority": "Lead tốt - ưu tiên cao", "next_action": "Yêu cầu bản vẽ/ảnh mẫu, vật liệu, số lượng, mục đích dùng; xác nhận có thể custom"}, {"date": "2026-08-12", "name": "James Scott", "country": "Chưa xác định", "level": "L?", "need": "Khách có nhu cầu 40-70 pcs trong 4 tuần, seller hỏi product/model nào", "quantity": "40-70 pcs", "evidence": "Có quantity và deadline rõ nhưng thiếu model", "priority": "Lead tốt - cần làm rõ", "next_action": "Hỏi sản phẩm/model, địa chỉ giao, xác nhận 4 tuần có kịp không"}, {"date": "2026-08-13", "name": "Mato Mihalic", "country": "Chưa xác định", "level": "Có level tag", "need": "Closed Foaming Lightweight Waterproof Air Mattress Outdoor MD04 Camping.", "quantity": "MOQ 50, chưa có qty buyer", "evidence": "Buyer gửi product card; seller/AI trả lời về waterproof camping mattress cover. Sản phẩm giá 16-19 USD, MOQ 50, OEM brand available; còn thiếu số lượng và unit price trong order progress.", "priority": "Trung bình-cao", "next_action": "Gửi thông số 190x60x5 cm, giá 19 USD cho 50-99 pcs và 16 USD cho 100+ nếu đúng; hỏi buyer cần bao nhiêu, có cần logo/bao bì riêng không."}, {"date": "2026-08-11", "name": "Yu Chen Wei", "country": "Chưa xác định", "level": "Có level tag", "need": "Square Cushion Cover màu bright red, outdoor, waterproof UV resistant.", "quantity": "MOQ 100, chưa có qty buyer", "evidence": "Buyer gửi product card; seller/AI phản hồi mô tả màu đỏ. Giá 2.98-3.32 USD, MOQ 100. Chưa thấy buyer phản hồi tiếp sau báo giá.", "priority": "Trung bình", "next_action": "Follow ngắn: gửi bảng giá theo bậc 100/300/1000 pcs, hỏi size và số lượng; nếu không trả lời sau 2 lần thì hạ ưu tiên."}, {"date": "2026-08-25", "name": "JUNAID WARIS", "country": "Pakistan / Karachi", "level": "Có level tag", "need": "RFQ yêu cầu thông tin/spec/availability/pricing, delivery tới Jinnah International Airport Karachi", "quantity": "1500 pieces", "evidence": "Số lượng lớn nhưng có dấu hiệu yêu cầu gửi quotation qua email ngoài; vẫn là inquiry có thông tin cụ thể", "priority": "Cao nhưng rủi ro", "next_action": "Trả lời trong Alibaba, gửi quotation/spec, hỏi xác nhận sản phẩm cụ thể; không chuyển toàn bộ giao dịch ra email"}, {"date": "2026-08-24", "name": "Marie Musangi", "country": "Kinshasa / RDC", "level": "Buyer cần 4 pieces giao Kinshasa, RDC; seller hỏi muốn vận chuyển đường biển hay express.", "need": "4 pieces", "quantity": "Lead rõ có địa điểm và số lượng; đang chốt phương án vận chuyển.", "evidence": "Rất cao", "priority": "Báo 2 phương án sea/express, hỏi product model, packing size, địa chỉ/cảng nhận để tính cước."}, {"date": "2026-08-12", "name": "James Scott", "country": "Chưa xác định", "level": "Chưa thấy", "need": "Buyer muốn mua một lô hàng, cần 40-70 items, giao trong khoảng 4 tuần.", "quantity": "40-70 chiếc", "evidence": "Buyer viết rõ kế hoạch mua batch 40-70 items và muốn follow up sớm. Tuy nhiên hệ thống báo tài khoản buyer đã tự hủy hoặc bị kiểm soát do vi phạm nền tảng, hiện không thể reply.", "priority": "Cao nhưng rủi ro", "next_action": "Không thể nhắn trực tiếp nếu Alibaba khóa reply. Nếu còn kênh hợp lệ trong Alibaba/RFQ thì xác minh lại buyer; không đưa vào forecast đơn chắc chắn."}, {"date": "2026-08-06", "name": "LittlePlayRentals rentals", "country": "Chưa xác định", "level": "Buyer/seller trao đổi về màu sắc hoặc chất liệu cần dùng.", "need": "Chưa rõ", "quantity": "Có nhu cầu tuỳ chọn color/material, cần xác định product.", "evidence": "Cao", "priority": "Hỏi sản phẩm cụ thể, color/material, quantity, destination; gửi bảng màu/chất liệu."}, {"date": "2026-08-04", "name": "HuynhQuang Tuong", "country": "Việt Nam / hỏi vận chuyển quốc tế", "level": "Hỏi tư vấn hướng vận chuyển phù hợp để tối ưu chi phí cho đơn hàng cụ thể, thị trường North/South America, Europe, SEA, Domestic.", "need": "Chưa rõ", "quantity": "Lead logistics/cross-border rõ, cần sản phẩm và điểm đến.", "evidence": "Cao", "priority": "Xin sản phẩm, số lượng, kích thước đóng gói, quốc gia/cảng đến; tư vấn sea/air/express theo chi phí."}, {"date": "2026-08-04", "name": "Jack Dempsey", "country": "Chưa xác định", "level": "Follow-up outdoor bench covers; buyer từng hỏi waterproof rating và seam sealing.", "need": "Chưa rõ", "quantity": "Lead sản phẩm rõ, cần trả lời thông số chống nước/seam sealing.", "evidence": "Cao", "priority": "Gửi thông số waterproof rating, seam sealing, chất liệu, kích thước và MOQ; hỏi quantity."}], "confirmed_paid_or_completed": [], "payment_status_rule": "Waiting Payment, hỏi cách trả thẻ, order progress, gửi PI/quotation đều chưa phải đã thanh toán."}}};
+const CFG = {"key": "hdt", "storeName": "Hoàng Đức Thịnh", "bilingual": false, "coreRe": "sofa|furniture|cabinet|desk|\\bbed\\b|chair|table|mueble|canap|meuble|sectional|couch|bedroom|wardrobe|shelf|structube|家具|沙发|椅|柜|hotel|reception|rideaux|curtain|beanbag|tv "};
+const $=id=>document.getElementById(id);
+const CJK=/[㐀-鿿]/;
+let LANG=CFG.bilingual?(localStorage.getItem(CFG.key+'_lang')||'zh'):'vi';
 
-function fmt(n){ return n==null?'&mdash;':Number(n).toLocaleString('en-US'); }
-function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function pctDelta(cur,prev){ const c=+cur,p=+prev; if(!p) return null; return ((c-p)/p*100); }
-
-document.querySelectorAll('.sources a')[0].href = D.sources.ops_url;
-document.querySelectorAll('.sources a')[1].href = D.sources.visitor_url;
-document.querySelectorAll('.sources a')[2].href = D.sources.message_url;
-
-document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
-  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
-  b.classList.add('active');document.getElementById(b.dataset.pane).classList.add('active');
-  window.dispatchEvent(new Event('resize'));
-}));
-document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
-  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
-  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
-  b.classList.add('active');document.getElementById('sub_'+b.dataset.sub).classList.add('active');
-}));
-
-function kpiCard(label,value,note,cls){
-  return '<div class="kpi '+(cls||'')+'"><div class="label">'+label+'</div><div class="value">'+value+'</div><div class="note">'+(note||'')+'</div></div>';
-}
-(function renderKpis(){
-  const o = D.ops.latest, op = D.ops.previous, v = D.visitors.latest;
-  const respD = pctDelta(o.reply_24h_rate, op.reply_24h_rate);
-  let html='';
-  html+=kpiCard('Điểm gian hàng', o.stars+' &#9733;', (o.stars===op.stars?'Không đổi':(o.stars>op.stars?'Tăng':'Giảm'))+' so với tuần trước ('+op.stars+' sao)');
-  html+=kpiCard('Người ghé thăm (Visitor)', fmt(v.visitor_records), 'tuần '+v.period+' (Visitor Analyzer)');
-  html+=kpiCard('Thư hỏi hàng', fmt(o.inquiries), o.inquiries_replied+'/'+o.inquiries+' đã trả lời · tuần Vận hành', 'good');
-  html+=kpiCard('Phản hồi trong 24h', o.reply_24h_rate+'%', (respD!=null?'<span class="delta '+(respD>=0?'up':'down')+'">'+(respD>=0?'+':'')+respD.toFixed(1)+'%</span> so với tuần trước':''), 'bad');
-  html+=kpiCard('Buyer L1+', fmt(v.buyer_l1_plus), (v.buyer_l1_plus===D.visitors.previous.buyer_l1_plus?'giữ nguyên':(v.buyer_l1_plus>D.visitors.previous.buyer_l1_plus?'tăng':'giảm'))+' so với tuần trước ('+D.visitors.previous.buyer_l1_plus+')');
-  html+=kpiCard('Cần xử lý ngay', D.leads.priority.length+' buyer', D.ops.alerts.length+' cảnh báo vận hành đang mở', 'warn');
-  document.getElementById('kpis').innerHTML = html;
-  document.getElementById('kpi_note').textContent = 'Mỗi KPI lấy đúng kỳ dữ liệu ghi trong ngoặc — Vận hành và Visitor Analyzer không cùng tuần.';
-})();
-
-const hasE = typeof echarts !== 'undefined';
-let charts = [];
-function mkChart(id){ const el=document.getElementById(id); if(!el) return null;
-  let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
-const AXL = { fontSize:11 };
-function num(v){ if(v==null) return 0; const s=String(v).replace('%','').replace('h','').replace(',','.').trim(); const n=parseFloat(s); return isNaN(n)?0:n; }
-const weeksFull = D.ops.weeks_full || [];
-const weekLabels = weeksFull.map(w=>w.period.split(' đến ')[1] || w.period);
-const countriesFull = D.visitors.countries_full || D.visitors.countries;
-
-if (hasE) {
-  let c = mkChart('ch_funnel');
-  const lv = D.visitors.latest.levels;
-  c.setOption({
-    tooltip:{trigger:'item',formatter:'{b}: {c}'},
-    series:[{type:'funnel',left:'8%',width:'84%',sort:'none',minSize:'22%',
-      label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},
-      color:['#bfe0cc','#8ac8a3','#3e8a5a','#2e6b45','#1f3a2e'],
-      data:[
-        {value:lv.L0,name:'L0 - Đã đăng ký'},
-        {value:lv.L1,name:'L1 - Tiềm năng'},
-        {value:lv.L2,name:'L2 - Scaleup'},
-        {value:lv.L3,name:'L3 - Enterprise'},
-        {value:lv.L4,name:'L4 - Enterprise Pro'}
-      ]}]
-  });
-
-  c = mkChart('ch_country');
-  const sorted = countriesFull.slice().sort((a,b)=> (b.L1Plus-a.L1Plus) || (b.visitors-a.visitors)).slice(0,12);
-  c.setOption({
-    tooltip:{trigger:'axis'},
-    grid:{left:110,right:24,top:10,bottom:24},
-    xAxis:{type:'value',axisLabel:AXL},
-    yAxis:{type:'category',data:sorted.map(x=>x.country).reverse(),axisLabel:AXL},
-    series:[{type:'bar',data:sorted.map(x=>x.L1Plus).reverse(),itemStyle:{color:'#3e8a5a',borderRadius:[0,4,4,0]},label:{show:true,position:'right',fontSize:11,formatter:(p)=>{
-      const row = sorted.slice().reverse()[p.dataIndex]; return row.L1Plus+' L1+ / '+row.visitors+' visitor';
-    }}}]
-  });
-  if (weeksFull.length) {
-    c = mkChart('ch_trend');
-    c.setOption({
-      tooltip:{trigger:'axis'}, legend:{top:0,textStyle:{fontSize:11}},
-      grid:{left:46,right:46,top:34,bottom:44},
-      xAxis:{type:'category',data:weekLabels,axisLabel:Object.assign({},AXL,{rotate:45})},
-      yAxis:[{type:'value',name:'Visitor',axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
-      series:[
-        {name:'Lượt ghé thăm',type:'bar',data:weeksFull.map(w=>num(w.visitors)),itemStyle:{color:'#3e8a5a',borderRadius:[4,4,0,0]}},
-        {name:'Phản hồi 24h (%)',type:'line',yAxisIndex:1,data:weeksFull.map(w=>num(w.reply24h)),smooth:true,itemStyle:{color:'#1f9a6d'}}
-      ]
-    });
-
-    c = mkChart('ch_products');
-    c.setOption({
-      tooltip:{trigger:'axis'}, legend:{top:0,textStyle:{fontSize:11}},
-      grid:{left:46,right:46,top:34,bottom:44},
-      xAxis:{type:'category',data:weekLabels,axisLabel:Object.assign({},AXL,{rotate:45})},
-      yAxis:[{type:'value',name:'SP',axisLabel:AXL},{type:'value',name:'RFQ',axisLabel:AXL}],
-      series:[
-        {name:'Top Product',type:'line',data:weeksFull.map(w=>num(w.topProduct)),smooth:true,itemStyle:{color:'#ca7b1b'}},
-        {name:'Super Product',type:'line',data:weeksFull.map(w=>num(w.superProduct)),smooth:true,itemStyle:{color:'#1f9a6d'}},
-        {name:'RFQ đã báo',type:'bar',yAxisIndex:1,data:weeksFull.map(w=>num(w.rfqQuoted)),itemStyle:{color:'#d95761'}}
-      ]
-    });
+/* ---------- bilingual helpers ---------- */
+function bi(s){
+  if(s==null) return {vi:'',zh:''};
+  s=String(s).trim();
+  let m=s.match(/^VI:\s*([\s\S]*?)\s*CN:\s*([\s\S]*)$/);
+  if(m) return {vi:m[1].trim(),zh:m[2].trim()};
+  if(CFG.bilingual){
+    for(const sep of [' | ',' / ']){
+      if(s.indexOf(sep)>-1){
+        const parts=s.split(sep).map(x=>x.trim());
+        const zh=parts.filter(p=>CJK.test(p)), vi=parts.filter(p=>!CJK.test(p));
+        if(zh.length&&vi.length) return {vi:vi.join(sep),zh:zh.join(sep)};
+      }
+    }
   }
-  window.addEventListener('resize', ()=>charts.forEach(c=>c.resize()));
+  return {vi:s,zh:s};
 }
+const L=s=>{const b=bi(s);return b[LANG]||b.vi};
+const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const fmt=n=>n==null||n===''||isNaN(Number(n))?'—':Number(n).toLocaleString('vi-VN');
+const fmt1=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
+const num=s=>{const v=parseFloat(String(s).replace('%','').replace(',','.'));return isNaN(v)?0:v};
+const pct=(c,p)=>p?(c-p)/p*100:null;
+const MOB=()=>window.innerWidth<768;
 
-document.getElementById('view_period').textContent = D.visitors.latest.period;
-document.getElementById('view_period_prev').textContent = D.visitors.previous.period;
-document.getElementById('view_insights').innerHTML = D.visitors.insights.map(x=>'<li>'+esc(x)+'</li>').join('');
-(function(){
-  const v = D.visitors.latest, vp = D.visitors.previous;
-  document.getElementById('view_metrics').innerHTML =
-    '<div class="metric"><div class="n">'+fmt(v.visitor_records)+'</div><div class="l">Visitor records ('+vp.visitor_records+' tuần trước)</div></div>'+
-    '<div class="metric"><div class="n">'+fmt(v.countries)+'</div><div class="l">Quốc gia / vùng</div></div>'+
-    '<div class="metric"><div class="n">'+fmt(v.store_pv)+'</div><div class="l">PV gian hàng ('+vp.store_pv+' tuần trước)</div></div>'+
-    '<div class="metric"><div class="n">'+fmt(v.buyer_l1_plus)+'</div><div class="l">Buyer L1+</div></div>';
-})();
+/* ---------- UI strings ---------- */
+const T={
+ vi:{kick:'Báo cáo vận hành Alibaba',n1:'Buyer',n2:'Traffic',n3:'Sản phẩm',n4:'Vận hành',
+  t1:'01 · Buyer cần follow',t2:'02 · Traffic & Thị trường',t3:'03 · Sản phẩm & Buyer đang tìm gì thật tuần này?',t4:'04 · Vận hành & Hành động',
+  positive:'Điểm tốt',bottleneck:'Điểm nghẽn',ownerT:'Buyer cần xử lý hôm nay',ownerA:'Xem 5 buyer quan trọng ↓',
+  bigH:'Khách lớn cần ưu tiên theo dõi',bigD:'Buyer có nhu cầu số lượng, yêu cầu báo giá/mẫu/chứng nhận rõ hoặc đang gần bước chốt. Sắp theo mức ưu tiên rồi ngày mới nhất.',
+  paidH:'Khách đã thanh toán/chốt đơn',paidD:'Chỉ hiển thị buyer có bằng chứng rõ trong dữ liệu; trạng thái giữ nguyên theo nguồn.',
+  paidPill:'Đã có đơn',prodLead:'Sản phẩm nào hút khách nhất và buyer đang tìm gì.',paidEmpty:'Chưa xác nhận đơn đã thanh toán trong dữ liệu này',
+  buyerLead:'Ưu tiên buyer có số lượng, spec, chứng nhận hoặc yêu cầu báo giá rõ trước các câu hỏi chung chung. Mỗi buyer chỉ hiện một thẻ, lịch sử trao đổi nằm trong Xem chi tiết.',
+  more:n=>'Xem thêm '+n+' buyer',less:'Thu gọn danh sách',detail:'Xem chi tiết',collapse:'Thu gọn',buyers:'buyer',
+  need:'Nhu cầu',qty:'Số lượng',evid:'Dẫn chứng & vướng mắc',next:'Việc tiếp theo',upd:'Cập nhật',verify:'Xác minh',verifyT:'Theo nội dung chat trong sheet buyer; chưa xác minh độc lập',timeline:'Diễn biến các lần trao đổi',level:'Level',
+  veryHigh:'Buyer ưu tiên rất cao',
+  hkImp:'Hiển thị tìm kiếm',hkClk:'Lượt nhấp tìm kiếm',hkPv:'Lượt xem trang (vận hành)',hkL1:'Buyer L1+',
+  vsInd:x=>x+'% trung bình ngành',
+  bmH:'Gian hàng đang đứng ở đâu so với ngành?',bmN:(p,i)=>'Kỳ '+p+' · ngành '+i,
+  bm:{page_views:'Lượt xem trang',search_impressions:'Lượt hiển thị tìm kiếm',search_clicks:'Lượt nhấp tìm kiếm',visitors_with_inquiries:'Khách để lại thư hỏi hàng'},
+  store:'Gian hàng',avg:'Trung bình ngành',lead:'Nhóm dẫn đầu',vsAvg:'so với TB ngành',vsLead:'so với nhóm dẫn đầu',
+  vsH:'Buyer & người xem tuần này',vsNote:(c,p)=>'Kỳ '+c+' so với kỳ trước '+p+' · cùng nguồn Visitor Analyzer (khác kỳ với KPI vận hành)',
+  mVisitors:'Visitor records',mCountries:'Quốc gia / vùng',mPv:'PV trong danh sách visitor',mL1:'Buyer L1+',prev:'kỳ trước',
+  fnH:'Phễu chất lượng buyer L0–L4',fnN:'L1+ = L1 đến L4',ctH:'Quốc gia: đủ cấp L0–L4',ctN:'Xếp theo số visitor · các màu là cấp L0 → L4',ctAll:n=>'Xem tất cả '+n+' quốc gia',
+  cols:['Quốc gia / vùng','Visitor','PV','Có keyword','Bản ghi keyword','L0','L1','L2','L3','L4','L1+'],
+  vhH:'Xu hướng visitor các kỳ gần nhất',vhN:'Mỗi cột là một kỳ visitor của sheet; đường là buyer L1+',
+  tpH:'Top 3 sản phẩm hút khách',tpLead:'Xếp hạng theo Unique Visitors (UV); bấm tên hoặc nút để mở Alibaba.',tpNote:'Nguồn chỉ có UV nên không hiển thị order, inquiry hay CTR từng sản phẩm.',open:'Mở sản phẩm ↗',
+  kwH:'Buyer đang tìm gì thật tuần này?',kwLead:'Từ khóa chính xác của visitor, giữ nguyên câu đã tìm; chỉ vẽ nhóm phù hợp ngành.',
+  kwNote:(p)=>'Kỳ '+p+' · thanh = số lần xuất hiện · nhãn có PV của dòng nguồn (PV của visitor, không phải PV độc lập của từ khóa)',
+  kwWarn:(a,b)=>'Cảnh báo chất lượng dữ liệu: chỉ '+a+'/'+b+' từ khóa tuần này phù hợp ngành nên không vẽ biểu đồ "hot" để tránh hiểu sai. Kiểm tra nguồn traffic/keyword lệch ngành.',
+  kwAllS:n=>'Xem tất cả '+n+' từ khóa chính xác',kwQ:'Tìm từ khóa...',kwCols:['Từ khóa (nguyên văn)','Số lần','PV dòng nguồn','Phân loại'],
+  cls:{core:'Đúng ngành',other:'Chưa xác định',noise:'Lệch ngành'},
+  ocH:'Ông chủ cần biết gì tuần này?',gH:'Điểm tốt',aH:'Điểm nghẽn có số liệu',acH:'Action',
+  w24:'Trong 24 giờ',w7:'Trong 7 ngày',wNote:'Lưu ý khi làm việc với buyer',wNext:'Tuần tiếp theo',
+  nextWeek:'Đối chiếu lại PV, Search Clicks, buyer L1+ và trạng thái các buyer đã nêu; chỉ kết luận khi cùng chỉ số, cùng kỳ, cùng nguồn.',
+  omH:'Chỉ số vận hành tuần mới nhất',omN:p=>'Vận hành & benchmark ngành: '+p,
+  k:['Điểm sao','Tổng sản phẩm','SP mới đăng','Lượt ghé thăm','Thư hỏi hàng','Đã trả lời','RFQ đã báo','RFQ còn lại','TG phản hồi (h)','Phản hồi 24h (%)','Super Product','Top Product'],
+  vsPrev:'so với tuần trước',snH:'Ghi chú chẩn đoán từ sheet vận hành',snCur:'Tuần này',snPrev:'Tuần trước',
+  c1H:'Traffic & phản hồi 24h',c1N:'Lượt ghé thăm vận hành (cột) và tỷ lệ phản hồi 24h (đường), toàn bộ các tuần trong sheet.',
+  c2H:'Sản phẩm, Top & Super Product',c2N:'Tổng sản phẩm (cột) · Top Product và Super Product (đường).',
+  tbH:'Bảng KPI vận hành toàn bộ lịch sử',tbN:'Đủ 12 KPI mỗi tuần · vuốt ngang để xem các tuần.',metric:'Chỉ số',
+  noChart:'Thư viện biểu đồ (ECharts) không tải được — cần internet để xem biểu đồ.',
+  foot:'Báo cáo vận hành Alibaba · Version 3 · dữ liệu nhúng tĩnh, mở offline được',
+  visitorsL:'Visitor',l1:'Buyer L1+',
+  pMore:'Buyer có ngày sau kỳ visitor/vận hành được hiển thị theo ngày riêng của buyer.'},
+ zh:{kick:'阿里巴巴运营周报',n1:'买家',n2:'流量',n3:'产品',n4:'运营',
+  t1:'01 · 重点跟进买家',t2:'02 · 流量与市场',t3:'03 · 产品与本周真实搜索需求',t4:'04 · 运营与行动',
+  positive:'亮点',bottleneck:'瓶颈',ownerT:'今日需处理的买家',ownerA:'查看5位重点买家 ↓',
+  bigH:'需优先跟进的大客户',bigD:'有明确数量、报价/样品/认证需求或接近成交的买家。按优先级再按最新日期排序。',
+  paidH:'已付款/已成交客户',paidD:'仅显示数据中有明确证据的买家；状态与来源保持一致。',
+  paidPill:'已有订单',prodLead:'哪些产品最吸引访客，买家在搜索什么。',paidEmpty:'本数据中暂无已确认付款的订单',
+  buyerLead:'优先处理有数量、规格、认证或明确报价需求的买家。每位买家只显示一张卡片，沟通历史在“查看详情”中。',
+  more:n=>'查看更多 '+n+' 位买家',less:'收起列表',detail:'查看详情',collapse:'收起',buyers:'位买家',
+  need:'需求',qty:'数量',evid:'对话依据与障碍',next:'下一步',upd:'更新',verify:'核实',verifyT:'依据买家表格中的聊天内容；尚未独立核实',timeline:'沟通过程',level:'等级',
+  veryHigh:'最高优先级买家',
+  hkImp:'搜索曝光',hkClk:'搜索点击',hkPv:'页面浏览量（运营）',hkL1:'L1+买家',
+  vsInd:x=>'行业平均的'+x+'%',
+  bmH:'店铺在行业中处于什么位置？',bmN:(p,i)=>'周期 '+p+' · 行业 '+i,
+  bm:{page_views:'页面浏览量',search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors_with_inquiries:'发起询盘的访客'},
+  store:'本店',avg:'行业平均',lead:'行业领先',vsAvg:'相对行业平均',vsLead:'相对行业领先',
+  vsH:'本周买家与访客',vsNote:(c,p)=>'周期 '+c+'，对比上期 '+p+' · 同一访客分析来源（与运营KPI周期不同）',
+  mVisitors:'访客记录',mCountries:'国家/地区',mPv:'访客列表PV',mL1:'L1+买家',prev:'上期',
+  fnH:'买家质量漏斗 L0–L4',fnN:'L1+ = L1 至 L4',ctH:'国家：完整L0–L4分层',ctN:'按访客数排序 · 颜色为 L0 → L4',ctAll:n=>'查看全部 '+n+' 个国家',
+  cols:['国家/地区','访客','PV','有关键词','关键词记录','L0','L1','L2','L3','L4','L1+'],
+  vhH:'近几期访客趋势',vhN:'每根柱为表格中的一期访客数；折线为L1+买家',
+  tpH:'吸引访客最多的前3款产品',tpLead:'按独立访客（UV）排序；点击名称或按钮打开阿里巴巴页面。',tpNote:'来源仅有UV，因此不显示单品订单、询盘或点击率。',open:'打开产品 ↗',
+  kwH:'买家本周真实在搜什么？',kwLead:'访客的精确关键词，保持原文；仅绘制与行业相符的部分。',
+  kwNote:p=>'周期 '+p+' · 柱=出现次数 · 标签含来源行PV（为访客PV，不是关键词独立PV）',
+  kwWarn:(a,b)=>'数据质量提醒：本周仅 '+a+'/'+b+' 个关键词与行业相符，为避免误读不绘制“热词”图。请核查流量/关键词来源是否偏离行业。',
+  kwAllS:n=>'查看全部 '+n+' 个精确关键词',kwQ:'搜索关键词...',kwCols:['关键词（原文）','次数','来源行PV','分类'],
+  cls:{core:'相符',other:'未确定',noise:'偏离行业'},
+  ocH:'老板本周需要知道什么？',gH:'亮点',aH:'带数据的瓶颈',acH:'行动',
+  w24:'24小时内',w7:'7天内',wNote:'与买家沟通的注意事项',wNext:'下周',
+  nextWeek:'复核PV、搜索点击、L1+买家及上述买家状态；仅在同指标、同周期、同来源时下结论。',
+  omH:'最新一周运营指标',omN:p=>'运营与行业基准：'+p,
+  k:['店铺星级','产品总数','新品数','访客数','询盘数','已回复','已报价RFQ','剩余RFQ','平均回复(小时)','24小时回复率(%)','Super Product','Top Product'],
+  vsPrev:'较上周',snH:'运营表格中的诊断备注',snCur:'本周',snPrev:'上周',
+  c1H:'流量与24小时回复率',c1N:'运营访客数（柱）与24小时回复率（线），涵盖表格中全部周次。',
+  c2H:'产品、Top与Super Product',c2N:'产品总数（柱）· Top Product 与 Super Product（线）。',
+  tbH:'全部历史运营KPI表',tbN:'每周12项KPI · 左右滑动查看各周。',metric:'指标',
+  noChart:'图表库（ECharts）无法加载——需联网查看图表。',
+  foot:'阿里巴巴运营周报 · 第3版 · 数据静态嵌入，可离线打开',
+  visitorsL:'访客',l1:'L1+买家',
+  pMore:'晚于访客/运营周期的买家日期按买家自身日期显示。'}
+};
+const t=()=>T[LANG];
 
-function renderCountryTable(list){
-  let h = '<tr><th>Quốc gia</th><th class="num">Visitor</th><th class="num">PV</th><th class="num">Có keyword</th><th class="num">Bản ghi keyword</th><th class="num">L0</th><th class="num">L1+</th></tr>';
-  list.forEach(c=>{
-    h += '<tr><td>'+esc(c.country)+'</td><td class="num">'+fmt(c.visitors)+'</td><td class="num">'+fmt(c.pv)+'</td><td class="num">'+fmt(c.keywordVisitors)+'</td><td class="num">'+fmt(c.exactKeywordRecords)+'</td><td class="num">'+fmt(c.L0)+'</td><td class="num"><span class="tag '+(c.L1Plus>0?'green':'gray')+'">'+fmt(c.L1Plus)+'</span></td></tr>';
-  });
-  document.getElementById('tbl_country').innerHTML = h;
-  document.getElementById('country_count').textContent = list.length+' / '+countriesFull.length+' quốc gia';
+/* ---------- flags ---------- */
+const FLAGS=[[/hoa kỳ|usa|united states/i,'US'],[/vương quốc anh|united kingdom|\buk\b/i,'GB'],[/nga\b|russia/i,'RU'],[/uzbekistan/i,'UZ'],[/việt nam|vietnam/i,'VN'],[/trung quốc|china/i,'CN'],[/đài loan|taiwan/i,'TW'],[/hong kong/i,'HK'],[/ấn độ|india/i,'IN'],[/pakistan/i,'PK'],[/indonesia/i,'ID'],[/malaysia/i,'MY'],[/philippines/i,'PH'],[/thailand/i,'TH'],[/japan|nhật/i,'JP'],[/hàn quốc|korea/i,'KR'],[/thổ nhĩ kỳ|turkey/i,'TR'],[/germany|đức/i,'DE'],[/france|pháp/i,'FR'],[/spain|tây ban nha/i,'ES'],[/italy/i,'IT'],[/mexico/i,'MX'],[/brazil/i,'BR'],[/canada/i,'CA'],[/australia/i,'AU'],[/new zealand/i,'NZ'],[/egypt/i,'EG'],[/ả rập xê út|saudi/i,'SA'],[/các tiểu vương quốc|emirates|\buae\b/i,'AE'],[/nam phi|south africa/i,'ZA'],[/nigeria/i,'NG'],[/ghana/i,'GH'],[/kenya/i,'KE'],[/tanzania/i,'TZ'],[/cote d|côte d/i,'CI'],[/cameroon/i,'CM'],[/senegal/i,'SN'],[/uganda/i,'UG'],[/zambia/i,'ZM'],[/zimbabwe/i,'ZW'],[/ethiopia/i,'ET'],[/morocco/i,'MA'],[/algeria/i,'DZ'],[/tunisia/i,'TN'],[/bangladesh/i,'BD'],[/sri lanka/i,'LK'],[/nepal/i,'NP'],[/myanmar/i,'MM'],[/cambodia/i,'KH'],[/singapore/i,'SG'],[/poland/i,'PL'],[/romania/i,'RO'],[/hungary/i,'HU'],[/bulgaria/i,'BG'],[/greece/i,'GR'],[/netherlands/i,'NL'],[/sweden/i,'SE'],[/norway/i,'NO'],[/switzerland/i,'CH'],[/slovakia/i,'SK'],[/kazakhstan/i,'KZ'],[/armenia/i,'AM'],[/azerbaijan/i,'AZ'],[/belarus/i,'BY'],[/israel/i,'IL'],[/iraq/i,'IQ'],[/jordan/i,'JO'],[/kuwait/i,'KW'],[/lebanon/i,'LB'],[/qatar/i,'QA'],[/oman/i,'OM'],[/yemen/i,'YE'],[/argentina/i,'AR'],[/colombia/i,'CO'],[/peru/i,'PE'],[/ecuador/i,'EC'],[/chile/i,'CL'],[/bolivia/i,'BO'],[/paraguay/i,'PY'],[/venezuela/i,'VE'],[/guatemala/i,'GT'],[/honduras/i,'HN'],[/nicaragua/i,'NI'],[/costa rica/i,'CR'],[/dominican|dominica/i,'DO'],[/jamaica/i,'JM'],[/haiti/i,'HT'],[/puerto rico/i,'PR'],[/mongolia/i,'MN'],[/mozambique/i,'MZ'],[/angola/i,'AO'],[/madagascar/i,'MG'],[/namibia/i,'NA'],[/botswana/i,'BW'],[/liberia/i,'LR'],[/sierra leone/i,'SL'],[/mali\b/i,'ML'],[/niger\b/i,'NE'],[/gabon/i,'GA'],[/benin/i,'BJ'],[/burkina/i,'BF'],[/congo/i,'CD'],[/maldives/i,'MV'],[/tajikistan/i,'TJ'],[/turkmenistan/i,'TM'],[/albania/i,'AL']];
+function flag(c){ if(!c) return ''; const s=String(c); for(const [re,iso] of FLAGS){ if(re.test(s)) return String.fromCodePoint(...[...iso].map(ch=>127397+ch.charCodeAt(0)))+' '; } return ''; }
+
+/* ---------- data ---------- */
+const OPS=SPEC.data.operations, VIS=SPEC.data.visitors, BUY=SPEC.data.buyers, BM=OPS.benchmark;
+const weeks=OPS.weeks.map(w=>{const kv=Object.values(w.kpis); return {period:String(w.period).split(' | ')[0], k:kv};}); // newest first
+const wNew=weeks[0], wPrev=weeks[1]||null;
+const endLabel=p=>{const s=p.split(' đến ')[1]||p; return s.replace(/-20\d\d$/,'').replace(/-/g,'/');};
+const perFull=p=>p.replace(/-/g,'/').replace(' đến ',' – ');
+const cur=VIS.current_summary, prv=VIS.previous_summary;
+const perVis=s=>{const m=String(s).match(/(20\d\d-\d\d-\d\d)\D+(?:đến|至|to)\D*(20\d\d-\d\d-\d\d)/); const f=d=>d.slice(8,10)+'/'+d.slice(5,7); return m?f(m[1])+' – '+f(m[2])+'/'+m[2].slice(0,4):bi(s).vi;};
+
+/* buyers: merge by name */
+const nm=s=>String(s).trim().toLowerCase();
+function prio(p){ const s=bi(p).vi||''; if(s.length>40) return 2; if(/rất cao/i.test(s)) return 5; if(/^cao\b|lead nóng|lead tốt|lead thật/i.test(s)) return 4; if(/trung bình-cao/i.test(s)) return 3; return 2; }
+function prioLabel(p){ const b=bi(p); const s=b.vi||''; if(s.length>40) return {vi:'Ưu tiên',zh:'优先'}; return b; }
+function group(rows){
+  const m=new Map();
+  rows.forEach(r=>{ const k=nm(r.name); if(!m.has(k)) m.set(k,[]); m.get(k).push(r); });
+  return [...m.values()].map(list=>{ list.sort((a,b)=>String(b.date).localeCompare(String(a.date))); const main=Object.assign({},list[0]); main.timeline=list.slice(1); main.n=list.length; return main; });
 }
-renderCountryTable(countriesFull.slice().sort((a,b)=>(b.L1Plus-a.L1Plus)||(b.visitors-a.visitors)));
-document.getElementById('country_search').addEventListener('input', e=>{
-  const q = e.target.value.trim().toLowerCase();
-  renderCountryTable(countriesFull.filter(c=>c.country.toLowerCase().includes(q)));
-});
-let countrySort = {key:'L1Plus',dir:-1};
-document.getElementById('tbl_country').addEventListener('click', e=>{
-  const th = e.target.closest('th'); if(!th) return;
-  const idx = Array.from(th.parentNode.children).indexOf(th);
-  const keys = ['country','visitors','pv','keywordVisitors','exactKeywordRecords','L0','L1Plus'];
-  const key = keys[idx]; if(!key) return;
-  countrySort.dir = (countrySort.key===key) ? -countrySort.dir : -1;
-  countrySort.key = key;
-  const q = document.getElementById('country_search').value.trim().toLowerCase();
-  const base = countriesFull.filter(c=>c.country.toLowerCase().includes(q));
-  base.sort((a,b)=> typeof a[key]==='string' ? a[key].localeCompare(b[key])*countrySort.dir : (a[key]-b[key])*countrySort.dir);
-  renderCountryTable(base);
-});
+const topNames=BUY.top5_priority.map(r=>nm(r.name));
+const allG=group(BUY.all_priority_rows);
+const topG=BUY.top5_priority.map(r=>{ const g=allG.find(x=>nm(x.name)===nm(r.name)); const o=Object.assign({},g||r); Object.assign(o,{next_action:r.next_action||o.next_action,need:r.need||o.need,quantity:r.quantity||o.quantity,evidence:r.evidence||o.evidence,priority:r.priority||o.priority}); return o; });
+const restG=allG.filter(x=>!topNames.includes(nm(x.name))).sort((a,b)=>prio(b.priority)-prio(a.priority)||String(b.date).localeCompare(String(a.date)));
+const bigList=[...topG,...restG];
+const paid=BUY.confirmed_paid_or_completed||[];
 
-(function renderKwGroups(){
-  const groups = D.visitors.keyword_groups;
-  let h='';
-  for (const g in groups) {
-    const isBad = /xác minh|không liên quan/i.test(g);
-    h += '<div class="kw-group"><h3>'+esc(g)+'</h3><div class="chips">'+groups[g].map(k=>'<span class="chip'+(isBad?' gray':'')+'">'+esc(k)+'</span>').join('')+'</div></div>';
-  }
-  document.getElementById('kw_groups').innerHTML = h;
-})();
-
-const keywordsFull = D.visitors.keywords_full || [];
-function renderKwTable(list){
-  let h = '<tr><th>Từ khoá</th><th class="num">Số lần</th><th class="num">PV</th><th>Quốc gia phổ biến nhất</th></tr>';
-  list.forEach(k=>{
-    h += '<tr><td>'+esc(k.keyword)+'</td><td class="num">'+fmt(k.occurrences)+'</td><td class="num">'+fmt(k.pv)+'</td><td class="hint">'+esc(k.top_country)+'</td></tr>';
-  });
-  document.getElementById('tbl_kw').innerHTML = h;
-  document.getElementById('kw_count').textContent = list.length+' / '+keywordsFull.length+' từ khoá';
+function bcard(x,i,kind){
+  const top=kind==='big'&&i<3?' top':'';
+  const pl=prioLabel(x.priority), pc=prio(x.priority)>=5?'red':prio(x.priority)>=4?'amber':'blue';
+  const tl=(x.timeline&&x.timeline.length)?'<div class="row"><b>'+t().timeline+'</b><ul class="tl">'+x.timeline.map(r=>'<li>'+esc(r.date)+' — '+esc(L(r.need))+(r.next_action?' → '+esc(L(r.next_action)):'')+'</li>').join('')+'</ul></div>':'';
+  const c=L(x.country||'');
+  return '<article class="bcard'+top+'"><div class="bh"><div class="rank">'+(i+1)+'</div><div class="who"><div class="bn">'+esc(x.name)+'</div>'+(c?'<span class="ctry">'+flag(x.country)+esc(c)+'</span>':'')+'</div><span class="tag '+pc+' pill">'+esc(pl[LANG]||pl.vi)+'</span></div>'+
+   (x.quantity?'<div class="sig"><span class="chip">'+esc(L(x.quantity))+'</span></div>':'')+
+   '<div class="row"><b>'+t().need+'</b><div class="clamp">'+esc(L(x.need))+'</div></div>'+
+   (x.next_action?'<div class="nextbox"><b>'+t().next+'</b><div class="clamp">'+esc(L(x.next_action))+'</div></div>':'')+
+   '<div class="more-detail"><div class="row"><b>'+t().evid+'</b>'+esc(L(x.evidence))+'</div>'+tl+'<div class="row"><b>'+t().verify+'</b>'+t().verifyT+(x.level?' · '+t().level+': '+esc(L(x.level)):'')+'</div></div>'+
+   '<div class="bf"><span class="dt">'+t().upd+' '+esc(x.date||'')+'</span><button class="lnk" type="button" data-d="1">'+t().detail+'</button></div></article>';
 }
-renderKwTable(keywordsFull.slice().sort((a,b)=>(b.occurrences-a.occurrences)||(b.pv-a.pv)));
-document.getElementById('kw_search').addEventListener('input', e=>{
-  const q = e.target.value.trim().toLowerCase();
-  renderKwTable(keywordsFull.filter(k=>k.keyword.toLowerCase().includes(q)));
-});
-
-document.getElementById('m_priority').textContent = D.leads.priority.length;
-document.getElementById('m_follow').textContent = D.leads.followup.length;
-document.getElementById('m_low').textContent = D.leads.lowResponse.length;
-document.getElementById('m_real').textContent = D.leads.summary.real_signal_leads;
-
-function copyText(btn, text){
-  navigator.clipboard.writeText(text).then(()=>{
-    btn.textContent = 'Đã copy!'; btn.classList.add('copied');
-    setTimeout(()=>{ btn.textContent='Copy next action'; btn.classList.remove('copied'); }, 1800);
-  }).catch(()=>{ btn.textContent = 'Không copy được'; });
+function paidCard(x,i){
+  return '<article class="bcard"><div class="bh"><div class="rank">'+(i+1)+'</div><div class="who"><div class="bn">'+esc(x.name)+'</div></div><span class="tag green pill">'+t().paidPill+'</span></div><div class="row"><b>'+t().evid+'</b>'+esc(L(x.status))+'</div><div class="row"><b>'+t().verify+'</b>'+esc(L(x.evidence_source||''))+'</div></article>';
 }
-window.copyText = copyText;
-
-function renderPriCards(list){
-  document.getElementById('cards_pri').innerHTML = list.map(r=>
-    '<div class="buyer-card"><div class="bh"><b>'+esc(r.name)+'</b><span class="bc">'+esc(r.date)+' · '+esc(r.country)+'</span></div>'+
-    '<div class="row"><b>Nhu cầu:</b> '+esc(r.need)+'</div>'+
-    '<div class="row"><b>Vướng mắc:</b> '+esc(r.blocker)+'</div>'+
-    '<div class="row"><b>Việc tiếp theo:</b> '+esc(r.next)+'</div>'+
-    '<button class="copy-btn" onclick="copyText(this, '+JSON.stringify(r.next).replace(/"/g,'&quot;')+')">Copy next action</button></div>'
-  ).join('');
-  document.getElementById('cnt_pri').textContent = list.length;
+let bigOpen=false, bigBuilt=false;
+function renderBuyers(){
+  const B=bigList;
+  $('cnt_big').textContent=B.length+' '+t().buyers;
+  $('l_big').innerHTML=B.slice(0,5).map((x,i)=>bcard(x,i,'big')).join('');
+  $('x_big').innerHTML=bigBuilt?B.slice(5).map((x,i)=>bcard(x,i+5,'big')).join(''):'';
+  const rest=B.length-5, tb=$('t_big');
+  if(rest<=0) tb.style.display='none'; else { tb.style.display=''; tb.textContent=bigOpen?t().less:t().more(rest); $('x_big').classList.toggle('show',bigOpen); }
+  $('cnt_paid').textContent=paid.length+' '+t().buyers;
+  $('l_paid').innerHTML=paid.map((x,i)=>paidCard(x,i)).join('');
+  $('paid_empty').innerHTML=paid.length?'':'<div class="empty">'+t().paidEmpty+'</div>';
+  $('pay_rule').textContent=L(BUY.payment_status_rule||'');
 }
-function renderExpList(list){
-  document.getElementById('list_exp').innerHTML = list.map(r=>'<li class="simple-item"><b>'+esc(r.name)+'</b> <span class="hint">'+esc(r.date)+'</span>: '+esc(r.note)+'</li>').join('');
-  document.getElementById('cnt_exp').textContent = list.length;
-}
-function renderSigList(list){
-  document.getElementById('list_sig').innerHTML = list.map(r=>'<li class="simple-item">'+esc(r)+'</li>').join('');
-  document.getElementById('cnt_sig').textContent = list.length;
-}
-renderPriCards(D.leads.priority);
-renderExpList(D.leads.followup);
-renderSigList(D.leads.lowResponse);
+$('t_big').addEventListener('click',()=>{ if(!bigBuilt){ bigBuilt=true; } bigOpen=!bigOpen; renderBuyers(); if(!bigOpen) $('l_big').scrollIntoView({behavior:'smooth',block:'start'}); });
+document.addEventListener('click',e=>{ const b=e.target.closest('.lnk[data-d]'); if(!b) return; const c=b.closest('.bcard'); const o=c.classList.toggle('open'); b.textContent=o?t().collapse:t().detail; });
 
-document.getElementById('ops_period').textContent = D.ops.latest.period;
-document.getElementById('ops_alerts').innerHTML = D.ops.alerts.map(x=>'<li>'+esc(x)+'</li>').join('');
-document.getElementById('ops_actions_list').innerHTML = D.ops.actions.map((x,i)=>'<div class="simple-item">'+(i+1)+'. '+esc(x)+'</div>').join('');
+/* ---------- keyword classification ---------- */
+const CORE=new RegExp(CFG.coreRe,'i');
+const NOISE=/watch|wedding|\bcars?\b|android|power bank|amplifier|bearing|jouet|shoes|jewel|crypto|memory chip|fishing|micro|laptop|phone|sexual|undefined|naswar|intimates/i;
+const cls=k=>CORE.test(k)?'core':NOISE.test(k)?'noise':'other';
+const kws=VIS.exact_keyword_aggregates.map(k=>Object.assign({cls:cls(k.exact_keyword)},k)).sort((a,b)=>b.occurrences-a.occurrences||b.source_row_pv_sum-a.source_row_pv_sum);
 
-(function renderOpsTable(){
-  const metrics = [
-    ['stars','Số sao'],['products','Tổng sản phẩm'],['newProducts','Sản phẩm mới'],
-    ['visitors','Người ghé thăm'],['inquiries','Thư hỏi hàng'],['repliedInquiries','Đã trả lời'],
-    ['rfqQuoted','RFQ đã báo giá'],['rfqRemaining','RFQ còn lại'],['avgResponse','Phản hồi TB'],
-    ['reply24h','Trả lời trong 24h'],['superProduct','Super Product'],['topProduct','Top Product']
-  ];
-  const weeksChrono = weeksFull.slice().reverse();
-  let h = '<tr><th>Chỉ số</th>'+weeksChrono.map(w=>'<th class="num">'+esc(w.period.split(' đến ')[1]||w.period)+'</th>').join('')+'</tr>';
-  metrics.forEach(([key,label])=>{
-    h += '<tr><td>'+label+'</td>'+weeksChrono.map(w=>'<td class="num">'+esc(w[key])+'</td>').join('')+'</tr>';
-  });
-  document.getElementById('tbl_ops').innerHTML = h;
-})();
+/* ---------- render text parts ---------- */
+const H=SPEC.owner_readout, HERO=SPEC.implementation_contract.hero, BL=SPEC.bilingual_copy||{};
+const mk=id=>BM[id];
+function render(){
+  const X=t();
+  document.documentElement.lang=LANG==='zh'?'zh':'vi';
+  document.querySelectorAll('.langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===LANG));
+  $('kick').textContent=X.kick;
+  $('storeName').textContent=CFG.storeName;
+  $('headline').textContent=LANG==='zh'&&BL.hero_headline_cn?BL.hero_headline_cn:HERO.headline;
+  $('pl').textContent=X.positive; $('pt').textContent=LANG==='zh'&&BL.positive_cn?BL.positive_cn:H.positive;
+  $('bl').textContent=X.bottleneck; $('bt').textContent=LANG==='zh'&&BL.bottleneck_cn?BL.bottleneck_cn:H.bottleneck;
+  $('periods').textContent=(LANG==='zh'?'运营与行业基准：':'Vận hành & benchmark ngành: ')+perFull(wNew.period)+' · '+(LANG==='zh'?'访客/国家/关键词：':'Visitor, quốc gia, từ khóa: ')+perVis(cur.period)+' · '+X.pMore;
+  const imp=mk('search_impressions'), clk=mk('search_clicks'), pv=mk('page_views');
+  const r=(a,b)=>b?Math.round(a/b*100):0;
+  const dL1=pct(cur.L1_plus,prv.L1_plus);
+  $('hk').innerHTML=[
+    [X.hkImp,fmt(imp.store),X.vsInd(fmt(r(imp.store,imp.industry_average))),imp.store>=imp.industry_average?'pos':'mid'],
+    [X.hkClk,fmt(clk.store),X.vsInd(fmt(r(clk.store,clk.industry_average))),clk.store>=clk.industry_average?'pos':'mid'],
+    [X.hkPv,fmt(pv.store),X.vsInd(fmt(r(pv.store,pv.industry_average))),pv.store>=pv.industry_average?'pos':'mid'],
+    [X.hkL1,fmt(cur.L1_plus),(dL1==null?'':(dL1>=0?'+':'')+dL1.toFixed(0)+'% '+X.vsPrev.replace('tuần','kỳ').replace('较上周','较上期')),'pos']
+  ].map(x=>'<div class="hkc '+x[3]+'"><div class="l">'+x[0]+'</div><div class="v">'+x[1]+'</div><div class="s">'+x[2]+'</div></div>').join('');
+  const vh=bigList.filter(x=>prio(x.priority)>=5).length;
+  $('owner_t').textContent=X.ownerT;
+  $('owner_s').textContent=vh+' '+X.veryHigh.toLowerCase()+' · '+bigList.length+' '+X.buyers+(paid.length?' · '+paid.length+' '+X.paidH.toLowerCase():'');
+  $('owner_a').textContent=X.ownerA;
+  ['n1','n2','n3','n4','t1','t2','t3','t4'].forEach(id=>$(id).textContent=X[id]);
+  if(LANG==='zh'&&BL.section_titles){ ['t1','t2','t3','t4'].forEach((id,i)=>$(id).textContent=(BL.section_titles[i]||'').split(' / ')[0]); }
+  $('buyer_lead').textContent=X.buyerLead;
+  $('h_big').textContent=X.bigH; $('d_big').textContent=X.bigD; $('h_paid').textContent=X.paidH; $('d_paid').textContent=X.paidD;
+  renderBuyers();
+  /* traffic */
+  $('bm_h').textContent=X.bmH;
+  const above=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].filter(k=>BM[k].store>=BM[k].industry_average);
+  const below=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].filter(k=>BM[k].store<BM[k].industry_average);
+  const nmz=k=>X.bm[k];
+  $('bm_lead').textContent=LANG==='zh'
+   ?('高于行业平均：'+(above.map(nmz).join('、')||'无')+'；低于行业平均：'+(below.map(nmz).join('、')||'无')+'。')
+   :('Vượt trung bình ngành: '+(above.map(nmz).join(', ')||'không có')+'. Thấp hơn trung bình ngành: '+(below.map(nmz).join(', ')||'không có')+'.');
+    $('bm_note').textContent=X.bmN(perFull(wNew.period),BM.industry);
+  const col={page_views:'#2563EB',search_impressions:'#16A34A',search_clicks:'#2563EB',visitors_with_inquiries:'#D97706'};
+  $('bm').innerHTML=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].map(k=>{
+    const m=BM[k], mx=Math.max(m.store,m.industry_average,m.industry_leaders,1), up=m.store>=m.industry_average;
+    const bar=(l,v,c)=>'<div class="bar"><div class="bl"><span>'+l+'</span><b>'+fmt(v)+'</b></div><div class="tr"><div class="fl" style="width:'+Math.max(2,v/mx*100)+'%;background:'+c+'"></div></div></div>';
+    return '<div class="bmc '+(up?'green':'amber')+'"><h3>'+X.bm[k]+'</h3>'+bar(X.store,m.store,up?'#16A34A':'#D97706')+bar(X.avg,m.industry_average,'#94a3b8')+bar(X.lead,m.industry_leaders,'#334155')+'<div class="pcts"><span class="tag '+(up?'green':'amber')+'">'+fmt1(m.industry_average?m.store/m.industry_average*100:0)+'% '+X.vsAvg+'</span><span class="tag gray">'+fmt1(m.industry_leaders?m.store/m.industry_leaders*100:0)+'% '+X.vsLead+'</span></div></div>';
+  }).join('');
+  $('vs_h').textContent=X.vsH;
+  $('vs_lead').textContent=(LANG==='zh'?'L1+买家 ':'Buyer L1+ ')+fmt(cur.L1_plus)+' / '+fmt(cur.visitor_records)+' visitor ('+(cur.visitor_records?Math.round(cur.L1_plus/cur.visitor_records*100):0)+'%) · '+fmt(cur.countries)+(LANG==='zh'?' 个国家/地区':' quốc gia / vùng');
+  $('traffic_lead').textContent=$('vs_lead').textContent;
+  $('vs_note').textContent=X.vsNote(perVis(cur.period),perVis(prv.period));
+  const mm=(l,c,p)=>{const d=pct(c,p); return '<div class="metric"><div class="n">'+fmt(c)+'</div><div class="l">'+l+'</div><div class="d '+(d==null?'':d>=0?'up':'down')+'">'+(d==null?'':(d>=0?'▲ +':'▼ ')+d.toFixed(0)+'% · '+X.prev+' '+fmt(p))+'</div></div>';};
+  $('vs_metrics').innerHTML=mm(X.mVisitors,cur.visitor_records,prv.visitor_records)+mm(X.mCountries,cur.countries,prv.countries)+mm(X.mPv,cur.pv,prv.pv)+mm(X.mL1,cur.L1_plus,prv.L1_plus);
+  $('fn_h').textContent=X.fnH; $('fn_n').textContent=X.fnN; $('ct_h').textContent=X.ctH; $('ct_n').textContent=X.ctN;
+  const cs=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors||b.L1_plus-a.L1_plus);
+  $('ct_all').textContent=X.ctAll(cs.length);
+  $('tbl_country').innerHTML='<tr>'+X.cols.map((c,i)=>'<th class="'+(i?'num':'')+'">'+c+'</th>').join('')+'</tr>'+cs.map(c=>'<tr><td>'+flag(c.country)+esc(L(c.country))+'</td><td class="num">'+c.visitors+'</td><td class="num">'+c.pv+'</td><td class="num">'+c.keyword_visitors+'</td><td class="num">'+c.exact_keyword_records+'</td><td class="num">'+c.L0+'</td><td class="num">'+c.L1+'</td><td class="num">'+c.L2+'</td><td class="num">'+c.L3+'</td><td class="num">'+c.L4+'</td><td class="num"><b>'+c.L1_plus+'</b></td></tr>').join('');
+  $('vh_h').textContent=X.vhH; $('vh_n').textContent=X.vhN;
+  /* products */
+  $('prod_lead').textContent=X.prodLead;
+  $('tp_h').textContent=X.tpH; $('tp_lead').textContent=X.tpLead; $('tp_note').textContent=X.tpNote;
+  $('tp_cards').innerHTML=OPS.top_products.map(p=>'<div class="pcard"><div class="rank">'+p.rank+'</div><a class="nm" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+'</a><div class="pid">Product ID: '+esc(p.product_id)+'</div><div class="uv">'+fmt(p.uv)+' <small>UV</small></div><a class="btn" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+X.open+'</a></div>').join('');
+  $('kw_h').textContent=X.kwH; $('kw_lead').textContent=X.kwLead; $('kw_note').textContent=X.kwNote(perVis(cur.period));
+  const core=kws.filter(k=>k.cls==='core');
+  $('kw_warn').innerHTML=core.length<3?'<div class="warn">'+X.kwWarn(core.length,kws.length)+'</div>':'';
+  $('kw_legend').innerHTML=core.length<3?'':'<span><i style="background:#16A34A"></i>'+X.cls.core+'</span>';
+  $('kw_all_s').textContent=X.kwAllS(kws.length); $('kw_q').placeholder=X.kwQ;
+  drawKwTable();
+  /* conclusion */
+  $('oc_h').textContent=X.ocH;
+  $('oc_sum').textContent=LANG==='zh'&&BL.hero_headline_cn?BL.hero_headline_cn:HERO.headline;
+  $('g_h').textContent=X.gH; $('g_t').textContent=$('pt').textContent;
+  $('a_h').textContent=X.aH; $('a_t').textContent=$('bt').textContent;
+  $('ac_h').textContent=X.acH;
+  const na=H.next_actions, ac=LANG==='zh'&&BL.actions_cn?BL.actions_cn:na;
+  const cards=[[X.w24,ac[0],'P0','red'],[X.w7,ac[1],'P1','amber']];
+  $('actions').innerHTML=cards.map(c=>'<div class="act"><h3><span class="tag '+c[3]+'">'+c[2]+'</span>'+c[0]+'</h3><p>'+esc(c[1]||'')+'</p></div>').join('')+
+    '<div class="act"><h3><span class="tag blue">P2</span>'+X.wNext+'</h3><p>'+X.nextWeek+'</p></div>'+
+    (ac[2]?'<div class="act note2"><h3><span class="tag amber">!</span>'+X.wNote+'</h3><p>'+esc(ac[2])+'</p></div>':'');
+  /* ops */
+  $('om_h').textContent=X.omH; $('om_n').textContent=X.omN(perFull(wNew.period));
+  const dl=(i)=>{ if(!wPrev) return ''; const d=pct(num(wNew.k[i]),num(wPrev.k[i])); return d==null?'':'<div class="d '+(d>=0?'up':'down')+'">'+(d>=0?'▲ +':'▼ ')+d.toFixed(0)+'% '+X.vsPrev+'</div>'; };
+  const pick=[[0,'★'],[3,''],[4,''],[9,'']];
+  $('ops_metrics').innerHTML=[0,3,4,9,1,7,10,11].map(i=>'<div class="metric"><div class="n">'+esc(wNew.k[i])+(i===0?' ★':'')+'</div><div class="l">'+X.k[i]+'</div>'+(i===0?'':dl(i))+'</div>').join('');
+  $('sn_h').textContent=X.snH;
+  $('sn_body').innerHTML=(OPS.source_action_notes||[]).map(n=>{const lb=n.label?L(n.label):''; return '<p>'+(lb?'<b>'+esc(lb)+'</b><br>':'')+'<span class="hint">'+X.snCur+':</span> '+esc(L(n.current))+'<br><span class="hint">'+X.snPrev+':</span> '+esc(L(n.previous))+'</p>';}).join('');
+  $('c1_h').textContent=X.c1H; $('c1_n').textContent=X.c1N; $('c2_h').textContent=X.c2H; $('c2_n').textContent=X.c2N;
+  $('tb_h').textContent=X.tbH; $('tb_n').textContent=X.tbN;
+  const wc=weeks.slice().reverse();
+  $('tbl_ops').innerHTML='<tr><th>'+X.metric+'</th>'+wc.map(w=>'<th class="num">'+esc(endLabel(w.period))+'</th>').join('')+'</tr>'+X.k.map((lab,i)=>'<tr><td>'+lab+'</td>'+wc.map(w=>'<td class="num">'+esc(w.k[i])+'</td>').join('')+'</tr>').join('');
+  $('foot').innerHTML=X.foot+'<br>'+X.pMore;
+  document.title=CFG.storeName+' · '+X.kick;
+  $('n1').textContent=X.n1;
+  if(window.__charts) drawCharts();
+}
+function drawKwTable(){
+  const X=t(), q=($('kw_q').value||'').trim().toLowerCase();
+  const list=kws.filter(k=>!q||k.exact_keyword.toLowerCase().includes(q));
+  $('kw_cnt').textContent=list.length+' / '+kws.length;
+  $('tbl_kw').innerHTML='<tr>'+X.kwCols.map((c,i)=>'<th class="'+(i&&i<3?'num':'')+'">'+c+'</th>').join('')+'</tr>'+list.slice(0,600).map(k=>'<tr><td>'+esc(k.exact_keyword)+'</td><td class="num">'+k.occurrences+'</td><td class="num">'+k.source_row_pv_sum+'</td><td><span class="tag '+(k.cls==='core'?'green':k.cls==='noise'?'red':'gray')+'">'+X.cls[k.cls]+'</span></td></tr>').join('');
+}
+$('kw_q').addEventListener('input',drawKwTable);
+
+/* ---------- charts ---------- */
+let charts=[]; const AXL={fontSize:11};
+function mkc(id){ const el=$(id); let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+function drawCharts(){
+  if(typeof echarts==='undefined') return;
+  const X=t(), mob=MOB(); charts=[];
+  mkc('ch_funnel').setOption({tooltip:{trigger:'item',formatter:'{b}: {c}'},series:[{type:'funnel',left:'6%',width:'88%',sort:'none',minSize:'22%',label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},color:['#9fb3d6','#7ea1e0','#4f7fd9','#2563EB','#16A34A'],data:['L0','L1','L2','L3','L4'].map(k=>({value:cur.levels[k],name:k}))}]});
+  const top=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors||b.L1_plus-a.L1_plus).slice(0,12).reverse();
+  const lc=['#cbd5e1','#93c5fd','#3b82f6','#1d4ed8','#16a34a'];
+  mkc('ch_country').setOption({tooltip:{trigger:'axis',axisPointer:{type:'shadow'},confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:mob?84:120,right:24,top:34,bottom:20},xAxis:{type:'value',axisLabel:AXL},yAxis:{type:'category',data:top.map(c=>L(c.country).split(/[\/;]/)[0].trim()),axisLabel:{fontSize:11,width:mob?80:116,overflow:'truncate'}},
+    series:['L0','L1','L2','L3','L4'].map((k,i)=>({name:k,type:'bar',stack:'lv',data:top.map(c=>c[k]),itemStyle:{color:lc[i]}}))});
+  const vh=(VIS.visitor_history||[]).slice().reverse();
+  const lab=v=>{const m=String(v.period).match(/(\d{4})-(\d\d)-(\d\d)\D+(\d{4})-(\d\d)-(\d\d)/); return m?m[2]+'/'+m[3]+'–'+m[5]+'/'+m[6]:String(v.tab).slice(-12);};
+  mkc('ch_vhist').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:56},xAxis:{type:'category',data:vh.map(lab),axisLabel:Object.assign({},AXL,{rotate:35})},yAxis:[{type:'value',name:X.visitorsL,axisLabel:AXL},{type:'value',name:X.l1,axisLabel:AXL}],
+    series:[{name:X.visitorsL,type:'bar',data:vh.map(v=>v.visitor_records),itemStyle:{color:'#93c5fd',borderRadius:[4,4,0,0]}},{name:X.l1,type:'line',yAxisIndex:1,data:vh.map(v=>v.L1_plus),smooth:true,itemStyle:{color:'#16A34A'}}]});
+  const core=kws.filter(k=>k.cls==='core');
+  if(core.length>=3){
+    $('ch_kw').style.display='';
+    const n=mob?10:10, tk=core.slice(0,n).reverse();
+    $('ch_kw').style.height=mob?(tk.length*40+50)+'px':'';
+    mkc('ch_kw').setOption({tooltip:{trigger:'item',confine:true,formatter:p=>{const k=tk[p.dataIndex];return '<b>'+esc(k.exact_keyword)+'</b><br>'+(LANG==='zh'?'出现次数':'Số lần')+': '+k.occurrences+'<br>PV '+(LANG==='zh'?'（来源行）':'(dòng nguồn)')+': '+k.source_row_pv_sum;}},
+      grid:{left:4,right:mob?64:100,top:10,bottom:24,containLabel:true},xAxis:{type:'value',minInterval:1,axisLabel:AXL},yAxis:{type:'category',data:tk.map(k=>k.exact_keyword),axisLabel:{fontSize:mob?10:11,width:mob?100:200,overflow:'break'}},
+      series:[{type:'bar',data:tk.map(k=>({value:k.occurrences,itemStyle:{color:'#16A34A',borderRadius:[0,4,4,0]}})),label:{show:true,position:'right',fontSize:mob?10:11,formatter:p=>{const k=tk[p.dataIndex];return mob?k.occurrences+'×':k.occurrences+'× · PV '+k.source_row_pv_sum;}}}]});
+  } else { $('ch_kw').style.display='none'; }
+  const wk=weeks.slice().reverse(), xl=wk.map(w=>endLabel(w.period));
+  const ax={type:'category',data:xl,axisLabel:Object.assign({},AXL,{rotate:45})};
+  mkc('ch_trend').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:50},xAxis:ax,yAxis:[{type:'value',name:X.k[3],axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
+    series:[{name:X.k[3],type:'bar',data:wk.map(w=>num(w.k[3])),itemStyle:{color:'#2563EB',borderRadius:[4,4,0,0]}},{name:X.k[9],type:'line',yAxisIndex:1,data:wk.map(w=>num(w.k[9])),smooth:true,itemStyle:{color:'#16A34A'}}]});
+  mkc('ch_products').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:50},xAxis:ax,yAxis:[{type:'value',name:'Top/Super',axisLabel:AXL},{type:'value',name:X.k[1],axisLabel:AXL}],
+    series:[{name:X.k[1],type:'bar',yAxisIndex:1,data:wk.map(w=>num(w.k[1])),itemStyle:{color:'#fca5a5'}},{name:X.k[11],type:'line',data:wk.map(w=>num(w.k[11])),smooth:true,itemStyle:{color:'#D97706'}},{name:X.k[10],type:'line',data:wk.map(w=>num(w.k[10])),smooth:true,itemStyle:{color:'#16A34A'}}]});
+}
+/* ---------- init ---------- */
+if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang',LANG);}catch(e){} render(); })); }
+render();
+if(typeof echarts==='undefined'){ ['ch_funnel','ch_country','ch_vhist','ch_kw','ch_trend','ch_products'].forEach(id=>{$(id).innerHTML='<p class="note" style="padding:20px">'+t().noChart+'</p>';}); }
+else { window.__charts=true; drawCharts(); let lm=MOB(),rt; const rs=()=>{clearTimeout(rt);rt=setTimeout(()=>{ if(MOB()!==lm){lm=MOB();drawCharts();} else charts.forEach(c=>c.resize()); },150);}; window.addEventListener('resize',rs); window.addEventListener('orientationchange',rs); }
+/* nav highlight */
+(function(){ const links=[...document.querySelectorAll('#nav a')], secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  function on(){ let cur=0; secs.forEach((s,i)=>{ if(s.getBoundingClientRect().top<160) cur=i; }); links.forEach((a,i)=>a.classList.toggle('on',i===cur)); }
+  window.addEventListener('scroll',on,{passive:true}); on(); })();
 </script>
 </body></html>
