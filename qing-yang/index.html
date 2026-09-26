@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Qing Yang · Báo cáo vận hành Alibaba</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#102A43;--blue:#2563EB;--blue2:#DBEAFE;--green:#16A34A;--green2:#DCFCE7;--amber:#D97706;--amber2:#FEF3C7;--red:#DC2626;--red2:#FEE2E2;--bg:#F3F6FA;--ink:#172033;--muted:#5b6678;--line:#E4EAF1;--shadow:0 2px 8px rgba(16,42,67,.07);--h1:#1f4d3a;--h2:#2f855a}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 Inter,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}
+.wrap{max-width:1440px;margin:auto;padding:20px 28px 48px}
+.langbar{display:none;justify-content:flex-end;gap:8px;margin-bottom:10px}
+.langbar.on{display:flex}
+.langbar button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:9px 18px;font:inherit;font-weight:800;font-size:13px;cursor:pointer;min-height:44px;color:var(--navy)}
+.langbar button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));color:#fff;border-radius:18px;padding:24px 28px}
+.hero .kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.hero h1{font-size:24px;margin:4px 0 8px;letter-spacing:-.02em;line-height:1.25}
+.hero .headline{font-size:18px;font-weight:800;margin:6px 0 10px;max-width:900px;line-height:1.4}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px;max-width:980px}
+.pn div{border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.45;font-weight:600}
+.pn b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.pn .p{background:rgba(34,197,94,.22);border:1px solid rgba(134,239,172,.55)}
+.pn .n{background:rgba(251,146,60,.25);border:1px solid rgba(253,186,116,.6)}
+.periods{font-size:11.5px;opacity:.85;margin:0 0 14px}
+.hk{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.hkc{background:rgba(255,255,255,.96);color:var(--ink);border-radius:14px;padding:12px 14px}
+.hkc .l{font-size:12px;color:var(--muted);font-weight:700}
+.hkc .v{font-size:26px;font-weight:900;letter-spacing:-.04em;line-height:1.15;margin:2px 0}
+.hkc .s{font-size:11.5px;color:var(--muted)}
+.hkc.pos .v{color:var(--green)}.hkc.urg .v{color:var(--red)}.hkc.mid .v{color:var(--amber)}
+.owner{background:linear-gradient(135deg,#f97316,#dc2626);border-radius:14px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.owner b{font-size:15px;display:block}.owner span{font-size:13px;opacity:.95}
+.owner a{background:#fff;color:#b91c1c;font-weight:850;text-decoration:none;padding:12px 18px;border-radius:12px;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.nav{position:sticky;top:0;z-index:50;background:rgba(243,246,250,.95);backdrop-filter:blur(6px);display:flex;gap:8px;padding:10px 0;margin-bottom:8px}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:750;font-size:13px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:20px}
+.nav a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.area-title{font-size:21px;font-weight:850;color:var(--navy);margin:24px 0 4px;letter-spacing:-.02em}
+.area-lead{font-size:14.5px;color:#33415c;font-weight:700;margin:0 0 14px}
+.section{background:#fff;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 6px}
+.lead{font-weight:800;font-size:15px;color:var(--navy);background:linear-gradient(90deg,#e8f0ff,#fff);border-left:4px solid var(--blue);padding:10px 14px;border-radius:8px;line-height:1.5;margin:0 0 14px}
+.note{font-size:12px;color:var(--muted);margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tag{display:inline-flex;align-items:center;border-radius:20px;padding:3px 10px;font-size:11.5px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:#166534;background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:#536074;background:#eef1f5}
+.bgroup h2{display:flex;align-items:center;gap:10px;font-size:18px;margin:0 0 4px;flex-wrap:wrap}
+.bgroup h2 i{font-style:normal;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;color:#fff}
+.bgroup.big h2 i{background:var(--red)}.bgroup.paid h2 i{background:var(--green)}
+.bdef{font-size:13px;color:var(--muted);margin:0 0 12px}
+.bcard{border-radius:16px;padding:14px 16px;margin-bottom:12px;border:1px solid var(--line);border-left:6px solid #94a3b8;background:#fff;box-shadow:0 1px 4px rgba(16,42,67,.06)}
+.big .bcard{border-left-color:var(--amber);background:linear-gradient(90deg,#fffbeb,#fff 45%)}
+.big .bcard.top{border-left-color:var(--red);background:linear-gradient(90deg,#fff5f5,#fff 45%)}
+.paid .bcard{border-left-color:var(--green);background:linear-gradient(90deg,#f0fdf4,#fff 45%)}
+.bh{display:flex;gap:10px;align-items:flex-start}
+.rank{flex:none;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+.big .top .rank{background:var(--red)}.paid .rank{background:var(--green)}
+.who{flex:1 1 0;min-width:90px}
+.bn{font-size:16.5px;font-weight:850;color:var(--navy);line-height:1.3;word-break:break-word}
+.ctry{display:inline-block;margin-top:3px;font-size:12px;color:#475569;background:#f1f5f9;border-radius:20px;padding:2px 9px}
+.pill{flex:none}
+.sig{margin:10px 0 4px}
+.chip{display:inline-block;background:var(--blue2);color:#1e40af;font-weight:800;border-radius:8px;padding:3px 10px;font-size:13px;line-height:1.4}
+.row{font-size:14px;margin:8px 0;line-height:1.5}
+.row b,.nextbox b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#7a8699;margin-bottom:1px}
+.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bcard.open .clamp{display:block;-webkit-line-clamp:unset}
+.nextbox{margin-top:8px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600;color:#1e3a8a}
+.big .nextbox{background:#fffbeb;border-color:#fde68a;color:#78350f}
+.paid .nextbox{background:#f0fdf4;border-color:#bbf7d0;color:#14532d}
+.nextbox b{opacity:.7;color:inherit}
+.more-detail{display:none}
+.bcard.open .more-detail{display:block}
+.tl{margin:6px 0 0;padding-left:16px;font-size:13px;color:#455066}
+.bf{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:8px;flex-wrap:wrap}
+.dt{font-size:12.5px;font-weight:750;color:var(--muted)}
+.lnk{border:0;background:transparent;color:var(--blue);font:inherit;font-size:13px;font-weight:800;cursor:pointer;padding:10px 4px;min-height:44px}
+.extra{display:none}
+.extra.show{display:block;animation:fd .22s ease}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-family:inherit;min-height:46px}
+.btn.wide{width:100%}.btn.ghost{background:#eef2f7;color:var(--navy)}
+.empty{background:#f0fdf4;border:1px dashed #86efac;border-radius:14px;padding:16px;font-weight:700;color:#166534;font-size:14px}
+.rule{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.bm{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.bmc{border:1px solid var(--line);border-radius:14px;padding:15px;border-top:4px solid var(--blue)}
+.bmc.green{border-top-color:var(--green)}.bmc.amber{border-top-color:var(--amber);background:#fffdf5}
+.bmc h3{margin:0 0 10px;font-size:15px}
+.bar{margin:8px 0}
+.bar .bl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:3px;gap:8px}
+.bar .bl b{color:var(--ink)}
+.bar .tr{height:10px;background:#eef2f7;border-radius:6px;overflow:hidden}
+.bar .fl{height:100%;border-radius:6px}
+.pcts{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px}
+.bmc p{font-size:13px;color:#1f2a44;font-weight:700;margin:0}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metric{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.metric .n{font-size:24px;font-weight:850}
+.metric .l{font-size:12px;color:var(--muted)}
+.metric .d{font-size:12px;font-weight:800;margin-top:2px}
+.up{color:var(--green)}.down{color:var(--red)}
+.chart{width:100%;height:320px}
+.chart.cty{height:440px}.chart.kw{height:440px}.chart.lg{height:320px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin-bottom:8px;color:#455066}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.warn{background:var(--amber2);border:1px solid #fde68a;border-radius:12px;padding:12px 14px;font-size:13.5px;font-weight:650;color:#78350f;margin-bottom:12px}
+.pcard{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.pcard .rank{background:var(--blue)}
+.pcard .nm{font-weight:750;font-size:14.5px;color:var(--navy);text-decoration:none;line-height:1.4;word-break:break-word}
+.pcard .pid{font-size:11.5px;color:var(--muted)}
+.pcard .uv{font-size:30px;font-weight:900;color:var(--blue);letter-spacing:-.04em}
+.pcard .uv small{font-size:12px;color:var(--muted);font-weight:700}
+.searchbar{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:16px}
+.count-pill{font-size:11px;color:var(--muted);background:#f3f5f8;border-radius:20px;padding:4px 10px;white-space:nowrap}
+details.dx summary{cursor:pointer;font-weight:800;color:var(--navy);padding:12px 0;min-height:44px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:460px;-webkit-overflow-scrolling:touch}
+.table{border-collapse:collapse;width:100%;min-width:620px;font-size:12.5px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap;z-index:1}
+.table th.num,.table td.num{text-align:right}
+.owner-sum{font-weight:800;font-size:15px;color:var(--navy);background:linear-gradient(90deg,#e8f0ff,#fff);border-left:4px solid var(--blue);padding:12px 14px;border-radius:10px;line-height:1.55;margin:0 0 14px}
+.tri{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.col{border-radius:14px;padding:16px;border:1px solid}
+.col h3{margin:0 0 8px;font-size:15px}
+.col p{margin:0;font-size:14px;font-weight:650}
+.col.g{background:var(--green2);border-color:#bbf7d0}.col.g h3{color:#166534}
+.col.a{background:var(--amber2);border-color:#fde68a}.col.a h3{color:#92400e}
+.act{border-radius:14px;padding:16px;background:var(--blue2);border:1px solid #bfdbfe}
+.act.note2{background:var(--amber2);border-color:#fde68a}
+.act h3{margin:0 0 6px;font-size:15px;display:flex;gap:8px;align-items:center}
+.act p{margin:0;font-size:13.5px}
+.ops-table th{background:var(--navy);color:#fff}
+.ops-table td:first-child,.ops-table th:first-child{position:sticky;left:0;font-weight:800;color:var(--navy);background:#f6f9fc;z-index:2}
+.ops-table th:first-child{background:var(--navy);color:#fff}
+.notes p{font-size:13px;margin:6px 0}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:26px;line-height:1.9}
+.lb{position:fixed;inset:0;background:rgba(10,20,35,.88);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
+@media(min-width:1000px){.blist,.extra.show{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:start}}
+@media(max-width:1100px){.bm{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.hk{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+ .wrap{padding:10px 12px 20px}
+ .hero{padding:16px 14px;border-radius:16px}.hero h1{font-size:20px}.hero .headline{font-size:16px}
+ .pn{grid-template-columns:1fr}
+ .hk{gap:8px}.hkc{padding:10px 12px}.hkc .v{font-size:23px}
+ .owner{padding:12px 14px}.owner a{width:100%;justify-content:center}
+ .nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:80;margin:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom));gap:4px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(16,42,67,.1)}
+ .nav a{flex:1;text-align:center;border:0;border-radius:12px;padding:0 4px;min-height:48px;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:transparent}
+ .nav a.on{background:var(--navy);color:#fff}
+ .area-title{font-size:20px;margin-top:20px}
+ .section{padding:15px 14px;border-radius:14px}
+ .bm,.grid2,.grid3,.tri{grid-template-columns:1fr}
+ .metric-row{grid-template-columns:1fr 1fr;gap:8px}.metric .n{font-size:21px}
+ .chart{height:300px}.chart.cty{height:420px}.chart.lg{height:300px}
+ .btn{width:100%}.bcard{padding:13px}
+ .pcard .uv{font-size:26px}
+}
+@media(max-width:420px){.hkc .v{font-size:21px}.hkc .l{font-size:11.5px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="langbar" id="langbar"><button type="button" data-l="vi">Tiếng Việt</button><button type="button" data-l="zh">中文</button></div>
+  <header class="hero">
+    <div class="kick" id="kick"></div>
+    <h1 id="storeName"></h1>
+    <div class="headline" id="headline"></div>
+    <div class="pn"><div class="p"><b id="pl"></b><span id="pt"></span></div><div class="n"><b id="bl"></b><span id="bt"></span></div></div>
+    <p class="periods" id="periods"></p>
+    <div class="hk" id="hk"></div>
+    <div class="owner"><div><b id="owner_t"></b><span id="owner_s"></span></div><a href="#buyer" id="owner_a"></a></div>
+  </header>
+  <nav class="nav" id="nav"><a href="#buyer" id="n1"></a><a href="#traffic" id="n2"></a><a href="#san-pham" id="n3"></a><a href="#van-hanh" id="n4"></a></nav>
+
+  <section id="buyer">
+    <div class="area-title" id="t1"></div>
+    <p class="area-lead" id="buyer_lead"></p>
+    <div class="section"><div class="bgroup big">
+      <h2><span id="h_big"></span> <i id="cnt_big"></i></h2>
+      <p class="bdef" id="d_big"></p>
+      <div class="blist" id="l_big"></div><div class="extra blist" id="x_big"></div>
+      <button class="btn ghost wide" id="t_big" type="button"></button>
+    </div></div>
+    <div class="section"><div class="bgroup paid">
+      <h2><span id="h_paid"></span> <i id="cnt_paid"></i></h2>
+      <p class="bdef" id="d_paid"></p>
+      <div class="blist" id="l_paid"></div>
+      <div id="paid_empty"></div>
+      <p class="rule" id="pay_rule"></p>
+    </div></div>
+  </section>
+
+  <section id="traffic">
+    <div class="area-title" id="t2"></div>
+    <p class="area-lead" id="traffic_lead"></p>
+    <div class="section">
+      <h2 id="bm_h"></h2>
+      <p class="lead" id="bm_lead"></p>
+      <p class="note" id="bm_note"></p>
+      <div class="bm" id="bm"></div>
+    </div>
+    <div class="section">
+      <h2 id="vs_h"></h2>
+      <p class="lead" id="vs_lead"></p>
+      <p class="note" id="vs_note"></p>
+      <div class="metric-row" id="vs_metrics"></div>
+    </div>
+    <div class="grid2">
+      <div class="section"><h2 id="fn_h"></h2><p class="note" id="fn_n"></p><div id="ch_funnel" class="chart"></div></div>
+      <div class="section"><h2 id="ct_h"></h2><p class="note" id="ct_n"></p><div id="ch_country" class="chart cty"></div>
+        <details class="dx"><summary id="ct_all"></summary><div class="table-wrap"><table class="table" id="tbl_country"></table></div></details></div>
+    </div>
+    <div class="section"><h2 id="vh_h"></h2><p class="note" id="vh_n"></p><div id="ch_vhist" class="chart"></div></div>
+  </section>
+
+  <section id="san-pham">
+    <div class="area-title" id="t3"></div>
+    <p class="area-lead" id="prod_lead"></p>
+    <div class="section"><h2 id="tp_h"></h2><p class="lead" id="tp_lead"></p><div class="grid3" id="tp_cards"></div><p class="note" id="tp_note" style="margin-top:10px"></p></div>
+    <div class="section">
+      <h2 id="kw_h"></h2>
+      <p class="lead" id="kw_lead"></p>
+      <p class="note" id="kw_note"></p>
+      <div id="kw_warn"></div>
+      <div class="legend" id="kw_legend"></div>
+      <div id="ch_kw" class="chart kw"></div>
+      <details class="dx" id="kw_all"><summary id="kw_all_s"></summary>
+        <div class="searchbar"><input id="kw_q" type="search"><span class="count-pill" id="kw_cnt"></span></div>
+        <div class="table-wrap"><table class="table" id="tbl_kw"></table></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="van-hanh">
+    <div class="area-title" id="t4"></div>
+    <div class="section">
+      <h2 id="oc_h"></h2>
+      <p class="owner-sum" id="oc_sum"></p>
+      <div class="tri"><div class="col g"><h3 id="g_h"></h3><p id="g_t"></p></div><div class="col a"><h3 id="a_h"></h3><p id="a_t"></p></div></div>
+    </div>
+    <div class="section"><h2 id="ac_h"></h2><div class="grid3" id="actions" style="margin-top:12px"></div></div>
+    <div class="section"><h2 id="om_h"></h2><p class="note" id="om_n"></p><div class="metric-row" id="ops_metrics"></div>
+      <details class="dx notes"><summary id="sn_h"></summary><div id="sn_body"></div></details></div>
+    <div class="grid2">
+      <div class="section"><h2 id="c1_h"></h2><p class="note" id="c1_n"></p><div id="ch_trend" class="chart lg"></div></div>
+      <div class="section"><h2 id="c2_h"></h2><p class="note" id="c2_n"></p><div id="ch_products" class="chart lg"></div></div>
+    </div>
+    <div class="section"><h2 id="tb_h"></h2><p class="note" id="tb_n"></p><div class="table-wrap" style="max-height:none"><table class="table ops-table" id="tbl_ops"></table></div></div>
+  </section>
+  <div class="foot" id="foot"></div>
+</main>
+
+<script>
+const SPEC = {"spec_version": "3.0-mobile-owner", "prepared_at": "2026-09-26", "project": {"store_name": "QING YANG WOOD PRODUCTION TRADING COMPANY LIMITED", "short_name": "Qing Yang", "target_app": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/qing-yang/index.html", "reference_app": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/riken/index.html", "reference_spec": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/CLAUDE_CODE_RIKEN_VERSION_3_2026-09-21.json", "language": "Song ngữ Việt–Trung: mọi tiêu đề, kết luận, action và trạng thái quan trọng phải có cả hai ngôn ngữ.", "audience": "Ông chủ doanh nghiệp", "viewport_priority": "Mobile 390×844; sau đó tablet 768px và desktop 1440px"}, "owner_story": {"headline_vi": "8/15 visitor là buyer L1+, nhưng quy mô traffic còn nhỏ và tuần này chưa có buyer mới phản hồi.", "headline_cn": "15位访客中有8位为L1+买家，但流量规模仍小，本周没有新买家回复。", "positive_vi": "Tỷ trọng buyer L1+ đạt 53,3%; đã xuất hiện các từ khóa đúng ngành như “pvc edge banding strip”, “melamine edge banding tape” và “natural wood veneer edge band”.", "positive_cn": "L1+买家占53.3%；已出现“pvc edge banding strip”“melamine edge banding tape”和“natural wood veneer edge band”等行业相关词。", "bottleneck_vi": "Gian hàng đang 0 sao; tuần vận hành có 9 Page Views, 6 Search Impressions, 0 Search Clicks, 0 inquiry và 0/40 RFQ đã sử dụng. Traffic visitor tập trung 66,7% tại Việt Nam.", "bottleneck_cn": "店铺目前为0星；运营周仅有9次页面浏览、6次搜索曝光、0次搜索点击、0个询盘，并且40次RFQ额度尚未使用。访客中66.7%来自越南。", "buyer_vi": "Chỉ có Lorie C cần theo dõi: mẫu veneer edge banding đã được báo gửi từ 18/08 nhưng chưa xác nhận nhận mẫu hoặc đặt hàng.", "buyer_cn": "目前仅需继续跟进Lorie C：8月18日已表示寄出木皮封边样品，但尚未确认收样或下单。", "management_decision_vi": "Không tăng ngân sách quảng cáo trước khi sửa nền tảng sản phẩm, dùng RFQ và hoàn tất vòng follow mẫu của Lorie C.", "management_decision_cn": "在优化产品基础、使用RFQ并完成Lorie C样品跟进闭环之前，不建议先扩大广告预算。"}, "implementation_contract": {"page": "Một trang dọc duy nhất; lướt từ đầu đến cuối, không chia các khu vực chính thành tab.", "order": ["Hero — kết luận dành cho ông chủ / 老板摘要", "01 · Buyer cần follow / 重点跟进买家", "02 · Traffic & Thị trường / 流量与市场", "03 · Sản phẩm & Nhu cầu tìm kiếm thật / 产品与真实搜索需求", "04 · Vận hành & Hành động / 运营与行动"], "hero": {"mobile_max_initial_height": "760px", "kpis": [{"label_vi": "Buyer L1+", "label_cn": "L1+买家", "value": 8, "support": "8/15 = 53,3%"}, {"label_vi": "PV visitor", "label_cn": "访客PV", "value": 39, "support": "18–24/09"}, {"label_vi": "Search Impressions", "label_cn": "搜索曝光", "value": 6, "support": "13–19/09"}, {"label_vi": "Buyer mới phản hồi", "label_cn": "新回复买家", "value": 0, "support": "20–26/09"}], "rules": ["Ghi rõ kỳ riêng dưới từng KPI vì ba sheet có kỳ khác nhau.", "Không trộn 39 PV của visitor sheet với 9 Page Views của benchmark tuần vận hành.", "Không dùng 0% phản hồi trong 24h để kết luận đội ngũ phản hồi kém vì tuần đó có 0 inquiry."]}, "buyer_section": {"default_visible_count": 1, "top5_rule": "Form giống Riken nhưng dữ liệu chỉ có 1 buyer; không tạo 4 buyer giả và không để 4 card trống.", "show_more": false, "paid_order_empty_state_vi": "Chưa có bằng chứng buyer đã thanh toán hoặc chốt đơn trong dữ liệu cập nhật.", "paid_order_empty_state_cn": "本次更新数据中暂无买家已付款或已成交的证据。", "card_fields": ["quốc gia/cờ", "sản phẩm và số lượng", "dẫn chứng hội thoại", "mức độ nóng", "điểm đang chặn", "việc tiếp theo", "ngày cập nhật"]}, "traffic_section": {"benchmark_chart": "Biểu đồ 3 nhóm chỉ hiển thị gian hàng; Trung bình ngành và Top ngành phải hiển thị N/A/Chưa lấy được từ tooltip, tuyệt đối không vẽ cột 0.", "visitor_chart": "Donut L0/L1+ và bar theo 6 quốc gia; cảnh báo độ tập trung Việt Nam.", "period_labels": true}, "product_section": {"top_products": "Chỉ một sản phẩm có UV=1; sản phẩm thứ hai không được ghi nhận UV, sản phẩm thứ ba không tồn tại. Không vẽ Top 3 giả.", "keywords_title_vi": "Buyer đang tìm gì thật tuần này?", "keywords_title_cn": "本周买家真实搜索什么？", "keywords_chart": "Chia nhóm Đúng ngành / Liên quan rộng / Lệch ngành. Giữ nguyên exact keyword, không dịch hoặc sửa chính tả.", "keyword_pv_warning": "PV trong dòng keyword là PV gắn với visitor, không phải lượng tìm kiếm độc lập của từ khóa."}, "operations_section": {"trend": "Biểu đồ xu hướng dùng đủ 6 tuần trong sheet vận hành; lưu ý khoảng thời gian không liên tục và có một nhãn tuần bất thường 29-4-2026 -> 4-4-2026.", "highlights": ["Điểm tốt", "Điểm nghẽn", "Việc 24–48 giờ", "Kế hoạch 7 ngày", "Kế hoạch 30 ngày"], "no_generic_advice": true}, "visual_style": {"direction": "Giống Riken nhưng dùng palette xanh gỗ rừng: #0F5132, #198754, #E8F5EE, nền #F6F8F7; cảnh báo amber, critical red.", "mobile": "Card 1 cột cho buyer/product, KPI 2×2, biểu đồ không tràn ngang.", "flags": true, "copy_buttons": false}}, "recommended_actions": {"next_24_48h": [{"vi": "Gửi Lorie C mã vận đơn và ảnh kiện mẫu; hỏi người nhận tại Hà Nội đã nhận chưa.", "cn": "向Lorie C发送物流单号和样品包裹照片，确认河内收件人是否已收货。", "owner": "Sales"}, {"vi": "Nếu đã nhận mẫu, xin đánh giá màu, vân, độ dày và độ bám; chốt số mét/cuộn cho đơn thử.", "cn": "如已收样，确认颜色、纹理、厚度和粘合效果，并确定试单的米数/卷数。", "owner": "Sales"}, {"vi": "Lọc RFQ đúng nhóm veneer/edge banding và gửi báo giá đầu tiên; hiện còn 40 lượt.", "cn": "筛选木皮/封边条相关RFQ并提交首批精准报价；当前尚有40次额度。", "owner": "Operations"}], "next_7_days": [{"vi": "Tối ưu hai sản phẩm trọng điểm bằng exact keyword đúng ngành; ưu tiên title–ảnh–spec–MOQ–packing.", "cn": "使用真实行业关键词优化两款重点产品，优先完善标题、主图、规格、MOQ和包装。"}, {"vi": "Rà soát nguyên nhân tổng sản phẩm giảm 1.101 → 946; phân biệt xóa chủ động, vi phạm, ẩn hoặc hết hiệu lực.", "cn": "核查产品总数从1101降至946的原因，区分主动删除、违规、下架或失效。"}, {"vi": "Tập trung traffic ngoài Việt Nam vào Colombia/Venezuela/Trung Quốc bằng nội dung edge banding phù hợp ngôn ngữ.", "cn": "针对哥伦比亚、委内瑞拉和中国，以本地化封边条内容拓展越南以外的流量。"}], "next_30_days": [{"vi": "Nâng khỏi 0 sao bằng kế hoạch Product–Service–Marketing có owner và KPI tuần; không chỉ đăng 5–10 sản phẩm/ngày.", "cn": "通过有负责人和周KPI的产品、服务、营销计划摆脱0星，而不是只追求每天发布5–10个产品。"}, {"vi": "Thiết lập nhịp báo RFQ, tối ưu Top Product và theo dõi Search Impression → Click → Buyer reply.", "cn": "建立RFQ报价节奏、优化Top Product，并持续跟踪搜索曝光→点击→买家回复。"}, {"vi": "Chỉ thử quảng cáo sau khi sản phẩm lõi có thông tin hoàn chỉnh và đo được click; bắt đầu ngân sách nhỏ.", "cn": "核心产品信息完善且能产生点击后再小预算测试广告。"}]}, "data_quality_rules": ["Industry average và industry leaders không có số trong sheet; lưu null và hiển thị N/A, không thay bằng 0.", "0% phản hồi trong 24h đi cùng 0 inquiry nên không đủ cơ sở đánh giá tốc độ phản hồi.", "Buyer message period, visitor period và operations period khác nhau; app phải hiện nhãn kỳ riêng.", "Top product UV không phải order hoặc inquiry.", "Không đưa số điện thoại/địa chỉ đầy đủ của buyer lên dashboard ông chủ; chỉ giữ trong nguồn nội bộ nếu cần."], "data": {"operations": {"weeks": [{"period": "13-09-2026 -> 19-09-2026", "kpis": {"星级 | Xếp hạng sao": "0", "产品总数量 | Tổng số sản phẩm": "946", "新增产品总数量 | Tổng số sản phẩm mới": "-155", "访客总数 | Tổng lượt truy cập": "9", "询盘总数量 | Tổng số inquiry (khách hỏi)": "0", "已回复询盘数量 | Số inquiry đã phản hồi": "0", "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0", "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "40", "平均回复时间 | Thời gian phản hồi trung bình": "0h", "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "0.00%", "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0", "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "1"}}, {"period": "26-4-2026 -> 2-05-2026", "kpis": {"星级 | Xếp hạng sao": "2", "产品总数量 | Tổng số sản phẩm": "1101", "新增产品总数量 | Tổng số sản phẩm mới": "0", "访客总数 | Tổng lượt truy cập": "56", "询盘总数量 | Tổng số inquiry (khách hỏi)": "3", "已回复询盘数量 | Số inquiry đã phản hồi": "3", "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0", "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20", "平均回复时间 | Thời gian phản hồi trung bình": "5,77h", "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "76.92%", "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0", "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"}}, {"period": "12-4-2026 -> 18-4-2026", "kpis": {"星级 | Xếp hạng sao": "1", "产品总数量 | Tổng số sản phẩm": "1101", "新增产品总数量 | Tổng số sản phẩm mới": "0", "访客总数 | Tổng lượt truy cập": "78", "询盘总数量 | Tổng số inquiry (khách hỏi)": "1", "已回复询盘数量 | Số inquiry đã phản hồi": "1", "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0", "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20", "平均回复时间 | Thời gian phản hồi trung bình": "8,35h", "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "70,00%", "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0", "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"}}, {"period": "29-4-2026 -> 4-4-2026", "kpis": {"星级 | Xếp hạng sao": "1", "产品总数量 | Tổng số sản phẩm": "1101", "新增产品总数量 | Tổng số sản phẩm mới": "300", "访客总数 | Tổng lượt truy cập": "22", "询盘总数量 | Tổng số inquiry (khách hỏi)": "3", "已回复询盘数量 | Số inquiry đã phản hồi": "0", "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0", "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20", "平均回复时间 | Thời gian phản hồi trung bình": "1,05", "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100,00%", "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0", "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"}}, {"period": "22-2-2026 -> 28-2-2026", "kpis": {"星级 | Xếp hạng sao": "1", "产品总数量 | Tổng số sản phẩm": "801", "新增产品总数量 | Tổng số sản phẩm mới": "0", "访客总数 | Tổng lượt truy cập": "23", "询盘总数量 | Tổng số inquiry (khách hỏi)": "3", "已回复询盘数量 | Số inquiry đã phản hồi": "3", "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0", "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20", "平均回复时间 | Thời gian phản hồi trung bình": "2,12h", "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "92,31%", "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0", "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "2"}}, {"period": "15-2-2026 -> 21-2-2026", "kpis": {"星级 | Xếp hạng sao": "1", "产品总数量 | Tổng số sản phẩm": "801", "新增产品总数量 | Tổng số sản phẩm mới": "401", "访客总数 | Tổng lượt truy cập": "13", "询盘总数量 | Tổng số inquiry (khách hỏi)": "3", "已回复询盘数量 | Số inquiry đã phản hồi": "3", "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0", "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20", "平均回复时间 | Thời gian phản hồi trung bình": "2,3 h", "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "91,67 %", "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0", "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "2"}}], "benchmark": {"period": "13-09-2026 -> 19-09-2026", "category": "Furniture", "page_views": {"store": 9, "industry_average": null, "industry_leaders": null}, "search_impressions": {"store": 6, "industry_average": null, "industry_leaders": null}, "search_clicks": {"store": 0, "industry_average": null, "industry_leaders": null}, "visitors_with_inquiries": {"store": 0, "industry_average": null, "industry_leaders": null}, "missing_reason": "Alibaba chỉ hiển thị benchmark khi rê tooltip; sheet chưa có giá trị trung bình và nhóm dẫn đầu."}, "top_products": [{"rank": 1, "title": "Fleece Backed Reconstituted Engineered Veneer Premium Flexible Backing Eco-Friendly Smooth Texture Modern Design for Luxury", "uv": 1, "url": "http://www.alibaba.com/product-detail/Fleece-Backed-Reconstituted-Engineered-Veneer-Premium_10000044322190.html", "product_id": "10000044322190", "status": "has_uv"}, {"rank": 2, "title": "PVC Edge Banding Preglued Veneer Edging PVC Edge Banding for Wood Kitchen Wardrobe Furniture Table Desk Board Edgeband Edger", "uv": null, "url": "http://www.alibaba.com/product-detail/PVC-Edge-Banding-Preglued-Veneer-Edging_10000036509752.html", "product_id": "10000036509752", "status": "no_uv_recorded"}, {"rank": 3, "title": null, "uv": null, "url": null, "product_id": null, "status": "no_third_product_with_uv"}], "source_actions": [{"label": "新品更新 | Cập nhật sản phẩm mới", "latest": "每天新增 5–10 款热门产品 | Đăng thêm 5–10 sản phẩm hot mỗi ngày"}, {"label": "指标优化 | Tối ưu chỉ số", "latest": "通过 RFQ 报价与广告提升曝光；优化产品标题、主图和详情页 | Tăng traffic bằng báo giá RFQ và quảng cáo; tối ưu tiêu đề, ảnh chính và trang chi tiết sản phẩm"}, {"label": null, "latest": "当前 RFQ 使用率为 0/40，应优先开发精准采购需求 | RFQ hiện dùng 0/40, cần ưu tiên báo giá cho nhu cầu phù hợp"}, {"label": null, "latest": "店铺当前为 0 星，近 30 天访客仅 21，买家回复数为 0；需增加精准流量并提升服务互动 | Gian hàng hiện 0 sao, 30 ngày chỉ có 21 khách và 0 buyer phản hồi; cần tăng traffic chính xác và cải thiện tương tác dịch vụ"}, {"label": null, "latest": null}, {"label": "优先处理问题 | Vấn đề ưu tiên xử lý", "latest": "优先提升 Marketing 与 Service 指标；持续发品、投放广告、使用 RFQ，并优化 Top Product | Ưu tiên nâng chỉ số Marketing và Service; tiếp tục đăng sản phẩm, chạy quảng cáo, dùng RFQ và tối ưu Top Product"}]}, "visitors": {"summary": {"period": "2026-09-18 đến 2026-09-24", "visitor_records": 15, "countries": 6, "pv": 39, "exact_keyword_records": 19, "visitors_with_keyword": 7, "L1_plus": 8, "L1_plus_share_percent": 53.3, "levels": {"L0": 7, "L1": 8, "L2": 0, "L3": 0, "L4": 0}}, "all_countries": [{"country": "Việt Nam / 越南", "visitors": 10, "pv": 27, "keyword_visitors": 3, "exact_keyword_records": 8, "L0": 5, "L1": 5, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 5}, {"country": "Venezuela / 委内瑞拉", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Colombia / 哥伦比亚", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Ấn Độ / 印度", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Trung Quốc / 中国", "visitors": 1, "pv": 7, "keyword_visitors": 1, "exact_keyword_records": 2, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Thái Lan / 泰国", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}], "exact_keyword_aggregates": [{"exact_keyword": "seatex company limited", "occurrences": 3, "source_row_pv_sum": 9, "relevance": "brand_or_company_search"}, {"exact_keyword": "旭阳木业", "occurrences": 1, "source_row_pv_sum": 7, "relevance": "brand_search"}, {"exact_keyword": "natural wood veneer edge band", "occurrences": 1, "source_row_pv_sum": 7, "relevance": "high_relevance"}, {"exact_keyword": "cnc machining parts", "occurrences": 1, "source_row_pv_sum": 4, "relevance": "off_industry"}, {"exact_keyword": "watlet", "occurrences": 1, "source_row_pv_sum": 4, "relevance": "unclear_or_noise"}, {"exact_keyword": "furniture supplier", "occurrences": 1, "source_row_pv_sum": 3, "relevance": "broad_relevant"}, {"exact_keyword": "cinta cubre cerco pvc", "occurrences": 1, "source_row_pv_sum": 2, "relevance": "adjacent_not_edge_banding"}, {"exact_keyword": "cinta cubre cerco", "occurrences": 1, "source_row_pv_sum": 2, "relevance": "adjacent_not_edge_banding"}, {"exact_keyword": "cinta cubre reja", "occurrences": 1, "source_row_pv_sum": 2, "relevance": "adjacent_not_edge_banding"}, {"exact_keyword": "rotating double disc valve", "occurrences": 1, "source_row_pv_sum": 2, "relevance": "off_industry"}, {"exact_keyword": "vivi ka company limited", "occurrences": 1, "source_row_pv_sum": 2, "relevance": "off_industry_or_company_search"}, {"exact_keyword": "tira de borde dw pvc", "occurrences": 1, "source_row_pv_sum": 1, "relevance": "relevant"}, {"exact_keyword": "miniauto elctrico", "occurrences": 1, "source_row_pv_sum": 1, "relevance": "off_industry"}, {"exact_keyword": "pvc edge banding strip", "occurrences": 1, "source_row_pv_sum": 1, "relevance": "high_relevance"}, {"exact_keyword": "hinges", "occurrences": 1, "source_row_pv_sum": 1, "relevance": "adjacent_furniture_hardware"}, {"exact_keyword": "nonhydrolic economy hinges", "occurrences": 1, "source_row_pv_sum": 1, "relevance": "adjacent_furniture_hardware"}, {"exact_keyword": "melamine edge banding tape", "occurrences": 1, "source_row_pv_sum": 1, "relevance": "high_relevance"}]}, "buyers": {"summary": {"period": "2026-09-20 đến 2026-09-26", "new_buyer_replies": 0, "priority_buyers": 0, "follow_up_buyers": 1}, "priority_buyers": [], "follow_up_buyers": [{"date": "2026-09-24", "name": "Lorie C", "country": "Hawaii, Hoa Kỳ; nhận mẫu tại Hà Nội / 美国夏威夷；样品寄往河内", "need": "White oak veneer edge banding sample, 1 roll, width 22mm, smooth surface / 白橡木皮封边样品，1卷，宽22mm，光滑表面", "quantity": "1 sample roll / 1卷样品", "evidence": "VI: Buyer hỏi mẫu 1 cuộn white oak veneer edge banding, width 22mm, bề mặt mịn; đã cung cấp thông tin nhận mẫu tại Hà Nội. Seller báo sắp xếp gửi mẫu ngày 18/08; đến 24/09 buyer chưa đọc tin follow và chưa xác nhận nhận mẫu. CN: 买家询问1卷22mm宽、光滑表面的白橡木皮封边样品，并已提供河内收样信息。卖家8月18日表示安排寄样；截至9月24日，买家尚未阅读跟进消息，也未确认收样。", "assessment": "VI: Lead mẫu có nhu cầu thật nhưng đang nguội; chưa có bằng chứng nhận mẫu hoặc chốt đơn. CN: 真实样品需求，但目前转冷；尚无收样或成交证据。", "next_action": "VI: Gửi tracking/ảnh gói hàng; hỏi đã nhận mẫu chưa; xin đánh giá 4 điểm màu, vân, độ dày, độ bám; nếu đạt thì hỏi số mét/cuộn cho đơn thử và gửi báo giá chính thức trên Alibaba. CN: 发送物流单号和包裹照片，确认是否收样；询问颜色、纹理、厚度和粘合效果；若合格则确认试单米数/卷数并在阿里巴巴内正式报价。", "status": "sample_follow_up_cold"}], "confirmed_paid_or_completed_orders": []}}};
+const CFG = {"key": "qingyang", "storeName": "QING YANG WOOD PRODUCTION TRADING COMPANY LIMITED", "bilingual": true, "coreRe": "veneer|edge"};
+const $=id=>document.getElementById(id);
+const CJK=/[㐀-鿿]/;
+let LANG=CFG.bilingual?(localStorage.getItem(CFG.key+'_lang')||'zh'):'vi';
+
+/* ---------- bilingual helpers ---------- */
+function bi(s){
+  if(s==null) return {vi:'',zh:''};
+  s=String(s).trim();
+  let m=s.match(/^VI:\s*([\s\S]*?)\s*CN:\s*([\s\S]*)$/);
+  if(m) return {vi:m[1].trim(),zh:m[2].trim()};
+  if(CFG.bilingual){
+    for(const sep of [' | ',' / ']){
+      if(s.indexOf(sep)>-1){
+        const parts=s.split(sep).map(x=>x.trim());
+        const zh=parts.filter(p=>CJK.test(p)), vi=parts.filter(p=>!CJK.test(p));
+        if(zh.length&&vi.length) return {vi:vi.join(sep),zh:zh.join(sep)};
+      }
+    }
+  }
+  return {vi:s,zh:s};
+}
+const L=s=>{const b=bi(s);return b[LANG]||b.vi};
+const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const fmt=n=>n==null||n===''||isNaN(Number(n))?'—':Number(n).toLocaleString('vi-VN');
+const fmt1=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
+const num=s=>{const v=parseFloat(String(s).replace('%','').replace(',','.'));return isNaN(v)?0:v};
+const pct=(c,p)=>p?(c-p)/p*100:null;
+const MOB=()=>window.innerWidth<768;
+
+/* ---------- UI strings ---------- */
+const T={
+ vi:{kick:'Báo cáo vận hành Alibaba',n1:'Buyer',n2:'Traffic',n3:'Sản phẩm',n4:'Vận hành',
+  t1:'01 · Buyer cần follow',t2:'02 · Traffic & Thị trường',t3:'03 · Sản phẩm & Buyer đang tìm gì thật tuần này?',t4:'04 · Vận hành & Hành động',
+  positive:'Điểm tốt',bottleneck:'Điểm nghẽn',ownerT:'Buyer cần xử lý hôm nay',ownerA:'Xem 5 buyer quan trọng ↓',
+  bigH:'Khách lớn cần ưu tiên theo dõi',bigD:'Buyer có nhu cầu số lượng, yêu cầu báo giá/mẫu/chứng nhận rõ hoặc đang gần bước chốt. Sắp theo mức ưu tiên rồi ngày mới nhất.',
+  paidH:'Khách đã thanh toán/chốt đơn',paidD:'Chỉ hiển thị buyer có bằng chứng rõ trong dữ liệu; trạng thái giữ nguyên theo nguồn.',
+  paidPill:'Đã có đơn',prodLead:'Sản phẩm nào hút khách nhất và buyer đang tìm gì.',paidEmpty:'Chưa xác nhận đơn đã thanh toán trong dữ liệu này',
+  buyerLead:'Ưu tiên buyer có số lượng, spec, chứng nhận hoặc yêu cầu báo giá rõ trước các câu hỏi chung chung. Mỗi buyer chỉ hiện một thẻ, lịch sử trao đổi nằm trong Xem chi tiết.',
+  more:n=>'Xem thêm '+n+' buyer',less:'Thu gọn danh sách',detail:'Xem chi tiết',collapse:'Thu gọn',buyers:'buyer',
+  need:'Nhu cầu',qty:'Số lượng',evid:'Dẫn chứng & vướng mắc',next:'Việc tiếp theo',upd:'Cập nhật',verify:'Xác minh',verifyT:'Theo nội dung chat trong sheet buyer; chưa xác minh độc lập',timeline:'Diễn biến các lần trao đổi',level:'Level',
+  veryHigh:'Buyer ưu tiên rất cao',
+  hkImp:'Hiển thị tìm kiếm',hkClk:'Lượt nhấp tìm kiếm',hkPv:'Lượt xem trang (vận hành)',hkL1:'Buyer L1+',
+  vsInd:x=>x+'% trung bình ngành',
+  bmH:'Gian hàng đang đứng ở đâu so với ngành?',bmN:(p,i)=>'Kỳ '+p+' · ngành '+i,
+  bm:{page_views:'Lượt xem trang',search_impressions:'Lượt hiển thị tìm kiếm',search_clicks:'Lượt nhấp tìm kiếm',visitors_with_inquiries:'Khách để lại thư hỏi hàng'},
+  store:'Gian hàng',avg:'Trung bình ngành',lead:'Nhóm dẫn đầu',vsAvg:'so với TB ngành',vsLead:'so với nhóm dẫn đầu',
+  vsH:'Buyer & người xem tuần này',vsNote:(c,p)=>'Kỳ '+c+' so với kỳ trước '+p+' · cùng nguồn Visitor Analyzer (khác kỳ với KPI vận hành)',
+  mVisitors:'Visitor records',mCountries:'Quốc gia / vùng',mPv:'PV trong danh sách visitor',mL1:'Buyer L1+',prev:'kỳ trước',
+  fnH:'Phễu chất lượng buyer L0–L4',fnN:'L1+ = L1 đến L4',ctH:'Quốc gia: đủ cấp L0–L4',ctN:'Xếp theo số visitor · các màu là cấp L0 → L4',ctAll:n=>'Xem tất cả '+n+' quốc gia',
+  cols:['Quốc gia / vùng','Visitor','PV','Có keyword','Bản ghi keyword','L0','L1','L2','L3','L4','L1+'],
+  vhH:'Xu hướng visitor các kỳ gần nhất',vhN:'Mỗi cột là một kỳ visitor của sheet; đường là buyer L1+',
+  tpH:'Top 3 sản phẩm hút khách',tpLead:'Xếp hạng theo Unique Visitors (UV); bấm tên hoặc nút để mở Alibaba.',tpNote:'Nguồn chỉ có UV nên không hiển thị order, inquiry hay CTR từng sản phẩm.',open:'Mở sản phẩm ↗',
+  kwH:'Buyer đang tìm gì thật tuần này?',kwLead:'Từ khóa chính xác của visitor, giữ nguyên câu đã tìm; chỉ vẽ nhóm phù hợp ngành.',
+  kwNote:(p)=>'Kỳ '+p+' · thanh = số lần xuất hiện · nhãn có PV của dòng nguồn (PV của visitor, không phải PV độc lập của từ khóa)',
+  kwWarn:(a,b)=>'Cảnh báo chất lượng dữ liệu: chỉ '+a+'/'+b+' từ khóa tuần này phù hợp ngành nên không vẽ biểu đồ "hot" để tránh hiểu sai. Kiểm tra nguồn traffic/keyword lệch ngành.',
+  kwAllS:n=>'Xem tất cả '+n+' từ khóa chính xác',kwQ:'Tìm từ khóa...',kwCols:['Từ khóa (nguyên văn)','Số lần','PV dòng nguồn','Phân loại'],
+  cls:{core:'Đúng ngành',other:'Chưa xác định',noise:'Lệch ngành'},
+  ocH:'Ông chủ cần biết gì tuần này?',gH:'Điểm tốt',aH:'Điểm nghẽn có số liệu',acH:'Action',
+  w24:'Trong 24 giờ',w7:'Trong 7 ngày',wNote:'Lưu ý khi làm việc với buyer',wNext:'Tuần tiếp theo',
+  nextWeek:'Đối chiếu lại PV, Search Clicks, buyer L1+ và trạng thái các buyer đã nêu; chỉ kết luận khi cùng chỉ số, cùng kỳ, cùng nguồn.',
+  omH:'Chỉ số vận hành tuần mới nhất',omN:p=>'Vận hành & benchmark ngành: '+p,
+  k:['Điểm sao','Tổng sản phẩm','SP mới đăng','Lượt ghé thăm','Thư hỏi hàng','Đã trả lời','RFQ đã báo','RFQ còn lại','TG phản hồi (h)','Phản hồi 24h (%)','Super Product','Top Product'],
+  vsPrev:'so với tuần trước',snH:'Ghi chú chẩn đoán từ sheet vận hành',snCur:'Tuần này',snPrev:'Tuần trước',
+  c1H:'Traffic & phản hồi 24h',c1N:'Lượt ghé thăm vận hành (cột) và tỷ lệ phản hồi 24h (đường), toàn bộ các tuần trong sheet.',
+  c2H:'Sản phẩm, Top & Super Product',c2N:'Tổng sản phẩm (cột) · Top Product và Super Product (đường).',
+  tbH:'Bảng KPI vận hành toàn bộ lịch sử',tbN:'Đủ 12 KPI mỗi tuần · vuốt ngang để xem các tuần.',metric:'Chỉ số',
+  noChart:'Thư viện biểu đồ (ECharts) không tải được — cần internet để xem biểu đồ.',
+  foot:'Báo cáo vận hành Alibaba · Version 3 · dữ liệu nhúng tĩnh, mở offline được',
+  visitorsL:'Visitor',l1:'Buyer L1+',
+  pMore:'Buyer có ngày sau kỳ visitor/vận hành được hiển thị theo ngày riêng của buyer.'},
+ zh:{kick:'阿里巴巴运营周报',n1:'买家',n2:'流量',n3:'产品',n4:'运营',
+  t1:'01 · 重点跟进买家',t2:'02 · 流量与市场',t3:'03 · 产品与本周真实搜索需求',t4:'04 · 运营与行动',
+  positive:'亮点',bottleneck:'瓶颈',ownerT:'今日需处理的买家',ownerA:'查看5位重点买家 ↓',
+  bigH:'需优先跟进的大客户',bigD:'有明确数量、报价/样品/认证需求或接近成交的买家。按优先级再按最新日期排序。',
+  paidH:'已付款/已成交客户',paidD:'仅显示数据中有明确证据的买家；状态与来源保持一致。',
+  paidPill:'已有订单',prodLead:'哪些产品最吸引访客，买家在搜索什么。',paidEmpty:'本数据中暂无已确认付款的订单',
+  buyerLead:'优先处理有数量、规格、认证或明确报价需求的买家。每位买家只显示一张卡片，沟通历史在“查看详情”中。',
+  more:n=>'查看更多 '+n+' 位买家',less:'收起列表',detail:'查看详情',collapse:'收起',buyers:'位买家',
+  need:'需求',qty:'数量',evid:'对话依据与障碍',next:'下一步',upd:'更新',verify:'核实',verifyT:'依据买家表格中的聊天内容；尚未独立核实',timeline:'沟通过程',level:'等级',
+  veryHigh:'最高优先级买家',
+  hkImp:'搜索曝光',hkClk:'搜索点击',hkPv:'页面浏览量（运营）',hkL1:'L1+买家',
+  vsInd:x=>'行业平均的'+x+'%',
+  bmH:'店铺在行业中处于什么位置？',bmN:(p,i)=>'周期 '+p+' · 行业 '+i,
+  bm:{page_views:'页面浏览量',search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors_with_inquiries:'发起询盘的访客'},
+  store:'本店',avg:'行业平均',lead:'行业领先',vsAvg:'相对行业平均',vsLead:'相对行业领先',
+  vsH:'本周买家与访客',vsNote:(c,p)=>'周期 '+c+'，对比上期 '+p+' · 同一访客分析来源（与运营KPI周期不同）',
+  mVisitors:'访客记录',mCountries:'国家/地区',mPv:'访客列表PV',mL1:'L1+买家',prev:'上期',
+  fnH:'买家质量漏斗 L0–L4',fnN:'L1+ = L1 至 L4',ctH:'国家：完整L0–L4分层',ctN:'按访客数排序 · 颜色为 L0 → L4',ctAll:n=>'查看全部 '+n+' 个国家',
+  cols:['国家/地区','访客','PV','有关键词','关键词记录','L0','L1','L2','L3','L4','L1+'],
+  vhH:'近几期访客趋势',vhN:'每根柱为表格中的一期访客数；折线为L1+买家',
+  tpH:'吸引访客最多的前3款产品',tpLead:'按独立访客（UV）排序；点击名称或按钮打开阿里巴巴页面。',tpNote:'来源仅有UV，因此不显示单品订单、询盘或点击率。',open:'打开产品 ↗',
+  kwH:'买家本周真实在搜什么？',kwLead:'访客的精确关键词，保持原文；仅绘制与行业相符的部分。',
+  kwNote:p=>'周期 '+p+' · 柱=出现次数 · 标签含来源行PV（为访客PV，不是关键词独立PV）',
+  kwWarn:(a,b)=>'数据质量提醒：本周仅 '+a+'/'+b+' 个关键词与行业相符，为避免误读不绘制“热词”图。请核查流量/关键词来源是否偏离行业。',
+  kwAllS:n=>'查看全部 '+n+' 个精确关键词',kwQ:'搜索关键词...',kwCols:['关键词（原文）','次数','来源行PV','分类'],
+  cls:{core:'相符',other:'未确定',noise:'偏离行业'},
+  ocH:'老板本周需要知道什么？',gH:'亮点',aH:'带数据的瓶颈',acH:'行动',
+  w24:'24小时内',w7:'7天内',wNote:'与买家沟通的注意事项',wNext:'下周',
+  nextWeek:'复核PV、搜索点击、L1+买家及上述买家状态；仅在同指标、同周期、同来源时下结论。',
+  omH:'最新一周运营指标',omN:p=>'运营与行业基准：'+p,
+  k:['店铺星级','产品总数','新品数','访客数','询盘数','已回复','已报价RFQ','剩余RFQ','平均回复(小时)','24小时回复率(%)','Super Product','Top Product'],
+  vsPrev:'较上周',snH:'运营表格中的诊断备注',snCur:'本周',snPrev:'上周',
+  c1H:'流量与24小时回复率',c1N:'运营访客数（柱）与24小时回复率（线），涵盖表格中全部周次。',
+  c2H:'产品、Top与Super Product',c2N:'产品总数（柱）· Top Product 与 Super Product（线）。',
+  tbH:'全部历史运营KPI表',tbN:'每周12项KPI · 左右滑动查看各周。',metric:'指标',
+  noChart:'图表库（ECharts）无法加载——需联网查看图表。',
+  foot:'阿里巴巴运营周报 · 第3版 · 数据静态嵌入，可离线打开',
+  visitorsL:'访客',l1:'L1+买家',
+  pMore:'晚于访客/运营周期的买家日期按买家自身日期显示。'}
+};
+const t=()=>T[LANG];
+
+/* ---------- flags ---------- */
+const FLAGS=[[/hoa kỳ|usa|united states/i,'US'],[/vương quốc anh|united kingdom|\buk\b/i,'GB'],[/nga\b|russia/i,'RU'],[/uzbekistan/i,'UZ'],[/việt nam|vietnam/i,'VN'],[/trung quốc|china/i,'CN'],[/đài loan|taiwan/i,'TW'],[/hong kong/i,'HK'],[/ấn độ|india/i,'IN'],[/pakistan/i,'PK'],[/indonesia/i,'ID'],[/malaysia/i,'MY'],[/philippines/i,'PH'],[/thailand/i,'TH'],[/japan|nhật/i,'JP'],[/hàn quốc|korea/i,'KR'],[/thổ nhĩ kỳ|turkey/i,'TR'],[/germany|đức/i,'DE'],[/france|pháp/i,'FR'],[/spain|tây ban nha/i,'ES'],[/italy/i,'IT'],[/mexico/i,'MX'],[/brazil/i,'BR'],[/canada/i,'CA'],[/australia/i,'AU'],[/new zealand/i,'NZ'],[/egypt/i,'EG'],[/ả rập xê út|saudi/i,'SA'],[/các tiểu vương quốc|emirates|\buae\b/i,'AE'],[/nam phi|south africa/i,'ZA'],[/nigeria/i,'NG'],[/ghana/i,'GH'],[/kenya/i,'KE'],[/tanzania/i,'TZ'],[/cote d|côte d/i,'CI'],[/cameroon/i,'CM'],[/senegal/i,'SN'],[/uganda/i,'UG'],[/zambia/i,'ZM'],[/zimbabwe/i,'ZW'],[/ethiopia/i,'ET'],[/morocco/i,'MA'],[/algeria/i,'DZ'],[/tunisia/i,'TN'],[/bangladesh/i,'BD'],[/sri lanka/i,'LK'],[/nepal/i,'NP'],[/myanmar/i,'MM'],[/cambodia/i,'KH'],[/singapore/i,'SG'],[/poland/i,'PL'],[/romania/i,'RO'],[/hungary/i,'HU'],[/bulgaria/i,'BG'],[/greece/i,'GR'],[/netherlands/i,'NL'],[/sweden/i,'SE'],[/norway/i,'NO'],[/switzerland/i,'CH'],[/slovakia/i,'SK'],[/kazakhstan/i,'KZ'],[/armenia/i,'AM'],[/azerbaijan/i,'AZ'],[/belarus/i,'BY'],[/israel/i,'IL'],[/iraq/i,'IQ'],[/jordan/i,'JO'],[/kuwait/i,'KW'],[/lebanon/i,'LB'],[/qatar/i,'QA'],[/oman/i,'OM'],[/yemen/i,'YE'],[/argentina/i,'AR'],[/colombia/i,'CO'],[/peru/i,'PE'],[/ecuador/i,'EC'],[/chile/i,'CL'],[/bolivia/i,'BO'],[/paraguay/i,'PY'],[/venezuela/i,'VE'],[/guatemala/i,'GT'],[/honduras/i,'HN'],[/nicaragua/i,'NI'],[/costa rica/i,'CR'],[/dominican|dominica/i,'DO'],[/jamaica/i,'JM'],[/haiti/i,'HT'],[/puerto rico/i,'PR'],[/mongolia/i,'MN'],[/mozambique/i,'MZ'],[/angola/i,'AO'],[/madagascar/i,'MG'],[/namibia/i,'NA'],[/botswana/i,'BW'],[/liberia/i,'LR'],[/sierra leone/i,'SL'],[/mali\b/i,'ML'],[/niger\b/i,'NE'],[/gabon/i,'GA'],[/benin/i,'BJ'],[/burkina/i,'BF'],[/congo/i,'CD'],[/maldives/i,'MV'],[/tajikistan/i,'TJ'],[/turkmenistan/i,'TM'],[/albania/i,'AL']];
+function flag(c){ if(!c) return ''; const s=String(c); for(const [re,iso] of FLAGS){ if(re.test(s)) return String.fromCodePoint(...[...iso].map(ch=>127397+ch.charCodeAt(0)))+' '; } return ''; }
+
+/* ---------- data ---------- */
+const OPS=SPEC.data.operations, VIS=SPEC.data.visitors, BUY0=SPEC.data.buyers, BM=OPS.benchmark;
+const OS=SPEC.owner_story, REC=SPEC.recommended_actions, IC=SPEC.implementation_contract;
+OPS.weeks.forEach(w=>{w.period=String(w.period).replace(' -> ',' đến ');}); BM.period=String(BM.period).replace(' -> ',' đến ');
+const weeks=OPS.weeks.map(w=>{const kv=Object.values(w.kpis); return {period:String(w.period).split(' | ')[0], k:kv};}); // newest first
+const wNew=weeks[0], wPrev=weeks[1]||null;
+const endLabel=p=>{const s=p.split(' đến ')[1]||p; return s.replace(/-20\d\d$/,'').replace(/-/g,'/');};
+const perFull=p=>p.replace(/-/g,'/').replace(' đến ',' – ');
+const cur=VIS.summary, prv=null;
+const perVis=s=>{const m=String(s).match(/(20\d\d-\d\d-\d\d)\D+(?:đến|至|to)\D*(20\d\d-\d\d-\d\d)/); const f=d=>d.slice(8,10)+'/'+d.slice(5,7); return m?f(m[1])+' – '+f(m[2])+'/'+m[2].slice(0,4):bi(s).vi;};
+
+/* buyers: merge by name */
+const nm=s=>String(s).trim().toLowerCase();
+function prio(p){ const s=bi(p).vi||''; if(s.length>40) return 2; if(/rất cao/i.test(s)) return 5; if(/^cao\b|lead nóng|lead tốt|lead thật/i.test(s)) return 4; if(/trung bình-cao/i.test(s)) return 3; return 2; }
+function prioLabel(p){ const b=bi(p); const s=b.vi||''; if(s.length>40) return {vi:'Ưu tiên',zh:'优先'}; return b; }
+function group(rows){
+  const m=new Map();
+  rows.forEach(r=>{ const k=nm(r.name); if(!m.has(k)) m.set(k,[]); m.get(k).push(r); });
+  return [...m.values()].map(list=>{ list.sort((a,b)=>String(b.date).localeCompare(String(a.date))); const main=Object.assign({},list[0]); main.timeline=list.slice(1); main.n=list.length; return main; });
+}
+const STATUS={sample_follow_up_cold:'Lead mẫu đang nguội / 样品线索转冷'};
+const bigList=BUY0.follow_up_buyers.map(r=>Object.assign({},r,{priority:STATUS[r.status]||r.status,timeline:[]}));
+const paid=BUY0.confirmed_paid_or_completed_orders||[];
+
+
+T.vi.bigH='Buyer cần theo dõi'; T.zh.bigH='需跟进买家';
+T.vi.bigD='Tuần 20–26/09 chưa có buyer mới phản hồi; chỉ có 1 lead mẫu cần follow. Không tạo thêm buyer để đủ Top 5.'; T.zh.bigD='9月20–26日无新回复买家；仅有1条样品线索需跟进，不虚构买家凑足Top 5。';
+T.vi.buyerLead=OS.buyer_vi; T.zh.buyerLead=OS.buyer_cn;
+T.vi.paidEmpty=IC.buyer_section.paid_order_empty_state_vi; T.zh.paidEmpty=IC.buyer_section.paid_order_empty_state_cn;
+T.vi.ownerT='Buyer cần xử lý hôm nay'; T.zh.ownerT='今日需处理的买家';
+T.vi.ownerA='Xem buyer cần theo dõi ↓'; T.zh.ownerA='查看需跟进买家 ↓';
+T.vi.assess='Đánh giá'; T.zh.assess='评估';
+T.vi.fnH='Cơ cấu buyer L0 / L1+'; T.zh.fnH='买家结构 L0 / L1+'; T.vi.fnN='Kỳ 18–24/09/2026'; T.zh.fnN='周期 2026年9月18–24日';
+T.vi.cls.other='Liên quan rộng'; T.zh.cls.other='相关较广'; T.vi.cls.noise='Lệch ngành / thương hiệu'; T.zh.cls.noise='偏离行业/品牌搜索';
+T.vi.tpH='Sản phẩm hút khách (theo UV)'; T.zh.tpH='吸引访客的产品（按UV）';
+T.vi.tpNote='Chỉ có 1 sản phẩm ghi nhận UV = 1; sản phẩm thứ hai không có UV và sản phẩm thứ ba không tồn tại nên không vẽ Top 3 giả. UV không phải order hay inquiry.'; T.zh.tpNote='仅1款产品记录到UV=1；第二款无UV、第三款不存在，因此不虚构Top 3。UV不是订单或询盘。';
+T.vi.tbN='Đủ 12 KPI mỗi tuần · 6 tuần trong sheet không liên tục, có nhãn tuần bất thường 29-4-2026 → 4-4-2026 · vuốt ngang để xem.'; T.zh.tbN='每周12项KPI · 表格中的6周并不连续，含异常周标签 29-4-2026 → 4-4-2026 · 左右滑动查看。';
+T.vi.c1N='Lượt truy cập vận hành (cột) và tỷ lệ phản hồi 24h (đường); các tuần không liên tục, 0% đi cùng 0 inquiry nên không dùng để đánh giá tốc độ phản hồi.'; T.zh.c1N='运营访客数（柱）与24小时回复率（线）；各周不连续，0%伴随0询盘，不能据此评价回复速度。';
+T.vi.kwLead='Từ khóa chính xác của visitor, giữ nguyên câu đã tìm; chia 3 nhóm Đúng ngành / Liên quan rộng / Lệch ngành.'; T.zh.kwLead='访客的精确关键词，保持原文；分为相符 / 相关较广 / 偏离行业三组。';
+T.vi.snH='Ghi chú nguồn & lưu ý dữ liệu'; T.zh.snH='来源备注与数据说明';
+
+function bcard(x,i,kind){
+  const top=kind==='big'&&i<3?' top':'';
+  const pl=prioLabel(x.priority), pc=prio(x.priority)>=5?'red':prio(x.priority)>=4?'amber':'blue';
+  const tl=(x.timeline&&x.timeline.length)?'<div class="row"><b>'+t().timeline+'</b><ul class="tl">'+x.timeline.map(r=>'<li>'+esc(r.date)+' — '+esc(L(r.need))+(r.next_action?' → '+esc(L(r.next_action)):'')+'</li>').join('')+'</ul></div>':'';
+  const c=L(x.country||'');
+  return '<article class="bcard'+top+'"><div class="bh"><div class="rank">'+(i+1)+'</div><div class="who"><div class="bn">'+esc(x.name)+'</div>'+(c?'<span class="ctry">'+flag(x.country)+esc(c)+'</span>':'')+'</div><span class="tag '+pc+' pill">'+esc(pl[LANG]||pl.vi)+'</span></div>'+
+   (x.quantity?'<div class="sig"><span class="chip">'+esc(L(x.quantity))+'</span></div>':'')+
+   '<div class="row"><b>'+t().need+'</b><div class="clamp">'+esc(L(x.need))+'</div></div>'+
+   (x.assessment?'<div class="row"><b>'+t().assess+'</b>'+esc(L(x.assessment))+'</div>':'')+(x.next_action?'<div class="nextbox"><b>'+t().next+'</b><div class="clamp">'+esc(L(x.next_action))+'</div></div>':'')+
+   '<div class="more-detail"><div class="row"><b>'+t().evid+'</b>'+esc(L(x.evidence))+'</div>'+tl+'<div class="row"><b>'+t().verify+'</b>'+t().verifyT+(x.level?' · '+t().level+': '+esc(L(x.level)):'')+'</div></div>'+
+   '<div class="bf"><span class="dt">'+t().upd+' '+esc(x.date||'')+'</span><button class="lnk" type="button" data-d="1">'+t().detail+'</button></div></article>';
+}
+function paidCard(x,i){
+  return '<article class="bcard"><div class="bh"><div class="rank">'+(i+1)+'</div><div class="who"><div class="bn">'+esc(x.name)+'</div></div><span class="tag green pill">'+t().paidPill+'</span></div><div class="row"><b>'+t().evid+'</b>'+esc(L(x.status))+'</div><div class="row"><b>'+t().verify+'</b>'+esc(L(x.evidence_source||''))+'</div></article>';
+}
+let bigOpen=false, bigBuilt=false;
+function renderBuyers(){
+  const B=bigList;
+  $('cnt_big').textContent=B.length+' '+t().buyers;
+  $('l_big').innerHTML=B.slice(0,5).map((x,i)=>bcard(x,i,'big')).join('');
+  $('x_big').innerHTML=bigBuilt?B.slice(5).map((x,i)=>bcard(x,i+5,'big')).join(''):'';
+  const rest=B.length-5, tb=$('t_big');
+  if(rest<=0) tb.style.display='none'; else { tb.style.display=''; tb.textContent=bigOpen?t().less:t().more(rest); $('x_big').classList.toggle('show',bigOpen); }
+  $('cnt_paid').textContent=paid.length+' '+t().buyers;
+  $('l_paid').innerHTML=paid.map((x,i)=>paidCard(x,i)).join('');
+  $('paid_empty').innerHTML=paid.length?'':'<div class="empty">'+t().paidEmpty+'</div>';
+  $('pay_rule').textContent='';
+}
+$('t_big').addEventListener('click',()=>{ if(!bigBuilt){ bigBuilt=true; } bigOpen=!bigOpen; renderBuyers(); if(!bigOpen) $('l_big').scrollIntoView({behavior:'smooth',block:'start'}); });
+document.addEventListener('click',e=>{ const b=e.target.closest('.lnk[data-d]'); if(!b) return; const c=b.closest('.bcard'); const o=c.classList.toggle('open'); b.textContent=o?t().collapse:t().detail; });
+
+/* ---------- keyword classification ---------- */
+const CORE=new RegExp(CFG.coreRe,'i');
+const NOISE=/watch|wedding|\bcars?\b|android|power bank|amplifier|bearing|jouet|shoes|jewel|crypto|memory chip|fishing|micro|laptop|phone|sexual|undefined|naswar|intimates/i;
+const REL={high_relevance:'core',relevant:'core',broad_relevant:'other',adjacent_not_edge_banding:'other',adjacent_furniture_hardware:'other'};
+const cls=k=>REL[(VIS.exact_keyword_aggregates.find(z=>z.exact_keyword===k)||{}).relevance]||'noise';
+const kws=VIS.exact_keyword_aggregates.map(k=>Object.assign({cls:cls(k.exact_keyword)},k)).sort((a,b)=>b.occurrences-a.occurrences||b.source_row_pv_sum-a.source_row_pv_sum);
+
+/* ---------- render text parts ---------- */
+const H=SPEC.owner_readout, HERO=SPEC.implementation_contract.hero, BL=SPEC.bilingual_copy||{};
+const mk=id=>BM[id];
+function render(){
+  const X=t();
+  document.documentElement.lang=LANG==='zh'?'zh':'vi';
+  document.querySelectorAll('.langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===LANG));
+  $('kick').textContent=X.kick;
+  $('storeName').textContent=CFG.storeName;
+  const zh=LANG==='zh', pk=k=>zh?OS[k+'_cn']:OS[k+'_vi'];
+  $('headline').textContent=pk('headline');
+  $('pl').textContent=X.positive; $('pt').textContent=pk('positive');
+  $('bl').textContent=X.bottleneck; $('bt').textContent=pk('bottleneck');
+  $('periods').textContent=(zh?'访客：':'Visitor: ')+'18–24/09/2026 · '+(zh?'运营与行业基准：':'Vận hành & benchmark: ')+'13–19/09/2026 · '+(zh?'买家消息：':'Buyer: ')+'20–26/09/2026 · '+X.pMore;
+  const tone=['pos','mid','urg','urg'], per=['18–24/09','','','20–26/09'];
+  $('hk').innerHTML=IC.hero.kpis.map((k,i)=>'<div class="hkc '+tone[i]+'"><div class="l">'+esc(zh?k.label_cn:k.label_vi)+'</div><div class="v">'+fmt(k.value)+'</div><div class="s">'+esc(k.support)+(i===0?' · '+per[0]:'')+'</div></div>').join('');
+  $('owner_t').textContent=X.ownerT; $('owner_s').textContent=pk('buyer'); $('owner_a').textContent=X.ownerA;
+  ['n1','n2','n3','n4','t1','t2','t3','t4'].forEach(id=>$(id).textContent=X[id]);
+  if(LANG==='zh'&&BL.section_titles){ ['t1','t2','t3','t4'].forEach((id,i)=>$(id).textContent=(BL.section_titles[i]||'').split(' / ')[0]); }
+  $('buyer_lead').textContent=X.buyerLead;
+  $('h_big').textContent=X.bigH; $('d_big').textContent=X.bigD; $('h_paid').textContent=X.paidH; $('d_paid').textContent=X.paidD;
+  renderBuyers();
+  /* traffic */
+  $('bm_h').textContent=X.bmH;
+  $('bm_lead').textContent=zh?'仅显示本店数据；行业平均与行业领先值暂缺（N/A），不以0代替。':'Chỉ hiển thị số của gian hàng; trung bình ngành và nhóm dẫn đầu chưa lấy được (N/A), không thay bằng 0.';
+  $('bm_note').textContent=X.bmN(perFull(BM.period),BM.category)+' · '+(zh?'Alibaba仅在鼠标悬停时显示行业基准，表格暂无数值。':BM.missing_reason);
+  $('bm').innerHTML=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].map(k=>{
+    const m=BM[k], base=Math.max(m.store,1);
+    return '<div class="bmc amber"><h3>'+X.bm[k]+'</h3><div class="bar"><div class="bl"><span>'+X.store+'</span><b>'+fmt(m.store)+'</b></div><div class="tr"><div class="fl" style="width:'+(m.store>0?100:2)+'%;background:#D97706"></div></div></div><div class="bar"><div class="bl"><span>'+X.avg+'</span><b>N/A</b></div></div><div class="bar"><div class="bl"><span>'+X.lead+'</span><b>N/A</b></div></div><div class="pcts"><span class="tag gray">N/A '+X.vsAvg+'</span><span class="tag gray">N/A '+X.vsLead+'</span></div></div>';
+  }).join('');
+  $('vs_h').textContent=X.vsH;
+  $('vs_lead').textContent=(LANG==='zh'?'L1+买家 ':'Buyer L1+ ')+fmt(cur.L1_plus)+' / '+fmt(cur.visitor_records)+' visitor ('+(cur.visitor_records?Math.round(cur.L1_plus/cur.visitor_records*100):0)+'%) · '+fmt(cur.countries)+(LANG==='zh'?' 个国家/地区':' quốc gia / vùng');
+  const topC=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors)[0], shr=topC.visitors/cur.visitor_records*100;
+  $('traffic_lead').textContent=(zh?'访客集中度：':'Độ tập trung: ')+L(topC.country).split(/[\/;]/)[0].trim()+' '+fmt1(shr)+'% ('+topC.visitors+'/'+cur.visitor_records+') · '+(zh?'流量过度依赖单一市场。':'traffic phụ thuộc một thị trường.');
+  $('vs_note').textContent=(zh?'周期 ':'Kỳ ')+perVis(cur.period)+' · L1+ = L1 '+(zh?'至':'đến')+' L4 · '+(zh?'本次无上期对比数据':'không có kỳ trước cùng nguồn để so sánh');
+  const mm=(l,c)=>'<div class="metric"><div class="n">'+c+'</div><div class="l">'+l+'</div></div>';
+  $('vs_metrics').innerHTML=mm(X.mVisitors,fmt(cur.visitor_records))+mm(X.mCountries,fmt(cur.countries))+mm(X.mPv,fmt(cur.pv))+mm(X.mL1,fmt(cur.L1_plus)+' ('+fmt1(cur.L1_plus_share_percent)+'%)');
+  $('fn_h').textContent=X.fnH; $('fn_n').textContent=X.fnN; $('ct_h').textContent=X.ctH; $('ct_n').textContent=X.ctN;
+  const cs=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors||b.L1_plus-a.L1_plus);
+  $('ct_all').textContent=X.ctAll(cs.length);
+  $('tbl_country').innerHTML='<tr>'+X.cols.map((c,i)=>'<th class="'+(i?'num':'')+'">'+c+'</th>').join('')+'</tr>'+cs.map(c=>'<tr><td>'+flag(c.country)+esc(L(c.country))+'</td><td class="num">'+c.visitors+'</td><td class="num">'+c.pv+'</td><td class="num">'+c.keyword_visitors+'</td><td class="num">'+c.exact_keyword_records+'</td><td class="num">'+c.L0+'</td><td class="num">'+c.L1+'</td><td class="num">'+c.L2+'</td><td class="num">'+c.L3+'</td><td class="num">'+c.L4+'</td><td class="num"><b>'+c.L1_plus+'</b></td></tr>').join('');
+  $('ch_vhist').closest('.section').style.display='none';
+  /* products */
+  $('prod_lead').textContent=X.prodLead;
+  $('tp_h').textContent=X.tpH; $('tp_lead').textContent=X.tpLead; $('tp_note').textContent=X.tpNote;
+  $('tp_cards').innerHTML=OPS.top_products.filter(p=>p.status==='has_uv').map(p=>'<div class="pcard"><div class="rank">'+p.rank+'</div><a class="nm" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+'</a><div class="pid">Product ID: '+esc(p.product_id)+'</div><div class="uv">'+fmt(p.uv)+' <small>UV</small></div><a class="btn" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+X.open+'</a></div>').join('');
+  $('kw_h').textContent=X.kwH; $('kw_lead').textContent=X.kwLead; $('kw_note').textContent=X.kwNote(perVis(cur.period));
+  const core=kws.slice();
+  $('kw_warn').innerHTML=core.length<3?'<div class="warn">'+X.kwWarn(core.length,kws.length)+'</div>':'';
+  $('kw_legend').innerHTML='<span><i style="background:#16A34A"></i>'+X.cls.core+'</span><span><i style="background:#F59E0B"></i>'+X.cls.other+'</span><span><i style="background:#DC2626"></i>'+X.cls.noise+'</span>';
+  $('kw_all_s').textContent=X.kwAllS(kws.length); $('kw_q').placeholder=X.kwQ;
+  drawKwTable();
+  /* conclusion */
+  $('oc_h').textContent=X.ocH;
+  $('oc_sum').textContent=(zh?'管理建议：':'Quyết định quản trị: ')+pk('management_decision');
+  $('g_h').textContent=X.gH; $('g_t').textContent=$('pt').textContent;
+  $('a_h').textContent=X.aH; $('a_t').textContent=$('bt').textContent;
+  $('ac_h').textContent=X.acH;
+  const win=[['next_24_48h',(zh?'24–48小时内':'Trong 24–48 giờ'),'P0','red'],['next_7_days',(zh?'7天内':'Trong 7 ngày'),'P1','amber'],['next_30_days',(zh?'30天内':'Trong 30 ngày'),'P2','blue']];
+  $('actions').innerHTML=win.map(w=>'<div class="act"><h3><span class="tag '+w[3]+'">'+w[2]+'</span>'+w[1]+'</h3><ul class="tl" style="margin:0">'+REC[w[0]].map(a=>'<li style="margin-bottom:6px">'+esc(zh?a.cn:a.vi)+(a.owner?' <span class="tag gray">'+esc(a.owner)+'</span>':'')+'</li>').join('')+'</ul></div>').join('')+'<div class="act note2"><h3><span class="tag amber">!</span>'+(zh?'管理决策':'Quyết định quản trị')+'</h3><p>'+esc(pk('management_decision'))+'</p></div>';
+  /* ops */
+  $('om_h').textContent=X.omH; $('om_n').textContent=X.omN(perFull(wNew.period));
+  const dl=(i)=>{ return ''; const d=pct(num(wNew.k[i]),num(wPrev.k[i])); return d==null?'':'<div class="d '+(d>=0?'up':'down')+'">'+(d>=0?'▲ +':'▼ ')+d.toFixed(0)+'% '+X.vsPrev+'</div>'; };
+  const pick=[[0,'★'],[3,''],[4,''],[9,'']];
+  $('ops_metrics').innerHTML=[0,3,4,7,1,2,10,11].map(i=>'<div class="metric"><div class="n">'+esc(wNew.k[i])+(i===0?' ★':'')+'</div><div class="l">'+X.k[i]+'</div>'+(i===0?'':dl(i))+'</div>').join('');
+  $('sn_h').textContent=X.snH;
+  const ZHR=['行业平均和行业领先在表格中没有数值：保存为null并显示N/A，不以0代替。','24小时回复率0%伴随0个询盘，不足以评价回复速度。','买家消息、访客、运营三个周期不同，页面分别标注周期。','Top产品UV不是订单也不是询盘。','看板不展示买家完整电话和地址。'];
+  $('sn_body').innerHTML=(OPS.source_actions||[]).filter(n=>n.latest).map(n=>{const lb=n.label?L(n.label):''; return '<p>'+(lb?'<b>'+esc(lb)+'</b><br>':'')+esc(L(n.latest))+'</p>';}).join('')+'<p><b>'+(zh?'数据使用说明':'Lưu ý dữ liệu')+'</b></p><ul class="tl">'+SPEC.data_quality_rules.map((r,i)=>'<li>'+esc(zh?ZHR[i]:r)+'</li>').join('')+'</ul>';
+  $('c1_h').textContent=X.c1H; $('c1_n').textContent=X.c1N; $('c2_h').textContent=X.c2H; $('c2_n').textContent=X.c2N;
+  $('tb_h').textContent=X.tbH; $('tb_n').textContent=X.tbN;
+  const wc=weeks.slice().reverse();
+  $('tbl_ops').innerHTML='<tr><th>'+X.metric+'</th>'+wc.map(w=>'<th class="num">'+esc(endLabel(w.period))+'</th>').join('')+'</tr>'+X.k.map((lab,i)=>'<tr><td>'+lab+'</td>'+wc.map(w=>'<td class="num">'+esc(w.k[i])+'</td>').join('')+'</tr>').join('');
+  $('foot').innerHTML=X.foot+'<br>'+X.pMore;
+  document.title=CFG.storeName+' · '+X.kick;
+  $('n1').textContent=X.n1;
+  if(window.__charts) drawCharts();
+}
+function drawKwTable(){
+  const X=t(), q=($('kw_q').value||'').trim().toLowerCase();
+  const list=kws.filter(k=>!q||k.exact_keyword.toLowerCase().includes(q));
+  $('kw_cnt').textContent=list.length+' / '+kws.length;
+  $('tbl_kw').innerHTML='<tr>'+X.kwCols.map((c,i)=>'<th class="'+(i&&i<3?'num':'')+'">'+c+'</th>').join('')+'</tr>'+list.slice(0,600).map(k=>'<tr><td>'+esc(k.exact_keyword)+'</td><td class="num">'+k.occurrences+'</td><td class="num">'+k.source_row_pv_sum+'</td><td><span class="tag '+(k.cls==='core'?'green':k.cls==='noise'?'red':'gray')+'">'+X.cls[k.cls]+'</span></td></tr>').join('');
+}
+$('kw_q').addEventListener('input',drawKwTable);
+
+/* ---------- charts ---------- */
+let charts=[]; const AXL={fontSize:11};
+function mkc(id){ const el=$(id); let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+function drawCharts(){
+  if(typeof echarts==='undefined') return;
+  const X=t(), mob=MOB(); charts=[];
+  mkc('ch_funnel').setOption({tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},legend:{bottom:0,textStyle:{fontSize:12}},series:[{type:'pie',radius:['48%','72%'],center:['50%','44%'],label:{position:'inside',formatter:'{c}',fontSize:15,fontWeight:'bold'},color:['#cbd5e1','#16A34A'],data:[{value:cur.levels.L0,name:'L0'},{value:cur.L1_plus,name:'L1+'}]}]});
+  const top=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors||b.L1_plus-a.L1_plus).slice(0,12).reverse();
+  const lc=['#cbd5e1','#93c5fd','#3b82f6','#1d4ed8','#16a34a'];
+  mkc('ch_country').setOption({tooltip:{trigger:'axis',axisPointer:{type:'shadow'},confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:mob?84:120,right:24,top:34,bottom:20},xAxis:{type:'value',axisLabel:AXL},yAxis:{type:'category',data:top.map(c=>L(c.country).split(/[\/;]/)[0].trim()),axisLabel:{fontSize:11,width:mob?80:116,overflow:'truncate'}},
+    series:['L0','L1','L2','L3','L4'].map((k,i)=>({name:k,type:'bar',stack:'lv',data:top.map(c=>c[k]),itemStyle:{color:lc[i]}}))});
+  const vh=(VIS.visitor_history||[]).slice().reverse();
+  const lab=v=>{const m=String(v.period).match(/(\d{4})-(\d\d)-(\d\d)\D+(\d{4})-(\d\d)-(\d\d)/); return m?m[2]+'/'+m[3]+'–'+m[5]+'/'+m[6]:String(v.tab).slice(-12);};
+  (VIS.visitor_history?mkc('ch_vhist'):{setOption(){}}).setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:56},xAxis:{type:'category',data:vh.map(lab),axisLabel:Object.assign({},AXL,{rotate:35})},yAxis:[{type:'value',name:X.visitorsL,axisLabel:AXL},{type:'value',name:X.l1,axisLabel:AXL}],
+    series:[{name:X.visitorsL,type:'bar',data:vh.map(v=>v.visitor_records),itemStyle:{color:'#93c5fd',borderRadius:[4,4,0,0]}},{name:X.l1,type:'line',yAxisIndex:1,data:vh.map(v=>v.L1_plus),smooth:true,itemStyle:{color:'#16A34A'}}]});
+  const core=kws.slice();
+  if(core.length>=3){
+    $('ch_kw').style.display='';
+    const n=12, tk=core.slice(0,n).reverse();
+    $('ch_kw').style.height=mob?(tk.length*40+50)+'px':'';
+    mkc('ch_kw').setOption({tooltip:{trigger:'item',confine:true,formatter:p=>{const k=tk[p.dataIndex];return '<b>'+esc(k.exact_keyword)+'</b><br>'+(LANG==='zh'?'出现次数':'Số lần')+': '+k.occurrences+'<br>PV '+(LANG==='zh'?'（来源行）':'(dòng nguồn)')+': '+k.source_row_pv_sum;}},
+      grid:{left:4,right:mob?64:100,top:10,bottom:24,containLabel:true},xAxis:{type:'value',minInterval:1,axisLabel:AXL},yAxis:{type:'category',data:tk.map(k=>k.exact_keyword),axisLabel:{fontSize:mob?10:11,width:mob?100:200,overflow:'break'}},
+      series:[{type:'bar',data:tk.map(k=>({value:k.occurrences,itemStyle:{color:({core:'#16A34A',other:'#F59E0B',noise:'#DC2626'})[k.cls],borderRadius:[0,4,4,0]}})),label:{show:true,position:'right',fontSize:mob?10:11,formatter:p=>{const k=tk[p.dataIndex];return mob?k.occurrences+'×':k.occurrences+'× · PV '+k.source_row_pv_sum;}}}]});
+  } else { $('ch_kw').style.display='none'; }
+  const wk=weeks.slice().reverse(), xl=wk.map(w=>endLabel(w.period));
+  const ax={type:'category',data:xl,axisLabel:Object.assign({},AXL,{rotate:45})};
+  mkc('ch_trend').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:50},xAxis:ax,yAxis:[{type:'value',name:X.k[3],axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
+    series:[{name:X.k[3],type:'bar',data:wk.map(w=>num(w.k[3])),itemStyle:{color:'#2563EB',borderRadius:[4,4,0,0]}},{name:X.k[9],type:'line',yAxisIndex:1,data:wk.map(w=>num(w.k[9])),smooth:true,itemStyle:{color:'#16A34A'}}]});
+  mkc('ch_products').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:50},xAxis:ax,yAxis:[{type:'value',name:'Top/Super',axisLabel:AXL},{type:'value',name:X.k[1],axisLabel:AXL}],
+    series:[{name:X.k[1],type:'bar',yAxisIndex:1,data:wk.map(w=>num(w.k[1])),itemStyle:{color:'#fca5a5'}},{name:X.k[11],type:'line',data:wk.map(w=>num(w.k[11])),smooth:true,itemStyle:{color:'#D97706'}},{name:X.k[10],type:'line',data:wk.map(w=>num(w.k[10])),smooth:true,itemStyle:{color:'#16A34A'}}]});
+}
+/* ---------- init ---------- */
+if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang',LANG);}catch(e){} render(); })); }
+render();
+if(typeof echarts==='undefined'){ ['ch_funnel','ch_country','ch_vhist','ch_kw','ch_trend','ch_products'].forEach(id=>{$(id).innerHTML='<p class="note" style="padding:20px">'+t().noChart+'</p>';}); }
+else { window.__charts=true; drawCharts(); let lm=MOB(),rt; const rs=()=>{clearTimeout(rt);rt=setTimeout(()=>{ if(MOB()!==lm){lm=MOB();drawCharts();} else charts.forEach(c=>c.resize()); },150);}; window.addEventListener('resize',rs); window.addEventListener('orientationchange',rs); }
+/* nav highlight */
+(function(){ const links=[...document.querySelectorAll('#nav a')], secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  function on(){ let cur=0; secs.forEach((s,i)=>{ if(s.getBoundingClientRect().top<160) cur=i; }); links.forEach((a,i)=>a.classList.toggle('on',i===cur)); }
+  window.addEventListener('scroll',on,{passive:true}); on(); })();
+</script>
+</body></html>
