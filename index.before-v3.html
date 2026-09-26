@@ -1,0 +1,1155 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qing Yang Wood — Year 2 Dashboard</title>
+<style>
+:root{
+ --forest900:#12372A;--forest800:#185A3D;--forest700:#1F7A4D;--emerald600:#16A36A;--emerald500:#22B573;
+ --mint100:#DDF7E9;--mint50:#F3FBF7;--lime:#A7D948;--amber:#F4A62A;--red:#D94B4B;--ink:#17312A;--muted:#647A71;--white:#fff;
+ --amber2:#fff3df;--red2:#fdecea;--green2:#e4f8ee;--line:#d8ecdf;--shadow:0 2px 10px rgba(18,55,42,.08)
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--mint50);color:var(--ink);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:1360px;margin:auto;padding:22px 26px 60px}
+.hero{background:linear-gradient(120deg,var(--forest900),var(--emerald600));color:#fff;border-radius:16px;padding:22px 26px;margin-bottom:14px}
+.hero h1{font-size:21px;margin:0 0 4px;letter-spacing:-.01em}
+.hero .sub{font-size:13px;color:#dff5e9;margin-bottom:10px;max-width:900px}
+.hero .badges{display:flex;gap:7px;flex-wrap:wrap}
+.badge{font-size:11.5px;padding:3px 10px;border-radius:20px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.24)}
+.topbar{display:flex;justify-content:flex-end;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.langbtn,.printbtn{border:1px solid var(--line);background:#fff;color:var(--forest900);font:inherit;font-size:12px;font-weight:800;padding:6px 13px;border-radius:20px;cursor:pointer}
+.langbtn.active{background:var(--forest800);color:#fff;border-color:var(--forest800)}
+.printbtn{background:var(--emerald600);color:#fff;border-color:var(--emerald600)}
+.tabs{display:flex;gap:8px;margin:0 0 16px;overflow:auto;padding-bottom:2px}
+.tab{border:2px solid var(--line);border-radius:11px;padding:11px 16px;background:#fff;color:var(--forest900);white-space:nowrap;font:inherit;font-size:13px;font-weight:800;cursor:pointer;box-shadow:0 2px 5px rgba(18,55,42,.05);flex:none}
+.tab.active{background:var(--forest800);color:#fff;border-color:var(--forest800)}
+.pane{display:none}.pane.active{display:block}
+.section{background:#fff;border-radius:14px;padding:18px 20px;margin-bottom:14px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 4px;border-left:4px solid var(--forest700);padding-left:10px}
+.section h3{font-size:14px;margin:14px 0 8px;color:var(--forest800)}
+.note-line{font-size:12px;color:var(--muted);margin:6px 0 12px}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
+.kpi{border:1px solid var(--line);border-radius:12px;padding:13px 15px;background:var(--mint50)}
+.kpi .label{font-size:11.5px;color:var(--muted);margin-bottom:5px;font-weight:700}
+.kpi .value{font-size:22px;font-weight:850}
+.kpi .cmp{font-size:11.5px;color:var(--muted);margin-top:3px}
+.kpi .diag{font-size:12px;margin-top:6px;padding-top:6px;border-top:1px dashed var(--line)}
+.kpi.critical{border-color:#f3c8c8;background:var(--red2)}.kpi.critical .value{color:var(--red)}
+.kpi.warning{border-color:#f3ddb0;background:var(--amber2)}.kpi.warning .value{color:var(--amber)}
+.kpi.good{border-color:#bfe8d1;background:var(--green2)}.kpi.good .value{color:var(--emerald600)}
+.stag{display:inline-flex;font-size:9.5px;font-weight:900;padding:2px 7px;border-radius:20px;text-transform:uppercase;letter-spacing:.03em;margin-left:6px}
+.stag.critical{background:#f6cccc;color:#8a2424}.stag.warning{background:#fbe3b4;color:#7a4e08}.stag.good{background:#c6ecd7;color:#0e5c37}
+.readorder{display:grid;gap:7px}
+.readorder div{font-size:13px;padding:6px 0;border-bottom:1px dashed var(--line)}
+.readorder div:last-child{border-bottom:0}
+.conclusions{display:grid;gap:10px}
+.cbox{border:1px solid var(--line);border-radius:12px;padding:14px 16px;position:relative}
+.cbox.critical{border-left:5px solid var(--red)}
+.cbox.high{border-left:5px solid var(--amber)}
+.cbox.medium{border-left:5px solid var(--emerald600)}
+.cbox h4{margin:0 0 6px;font-size:14px}
+.cbox .cf{font-size:12.5px;margin-top:5px}
+.cbox .cf b{color:var(--forest800)}
+.today-box{background:linear-gradient(120deg,#fdecea,#fbdcd8);border:1px solid #f0c0ba;border-radius:12px;padding:14px 16px}
+.today-box h3{margin:0 0 8px;color:#8a2e28}
+.today-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:8px}
+.today-chip{background:#fff;border:1px solid #f0c0ba;border-radius:9px;padding:8px 10px;font-size:12px;cursor:pointer}
+.today-chip b{display:block;font-size:13px;color:#8a2e28}
+.funnel{display:flex;align-items:stretch;gap:8px;margin:14px 0;flex-wrap:wrap}
+.fstage{flex:1;min-width:150px;background:linear-gradient(120deg,var(--forest800),var(--emerald600));color:#fff;border-radius:12px;padding:14px 12px;text-align:center}
+.fstage.order{background:linear-gradient(120deg,#7a6f65,#9c9083)}
+.fstage .n{font-size:19px;font-weight:850}
+.fstage .l{font-size:11px;margin-top:4px;opacity:.92}
+.farrow{align-self:center;color:var(--muted);font-size:18px}
+.ov-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:18px;align-items:start}
+.funnel-mini .fstage{padding:10px 8px}
+.funnel-mini .fstage .n{font-size:15px}
+.funnel-mini .fstage .l{font-size:10px}
+.analysis-item{border-left:4px solid var(--forest700);border-radius:0 10px 10px 0;background:var(--mint50);padding:12px 14px;margin-bottom:10px}
+.analysis-item.high{border-left-color:var(--amber)}
+.analysis-item h4{margin:0 0 7px;font-size:13.5px;color:var(--forest900)}
+.analysis-item .al{font-size:12.5px;margin-top:5px;color:#3a4d44}
+.analysis-item .al b{color:var(--forest800);display:block;font-size:11px;text-transform:uppercase;letter-spacing:.02em;margin-bottom:2px}
+@media(max-width:900px){.ov-grid{grid-template-columns:1fr}}
+.attn-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:6px}
+@media(max-width:900px){.attn-grid{grid-template-columns:1fr}}
+.attn-panel{border-radius:13px;padding:16px 17px}
+.attn-panel.critical{background:#fdecea;border:1.5px solid #f3c8c8}
+.attn-panel.positive{background:var(--mint100);border:1.5px solid #bfe8d1}
+.attn-panel.improvement{background:#fff6e2;border:1.5px solid #f3ddb0}
+.attn-panel .attn-label{font-size:10.5px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;margin-bottom:6px}
+.attn-panel.critical .attn-label{color:#8a2424}
+.attn-panel.positive .attn-label{color:var(--forest700)}
+.attn-panel.improvement .attn-label{color:#7a4e08}
+.attn-panel .attn-headline{font-size:14.5px;font-weight:800;margin-bottom:10px;color:var(--ink)}
+.attn-item{font-size:12.3px;margin-bottom:9px;padding-bottom:9px;border-bottom:1px dashed rgba(0,0,0,.08)}
+.attn-item:last-of-type{border-bottom:0}
+.attn-item .ai-top{display:flex;justify-content:space-between;font-weight:800;margin-bottom:2px}
+.attn-item .ai-val{color:var(--muted);font-weight:700}
+.attn-item .ai-why{color:#4a4038}
+.attn-item .ai-caveat{color:var(--muted);font-style:italic;margin-top:2px}
+.attn-orient{font-size:12px;margin-top:10px;padding-top:9px;border-top:1px solid rgba(0,0,0,.08);font-weight:700}
+.attn-panel.critical .attn-orient{color:#8a2424}
+.attn-panel.positive .attn-orient{color:var(--forest700)}
+.attn-panel.improvement .attn-orient{color:#7a4e08}
+.phase-block h3{margin:0 0 4px;font-size:15px;color:var(--forest800)}
+.bizq{font-size:12.8px;font-style:italic;color:var(--muted);margin-bottom:10px}
+.example-card{background:var(--mint50);border:1px solid var(--line);border-radius:9px;padding:10px 12px;margin-bottom:8px;font-size:12.3px}
+.example-card b{color:var(--forest800)}
+.stagepill{display:inline-block;background:var(--mint100);color:var(--forest700);font-size:10.5px;font-weight:800;padding:2px 9px;border-radius:20px;margin-top:5px}
+.gate-box{background:var(--mint100);border:1px solid #bfe8d1;border-radius:9px;padding:10px 12px;font-size:12.5px;color:var(--forest800);margin-top:10px;font-weight:700}
+.scorecard-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media(max-width:900px){.scorecard-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.scorecard-grid{grid-template-columns:1fr}}
+.scorecard-item{border:1px solid var(--line);border-radius:11px;padding:13px 14px}
+.scorecard-item h4{margin:0 0 8px;font-size:13px;color:var(--forest800)}
+.scorecard-item .sq{font-size:11.5px;color:var(--muted);margin-top:8px;font-style:italic}
+.stagecard{border:1px solid var(--line);border-radius:11px;padding:13px 15px;margin-bottom:9px}
+.stagecard .sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.stagecard .sh b{font-size:13.5px}
+.stagecard .ev{font-size:12.5px;color:#4a4038;margin-bottom:6px}
+.stagecard ul{margin:4px 0 0;padding-left:18px}
+.stagecard li{font-size:12.3px;margin-bottom:3px;color:#4a4038}
+.barchart{display:grid;gap:11px;margin-top:8px}
+.barrow{display:grid;grid-template-columns:150px 1fr 60px;gap:10px;align-items:center;font-size:12px}
+.barrow .lbl{color:var(--muted);font-weight:700}
+.bartrack{background:#eaf6ee;border-radius:6px;height:20px;overflow:hidden}
+.barfill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--forest700),var(--emerald500));display:flex;align-items:center;padding-left:8px;color:#fff;font-weight:800;font-size:11px}
+.barfill.critical{background:linear-gradient(90deg,#8a2e28,var(--red))}
+.linechart{width:100%;height:160px}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
+.filters select,.filters input{border:1px solid var(--line);border-radius:8px;padding:7px 10px;font:inherit;font-size:12.5px}
+.filters input{flex:1;min-width:180px}
+.count-pill{font-size:11px;color:var(--muted);background:var(--mint100);border-radius:20px;padding:4px 10px;white-space:nowrap}
+.subtabs{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+.subtab{border:1px solid var(--line);background:#fff;border-radius:20px;padding:6px 14px;font:inherit;font-size:12px;font-weight:750;cursor:pointer;color:var(--forest800)}
+.subtab.active{background:var(--forest800);color:#fff;border-color:var(--forest800)}
+.subpane{display:none}.subpane.active{display:block}
+.counters{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:14px}
+.counter{border:1px solid var(--line);border-radius:11px;padding:12px;text-align:center}
+.counter .n{font-size:22px;font-weight:850;color:var(--forest800)}
+.counter .l{font-size:11.5px;color:var(--muted);margin-top:3px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:10px}
+.bcard{border:1px solid var(--line);border-radius:12px;padding:13px 14px;cursor:pointer;transition:box-shadow .12s,transform .12s}
+.bcard:hover{box-shadow:0 6px 14px rgba(18,55,42,.12);transform:translateY(-2px)}
+.bcard .bh{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:6px}
+.bcard .bh .nm{font-size:14px;font-weight:800}
+.bcard .bc{color:var(--muted);font-size:11.5px;margin-bottom:4px}
+.bcard .row{font-size:12.3px;margin-top:5px;color:#4a4038}
+.bcard .row b{font-weight:750;color:var(--forest900)}
+.lvltag{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:20px;white-space:nowrap}
+.lvltag.vhigh{background:#f6cccc;color:#8a2424}
+.lvltag.high{background:#fbe3b4;color:#7a4e08}
+.lvltag.mid{background:var(--mint100);color:var(--forest700)}
+.lvltag.low{background:#eee6da;color:var(--muted)}
+.reasonbox{background:var(--mint50);border:1px solid var(--line);border-radius:9px;padding:10px 12px;font-size:12.3px}
+.reasonbox b{display:block;margin-bottom:3px;color:var(--forest800)}
+.modal-bg{display:none;position:fixed;inset:0;background:rgba(18,55,42,.45);z-index:50;align-items:center;justify-content:center;padding:20px}
+.modal-bg.open{display:flex}
+.modal{background:#fff;border-radius:16px;max-width:560px;width:100%;max-height:85vh;overflow:auto;padding:22px 24px;position:relative}
+.modal-close{position:absolute;top:14px;right:16px;border:none;background:var(--mint100);width:28px;height:28px;border-radius:50%;font-size:15px;cursor:pointer;color:var(--forest900)}
+.modal h3{margin:0 0 4px;font-size:17px}
+.modal .mc{color:var(--muted);font-size:12.5px;margin-bottom:12px}
+.modal .mrow{font-size:13px;margin-bottom:9px;padding-bottom:9px;border-bottom:1px dashed var(--line)}
+.modal .mrow:last-child{border-bottom:0}
+.modal .mrow b{display:block;font-size:11.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px;font-weight:800}
+.paradox{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:10px}
+.pbox{border-radius:12px;padding:16px;text-align:center}
+.pbox.big{background:var(--mint100);border:1px solid #bfe8d1}
+.pbox.small{background:var(--red2);border:1px solid #f3c8c8}
+.pbox .n{font-size:26px;font-weight:850}
+.pbox.big .n{color:var(--forest700)}
+.pbox.small .n{color:var(--red)}
+.pbox .l{font-size:12px;color:var(--muted);margin-top:4px}
+.ol-steps{margin:0;padding-left:20px}
+.ol-steps li{margin-bottom:8px;font-size:13.3px}
+.oppcards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-top:8px}
+.oppcard{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--mint50)}
+.oppcard .rank{display:inline-flex;font-size:10.5px;font-weight:900;background:var(--forest800);color:#fff;padding:2px 8px;border-radius:20px;margin-bottom:6px}
+.oppcard h4{margin:0 0 6px;font-size:13.5px;color:var(--forest800)}
+.oppcard p{margin:0;font-size:12.3px;color:#4a4038}
+.checklist2{display:grid;gap:7px}
+.check2{display:flex;gap:9px;font-size:13px;align-items:flex-start}
+.check2 .ck{flex:none;width:18px;height:18px;border-radius:5px;background:var(--emerald600);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.market-signal-item{border:1px solid var(--line);border-radius:9px;padding:11px 13px;margin-bottom:9px;background:var(--mint50)}
+.market-signal-item .msig-h{font-weight:800;font-size:13px;margin-bottom:3px;color:var(--forest800)}
+.market-signal-item .msig-v{font-size:12.8px;margin-bottom:4px}
+.market-signal-item .msig-u{font-size:11px;color:var(--muted);font-style:italic}
+.roadmap{display:grid;gap:12px}
+.phase{border:1px solid var(--line);border-radius:12px;padding:15px 16px}
+.phase h3{margin:0 0 4px;font-size:14.5px;color:var(--forest800)}
+.phase .ptime{font-size:11.5px;color:var(--muted);margin-bottom:8px;font-weight:700}
+.phase ul{margin:0;padding-left:20px}
+.phase li{font-size:13px;margin-bottom:5px}
+.actiontable{width:100%;border-collapse:collapse;font-size:12.5px}
+.actiontable th,.actiontable td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.actiontable th{background:var(--mint100);color:var(--forest900);font-weight:800}
+.northstar{background:linear-gradient(120deg,var(--forest900),var(--emerald600));color:#fff;border-radius:12px;padding:14px 16px;margin-bottom:14px;font-size:13.5px}
+.kpichips{display:flex;flex-wrap:wrap;gap:7px}
+.kpichip{background:var(--mint100);color:var(--forest800);border-radius:20px;padding:5px 12px;font-size:12px;font-weight:700}
+.pricegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.pricecard{border:2px solid var(--line);border-radius:16px;padding:18px;position:relative;background:#fff}
+.pricecard.primary{border-color:var(--emerald600);box-shadow:0 8px 24px rgba(22,163,106,.18);transform:translateY(-4px)}
+.ribbon{position:absolute;top:-12px;left:16px;background:var(--emerald600);color:#fff;font-size:11px;font-weight:900;padding:4px 12px;border-radius:20px}
+.pcname{font-size:16px;font-weight:850;margin-bottom:2px}
+.pctag{display:inline-block;font-size:10.5px;font-weight:800;padding:2px 9px;border-radius:20px;margin-bottom:10px}
+.pctag.budget{background:var(--amber2);color:#7a4e08}
+.pctag.maintain{background:#eee6da;color:var(--muted)}
+.pctag.primary{background:var(--green2);color:var(--forest700)}
+.pcprice{font-size:26px;font-weight:900;color:var(--forest800)}
+.pcpricevnd{font-size:12px;color:var(--muted);margin-bottom:10px}
+.pcstar{font-size:13px;font-weight:750;margin-bottom:4px}
+.pcguarantee{font-size:12.5px;color:var(--forest700);font-weight:700;margin-bottom:10px}
+.pcbenefits{margin:0 0 10px;padding-left:18px}
+.pcbenefits li{font-size:12.3px;margin-bottom:4px}
+.pcfit{font-size:12.3px;color:#4a4038;border-top:1px dashed var(--line);padding-top:8px;margin-top:8px}
+.pcreason{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:6px}
+.disclaimer{font-size:11.5px;color:var(--muted);font-style:italic;margin-top:10px}
+.summaryblocks{display:grid;gap:12px}
+.sblock{border:1px solid var(--line);border-radius:12px;padding:16px 18px;display:flex;gap:14px}
+.sblock .num{flex:none;font-size:26px;font-weight:900;color:var(--emerald600)}
+.sblock h4{margin:0 0 6px;font-size:15px;color:var(--forest900)}
+.sblock p{margin:0;font-size:13.3px;color:#3a4d44}
+.foot{text-align:center;color:#8fa79c;font-size:11.5px;margin-top:20px;line-height:1.8}
+@media(max-width:1000px){.kpis{grid-template-columns:repeat(2,1fr)}.paradox{grid-template-columns:1fr}.barrow{grid-template-columns:100px 1fr 50px}.pricegrid{grid-template-columns:1fr}.pricecard.primary{transform:none}.counters{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.wrap{padding:14px 12px 40px}.kpis{grid-template-columns:1fr}.hero h1{font-size:18px}}
+@media print{
+  .topbar,.tabs,.langbtn,.printbtn{display:none!important}
+  .pane{display:block!important}
+  body{background:#fff}
+  .section{box-shadow:none;border:1px solid #ddd;break-inside:avoid}
+  .wrap{max-width:100%;padding:6px}
+}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="topbar">
+    <button class="langbtn" id="btnVi">Tiếng Việt</button>
+    <button class="langbtn" id="btnZh">中文</button>
+    <button class="printbtn" id="btnPrint">&#128424; <span id="printLbl">In / Chụp</span></button>
+  </div>
+  <header class="hero">
+    <h1>QING YANG WOOD PRODUCTION TRADING COMPANY LIMITED</h1>
+    <div class="sub" id="heroHeadline"></div>
+    <div class="badges">
+      <span class="badge" id="badgePeriod"></span>
+      <span class="badge" id="badgeScope"></span>
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button class="tab active" data-pane="overview" id="tab_overview"></button>
+    <button class="tab" data-pane="funnel" id="tab_funnel"></button>
+    <button class="tab" data-pane="buyers" id="tab_buyers"></button>
+    <button class="tab" data-pane="products" id="tab_products"></button>
+    <button class="tab" data-pane="roadmap" id="tab_roadmap"></button>
+    <button class="tab" data-pane="pricing" id="tab_pricing"></button>
+    <button class="tab" data-pane="summary" id="tab_summary"></button>
+  </nav>
+
+  <section class="pane active" id="overview">
+    <div class="section">
+      <div class="ov-grid">
+        <div class="ov-chart-col">
+          <h2 id="ov_chartTitle"></h2>
+          <div class="barchart" id="ov_attainment"></div>
+          <h3 id="ov_funnelTitle"></h3>
+          <div class="funnel funnel-mini" id="ov_funnel"></div>
+        </div>
+        <div class="ov-analysis-col">
+          <h2 id="ov_analysisTitle"></h2>
+          <div id="ov_analysis"></div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="attn-grid" id="ov_attnGrid"></div>
+      <div class="note-line" id="ov_footnote"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="funnel">
+    <div class="section">
+      <h2 id="fn_funnelTitle"></h2>
+      <div class="funnel" id="fn_funnel"></div>
+      <div id="fn_stages"></div>
+    </div>
+    <div class="section">
+      <h2 id="fn_barTitle"></h2>
+      <div class="barchart" id="fn_bars"></div>
+    </div>
+    <div class="section">
+      <h2 id="fn_replyTitle"></h2>
+      <svg class="linechart" id="fn_line" viewBox="0 0 600 180" preserveAspectRatio="none"></svg>
+      <div class="note-line" id="fn_replyNote"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="buyers">
+    <div class="section">
+      <div class="counters" id="by_counters"></div>
+      <h2 id="by_h2"></h2>
+      <div class="note-line" id="by_note"></div>
+      <div class="subtabs">
+        <button class="subtab active" data-sub="pri" id="subBtnPri"></button>
+        <button class="subtab" data-sub="rev" id="subBtnRev"></button>
+        <button class="subtab" data-sub="rem" id="subBtnRem"></button>
+      </div>
+      <div class="filters">
+        <input type="text" id="bySearch">
+        <select id="byLevel"></select>
+        <select id="byCountry"></select>
+        <span class="count-pill" id="byCount"></span>
+      </div>
+      <div class="subpane active" id="sub_pri"><div class="cards" id="cards_pri"></div></div>
+      <div class="subpane" id="sub_rev"><div class="cards" id="cards_rev"></div></div>
+      <div class="subpane" id="sub_rem"><div class="cards" id="cards_rem"></div></div>
+    </div>
+  </section>
+
+  <section class="pane" id="products">
+    <div class="section">
+      <h2 id="pd_paradoxTitle"></h2>
+      <div class="paradox">
+        <div class="pbox big"><div class="n">1,605</div><div class="l" id="pd_productsLbl"></div></div>
+        <div class="pbox small"><div class="n">3.7%–7.8%</div><div class="l" id="pd_shareLbl"></div></div>
+      </div>
+    </div>
+    <div class="section">
+      <h2 id="pd_demandTitle"></h2>
+      <div class="oppcards" id="pd_oppcards"></div>
+    </div>
+    <div class="section">
+      <h2 id="pd_checklistTitle"></h2>
+      <div class="note-line" id="pd_checklistNote"></div>
+      <div class="checklist2" id="pd_checklist"></div>
+    </div>
+    <div class="section">
+      <h2 id="pd_marketTitle"></h2>
+      <div id="pd_market"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="roadmap">
+    <div class="section">
+      <div class="northstar" id="rm_northstar"></div>
+      <div class="note-line" id="rm_disclaimer"></div>
+    </div>
+    <div id="rm_phaseList"></div>
+    <div class="section">
+      <h2 id="rm_scorecardTitle"></h2>
+      <div class="scorecard-grid" id="rm_scorecard"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="pricing">
+    <div class="section">
+      <h2 id="pr_h2"></h2>
+      <div class="note-line" id="pr_note"></div>
+      <div class="pricegrid" id="pr_cards"></div>
+      <div class="note-line" id="pr_logicTitle" style="margin-top:16px;font-weight:800;color:var(--forest800)"></div>
+      <ul class="ol-steps" id="pr_logic"></ul>
+      <div class="disclaimer" id="pr_disclaimer"></div>
+    </div>
+  </section>
+
+  <section class="pane" id="summary">
+    <div class="section">
+      <h2 id="sm_h2"></h2>
+      <div class="summaryblocks" id="sm_blocks"></div>
+    </div>
+  </section>
+
+  <div class="foot" id="footNote"></div>
+</main>
+
+<div class="modal-bg" id="modalBg">
+  <div class="modal">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const LEADS = {"priority7":[{"rank":1,"name":"Muhammet Celebi","country":"Thổ Nhĩ Kỳ","flag":"🇹🇷","level":"Rất cao","need":"12.000m/tháng; cần tùy chỉnh, chống UV, chịu nhiệt, không ố vàng; giao Bursa.","commercial_signal":"Nhu cầu số lượng lớn và thông số kỹ thuật rõ.","next_action":"Trong 2 giờ: gửi bảng spec, lựa chọn mẫu, giá theo 12.000m/tháng, lead time và phương án vận chuyển đến Bursa.","conversion_goal":"Chốt mẫu và lịch gửi mẫu.","email":"暂未看到","phone":"暂未看到","evidence":"Auto: \"Got it, 12,000 meters per month... pleated curtain needs... where should we ship\".","company":"Muhammet Celebi","country_zh":"土耳其","level_zh":"非常高","need_zh":"每月12,000米；需定制、抗UV、耐热、不发黄；发货至布尔萨。","next_zh":"2小时内：发送规格表、样品选项、按每月12,000米的报价、交期及发往布尔萨的运输方案。","commercial_zh":"需求量大且技术参数明确。","goal_zh":"确定样品并安排寄样时间。"},{"rank":2,"name":"TRAN HUYEN","country":"Việt Nam","flag":"🇻🇳","level":"Rất cao","need":"Natural white oak veneer 0,3mm; bề mặt chà nhám + oil + kraft paper backing; hỏi năng lực sản xuất tại Việt Nam.","commercial_signal":"Nhu cầu kỹ thuật cụ thể, phù hợp năng lực nhà máy.","next_action":"Trong 2 giờ: xác nhận khả năng sản xuất, MOQ, mẫu, giá, lead time và bằng chứng nhà máy.","conversion_goal":"Chốt spec và mẫu thử.","email":"暂未看到","phone":"暂未看到","evidence":"Buyer: \"Our factory in Vietnam needs 0.3MM natural white oak veneer... Can your factory in Vietnam produce this?\"","company":"TRAN HUYEN","country_zh":"越南","level_zh":"非常高","need_zh":"天然白橡木皮0.3毫米；表面砂光+上油+牛皮纸背层；询问越南工厂生产能力。","next_zh":"2小时内：确认生产能力、MOQ、样品、报价、交期及工厂证明。","commercial_zh":"技术需求具体，符合工厂能力。","goal_zh":"确定规格并寄出试样。"},{"rank":3,"name":"Cathy Quan","company":"Deqing Vunir Technology Co., Ltd.","country":"Trung Quốc","flag":"🇨🇳","level":"Cao","need":"White oak; hỏi giá và khả năng làm thử một phần.","commercial_signal":"Đã trao đổi về đơn giá và điều kiện giá.","next_action":"Follow bằng tiếng Trung; xác nhận grade, thickness, MOQ, giá EXW/FOB và phương án mẫu.","conversion_goal":"Chốt mẫu thử và điều kiện giá.","email":"research@vunir.cn","phone":"暂未看到","evidence":"Buyer: \"Can we eventually make some of this white oak? Give us a chance to try\".","country_zh":"中国","level_zh":"高","need_zh":"白橡木；询价并希望先小批量试做。","next_zh":"用中文跟进；确认等级、厚度、MOQ、EXW/FOB价格及打样方案。","commercial_zh":"已就单价和价格条件进行沟通。","goal_zh":"确定试样及价格条件。"},{"rank":4,"name":"KH shopper","company":"Bong Thu","country":"Campuchia / cần xác minh","flag":"🇰🇭","level":"Cao","need":"Red banding 45mm, 200m; ngân sách 20 USD/roll; địa chỉ nhận tại Việt Nam.","commercial_signal":"Đã có kích thước, số lượng và ngân sách.","next_action":"Gửi báo giá đúng spec, xác nhận màu/mẫu và phí giao nội địa Việt Nam.","conversion_goal":"Chốt báo giá và đơn thử.","email":"暂未看到","phone":"暂未看到","evidence":"Title: \"Confirm red banding, 45mm, 200m, Vietnam address, $20/roll budget\".","country_zh":"柬埔寨/待确认","level_zh":"高","need_zh":"红色封边条45毫米，200米；预算20美元/卷；越南收货地址。","next_zh":"按规格发送报价，确认颜色/样品及越南境内运费。","commercial_zh":"已有尺寸、数量和预算信息。","goal_zh":"确定报价并促成试单。"},{"rank":5,"name":"ramesh chandra","company":"vanshika printers","country":"Ấn Độ","flag":"🇮🇳","level":"Cao","need":"PVC edge banding/self-adhesive tape; số lượng từ 200m; đã có quotation 0,05 USD.","commercial_signal":"Đã đến bước báo giá.","next_action":"Xác nhận số lượng cuối, màu/spec, địa chỉ nhận, phí ship và tạo sample/order.","conversion_goal":"Chuyển quotation thành sample hoặc order.","email":"rnr.kandpal@gmail.com","phone":"暂未看到","evidence":"Quotation: quantity >=200 Meter, unit price USD 0.05.","country_zh":"印度","level_zh":"高","need_zh":"PVC封边条/自粘胶带；数量200米起；已获得0.05美元的报价。","next_zh":"确认最终数量、颜色/规格、收货地址、运费并创建样品/订单。","commercial_zh":"已进入报价阶段。","goal_zh":"将报价转化为样品或订单。"},{"rank":6,"name":"SilvinoMateus Sambo","country":"Angola / thị trường nói tiếng Bồ Đào Nha","flag":"🇦🇴","level":"Cao","need":"Hỏi thời gian nhận hàng sau khi thanh toán.","commercial_signal":"Đã quan tâm đến thanh toán và giao hàng.","next_action":"Trả lời lead time, phương thức vận chuyển, điều kiện thanh toán và đề xuất Trade Assurance.","conversion_goal":"Chốt điều kiện giao hàng và thanh toán.","email":"暂未看到","phone":"暂未看到","evidence":"\"How long do I have to wait to receive the material after making payments?\".","company":"SilvinoMateus Sambo","country_zh":"安哥拉/葡语市场","level_zh":"高","need_zh":"询问付款后多久能收到货物。","next_zh":"回复交期、运输方式、付款条件，并提出信保交易建议。","commercial_zh":"已关注付款和交货事宜。","goal_zh":"确定交货和付款条件。"},{"rank":7,"name":"Rene Ong","country":"Chưa xác minh","flag":"🌐","level":"Cao","need":"Hỏi thickness và khả năng cung cấp width 50mm.","commercial_signal":"Nhu cầu kỹ thuật rõ.","next_action":"Trả lời dải thickness, xác nhận width 50mm, MOQ, vật liệu, màu và ứng dụng.","conversion_goal":"Chốt spec và số lượng.","email":"guamhdwdrdo@gmail.com","phone":"暂未看到","evidence":"\"What is your thickness? Can you supply 50mm width?\".","company":"Rene Ong","country_zh":"未核实","level_zh":"高","need_zh":"询问厚度及是否可提供50毫米宽度。","next_zh":"回复厚度范围，确认50毫米宽度、MOQ、材质、颜色及用途。","commercial_zh":"技术需求明确。","goal_zh":"确定规格和数量。"}],"other10":[{"name":"Divyanshu Jangid","country":"Ấn Độ","flag":"🇮🇳","level":"Trung bình","need":"Hồ sơ công ty và chứng chỉ sản phẩm.","next_action":"Gửi company profile, certificate, catalog và hỏi nhóm sản phẩm cần mua.","email":"暂未看到","phone":"暂未看到","evidence":"Buyer: \"can you share your company details & certificate of products you have\".","company":"DivyanshuJangid","country_zh":"印度","level_zh":"中","need_zh":"询问公司资料和产品证书。","next_zh":"发送公司简介、证书、产品目录，并询问所需产品类别。"},{"name":"Skdfine decor","country":"Indonesia","flag":"🇮🇩","level":"Trung bình","need":"Floor veneer 0,2-1,0mm; MOQ tham chiếu 5.000.","next_action":"Hỏi project, thickness, loại veneer, số mét và cảng nhận.","email":"暂未看到","phone":"暂未看到","evidence":"Product card floor veneer; seller asked meters needed for project.","company":"Skdfine decor","country_zh":"印度尼西亚","level_zh":"中","need_zh":"地板木皮0.2-1.0毫米；参考MOQ 5,000。","next_zh":"询问项目、厚度、木皮种类、所需米数及收货港口。"},{"name":"singh steven","country":"Hồng Kông / Trung Quốc","flag":"🇭🇰","level":"Trung bình","need":"Đã phản hồi 'FOB price okay'.","next_action":"Xác nhận số lượng, cảng đến và đề xuất PI/order.","email":"暂未看到","phone":"暂未看到","evidence":"Buyer: \"fob price okay\".","company":"guru international","country_zh":"香港/中国","level_zh":"中","need_zh":"已回复'FOB价格可以接受'。","next_zh":"确认数量、目的港，并提出PI/订单建议。"},{"name":"Ren Air Systems","country":"Chưa xác minh","flag":"🌐","level":"Trung bình","need":"Veneer mỏng làm đèn thủ công; yêu cầu catalog/quote dạng Excel.","next_action":"Gửi file Excel và hỏi thickness, loại veneer, số lượng.","email":"暂未看到","phone":"暂未看到","evidence":"","company":"Ren Air Systems","country_zh":"未核实","level_zh":"中","need_zh":"用于手工灯具的薄木皮；要求Excel格式的目录/报价。","next_zh":"发送Excel文件，并询问厚度、木皮种类及数量。"},{"name":"Ella Yu","company":"N&S Electronic Co., Limited","country":"Hồng Kông / Trung Quốc","flag":"🇭🇰","level":"Trung bình","need":"Wood veneer edge banding: white oak, walnut, cherry, teak, ash; MOQ tham chiếu 10.000.","next_action":"Hỏi loại gỗ, width/thickness và số lượng.","email":"ella@nselectronic.com.hk","phone":"暂未看到","evidence":"Product card: Natural Wood Veneer Edge Banding... MOQ 10000.","country_zh":"香港/中国","level_zh":"中","need_zh":"木皮封边条：白橡木、胡桃木、樱桃木、柚木、白蜡木；参考MOQ 10,000。","next_zh":"询问木材种类、宽度/厚度及数量。"},{"name":"Immanuel Odhiambo","country":"Kenya","flag":"🇰🇪","level":"Trung bình","need":"Hỏi vận chuyển đến Maryland, Mỹ và giá wholesale.","next_action":"Hỏi sản phẩm, số lượng và địa chỉ/cảng để báo giá và ship.","email":"暂未看到","phone":"暂未看到","evidence":"\"Do you ship in Maryland USA? How much for wholesale...\".","company":"Immanuel Odhiambo","country_zh":"肯尼亚","level_zh":"中","need_zh":"询问是否发货至美国马里兰州及批发价格。","next_zh":"询问产品、数量及地址/港口以便报价和安排运输。"},{"name":"Mashael Albabtain","country":"Chưa xác minh","flag":"🌐","level":"Trung bình","need":"Engineered ebony veneer panels 2500x640mm.","next_action":"Hỏi số tấm, thickness, ứng dụng và cảng đến.","email":"暂未看到","phone":"暂未看到","evidence":"Product card Engineered Ebony Veneer Panels.","company":"Mashael Albabtain","country_zh":"未核实","level_zh":"中","need_zh":"工程黑檀木皮板材2500x640毫米。","next_zh":"询问板数、厚度、用途及目的港。"},{"name":"User name","company":"Nocompanyname","country":"Chưa xác minh","flag":"🌐","level":"Trung bình","need":"50m/roll, các màu đen, trắng, nâu, vàng.","next_action":"Báo giá theo màu, MOQ, đóng gói và ship.","email":"decorandfurniture7412@gmail.com","phone":"暂未看到","evidence":"Auto: \"do you want 50 meters per roll for black, white, brown, and yellow... get the price\".","country_zh":"未核实","level_zh":"中","need_zh":"每卷50米，黑、白、棕、黄等颜色。","next_zh":"按颜色、MOQ、包装和运费进行报价。"},{"name":"Amy Zhang","company":"Wenzhou Quanlian Packing Material Co., Ltd.","country":"Trung Quốc","flag":"🇨🇳","level":"Trung bình-thấp","need":"High-temperature insulation film, có khả năng lệch nhóm sản phẩm lõi.","next_action":"Xác nhận có cung cấp hay không; nếu không thì hướng về sản phẩm phù hợp.","email":"amyzhang_wzql@163.com","phone":"暂未看到","evidence":"Buyer (Chinese): \"你们的高温隔热膜怎么买？\".","country_zh":"中国","level_zh":"中低","need_zh":"高温隔热膜，可能不属于核心产品类别但为真实需求。","next_zh":"确认是否可供应；若不符合则引导至合适产品。"},{"name":"Vicky Peter","country":"Chưa xác minh","flag":"🌐","level":"Trung bình-thấp","need":"PVC edge banding 22mm.","next_action":"Hỏi màu, thickness, số mét và đóng gói.","email":"暂未看到","phone":"暂未看到","evidence":"Product card Customized 22MM Wood Grained PVC Edge Banding... MOQ 200.","company":"Vicky Peter","country_zh":"未核实","level_zh":"中低","need_zh":"PVC封边条22毫米。","next_zh":"询问颜色、厚度、米数及包装。"}],"review9":[{"name":"Toan Truongnhat","reason":"Buyer chỉ gửi business card/yêu cầu contact, chưa nói nhu cầu sản phẩm.","evidence":"\"Hi, I'd like your contact information. Here is my business card.\"","reason_zh":"买家仅发送名片/索取联系方式，未说明产品需求。"},{"name":"Sudhanshu Agarwal","reason":"Buyer muốn chia sẻ qua WhatsApp, chưa có đủ spec trong đoạn đọc.","evidence":"\"yes please share on whatsapp\".","reason_zh":"买家希望通过WhatsApp沟通，已读片段中规格信息不足。"},{"name":"AlicjaMaria Kulesza","reason":"Chỉ có chào hỏi/gửi details chưa rõ nội dung sản phẩm trong đoạn đọc.","evidence":"\"Good morning\", \"these are the details\".","reason_zh":"仅有问候/发送资料，已读片段中产品内容不明确。"},{"name":"Oscar CabicheHuaca","reason":"Chỉ thấy buyer trả lời \"ok\", chưa thấy nhu cầu gốc trong đoạn đọc.","evidence":"Buyer: \"ok\".","reason_zh":"仅见买家回复\"ok\"，已读片段未见原始需求。"},{"name":"Zubair Anwar","reason":"Chỉ thấy RFQ/inquiry card View detail/Provide quote, chưa đọc được nhu cầu chi tiết.","evidence":"Nút \"Provide a quote\".","reason_zh":"仅见RFQ/询盘卡片\"查看详情/提供报价\"，未读到具体需求。"},{"name":"vijay kumar","reason":"Đoạn đọc chủ yếu là auto follow-up, chưa thấy buyer nói nhu cầu rõ.","evidence":"Auto: \"Hello! Do you have any other questions?\".","reason_zh":"已读片段主要为自动跟进消息，未见买家说明具体需求。"},{"name":"Thao Phuong","reason":"Buyer chỉ trả lời \"dạ/yes\", chưa thấy nhu cầu rõ trong đoạn đọc.","evidence":"Buyer: \"dạ\".","reason_zh":"买家仅回复\"是/好的\"，已读片段未见明确需求。"},{"name":"M Asghar","reason":"Có product card PVC edge banding MOQ 10000 nhưng email outlook kiểu spam, chưa thấy buyer nói nhu cầu riêng.","evidence":"Product card + email salesdev556@outlook.com.","reason_zh":"有PVC封边条MOQ 10000的产品卡片，但邮箱为outlook类可疑地址，未见买家说明自身需求。"},{"name":"Sheriff Rahmon","reason":"Đoạn đọc chủ yếu là seller hỏi lại product type/quantity; chưa thấy buyer spec rõ.","evidence":"Seller: \"Could you share your product type and quantity needs?\".","reason_zh":"已读片段主要是卖家反问产品类型/数量，未见买家给出具体规格。"}],"removed7":[{"name":"Shikha Dhama","reason":"Nghi vấn spam/dẫn ra ngoài nền tảng - Mẫu tin yêu cầu gửi catalogue ra email ngoài, nội dung chung chung, có dấu hiệu spam.","evidence":"\"send catalogue/product list to Purchase Rep... Email: josolomon024@gmail.com\".","reason_zh":"疑似垃圾信息/引流站外 - 要求将目录发送至站外邮箱，内容笼统，具有垃圾信息特征。"},{"name":"Daniel Nganga","reason":"Dẫn ra ngoài nền tảng - Chỉ yêu cầu WhatsApp, chưa có nhu cầu sản phẩm cụ thể.","evidence":"\"You can add me on WhatsApp.0944937134\".","reason_zh":"引流站外 - 仅要求添加WhatsApp，无具体产品需求。"},{"name":"Marvin Nguyen","reason":"Nhà cung cấp dịch vụ, không phải buyer - Đây là bên logistics chào dịch vụ, không phải buyer mua sản phẩm.","evidence":"Tin nhắn giới thiệu Sealink International logistics services.","reason_zh":"服务商而非买家 - 为物流服务方推广信息，并非采购产品的买家。"},{"name":"HUSNAIN ALI","reason":"Nghi vấn spam/dẫn ra ngoài nền tảng - Yêu cầu gửi catalogue ra email .RU; tài khoản bị cảnh báo hạn chế phản hồi.","evidence":"\"Please send it... SALESMANU@MAIL.RU\"; hệ thống báo account bị cancelled/controlled.","reason_zh":"疑似垃圾信息/引流站外 - 要求将目录发送至.RU邮箱；账号因违规/欠款被系统限制回复。"},{"name":"Apogroup Hair Manufacturer","reason":"Spam/dẫn ra ngoài nền tảng - Yêu cầu gửi catalogue ra email .RU/list.ru, không phù hợp ngành.","evidence":"\"Send it to my email INFO.FAKANINDUSTRY@LIST.RU\".","reason_zh":"垃圾信息/引流站外 - 要求发送目录至.RU/list.ru邮箱，与行业不符。"},{"name":"ba Huyen","reason":"Spam/dẫn ra ngoài nền tảng - Yêu cầu gửi catalogue ra email .RU/list.ru dù công ty ở Việt Nam.","evidence":"\"ROYALGLOBAL45@LIST.RU\".","reason_zh":"垃圾信息/引流站外 - 要求发送目录至.RU/list.ru邮箱，尽管公司位于越南。"},{"name":"Liu Sky","reason":"Không rõ là buyer - Đoạn đọc chỉ là card công ty Qing Yang và phản hồi seller, chưa thấy nhu cầu mua thật.","evidence":"Chỉ thấy company card QING YANG... response time.","reason_zh":"买家身份不明确 - 已读内容仅为Qing Yang公司卡片及卖家自动回复，未见真实购买需求。"}]};
+
+const PERF = {
+  metrics: [
+    {id:'search_impressions', label_vi:'Lượt hiển thị tìm kiếm', label_zh:'搜索曝光量', store:3630, ref:46725, share:7.8},
+    {id:'page_views', label_vi:'Lượt xem trang', label_zh:'页面浏览量', store:227, ref:4454, share:5.1},
+    {id:'unique_visitors', label_vi:'Người xem duy nhất', label_zh:'独立访客数', store:99, ref:2029, share:4.9},
+    {id:'search_clicks', label_vi:'Lượt nhấp từ tìm kiếm', label_zh:'搜索点击量', store:40, ref:1070, share:3.7},
+    {id:'business_opportunities_period', label_vi:'Cơ hội kinh doanh trong kỳ', label_zh:'期内商机数', store:13, ref:290, share:4.5},
+    {id:'ctr', label_vi:'CTR tìm kiếm', label_zh:'搜索点击率 CTR', store:1.1, ref:2.29, share:48.03, isPct:true}
+  ],
+  reply_history: [
+    {period:'2025-12', store:73.33},
+    {period:'2026-04', store:78.57},
+    {period:'2026-06', store:84.62}
+  ],
+  reply_ref: 92,
+  products_2026_06: 1605,
+  cumulative_impr: 28427,
+  cumulative_ref: 428847,
+  cumulative_share: 6.6,
+  top_sku_range: [34,76],
+  opp_year1: 95
+};
+
+const T = {
+ vi: {
+  heroHeadline:'Năm 1 có nhu cầu thật nhưng cửa vào quá hẹp và chưa hình thành quy trình chốt đơn ổn định.',
+  badgePeriod:'Kỳ dữ liệu: hiệu suất 06/2026 · lead 12/2025–07/2026',
+  badgeScope:'Giá Renew FY27Q1 cung cấp 05/09/2026 · giá chưa gồm VAT',
+  printLbl:'In / Chụp',
+  tabs:{overview:'Tổng quan',funnel:'Phễu hiệu suất',buyers:'Buyer cần theo dõi',products:'Sản phẩm & thị trường',roadmap:'Kế hoạch năm 2',pricing:'3 gói gia hạn',summary:'Kết luận'},
+  ro_title:'Cách ông chủ đọc app này',
+  ro_list:[
+   '1. Đọc 4 thẻ cảnh báo ở đầu trang để biết vấn đề lớn nhất.',
+   '2. Xem funnel để hiểu đang mất buyer ở bước hiển thị, nhấp hay chốt đơn.',
+   '3. Xem Buyer ưu tiên hôm nay để biết ai phải được xử lý trong 24 giờ.',
+   '4. Xem Hành động 7 ngày để giao việc cụ thể cho đội vận hành và sales.',
+   '5. Xem ba gói gia hạn và chọn theo mục tiêu, không chỉ nhìn giá.',
+   '6. Đọc Tóm tắt kết quả ở cuối để ra quyết định năm 2.'
+  ],
+  ov_kpiTitle:'6 chỉ số hiệu suất cốt lõi (06/2026)',
+  ov_chartTitle:'Mức đạt so với tham chiếu ngành (06/2026)',
+  attainLabel:'Đạt {pct} · {store} / {ref}',
+  ov_funnelTitle:'Phễu chuyển đổi đang nghẽn ở đâu?',
+  ov_analysisTitle:'Vì sao cần chú ý',
+  analysisLabels:{evidence:'Điều dữ liệu cho thấy',meaning:'Vì sao cần chú ý',orientation:'Định hướng đề xuất'},
+  analysisDirections:[
+   {priority:'critical',title:'Độ phủ tìm kiếm quá thấp',evidence:'Search impressions chỉ bằng 7,8% mức tham khảo ngành; search clicks chỉ bằng 3,7%; CTR 1,10% so với 2,29% ngành.',meaning:'Buyer chưa nhìn thấy đủ nhiều, và khi nhìn thấy thì mức hấp dẫn của tiêu đề, ảnh chính, giá/MOQ hoặc định vị sản phẩm còn yếu.',orientation:'Tập trung tối ưu danh mục lõi, từ khóa, ảnh chính và Showcase trước khi mở rộng quảng cáo.'},
+   {priority:'high',title:'Nhiều listing nhưng hiệu suất sản phẩm thấp',evidence:'Có 1.605 sản phẩm vào 06/2026; từng Top Product quan sát được chỉ khoảng 34-76 impressions và chưa thấy inquiry.',meaning:'Điểm nghẽn nghiêng về chất lượng danh mục, độ khác biệt và khả năng khớp nhu cầu, không phải thiếu số lượng listing.',orientation:'Chọn 20-30 SKU lõi để làm lại PIS, title, hình ảnh, thông số, MOQ, ứng dụng và bằng chứng năng lực.'},
+   {priority:'high',title:'Có buyer thật nhưng chưa khép vòng chuyển đổi',evidence:'Có 95 cơ hội tích lũy; 17 buyer thật trong 33 hội thoại đã rà; dữ liệu hiện có chưa xác nhận Order hoàn tất.',meaning:'Cần nối phân tích traffic với pipeline sales thay vì chỉ nhìn tổng số cơ hội hoặc hội thoại.',orientation:'Theo dõi buyer trong tab riêng bằng các bước Spec → Sample → Quote → PI → Trade Assurance Order và SLA phản hồi dưới 24 giờ.'}
+  ],
+  ov_footnote:'Kỳ dữ liệu: hiệu suất 06/2026 · Tham chiếu: trung bình ngành do khách hàng cung cấp · Order/Trade Assurance hiện chưa được xác nhận trong dữ liệu.',
+  attnPanels:[
+   {role:'critical',label:'ĐIỂM NGHẼN',headline:'Cửa vào chỉ đạt 3,7-7,8% mức ngành',type:'metric',
+    items:[
+     {metric:'Lượt hiển thị tìm kiếm',value:'3.630 / 46.725',attainment:'7,8%',why:'Buyer pool quá nhỏ để tạo cơ hội đều đặn.'},
+     {metric:'Lượt nhấp tìm kiếm',value:'40 / 1.070',attainment:'3,7%',why:'Đây là chỉ số volume kém nhất trong sáu KPI.'},
+     {metric:'CTR',value:'1,10% / 2,29%',attainment:'48,03%',why:'Không chỉ thiếu hiển thị; listing cũng chưa đủ sức kéo click.'},
+     {metric:'Order',value:'Chưa xác nhận',attainment:null,why:'Dữ liệu hiện có chưa chứng minh cơ hội đã được chuyển thành đơn.'}
+    ],
+    orientation:'Sửa search reach và CTR trước, đồng thời bắt buộc theo dõi Sample → Quote → PI → Trade Assurance Order.'},
+   {role:'positive',label:'ĐIỂM TỐT',headline:'Đã có tài sản sản phẩm và buyer thật để phát triển năm 2',type:'signal',
+    items:[
+     {signal:'1.605 sản phẩm đã đăng',meaning:'Không phải bắt đầu từ số 0; đã có nền dữ liệu để lọc sản phẩm chủ lực.',caveat:'Số lượng lớn chưa đồng nghĩa hiệu suất tốt.'},
+     {signal:'95 cơ hội kinh doanh tích lũy năm 1',meaning:'Thị trường đã tạo phản hồi thực tế cho gian hàng.',caveat:'Không trình bày như 95 đơn hoặc 95 buyer đã xác minh.'},
+     {signal:'17 buyer thật trong 33 hội thoại',meaning:'Tỷ lệ buyer thật trong batch đã rà là 51,5%; có bảy buyer ưu tiên cao.',caveat:'Batch chỉ là phần inbox đã quan sát, chưa phải toàn bộ hộp thư.'},
+     {signal:'Tỷ lệ phản hồi tăng 73,33% → 78,57% → 84,62%',meaning:'Dịch vụ đang cải thiện qua các mốc được cung cấp.',caveat:'Vẫn thấp hơn mức tham khảo 92%.'}
+    ],
+    orientation:'Giữ tài sản năm 1, nhưng chuyển trọng tâm đo lường từ số listing và số hội thoại sang qualified buyer, mẫu, PI và Order.'},
+   {role:'improvement',label:'CẦN CẢI THIỆN',headline:'Năm 2 cần vận hành ít sản phẩm hơn nhưng sâu hơn',type:'focus',
+    items:[
+     {focus:'Danh mục lõi',evidence:'Top Product quan sát được chỉ có khoảng 34-76 impressions và chưa thấy inquiry.',improvement:'Chọn 20-30 SKU trong 30 ngày đầu; chỉ mở rộng lên 50-100 SKU sau khi có tín hiệu.'},
+     {focus:'Khả năng kéo click',evidence:'CTR 1,10%, thấp hơn 1,19 điểm phần trăm so với tham chiếu ngành.',improvement:'A/B ảnh chính và title; làm rõ material, width/thickness, application, MOQ, sample và lead time.'},
+     {focus:'Sales conversion',evidence:'Buyer hỏi spec, giá, ship, certificate nhưng nhiều cuộc trao đổi dừng trước sample/PI.',improvement:'Mỗi buyer có owner, stage, next action và deadline; báo giá chuẩn dưới 24 giờ.'},
+     {focus:'Traffic có kiểm soát',evidence:'Tự nhiên quá thấp nhưng listing chưa được sàng lọc.',improvement:'Chỉ chạy ads cho SKU có tín hiệu tự nhiên hoặc nhu cầu buyer thật; review theo giai đoạn 7/14/21/30 ngày.'}
+    ],
+    orientation:'Dùng 30 ngày đầu để tìm sản phẩm hạt giống và chuẩn hóa sales; tháng 2-3 mới tăng quy mô traffic.'}
+  ],
+  y2_title:'Kế hoạch năm 2: từ tài sản sẵn có đến đơn hàng',
+  y2_principle:'Mỗi giai đoạn phải tạo đầu ra kiểm chứng được. Chỉ tăng traffic khi sản phẩm và quy trình sales đã sẵn sàng.',
+  y2_disclaimer:'Các con số mục tiêu dưới đây là mục tiêu quản trị nội bộ đề xuất từ baseline năm 1, không phải cam kết của Alibaba và không phải dự báo chắc chắn.',
+  y2_actionLabels:{action:'Hành động',owner:'Owner',output:'Đầu ra',examplesReal:'Ví dụ buyer thật',examplesProduct:'Ví dụ sản phẩm',targets:'Mục tiêu nội bộ',gate:'Điều kiện chuyển giai đoạn',success:'Định nghĩa thành công'},
+  y2_phases:[
+   {phase:'0-7 ngày',name:'Cứu buyer đang nóng và dựng nền sales',
+    business_question:'Trong 17 buyer thật, ai có thể tiến thêm một bước ngay tuần này?',
+    actions:[
+     {action:'Gán owner, stage, next action và deadline cho đủ 17 buyer thật; ưu tiên bảy buyer mức cao.',owner:'Sales lead',output:'Pipeline có các cột Buyer, quốc gia, sản phẩm, stage, giá trị tín hiệu, việc tiếp theo, deadline, owner.'},
+     {action:'Chuẩn hóa ba bộ tài liệu: company profile + certificate; catalog/spec; quotation template.',owner:'Sales + Factory',output:'Tài liệu Việt/Anh/Trung sẵn sàng gửi trong ngày.'},
+     {action:'Chọn 20-30 SKU hạt giống từ PVC edge banding, ABS edge banding và wood veneer.',owner:'Operator + Sales',output:'Danh sách SKU có buyer persona, keyword, thị trường và lý do lựa chọn.'}
+    ],
+    real_examples:[
+     {buyer:'Muhammet Celebi - Thổ Nhĩ Kỳ',signal:'12.000m/tháng; yêu cầu tùy chỉnh, UV, chịu nhiệt, không ố vàng, giao Bursa.',example_next_step:'Gửi bảng lựa chọn vật liệu/spec, phương án sample, MOQ, lead time và điều kiện giao Bursa; không tự điền giá nếu nhà máy chưa xác nhận.',desired_stage:'Spec confirmed → Sample proposed'},
+     {buyer:'TRAN HUYEN - Việt Nam',signal:'Natural white oak veneer 0,3mm, chà nhám + oil + kraft paper backing.',example_next_step:'Xác nhận khả năng sản xuất 0,3mm, gửi ảnh/mẫu bề mặt, MOQ, thời gian làm mẫu và lead time.',desired_stage:'Capability confirmed → Sample'},
+     {buyer:'Cathy Quan - Trung Quốc',signal:'Hỏi white oak, giá và khả năng làm thử.',example_next_step:'Follow bằng tiếng Trung, xác nhận grade, thickness, MOQ và chọn EXW hoặc FOB trước khi báo giá.',desired_stage:'Requirement clarified → Quote'}
+    ],
+    internal_targets:['17/17 buyer thật có stage và owner.','7/7 buyer ưu tiên có hành động tiếp theo trong 24 giờ.','Hoàn thành ba bộ sales material.','Hoàn thành shortlist 20-30 SKU hạt giống.'],
+    gate_to_next_phase:'Chỉ chuyển sang thử traffic khi ít nhất 20 SKU qua checklist nội dung và quy trình phản hồi đã có owner trực.'},
+   {phase:'8-30 ngày',name:'Tăng khả năng được thấy và được nhấp',
+    business_question:'SKU nào thật sự kéo được buyer phù hợp, thay vì chỉ tạo impression?',
+    actions:[
+     {action:'Làm lại title, ảnh chính, attributes, MOQ, sample, lead time và trang chi tiết cho 20-30 SKU hạt giống.',owner:'Operator + Design + Factory',output:'Mỗi SKU có PIS mục tiêu ≥4,2 nếu ngành áp dụng và một buyer use case rõ.'},
+     {action:'Map keyword theo sản phẩm và buyer: PVC edge banding, ABS edge banding, natural white oak veneer, width/thickness, cabinet/furniture application.',owner:'Operator',output:'Một keyword map, tránh nhiều listing tranh cùng một từ khóa.'},
+     {action:'Thử traffic có kiểm soát trên SKU đã có tín hiệu tự nhiên hoặc buyer thật; review hàng tuần trong plan này, không tạo section chu kỳ quảng cáo riêng.',owner:'Ads operator',output:'Bảng SKU giữ, tối ưu hoặc dừng dựa trên CTR, inquiry quality và bước sales tiếp theo.'}
+    ],
+    product_examples:[
+     {product:'PVC edge banding',buyer_evidence:'Vicky Peter hỏi 22mm; KH shopper hỏi red banding 45mm; Rene Ong hỏi width 50mm; Muhammet yêu cầu UV/heat/non-yellowing.',example_title:'Custom Wood Grain PVC Edge Banding 22-50mm for Cabinets and Furniture',title_caveat:'Chỉ thêm Heat Resistant, UV Resistant hoặc Non-Yellowing sau khi nhà máy xác nhận đúng năng lực.',gallery_example:'Ảnh 1 vật liệu/bề mặt; ảnh 2 width-thickness; ảnh 3 ứng dụng tủ bếp; ảnh 4 màu; ảnh 5 test/QA; ảnh 6 đóng gói và cuộn.'},
+     {product:'Natural white oak veneer',buyer_evidence:'TRAN HUYEN cần 0,3mm, sanded + oil + kraft backing; Cathy muốn thử white oak.',example_title:'0.3mm Natural White Oak Veneer with Kraft Paper Backing for Furniture Panels',title_caveat:'Chỉ dùng 0,3mm, Sanded hoặc Oiled khi đúng cấu hình sản phẩm thực tế.',gallery_example:'Ảnh grain cận cảnh; cấu trúc veneer/backing; thickness; bề mặt trước-sau oil; panel application; sample/packing.'}
+    ],
+    internal_targets:['CTR mục tiêu thử nghiệm ≥1,4% trong 30 ngày, từ baseline 1,10%; đây là mục tiêu nội bộ, không phải cam kết.','Tỷ lệ phản hồi đúng hạn ≥90% và tiếp tục tiến tới 92%.','100% buyer đang hoạt động có next action và ngày follow-up.','Không tăng ngân sách cho SKU chỉ có impression nhưng không có click chất lượng hoặc buyer signal.'],
+    gate_to_next_phase:'Xác định được nhóm SKU winner có CTR cải thiện, inquiry phù hợp hoặc buyer đi thêm ít nhất một bước trong pipeline.'},
+   {phase:'31-60 ngày',name:'Mở rộng có chọn lọc và tăng độ tin cậy',
+    business_question:'Có thể nhân rộng điều gì từ 20-30 SKU đầu tiên?',
+    actions:[
+     {action:'Mở rộng lên 50-100 SKU chủ lực theo khuyến nghị trong file thống kê, nhưng chỉ từ cấu trúc của SKU winner.',owner:'Operator',output:'Danh mục lõi theo nhóm PVC, ABS và veneer; không sao chép listing hàng loạt.'},
+     {action:'Hoàn thiện minisite với năng lực nhà máy, QA/QC, certificates, applications, packaging, shipping và sample process.',owner:'Owner + Factory + Design',output:'Một trang trust proof giúp trả lời yêu cầu company details và certificate.'},
+     {action:'Rà chín lead cần xác minh để tìm thêm buyer thật mà không làm loãng thời gian sales.',owner:'Sales',output:'Mỗi lead được chuyển sang Buyer thật hoặc Spam/loại kèm lý do.'}
+    ],
+    real_example_single:'Divyanshu Jangid đã hỏi company details và certificate. App nên dùng case này để minh họa vì sao minisite và bộ trust material ảnh hưởng Inquiry → Order.',
+    internal_targets:['Tỷ lệ phản hồi đúng hạn đạt hoặc vượt mức tham khảo 92%.','Có 50-100 SKU lõi được xây từ winner, không phải đăng mới đại trà.','Chín lead cần kiểm tra được xử lý hết trạng thái.','Mọi quotation có spec, MOQ, EXW/FOB, lead time, shipping, sample, payment và next step.'],
+    gate_to_next_phase:'Traffic và sales data đủ để thấy sản phẩm, thị trường và buyer profile nào tạo sample/PI tốt nhất.'},
+   {phase:'61-90 ngày',name:'Đưa buyer từ trao đổi sang sample và PI',
+    business_question:'Buyer nào có thể tạo bằng chứng chuyển đổi đầu tiên của năm 2?',
+    actions:[
+     {action:'Tập trung Thổ Nhĩ Kỳ, Việt Nam, Trung Quốc và Ấn Độ như các thị trường thử nghiệm vì đã có hội thoại thật, không khẳng định đây là bốn thị trường lớn nhất ngành.',owner:'Sales + Ads operator',output:'Mỗi thị trường có nhóm sản phẩm, keyword, ngôn ngữ follow-up và buyer owner.'},
+     {action:'Đẩy Muhammet, TRAN HUYEN, Cathy và ramesh sang sample/PI bằng follow-up có giá trị mới.',owner:'Senior sales',output:'Buyer có xác nhận spec, phương án mẫu/báo giá và bước tiếp theo rõ.'},
+     {action:'Tăng ngân sách chỉ cho SKU/keyword tạo qualified buyer hoặc tiến triển pipeline.',owner:'Owner + Ads operator',output:'Bảng phân bổ ngân sách theo cost per qualified buyer, sample và PI.'}
+    ],
+    internal_targets:['Đưa 2-3 buyer năm 1 sang sample hoặc PI; đây là mục tiêu quản trị, không phải cam kết đơn hàng.','Có baseline cost per qualified buyer, cost per sample và cost per PI.','Dừng từ khóa rộng hoặc SKU không tạo tiến triển sales sau chu kỳ thử nghiệm hợp lý.'],
+    gate_to_next_phase:'Có dữ liệu thật về sample, PI hoặc TA Order để quyết định mở rộng ngân sách.'},
+   {phase:'91-180 ngày',name:'Nhân rộng nhóm thắng và đo hiệu quả kinh doanh',
+    business_question:'Khoản đầu tư nào đang tạo buyer chất lượng và doanh số, không chỉ tạo traffic?',
+    actions:[
+     {action:'Nhân rộng nhóm sản phẩm, keyword và thị trường tạo qualified buyer tốt nhất.',owner:'Owner + Operator',output:'Danh mục đầu tư tiếp, giữ thử nghiệm hoặc dừng.'},
+     {action:'Đo hiệu quả gói Guarantee L3+ hoặc Guarantee Basic bằng qualified buyer, sample, PI, TA Order và giá trị order.',owner:'Owner + Finance + Sales lead',output:'Báo cáo tháng có chi phí, pipeline và kết quả kinh doanh.'},
+     {action:'Nếu chưa có Order, phân tích điểm rơi theo bốn nhóm: sản phẩm, giá/MOQ, trust/compliance, shipping/payment/follow-up.',owner:'Owner + Sales + Factory',output:'Danh sách nguyên nhân có bằng chứng và thử nghiệm sửa trong tháng tiếp theo.'}
+    ],
+    internal_targets:['Báo cáo tháng có đủ View, Click, Inquiry, Qualified Buyer, Sample, Quote, PI và TA Order.','Không đánh giá thành công chỉ bằng số impression hoặc số cơ hội được cấp.','Có quyết định phân bổ tháng tiếp theo dựa trên cost per qualified buyer và tiến triển đến Order.'],
+    success_definition:'Năm 2 được xem là đi đúng hướng khi traffic tốt hơn đồng thời buyer thật tiến sâu hơn trong pipeline; Order chỉ được ghi nhận khi có dữ liệu xác nhận.'}
+  ],
+  y2_scorecardTitle:'Weekly Owner Scorecard',
+  y2_scorecard:[
+   {group:'Traffic',metrics:['Search impressions','Search clicks','CTR','Unique visitors'],owner_question:'SKU nào tăng reach và click đúng buyer?'},
+   {group:'Buyer quality',metrics:['Business opportunities','Qualified buyers','Lead thật / cần xác minh / spam'],owner_question:'Cơ hội tăng có đi kèm buyer phù hợp không?'},
+   {group:'Sales progress',metrics:['Buyer có spec confirmed','Samples','Complete quotations','PI','Trade Assurance Orders'],owner_question:'Buyer đang dừng ở bước nào và ai chịu trách nhiệm?'},
+   {group:'Service',metrics:['Reply under 2 hours','Timely reply rate','Follow-up overdue'],owner_question:'Có buyer nóng nào bị chậm hoặc không có bước tiếp theo không?'}
+  ],
+  kpiInterp:{
+   search_impressions:'Khả năng xuất hiện trước buyer rất thấp; đây là nút thắt lớn nhất của đầu phễu.',
+   page_views:'Lưu lượng vào trang sản phẩm/gian hàng còn rất thấp.',
+   unique_visitors:'Độ phủ buyer mới thấp; cần cải thiện search reach và phân phối sản phẩm lõi.',
+   search_clicks:'Ảnh chính, title, giá/MOQ hoặc khác biệt sản phẩm chưa đủ sức kéo click.',
+   business_opportunities_period:'Số cơ hội hiệu quả thấp chủ yếu do đầu phễu nhỏ; vẫn cần kiểm tra chất lượng trang và quy trình phản hồi.',
+   ctr:'CTR chỉ bằng khoảng 48% mức ngành; cần ưu tiên tối ưu ảnh chính, title, lợi ích, MOQ và tín hiệu tin cậy.'
+  },
+  cmpTemplate:'Tham chiếu ngành {ref} · đạt {share}',
+  ov_conclTitle:'5 kết luận chính (C1-C5)',
+  conclusions:[
+   {id:'C1',priority:'critical',title:'Nút thắt số 1 là đầu phễu tìm kiếm',evidence:'Search impressions chỉ bằng 7,8% mức tham khảo ngành; search clicks chỉ bằng 3,7%; CTR 1,10% so với 2,29% ngành.',meaning:'Buyer chưa nhìn thấy đủ nhiều, và khi nhìn thấy thì mức hấp dẫn của tiêu đề, ảnh chính, giá/MOQ hoặc định vị sản phẩm còn yếu.',decision:'Không tiếp tục tăng số lượng sản phẩm đại trà; tập trung tối ưu danh mục lõi, từ khóa, ảnh chính và Showcase trước khi mở rộng quảng cáo.'},
+   {id:'C2',priority:'critical',title:'Số lượng sản phẩm lớn nhưng hiệu suất trên mỗi SKU thấp',evidence:'Có 1.605 sản phẩm vào 06/2026, trong khi từng Top Product chỉ ghi nhận khoảng 34-76 impressions và chưa quan sát thấy inquiry ở nhóm này.',meaning:'Điểm nghẽn không phải thiếu listing mà là chất lượng danh mục, mức độ khác biệt và khả năng khớp nhu cầu tìm kiếm.',decision:'Chọn 20-30 SKU lõi để làm lại PIS, title, hình ảnh, thông số, MOQ, ứng dụng, chứng chỉ và bằng chứng nhà máy.'},
+   {id:'C3',priority:'high',title:'Nhu cầu thật đã tồn tại nhưng chưa được đẩy đến đơn hàng',evidence:'Có 95 cơ hội kinh doanh tích lũy trong năm 1; sau khi làm sạch 33 hội thoại có 17 buyer thật và 7 buyer ưu tiên cao, nhưng dữ liệu hiện có chưa xác nhận đơn hàng hoàn tất.',meaning:'Gian hàng cần một quy trình sales rõ từ nhu cầu → xác nhận spec → mẫu → báo giá → PI → Trade Assurance order.',decision:'Mỗi buyer phải có owner, bước tiếp theo, hạn xử lý và ngày follow-up; ưu tiên sáu đến bảy buyer cao trong 24 giờ.'},
+   {id:'C4',priority:'high',title:'Tốc độ phản hồi chưa đạt mức tham khảo',evidence:'Tỷ lệ phản hồi đúng hạn: 84,62% tháng 06/2026; 78,57% tháng 04/2026; 73,33% tháng 12/2025; mức tham khảo ngành 92%.',meaning:'Khoảng hụt tương ứng 7,38; 13,43 và 18,67 điểm phần trăm có thể làm mất buyer đang so sánh nhiều nhà cung cấp.',decision:'Thiết lập SLA: buyer ưu tiên phản hồi trong 2 giờ làm việc, mọi inquiry trong 6 giờ và tuyệt đối dưới 24 giờ.'},
+   {id:'C5',priority:'medium',title:'Chất lượng inbox phải được quản trị, không chạy theo số hội thoại',evidence:'Trong 33 hội thoại: 17 buyer thật (51,5%), 9 cần kiểm tra (27,3%), 7 bị loại (21,2%).',meaning:'Nếu không làm sạch lead, đội sales sẽ tốn thời gian cho spam, dịch vụ logistics hoặc yêu cầu kéo ra ngoài nền tảng.',decision:'Duy trì ba hàng đợi: Ưu tiên, Cần xác minh, Spam/loại; đo tỷ lệ chuyển bước của nhóm buyer thật.'}
+  ],
+  conclLabels:{evidence:'Bằng chứng',meaning:'Ý nghĩa',decision:'Quyết định'},
+  today_title:'⚠ 7 buyer ưu tiên cao — phải xử lý trong 24 giờ',
+  fn_funnelTitle:'Phễu: View → Click → Inquiry → Order',
+  fn_stageLabels:['View','Click','Inquiry','Order'],
+  fn_orderNote:'Chưa xác nhận',
+  fn_stages:[
+   {stage:'View',status:'critical',evidence:'Search impressions đạt 7,8% mức tham khảo ngành; UV đạt 4,9%.',causes:['Danh mục quá rộng và nhiều listing tương tự','Keyword coverage chưa sát ngôn ngữ buyer','PIS và độ hoàn thiện sản phẩm lõi chưa đủ','Showcase chưa ưu tiên đúng SKU','Tín hiệu chứng chỉ và năng lực nhà máy chưa nổi bật']},
+   {stage:'Click',status:'critical',evidence:'Search clicks đạt 3,7% mức ngành; CTR 1,10% so với 2,29%.',causes:['Ảnh chính chưa thể hiện rõ vật liệu, bề mặt và ứng dụng','Title chưa ghép đúng product + material + application + specification','MOQ/giá chưa cạnh tranh hoặc chưa giải thích rõ','Thiếu điểm khác biệt, sample, customization và lead time']},
+   {stage:'Inquiry',status:'warning',evidence:'13 cơ hội trong kỳ; 95 cơ hội tích lũy năm 1; 17 buyer thật trong 33 hội thoại đã rà.',causes:['Trang sản phẩm chưa đủ trust proof','Top Product có impressions nhưng chưa quan sát thấy inquiry','RFQ và Showcase chưa tập trung đúng sản phẩm lõi','Phản hồi chưa luôn đạt SLA']},
+   {stage:'Order',status:'critical',evidence:'Dữ liệu hiện có chưa xác nhận đơn hàng hoàn tất dù có nhiều buyer đã hỏi spec, giá, ship hoặc chấp nhận FOB.',causes:['Thiếu owner và deadline cho từng buyer','Báo giá chưa luôn đủ MOQ, lead time, shipping, payment và next step','Chưa ép bước tiếp theo sang sample, PI và Trade Assurance','Follow-up không có cadence cố định']}
+  ],
+  stageLabels:{evidence:'Bằng chứng',causes:'Nguyên nhân cần kiểm tra'},
+  statusLabels:{critical:'Nghiêm trọng',warning:'Cần theo dõi'},
+  fn_barTitle:'So sánh Qing Yang với trung bình ngành (6 chỉ số)',
+  fn_replyTitle:'Tỷ lệ phản hồi đúng hạn theo thời gian',
+  fn_replyNote:'Đường nét đứt là mức tham khảo ngành 92%. Có cải thiện qua từng kỳ nhưng vẫn dưới chuẩn tham khảo.',
+  by_h2:'Buyer cần theo dõi · 33 hội thoại đã rà soát',
+  by_note:'Nguồn: batch hội thoại hiển thị 12/2025–07/2026, không phải toàn bộ hộp thư. Email/điện thoại chỉ hiển thị khi mở chi tiết và chỉ khi nguồn thực sự có.',
+  counters:[['17','Buyer thật'],['9','Cần xác minh'],['7','Bị loại'],['7','Ưu tiên cao']],
+  subPri:'Ưu tiên', subRev:'Cần xác minh', subRem:'Spam/loại',
+  searchPh:'Tìm theo tên/công ty…', levelAll:'Tất cả mức', countryAll:'Tất cả quốc gia',
+  card_need:'Nhu cầu', card_commercial:'Tín hiệu thương mại', card_next:'Việc tiếp theo', card_goal:'Mục tiêu chuyển đổi', card_reason:'Lý do', card_evidence:'Bằng chứng chat', card_country:'Quốc gia/vùng', card_company:'Công ty', card_email:'Email', card_phone:'Điện thoại/WhatsApp', card_level:'Mức tiềm năng', noData:'Chưa thấy trong dữ liệu',
+  pd_paradoxTitle:'Nghịch lý sản phẩm', pd_productsLbl:'Tổng sản phẩm đã đăng (06/2026)', pd_shareLbl:'Khoảng % đạt được so với trung bình ngành trên các chỉ số traffic',
+  pd_demandTitle:'Ưu tiên nhóm sản phẩm theo tín hiệu nhu cầu',
+  demandCards:[
+   {rank:1,product:'PVC edge banding',idx:95.1,reason:'Tín hiệu nhu cầu cao nhất trong dữ liệu tổng hợp; phù hợp tạo nhóm SKU lõi.'},
+   {rank:2,product:'ABS edge banding',idx:40.4,reason:'Nhóm bổ trợ để mở rộng buyer profile sau PVC.'},
+   {rank:3,product:'Wood veneer',idx:36.3,reason:'Có buyer thật hỏi white oak veneer và engineered veneer; nên vận hành theo nhóm ứng dụng/spec.'}
+  ],
+  pd_checklistTitle:'Checklist 20-30 SKU lõi', pd_checklistNote:'Giảm tư duy đăng nhiều, tăng vận hành sản phẩm lõi chất lượng cao.',
+  checklist:[
+   'PIS mục tiêu ≥4,2 nếu ngành hàng áp dụng.',
+   'Title theo cấu trúc product + material + application + specification + selling point.',
+   'Ảnh chính thể hiện vật liệu/bề mặt/kích thước; gallery có ứng dụng, đóng gói, nhà máy, QA/QC và customization.',
+   'Nêu rõ width, thickness, màu/wood species, backing, MOQ, sample, lead time và shipping.',
+   'Thêm chứng chỉ, năng lực sản xuất, kiểm soát chất lượng và Trade Assurance khi phù hợp.',
+   'Loại listing trùng lặp hoặc không có traffic; Showcase dành cho SKU có cơ hội chuyển đổi cao.'
+  ],
+  pd_marketTitle:'Tín hiệu thị trường (tham khảo, ngoài nền tảng)',
+  marketSignals:[
+   {signal:'Quy mô thị trường edge banding toàn cầu',value:'Khoảng 1,60-1,65 tỷ USD năm 2025; CAGR tham khảo khoảng 7-8%.',usage:'Dùng làm bối cảnh ngành, không dùng làm dự báo doanh thu Qing Yang.'},
+   {signal:'Cơ cấu vật liệu',value:'PVC dẫn đầu tín hiệu nhu cầu trong dữ liệu Accio.',usage:'Ưu tiên nghiên cứu danh mục, keyword và offer PVC edge banding.'},
+   {signal:'Xuất khẩu gỗ Việt Nam',value:'Khoảng 17,2 tỷ USD năm 2025.',usage:'Dùng làm bằng chứng về nền tảng ngành của Việt Nam; không đồng nghĩa doanh số gian hàng.'}
+  ],
+  rm_northstar:'North Star năm 2: Tăng qualified buyer và đưa buyer thật đến sample/PI/Trade Assurance order, không chỉ tăng traffic hoặc số hội thoại.',
+  rm_immediateTitle:'7 hành động tức thì (0-7 ngày)',
+  actionTH:['#','Hành động','Owner','Kết quả'],
+  days_0_7:[
+   {priority:1,action:'Phản hồi và gửi next step cho 7 buyer ưu tiên; top 2 trong 2 giờ, toàn bộ trong 24 giờ.',owner:'Sales',output:'Mỗi buyer có spec, báo giá/mẫu, owner và ngày follow-up.'},
+   {priority:2,action:'Phân loại toàn bộ inbox thành Ưu tiên, Cần xác minh, Spam/loại.',owner:'Sales lead',output:'Không để spam làm sai số buyer và hiệu suất follow-up.'},
+   {priority:3,action:'Chọn 20-30 SKU lõi theo PVC edge banding, ABS edge banding và wood veneer.',owner:'Operator + Sales',output:'Danh sách SKU ưu tiên có buyer profile và thị trường mục tiêu.'},
+   {priority:4,action:'Làm lại ảnh chính và title cho 10 SKU có cơ hội cao nhất.',owner:'Design + Operator',output:'Bộ A/B ảnh-title sẵn sàng đo CTR.'},
+   {priority:5,action:'Hoàn thiện thông số, MOQ, sample, lead time, shipping, QA/QC và chứng chỉ cho SKU lõi.',owner:'Operator + Factory',output:'Trang sản phẩm trả lời được câu hỏi mua hàng cốt lõi.'},
+   {priority:6,action:'Đưa SKU lõi tốt nhất vào Showcase và rà Top Product không tạo inquiry.',owner:'Operator',output:'Showcase tập trung vào sản phẩm có khả năng chuyển đổi.'},
+   {priority:7,action:'Thiết lập bảng sales pipeline với bước Nhu cầu → Spec → Mẫu → Báo giá → PI → Order.',owner:'Sales lead',output:'Mỗi lead có một bước tiếp theo và deadline cụ thể.'}
+  ],
+  rm_h2:'Lộ trình 8-180 ngày',
+  phases:[
+   {t:'8-30 ngày',items:['Hoàn thiện 20-30 SKU lõi; ưu tiên PIS ≥4,2 nếu áp dụng.','Kiểm tra Keyword Analysis 30 ngày, map keyword vào từng SKU và từng thị trường.','Chạy ngân sách thử nghiệm nhỏ cho nhóm SKU đã đạt chuẩn; không đẩy tiền vào listing yếu.','Báo RFQ phù hợp theo checklist giá, MOQ, ship, certificate và next step.','Đo hàng tuần: impressions, CTR, UV, inquiry, qualified buyer, sample, PI và order.']},
+   {t:'31-90 ngày',items:['Dồn traffic vào SKU có CTR và qualified inquiry tốt; dừng nhóm tiêu tiền nhưng không có bước sales tiếp theo.','Xây minisite theo năng lực nhà máy, nhóm sản phẩm lõi, QA/QC, packaging, shipping và case ứng dụng.','Đẩy buyer L3+ theo cadence ngày 0, 2, 5, 10 và 21; mọi lần follow phải có giá trị mới.','Mục tiêu vận hành: phản hồi đúng hạn ≥92%, CTR tiến dần về mức tham khảo ngành, mọi buyer cao có sample/PI next step.']},
+   {t:'91-180 ngày',items:['Nhân rộng nhóm SKU và thị trường tạo qualified buyer tốt nhất.','Đánh giá hiệu quả gói gia hạn bằng chi phí trên qualified buyer, sample, PI và order; không chỉ bằng số lead.','Xây thư viện quotation, certificate, catalog, sample policy và shipping template theo thị trường.','Review hàng tháng cùng chủ doanh nghiệp: funnel, buyer pipeline, doanh thu/TA order và quyết định tái phân bổ ngân sách.']}
+  ],
+  rm_kpiTitle:'Weekly KPI cần theo dõi',
+  weeklyKpis:['Search impressions','Search clicks','CTR','Unique visitors','Inquiry/business opportunities','Qualified buyers','Buyer được trả lời dưới 2 giờ và dưới 24 giờ','Số mẫu','Số báo giá hoàn chỉnh','Số PI','Số Trade Assurance orders','Top/Super Product và PIS của SKU lõi'],
+  pr_h2:'3 gói gia hạn (Renew FY27Q1)', pr_note:'Giá chưa bao gồm VAT. Đây là gợi ý có điều kiện dựa trên dữ liệu hiện có, không phải cam kết kết quả.',
+  pkgTag:{Basic:'Chỉ duy trì','Guarantee Basic':'Phương án ngân sách','Guarantee L3+':'Khuyến nghị chính'},
+  pkgLabels:{star:'Sao trực tiếp',guarantee:'Cam kết cơ hội',kwa:'Giá trị KWA',fit:'Phù hợp với Qing Yang khi',reason:'Vì sao'},
+  packages:[
+   {name:'Basic',usd:'$1.999',vnd:'46.800.000 VND',star:'2 sao / 6 tháng',guarantee:'Không cam kết cơ hội',kwa:'0 USD',benefits:['40 RFQ/tháng','5 thẻ xanh RFQ/tháng','5 lượt ưu tiên báo giá','20 Showcase','330 Smart Assistant credits/tháng','Product Advisor 3 tháng','5 tài khoản phụ'],fit:'Chỉ phù hợp nếu mục tiêu là duy trì hiện diện với chi phí thấp nhất.',reason:'Không giải quyết đủ mạnh bài toán sao, cơ hội chất lượng và cửa vào thấp của năm 1.'},
+   {name:'Guarantee Basic',usd:'$2.999',vnd:'70.400.000 VND',star:'3 sao / 6 tháng',guarantee:'Tối thiểu 25 cơ hội / 30 ngày',kwa:'1.000 USD',benefits:['40 RFQ/tháng','5 thẻ xanh RFQ/tháng','5 lượt ưu tiên báo giá','20 Showcase','KWA 1.000 USD','Product Advisor 6 tháng','5 tài khoản phụ'],fit:'Phương án ngân sách hẹp để khôi phục sao và có mức cơ hội tối thiểu.',reason:'Chi phí thấp hơn nhưng thiên về số lượng cơ hội, chưa đảm bảo tập trung buyer L3+.'},
+   {name:'Guarantee L3+',usd:'$4.999',vnd:'117.600.000 VND',star:'3 sao / 6 tháng',guarantee:'Tối thiểu 35+ cơ hội L3+ / 90 ngày',kwa:'3.000 USD',benefits:['40 RFQ/tháng','5 thẻ xanh RFQ/tháng','5 lượt ưu tiên báo giá','20 Showcase','KWA 3.000 USD','Product Advisor 6 tháng','5 tài khoản phụ'],fit:'Phù hợp nhất khi mục tiêu năm 2 là buyer chất lượng cao và đội ngũ có khả năng follow-up.',reason:'Qing Yang đã có tín hiệu nhu cầu thật nhưng thiếu cơ hội chất lượng và quy trình chốt; L3+ phù hợp hơn so với chạy theo tổng số hội thoại.'}
+  ],
+  pr_logicTitle:'Logic chọn gói',
+  decisionLogic:[
+   'Chọn Basic chỉ khi ngân sách là ràng buộc tuyệt đối và doanh nghiệp chấp nhận tăng trưởng chậm.',
+   'Chọn Guarantee Basic nếu cần phương án an toàn hơn về ngân sách và đội sales chưa sẵn sàng xử lý buyer L3+.',
+   'Chọn Guarantee L3+ nếu có người phụ trách sales, cam kết SLA phản hồi và mục tiêu là buyer có chất lượng cao hơn.',
+   'KWA chỉ nên chạy sau khi 20-30 SKU lõi đã đạt chuẩn hình ảnh, title, PIS, MOQ và trang chi tiết.'
+  ],
+  pr_disclaimer:'Miễn trừ: bảng giá và khuyến nghị trên là gợi ý có điều kiện dựa trên Renew FY27Q1, không phải cam kết kết quả. Giá chưa gồm VAT.',
+  sm_h2:'Tóm tắt kết quả & quyết định năm 2',
+  summaryBlocks:[
+   {number:'①',title:'Chẩn đoán năm 1',text:'Gian hàng chỉ đạt 7,8% mức tham khảo về tìm kiếm và 3,7% về nhấp; CTR 1,10% so với 2,29% ngành. Tuy vậy, sau khi làm sạch 33 hội thoại vẫn ghi nhận 95 cơ hội tích lũy và 17 buyer thật. Nút thắt nằm ở cửa vào hẹp, sức hút listing và quy trình chốt đơn, không phải hoàn toàn thiếu nhu cầu.'},
+   {number:'②',title:'Buyer cần ưu tiên',text:'17 buyer thật được tách khỏi 9 lead cần xác minh và 7 lead loại bỏ. Cần ưu tiên Muhammet, TRAN HUYEN, Cathy Quan, KH shopper, ramesh, SilvinoMateus Sambo và Rene Ong; mục tiêu là đưa từng buyer sang spec, mẫu, báo giá, PI và Trade Assurance order.'},
+   {number:'③',title:'Thị trường có cơ hội',text:'Edge banding toàn cầu được tham khảo ở mức khoảng 1,6 tỷ USD với CAGR 7-8%; PVC dẫn đầu tín hiệu nhu cầu; xuất khẩu gỗ Việt Nam khoảng 17,2 tỷ USD năm 2025. Đây là bối cảnh tích cực, nhưng kết quả gian hàng vẫn phụ thuộc chất lượng sản phẩm và năng lực chuyển đổi.'},
+   {number:'④-⑤',title:'Lựa chọn gia hạn',text:'Khuyến nghị chính là Guarantee L3+ $4.999 vì tập trung tối thiểu 35+ cơ hội L3+ trong 90 ngày, 3 sao/6 tháng và KWA 3.000 USD. Nếu ngân sách hẹp, chọn Guarantee Basic $2.999. Basic $1.999 chỉ phù hợp duy trì và không giải quyết đủ mạnh nút thắt năm 1.'},
+   {number:'⑥-⑦',title:'Lộ trình năm 2',text:'Trong 7 ngày, xử lý buyer cao, làm sạch pipeline và chọn 20-30 SKU lõi. Trong 30 ngày, hoàn thiện listing và thử traffic có kiểm soát. Trong 90-180 ngày, dồn nguồn lực vào SKU/thị trường tạo qualified buyer, đo sample, PI và Trade Assurance order thay vì chỉ đo traffic.'}
+  ],
+  foot:'Báo cáo này tách biệt hoàn toàn với 8 app báo cáo tuần khác, không chia sẻ hay chỉnh sửa bất kỳ nguồn dữ liệu nào. Nguồn: dữ liệu hiệu suất Alibaba tổng hợp, 33 hội thoại batch hiển thị, bảng giá Renew FY27Q1, tín hiệu thị trường Accio.'
+ },
+ zh: {
+  heroHeadline:'第一年确实存在真实需求，但入口太窄，尚未形成稳定的成交流程。',
+  badgePeriod:'数据周期：绩效数据2026年6月 · 线索数据2025年12月-2026年7月',
+  badgeScope:'Renew FY27Q1价格于2026年9月5日提供 · 价格不含增值税',
+  printLbl:'打印/截图',
+  tabs:{overview:'总览',funnel:'绩效漏斗',buyers:'买家跟进',products:'产品与市场',roadmap:'第二年计划',pricing:'三种续签方案',summary:'结论'},
+  ro_title:'老板如何阅读本应用',
+  ro_list:[
+   '1. 先阅读页面顶部的4条预警，了解最大的问题。',
+   '2. 查看漏斗，了解买家在曝光、点击还是成交环节流失。',
+   '3. 查看"今日优先买家"，了解24小时内必须处理的对象。',
+   '4. 查看"7天行动计划"，把具体任务分配给运营和销售团队。',
+   '5. 查看三种续签方案，按目标而非仅按价格来选择。',
+   '6. 阅读末尾的结果总结，做出第二年的决策。'
+  ],
+  ov_kpiTitle:'6项核心绩效指标（2026年6月）',
+  ov_chartTitle:'与行业参考值相比的达标率（2026年6月）',
+  attainLabel:'达到{pct} · {store} / {ref}',
+  ov_funnelTitle:'转化漏斗卡在哪一步？',
+  ov_analysisTitle:'为何需要关注',
+  analysisLabels:{evidence:'数据显示',meaning:'为何需要关注',orientation:'建议方向'},
+  analysisDirections:[
+   {priority:'critical',title:'搜索覆盖率过低',evidence:'搜索曝光量仅为行业参考值的7.8%；搜索点击量仅为3.7%；CTR为1.10%，行业为2.29%。',meaning:'买家看到店铺的机会不够多，而当他们看到时，标题、主图、价格/MOQ或产品定位的吸引力仍然不足。',orientation:'在扩大广告投放之前，先集中优化核心品类、关键词、主图和Showcase。'},
+   {priority:'high',title:'产品数量多但单品表现低',evidence:'截至2026年6月共有1,605个产品；每个Top Product观察到约34-76次曝光，且尚未见到询盘。',meaning:'瓶颈更偏向品类质量、差异化程度和需求匹配度，而非listing数量不足。',orientation:'挑选20-30个核心SKU，重做PIS、标题、图片、参数、MOQ、应用场景和能力证明。'},
+   {priority:'high',title:'有真实买家但尚未完成转化闭环',evidence:'第一年累计商机95个；已复核的33个对话中有17个真实买家；现有数据尚未确认已完成的订单。',meaning:'需要把流量分析与销售管道对接，而不只是看商机或对话总数。',orientation:'在买家跟进标签中按 规格→样品→报价→PI→信保交易订单 的步骤跟踪，并设定24小时内回复的SLA。'}
+  ],
+  ov_footnote:'数据周期：绩效数据2026年6月 · 参考值：客户提供的行业平均数据 · Order/信保交易目前尚未在数据中得到确认。',
+  attnPanels:[
+   {role:'critical',label:'瓶颈',headline:'入口仅达到行业水平的3.7%-7.8%',type:'metric',
+    items:[
+     {metric:'搜索曝光量',value:'3,630 / 46,725',attainment:'7.8%',why:'买家池太小，难以持续产生商机。'},
+     {metric:'搜索点击量',value:'40 / 1,070',attainment:'3.7%',why:'这是六项KPI中表现最差的流量指标。'},
+     {metric:'CTR',value:'1.10% / 2.29%',attainment:'48.03%',why:'不仅曝光不足，listing本身的点击吸引力也不够。'},
+     {metric:'成交订单(Order)',value:'尚未确认',attainment:null,why:'现有数据尚未证明商机已转化为订单。'}
+    ],
+    orientation:'优先修复搜索曝光和CTR，同时必须跟踪 样品→报价→PI→信保交易订单 的转化链路。'},
+   {role:'positive',label:'优势',headline:'已具备可用于发展第二年的产品资产和真实买家',type:'signal',
+    items:[
+     {signal:'已发布1,605个产品',meaning:'并非从零开始；已有基础数据可用于筛选主打产品。',caveat:'数量多不等于表现好。'},
+     {signal:'第一年累计95个商机',meaning:'市场已对店铺产生真实反馈。',caveat:'不能等同于95笔订单或95个已验证买家。'},
+     {signal:'33个对话中有17个真实买家',meaning:'已复核批次中真实买家占比51.5%；其中7位为高优先级买家。',caveat:'该批次仅为已查看的部分收件箱，并非全部。'},
+     {signal:'回复率从73.33%提升至78.57%再到84.62%',meaning:'服务水平正在各阶段持续改善。',caveat:'仍低于92%的参考水平。'}
+    ],
+    orientation:'保留第一年积累的资产，但要把衡量重点从listing数量和对话数量，转向合格买家、样品和订单。'},
+   {role:'improvement',label:'待改善',headline:'第二年需要经营更少但更深入的产品',type:'focus',
+    items:[
+     {focus:'核心品类',evidence:'观察到的Top Product仅有约34-76次曝光，且尚未看到询盘。',improvement:'前30天先选出20-30个核心SKU；有信号后再扩展到50-100个。'},
+     {focus:'点击吸引力',evidence:'CTR为1.10%，比行业参考低1.19个百分点。',improvement:'对主图和标题进行A/B测试；清楚标注材质、宽度/厚度、应用场景、MOQ、样品和交期。'},
+     {focus:'销售转化',evidence:'买家询问规格、价格、运输、证书，但很多对话在样品/PI之前就停止了。',improvement:'每位买家都要有负责人、阶段、下一步和截止日期；24小时内完成标准报价。'},
+     {focus:'有控制的流量投放',evidence:'自然流量过低，但listing尚未经过筛选。',improvement:'只为已有自然信号或真实买家需求的SKU投放广告；按7/14/21/30天阶段复盘。'}
+    ],
+    orientation:'用前30天寻找种子产品并规范销售流程；第2-3个月再扩大流量规模。'}
+  ],
+  y2_title:'第二年计划：从现有资产到订单',
+  y2_principle:'每个阶段都必须产生可验证的产出。只有在产品和销售流程准备好之后才能增加流量。',
+  y2_disclaimer:'以下目标数值是基于第一年基线提出的内部管理目标，并非Alibaba的承诺，也不是确定的预测。',
+  y2_actionLabels:{action:'行动',owner:'负责人',output:'产出',examplesReal:'真实买家案例',examplesProduct:'产品案例',targets:'内部目标',gate:'进入下一阶段的条件',success:'成功定义'},
+  y2_phases:[
+   {phase:'0-7天',name:'抢救热线索并搭建销售基础',
+    business_question:'在17个真实买家中，谁能在本周内向前推进一步？',
+    actions:[
+     {action:'为全部17位真实买家指定负责人、阶段、下一步和截止日期；优先处理7位高优先级买家。',owner:'销售负责人',output:'管道表包含买家、国家、产品、阶段、信号价值、下一步、截止日期、负责人等字段。'},
+     {action:'统一三套资料：公司简介+证书；目录/规格；报价模板。',owner:'销售+工厂',output:'越南语/英语/中文资料可当天发送。'},
+     {action:'从PVC封边条、ABS封边条和木皮中选出20-30个种子SKU。',owner:'运营+销售',output:'SKU清单包含买家画像、关键词、市场和选择理由。'}
+    ],
+    real_examples:[
+     {buyer:'Muhammet Celebi - 土耳其',signal:'每月12,000米；需要定制、抗UV、耐热、不发黄，发货至布尔萨。',example_next_step:'发送材质/规格选择表、寄样方案、MOQ、交期及发往布尔萨的条件；工厂未确认前不要自行报价。',desired_stage:'规格确认 → 提出寄样方案'},
+     {buyer:'TRAN HUYEN - 越南',signal:'天然白橡木皮0.3毫米，砂光+上油+牛皮纸背层。',example_next_step:'确认0.3毫米生产能力，发送表面图片/样品、MOQ、打样时间和交期。',desired_stage:'产能确认 → 寄样'},
+     {buyer:'Cathy Quan - 中国',signal:'询问白橡木、价格及试做可能性。',example_next_step:'用中文跟进，确认等级、厚度、MOQ，并在报价前先确定EXW或FOB。',desired_stage:'需求澄清 → 报价'}
+    ],
+    internal_targets:['17/17位真实买家已有阶段和负责人。','7/7位优先买家在24小时内有下一步行动。','完成三套销售资料。','完成20-30个种子SKU的候选清单。'],
+    gate_to_next_phase:'只有当至少20个SKU通过内容清单，且回复流程已有专人负责时，才能进入流量测试阶段。'},
+   {phase:'8-30天',name:'提升曝光和点击能力',
+    business_question:'哪些SKU真正能吸引到合适的买家，而不只是制造曝光？',
+    actions:[
+     {action:'为20-30个种子SKU重做标题、主图、属性、MOQ、样品、交期和详情页。',owner:'运营+设计+工厂',output:'如适用，每个SKU的PIS目标≥4.2，并有清晰的买家使用场景。'},
+     {action:'按产品和买家匹配关键词：PVC封边条、ABS封边条、天然白橡木皮、宽度/厚度、橱柜/家具应用。',owner:'运营',output:'一份关键词地图，避免多个listing互相竞争同一关键词。'},
+     {action:'对已有自然信号或真实买家的SKU进行有控制的流量测试；在本计划内每周复盘，不另设独立的广告周期板块。',owner:'广告负责人',output:'根据CTR、询盘质量和下一步销售动作，标注SKU为保留、优化或停止。'}
+    ],
+    product_examples:[
+     {product:'PVC edge banding',buyer_evidence:'Vicky Peter询问22毫米；KH shopper询问45毫米红色封边条；Rene Ong询问50毫米宽度；Muhammet要求UV/耐热/不发黄。',example_title:'Custom Wood Grain PVC Edge Banding 22-50mm for Cabinets and Furniture',title_caveat:'只有在工厂确认相应能力后，才能添加耐热、抗UV或不发黄等描述。',gallery_example:'图1材质/表面；图2宽度-厚度；图3橱柜应用场景；图4颜色；图5测试/QA；图6包装和卷装。'},
+     {product:'Natural white oak veneer',buyer_evidence:'TRAN HUYEN需要0.3毫米，砂光+上油+牛皮纸背层；Cathy想试做白橡木。',example_title:'0.3mm Natural White Oak Veneer with Kraft Paper Backing for Furniture Panels',title_caveat:'只有在产品实际配置符合时，才使用0.3毫米、砂光或上油等描述。',gallery_example:'木纹特写；木皮/背层结构；厚度；上油前后表面对比；板材应用；样品/包装。'}
+    ],
+    internal_targets:['30天内CTR测试目标≥1.4%，基线为1.10%；这是内部目标，并非承诺。','及时回复率≥90%，并继续向92%迈进。','100%活跃买家都有下一步行动和跟进日期。','对只有曝光但没有优质点击或买家信号的SKU，不增加预算。'],
+    gate_to_next_phase:'确定出CTR改善、询盘匹配良好或买家在管道中至少推进一步的优胜SKU组。'},
+   {phase:'31-60天',name:'有选择地扩大规模并提升可信度',
+    business_question:'可以从最初的20-30个SKU中复制哪些经验？',
+    actions:[
+     {action:'按照统计文件中的建议，扩展到50-100个主打SKU，但只能基于优胜SKU的结构进行扩展。',owner:'运营',output:'按PVC、ABS和木皮分组的核心品类，不批量复制listing。'},
+     {action:'完善迷你站点，包含工厂能力、QA/QC、证书、应用场景、包装、运输和样品流程。',owner:'老板+工厂+设计',output:'一个可解答公司资质和证书问题的信任证明页面。'},
+     {action:'复核9条待核实线索，在不占用过多销售时间的前提下寻找更多真实买家。',owner:'销售',output:'每条线索都被转为"真实买家"或"垃圾/剔除"并附理由。'}
+    ],
+    real_example_single:'Divyanshu Jangid曾询问公司资料和证书。App应以此案例说明迷你站点和信任材料如何影响 询盘→订单 的转化。',
+    internal_targets:['及时回复率达到或超过92%的参考水平。','从优胜SKU扩展出50-100个核心SKU，而非批量新发布。','9条待核实线索全部处理完毕。','每份报价都包含规格、MOQ、EXW/FOB、交期、运费、样品、付款方式和下一步。'],
+    gate_to_next_phase:'流量和销售数据足以判断哪些产品、市场和买家画像最能产生样品/PI。'},
+   {phase:'61-90天',name:'推动买家从沟通进入样品和PI阶段',
+    business_question:'哪位买家能创造第二年的第一个转化证据？',
+    actions:[
+     {action:'将土耳其、越南、中国和印度作为测试市场重点，因为已有真实对话，但不代表这四个市场是行业中最大的市场。',owner:'销售+广告负责人',output:'每个市场都有对应的产品组、关键词、跟进语言和买家负责人。'},
+     {action:'通过带来新价值的跟进，推动Muhammet、TRAN HUYEN、Cathy和ramesh进入样品/PI阶段。',owner:'高级销售',output:'买家已确认规格、样品/报价方案，并有明确的下一步。'},
+     {action:'只为能产生合格买家或推动管道进展的SKU/关键词增加预算。',owner:'老板+广告负责人',output:'按每位合格买家、样品和PI成本制定的预算分配表。'}
+    ],
+    internal_targets:['推动2-3位第一年买家进入样品或PI阶段；这是管理目标，并非订单承诺。','建立每位合格买家、每个样品和每个PI的基准成本。','在合理测试周期后，停止未产生销售进展的宽泛关键词或SKU。'],
+    gate_to_next_phase:'获得关于样品、PI或信保交易订单的真实数据，用于决定是否扩大预算。'},
+   {phase:'91-180天',name:'复制优胜组合并衡量经营效果',
+    business_question:'哪笔投入正在带来优质买家和销售额，而不只是流量？',
+    actions:[
+     {action:'复制能产生最佳合格买家的产品组、关键词和市场。',owner:'老板+运营',output:'决定继续投入、继续测试或停止的投资组合清单。'},
+     {action:'用合格买家、样品、PI、信保交易订单和订单金额来衡量Guarantee L3+或Guarantee Basic的效果。',owner:'老板+财务+销售负责人',output:'包含成本、管道和经营结果的月度报告。'},
+     {action:'若仍未产生订单，按产品、价格/MOQ、信任/合规、运输/付款/跟进四个方面分析问题所在。',owner:'老板+销售+工厂',output:'附带证据的原因清单，并在下月进行改进测试。'}
+    ],
+    internal_targets:['月度报告包含曝光、点击、询盘、合格买家、样品、报价、PI和信保交易订单等完整数据。','不仅以曝光量或获得的商机数量来评判成功。','根据每位合格买家成本和订单推进情况，做出下月预算分配决策。'],
+    success_definition:'当流量提升的同时，真实买家在管道中推进得更深，才视为第二年方向正确；只有在有数据确认时，才记录Order。'}
+  ],
+  y2_scorecardTitle:'每周负责人记分卡',
+  y2_scorecard:[
+   {group:'流量',metrics:['Search impressions','Search clicks','CTR','Unique visitors'],owner_question:'哪些SKU提升了触达和正确买家的点击？'},
+   {group:'买家质量',metrics:['Business opportunities','Qualified buyers','真实买家 / 待核实 / 垃圾线索'],owner_question:'商机增加是否伴随着合适的买家？'},
+   {group:'销售进展',metrics:['已确认规格的买家','Samples','Complete quotations','PI','Trade Assurance Orders'],owner_question:'买家目前卡在哪个阶段，由谁负责？'},
+   {group:'服务',metrics:['Reply under 2 hours','Timely reply rate','Follow-up overdue'],owner_question:'是否有热线索被延迟或缺少下一步？'}
+  ],
+  kpiInterp:{
+   search_impressions:'在买家面前出现的机会非常少；这是当前漏斗最上层的最大瓶颈。',
+   page_views:'进入产品/店铺页面的流量仍然很低。',
+   unique_visitors:'新买家触达能力弱；需要提升搜索覆盖率和核心产品分发。',
+   search_clicks:'主图、标题、价格/MOQ或产品差异化尚不足以吸引点击。',
+   business_opportunities_period:'有效商机数量偏低，主要源于漏斗上层流量小；仍需检查页面质量和回复流程。',
+   ctr:'CTR仅约为行业水平的48%；应优先优化主图、标题、卖点、MOQ和信任信号。'
+  },
+  cmpTemplate:'行业参考 {ref} · 占比 {share}',
+  ov_conclTitle:'五项核心结论（C1-C5）',
+  conclusions:[
+   {id:'C1',priority:'critical',title:'第一大瓶颈是搜索入口流量',evidence:'搜索曝光量仅为行业参考值的7.8%；搜索点击量仅为3.7%；CTR为1.10%，行业为2.29%。',meaning:'买家看到店铺的机会不够多，而当他们看到时，标题、主图、价格/MOQ或产品定位的吸引力仍然不足。',decision:'不再盲目增加产品数量；在扩大广告投放之前，先集中优化核心品类、关键词、主图和Showcase。'},
+   {id:'C2',priority:'critical',title:'产品数量庞大但单个SKU表现低下',evidence:'截至2026年6月共有1,605个产品，而每个Top Product仅记录约34-76次曝光，且该组尚未观察到询盘。',meaning:'瓶颈并非listing数量不足，而是品类质量、差异化程度以及与搜索需求的匹配度不够。',decision:'挑选20-30个核心SKU，重做PIS、标题、图片、参数、MOQ、应用场景、证书和工厂证明。'},
+   {id:'C3',priority:'high',title:'真实需求已经存在，但尚未推动成交',evidence:'第一年累计商机95个；在清理33个对话后，确认17个真实买家和7个高优先级买家，但现有数据尚未确认已完成的订单。',meaning:'店铺需要一条清晰的销售流程：需求→确认规格→样品→报价→PI→信保交易订单。',decision:'每位买家都必须有负责人、下一步、处理时限和跟进日期；优先在24小时内处理6-7位高优先级买家。'},
+   {id:'C4',priority:'high',title:'回复速度尚未达到参考水平',evidence:'及时回复率：2026年6月为84.62%；2026年4月为78.57%；2025年12月为73.33%；行业参考值为92%。',meaning:'相应的差距为7.38、13.43和18.67个百分点，可能导致正在比较多家供应商的买家流失。',decision:'建立SLA：优先买家在2个工作小时内回复，所有询盘6小时内回复，绝对不超过24小时。'},
+   {id:'C5',priority:'medium',title:'收件箱质量需要主动管理，而非追求对话数量',evidence:'在33个对话中：17个真实买家（51.5%），9个需核实（27.3%），7个被剔除（21.2%）。',meaning:'如果不清理线索，销售团队会把时间浪费在垃圾信息、物流服务推广或要求转到平台外的对象上。',decision:'维护三个队列：优先、需核实、垃圾/剔除；并衡量真实买家组的推进转化率。'}
+  ],
+  conclLabels:{evidence:'证据',meaning:'含义',decision:'决策'},
+  today_title:'⚠ 7位高优先级买家 — 须在24小时内处理',
+  fn_funnelTitle:'漏斗：曝光 → 点击 → 询盘 → 成交',
+  fn_stageLabels:['曝光','点击','询盘','成交'],
+  fn_orderNote:'尚未确认',
+  fn_stages:[
+   {stage:'曝光',status:'critical',evidence:'搜索曝光量达到行业参考值的7.8%；独立访客达到4.9%。',causes:['品类过于宽泛，相似listing过多','关键词覆盖与买家用语不够贴合','核心产品的PIS和完善度不足','Showcase未优先展示正确的SKU','证书与工厂能力信号不够突出']},
+   {stage:'点击',status:'critical',evidence:'搜索点击量达到行业水平的3.7%；CTR为1.10%，行业为2.29%。',causes:['主图未清晰展示材质、表面和应用场景','标题未按 产品+材质+应用+规格 的结构组合','MOQ/价格缺乏竞争力或说明不清','缺少差异化卖点、样品、定制和交期信息']},
+   {stage:'询盘',status:'warning',evidence:'期内商机13个；第一年累计商机95个；已复核的33个对话中有17个真实买家。',causes:['产品页信任背书不足','Top Product有曝光但尚未观察到询盘','RFQ和Showcase未集中于核心产品','回复速度未始终达到SLA']},
+   {stage:'成交',status:'critical',evidence:'尽管多位买家已询问规格、价格、运输或已接受FOB条件，现有数据尚未确认已完成的订单。',causes:['缺少每位买家的负责人和截止时间','报价未始终包含MOQ、交期、运费、付款方式和下一步','未推动买家进入样品、PI和信保交易环节','跟进缺乏固定节奏']}
+  ],
+  stageLabels:{evidence:'证据',causes:'需核查的原因'},
+  statusLabels:{critical:'严重',warning:'需关注'},
+  fn_barTitle:'Qing Yang 与行业平均对比（6项指标）',
+  fn_replyTitle:'及时回复率变化趋势',
+  fn_replyNote:'虚线为行业参考值92%。各期虽有改善，但仍低于参考标准。',
+  by_h2:'买家跟进 · 已复核33个对话',
+  by_note:'来源：2025年12月至2026年7月显示的对话批次，并非整个收件箱。仅在打开详情且来源确实提供时，才显示邮箱/电话。',
+  counters:[['17','真实买家'],['9','需核实'],['7','已剔除'],['7','高优先级']],
+  subPri:'优先', subRev:'需核实', subRem:'垃圾/剔除',
+  searchPh:'按姓名/公司搜索…', levelAll:'全部等级', countryAll:'全部国家/地区',
+  card_need:'需求', card_commercial:'商务信号', card_next:'下一步', card_goal:'转化目标', card_reason:'原因', card_evidence:'聊天证据', card_country:'国家/地区', card_company:'公司', card_email:'邮箱', card_phone:'电话/WhatsApp', card_level:'潜力等级', noData:'数据中未见',
+  pd_paradoxTitle:'产品悖论', pd_productsLbl:'已发布产品总数（2026年6月）', pd_shareLbl:'各项流量指标仅达行业平均的比例区间',
+  pd_demandTitle:'按需求信号排列产品组优先级',
+  demandCards:[
+   {rank:1,product:'PVC edge banding',idx:95.1,reason:'在汇总数据中需求信号最高；适合作为核心SKU组。'},
+   {rank:2,product:'ABS edge banding',idx:40.4,reason:'作为PVC之后扩展买家画像的补充组。'},
+   {rank:3,product:'Wood veneer',idx:36.3,reason:'已有真实买家询问白橡木皮和工程木皮；应按应用/规格分组运营。'}
+  ],
+  pd_checklistTitle:'20-30个核心SKU清单', pd_checklistNote:'减少"多发产品"的思路，转向经营少而精的高质量核心产品。',
+  checklist:[
+   '如适用，PIS目标≥4.2。',
+   '标题结构：产品+材质+应用场景+规格+卖点。',
+   '主图清晰展示材质/表面/尺寸；图库包含应用场景、包装、工厂、QA/QC和定制信息。',
+   '明确标注宽度、厚度、颜色/木材种类、背层、MOQ、样品、交期和运输方式。',
+   '在适用时加入证书、生产能力、质量管控和信保交易信息。',
+   '剔除重复或无流量的listing；Showcase留给转化潜力高的SKU。'
+  ],
+  pd_marketTitle:'市场信号（平台外参考资料）',
+  marketSignals:[
+   {signal:'全球封边条市场规模',value:'2025年约16.0-16.5亿美元；参考CAGR约7-8%。',usage:'仅作为行业背景，不用于预测Qing Yang自身的营收。'},
+   {signal:'材质结构',value:'在Accio数据中，PVC的需求信号领先。',usage:'优先研究PVC封边条的品类、关键词和优惠方案。'},
+   {signal:'越南木材出口',value:'2025年约172亿美元。',usage:'作为越南行业基础的佐证，不等同于店铺自身销售额。'}
+  ],
+  rm_northstar:'第二年北极星指标：增加合格买家，并推动真实买家进入样品/PI/信保交易订单，而不只是提升流量或对话数量。',
+  rm_immediateTitle:'7项立即行动（0-7天）',
+  actionTH:['#','行动','负责人','产出'],
+  days_0_7:[
+   {priority:1,action:'回复并给出7位优先买家的下一步；前2名2小时内，全部24小时内完成。',owner:'销售',output:'每位买家都有规格、报价/样品、负责人和跟进日期。'},
+   {priority:2,action:'将整个收件箱分类为优先、需核实、垃圾/剔除。',owner:'销售负责人',output:'避免垃圾信息干扰买家统计和跟进效率。'},
+   {priority:3,action:'按PVC封边条、ABS封边条和木皮选出20-30个核心SKU。',owner:'运营+销售',output:'带有买家画像和目标市场的优先SKU清单。'},
+   {priority:4,action:'为机会最高的10个SKU重做主图和标题。',owner:'设计+运营',output:'一套可用于测试CTR的图片-标题A/B方案。'},
+   {priority:5,action:'完善核心SKU的参数、MOQ、样品、交期、运输、QA/QC和证书。',owner:'运营+工厂',output:'产品页能够回答核心购买问题。'},
+   {priority:6,action:'将表现最好的核心SKU加入Showcase，并排查无询盘的Top Product。',owner:'运营',output:'Showcase集中展示有转化潜力的产品。'},
+   {priority:7,action:'建立销售管道表：需求→规格→样品→报价→PI→订单。',owner:'销售负责人',output:'每条线索都有明确的下一步和截止时间。'}
+  ],
+  rm_h2:'8-180天路线图',
+  phases:[
+   {t:'8-30天',items:['完善20-30个核心SKU；如适用，PIS目标≥4.2。','检查30天关键词分析，将关键词映射到各SKU和市场。','为已达标的SKU组投放小规模测试预算；不向表现弱的listing砸钱。','按价格、MOQ、运输、证书和下一步清单回复合适的RFQ。','每周衡量：曝光、CTR、独立访客、询盘、合格买家、样品、PI和订单。']},
+   {t:'31-90天',items:['将流量集中到CTR和优质询盘表现好的SKU；停止只花钱却无下一步销售动作的组合。','按工厂能力、核心产品组、QA/QC、包装、运输和应用案例搭建迷你站点。','按第0、2、5、10、21天的节奏跟进L3+买家；每次跟进都要带来新的价值。','运营目标：及时回复率≥92%，CTR逐步接近行业参考水平，所有高优先级买家都有样品/PI下一步。']},
+   {t:'91-180天',items:['将资源扩大到表现最好的SKU组和市场。','用每位合格买家、样品、PI和订单的成本来评估续签方案效果，而不仅看线索数量。','按市场建立报价、证书、目录、样品政策和运输模板库。','每月与老板一起回顾：漏斗、买家管道、营收/信保订单及预算再分配决策。']}
+  ],
+  rm_kpiTitle:'需要每周跟踪的KPI',
+  weeklyKpis:['搜索曝光量','搜索点击量','CTR','独立访客数','询盘/商机数','合格买家数','2小时内和24小时内回复的买家数','样品数量','完整报价数量','PI数量','信保交易订单数量','核心SKU的Top/Super Product及PIS'],
+  pr_h2:'三种续签方案（Renew FY27Q1）', pr_note:'价格不含增值税。以下为基于现有数据的有条件建议，并非结果承诺。',
+  pkgTag:{Basic:'仅维持','Guarantee Basic':'预算方案','Guarantee L3+':'主要推荐'},
+  pkgLabels:{star:'直接星级',guarantee:'商机保障',kwa:'KWA价值',fit:'适合 Qing Yang 的情况',reason:'原因'},
+  packages:[
+   {name:'Basic',usd:'$1,999',vnd:'46,800,000 VND',star:'2星 / 6个月',guarantee:'不保障商机',kwa:'0美元',benefits:['40 RFQ/月','5张绿标RFQ/月','5次优先报价','20个Showcase','每月330 Smart Assistant额度','Product Advisor 3个月','5个子账号'],fit:'仅适合以最低成本维持店铺存在感的情况。',reason:'不足以有力解决第一年在星级、优质商机和入口流量方面的问题。'},
+   {name:'Guarantee Basic',usd:'$2,999',vnd:'70,400,000 VND',star:'3星 / 6个月',guarantee:'30天内最低25个商机',kwa:'1,000美元',benefits:['40 RFQ/月','5张绿标RFQ/月','5次优先报价','20个Showcase','KWA 1,000美元','Product Advisor 6个月','5个子账号'],fit:'预算有限时用于恢复星级并获得最低商机保障的方案。',reason:'成本更低但偏重商机数量，尚不能保证聚焦L3+买家。'},
+   {name:'Guarantee L3+',usd:'$4,999',vnd:'117,600,000 VND',star:'3星 / 6个月',guarantee:'90天内最低35+个L3+商机',kwa:'3,000美元',benefits:['40 RFQ/月','5张绿标RFQ/月','5次优先报价','20个Showcase','KWA 3,000美元','Product Advisor 6个月','5个子账号'],fit:'当第二年目标是获取高质量买家且团队具备跟进能力时最适合。',reason:'Qing Yang已有真实需求信号，但缺少优质商机和成交流程；相比只追求对话总数，L3+更合适。'}
+  ],
+  pr_logicTitle:'选择逻辑',
+  decisionLogic:[
+   '仅当预算是绝对约束且企业接受较慢增长时，才选择Basic。',
+   '若需要更保守的预算方案，且销售团队尚未准备好处理L3+买家，选择Guarantee Basic。',
+   '若已有专人负责销售、承诺回复SLA，且目标是获取更高质量的买家，选择Guarantee L3+。',
+   'KWA应在20-30个核心SKU的图片、标题、PIS、MOQ和详情页均达标后再启动。'
+  ],
+  pr_disclaimer:'免责说明：以上价格和建议基于Renew FY27Q1的有条件建议，并非结果承诺。价格不含增值税。',
+  sm_h2:'结果总结与第二年决策',
+  summaryBlocks:[
+   {number:'①',title:'第一年诊断',text:'店铺搜索曝光仅达到行业参考值的7.8%，点击仅达到3.7%；CTR为1.10%，行业为2.29%。然而，在清理33个对话后，仍确认累计95个商机和17个真实买家。瓶颈在于入口狭窄、listing吸引力和成交流程，而非完全缺乏需求。'},
+   {number:'②',title:'需优先处理的买家',text:'17个真实买家已从9条待核实线索和7条已剔除线索中区分出来。应优先处理Muhammet、TRAN HUYEN、Cathy Quan、KH shopper、ramesh、SilvinoMateus Sambo和Rene Ong；目标是把每位买家推进到规格、样品、报价、PI和信保交易订单。'},
+   {number:'③',title:'具备机会的市场',text:'全球封边条市场参考规模约16亿美元，CAGR为7-8%；PVC的需求信号领先；2025年越南木材出口约172亿美元。这是积极的大背景，但店铺自身结果仍取决于产品质量和转化能力。'},
+   {number:'④-⑤',title:'续签方案选择',text:'主要推荐Guarantee L3+（$4,999），因其保障90天内至少35+个L3+商机、3星/6个月及3,000美元KWA权益。若预算有限，可选择Guarantee Basic（$2,999）。Basic（$1,999）仅适合维持现状，不足以有力解决第一年的瓶颈。'},
+   {number:'⑥-⑦',title:'第二年路线图',text:'7天内处理高优先级买家、清理管道并选出20-30个核心SKU。30天内完善listing并进行有控制的流量测试。90-180天内将资源集中到能带来合格买家的SKU/市场，衡量样品、PI和信保交易订单，而不仅仅衡量流量。'}
+  ],
+  foot:'本报告与其他8个周报App完全独立，不共享或修改任何数据源。数据来源：Alibaba运营绩效汇总数据、显示批次的33个对话、Renew FY27Q1价格表、Accio市场信号。'
+ }
+};
+
+let LANG = localStorage.getItem('qy_lang') || 'vi';
+function esc(s){ return (s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function levelClass(lv){
+  if(lv==='Rất cao'||lv==='非常高') return 'vhigh';
+  if(lv==='Cao'||lv==='高') return 'high';
+  if(lv==='Trung bình'||lv==='Trung bình-thấp'||lv==='中'||lv==='中低') return 'mid';
+  return 'low';
+}
+function L(item, viField, zhField){ return LANG==='zh' ? (item[zhField]!=null?item[zhField]:item[viField]) : item[viField]; }
+
+document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.pane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById(b.dataset.pane).classList.add('active');
+}));
+document.querySelectorAll('.subtab').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.subtab').forEach(x=>x.classList.remove('active'));
+  document.querySelectorAll('.subpane').forEach(x=>x.classList.remove('active'));
+  b.classList.add('active'); document.getElementById('sub_'+b.dataset.sub).classList.add('active');
+}));
+document.getElementById('btnPrint').addEventListener('click', ()=>window.print());
+document.getElementById('modalClose').addEventListener('click', ()=>document.getElementById('modalBg').classList.remove('open'));
+document.getElementById('modalBg').addEventListener('click', (e)=>{ if(e.target.id==='modalBg') e.currentTarget.classList.remove('open'); });
+
+function openBuyerModal(item, kind){
+  const t = T[LANG];
+  let html = '<h3>'+esc(item.name)+' '+(item.flag||'')+'</h3>';
+  const country = L(item,'country','country_zh');
+  const level = item.level ? L(item,'level','level_zh') : null;
+  html += '<div class="mc">'+esc(country)+(level?(' &middot; <span class="lvltag '+levelClass(item.level)+'">'+esc(level)+'</span>'):'')+'</div>';
+  if(kind==='review'||kind==='removed'){
+    html += '<div class="mrow"><b>'+t.card_reason+'</b>'+esc(L(item,'reason','reason_zh'))+'</div>';
+    if(item.evidence) html += '<div class="mrow"><b>'+t.card_evidence+'</b>'+esc(item.evidence)+'</div>';
+  } else {
+    if(item.company) html += '<div class="mrow"><b>'+t.card_company+'</b>'+esc(item.company)+'</div>';
+    html += '<div class="mrow"><b>'+t.card_email+'</b>'+esc(item.email==='暂未看到'?t.noData:item.email)+'</div>';
+    html += '<div class="mrow"><b>'+t.card_phone+'</b>'+esc(item.phone==='暂未看到'?t.noData:item.phone)+'</div>';
+    html += '<div class="mrow"><b>'+t.card_need+'</b>'+esc(L(item,'need','need_zh'))+'</div>';
+    if(item.evidence) html += '<div class="mrow"><b>'+t.card_evidence+'</b>'+esc(item.evidence)+'</div>';
+    if(item.commercial_signal) html += '<div class="mrow"><b>'+t.card_commercial+'</b>'+esc(L(item,'commercial_signal','commercial_zh'))+'</div>';
+    html += '<div class="mrow"><b>'+t.card_next+'</b>'+esc(L(item,'next_action','next_zh'))+'</div>';
+    if(item.conversion_goal) html += '<div class="mrow"><b>'+t.card_goal+'</b>'+esc(L(item,'conversion_goal','goal_zh'))+'</div>';
+  }
+  document.getElementById('modalBody').innerHTML = html;
+  document.getElementById('modalBg').classList.add('open');
+}
+
+function renderAll(){
+  const t = T[LANG];
+  document.documentElement.lang = LANG;
+  document.getElementById('btnVi').classList.toggle('active', LANG==='vi');
+  document.getElementById('btnZh').classList.toggle('active', LANG==='zh');
+  document.getElementById('heroHeadline').textContent = t.heroHeadline;
+  document.getElementById('badgePeriod').textContent = t.badgePeriod;
+  document.getElementById('badgeScope').textContent = t.badgeScope;
+  document.getElementById('printLbl').textContent = t.printLbl;
+  document.getElementById('tab_overview').textContent = t.tabs.overview;
+  document.getElementById('tab_funnel').textContent = t.tabs.funnel;
+  document.getElementById('tab_buyers').textContent = t.tabs.buyers;
+  document.getElementById('tab_products').textContent = t.tabs.products;
+  document.getElementById('tab_roadmap').textContent = t.tabs.roadmap;
+  document.getElementById('tab_pricing').textContent = t.tabs.pricing;
+  document.getElementById('tab_summary').textContent = t.tabs.summary;
+  document.getElementById('footNote').textContent = t.foot;
+
+  // Overview
+  function buildFunnelHtml(){
+    const stageVals = [PERF.metrics[0].store, PERF.metrics[3].store, PERF.metrics[4].store];
+    let h='';
+    stageVals.forEach((v,i)=>{
+      h += '<div class="fstage"><div class="n">'+v.toLocaleString('en-US')+'</div><div class="l">'+t.fn_stageLabels[i]+'</div></div><div class="farrow">&rarr;</div>';
+    });
+    h += '<div class="fstage order"><div class="n">'+t.fn_orderNote+'</div><div class="l">'+t.fn_stageLabels[3]+'</div></div>';
+    return h;
+  }
+  document.getElementById('ov_chartTitle').textContent = t.ov_chartTitle;
+  const sortedMetrics = PERF.metrics.slice().sort((a,b)=>a.share-b.share);
+  document.getElementById('ov_attainment').innerHTML = sortedMetrics.map(m=>{
+    const label = LANG==='zh'?m.label_zh:m.label_vi;
+    const storeDisp = m.isPct? (LANG==='zh'?'1.10%':'1,10%') : m.store.toLocaleString('en-US');
+    const refDisp = m.isPct? (LANG==='zh'?'2.29%':'2,29%') : m.ref.toLocaleString('en-US');
+    return '<div class="barrow"><div class="lbl">'+label+'</div><div class="bartrack"><div class="barfill critical" style="width:'+Math.max(4,m.share)+'%">'+t.attainLabel.replace('{pct}',m.share+'%').replace('{store}',storeDisp).replace('{ref}',refDisp)+'</div></div><div>'+m.share+'%</div></div>';
+  }).join('');
+  document.getElementById('ov_funnelTitle').textContent = t.ov_funnelTitle;
+  document.getElementById('ov_funnel').innerHTML = buildFunnelHtml();
+  document.getElementById('ov_analysisTitle').textContent = t.ov_analysisTitle;
+  document.getElementById('ov_analysis').innerHTML = t.analysisDirections.map(a=>
+    '<div class="analysis-item '+a.priority+'"><h4>'+a.title+'</h4>'+
+    '<div class="al"><b>'+t.analysisLabels.evidence+'</b>'+a.evidence+'</div>'+
+    '<div class="al"><b>'+t.analysisLabels.meaning+'</b>'+a.meaning+'</div>'+
+    '<div class="al"><b>'+t.analysisLabels.orientation+'</b>'+a.orientation+'</div></div>'
+  ).join('');
+  document.getElementById('ov_footnote').textContent = t.ov_footnote;
+  document.getElementById('ov_attnGrid').innerHTML = t.attnPanels.map(p=>{
+    let itemsHtml = '';
+    if(p.type==='metric'){
+      itemsHtml = p.items.map(i=>'<div class="attn-item"><div class="ai-top"><span>'+i.metric+'</span><span class="ai-val">'+(i.attainment?i.attainment+' · ':'')+i.value+'</span></div><div class="ai-why">'+i.why+'</div></div>').join('');
+    } else if(p.type==='signal'){
+      itemsHtml = p.items.map(i=>'<div class="attn-item"><div class="ai-top"><span>'+i.signal+'</span></div><div class="ai-why">'+i.meaning+'</div><div class="ai-caveat">'+i.caveat+'</div></div>').join('');
+    } else {
+      itemsHtml = p.items.map(i=>'<div class="attn-item"><div class="ai-top"><span>'+i.focus+'</span></div><div class="ai-caveat">'+i.evidence+'</div><div class="ai-why">'+i.improvement+'</div></div>').join('');
+    }
+    return '<div class="attn-panel '+p.role+'"><div class="attn-label">'+p.label+'</div><div class="attn-headline">'+p.headline+'</div>'+itemsHtml+'<div class="attn-orient">'+p.orientation+'</div></div>';
+  }).join('');
+
+  // Funnel
+  document.getElementById('fn_funnelTitle').textContent = t.fn_funnelTitle;
+  document.getElementById('fn_funnel').innerHTML = buildFunnelHtml();
+  document.getElementById('fn_stages').innerHTML = t.fn_stages.map(s=>
+    '<div class="stagecard"><div class="sh"><b>'+s.stage+'</b><span class="stag '+s.status+'">'+(t.statusLabels[s.status]||s.status)+'</span></div>'+
+    '<div class="ev"><b>'+t.stageLabels.evidence+':</b> '+s.evidence+'</div>'+
+    '<div style="font-size:12px;color:var(--muted);font-weight:700;margin-bottom:2px">'+t.stageLabels.causes+':</div>'+
+    '<ul>'+s.causes.map(c=>'<li>'+c+'</li>').join('')+'</ul></div>'
+  ).join('');
+  document.getElementById('fn_barTitle').textContent = t.fn_barTitle;
+  document.getElementById('fn_bars').innerHTML = PERF.metrics.map(m=>{
+    const label = LANG==='zh'?m.label_zh:m.label_vi;
+    const storeDisp = m.isPct? m.store+'%' : m.store.toLocaleString('en-US');
+    return '<div class="barrow"><div class="lbl">'+label+'</div><div class="bartrack"><div class="barfill critical" style="width:'+Math.max(4,m.share)+'%">'+storeDisp+'</div></div><div>'+m.share+'%</div></div>';
+  }).join('');
+  document.getElementById('fn_replyTitle').textContent = t.fn_replyTitle;
+  document.getElementById('fn_replyNote').textContent = t.fn_replyNote;
+  renderReplyLine();
+
+  // Buyers
+  document.getElementById('by_h2').textContent = t.by_h2;
+  document.getElementById('by_note').textContent = t.by_note;
+  document.getElementById('by_counters').innerHTML = t.counters.map(c=>'<div class="counter"><div class="n">'+c[0]+'</div><div class="l">'+c[1]+'</div></div>').join('');
+  document.getElementById('subBtnPri').textContent = t.subPri+' ('+(LEADS.priority7.length+LEADS.other10.length)+')';
+  document.getElementById('subBtnRev').textContent = t.subRev+' ('+LEADS.review9.length+')';
+  document.getElementById('subBtnRem').textContent = t.subRem+' ('+LEADS.removed7.length+')';
+  document.getElementById('bySearch').placeholder = t.searchPh;
+
+  const allPriority = [...LEADS.priority7, ...LEADS.other10];
+  const levelSel = document.getElementById('byLevel');
+  const levels = ['Rất cao','Cao','Trung bình','Trung bình-thấp'];
+  const levelLabel = {'Rất cao':LANG==='zh'?'非常高':'Rất cao','Cao':LANG==='zh'?'高':'Cao','Trung bình':LANG==='zh'?'中':'Trung bình','Trung bình-thấp':LANG==='zh'?'中低':'Trung bình-thấp'};
+  levelSel.innerHTML = '<option value="">'+t.levelAll+'</option>'+levels.map(l=>'<option value="'+l+'">'+levelLabel[l]+'</option>').join('');
+  const countrySel = document.getElementById('byCountry');
+  const countries = [...new Set(allPriority.map(p=>p.country))];
+  countrySel.innerHTML = '<option value="">'+t.countryAll+'</option>'+countries.map(c=>{
+    const item = allPriority.find(p=>p.country===c);
+    return '<option value="'+esc(c)+'">'+esc(L(item,'country','country_zh'))+'</option>';
+  }).join('');
+
+  function buyerCardHtml(p, rankBadge){
+    return '<div class="bcard" data-name="'+esc(p.name)+'">'+
+      '<div class="bh"><span class="nm">'+p.flag+' '+esc(p.name)+(rankBadge?(' <span style="font-size:10px;color:var(--muted)">#'+p.rank+'</span>'):'')+'</span><span class="lvltag '+levelClass(p.level)+'">'+esc(L(p,'level','level_zh'))+'</span></div>'+
+      '<div class="bc">'+esc(L(p,'country','country_zh'))+(p.company&&p.company!==p.name?(' &middot; '+esc(p.company)):'')+'</div>'+
+      '<div class="row"><b>'+t.card_need+':</b> '+esc(L(p,'need','need_zh'))+'</div>'+
+      '<div class="row"><b>'+t.card_next+':</b> '+esc(L(p,'next_action','next_zh'))+'</div>'+
+      '</div>';
+  }
+  function renderPriorityCards(){
+    const q = (document.getElementById('bySearch').value||'').toLowerCase();
+    const lvl = levelSel.value;
+    const ctry = countrySel.value;
+    const list = allPriority.filter(p=>
+      (!q || p.name.toLowerCase().includes(q) || (p.company||'').toLowerCase().includes(q)) &&
+      (!lvl || p.level===lvl) && (!ctry || p.country===ctry)
+    );
+    document.getElementById('cards_pri').innerHTML = list.map(p=>buyerCardHtml(p, !!p.rank)).join('');
+    document.querySelectorAll('#cards_pri .bcard').forEach(c=>c.addEventListener('click',()=>{
+      const item = allPriority.find(p=>p.name===c.dataset.name);
+      openBuyerModal(item,'priority');
+    }));
+    document.getElementById('byCount').textContent = list.length+' / '+allPriority.length;
+  }
+  function renderReviewCards(){
+    const q = (document.getElementById('bySearch').value||'').toLowerCase();
+    const list = LEADS.review9.filter(p=>!q || p.name.toLowerCase().includes(q));
+    document.getElementById('cards_rev').innerHTML = list.map((p,idx)=>
+      '<div class="bcard" data-idx="'+idx+'"><div class="bh"><span class="nm">'+esc(p.name)+'</span></div>'+
+      '<div class="reasonbox"><b>'+t.card_reason+'</b>'+esc(L(p,'reason','reason_zh'))+'</div></div>'
+    ).join('');
+    document.querySelectorAll('#cards_rev .bcard').forEach(c=>c.addEventListener('click',()=>openBuyerModal(list[+c.dataset.idx],'review')));
+  }
+  function renderRemovedCards(){
+    const q = (document.getElementById('bySearch').value||'').toLowerCase();
+    const list = LEADS.removed7.filter(p=>!q || p.name.toLowerCase().includes(q));
+    document.getElementById('cards_rem').innerHTML = list.map((p,idx)=>
+      '<div class="bcard" data-idx="'+idx+'"><div class="bh"><span class="nm">'+esc(p.name)+'</span></div>'+
+      '<div class="reasonbox"><b>'+t.card_reason+'</b>'+esc(L(p,'reason','reason_zh'))+'</div></div>'
+    ).join('');
+    document.querySelectorAll('#cards_rem .bcard').forEach(c=>c.addEventListener('click',()=>openBuyerModal(list[+c.dataset.idx],'removed')));
+  }
+  renderPriorityCards(); renderReviewCards(); renderRemovedCards();
+  document.getElementById('bySearch').oninput = ()=>{ renderPriorityCards(); renderReviewCards(); renderRemovedCards(); };
+  levelSel.onchange = renderPriorityCards;
+  countrySel.onchange = renderPriorityCards;
+
+  // Products
+  document.getElementById('pd_paradoxTitle').textContent = t.pd_paradoxTitle;
+  document.getElementById('pd_productsLbl').textContent = t.pd_productsLbl;
+  document.getElementById('pd_shareLbl').textContent = t.pd_shareLbl;
+  document.getElementById('pd_demandTitle').textContent = t.pd_demandTitle;
+  document.getElementById('pd_oppcards').innerHTML = t.demandCards.map(d=>
+    '<div class="oppcard"><span class="rank">#'+d.rank+'</span><h4>'+d.product+' ('+d.idx+')</h4><p>'+d.reason+'</p></div>'
+  ).join('');
+  document.getElementById('pd_checklistTitle').textContent = t.pd_checklistTitle;
+  document.getElementById('pd_checklistNote').textContent = t.pd_checklistNote;
+  document.getElementById('pd_checklist').innerHTML = t.checklist.map(c=>'<div class="check2"><span class="ck">&#10003;</span>'+c+'</div>').join('');
+  document.getElementById('pd_marketTitle').textContent = t.pd_marketTitle;
+  document.getElementById('pd_market').innerHTML = t.marketSignals.map(m=>
+    '<div class="market-signal-item"><div class="msig-h">'+m.signal+'</div><div class="msig-v">'+m.value+'</div><div class="msig-u">'+m.usage+'</div></div>'
+  ).join('');
+
+  // Roadmap
+  document.getElementById('rm_northstar').textContent = t.rm_northstar;
+  document.getElementById('rm_disclaimer').textContent = t.y2_disclaimer;
+  const al = t.y2_actionLabels;
+  document.getElementById('rm_phaseList').innerHTML = t.y2_phases.map(ph=>{
+    let h = '<div class="section phase-block"><h3>'+ph.phase+' &middot; '+ph.name+'</h3>';
+    h += '<div class="bizq">'+ph.business_question+'</div>';
+    h += '<div style="overflow:auto"><table class="actiontable"><tr><th>#</th><th>'+al.action+'</th><th>'+al.owner+'</th><th>'+al.output+'</th></tr>'+
+      ph.actions.map((a,i)=>'<tr><td>'+(i+1)+'</td><td>'+a.action+'</td><td>'+a.owner+'</td><td>'+a.output+'</td></tr>').join('')+'</table></div>';
+    if(ph.real_examples){
+      h += '<h4>'+al.examplesReal+'</h4>'+ph.real_examples.map(e=>
+        '<div class="example-card"><b>'+e.buyer+'</b><br>'+e.signal+'<br>&rarr; '+e.example_next_step+'<div class="stagepill">'+e.desired_stage+'</div></div>'
+      ).join('');
+    }
+    if(ph.product_examples){
+      h += '<h4>'+al.examplesProduct+'</h4>'+ph.product_examples.map(e=>
+        '<div class="example-card"><b>'+e.product+'</b><br>'+e.buyer_evidence+'<br><i>'+e.example_title+'</i><br>'+e.title_caveat+'<br>'+e.gallery_example+'</div>'
+      ).join('');
+    }
+    if(ph.real_example_single){
+      h += '<div class="example-card">'+ph.real_example_single+'</div>';
+    }
+    h += '<h4>'+al.targets+'</h4><div class="checklist2">'+ph.internal_targets.map(x=>'<div class="check2"><span class="ck">&#10003;</span>'+x+'</div>').join('')+'</div>';
+    if(ph.gate_to_next_phase){ h += '<div class="gate-box">'+al.gate+': '+ph.gate_to_next_phase+'</div>'; }
+    if(ph.success_definition){ h += '<div class="gate-box">'+al.success+': '+ph.success_definition+'</div>'; }
+    h += '</div>';
+    return h;
+  }).join('');
+  document.getElementById('rm_scorecardTitle').textContent = t.y2_scorecardTitle;
+  document.getElementById('rm_scorecard').innerHTML = t.y2_scorecard.map(s=>
+    '<div class="scorecard-item"><h4>'+s.group+'</h4><div class="kpichips">'+s.metrics.map(m=>'<span class="kpichip">'+m+'</span>').join('')+'</div><div class="sq">'+s.owner_question+'</div></div>'
+  ).join('');
+
+  // Pricing
+  document.getElementById('pr_h2').textContent = t.pr_h2;
+  document.getElementById('pr_note').textContent = t.pr_note;
+  document.getElementById('pr_disclaimer').textContent = t.pr_disclaimer;
+  document.getElementById('pr_logicTitle').textContent = t.pr_logicTitle;
+  document.getElementById('pr_logic').innerHTML = t.decisionLogic.map(x=>'<li>'+x+'</li>').join('');
+  document.getElementById('pr_cards').innerHTML = t.packages.map(p=>{
+    const tagClass = p.name==='Basic'?'maintain':(p.name==='Guarantee Basic'?'budget':'primary');
+    const isPrimary = p.name==='Guarantee L3+';
+    return '<div class="pricecard'+(isPrimary?' primary':'')+'">'+
+      (isPrimary?'<div class="ribbon">'+t.pkgTag[p.name]+'</div>':'')+
+      '<div class="pcname">'+p.name+'</div>'+
+      '<div class="pctag '+tagClass+'">'+t.pkgTag[p.name]+'</div>'+
+      '<div class="pcprice">'+p.usd+'</div><div class="pcpricevnd">'+p.vnd+'</div>'+
+      '<div class="pcstar">'+t.pkgLabels.star+': '+p.star+'</div>'+
+      '<div class="pcguarantee">'+t.pkgLabels.guarantee+': '+p.guarantee+' &middot; '+t.pkgLabels.kwa+': '+p.kwa+'</div>'+
+      '<ul class="pcbenefits">'+p.benefits.map(b=>'<li>'+b+'</li>').join('')+'</ul>'+
+      '<div class="pcfit"><b>'+t.pkgLabels.fit+':</b> '+p.fit+'</div>'+
+      '<div class="pcreason">'+t.pkgLabels.reason+': '+p.reason+'</div>'+
+    '</div>';
+  }).join('');
+
+  // Summary
+  document.getElementById('sm_h2').textContent = t.sm_h2;
+  document.getElementById('sm_blocks').innerHTML = t.summaryBlocks.map(b=>
+    '<div class="sblock"><div class="num">'+b.number+'</div><div><h4>'+b.title+'</h4><p>'+b.text+'</p></div></div>'
+  ).join('');
+}
+
+function renderReplyLine(){
+  const svg = document.getElementById('fn_line');
+  const W=600,H=180,pad=40;
+  const pts = PERF.reply_history;
+  const minV=60,maxV=100;
+  const x = i => pad + i*((W-2*pad)/(pts.length-1));
+  const y = v => H-30 - ((v-minV)/(maxV-minV))*(H-60);
+  const refY = y(PERF.reply_ref);
+  let sv = '<line x1="'+pad+'" y1="'+refY+'" x2="'+(W-pad)+'" y2="'+refY+'" stroke="#F4A62A" stroke-width="1.5" stroke-dasharray="5,4"/>';
+  sv += '<text x="'+(W-pad)+'" y="'+(refY-6)+'" font-size="11" fill="#7a4e08" text-anchor="end">'+PERF.reply_ref+'%</text>';
+  let path = pts.map((p,i)=>(i===0?'M':'L')+x(i)+','+y(p.store)).join(' ');
+  sv += '<path d="'+path+'" fill="none" stroke="#1F7A4D" stroke-width="3"/>';
+  pts.forEach((p,i)=>{
+    sv += '<circle cx="'+x(i)+'" cy="'+y(p.store)+'" r="5" fill="#16A36A"/>';
+    sv += '<text x="'+x(i)+'" y="'+(y(p.store)-12)+'" font-size="12" fill="#17312A" text-anchor="middle" font-weight="700">'+p.store+'%</text>';
+    sv += '<text x="'+x(i)+'" y="'+(H-10)+'" font-size="11" fill="#647A71" text-anchor="middle">'+p.period+'</text>';
+  });
+  svg.innerHTML = sv;
+}
+
+document.getElementById('btnVi').addEventListener('click', ()=>{ LANG='vi'; localStorage.setItem('qy_lang','vi'); renderAll(); });
+document.getElementById('btnZh').addEventListener('click', ()=>{ LANG='zh'; localStorage.setItem('qy_lang','zh'); renderAll(); });
+
+renderAll();
+</script>
+</body>
+</html>
