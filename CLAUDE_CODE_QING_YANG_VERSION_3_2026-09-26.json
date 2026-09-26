@@ -1,0 +1,1007 @@
+{
+  "spec_version": "3.0-mobile-owner",
+  "prepared_at": "2026-09-26",
+  "claude_task": "Tạo/cập nhật app báo cáo tuần Qing Yang theo cấu trúc và trải nghiệm của app Riken V3: một trang dọc, mobile-first, song ngữ Việt–Trung. Dùng đúng payload trong file này; không dùng lại số liệu Qing Yang năm 2 cũ làm số liệu tuần hiện tại.",
+  "project": {
+    "store_name": "QING YANG WOOD PRODUCTION TRADING COMPANY LIMITED",
+    "short_name": "Qing Yang",
+    "target_app": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/qing-yang/index.html",
+    "reference_app": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/riken/index.html",
+    "reference_spec": "/Users/phantam/Documents/ChatGPT/Alibaba inservice/CLAUDE_CODE_RIKEN_VERSION_3_2026-09-21.json",
+    "language": "Song ngữ Việt–Trung: mọi tiêu đề, kết luận, action và trạng thái quan trọng phải có cả hai ngôn ngữ.",
+    "audience": "Ông chủ doanh nghiệp",
+    "viewport_priority": "Mobile 390×844; sau đó tablet 768px và desktop 1440px"
+  },
+  "source_manifest": {
+    "visitor_analytics": {
+      "url": "https://docs.google.com/spreadsheets/d/1gUASPfHKNjlF7IvH175qeG9XSsBq1CtUPlsx1hcICJ4/edit?gid=800877030",
+      "period": "2026-09-18 đến 2026-09-24",
+      "tabs": [
+        "Tổng quan / 总览",
+        "Khách truy cập / 访客",
+        "Từ khóa / 关键词",
+        "Quốc gia / 国家"
+      ]
+    },
+    "buyer_messages": {
+      "url": "https://docs.google.com/spreadsheets/d/1JEr6R9FC0i3TnzLDKyBZ6YAE0GljVzCFDXJ22oR5Os4/edit?gid=247955017",
+      "review_period": "2026-09-20 đến 2026-09-26",
+      "tabs": [
+        "Tong quan 总览",
+        "Khach uu tien 重点客户",
+        "Can theo doi 继续跟进",
+        "It phan hoi 低优先级"
+      ]
+    },
+    "weekly_operations": {
+      "url": "https://docs.google.com/spreadsheets/d/1cfuQrWXbOLWFyfKRmrkfzlhvzegpl8DszFOUmGNK90c/edit?gid=0",
+      "tab": "15-2-2026 -> 21-2-2026",
+      "latest_week": "13-09-2026 -> 19-09-2026"
+    }
+  },
+  "owner_story": {
+    "headline_vi": "8/15 visitor là buyer L1+, nhưng quy mô traffic còn nhỏ và tuần này chưa có buyer mới phản hồi.",
+    "headline_cn": "15位访客中有8位为L1+买家，但流量规模仍小，本周没有新买家回复。",
+    "positive_vi": "Tỷ trọng buyer L1+ đạt 53,3%; đã xuất hiện các từ khóa đúng ngành như “pvc edge banding strip”, “melamine edge banding tape” và “natural wood veneer edge band”.",
+    "positive_cn": "L1+买家占53.3%；已出现“pvc edge banding strip”“melamine edge banding tape”和“natural wood veneer edge band”等行业相关词。",
+    "bottleneck_vi": "Gian hàng đang 0 sao; tuần vận hành có 9 Page Views, 6 Search Impressions, 0 Search Clicks, 0 inquiry và 0/40 RFQ đã sử dụng. Traffic visitor tập trung 66,7% tại Việt Nam.",
+    "bottleneck_cn": "店铺目前为0星；运营周仅有9次页面浏览、6次搜索曝光、0次搜索点击、0个询盘，并且40次RFQ额度尚未使用。访客中66.7%来自越南。",
+    "buyer_vi": "Chỉ có Lorie C cần theo dõi: mẫu veneer edge banding đã được báo gửi từ 18/08 nhưng chưa xác nhận nhận mẫu hoặc đặt hàng.",
+    "buyer_cn": "目前仅需继续跟进Lorie C：8月18日已表示寄出木皮封边样品，但尚未确认收样或下单。",
+    "management_decision_vi": "Không tăng ngân sách quảng cáo trước khi sửa nền tảng sản phẩm, dùng RFQ và hoàn tất vòng follow mẫu của Lorie C.",
+    "management_decision_cn": "在优化产品基础、使用RFQ并完成Lorie C样品跟进闭环之前，不建议先扩大广告预算。"
+  },
+  "implementation_contract": {
+    "page": "Một trang dọc duy nhất; lướt từ đầu đến cuối, không chia các khu vực chính thành tab.",
+    "order": [
+      "Hero — kết luận dành cho ông chủ / 老板摘要",
+      "01 · Buyer cần follow / 重点跟进买家",
+      "02 · Traffic & Thị trường / 流量与市场",
+      "03 · Sản phẩm & Nhu cầu tìm kiếm thật / 产品与真实搜索需求",
+      "04 · Vận hành & Hành động / 运营与行动"
+    ],
+    "hero": {
+      "mobile_max_initial_height": "760px",
+      "kpis": [
+        {
+          "label_vi": "Buyer L1+",
+          "label_cn": "L1+买家",
+          "value": 8,
+          "support": "8/15 = 53,3%"
+        },
+        {
+          "label_vi": "PV visitor",
+          "label_cn": "访客PV",
+          "value": 39,
+          "support": "18–24/09"
+        },
+        {
+          "label_vi": "Search Impressions",
+          "label_cn": "搜索曝光",
+          "value": 6,
+          "support": "13–19/09"
+        },
+        {
+          "label_vi": "Buyer mới phản hồi",
+          "label_cn": "新回复买家",
+          "value": 0,
+          "support": "20–26/09"
+        }
+      ],
+      "rules": [
+        "Ghi rõ kỳ riêng dưới từng KPI vì ba sheet có kỳ khác nhau.",
+        "Không trộn 39 PV của visitor sheet với 9 Page Views của benchmark tuần vận hành.",
+        "Không dùng 0% phản hồi trong 24h để kết luận đội ngũ phản hồi kém vì tuần đó có 0 inquiry."
+      ]
+    },
+    "buyer_section": {
+      "default_visible_count": 1,
+      "top5_rule": "Form giống Riken nhưng dữ liệu chỉ có 1 buyer; không tạo 4 buyer giả và không để 4 card trống.",
+      "show_more": false,
+      "paid_order_empty_state_vi": "Chưa có bằng chứng buyer đã thanh toán hoặc chốt đơn trong dữ liệu cập nhật.",
+      "paid_order_empty_state_cn": "本次更新数据中暂无买家已付款或已成交的证据。",
+      "card_fields": [
+        "quốc gia/cờ",
+        "sản phẩm và số lượng",
+        "dẫn chứng hội thoại",
+        "mức độ nóng",
+        "điểm đang chặn",
+        "việc tiếp theo",
+        "ngày cập nhật"
+      ]
+    },
+    "traffic_section": {
+      "benchmark_chart": "Biểu đồ 3 nhóm chỉ hiển thị gian hàng; Trung bình ngành và Top ngành phải hiển thị N/A/Chưa lấy được từ tooltip, tuyệt đối không vẽ cột 0.",
+      "visitor_chart": "Donut L0/L1+ và bar theo 6 quốc gia; cảnh báo độ tập trung Việt Nam.",
+      "period_labels": true
+    },
+    "product_section": {
+      "top_products": "Chỉ một sản phẩm có UV=1; sản phẩm thứ hai không được ghi nhận UV, sản phẩm thứ ba không tồn tại. Không vẽ Top 3 giả.",
+      "keywords_title_vi": "Buyer đang tìm gì thật tuần này?",
+      "keywords_title_cn": "本周买家真实搜索什么？",
+      "keywords_chart": "Chia nhóm Đúng ngành / Liên quan rộng / Lệch ngành. Giữ nguyên exact keyword, không dịch hoặc sửa chính tả.",
+      "keyword_pv_warning": "PV trong dòng keyword là PV gắn với visitor, không phải lượng tìm kiếm độc lập của từ khóa."
+    },
+    "operations_section": {
+      "trend": "Biểu đồ xu hướng dùng đủ 6 tuần trong sheet vận hành; lưu ý khoảng thời gian không liên tục và có một nhãn tuần bất thường 29-4-2026 -> 4-4-2026.",
+      "highlights": [
+        "Điểm tốt",
+        "Điểm nghẽn",
+        "Việc 24–48 giờ",
+        "Kế hoạch 7 ngày",
+        "Kế hoạch 30 ngày"
+      ],
+      "no_generic_advice": true
+    },
+    "visual_style": {
+      "direction": "Giống Riken nhưng dùng palette xanh gỗ rừng: #0F5132, #198754, #E8F5EE, nền #F6F8F7; cảnh báo amber, critical red.",
+      "mobile": "Card 1 cột cho buyer/product, KPI 2×2, biểu đồ không tràn ngang.",
+      "flags": true,
+      "copy_buttons": false
+    }
+  },
+  "recommended_actions": {
+    "next_24_48h": [
+      {
+        "vi": "Gửi Lorie C mã vận đơn và ảnh kiện mẫu; hỏi người nhận tại Hà Nội đã nhận chưa.",
+        "cn": "向Lorie C发送物流单号和样品包裹照片，确认河内收件人是否已收货。",
+        "owner": "Sales"
+      },
+      {
+        "vi": "Nếu đã nhận mẫu, xin đánh giá màu, vân, độ dày và độ bám; chốt số mét/cuộn cho đơn thử.",
+        "cn": "如已收样，确认颜色、纹理、厚度和粘合效果，并确定试单的米数/卷数。",
+        "owner": "Sales"
+      },
+      {
+        "vi": "Lọc RFQ đúng nhóm veneer/edge banding và gửi báo giá đầu tiên; hiện còn 40 lượt.",
+        "cn": "筛选木皮/封边条相关RFQ并提交首批精准报价；当前尚有40次额度。",
+        "owner": "Operations"
+      }
+    ],
+    "next_7_days": [
+      {
+        "vi": "Tối ưu hai sản phẩm trọng điểm bằng exact keyword đúng ngành; ưu tiên title–ảnh–spec–MOQ–packing.",
+        "cn": "使用真实行业关键词优化两款重点产品，优先完善标题、主图、规格、MOQ和包装。"
+      },
+      {
+        "vi": "Rà soát nguyên nhân tổng sản phẩm giảm 1.101 → 946; phân biệt xóa chủ động, vi phạm, ẩn hoặc hết hiệu lực.",
+        "cn": "核查产品总数从1101降至946的原因，区分主动删除、违规、下架或失效。"
+      },
+      {
+        "vi": "Tập trung traffic ngoài Việt Nam vào Colombia/Venezuela/Trung Quốc bằng nội dung edge banding phù hợp ngôn ngữ.",
+        "cn": "针对哥伦比亚、委内瑞拉和中国，以本地化封边条内容拓展越南以外的流量。"
+      }
+    ],
+    "next_30_days": [
+      {
+        "vi": "Nâng khỏi 0 sao bằng kế hoạch Product–Service–Marketing có owner và KPI tuần; không chỉ đăng 5–10 sản phẩm/ngày.",
+        "cn": "通过有负责人和周KPI的产品、服务、营销计划摆脱0星，而不是只追求每天发布5–10个产品。"
+      },
+      {
+        "vi": "Thiết lập nhịp báo RFQ, tối ưu Top Product và theo dõi Search Impression → Click → Buyer reply.",
+        "cn": "建立RFQ报价节奏、优化Top Product，并持续跟踪搜索曝光→点击→买家回复。"
+      },
+      {
+        "vi": "Chỉ thử quảng cáo sau khi sản phẩm lõi có thông tin hoàn chỉnh và đo được click; bắt đầu ngân sách nhỏ.",
+        "cn": "核心产品信息完善且能产生点击后再小预算测试广告。"
+      }
+    ]
+  },
+  "data_quality_rules": [
+    "Industry average và industry leaders không có số trong sheet; lưu null và hiển thị N/A, không thay bằng 0.",
+    "0% phản hồi trong 24h đi cùng 0 inquiry nên không đủ cơ sở đánh giá tốc độ phản hồi.",
+    "Buyer message period, visitor period và operations period khác nhau; app phải hiện nhãn kỳ riêng.",
+    "Top product UV không phải order hoặc inquiry.",
+    "Không đưa số điện thoại/địa chỉ đầy đủ của buyer lên dashboard ông chủ; chỉ giữ trong nguồn nội bộ nếu cần."
+  ],
+  "data": {
+    "operations": {
+      "weeks": [
+        {
+          "period": "13-09-2026 -> 19-09-2026",
+          "kpis": {
+            "星级 | Xếp hạng sao": "0",
+            "产品总数量 | Tổng số sản phẩm": "946",
+            "新增产品总数量 | Tổng số sản phẩm mới": "-155",
+            "访客总数 | Tổng lượt truy cập": "9",
+            "询盘总数量 | Tổng số inquiry (khách hỏi)": "0",
+            "已回复询盘数量 | Số inquiry đã phản hồi": "0",
+            "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0",
+            "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "40",
+            "平均回复时间 | Thời gian phản hồi trung bình": "0h",
+            "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "0.00%",
+            "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+            "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "1"
+          }
+        },
+        {
+          "period": "26-4-2026 -> 2-05-2026",
+          "kpis": {
+            "星级 | Xếp hạng sao": "2",
+            "产品总数量 | Tổng số sản phẩm": "1101",
+            "新增产品总数量 | Tổng số sản phẩm mới": "0",
+            "访客总数 | Tổng lượt truy cập": "56",
+            "询盘总数量 | Tổng số inquiry (khách hỏi)": "3",
+            "已回复询盘数量 | Số inquiry đã phản hồi": "3",
+            "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0",
+            "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20",
+            "平均回复时间 | Thời gian phản hồi trung bình": "5,77h",
+            "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "76.92%",
+            "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+            "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"
+          }
+        },
+        {
+          "period": "12-4-2026 -> 18-4-2026",
+          "kpis": {
+            "星级 | Xếp hạng sao": "1",
+            "产品总数量 | Tổng số sản phẩm": "1101",
+            "新增产品总数量 | Tổng số sản phẩm mới": "0",
+            "访客总数 | Tổng lượt truy cập": "78",
+            "询盘总数量 | Tổng số inquiry (khách hỏi)": "1",
+            "已回复询盘数量 | Số inquiry đã phản hồi": "1",
+            "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0",
+            "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20",
+            "平均回复时间 | Thời gian phản hồi trung bình": "8,35h",
+            "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "70,00%",
+            "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+            "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"
+          }
+        },
+        {
+          "period": "29-4-2026 -> 4-4-2026",
+          "kpis": {
+            "星级 | Xếp hạng sao": "1",
+            "产品总数量 | Tổng số sản phẩm": "1101",
+            "新增产品总数量 | Tổng số sản phẩm mới": "300",
+            "访客总数 | Tổng lượt truy cập": "22",
+            "询盘总数量 | Tổng số inquiry (khách hỏi)": "3",
+            "已回复询盘数量 | Số inquiry đã phản hồi": "0",
+            "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0",
+            "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20",
+            "平均回复时间 | Thời gian phản hồi trung bình": "1,05",
+            "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "100,00%",
+            "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+            "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "3"
+          }
+        },
+        {
+          "period": "22-2-2026 -> 28-2-2026",
+          "kpis": {
+            "星级 | Xếp hạng sao": "1",
+            "产品总数量 | Tổng số sản phẩm": "801",
+            "新增产品总数量 | Tổng số sản phẩm mới": "0",
+            "访客总数 | Tổng lượt truy cập": "23",
+            "询盘总数量 | Tổng số inquiry (khách hỏi)": "3",
+            "已回复询盘数量 | Số inquiry đã phản hồi": "3",
+            "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0",
+            "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20",
+            "平均回复时间 | Thời gian phản hồi trung bình": "2,12h",
+            "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "92,31%",
+            "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+            "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "2"
+          }
+        },
+        {
+          "period": "15-2-2026 -> 21-2-2026",
+          "kpis": {
+            "星级 | Xếp hạng sao": "1",
+            "产品总数量 | Tổng số sản phẩm": "801",
+            "新增产品总数量 | Tổng số sản phẩm mới": "401",
+            "访客总数 | Tổng lượt truy cập": "13",
+            "询盘总数量 | Tổng số inquiry (khách hỏi)": "3",
+            "已回复询盘数量 | Số inquiry đã phản hồi": "3",
+            "已报价 RFQ 总次数 | Tổng số RFQ đã báo giá": "0",
+            "剩余可报价 RFQ 次数 | Số RFQ còn lại có thể báo giá": "20",
+            "平均回复时间 | Thời gian phản hồi trung bình": "2,3 h",
+            "24 小时内回复率 | Tỷ lệ phản hồi trong 24 giờ": "91,67 %",
+            "Super Product（赢单产品）数量 | Số sản phẩm thắng đơn (Super Product)": "0",
+            "Top Product（潜力产品）数量 | Số sản phẩm tiềm năng (Top Product)": "2"
+          }
+        }
+      ],
+      "benchmark": {
+        "period": "13-09-2026 -> 19-09-2026",
+        "category": "Furniture",
+        "page_views": {
+          "store": 9,
+          "industry_average": null,
+          "industry_leaders": null
+        },
+        "search_impressions": {
+          "store": 6,
+          "industry_average": null,
+          "industry_leaders": null
+        },
+        "search_clicks": {
+          "store": 0,
+          "industry_average": null,
+          "industry_leaders": null
+        },
+        "visitors_with_inquiries": {
+          "store": 0,
+          "industry_average": null,
+          "industry_leaders": null
+        },
+        "missing_reason": "Alibaba chỉ hiển thị benchmark khi rê tooltip; sheet chưa có giá trị trung bình và nhóm dẫn đầu."
+      },
+      "top_products": [
+        {
+          "rank": 1,
+          "title": "Fleece Backed Reconstituted Engineered Veneer Premium Flexible Backing Eco-Friendly Smooth Texture Modern Design for Luxury",
+          "uv": 1,
+          "url": "http://www.alibaba.com/product-detail/Fleece-Backed-Reconstituted-Engineered-Veneer-Premium_10000044322190.html",
+          "product_id": "10000044322190",
+          "status": "has_uv"
+        },
+        {
+          "rank": 2,
+          "title": "PVC Edge Banding Preglued Veneer Edging PVC Edge Banding for Wood Kitchen Wardrobe Furniture Table Desk Board Edgeband Edger",
+          "uv": null,
+          "url": "http://www.alibaba.com/product-detail/PVC-Edge-Banding-Preglued-Veneer-Edging_10000036509752.html",
+          "product_id": "10000036509752",
+          "status": "no_uv_recorded"
+        },
+        {
+          "rank": 3,
+          "title": null,
+          "uv": null,
+          "url": null,
+          "product_id": null,
+          "status": "no_third_product_with_uv"
+        }
+      ],
+      "source_actions": [
+        {
+          "label": "新品更新 | Cập nhật sản phẩm mới",
+          "latest": "每天新增 5–10 款热门产品 | Đăng thêm 5–10 sản phẩm hot mỗi ngày"
+        },
+        {
+          "label": "指标优化 | Tối ưu chỉ số",
+          "latest": "通过 RFQ 报价与广告提升曝光；优化产品标题、主图和详情页 | Tăng traffic bằng báo giá RFQ và quảng cáo; tối ưu tiêu đề, ảnh chính và trang chi tiết sản phẩm"
+        },
+        {
+          "label": null,
+          "latest": "当前 RFQ 使用率为 0/40，应优先开发精准采购需求 | RFQ hiện dùng 0/40, cần ưu tiên báo giá cho nhu cầu phù hợp"
+        },
+        {
+          "label": null,
+          "latest": "店铺当前为 0 星，近 30 天访客仅 21，买家回复数为 0；需增加精准流量并提升服务互动 | Gian hàng hiện 0 sao, 30 ngày chỉ có 21 khách và 0 buyer phản hồi; cần tăng traffic chính xác và cải thiện tương tác dịch vụ"
+        },
+        {
+          "label": null,
+          "latest": null
+        },
+        {
+          "label": "优先处理问题 | Vấn đề ưu tiên xử lý",
+          "latest": "优先提升 Marketing 与 Service 指标；持续发品、投放广告、使用 RFQ，并优化 Top Product | Ưu tiên nâng chỉ số Marketing và Service; tiếp tục đăng sản phẩm, chạy quảng cáo, dùng RFQ và tối ưu Top Product"
+        }
+      ]
+    },
+    "visitors": {
+      "summary": {
+        "period": "2026-09-18 đến 2026-09-24",
+        "visitor_records": 15,
+        "countries": 6,
+        "pv": 39,
+        "exact_keyword_records": 19,
+        "visitors_with_keyword": 7,
+        "L1_plus": 8,
+        "L1_plus_share_percent": 53.3,
+        "levels": {
+          "L0": 7,
+          "L1": 8,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0
+        }
+      },
+      "all_visitor_rows": [
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609241",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Việt Nam / 越南",
+          "pv": 2,
+          "dwell_time": "43s",
+          "top_keywords": "-",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 2 trang / 总浏览 2 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609242",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Việt Nam / 越南",
+          "pv": 3,
+          "dwell_time": "20s",
+          "top_keywords": "furniture supplier\nseatex company limited",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 76 trang / 总浏览 76 页\nĐã truy cập 13 nhà cung cấp / 已访问 13 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609243",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Việt Nam / 越南",
+          "pv": 4,
+          "dwell_time": "5s",
+          "top_keywords": "cnc machining parts\nseatex company limited\nwatlet",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 75 trang / 总浏览 75 页\nĐã truy cập 2 nhà cung cấp / 已访问 2 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609244",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Việt Nam / 越南",
+          "pv": 1,
+          "dwell_time": "-",
+          "top_keywords": "-",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 1 trang / 总浏览 1 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609245",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Việt Nam / 越南",
+          "pv": 4,
+          "dwell_time": "255s",
+          "top_keywords": "-",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 4 trang / 总浏览 4 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609246",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Việt Nam / 越南",
+          "pv": 7,
+          "dwell_time": "100s",
+          "top_keywords": "-",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 72 trang / 总浏览 72 页\nĐã truy cập 2 nhà cung cấp / 已访问 2 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-23",
+          "visitor_id": "D2609231",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Venezuela / 委内瑞拉",
+          "pv": 2,
+          "dwell_time": "51s",
+          "top_keywords": "cinta cubre cerco pvc\ncinta cubre cerco\ncinta cubre reja",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 8 trang / 总浏览 8 页\nĐã truy cập 3 nhà cung cấp / 已访问 3 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-22",
+          "visitor_id": "D2609221",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Colombia / 哥伦比亚",
+          "pv": 1,
+          "dwell_time": "4s",
+          "top_keywords": "tira de borde dw pvc\nminiauto elctrico\npvc edge banding strip",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 22 trang / 总浏览 22 页\nĐã truy cập 2 nhà cung cấp / 已访问 2 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-21",
+          "visitor_id": "D2609211",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Việt Nam / 越南",
+          "pv": 1,
+          "dwell_time": "3s",
+          "top_keywords": "-",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 9 trang / 总浏览 9 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-21",
+          "visitor_id": "D2609212",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Ấn Độ / 印度",
+          "pv": 1,
+          "dwell_time": "1s",
+          "top_keywords": "hinges\nnonhydrolic economy hinges\nmelamine edge banding tape",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 304 trang / 总浏览 304 页\nĐã truy cập 9 nhà cung cấp / 已访问 9 家供应商\nĐã gửi tin nhắn TradeManager tới 19 nhà cung cấp / 已通过 TradeManager 向 19 家供应商发送消息",
+          "source_page": "1"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609201",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Việt Nam / 越南",
+          "pv": 2,
+          "dwell_time": "6s",
+          "top_keywords": "rotating double disc valve\nseatex company limited\nvivi ka company limited",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 28 trang / 总浏览 28 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "2"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609202",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Trung Quốc / 中国",
+          "pv": 7,
+          "dwell_time": "39s",
+          "top_keywords": "旭阳木业\nnatural wood veneer edge band",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 11 trang / 总浏览 11 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "2"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609203",
+          "buyer_level": "L0",
+          "buyer_class": "Người mua đã đăng ký / 已注册买家",
+          "country": "Việt Nam / 越南",
+          "pv": 2,
+          "dwell_time": "19s",
+          "top_keywords": "-",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 3 trang / 总浏览 3 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "2"
+        },
+        {
+          "date": "2026-09-18",
+          "visitor_id": "D2609181",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Việt Nam / 越南",
+          "pv": 1,
+          "dwell_time": "2s",
+          "top_keywords": "-",
+          "store_activity": null,
+          "site_activity": "Tổng lượt xem: 37 trang / 总浏览 37 页\nĐã truy cập 1 nhà cung cấp / 已访问 1 家供应商",
+          "source_page": "2"
+        },
+        {
+          "date": "2026-09-18",
+          "visitor_id": "D2609182",
+          "buyer_level": "L1",
+          "buyer_class": "Người mua tiềm năng (Seed) / 潜在买家（Seed）",
+          "country": "Thái Lan / 泰国",
+          "pv": 1,
+          "dwell_time": "346s",
+          "top_keywords": "-",
+          "store_activity": "Đã truy cập trang chủ / 已访问首页",
+          "site_activity": "Tổng lượt xem: 98 trang / 总浏览 98 页\nĐã đăng 154 RFQ / 已发布 154 条 RFQ\nĐã truy cập 8 nhà cung cấp / 已访问 8 家供应商",
+          "source_page": "2"
+        }
+      ],
+      "all_countries": [
+        {
+          "country": "Việt Nam / 越南",
+          "visitors": 10,
+          "pv": 27,
+          "keyword_visitors": 3,
+          "exact_keyword_records": 8,
+          "L0": 5,
+          "L1": 5,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0,
+          "L1_plus": 5
+        },
+        {
+          "country": "Venezuela / 委内瑞拉",
+          "visitors": 1,
+          "pv": 2,
+          "keyword_visitors": 1,
+          "exact_keyword_records": 3,
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0,
+          "L1_plus": 1
+        },
+        {
+          "country": "Colombia / 哥伦比亚",
+          "visitors": 1,
+          "pv": 1,
+          "keyword_visitors": 1,
+          "exact_keyword_records": 3,
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0,
+          "L1_plus": 1
+        },
+        {
+          "country": "Ấn Độ / 印度",
+          "visitors": 1,
+          "pv": 1,
+          "keyword_visitors": 1,
+          "exact_keyword_records": 3,
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0,
+          "L1_plus": 0
+        },
+        {
+          "country": "Trung Quốc / 中国",
+          "visitors": 1,
+          "pv": 7,
+          "keyword_visitors": 1,
+          "exact_keyword_records": 2,
+          "L0": 1,
+          "L1": 0,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0,
+          "L1_plus": 0
+        },
+        {
+          "country": "Thái Lan / 泰国",
+          "visitors": 1,
+          "pv": 1,
+          "keyword_visitors": 0,
+          "exact_keyword_records": 0,
+          "L0": 0,
+          "L1": 1,
+          "L2": 0,
+          "L3": 0,
+          "L4": 0,
+          "L1_plus": 1
+        }
+      ],
+      "exact_keyword_aggregates": [
+        {
+          "exact_keyword": "seatex company limited",
+          "occurrences": 3,
+          "source_row_pv_sum": 9,
+          "relevance": "brand_or_company_search"
+        },
+        {
+          "exact_keyword": "旭阳木业",
+          "occurrences": 1,
+          "source_row_pv_sum": 7,
+          "relevance": "brand_search"
+        },
+        {
+          "exact_keyword": "natural wood veneer edge band",
+          "occurrences": 1,
+          "source_row_pv_sum": 7,
+          "relevance": "high_relevance"
+        },
+        {
+          "exact_keyword": "cnc machining parts",
+          "occurrences": 1,
+          "source_row_pv_sum": 4,
+          "relevance": "off_industry"
+        },
+        {
+          "exact_keyword": "watlet",
+          "occurrences": 1,
+          "source_row_pv_sum": 4,
+          "relevance": "unclear_or_noise"
+        },
+        {
+          "exact_keyword": "furniture supplier",
+          "occurrences": 1,
+          "source_row_pv_sum": 3,
+          "relevance": "broad_relevant"
+        },
+        {
+          "exact_keyword": "cinta cubre cerco pvc",
+          "occurrences": 1,
+          "source_row_pv_sum": 2,
+          "relevance": "adjacent_not_edge_banding"
+        },
+        {
+          "exact_keyword": "cinta cubre cerco",
+          "occurrences": 1,
+          "source_row_pv_sum": 2,
+          "relevance": "adjacent_not_edge_banding"
+        },
+        {
+          "exact_keyword": "cinta cubre reja",
+          "occurrences": 1,
+          "source_row_pv_sum": 2,
+          "relevance": "adjacent_not_edge_banding"
+        },
+        {
+          "exact_keyword": "rotating double disc valve",
+          "occurrences": 1,
+          "source_row_pv_sum": 2,
+          "relevance": "off_industry"
+        },
+        {
+          "exact_keyword": "vivi ka company limited",
+          "occurrences": 1,
+          "source_row_pv_sum": 2,
+          "relevance": "off_industry_or_company_search"
+        },
+        {
+          "exact_keyword": "tira de borde dw pvc",
+          "occurrences": 1,
+          "source_row_pv_sum": 1,
+          "relevance": "relevant"
+        },
+        {
+          "exact_keyword": "miniauto elctrico",
+          "occurrences": 1,
+          "source_row_pv_sum": 1,
+          "relevance": "off_industry"
+        },
+        {
+          "exact_keyword": "pvc edge banding strip",
+          "occurrences": 1,
+          "source_row_pv_sum": 1,
+          "relevance": "high_relevance"
+        },
+        {
+          "exact_keyword": "hinges",
+          "occurrences": 1,
+          "source_row_pv_sum": 1,
+          "relevance": "adjacent_furniture_hardware"
+        },
+        {
+          "exact_keyword": "nonhydrolic economy hinges",
+          "occurrences": 1,
+          "source_row_pv_sum": 1,
+          "relevance": "adjacent_furniture_hardware"
+        },
+        {
+          "exact_keyword": "melamine edge banding tape",
+          "occurrences": 1,
+          "source_row_pv_sum": 1,
+          "relevance": "high_relevance"
+        }
+      ],
+      "all_exact_keyword_rows": [
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609242",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "furniture supplier",
+          "pv_in_source_row": 3,
+          "duration_seconds": 20,
+          "relevance": "broad_relevant"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609242",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "seatex company limited",
+          "pv_in_source_row": 3,
+          "duration_seconds": 20,
+          "relevance": "brand_or_company_search"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609243",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "cnc machining parts",
+          "pv_in_source_row": 4,
+          "duration_seconds": 5,
+          "relevance": "off_industry"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609243",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "seatex company limited",
+          "pv_in_source_row": 4,
+          "duration_seconds": 5,
+          "relevance": "brand_or_company_search"
+        },
+        {
+          "date": "2026-09-24",
+          "visitor_id": "D2609243",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "watlet",
+          "pv_in_source_row": 4,
+          "duration_seconds": 5,
+          "relevance": "unclear_or_noise"
+        },
+        {
+          "date": "2026-09-23",
+          "visitor_id": "D2609231",
+          "buyer_level": "L1",
+          "country": "Venezuela / 委内瑞拉",
+          "exact_keyword": "cinta cubre cerco pvc",
+          "pv_in_source_row": 2,
+          "duration_seconds": 51,
+          "relevance": "adjacent_not_edge_banding"
+        },
+        {
+          "date": "2026-09-23",
+          "visitor_id": "D2609231",
+          "buyer_level": "L1",
+          "country": "Venezuela / 委内瑞拉",
+          "exact_keyword": "cinta cubre cerco",
+          "pv_in_source_row": 2,
+          "duration_seconds": 51,
+          "relevance": "adjacent_not_edge_banding"
+        },
+        {
+          "date": "2026-09-23",
+          "visitor_id": "D2609231",
+          "buyer_level": "L1",
+          "country": "Venezuela / 委内瑞拉",
+          "exact_keyword": "cinta cubre reja",
+          "pv_in_source_row": 2,
+          "duration_seconds": 51,
+          "relevance": "adjacent_not_edge_banding"
+        },
+        {
+          "date": "2026-09-22",
+          "visitor_id": "D2609221",
+          "buyer_level": "L1",
+          "country": "Colombia / 哥伦比亚",
+          "exact_keyword": "tira de borde dw pvc",
+          "pv_in_source_row": 1,
+          "duration_seconds": 4,
+          "relevance": "relevant"
+        },
+        {
+          "date": "2026-09-22",
+          "visitor_id": "D2609221",
+          "buyer_level": "L1",
+          "country": "Colombia / 哥伦比亚",
+          "exact_keyword": "miniauto elctrico",
+          "pv_in_source_row": 1,
+          "duration_seconds": 4,
+          "relevance": "off_industry"
+        },
+        {
+          "date": "2026-09-22",
+          "visitor_id": "D2609221",
+          "buyer_level": "L1",
+          "country": "Colombia / 哥伦比亚",
+          "exact_keyword": "pvc edge banding strip",
+          "pv_in_source_row": 1,
+          "duration_seconds": 4,
+          "relevance": "high_relevance"
+        },
+        {
+          "date": "2026-09-21",
+          "visitor_id": "D2609212",
+          "buyer_level": "L0",
+          "country": "Ấn Độ / 印度",
+          "exact_keyword": "hinges",
+          "pv_in_source_row": 1,
+          "duration_seconds": 1,
+          "relevance": "adjacent_furniture_hardware"
+        },
+        {
+          "date": "2026-09-21",
+          "visitor_id": "D2609212",
+          "buyer_level": "L0",
+          "country": "Ấn Độ / 印度",
+          "exact_keyword": "nonhydrolic economy hinges",
+          "pv_in_source_row": 1,
+          "duration_seconds": 1,
+          "relevance": "adjacent_furniture_hardware"
+        },
+        {
+          "date": "2026-09-21",
+          "visitor_id": "D2609212",
+          "buyer_level": "L0",
+          "country": "Ấn Độ / 印度",
+          "exact_keyword": "melamine edge banding tape",
+          "pv_in_source_row": 1,
+          "duration_seconds": 1,
+          "relevance": "high_relevance"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609201",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "rotating double disc valve",
+          "pv_in_source_row": 2,
+          "duration_seconds": 6,
+          "relevance": "off_industry"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609201",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "seatex company limited",
+          "pv_in_source_row": 2,
+          "duration_seconds": 6,
+          "relevance": "brand_or_company_search"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609201",
+          "buyer_level": "L1",
+          "country": "Việt Nam / 越南",
+          "exact_keyword": "vivi ka company limited",
+          "pv_in_source_row": 2,
+          "duration_seconds": 6,
+          "relevance": "off_industry_or_company_search"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609202",
+          "buyer_level": "L0",
+          "country": "Trung Quốc / 中国",
+          "exact_keyword": "旭阳木业",
+          "pv_in_source_row": 7,
+          "duration_seconds": 39,
+          "relevance": "brand_search"
+        },
+        {
+          "date": "2026-09-20",
+          "visitor_id": "D2609202",
+          "buyer_level": "L0",
+          "country": "Trung Quốc / 中国",
+          "exact_keyword": "natural wood veneer edge band",
+          "pv_in_source_row": 7,
+          "duration_seconds": 39,
+          "relevance": "high_relevance"
+        }
+      ]
+    },
+    "buyers": {
+      "summary": {
+        "period": "2026-09-20 đến 2026-09-26",
+        "new_buyer_replies": 0,
+        "priority_buyers": 0,
+        "follow_up_buyers": 1
+      },
+      "priority_buyers": [],
+      "follow_up_buyers": [
+        {
+          "date": "2026-09-24",
+          "name": "Lorie C",
+          "country": "Hawaii, Hoa Kỳ; nhận mẫu tại Hà Nội / 美国夏威夷；样品寄往河内",
+          "need": "White oak veneer edge banding sample, 1 roll, width 22mm, smooth surface / 白橡木皮封边样品，1卷，宽22mm，光滑表面",
+          "quantity": "1 sample roll / 1卷样品",
+          "evidence": "VI: Buyer hỏi mẫu 1 cuộn white oak veneer edge banding, width 22mm, bề mặt mịn; đã cung cấp thông tin nhận mẫu tại Hà Nội. Seller báo sắp xếp gửi mẫu ngày 18/08; đến 24/09 buyer chưa đọc tin follow và chưa xác nhận nhận mẫu. CN: 买家询问1卷22mm宽、光滑表面的白橡木皮封边样品，并已提供河内收样信息。卖家8月18日表示安排寄样；截至9月24日，买家尚未阅读跟进消息，也未确认收样。",
+          "assessment": "VI: Lead mẫu có nhu cầu thật nhưng đang nguội; chưa có bằng chứng nhận mẫu hoặc chốt đơn. CN: 真实样品需求，但目前转冷；尚无收样或成交证据。",
+          "next_action": "VI: Gửi tracking/ảnh gói hàng; hỏi đã nhận mẫu chưa; xin đánh giá 4 điểm màu, vân, độ dày, độ bám; nếu đạt thì hỏi số mét/cuộn cho đơn thử và gửi báo giá chính thức trên Alibaba. CN: 发送物流单号和包裹照片，确认是否收样；询问颜色、纹理、厚度和粘合效果；若合格则确认试单米数/卷数并在阿里巴巴内正式报价。",
+          "status": "sample_follow_up_cold"
+        }
+      ],
+      "confirmed_paid_or_completed_orders": []
+    }
+  },
+  "acceptance_checks": [
+    "Trang đầu trên mobile phải cho thấy 8 L1+, 39 PV, 6 impressions, 0 buyer reply và Lorie C mà không cần cuộn quá hai màn hình.",
+    "Mọi insight/action quan trọng có tiếng Việt và tiếng Trung.",
+    "Chỉ hiện một buyer thực; không bịa đủ Top 5.",
+    "Benchmark thiếu dữ liệu hiển thị N/A, không hiển thị 0 cho trung bình/top ngành.",
+    "Toàn bộ 19 exact keyword và 6 quốc gia có thể xem qua mở rộng.",
+    "Biểu đồ vận hành có đủ 6 tuần và ghi chú các tuần không liên tục.",
+    "Không lộ địa chỉ và số điện thoại đầy đủ của buyer trên UI.",
+    "Không có nút Copy; không có tab điều hướng bắt buộc; không có scroll ngang ở 390px."
+  ]
+}
