@@ -1,0 +1,132 @@
+{
+  "store": "Vivika",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin",
+  "period": {"from": "2026-09-22", "to": "2026-09-29 10:45 (giờ VN)", "timezone": "UTC+7"},
+  "read_method": {
+    "conversations_in_window": 7,
+    "buyer_conversations_read": 7,
+    "excluded": [],
+    "full_history_loaded": "Cuộn đến đầu hội thoại cho cả 7 buyer; đọc cả lịch sử tháng 8–9 của Najat Mohammed và Rose Truong vì có đơn hàng.",
+    "sender_tagging": "Tin buyer có tên đứng trước; tin shop có Đọc/Chưa đọc. Nhân viên trả lời bằng tiếng Việt/Pháp/Anh; AI trả lời myrna khattar.",
+    "level_source": "Icon level cạnh tên (không có icon = L0; L1+ không tách L1/L2).",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại."
+  },
+  "tier_thresholds": {
+    "A": "≥ 200 cái hoặc giá trị hàng ≥ USD 3.000 hoặc OEM thương hiệu riêng có spec",
+    "B": "≥ 20 cái hoặc ≥ USD 500 hoặc đặt may thiết kế riêng",
+    "C": "Còn lại (mua lẻ 1–5 cái, xin catalog)",
+    "note": "Đề xuất theo giá sỉ ~USD 25–32/cái và MOQ 2 (mẫu sẵn), 10 (sỉ), 50 (thiết kế riêng); Tam chỉnh trong Buyer_master (Y:Z)."
+  },
+  "top5_priority": [
+    {
+      "rank": 1, "tier": "B",
+      "name": "krys Bello", "country": "Côte d'Ivoire", "level": "L1+", "company": "—", "date": "2026-09-28",
+      "need": "Áo gile croptop không tay kèm cà vạt, vai cứng, kiểu công sở ANTONIA",
+      "quantity": "50 cái",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Inquiry chính thức 50 cái (ID 20507341083): 'dự định đặt hàng sớm'.",
+      "evidence": "27/9 22:06 inquiry 50 cái; 28/9 11:47 shop hỏi bằng tiếng Pháp có lấy thêm chân váy đồng bộ không, gửi thẻ chân váy ANTONIA (259–275k ₫). Buyer chưa đọc.",
+      "blocker": "Shop gợi ý thêm váy nhưng chưa báo giá áo cho 50 cái.",
+      "next_action": "Trong 24h: báo giá 50 áo (bảng size, màu) + giá bộ áo+váy, cước về Abidjan, tạo đơn Trade Assurance.",
+      "verification_status": "chat_intent_only (có số lượng)"
+    },
+    {
+      "rank": 2, "tier": "B",
+      "name": "Rose Truong", "country": "UK", "level": "L1+", "company": "—", "date": "2026-09-24",
+      "need": "Đặt may 1 thiết kế riêng, chất lượng cao, phong cách casual, 4–5 size",
+      "quantity": "50 cái (MOQ thiết kế riêng); hiện đã có đơn 2 sản phẩm",
+      "unit_price_usd": null, "goods_value_usd": 285.0, "shipping_usd": null,
+      "payment_status": "Đơn USD 285,00 trạng thái 'Đang chờ nhà cung cấp vận chuyển' (đã thanh toán, ship trong 31 ngày) – xem khối hậu mãi",
+      "commercial_signal": "Khách thiết kế riêng, đã trả đơn đầu – có thể thành đơn 50 cái/thiết kế.",
+      "evidence": "5/9 buyer hỏi MOQ, 1 thiết kế nhiều size; shop: sẵn 10 cái/mẫu, thiết kế riêng 50 cái/mẫu; shop chuyển sang WhatsApp và đưa số của nhà sáng lập; 24/9 thẻ đơn 2 sản phẩm USD 285.",
+      "blocker": "Phần lớn trao đổi đã chuyển sang WhatsApp, không thấy trên Alibaba.",
+      "next_action": "Giao đơn USD 285 đúng hạn; sau đó chốt mẫu và báo giá 50 cái thiết kế riêng trên Alibaba.",
+      "verification_status": "chat_order_card_paid (chờ ship)"
+    },
+    {
+      "rank": 3, "tier": "C",
+      "name": "Mirka Musoko", "country": "DR Congo", "level": "L1+", "company": "—", "date": "2026-09-28",
+      "need": "Bộ đồ công sở 2 mảnh NELLY (quần ống loe + áo tay ngắn thắt lưng), size 2XL, trắng + xanh navy",
+      "quantity": "2 bộ (1 mỗi màu)",
+      "unit_price_usd": null, "unit_price_listing_vnd": "593.128–985.874", "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Chưa có đơn",
+      "commercial_signal": "Chốt màu và size rõ.",
+      "evidence": "27/9 buyer muốn 2 bộ trắng + navy; 28/9 13:38 '2XL, size lớn 14'; 19:16 shop gửi bảng size và hỏi xác nhận (chưa đọc).",
+      "blocker": "Chưa gửi link đơn/tổng tiền gồm ship về Congo.",
+      "next_action": "Gửi đơn nháp 2 bộ gồm ship để buyer thanh toán.",
+      "verification_status": "chat_intent_only"
+    },
+    {
+      "rank": 4, "tier": "C",
+      "name": "Vin Cheanleap", "country": "Cambodia", "level": "L1+", "company": "—", "date": "2026-09-22",
+      "need": "Quần âu nữ worsted cạp cao ống đứng",
+      "quantity": "Chưa rõ",
+      "unit_price_usd": 29.6, "unit_price_note": "USD 29,60/cái từ 2 cái; USD 27,30 từ 200 cái",
+      "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Đã báo giá",
+      "commercial_signal": "Shop đã báo giá bậc.",
+      "evidence": "22/9 shop báo giá và hỏi số lượng, size XS–3XL; buyer chưa đọc.",
+      "blocker": "Buyer chưa đọc 7 ngày.",
+      "next_action": "Nhắc lại 1 lần kèm ảnh thật.",
+      "verification_status": "chat_quote_only"
+    },
+    {
+      "rank": 5, "tier": "C",
+      "name": "myrna khattar", "country": "Lebanon", "level": "L0", "company": "—", "date": "2026-09-23",
+      "need": "Blazer/gile dạ tweed trắng cài chéo, chống tĩnh điện (theo tin AI)",
+      "quantity": "Chưa rõ (AI hỏi 1 mẫu hay đơn lớn)",
+      "unit_price_usd": 31.9, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Có báo giá AI",
+      "commercial_signal": "AI báo USD 31,9/cái ≥ 2.",
+      "evidence": "23/9 AI gửi báo giá; buyer chưa đọc.",
+      "blocker": "Chưa có số lượng.",
+      "next_action": "Chờ buyer phản hồi; nhắc 1 lần.",
+      "verification_status": "chat_quote_only; from_ai_reply"
+    }
+  ],
+  "ranking_rationale": "Tuần không có đơn hạng A. krys Bello 50 cái và Rose Truong (thiết kế riêng 50 cái, đã trả đơn đầu) là hạng B.",
+  "confirmed_paid_orders_after_sales": [
+    {
+      "name": "Rose Truong", "country": "UK", "level": "L1+", "date": "2026-09-24",
+      "need": "Đơn 2 sản phẩm", "quantity": "2 sản phẩm",
+      "goods_value_usd": 285.0,
+      "commercial_signal": "Thẻ đơn USD 285,00 – 'Đang chờ nhà cung cấp vận chuyển', hạn ship 31 ngày sau thanh toán.",
+      "evidence": "Thẻ đơn trong chat 24/9 13:57.",
+      "blocker": "Hạn giao 31 ngày – cần theo dõi để không trễ.",
+      "next_action": "Xác nhận ngày ship, gửi ảnh hàng trước khi gửi.",
+      "verification_status": "chat_order_card_paid"
+    },
+    {
+      "name": "Najat Mohammed", "country": "Ghana", "level": "L1+", "date": "2026-09-24",
+      "need": "Đơn cũ 5 sản phẩm (áo)", "quantity": "5 sản phẩm",
+      "goods_value_usd": 141.10,
+      "commercial_signal": "Đơn tháng 8 USD 141,10 đã thanh toán và giao; buyer khiếu nại giao sai màu.",
+      "evidence": "24/9 buyer: đặt đen nhưng nhận trắng (đã có 2 áo trắng); shop nhận lỗi đóng gói theo file có ảnh đen/ghi chú trắng, xin lỗi; buyer 'Ok'.",
+      "blocker": "Chưa có phương án bù (đổi hàng/giảm giá) – buyer có thể để lại đánh giá xấu.",
+      "next_action": "Đề xuất gửi bù áo đen trong đơn sau hoặc giảm giá; ghi chú kiểm màu trước khi đóng gói.",
+      "verification_status": "chat_order_card_paid (đơn tháng 8); complaint_wrong_color"
+    }
+  ],
+  "follow_up_rows": [
+    {"tier": "C", "name": "Ashwarya Parajuli Bastola", "country": "Australia", "level": "L1+", "date": "2026-09-28", "need": "Xin catalogue", "quantity": "Chưa rõ", "evidence": "Buyer 'Please send catalogue'; shop chỉ trả lời 'Hello'.", "blocker": "Chưa gửi catalogue.", "next_action": "Gửi catalogue PDF trong chat, hỏi dòng sản phẩm quan tâm.", "verification_status": "chat_intent_only"}
+  ],
+  "low_fit_or_closed": [],
+  "risk_flags": [
+    {"name": "Rose Truong", "date": "2026-09-05", "note": "Shop chuyển trao đổi sang WhatsApp và đưa số điện thoại nhà sáng lập trong chat."}
+  ],
+  "store_level_findings": [
+    "Tuần nhỏ: 7 hội thoại, không có đơn hạng A; lớn nhất là 50 cái (krys Bello) và khách thiết kế riêng Rose Truong.",
+    "Có 1 khiếu nại giao sai màu (Najat Mohammed, Ghana) do lỗi đóng gói – cần quy trình kiểm màu.",
+    "Buyer châu Phi nói tiếng Pháp chiếm phần lớn; nhân viên trả lời tiếng Pháp tốt.",
+    "Ashwarya xin catalogue nhưng chỉ nhận 'Hello'."
+  ],
+  "counts": {"conversations_updated_in_window": 7, "real_buyers": 7, "tier_A": 0, "tier_B": 2, "tier_C": 5, "pending_payment_orders": 0, "paid_orders": 2, "refund_or_dispute": 0, "complaints": 1, "spam_or_supplier": 0, "risk_flags": 1},
+  "data_gaps": [
+    "Giá áo gile ANTONIA cho 50 cái chưa có.",
+    "Nội dung trao đổi của Rose Truong trên WhatsApp không thấy.",
+    "Icon level L1+ không phân biệt L1/L2/L3.",
+    "Chưa đối chiếu Order Center."
+  ]
+}

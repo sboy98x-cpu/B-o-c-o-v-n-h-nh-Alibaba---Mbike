@@ -1,0 +1,124 @@
+{
+  "store": "Riken",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin",
+  "period": {"from": "2026-09-22", "to": "2026-09-29 10:45 (giờ VN)", "timezone": "UTC+7"},
+  "read_method": {
+    "conversations_in_window": 18,
+    "buyer_conversations_read": 17,
+    "excluded": ["Smart assistant (nhắc theo dõi khách)"],
+    "full_history_loaded": "Cuộn đến đầu hội thoại cho cả 17 buyer; MDSAIFUL ISLAM đọc thêm 2 vòng báo giá 5/9 và 14/9.",
+    "sender_tagging": "Tin buyer có tên đứng trước; tin shop có Đọc/Chưa đọc. Phần lớn tin shop là AI tự động tiếp nhận (văn mẫu 'Established in 2014... Custom Manufacturer'); nhân viên (Ding / DING YI WEI) chỉ xuất hiện ở Aya Rakha, Abdul Mohsin, Felix Rosales, Aleksander Dogoda, Bruno Menon.",
+    "buyer_original_request_note": "10/17 hội thoại bắt đầu bằng thẻ Báo giá của AI; tin gốc của buyer không hiện, số lượng lấy từ lời AI nhắc lại hoặc từ ô Số lượng trên thẻ báo giá (đánh dấu from_ai_reply / from_quote_card).",
+    "level_source": "Icon level cạnh tên (không có icon = L0; L1+ không tách L1/L2).",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại."
+  },
+  "tier_thresholds": {
+    "A": "≥ 10.000 cái/tờ hoặc giá trị hàng ≥ USD 3.000 hoặc OEM/private label có spec",
+    "B": "≥ 1.000 cái hoặc ≥ USD 500 hoặc hỏi OEM/NPP",
+    "C": "Còn lại",
+    "note": "Đề xuất theo giá đĩa/giấy nhám ~USD 0,12–1,2/cái; Tam chỉnh trong Buyer_master (Y:Z)."
+  },
+  "top5_priority": [
+    {
+      "rank": 1, "tier": "A",
+      "name": "Aya Rakha", "country": "Egypt (Damietta)", "level": "L1+", "company": "Eldawlya for import and export", "date": "2026-09-28",
+      "need": "3 loại đĩa nhám (hạt zirconia là bắt buộc): đĩa dán Velcro 5\"/7\" xanh zirconia + đỏ AlO #36–#220; đĩa fiber 5\"/7\" lỗ 22 mm, 8.600 RPM, #36–#80; đĩa lưới Velcro chống kẹt bụi P80, 5\" 125 mm",
+      "quantity": "1.000.000 cái mỗi loại (tổng 3.000.000 cái)",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Buyer có tên công ty XNK, gửi ảnh + spec chi tiết, cần giá FOB tốt nhất, có cảng riêng.",
+      "evidence": "28/9 15:31 buyer gửi spec 3 loại; 15:36 shop tóm tắt 1.000.000 cái mỗi loại; 15:37 shop xin thông tin công ty + email để báo giá; 15:50 buyer gửi thông tin công ty, yêu cầu gửi giá ngay trong chat; 16:11 shop 'đang báo phòng kinh doanh'; 17:24 buyer 'I need FOB'; 29/9 08:30 shop 'Hello sir' (buyer chưa đọc).",
+      "blocker": "Chưa có giá; đĩa zirconia/fiber có thể ngoài dải hàng sẵn của Riken; buyer muốn nhận báo giá trong chat, không qua email.",
+      "next_action": "Hôm nay: báo giá FOB theo từng loại/cỡ/độ hạt ngay trong chat (có thể theo bậc 100k/500k/1M), nói rõ loại nào làm được bằng zirconia; đề xuất gửi mẫu.",
+      "verification_status": "chat_intent_only (có số lượng)"
+    },
+    {
+      "rank": 2, "tier": "A",
+      "name": "Fouad Yousef", "country": "Jordan (giao Aqaba)", "level": "L1+", "company": "—", "date": "2026-09-28",
+      "need": "Giấy nhám khô AlO đỏ/nâu phủ tĩnh điện, chà tay, 230×280 mm; P120 70% / P150 15% / P180 15%; 50 tờ/hộp, 16 hộp/thùng (800 tờ)",
+      "quantity": "100.000 tờ",
+      "unit_price_usd": 0.18, "goods_value_usd": 18000, "goods_value_note": "Theo thẻ báo giá AI USD 0,18/tờ cho mẫu C35P chống nước – khác loại buyer cần (giấy khô)",
+      "shipping_usd": null,
+      "payment_status": "Có báo giá AI, chưa có đơn",
+      "commercial_signal": "Spec đầy đủ, đóng gói rõ, yêu cầu báo giá CIF Aqaba tách tiền hàng và cước.",
+      "evidence": "26/9 17:02 buyer gửi yêu cầu 100.000 tờ + spec; 28/9 07:36 shop xin thông tin công ty/email; 14:46 AI gửi báo giá C35P chống nước USD 0,18, ≥100.000.",
+      "blocker": "Báo sai loại (chống nước thay vì giấy khô AlO); chưa có CIF Aqaba.",
+      "next_action": "Trong 24h: báo lại đúng giấy khô AlO 230×280 (vd. dòng AP33M/AP36M) theo tỷ lệ độ hạt, tách giá hàng + cước CIF Aqaba.",
+      "verification_status": "chat_quote_only"
+    },
+    {
+      "rank": 3, "tier": "A",
+      "name": "MDSAIFUL ISLAM", "country": "Bangladesh (kho ở Quảng Châu)", "level": "L1+", "company": "Saiful", "date": "2026-09-23",
+      "need": "Giấy nhám latex SiC P120 in thương hiệu 'SY' (private label); trước đó hỏi giấy khô P180 230×280 và giấy chống nước",
+      "quantity": "Đơn 50.000 tờ; năng lực trên 50.000 tờ/tuần (theo tin AI)",
+      "unit_price_usd": 0.2, "goods_value_usd": 10000,
+      "shipping_usd": null,
+      "payment_status": "Có báo giá AI, chưa có đơn",
+      "commercial_signal": "Buyer hỏi 3 lần trong tháng (5/9, 14/9, 23/9), OEM thương hiệu riêng, khối lượng đều hàng tuần.",
+      "evidence": "Cả 3 lần đều chỉ AI trả lời (báo USD 0,2/tờ ≥50.000, chào mẫu miễn phí, hỏi kích thước/số lượng thử/cảng). Không có nhân viên vào.",
+      "blocker": "Chưa có người thật trả lời; chưa có giá in logo SY.",
+      "next_action": "Trong 48h: nhân viên báo giá latex SiC P120 in SY cho 50.000 tờ, giao kho Quảng Châu, gửi mẫu P120.",
+      "verification_status": "chat_quote_only; from_ai_reply"
+    },
+    {
+      "rank": 4, "tier": "A",
+      "name": "Jesse Sfetsas", "country": "USA", "level": "L1+", "company": "—", "date": "2026-09-25",
+      "need": "Vật liệu mài AlO nhiều độ hạt, in hình và bao bì riêng (OEM)",
+      "quantity": "30.000 cái (theo tin AI)",
+      "unit_price_usd": 0.48, "goods_value_usd": 14400,
+      "shipping_usd": null,
+      "payment_status": "Có báo giá AI, chưa có đơn",
+      "commercial_signal": "30.000 cái có yêu cầu OEM in hình, bao bì.",
+      "evidence": "25/9 AI gửi báo giá đĩa 100 mm USD 0,48 (≥100) và hỏi độ cứng/đường kính; buyer chưa đọc.",
+      "blocker": "Tin gốc của buyer không hiện; chưa rõ sản phẩm chính xác.",
+      "next_action": "Nhân viên nhắn lại hỏi mẫu/kích thước cụ thể, gửi giá theo bậc 10k/30k và chi phí in OEM.",
+      "verification_status": "chat_quote_only; from_ai_reply"
+    },
+    {
+      "rank": 5, "tier": "A",
+      "name": "Bruno Menon", "country": "Brazil", "level": "L1+", "company": "—", "date": "2026-09-22",
+      "need": "Đĩa nhám AlO đỏ Velcro 6 lỗ",
+      "quantity": "2.900 cái: #40 200, #80 400, #100 200, #120 200, #150 600, #180 600, #220 600, #240 100",
+      "unit_price_usd": 1.2, "goods_value_usd": 3480,
+      "shipping_usd": null,
+      "payment_status": "Có báo giá AI, chưa có đơn",
+      "commercial_signal": "Buyer tự gửi bảng số lượng từng độ hạt – sẵn sàng đặt.",
+      "evidence": "22/9 00:43 AI báo USD 1,2/cái; 00:50 buyer gửi bảng số lượng; 12:49 shop xin thông tin công ty để 'gửi báo giá qua email'. 7 ngày không có báo giá.",
+      "blocker": "Shop đẩy báo giá sang email; giá AI USD 1,2 có thể quá cao so với thị trường.",
+      "next_action": "Trong 24h: báo giá trong chat cho 2.900 cái theo từng độ hạt + cước về Brazil, tạo đơn Trade Assurance.",
+      "verification_status": "chat_quote_only"
+    }
+  ],
+  "ranking_rationale": "9 buyer hạng A. Top 5 ưu tiên số lượng lớn nhất có spec rõ (Aya 3 triệu, Fouad 100.000) và buyer có tin nhắn thật/OEM lặp lại. Các buyer hạng A còn lại (wilmar ceron, Mark WIlson, Alter Trade, Krishna) ở đầu follow_up_rows vì số lượng chỉ lấy từ tin AI/thẻ báo giá.",
+  "confirmed_paid_orders_after_sales": [],
+  "follow_up_rows": [
+    {"tier": "A", "name": "Mark WIlson", "country": "USA", "level": "L0", "date": "2026-09-22", "need": "Đĩa nhám xếp (flap disc) 4\" 100×16 mm lưng sắt, AlO nung, #40–#120", "quantity": "30.000 cái (theo thẻ báo giá)", "unit_price_usd": 0.48, "goods_value_usd": 14400, "evidence": "AI trả lời dài: MOQ thử 1.000, OEM 3.000–5.000, DHL/DDP, mẫu miễn phí; hỏi ZIP, độ hạt, số lượng. Buyer chưa đọc.", "blocker": "Tin gốc của buyer không hiện.", "next_action": "Nhân viên nhắc lại, hỏi ZIP và số lượng thực.", "verification_status": "chat_quote_only; from_quote_card"},
+    {"tier": "A", "name": "wilmar ceron", "country": "Colombia", "level": "L1+", "date": "2026-09-26", "need": "Đĩa mài đá, hạt 60 và 40", "quantity": "10.000 cái (theo tin AI)", "unit_price_usd": 11.45, "evidence": "AI gửi báo giá bánh đánh bóng sợi nylon USD 11,45 – khác loại đĩa mài đá buyer cần.", "blocker": "Báo sai sản phẩm và giá quá cao.", "next_action": "Báo lại đĩa mài đá đúng loại, giá theo 10.000 cái.", "verification_status": "chat_quote_only; from_ai_reply"},
+    {"tier": "A", "name": "Alter Trade (Chris)", "country": "UK", "level": "L1+", "company": "Alter Trade", "date": "2026-09-22", "need": "Catalog + giá đĩa AlO 100 mm hoàn thiện đá", "quantity": "10.000 cái (tin AI); thẻ báo giá ≥12.000", "unit_price_usd": 0.48, "goods_value_usd": 4800, "evidence": "AI báo USD 0,48, hỏi đóng gói 10 cái hay thùng lớn; buyer đã đọc.", "next_action": "Gửi catalog PDF và giá theo bậc.", "verification_status": "chat_quote_only; from_ai_reply"},
+    {"tier": "A", "name": "Krishna Krishnaraja", "country": "Sri Lanka", "level": "L0", "date": "2026-09-29", "need": "Giấy nhám khô RIKEN AP36M P180 230×280 cho máy chà", "quantity": "15.000 tờ (theo tin AI)", "unit_price_usd": 0.28, "goods_value_usd": 4200, "evidence": "29/9 08:37 AI báo USD 0,28 ≥15.000, hỏi độ hạt/lớp nền; buyer đã đọc.", "next_action": "Nhân viên xác nhận độ hạt, báo CIF Colombo.", "verification_status": "chat_quote_only; from_ai_reply"},
+    {"tier": "B", "name": "Abdul Mohsin", "country": "Saudi Arabia (cờ Pakistan)", "level": "L1+", "company": "Raffia Factory For Packaging Material & Plastic Fibers", "date": "2026-09-29", "need": "Cuộn nhám AlO 50 m × 4,5 cm, độ hạt 80/220/1000", "quantity": "30 cuộn (10 mỗi loại)", "commercial_signal": "Công ty thật, chờ báo giá, giao tới kho forwarder ở Ninh Ba (TQ).", "evidence": "28/9 buyer gửi thông tin công ty, địa chỉ Ninh Ba; shop hứa 'sẽ gửi báo giá sớm'; 29/9 shop xác nhận lại 30 cuộn và hỏi lĩnh vực công ty (chưa đọc).", "blocker": "Chưa có giá sau gần 1 ngày.", "next_action": "Gửi báo giá 30 cuộn giao Ninh Ba hôm nay.", "verification_status": "chat_intent_only"},
+    {"tier": "B", "name": "Joni Foerter", "country": "USA", "level": "L1+", "date": "2026-09-22", "need": "Miếng chà mỏng, dẻo cho phục chế nội thất, private label", "quantity": "2.000 cái (thẻ báo giá)", "unit_price_usd": 0.68, "goods_value_usd": 1360, "evidence": "AI báo miếng mút nhám USD 0,68 ≥2.000; buyer chưa đọc.", "next_action": "Hỏi mẫu cụ thể, đề xuất gửi mẫu.", "verification_status": "chat_quote_only; from_quote_card"},
+    {"tier": "B", "name": "shyam rathi", "country": "India", "level": "L1+", "date": "2026-09-22", "need": "Đĩa roloc không dệt nâu thô 50 mm", "quantity": "10.000 (thẻ báo giá)", "unit_price_usd": 0.12, "evidence": "AI báo đĩa đỏ 150 mm C55P USD 0,12 – sai cỡ (buyer cần 50 mm); buyer chưa đọc.", "blocker": "Sai sản phẩm.", "next_action": "Báo đúng đĩa roloc 50 mm hoặc nói rõ không có.", "verification_status": "chat_quote_only; from_quote_card"},
+    {"tier": "C", "name": "Stapaskoli (User name)", "country": "Iceland", "level": "L1+", "date": "2026-09-29", "need": "Đĩa nhám kiểu 3M cho bề mặt nhôm", "quantity": "Chưa rõ", "unit_price_usd": 0.14, "evidence": "AI báo đĩa Velcro 115 mm USD 0,14 ≥100.", "verification_status": "chat_quote_only; from_ai_reply"},
+    {"tier": "C", "name": "Azhar Mahmood", "country": "Pakistan", "level": "L1+", "date": "2026-09-28", "need": "Cuộn vải nhám AlO 100 m (buyer gửi 5 ảnh)", "quantity": "10 m² (theo AI)", "unit_price_usd": 24, "goods_value_usd": 240, "evidence": "AI báo USD 24/m²; buyer gửi 5 ảnh chưa ai xem.", "next_action": "Xem ảnh buyer gửi và trả lời đúng mẫu.", "verification_status": "chat_quote_only"},
+    {"tier": "C", "name": "Felix Rosales", "country": "Mexico", "level": "L1+", "date": "2026-09-25", "need": "Dây nhám vải mềm kiểu LS312 cho gia công inox", "quantity": "Chưa rõ", "evidence": "Shop gợi ý dòng J-FLEX tương đương, hỏi kích thước/độ hạt/số lượng.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Mark Poro", "country": "USA", "level": "L0", "date": "2026-09-22", "need": "Băng nhám theo bản vẽ dự án, hỏi cước", "quantity": "Chưa rõ", "unit_price_usd": 0.4, "evidence": "AI báo băng nhám GXK51 USD 0,4 ≥100.", "verification_status": "chat_quote_only; from_ai_reply"}
+  ],
+  "low_fit_or_closed": [
+    {"name": "Aleksander Dogoda", "country": "Poland", "level": "L1+", "date": "2026-09-24", "note": "Cần đĩa cho máy chà tự động; shop trả lời 'We do not currently sell this product'."}
+  ],
+  "risk_flags": [],
+  "store_level_findings": [
+    "Tuần có 2 yêu cầu rất lớn: Aya Rakha 3 triệu đĩa và Fouad Yousef 100.000 tờ, cả hai chưa có báo giá đúng.",
+    "AI báo sai sản phẩm ở ít nhất 4 buyer: Fouad (giấy chống nước thay vì giấy khô), wilmar (bánh nylon USD 11,45 thay vì đĩa mài đá), shyam (150 mm thay vì 50 mm), Aleksander (băng thay vì đĩa).",
+    "Nhân viên thường xin thông tin công ty + email rồi hứa 'báo giá qua email' (Aya, Fouad, Bruno) – buyer muốn giá ngay trong chat; nên báo giá trên Alibaba.",
+    "10/17 hội thoại chỉ có AI trả lời, không có nhân viên theo tiếp (vd. MDSAIFUL ISLAM hỏi 3 lần trong tháng).",
+    "Nhiều buyer hỏi đĩa zirconia/fiber/roloc – nhóm hàng Riken có thể chưa có sẵn; cần danh sách 'làm được/không làm được' cho nhân viên."
+  ],
+  "counts": {"conversations_updated_in_window": 18, "real_buyers": 17, "tier_A": 9, "tier_B": 3, "tier_C": 4, "low_fit": 1, "pending_payment_orders": 0, "paid_orders": 0, "refund_or_dispute": 0, "spam_or_supplier": 0, "risk_flags": 0},
+  "data_gaps": [
+    "Tin gốc của 10 buyer không hiện trong chat; số lượng lấy từ lời AI hoặc thẻ báo giá.",
+    "Icon level L1+ không phân biệt L1/L2/L3.",
+    "Không có thẻ đơn hàng nào trong kỳ; chưa đối chiếu Order Center."
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "store": "Viet Drip",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin",
+  "period": {"from": "2026-09-22", "to": "2026-09-29 10:30 (giờ VN)", "timezone": "UTC+7"},
+  "read_method": {
+    "conversations_in_window": 5,
+    "buyer_conversations_read": 5,
+    "carry_over_read": 1,
+    "excluded": [],
+    "full_history_loaded": "Cuộn đến đầu hội thoại cho cả 5 buyer; đọc thêm Jake Tartaglia (cập nhật 21/9) vì là khách đã nhận hàng mẫu.",
+    "sender_tagging": "Tin buyer có tên đứng trước; tin shop có Đọc/Chưa đọc. AI tự động tiếp nhận trả lời Muhammad Tahir tới khi chạm giới hạn; nhân viên vào lúc 29/9 09:18.",
+    "level_source": "Icon level cạnh tên (không có icon = L0; L1+ không tách L1/L2).",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại."
+  },
+  "tier_thresholds": {
+    "A": "≥ 1 container hoặc giá trị hàng ≥ USD 5.000 hoặc dự án tưới có danh mục",
+    "B": "≥ USD 1.000 hoặc mua để bán lại (đại lý) có số lượng",
+    "C": "Còn lại",
+    "note": "Đề xuất theo hàng ống/phụ kiện tưới giá thấp; Tam chỉnh trong Buyer_master (Y:Z)."
+  },
+  "top5_priority": [
+    {
+      "rank": 1, "tier": "A",
+      "name": "Muhammad Tahir", "country": "Pakistan (Mardan, cảng Karachi)", "level": "L1+", "company": "—", "date": "2026-09-29",
+      "need": "Trọn bộ hệ thống tưới nhỏ giọt cho dự án 600 mẫu Anh: 1.000.000 m ống 16 mm dày 1,2 mm (không lỗ); 60.000 m ống nhỏ giọt 16 mm dày 0,9 mm, khoảng cách 30 cm, 2 L/h; 20.000 m loại 4 L/h; 400.000 đầu nhỏ giọt bù áp 8 L/h; 50.000 đầu 16 L/h; mỗi loại 50.000 cái GTO/nối/bịt đầu; 20.000 van nhánh; 10.000 tê, 5.000 co; lọc đĩa, van xả khí, van xả cặn, súng tưới, béc tưới, bộ trộn phân Venturi… (danh sách 30+ mục)",
+      "quantity": "Khoảng 8 container 40 feet",
+      "unit_price_usd": 3.5, "unit_price_note": "AI dùng giá niêm yết USD 3,50/cuộn 100 m cho ống chuẩn; AI tự ghi rõ đây không phải giá xác nhận cho ống 16 mm × 1,2/0,9 mm",
+      "goods_value_usd": 37800, "goods_value_note": "Chỉ riêng 1.080.000 m ống theo giá niêm yết; chưa gồm phụ kiện",
+      "shipping_usd": null,
+      "payment_status": "Chưa có báo giá chính thức",
+      "commercial_signal": "Dự án lớn nhất các gian: 8 container, danh mục chi tiết, hỏi giá xuất xưởng/CIF Karachi, chứng nhận ISO 9001 (8779/9261), thời gian giao và hàng sẵn.",
+      "evidence": "27/9 19:21–19:29 AI ghi nhận 1.000.000 m + 80.000 m, đóng cuộn 500/1.000 m, màu đen; buyer: 'whole order ~8 containers 40 feet, send ex-factory price'; 27/9 21:01 hỏi cước 40' về Karachi; 23:41 hỏi ISO; 28/9 08:47 gửi danh mục đầy đủ, 08:51 xin báo giá CIF Karachi + chứng nhận + thời gian; 29/9 09:15 buyer gửi inquiry; 09:18–09:19 nhân viên hỏi 'bạn cần sản phẩm nào' (buyer chưa đọc).",
+      "blocker": "Nhân viên hỏi lại 'cần sản phẩm nào' dù buyer đã gửi danh mục 30+ mục; chưa trả lời câu hỏi chứng nhận ISO; ống 16 mm × 1,2 mm là quy cách tuỳ chỉnh; nhiều phụ kiện (lọc đĩa, súng tưới, van) có thể ngoài danh mục của Viet Drip.",
+      "next_action": "Hôm nay: xác nhận đã nhận danh mục; trả lời có/không chứng nhận ISO 9001; gửi báo giá EXW cho các mục làm được (ống, ống nhỏ giọt, đầu nhỏ giọt, nối/bịt/tê/co) và nói rõ mục nào cần nguồn ngoài; ước cước 40' về Karachi.",
+      "verification_status": "chat_intent_only (có số lượng, danh mục chi tiết)"
+    },
+    {
+      "rank": 2, "tier": "B",
+      "name": "Nitish Rambaruth", "country": "Mauritius", "level": "L1+", "company": "—", "date": "2026-09-29",
+      "need": "Ống PE mềm 20 mm dày 1,5 mm, 3 lớp trắng ngoài – đen trong; cũng hỏi 8/10 mm",
+      "quantity": "Chưa rõ (mua để bán lại)",
+      "unit_price_usd": null, "unit_price_listing_vnd": "187.023–240.458", "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Buyer xác nhận mua để bán lại (22/9), hỏi giá và độ dày cụ thể.",
+      "evidence": "18–20/9 buyer hỏi ống trắng ngoài đen trong, 20 mm dày 1,5 mm, xin ảnh và giá; AI nói danh mục không ghi 1,5 mm; 22/9 buyer 'resale'; 29/9 09:17 shop hỏi cần bao nhiêu mét (7 ngày sau).",
+      "blocker": "Chưa có giá và chưa xác nhận làm được dày 1,5 mm; shop trả lời chậm 7 ngày.",
+      "next_action": "Báo giá ống 20 mm 1,5 mm 3 lớp theo cuộn và MOQ; hỏi lượng bán hằng tháng.",
+      "verification_status": "chat_intent_only"
+    },
+    {
+      "rank": 3, "tier": "C",
+      "name": "Miroslav Anicic", "country": "USA", "level": "L1+", "company": "—", "date": "2026-09-28",
+      "need": "Khớp nối van tưới 1/2\" PP, ren 25 mm hoặc 16 mm (theo tin AI)",
+      "quantity": "Chưa rõ",
+      "unit_price_usd": 0.08, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Có báo giá AI",
+      "commercial_signal": "AI báo USD 0,08/cái.",
+      "evidence": "28/9 17:35 AI gửi thẻ báo giá; buyer chưa đọc; không thấy tin gốc của buyer.",
+      "blocker": "Chưa biết số lượng.",
+      "next_action": "Hỏi số lượng và loại ren.",
+      "verification_status": "chat_quote_only; from_ai_reply"
+    },
+    {
+      "rank": 4, "tier": "C",
+      "name": "User name (cờ Canada)", "country": "Canada (giao địa chỉ ở Trung Quốc)", "level": "L1+", "company": "—", "date": "2026-09-27",
+      "need": "Túi tưới cây 10 và 25 gallon màu nâu/xanh, dùng cá nhân (theo tin AI)",
+      "quantity": "Chưa rõ",
+      "unit_price_usd": 0.05, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Có báo giá AI (sai sản phẩm)",
+      "commercial_signal": "Nhu cầu cá nhân.",
+      "evidence": "27/9 AI gửi báo giá phụ kiện nối 16 mm USD 0,05 – không phải túi tưới.",
+      "blocker": "Sai sản phẩm; Viet Drip có thể không làm túi tưới.",
+      "next_action": "Nói rõ có/không có túi tưới.",
+      "verification_status": "chat_quote_only; from_ai_reply"
+    },
+    {
+      "rank": 5, "tier": "C",
+      "name": "Branin De Jesus Gonzalez Garcia", "country": "Dominican Republic", "level": "L0", "company": "—", "date": "2026-09-23",
+      "need": "Van chặn chống bung cho ống nhỏ giọt 16 mm (theo tin AI)",
+      "quantity": "Chưa rõ",
+      "unit_price_usd": 0.12, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Có báo giá AI",
+      "commercial_signal": "AI báo USD 0,12/cái; buyer đã đọc.",
+      "evidence": "23/9 11:25 AI gửi báo giá; buyer không trả lời.",
+      "blocker": "Chưa có số lượng.",
+      "next_action": "Hỏi số lượng, gửi giá theo bậc.",
+      "verification_status": "chat_quote_only; from_ai_reply"
+    }
+  ],
+  "ranking_rationale": "Muhammad Tahir (8 container) vượt xa các buyer khác. Nitish là đại lý bán lại nhưng chưa có số lượng. 3 buyer còn lại chỉ có báo giá AI.",
+  "confirmed_paid_orders_after_sales": [
+    {
+      "name": "Jake Tartaglia", "country": "Australia", "level": "L1+", "date": "2026-09-21",
+      "need": "Đơn mẫu hệ thống tưới nhỏ giọt Vietdrip X2000",
+      "quantity": "Đơn mẫu (số lượng không ghi trong chat)",
+      "commercial_signal": "Đã thanh toán và nhận hàng mẫu 11/9; buyer nói đơn số lượng lớn sẽ trả bằng chuyển khoản.",
+      "evidence": "1–4/9 shop đề nghị chuyển khoản trực tiếp về VN hoặc thanh toán qua tài khoản vận chuyển của buyer (ngoài Alibaba); 7/9 shop gửi mã vận đơn; 11/9 buyer xác nhận đã nhận và hỏi 'đây có phải bao bì cuối cùng không'; 15–21/9 shop hỏi thăm 3 lần, buyer chưa trả lời.",
+      "blocker": "Buyer chưa phản hồi về chất lượng; thanh toán mẫu ngoài Alibaba.",
+      "next_action": "Hỏi cụ thể kết quả dùng thử và kế hoạch đơn lớn; đề xuất đơn lớn qua Trade Assurance.",
+      "verification_status": "chat_paid_offplatform (buyer xác nhận nhận hàng; không có thẻ đơn Alibaba)"
+    }
+  ],
+  "follow_up_rows": [],
+  "low_fit_or_closed": [],
+  "risk_flags": [
+    {"name": "Jake Tartaglia", "date": "2026-09-01", "note": "Shop đề nghị thanh toán mẫu bằng chuyển khoản trực tiếp về VN, ngoài Alibaba."}
+  ],
+  "store_level_findings": [
+    "Một dự án cực lớn (Muhammad Tahir, ~8 container 40', 30+ mục) – lớn nhất trong 7 gian đã đọc – đang chờ giá, nhưng nhân viên vào lại hỏi 'bạn cần sản phẩm nào'.",
+    "Buyer hỏi chứng nhận ISO 9001 hai lần mà chưa có câu trả lời.",
+    "AI tính tạm USD 37.800 cho 1.080.000 m ống theo giá niêm yết – buyer có thể coi đây là giá, cần báo giá chính thức sớm để tránh hiểu nhầm.",
+    "Nitish Rambaruth chờ 7 ngày mới được trả lời.",
+    "AI báo nhầm sản phẩm (túi tưới → khớp nối).",
+    "Khách mẫu Jake Tartaglia đã thanh toán ngoài Alibaba."
+  ],
+  "counts": {"conversations_updated_in_window": 5, "real_buyers": 5, "tier_A": 1, "tier_B": 1, "tier_C": 3, "pending_payment_orders": 0, "paid_orders": 1, "refund_or_dispute": 0, "spam_or_supplier": 0, "risk_flags": 1},
+  "data_gaps": [
+    "Giá trị đơn Muhammad Tahir mới là ước tính của AI cho riêng phần ống.",
+    "Số lượng và giá trị đơn mẫu Jake Tartaglia không có trong chat.",
+    "Icon level L1+ không phân biệt L1/L2/L3.",
+    "Chưa đối chiếu Order Center."
+  ]
+}

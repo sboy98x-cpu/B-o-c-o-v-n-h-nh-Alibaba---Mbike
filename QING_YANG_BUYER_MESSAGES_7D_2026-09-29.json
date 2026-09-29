@@ -1,0 +1,53 @@
+{
+  "store": "Qing Yang",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin",
+  "period": {"from": "2026-09-22", "to": "2026-09-29 11:00 (giờ VN)", "timezone": "UTC+7"},
+  "read_method": {
+    "conversations_in_window": 2,
+    "buyer_conversations_read": 1,
+    "excluded": ["Smart assistant – 29/9 và 20/9 nhắc hoàn thiện thông tin sản phẩm (băng dán cạnh melamine, ván veneer sồi trắng/óc chó/maple) để AI trả lời chính xác hơn"],
+    "full_history_loaded": "Cuộn đến đầu hội thoại Lorie C (từ 12/8). Hội thoại buyer gần nhất trước đó là 18/8, nên trong 7 ngày không có tin nhắn mới nào của buyer.",
+    "level_source": "Icon level cạnh tên.",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại."
+  },
+  "tier_thresholds": {
+    "A": "≥ 10.000 m băng dán cạnh hoặc giá trị hàng ≥ USD 5.000 hoặc nhà máy nội thất có spec",
+    "B": "≥ 1.000 m hoặc ≥ USD 1.000 hoặc đã lấy mẫu",
+    "C": "Còn lại",
+    "note": "Đề xuất theo MOQ 10.000 m của băng dán cạnh; Tam chỉnh trong Buyer_master (Y:Z)."
+  },
+  "top5_priority": [
+    {
+      "rank": 1, "tier": "A",
+      "name": "Lorie C", "country": "Philippines (công ty ở Hawaii, nhà máy nhận hàng ở Hà Nội)", "level": "L1+", "company": "—", "date": "2026-09-24 (shop nhắn); buyer nhắn lần cuối 2026-08-18",
+      "need": "Băng dán cạnh veneer gỗ sồi trắng tự nhiên, dày 1 mm, rộng 22 mm, bề mặt mịn",
+      "quantity": "10.000 (m) theo yêu cầu 14/8 (bằng MOQ)",
+      "unit_price_usd": null, "unit_price_listing_vnd": 53435,
+      "goods_value_usd": null, "goods_value_note": "Theo giá niêm yết 53.435 ₫ × 10.000 ≈ 534 triệu ₫ (~USD 20.000) nếu đơn vị là mét",
+      "shipping_usd": null,
+      "payment_status": "Đã gửi mẫu (18/8), chưa có đơn",
+      "commercial_signal": "Buyer đã nhận mẫu tại nhà máy Hà Nội, nói 'sẽ báo lại nhà máy'; buyer sẽ tự đặt hàng.",
+      "evidence": "12–15/8 chốt quy cách 22 mm, veneer sồi trắng, bề mặt mịn; 15/8 xin mẫu 1 cuộn, gửi Hà Nội; 18/8 shop báo đã gửi mẫu; buyer 'we'll inform our factory'. 24/9 shop chỉ nhắn 'Hello' (buyer chưa đọc). 37 ngày không có phản hồi từ buyer.",
+      "blocker": "Chưa biết kết quả mẫu; shop chưa báo giá chính thức cho 10.000 m; shop nhắn 'Hello' không có nội dung.",
+      "next_action": "Nhắn cụ thể: hỏi nhà máy đánh giá mẫu thế nào, gửi báo giá 10.000 m (giao Hà Nội, VAT/không VAT) và thời gian sản xuất.",
+      "verification_status": "chat_intent_only (có số lượng); sample_sent"
+    }
+  ],
+  "ranking_rationale": "Chỉ có 1 buyer thật và buyer này không nhắn gì trong kỳ; đưa vào vì là đơn lớn đang chờ sau khi gửi mẫu. Không tạo card giả.",
+  "confirmed_paid_orders_after_sales": [],
+  "follow_up_rows": [],
+  "low_fit_or_closed": [],
+  "risk_flags": [],
+  "store_level_findings": [
+    "Không có tin nhắn buyer mới trong 7 ngày (22–29/9); hội thoại buyer gần nhất có tin của buyer là 18/8.",
+    "Lorie C (băng dán cạnh sồi trắng 22 mm, ~10.000 m) đã nhận mẫu từ 18/8 nhưng chưa được theo dõi bằng báo giá cụ thể.",
+    "Smart assistant nhắc 2 lần (20/9, 29/9) hoàn thiện thông tin sản phẩm để AI trả lời đúng – nên làm vì gian gần như không có inquiry mới.",
+    "Lượng inquiry thấp → ưu tiên tăng hiển thị (từ khoá, sản phẩm mới) hơn là xử lý tin nhắn."
+  ],
+  "counts": {"conversations_updated_in_window": 2, "real_buyers": 1, "new_buyer_messages_in_window": 0, "tier_A": 1, "tier_B": 0, "tier_C": 0, "pending_payment_orders": 0, "paid_orders": 0, "refund_or_dispute": 0, "spam_or_supplier": 0, "risk_flags": 0},
+  "data_gaps": [
+    "Đơn vị 10.000 (mét hay cuộn) chưa được xác nhận trong chat.",
+    "Chưa có báo giá chính thức cho quy cách 22 mm × 1 mm.",
+    "Chưa đối chiếu Order Center."
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "store": "G8 Home",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin",
+  "period": {"from": "2026-09-22", "to": "2026-09-29 10:30 (giờ VN)", "timezone": "UTC+7"},
+  "read_method": {
+    "conversations_in_window": 41,
+    "buyer_conversations_read": 38,
+    "excluded": [
+      "Smart assistant (thông báo hệ thống)",
+      "Vanessa Su – Zhejiang Hailun Rope (nhà cung cấp dây thừng TQ; shop đang là bên mua)",
+      "Mukesh Jain – Multipack Plastic Industries India (nhà cung cấp dây PP; shop đang là bên mua)"
+    ],
+    "full_history_loaded": "Cuộn lên đến đầu hội thoại hoặc trước 15/9 cho cả 41 hội thoại; không cắt nội dung. Lịch sử cũ hơn (tháng 2–8) được đọc khi nó quyết định quy mô đơn (Walidvegoss, Emad Helal, Muhammad Didi, Jakir Molla, Mdsohag Mia).",
+    "sender_tagging": "Tin buyer có tên buyer đứng trước; tin shop có trạng thái Đọc/Chưa đọc. Phân biệt AI tự động tiếp nhận (câu dài, văn mẫu, 'A colleague will continue helping you') với nhân viên (Trong Dinh Duy, câu ngắn 'sir', 'thank you for the inquiry', 'please send specs').",
+    "level_source": "Icon level cạnh tên (không có icon = L0; icon L1+ không tách L1/L2).",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại; khi buyer nói rõ nước nhận hàng thì ghi thêm."
+  },
+  "tier_thresholds": {
+    "A": "≥ 5.000 cái (bằng MOQ) hoặc giá trị hàng ≥ USD 1.000 hoặc container/nhà lắp ráp có spec",
+    "B": "≥ 1.000 cái hoặc ≥ USD 300 hoặc NPP/lắp ráp/dự án",
+    "C": "Còn lại (mẫu, vài chục–vài trăm cái, chưa có số lượng)",
+    "note": "Đề xuất theo MOQ 5.000 cái và giá SKD ~USD 0,12–0,28/cái của G8; Tam chỉnh trong Buyer_master (Y:Z)."
+  },
+  "top5_priority": [
+    {
+      "rank": 1, "tier": "A",
+      "name": "md moshiul azam", "country": "Bangladesh", "level": "L1+", "company": "—", "date": "2026-09-22",
+      "need": "Bóng LED SKD dạng A 12W, 15W, 18W, 20W, không cần hộp màu",
+      "quantity": "5.000 cái mỗi loại (tổng 20.000 cái)",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Đã gửi báo giá PDF, chưa có đơn",
+      "commercial_signal": "Buyer hỏi giá theo 5.000 cái/loại cho 4 công suất; shop đã gửi file 'Quotation Bulb A 12w-20w SKD.pdf' ngày 21/9.",
+      "evidence": "21/9 11:06 buyer hỏi giá 12/15/18/20W SKD 5.000 cái mỗi loại; 15:06 shop gửi báo giá PDF; 22/9 shop hỏi 2 lần 'is the price ok for you?' và báo đã gọi nhưng buyer không nghe.",
+      "blocker": "Buyer im lặng 7 ngày sau báo giá; chưa biết giá trong PDF có cạnh tranh với hàng TQ không.",
+      "next_action": "Trong 24h: nhắn lại ngắn, đề xuất gửi mẫu (shop đã chào mẫu) và giá theo container 20'/40' cho 20.000 cái, hỏi cảng Chittagong và thời điểm cần hàng.",
+      "verification_status": "chat_quote_only (báo giá PDF)"
+    },
+    {
+      "rank": 2, "tier": "A",
+      "name": "Walidvegoss mamache", "country": "Canada", "level": "L1+", "company": "—", "date": "2026-09-27",
+      "need": "Bóng LED SKD không vỏ (chỉ DOB) nhiều công suất",
+      "quantity": "Theo yêu cầu 20/4: 9W, 12W, 15W, 18W, 22W mỗi loại 200.000 cái; 24W, 40W, 45W, 50W mỗi loại 50.000 cái (tổng ~1,2 triệu cái)",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Chưa từng được báo giá",
+      "commercial_signal": "Khối lượng lớn nhất gian; buyer quay lại 27/9 hỏi 'price ples'.",
+      "evidence": "20/4 buyer gửi danh sách số lượng, AI hứa 'confirm with manager' nhiều lần, không có giá; 27/9 12:43 buyer 'hi, price ples'; shop 'please send specs'; 28/9 shop hỏi 'do you import LED lights to Canada?' (buyer chưa đọc).",
+      "blocker": "5 tháng chưa có giá; shop hỏi lại spec dù buyer đã gửi đủ; số lượng quá lớn so với năng lực cần xác minh.",
+      "next_action": "Hôm nay: gửi bảng giá DOB-only theo 9 công suất (đơn giá theo bậc 50k/200k), MOQ DOB-only, năng lực tháng và đề xuất đơn thử 1 container.",
+      "verification_status": "chat_intent_only (có số lượng từ 20/4)"
+    },
+    {
+      "rank": 3, "tier": "A",
+      "name": "Jashim uddin", "country": "Cờ US (nói tiếng Bangla)", "level": "L0", "company": "—", "date": "2026-09-29",
+      "need": "Bóng DOB SKD đầy đủ 12W và 18W, thân trắng, chân B22",
+      "quantity": "Tối thiểu 10.000 cái",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "17 tin trong 20 phút sáng 29/9, nêu rõ spec và số lượng 10.000.",
+      "evidence": "29/9 00:58 'minimum 10000 pic'; 01:00 'please give me price full skd'; AI chỉ nói giá theo bậc 5.000 mà không nêu số; 01:09 buyer xin WeChat. Tự động tiếp nhận đã chạm giới hạn, chưa có nhân viên trả lời.",
+      "blocker": "Chưa có giá; buyer muốn chuyển sang WeChat (ngoài sàn).",
+      "next_action": "Trong 24h: báo giá 12W và 18W full SKD cho 10.000 cái ngay trên Alibaba, kèm thời gian sản xuất; không chuyển WeChat.",
+      "verification_status": "chat_intent_only (có số lượng)"
+    },
+    {
+      "rank": 4, "tier": "A",
+      "name": "ashish kousins", "country": "India (Lucknow)", "level": "L1+", "company": "—", "date": "2026-09-25",
+      "need": "Bóng LED 30W dạng T, chân B22, 6500K; muốn giá DDP giao tận Delhi (gồm thông quan, thuế)",
+      "quantity": "5.000 cái; muốn nhà cung cấp lâu dài",
+      "unit_price_usd": 0.13, "unit_price_note": "AI báo USD 0,13/cái cho 5.000+ (giá SKD niêm yết); nhân viên gửi ảnh spec + giá EXW bóng thành phẩm (con số nằm trong ảnh, chưa đọc được)",
+      "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Có giá EXW, chưa có giá DDP, chưa có đơn",
+      "commercial_signal": "Buyer đang bán đèn LED ở Uttar Pradesh, bỏ nhà cung cấp Ấn Độ vì chất lượng/giá; hỏi DDP 5.000 cái.",
+      "evidence": "25/9 buyer: 'Please give me your best total DDP price for 5,000 pcs', không có đại lý nhập khẩu; shop: MOQ 5.000, có C/O form AI (ASEAN–Ấn Độ), không chắc thuế Ấn Độ.",
+      "blocker": "Shop chưa báo DDP và chưa nắm thuế nhập khẩu Ấn Độ; ship DDP đắt hơn tự nhập.",
+      "next_action": "Trong 48h: hỏi forwarder báo DDP Delhi (hoặc CIF Nhava Sheva/Mundra + ước thuế có C/O form AI), gửi tổng tiền 5.000 cái.",
+      "verification_status": "chat_quote_only (EXW)"
+    },
+    {
+      "rank": 5, "tier": "A",
+      "name": "Mdsohag Mia", "country": "Cờ US (buyer Bangladesh)", "level": "L1+", "company": "—", "date": "2026-09-28",
+      "need": "Bảng mạch DOB tròn 15W và cùng một giá cho 3/5/7/9/12/15/18W; bảo hành 1 năm",
+      "quantity": "Inquiry chính thức 5.000 cái (28/9) và 5.000 cái (2/9); hỏi giá sỉ 1.000+ cái 15W",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Hai inquiry 5.000 cái, gọi thoại 4 lần trong 28/9, hỏi thời gian giao về Bangladesh.",
+      "evidence": "28/9 15:22–15:28 buyer gọi 4 lần (bận/huỷ); 19:52 hỏi giá sỉ 15W DOB 1.000+ và lead time; 19:59 inquiry 5.000 cái; shop chỉ trả lời 'what you want sir?' và bảo hành 2 năm.",
+      "blocker": "Chưa có giá, chưa trả lời lead time; buyer đòi WhatsApp.",
+      "next_action": "Trong 24h: báo giá DOB 15W (và giá chung 3–18W nếu làm được) cho 1.000 và 5.000 cái, lead time về Bangladesh; giữ trao đổi trên Alibaba.",
+      "verification_status": "chat_intent_only (có số lượng)"
+    }
+  ],
+  "ranking_rationale": "Có 11 buyer hạng A; Top 5 ưu tiên buyer đã có báo giá hoặc số lượng lớn nhất và còn hoạt động trong kỳ. 6 buyer hạng A còn lại nằm đầu danh sách follow_up_rows.",
+  "confirmed_paid_orders_after_sales": [],
+  "follow_up_rows": [
+    {"tier": "A", "name": "sakibhossen farhad", "country": "Bangladesh", "level": "L0", "date": "2026-09-24", "need": "Bóng DOB 20W", "quantity": "5.000 cái", "commercial_signal": "Hỏi 'nếu lấy 5.000 cái thì trả bao nhiêu, giá mỗi cái'.", "evidence": "AI xác nhận 20W/5.000 cái nhưng không báo giá; buyer sẽ bàn với sếp; 25/9 shop hỏi 'SKD hay thành phẩm?'.", "blocker": "Chưa có giá.", "next_action": "Báo giá 20W SKD và thành phẩm cho 5.000 cái, chân E27/B22.", "verification_status": "chat_intent_only"},
+    {"tier": "A", "name": "Jim Arthur", "country": "USA", "level": "L1+", "date": "2026-09-26", "need": "Bóng LED SKD DOB (12/18/7/5W)", "quantity": "5.000 cái (inquiry chính thức)", "commercial_signal": "Inquiry 5.000 cái.", "evidence": "AI hỏi công suất/chân/màu; 28/9 shop 'Please send specs sir' (buyer chưa đọc).", "blocker": "Buyer chưa trả lời spec; thị trường Mỹ dùng 120V, sản phẩm 220V.", "next_action": "Gửi 2–3 cấu hình gợi ý kèm giá 5.000 cái, hỏi điện áp 120V.", "verification_status": "chat_intent_only"},
+    {"tier": "A", "name": "Waris Ali", "country": "Cờ US (giao Pakistan)", "level": "L1+", "date": "2026-09-24", "need": "Chỉ DOB 12W, chân B22, ánh sáng trắng", "quantity": "5.000 cái", "commercial_signal": "Spec đầy đủ, số lượng rõ.", "evidence": "24/9 AI xác nhận 5.000 cái 12W B22 trắng; 25/9 shop: 'DOB only MOQ 20,000pcs' (chưa đọc).", "blocker": "MOQ DOB-only 20.000 > 5.000 của buyer.", "next_action": "Đề xuất bóng SKD đầy đủ 5.000 cái hoặc báo giá DOB-only 20.000 kèm giá bậc.", "verification_status": "chat_intent_only"},
+    {"tier": "A", "name": "wlyd kaml", "country": "Egypt", "level": "L1+", "date": "2026-09-22", "need": "SKD đầy đủ A70-12W (từ 9W–60W), muốn chụp nửa trong suốt", "quantity": "5.000 cái (inquiry 22/9)", "commercial_signal": "Inquiry 5.000 cái, hỏi giá SKD đầy đủ.", "evidence": "18/9 buyer hỏi giá SKD 9–60W, bảo hành 2 năm; shop không có chụp nửa trong suốt; 22/9 inquiry 5.000 cái; shop hỏi công suất và số lượng (chưa đọc).", "blocker": "Chưa báo giá; thiếu loại chụp buyer cần.", "next_action": "Báo giá 12W SKD 5.000 cái, hỏi có chấp nhận chụp trắng đục hoặc báo phụ phí chụp nửa trong.", "verification_status": "chat_intent_only"},
+    {"tier": "A", "name": "Mahamadou Camara", "country": "Congo (hàng đi qua TQ)", "level": "L1+", "date": "2026-09-26", "need": "Bóng LED 5W (giá tốt nhất)", "quantity": "'50.0000 pièces' ngày 10/9 (không rõ 50.000 hay 500.000)", "commercial_signal": "Số lượng rất lớn; em trai ở TQ lo gom hàng.", "evidence": "10/9 shop chỉ giảm 5% đơn đầu, mời sang thăm nhà máy; 25/9 buyer hỏi Yuwo cargo, xin số của sếp; 26/9 'give me the best price for 5w'; shop 'contact me first'.", "blocker": "Chưa có giá 5W rõ; buyer đòi liên hệ ngoài sàn; số lượng mơ hồ.", "next_action": "Báo giá 5W theo 50.000 cái trên Alibaba, xác nhận lại số lượng, CIF cảng TQ hoặc Pointe-Noire.", "verification_status": "chat_intent_only"},
+    {"tier": "A (tiềm năng)", "name": "Hastings Amugune", "country": "Kenya", "level": "L0", "date": "2026-09-28", "need": "Bóng thành phẩm 5W, 10W, 15W; giao Nairobi qua cảng Mombasa", "quantity": "Biết MOQ 5.000 cái, chưa chốt", "unit_price_usd": "5W 0,19 / 10W 0,25 / 15W 0,28 (EXW)", "commercial_signal": "Shop đã báo EXW; buyer đang so với hàng mình bán.", "evidence": "28/9 shop báo EXW, gửi ảnh chất lượng; buyer: 'I will compare with what I sell and get back'.", "blocker": "Chưa có cước biển về Mombasa.", "next_action": "Gửi CIF Mombasa cho 5.000 cái mỗi loại (hoặc 1 container ghép).", "verification_status": "chat_quote_only"},
+    {"tier": "B", "name": "Michael Thompson Kingston", "country": "Jamaica (nhận ở Florida)", "level": "L1+", "date": "2026-09-24", "need": "Bóng thành phẩm 9W E27 6500K, dùng thương hiệu G8, hộp màu và hộp trơn; cần 85–265V hoặc 120–240V", "quantity": "3.000 cái; trước mắt 3 mẫu 9W", "unit_price_usd": 0.20, "goods_value_usd": 600, "shipping_usd": "72 (UPS, 3 mẫu)", "payment_status": "Mẫu miễn phí, buyer trả ship USD 72 – chưa trả", "commercial_signal": "Đã chốt thương hiệu, số lượng, xin mẫu.", "evidence": "18/9 EXW 9W USD 0,20 chưa gồm hộp; 22/9 buyer lo 3.000 bóng 220V sẽ tồn; 23/9 shop báo ship mẫu USD 72; 24/9 shop hỏi còn lấy mẫu không.", "blocker": "Điện áp 220V không hợp Jamaica (110–120V); phí ship mẫu cao.", "next_action": "Xác nhận có làm bản 85–265V không (driver dải rộng) và giá; đề xuất tạo đơn mẫu trên Alibaba.", "verification_status": "chat_quote_only"},
+    {"tier": "B", "name": "Nilesh Kumar", "country": "Fiji (Lautoka)", "level": "L1+", "date": "2026-09-29", "need": "Bóng LED chân cài (B22) nhiều công suất 5W–50W", "quantity": "Ban đầu hỏi giá 5.000 cái; sau nói 500 cái mỗi loại; shop đòi 1.000 cái mỗi loại", "unit_price_usd": 0.13, "commercial_signal": "Buyer nhập hàng tiêu dùng (Vicks, mỹ phẩm), nhắn 'so quote me plz'. Alibaba gắn nhãn 'buyer đã sàng lọc'.", "evidence": "27/9 AI báo USD 0,13 cho 5.000+; buyer: nơi khác rẻ hơn; 28/9 shop MOQ 1.000/loại, buyer 'ok, quote me'; shop hỏi incoterm; 29/9 buyer 'I can't get u'.", "blocker": "Shop hỏi incoterm mà buyer không hiểu; vẫn chưa có báo giá.", "next_action": "Gửi luôn báo giá CIF Lautoka cho 1.000 cái × các công suất buyer cần, giải thích ngắn.", "verification_status": "chat_quote_only"},
+    {"tier": "B", "name": "Sanjida Akter", "country": "Bangladesh", "level": "L1+", "date": "2026-09-28", "need": "Bóng SKD 7W, 9W", "quantity": "Đơn đầu 1.000 cái, hứa đặt đều sau đó", "unit_price_usd": "7W 0,18 / 9W 0,20 (EXW)", "commercial_signal": "Muốn đơn thử 1.000 rồi đặt tiếp.", "evidence": "22/9 shop báo EXW, MOQ 5.000, gợi ý forwarder BD cho hàng lẻ; 26/9 buyer xin đơn đầu 1.000; 28/9 shop 'Sorry sir. MOQ is 5000pcs'.", "blocker": "Shop cứng MOQ 5.000.", "next_action": "Cân nhắc nhận đơn thử 1.000 cái giá cao hơn hoặc gom LCL với khách BD khác.", "verification_status": "chat_quote_only"},
+    {"tier": "B", "name": "Franck Dando", "country": "Ethiopia", "level": "L1+", "company": "Genelec", "date": "2026-09-22", "need": "Bóng 15W chân E27, muốn hợp tác lâu dài", "quantity": "1.000 cái", "commercial_signal": "Inquiry 1.000 cái có tên công ty.", "evidence": "AI nói 'có thể hỗ trợ 1.000 cái'; ngay sau đó shop 'MOQ is 5000pcs sir'; chưa có giá.", "blocker": "Thông tin MOQ mâu thuẫn; chưa báo giá.", "next_action": "Báo giá 15W E27 cho 1.000 và 5.000 cái để buyer chọn.", "verification_status": "chat_intent_only"},
+    {"tier": "B", "name": "Emad Helal", "country": "Qatar (giao Syria)", "level": "L1+", "date": "2026-09-23", "need": "Bảng mạch cho bóng A19 230V 9W và 12W (tháng 5); T10 (tháng 9)", "quantity": "Tháng 5: 5.000 cái 9W + 5.000 cái 12W; tháng 9: AI ghi 2 cái", "commercial_signal": "Khách cũ quay lại.", "evidence": "8/5 AI hứa hỏi giá quản lý, không có giá; 23/9 AI gửi báo giá T10 USD 0,13 (buyer chưa đọc).", "blocker": "Đơn tháng 5 chưa từng được báo giá.", "next_action": "Gửi giá PCB A19 9W/12W cho 5.000 cái mỗi loại.", "verification_status": "chat_quote_only"},
+    {"tier": "C", "name": "Subag Cito", "country": "Indonesia", "level": "L0", "date": "2026-09-27", "need": "Chỉ phần LED 18W tròn (đã có vỏ riêng)", "quantity": "100 cái", "commercial_signal": "Buyer đã sàng lọc.", "evidence": "Hỏi giá 100 cái 18W; AI chuyển nhân viên; 28/9 shop hỏi 'mẫu này bao nhiêu W?' dù buyer đã nói 18W.", "blocker": "Dưới MOQ; shop hỏi lại điều buyer đã nói.", "next_action": "Báo giá 100 cái hoặc giá mẫu.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "veerendra singh", "country": "India", "level": "L1+", "date": "2026-09-27", "need": "Bóng DOB 20W thân trắng", "quantity": "100 cái", "evidence": "AI chuyển nhân viên; shop chỉ 'thank you for the inquiry'.", "blocker": "Dưới MOQ.", "next_action": "Báo giá hoặc giải thích MOQ.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Sok Hang", "country": "Cambodia", "level": "L1+", "date": "2026-09-23", "need": "Bóng DOB T40", "quantity": "100 cái", "evidence": "Shop: MOQ 5.000, đề nghị tăng; buyer im.", "next_action": "Chào giá mẫu/lô nhỏ nếu muốn giữ khách.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "masyhudi ina", "country": "Indonesia", "level": "L1+", "date": "2026-09-24", "need": "Mua linh kiện rời (bảng LED, driver DOB, vỏ, đui) để lắp ráp tại Indonesia; hỏi mã HS", "quantity": "Chưa rõ", "commercial_signal": "Nhà lắp ráp – tiềm năng OEM/SKD.", "evidence": "Shop xin lỗi vì AI, gửi catalogue PDF, hỏi bóng A hay T; buyer hỏi khác nhau thế nào.", "next_action": "Gửi bảng so sánh A/T kèm giá bộ linh kiện theo 5.000 bộ, mã HS 8539.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Amofa Albert", "country": "Ghana", "level": "L1+", "date": "2026-09-22", "need": "Bóng 12W cho dự án ở Ghana", "quantity": "Chưa rõ", "commercial_signal": "Buyer đã sàng lọc, nói có dự án.", "evidence": "AI báo ship 1 cái USD 42,61; buyer hỏi 'What about the price'; shop chỉ xin danh thiếp.", "blocker": "Không ai báo giá.", "next_action": "Báo giá 12W và hỏi số lượng dự án.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Mei Mei", "country": "Indonesia", "level": "L1+", "date": "2026-09-26", "need": "Bóng DOB SKD chữ T 50W, hỏi ship về Indonesia", "quantity": "Chưa rõ", "evidence": "AI báo ship express 5.000 cái USD 2.754,26 (UPS).", "blocker": "Báo ship express cho hàng số lượng lớn làm buyer tưởng cước rất cao.", "next_action": "Báo cước đường biển/LCL thay vì express.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "muntasir oooo", "country": "Indonesia (Aceh)", "level": "L1+", "date": "2026-09-25", "need": "Bóng chữ T 12–30W, hỏi giao về Aceh", "quantity": "Chưa rõ", "evidence": "AI báo express 5.000 cái USD 2.754,26.", "next_action": "Hỏi số lượng, báo cước biển.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Jakir Molla", "country": "Bangladesh", "level": "L1+", "date": "2026-09-29", "need": "Bóng SKD 12W (gửi thẻ sản phẩm lặp lại từ 1/2026)", "quantity": "Chưa rõ", "evidence": "Gửi thẻ sản phẩm 17/1, 27/4, 13/8, 29/9; shop từng nói 'just say what you want'.", "next_action": "Gửi giá 12W cho 5.000 cái chủ động.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Ron Grinblat", "country": "USA (San Diego)", "level": "L0", "date": "2026-09-29", "need": "26 bóng T10 RGB + trắng ấm, remote IR, chiếu sáng cảnh quan ngoài trời", "quantity": "26 cái", "evidence": "AI gửi báo giá bóng SKD 12W USD 0,12 MOQ 5.000 (sai sản phẩm); buyer đòi ảnh/link chứng minh sản phẩm có thật.", "blocker": "Shop không có sản phẩm RGB này.", "next_action": "Nói rõ không có mẫu RGB T10 để giữ uy tín.", "verification_status": "chat_quote_only"},
+    {"tier": "C", "name": "Nippon Sarkar", "country": "Bangladesh", "level": "L0", "date": "2026-09-28", "need": "Linh kiện DOB 12–18W", "quantity": "1 cái (mẫu)", "evidence": "Inquiry 1 cái; 28/9 buyer 'cần 1 cái'; shop 'please send specs'.", "next_action": "Báo giá mẫu + ship hoặc từ chối lịch sự.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Abdur Rashid", "country": "Bangladesh", "level": "L0", "date": "2026-09-29", "need": "Bóng DOB SKD 12W", "quantity": "1 cái", "evidence": "Inquiry 1 cái; AI hỏi chân B22/E27.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Sanjeewa Lakmal", "country": "Sri Lanka", "level": "L0", "date": "2026-09-28", "need": "Bảng LED 15W hoặc 12W", "quantity": "10 cái", "evidence": "AI đề xuất 20W; shop 'thank you for the inquiry'.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "hitalo araujo", "country": "Brazil", "level": "L0", "date": "2026-09-27", "need": "Bóng 3W trắng lạnh", "quantity": "10 cái", "evidence": "Inquiry 10 cái; AI hỏi chân đèn.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Monir Khan", "country": "Bangladesh", "level": "L0", "date": "2026-09-28", "need": "Hỏi chính sách bảo hành/đổi trả cho đơn sỉ linh kiện DOB", "quantity": "Chưa rõ", "evidence": "AI trả lời bằng tiếng Bangla: bảo hành 2 năm.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Nil Kamol", "country": "Bangladesh", "level": "L0", "date": "2026-09-26", "need": "Bóng 10W", "quantity": "Chưa rõ", "evidence": "AI hỏi số lượng; buyer chưa trả lời.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Kazi Shorif", "country": "Bangladesh", "level": "L1+", "date": "2026-09-25", "need": "Bóng 12W", "quantity": "Chưa rõ", "evidence": "AI gửi ảnh; shop 'please send specs' (chưa đọc).", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Malik AbdUlRahim", "country": "Pakistan", "level": "L1+", "date": "2026-09-24", "need": "'12d chip' (chip LED)", "quantity": "Chưa rõ", "evidence": "Shop hỏi có phải chỉ cần chip LED (chưa đọc).", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Ibrahima Diallo", "country": "Senegal", "level": "L0", "date": "2026-09-27", "need": "Bóng 30W cho dự án văn phòng/nhà (theo tin AI)", "quantity": "Chưa rõ", "evidence": "AI gửi báo giá 30W USD 0,13 MOQ 5.000; không thấy tin buyer.", "verification_status": "chat_quote_only; from_ai_reply"},
+    {"tier": "C", "name": "Fernando Canaviri", "country": "Brazil", "level": "L0", "date": "2026-09-23", "need": "Bóng 30W", "quantity": "1 cái (theo tin AI)", "evidence": "AI báo giá USD 0,13 MOQ 5.000 (buyer chưa đọc).", "verification_status": "chat_quote_only; from_ai_reply"},
+    {"tier": "C", "name": "Muhammad Didi", "country": "Indonesia", "level": "L1+", "date": "2026-09-26", "need": "SKD đầy đủ 12W (inquiry 5.000 cái tháng 2)", "quantity": "Tháng 2: 5.000 cái", "evidence": "26/9 chỉ có thông báo 'buyer vào xem gian' và tin chào chung của shop.", "next_action": "Nhắn chủ động kèm giá 12W 5.000 cái vì buyer vừa quay lại xem gian.", "verification_status": "chat_intent_only"}
+  ],
+  "low_fit_or_closed": [
+    {"name": "MetroLPVN Khang", "country": "Vietnam", "level": "L1+", "date": "2026-09-22", "note": "Cần 5.000 driver rời 9–100W, dimmable, chứng nhận UL/ETL; shop trả lời không có."},
+    {"name": "HoangVan Hai", "country": "Cờ US", "level": "L1+", "date": "2026-09-23", "note": "Hỏi đèn đội đầu G8-669 IP67 dùng lặn sâu 50 m – sản phẩm không đạt (IP67 không phải đèn lặn)."}
+  ],
+  "risk_flags": [
+    {"name": "Jashim uddin", "date": "2026-09-29", "note": "Xin WeChat để trao đổi ngoài sàn."},
+    {"name": "Mdsohag Mia", "date": "2026-09-28", "note": "Đòi WhatsApp và để số điện thoại trong chat (không ghi lại)."},
+    {"name": "Mahamadou Camara", "date": "2026-09-25", "note": "Xin số điện thoại của sếp; Alibaba đã hiện cảnh báo giao dịch ngoài sàn."}
+  ],
+  "store_level_findings": [
+    "Gian có nhiều đơn lớn nhất trong các gian đã đọc: 11 buyer hạng A (≥ 5.000 cái), nhưng chỉ 1 buyer (md moshiul azam) nhận được báo giá bằng file; phần lớn chỉ nhận câu 'please send specs sir' hoặc 'thank you for the inquiry'.",
+    "Khi AI tự động tiếp nhận đã hỏi đủ công suất/chân/màu/số lượng, nhân viên vào sau lại hỏi 'please send specs' – buyer phải lặp lại (Subag, Jim Arthur, Kazi, Walidvegoss).",
+    "MOQ không nhất quán: AI nói hỗ trợ 1.000 cái, nhân viên nói 5.000; DOB-only 20.000; một số buyer muốn đơn thử 1.000 bị từ chối (Sanjida, Franck, Nilesh).",
+    "AI báo phí ship express UPS USD 2.754 cho 5.000 bóng ở Indonesia – làm buyer tưởng cước quá cao; nên báo cước biển.",
+    "Nhiều buyer Mỹ/Jamaica cần 110–120V hoặc 85–265V; sản phẩm hiện là 220V → cần câu trả lời chuẩn về bản dải rộng.",
+    "Nhiều buyer Bangladesh/Ấn Độ đòi WhatsApp/WeChat – cần giữ trao đổi trên Alibaba.",
+    "Hai hội thoại là nhà cung cấp dây thừng (shop đang đi mua dây) – loại khỏi danh sách buyer."
+  ],
+  "counts": {"conversations_updated_in_window": 41, "real_buyers": 38, "tier_A": 11, "tier_B": 5, "tier_C": 20, "low_fit": 2, "pending_payment_orders": 0, "paid_orders": 0, "refund_or_dispute": 0, "spam_or_supplier": 2, "risk_flags": 3},
+  "data_gaps": [
+    "Giá trong file báo giá PDF (md moshiul azam) và ảnh giá EXW (ashish kousins) chưa đọc được con số.",
+    "Số lượng của Mahamadou Camara ghi '50.0000' – không rõ 50.000 hay 500.000.",
+    "Icon level L1+ không phân biệt L1/L2/L3.",
+    "Không có thẻ đơn hàng nào trong kỳ; chưa đối chiếu Order Center."
+  ]
+}

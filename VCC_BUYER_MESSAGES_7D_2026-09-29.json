@@ -1,0 +1,116 @@
+{
+  "store": "Viet ColdChain (VCC)",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin; đối chiếu thêm danh sách All Inquiries (message.alibaba.com/message/default.htm)",
+  "period": {
+    "from": "2026-09-22",
+    "to": "2026-09-29 09:45 (giờ VN)",
+    "timezone": "UTC+7"
+  },
+  "read_method": {
+    "conversations_in_window": 3,
+    "buyer_conversations_read": 2,
+    "excluded": [
+      "Rocky Smith / Villes Food (Guangzhou) - nhà cung cấp TQ chào bán sô-cô-la/cà phê giảm cân cho shop, không phải buyer"
+    ],
+    "full_history_loaded": "Cuộn lên hết lịch sử cả 3 hội thoại; không cắt nội dung. Hội thoại cập nhật gần nhất trước kỳ là Pauleen Riel 19/9 nên ngoài kỳ.",
+    "sender_tagging": "Tin của buyer có tên buyer đứng trước; tin của shop có trạng thái Đọc/Chưa đọc. Tin dạng văn mẫu 'VIET COLDCHAIN leverages advanced processing technology...' là mẫu trả lời AI/tự động tiếp nhận.",
+    "level_source": "Icon level cạnh tên trong danh sách hội thoại (không có icon = L0; icon L1+ không tách được L1/L2).",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại (icbu-icon-flag-xx).",
+    "order_panel_note": "Không có thẻ đơn hàng/Trade Assurance nào trong 3 hội thoại."
+  },
+  "tier_thresholds_proposed_for_vcc": {
+    "A": "≥ 1 container (20'/40' reefer, ~10–24 tấn) hoặc giá trị hàng ≥ USD 10.000 hoặc NPP/OEM private label có spec rõ",
+    "B": "≥ 1.000 kg hoặc ≥ USD 1.000 hoặc hỏi OEM/NPP hoặc L3–L4 có tên công ty",
+    "C": "Còn lại",
+    "note": "Đề xuất theo quy mô hàng đông lạnh bán theo tấn/container; Tam có thể chỉnh trong ô cấu hình Buyer_master (Y:Z) khi tạo tab."
+  },
+  "top5_priority": [
+    {
+      "rank": 1,
+      "tier": "B",
+      "name": "User name (tên hiển thị) – Veticon Trading Co",
+      "country": "Pakistan",
+      "level": "L1+",
+      "company": "Veticon Trading Co",
+      "date": "2026-09-28",
+      "need": "IQF Frozen Mango Slices (xoài Keo) Việt Nam, thùng 10 kg; hỏi có làm theo yêu cầu (customization) không",
+      "quantity": "1.000 kg",
+      "unit_price_usd": null,
+      "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Chưa có báo giá, chưa có đơn",
+      "commercial_signal": "Inquiry chính thức (ID 20506803949, nguồn Search List) 1.000 kg; buyer nói 'có vài câu hỏi trước khi đặt đơn': MOQ, cách thanh toán, thời gian giao.",
+      "evidence": "28/9 18:08 inquiry 1.000 kg + 'Do you support customization?'; 19:08 buyer hỏi MOQ/thanh toán/thời gian ship và đề nghị gửi câu trả lời qua email ngoài Alibaba; 21:45 shop hỏi lại spec và nhắn 'I will send all the details upon request' (buyer chưa đọc).",
+      "blocker": "Shop chưa trả lời 3 câu hỏi của buyer (MOQ, thanh toán, lead time) và chưa báo giá; buyer đòi liên hệ qua email ngoài sàn, tên miền email không khớp tên công ty → cần cảnh giác.",
+      "next_action": "Trong 24h: trả lời ngay trên Alibaba 3 câu hỏi (MOQ, thanh toán qua Trade Assurance, lead time) + báo giá FOB/CFR cho 1.000 kg kèm quy cách thùng 10 kg; không gửi thông tin qua email ngoài sàn; hỏi cảng đến để tính cước lạnh.",
+      "verification_status": "chat_intent_only (có số lượng); risk_offplatform_email"
+    },
+    {
+      "rank": 2,
+      "tier": "C",
+      "name": "JoseAndres Estrada",
+      "country": "Guatemala",
+      "level": "L0",
+      "company": "—",
+      "date": "2026-09-29",
+      "need": "Khoai lang tím sấy chân không (VF) – theo tin shop thì buyer dùng làm bột (flour manufacturing) và hỏi cước vận chuyển",
+      "quantity": "Chưa rõ (báo giá shop ghi MOQ ≥ 2 kg)",
+      "unit_price_usd": 8.0,
+      "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Mới có báo giá, chưa có đơn",
+      "commercial_signal": "Shop đã gửi thẻ Báo giá: VF Vacuum-Fried Purple Sweet Potato Chips, ≥ 2 kg, USD 8.0/kg; buyer đã đọc.",
+      "evidence": "29/9 01:13 shop gửi thẻ báo giá + tin mẫu AI hỏi địa chỉ giao, số lượng mỗi lô, phương thức vận chuyển, độ ẩm/kết cấu cho sản xuất bột. Nội dung gốc của buyer không hiện trong chat (có thể đến từ RFQ), không có trong danh sách All Inquiries.",
+      "blocker": "Chưa biết số lượng; buyer làm bột nên có thể cần nguyên liệu sấy thường/bột, không phải chips chiên chân không – dễ báo lệch sản phẩm.",
+      "next_action": "Trong 48h: hỏi rõ số lượng/tháng, dạng hàng (chips VF hay khoai tím sấy/bột), cảng đến Guatemala; nếu làm bột, đề xuất sản phẩm sấy phù hợp và giá theo tấn.",
+      "verification_status": "chat_quote_only; buyer_original_message_not_visible"
+    }
+  ],
+  "ranking_rationale": "Chỉ có 2 buyer thật trong kỳ nên Top chỉ có 2 card (không tạo card giả). Veticon xếp trên vì có số lượng 1.000 kg (hạng B), dù có cờ rủi ro email ngoài sàn. JoseAndres hạng C vì chưa có số lượng.",
+  "confirmed_paid_orders_after_sales": [],
+  "follow_up_rows": [],
+  "low_fit_or_closed": [
+    {
+      "name": "Rocky Smith",
+      "country": "China",
+      "level": "—",
+      "company": "Villes Food (Guangzhou) Co., Ltd.",
+      "date": "2026-09-28",
+      "note": "Nhà cung cấp TQ chào bán catalog, sô-cô-la probiotic giảm cân (USD 5.85/hộp, MOQ 30) và cà phê xanh giảm cân cho shop (22–28/9). Shop đã từ chối. Không phải buyer; có thể chặn người dùng TQ trong Blacklist Customers."
+    }
+  ],
+  "risk_flags": [
+    {
+      "name": "User name – Veticon Trading Co",
+      "country": "Pakistan",
+      "level": "L1+",
+      "date": "2026-09-28",
+      "note": "Buyer nói 'thường offline trên Alibaba' và yêu cầu gửi câu trả lời qua email ngoài nền tảng; tên miền email không khớp tên công ty. Giữ giao dịch trên Alibaba/Trade Assurance, không gửi báo giá hay chứng từ qua email."
+    }
+  ],
+  "store_level_findings": [
+    "Tuần rất ít hội thoại: 3 hội thoại cập nhật trong 7 ngày, chỉ 2 là buyer thật (1 inquiry 1.000 kg, 1 báo giá RFQ).",
+    "Chỉ số tiếp nhận (trang All Inquiries): tỉ lệ phản hồi nhanh 63,64%, thời gian phản hồi 8,81 giờ, tỉ lệ phản hồi trong ngày 72,73%.",
+    "Shop trả lời Veticon bằng câu hỏi ngược và câu 'I will send all the details upon request' (câu này giống lời của buyer), không trả lời MOQ/thanh toán/lead time → dễ mất lead.",
+    "Tin trả lời AI mẫu (HACCP/ISO/GlobalG.A.P, Custom Manufacturer) lặp lại gần như nguyên văn ở nhiều buyer; nên có nhân viên bổ sung giá và điều kiện cụ thể.",
+    "Nhà cung cấp TQ (Rocky Smith) nhắn chào hàng nhiều lần – có thể dùng chức năng chặn người dùng TQ."
+  ],
+  "counts": {
+    "conversations_updated_in_window": 3,
+    "real_buyers": 2,
+    "tier_A": 0,
+    "tier_B": 1,
+    "tier_C": 1,
+    "pending_payment_orders": 0,
+    "paid_orders": 0,
+    "refund_or_dispute": 0,
+    "spam_or_supplier": 1,
+    "risk_flags": 1
+  },
+  "data_gaps": [
+    "Nội dung gốc RFQ/inquiry của JoseAndres Estrada không hiện trong chat và không có trong All Inquiries; cần xem mục RFQ đã báo giá.",
+    "Icon level L1+ không phân biệt L1/L2/L3.",
+    "Chưa đối chiếu Order Center/Trade Assurance (không có thẻ đơn trong chat).",
+    "Trình duyệt tích hợp báo lỗi IndexedDB của Messenger; đã tải lại trang và lịch sử hiển thị bình thường, nhưng nên kiểm tra lại nếu thấy thiếu tin."
+  ]
+}

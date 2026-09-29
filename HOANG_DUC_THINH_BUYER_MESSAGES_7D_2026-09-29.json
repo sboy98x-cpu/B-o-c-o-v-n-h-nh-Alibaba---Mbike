@@ -1,0 +1,119 @@
+{
+  "store": "Hoàng Đức Thịnh",
+  "source": "Alibaba Messenger (message.alibaba.com) trong trình duyệt tích hợp của app Claude, chỉ đọc, không gửi tin",
+  "period": {"from": "2026-09-22", "to": "2026-09-29 10:25 (giờ VN)", "timezone": "UTC+7"},
+  "read_method": {
+    "conversations_in_window": 8,
+    "buyer_conversations_read": 8,
+    "excluded": [],
+    "full_history_loaded": "Cuộn đến đầu hội thoại cho cả 8 buyer; anaveronica witkind đọc cả phần 21/9 vì hội thoại nối sang 22/9.",
+    "sender_tagging": "Tin buyer có tên đứng trước; tin shop có Đọc/Chưa đọc. Phần lớn là AI tự động tiếp nhận; nhân viên xuất hiện ở Priya Priya và User name (22/9) – cả hai lần đều chuyển khách sang WhatsApp/WeChat.",
+    "level_source": "Icon level cạnh tên (không có icon = L0; L1+ không tách L1/L2).",
+    "country_source": "Class cờ quốc gia trong danh sách hội thoại.",
+    "price_note": "Giá niêm yết trên thẻ sản phẩm là VND; quy đổi USD ước tính theo ~26.300 VND/USD, chỉ để xếp hạng."
+  },
+  "tier_thresholds": {
+    "A": "≥ 1 container hoặc giá trị hàng ≥ USD 5.000 hoặc ≥ 100 cái/bộ",
+    "B": "≥ 20 cái/bộ hoặc ≥ USD 1.000 hoặc đại lý/NPP có tên công ty",
+    "C": "Còn lại (mua lẻ, dùng cá nhân, chưa có số lượng)",
+    "note": "Đề xuất theo hàng nội thất đóng container; Tam chỉnh trong Buyer_master (Y:Z)."
+  },
+  "top5_priority": [
+    {
+      "rank": 1, "tier": "A",
+      "name": "jorge cortes", "country": "Mexico", "level": "L1+", "company": "—", "date": "2026-09-24",
+      "need": "Ghế ăn bọc nhung trắng, chân kim loại mạ vàng, lưng chần dọc (72×56×54 cm)",
+      "quantity": "1 container (full container)",
+      "unit_price_usd": null, "unit_price_listing_vnd": 3072507, "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Buyer muốn mua ghế tại Việt Nam, hỏi giá và nói rõ 'full container'.",
+      "evidence": "24/9 06:53–07:01 buyer hỏi có sản xuất ở VN và ship Mexico không, hỏi giá; AI trả lời có (nhà máy Tây Ninh), báo ship express USD 42,75; buyer 'full container' → AI chuyển nhân viên; từ đó không ai trả lời (5 ngày).",
+      "blocker": "Không có nhân viên tiếp sau khi AI chuyển; chưa có giá, chưa có số ghế/container.",
+      "next_action": "Hôm nay: báo giá FOB theo container 40HQ (số ghế/container, đơn giá, màu vải), thời gian sản xuất, đề xuất mẫu.",
+      "verification_status": "chat_intent_only (container)"
+    },
+    {
+      "rank": 2, "tier": "A",
+      "name": "User name (cờ Trung Quốc)", "country": "China", "level": "L0", "company": "—", "date": "2026-09-22",
+      "need": "Tủ phòng khách tre/mây 2 ngăn kéo 3 ngăn, 80×40×120 cm, màu Natural",
+      "quantity": "1 container",
+      "unit_price_usd": null, "unit_price_listing_vnd": "2.404.571–2.538.158", "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Buyer đã sàng lọc, hỏi hàng sẵn và bảng báo giá cho 1 container.",
+      "evidence": "22/9 09:45 buyer xin quotation sheet; 09:57 '1 container'; AI xác nhận MOQ 20, màu Natural; nhân viên hỏi loại gỗ (thông/sồi/tràm/teak); buyer xin gửi báo giá qua email hoặc WeChat; 10:10 shop 'pls scan my Wechat'.",
+      "blocker": "Trao đổi đã chuyển sang WeChat ngoài Alibaba – không theo dõi được, mất bảo vệ Trade Assurance.",
+      "next_action": "Gửi lại báo giá container trên Alibaba (song song WeChat) để giữ lịch sử; hỏi loại gỗ buyer chọn.",
+      "verification_status": "chat_intent_only (container); moved_offplatform_by_shop"
+    },
+    {
+      "rank": 3, "tier": "A",
+      "name": "Priya Priya", "country": "Malaysia", "level": "L1+", "company": "KIMTAR (M) SDN. BHD. (buyer là purchasing agent)", "date": "2026-09-24",
+      "need": "Áo phủ giường tròn có bàn phụ tích hợp, Oxford 600D, kích thước tuỳ chỉnh",
+      "quantity": "200 cái",
+      "unit_price_usd": null, "unit_price_listing_vnd": "531.678–657.250", "goods_value_usd": null,
+      "goods_value_note": "Theo giá niêm yết ≈ USD 20–25/cái → 200 cái ≈ USD 4.000–5.000",
+      "shipping_usd": null,
+      "payment_status": "Chưa báo giá trên Alibaba",
+      "commercial_signal": "Đại lý mua hàng cho công ty Malaysia, số lượng 200.",
+      "evidence": "24/9 17:32 buyer 'I need to purchase 200 units'; AI hỏi màu; 17:36 buyer đề nghị WhatsApp; shop 'pls send me your WhatsApp' rồi 'added'.",
+      "blocker": "Chuyển sang WhatsApp ngay, không còn gì trên Alibaba để theo dõi.",
+      "next_action": "Hỏi lại nhân viên kết quả trên WhatsApp; nếu có báo giá, gửi bản sao/đơn nháp trên Alibaba.",
+      "verification_status": "chat_intent_only (có số lượng); moved_offplatform_by_shop"
+    },
+    {
+      "rank": 4, "tier": "B",
+      "name": "Rivo Rakoto", "country": "Madagascar", "level": "L0", "company": "—", "date": "2026-09-23",
+      "need": "Sofa góc chữ L MD27 nén chân không, da PU, khung gỗ, 200×80×85 cm, màu xám/be/xanh",
+      "quantity": "20 bộ",
+      "unit_price_usd": null, "goods_value_usd": null, "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Inquiry chính thức 20 bộ (ID 20507005564), OEM logo/đóng gói được.",
+      "evidence": "23/9 16:28 inquiry 20 bộ; AI trả lời bằng tiếng Pháp, hỏi màu. Buyer chưa đọc.",
+      "blocker": "Chưa có giá; buyer chưa đọc tin.",
+      "next_action": "Báo giá 20 bộ + cước về Toamasina bằng tiếng Pháp.",
+      "verification_status": "chat_intent_only (có số lượng)"
+    },
+    {
+      "rank": 5, "tier": "C",
+      "name": "Violet Mwansa", "country": "Zambia", "level": "L1+", "company": "—", "date": "2026-09-25",
+      "need": "Kệ TV gỗ xoài, cần dài 2 m (mẫu chuẩn 150 cm)",
+      "quantity": "Chưa rõ (MOQ niêm yết 30)",
+      "unit_price_usd": null, "unit_price_listing_vnd": "2.003.809–2.404.571", "goods_value_usd": null,
+      "shipping_usd": null,
+      "payment_status": "Chưa báo giá",
+      "commercial_signal": "Hỏi kích thước tuỳ chỉnh.",
+      "evidence": "25/9 buyer hỏi dài bao nhiêu, muốn 2 m; AI nói 200 cm là kích thước tuỳ chỉnh, hỏi số lượng.",
+      "blocker": "Chưa có số lượng.",
+      "next_action": "Xác nhận làm được 2 m, báo giá theo MOQ 30.",
+      "verification_status": "chat_intent_only"
+    }
+  ],
+  "ranking_rationale": "2 buyer hỏi 1 container (jorge cortes, User name) và 1 đại lý 200 cái (Priya) là hạng A. Rivo 20 bộ hạng B. Còn lại hạng C.",
+  "confirmed_paid_orders_after_sales": [],
+  "follow_up_rows": [
+    {"tier": "C", "name": "anaveronica witkind", "country": "Uruguay", "level": "L0", "date": "2026-09-22", "need": "Áo phủ sofa may đo (ghế 110×110, sofa thẳng 190/235/150, sâu 1 m), vải chống nắng hoặc có dây buộc", "quantity": "2 bộ (buyer nói 'tính cho 2 bộ riêng lẻ'; AI hiểu nhầm thành 1.000 cái)", "evidence": "21/9 AI ghi '1.000 piezas en total' rồi buyer sửa 'calcular venta por 2 unidades'; 22/9 shop hỏi số lượng từng cỡ (buyer chưa đọc).", "blocker": "Mua lẻ, dưới MOQ 100.", "next_action": "Báo giá lẻ nếu làm được, hoặc báo MOQ.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "mariam naser", "country": "Canada (Toronto)", "level": "L1+", "date": "2026-09-24", "need": "Sofa module chữ L/U 280×150×85 cm, dùng cá nhân", "quantity": "1 (cá nhân)", "evidence": "Buyer hỏi thời gian giao về Toronto, nói 'for personal need'; AI chuyển nhân viên, không ai trả lời.", "next_action": "Trả lời lịch sự MOQ 10 hoặc chào giá lẻ.", "verification_status": "chat_intent_only"},
+    {"tier": "C", "name": "Yu Kemi", "country": "China", "level": "L0", "date": "2026-09-23", "need": "Lều thùng xe bán tải, hỏi có sản xuất tại VN và đã xuất đi Mỹ chưa", "quantity": "Chưa rõ", "evidence": "Buyer đã sàng lọc; AI hỏi số lượng, hứa hỏi đồng nghiệp về hàng đi Mỹ.", "blocker": "Có thể là thương lái TQ tìm nguồn VN để né thuế Mỹ; sản phẩm ngoài nhóm nội thất.", "next_action": "Trả lời có/không làm lều, hỏi số lượng.", "verification_status": "chat_intent_only"}
+  ],
+  "low_fit_or_closed": [],
+  "risk_flags": [
+    {"name": "Priya Priya", "date": "2026-09-24", "note": "Nhân viên shop chủ động xin WhatsApp và chuyển trao đổi ra ngoài Alibaba (buyer cũng đề nghị). Alibaba có thể trừ điểm/giới hạn nếu bị phát hiện, và mất bảo vệ đơn."},
+    {"name": "User name (cờ Trung Quốc)", "date": "2026-09-22", "note": "Nhân viên shop mời quét WeChat; buyer đòi báo giá qua email/WeChat."}
+  ],
+  "store_level_findings": [
+    "Tuần có 2 yêu cầu 1 container (ghế ăn nhung – Mexico, tủ tre mây – TQ) và 1 đại lý 200 cái (Malaysia), nhưng không có báo giá nào trên Alibaba.",
+    "2/3 buyer lớn đã bị nhân viên chuyển sang WhatsApp/WeChat – chủ gian không nhìn thấy tiến độ và có rủi ro bị Alibaba phạt.",
+    "Ở jorge cortes và mariam naser, AI đã chuyển 'colleague will continue' nhưng không nhân viên nào vào trả lời.",
+    "AI hiểu nhầm số lượng ở anaveronica (ghi 1.000 cái trong khi buyer cần 2 bộ).",
+    "Buyer hay hỏi kích thước tuỳ chỉnh (kệ TV 2 m, áo phủ sofa may đo) – nên có bảng giá tuỳ chỉnh chuẩn."
+  ],
+  "counts": {"conversations_updated_in_window": 8, "real_buyers": 8, "tier_A": 3, "tier_B": 1, "tier_C": 4, "pending_payment_orders": 0, "paid_orders": 0, "refund_or_dispute": 0, "spam_or_supplier": 0, "risk_flags": 2},
+  "data_gaps": [
+    "Giá USD là ước tính từ giá niêm yết VND; chưa có báo giá thật.",
+    "Không biết kết quả trao đổi trên WhatsApp/WeChat của Priya và User name.",
+    "Icon level L1+ không phân biệt L1/L2/L3.",
+    "Không có thẻ đơn hàng nào trong kỳ; chưa đối chiếu Order Center."
+  ]
+}
