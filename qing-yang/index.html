@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="vi">
+<html lang="zh">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>Qing Yang · Báo cáo tuần gọn</title>
@@ -186,7 +186,7 @@ html[lang="zh"] .vi{display:none}html[lang="vi"] .zh{display:none}
 </head>
 <body>
 <main class="wrap">
-  <div class="langbar" id="langbar"><button type="button" data-l="vi">Tiếng Việt</button><button type="button" data-l="zh">中文</button></div>
+  <div class="langbar" id="langbar"><button type="button" data-l="zh">中文</button><button type="button" data-l="vi">Tiếng Việt</button></div>
   <header class="hero">
     <div class="kick" id="kick"></div>
     <h1 id="storeName"></h1>
@@ -322,7 +322,7 @@ const SPEC = {"spec_version": "3.0-mobile-owner", "prepared_at": "2026-10-17", "
 const CFG = {"key": "qingyang", "storeName": "Qing Yang", "bilingual": true, "coreRe": "veneer|edge ?band|banding|edging|edge tape|wood|plywood|mdf|melamine|hpl|ebony|oak|walnut|teak|okoume|laminate|木皮|封边|木业|板"};
 const $=id=>document.getElementById(id);
 const CJK=/[㐀-鿿]/;
-let LANG=CFG.bilingual?(localStorage.getItem(CFG.key+'_lang')||'vi'):'vi';
+let LANG=CFG.bilingual?(localStorage.getItem(CFG.key+'_lang2')||'zh'):'vi';
 
 /* ---------- bilingual helpers ---------- */
 function bi(s){
@@ -633,7 +633,7 @@ function drawCharts(){
     series:[{name:X.k[1],type:'bar',yAxisIndex:1,data:wk.map(w=>num(w.k[1])),itemStyle:{color:'#fca5a5'}},{name:X.k[11],type:'line',data:wk.map(w=>num(w.k[11])),smooth:true,itemStyle:{color:'#D97706'}},{name:X.k[10],type:'line',data:wk.map(w=>num(w.k[10])),smooth:true,itemStyle:{color:'#16A34A'}}]});
 }
 /* ---------- init ---------- */
-if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang',LANG);}catch(e){} render(); const o=$('owner_s'); if(o) o.textContent=LANG==='zh'?'4位大买家待报价 · 0条新询盘 · 0个红色健康指标':'4 buyer lớn chờ báo giá · 0 hội thoại mới · 0 ô sức khỏe đỏ'; })); }
+if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang2',LANG);}catch(e){} render(); const o=$('owner_s'); if(o) o.textContent=LANG==='zh'?'4位大买家待报价 · 0条新询盘 · 0个红色健康指标':'4 buyer lớn chờ báo giá · 0 hội thoại mới · 0 ô sức khỏe đỏ'; })); }
 render();
 if(typeof echarts==='undefined'){ ['ch_funnel','ch_country','ch_vhist','ch_kw','ch_trend','ch_products'].forEach(id=>{$(id).innerHTML='<p class="note" style="padding:20px">'+t().noChart+'</p>';}); }
 else { window.__charts=true; drawCharts(); let lm=MOB(),rt; const rs=()=>{clearTimeout(rt);rt=setTimeout(()=>{ if(MOB()!==lm){lm=MOB();drawCharts();} else charts.forEach(c=>c.resize()); },150);}; window.addEventListener('resize',rs); window.addEventListener('orientationchange',rs); }
