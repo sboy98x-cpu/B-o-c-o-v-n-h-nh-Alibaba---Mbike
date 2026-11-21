@@ -641,7 +641,7 @@ function drawCharts(){
     series:[{name:X.k[1],type:'bar',yAxisIndex:1,data:wk.map(w=>num(w.k[1])),itemStyle:{color:'#fca5a5'}},{name:X.k[11],type:'line',data:wk.map(w=>num(w.k[11])),smooth:true,itemStyle:{color:'#D97706'}},{name:X.k[10],type:'line',data:wk.map(w=>num(w.k[10])),smooth:true,itemStyle:{color:'#16A34A'}}]});
 }
 /* ---------- init ---------- */
-if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang',LANG);}catch(e){} render(); const o=$('owner_s'); if(o) o.textContent='B05 hỏi 1.000 bộ, chưa có báo giá · 7 khách hỏi hàng tuần này'; })); }
+if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang',LANG);}catch(e){} render(); const o=$('owner_s'); if(o) o.textContent='9 đơn chờ giao, 8 quá hạn · B01 hỏi 10 bộ NX500 chưa có giá · 44 hội thoại 07–21/11'; })); }
 render();
 if(typeof echarts==='undefined'){ ['ch_funnel','ch_country','ch_vhist','ch_kw','ch_trend','ch_products'].forEach(id=>{$(id).innerHTML='<p class="note" style="padding:20px">'+t().noChart+'</p>';}); }
 else { window.__charts=true; drawCharts(); let lm=MOB(),rt; const rs=()=>{clearTimeout(rt);rt=setTimeout(()=>{ if(MOB()!==lm){lm=MOB();drawCharts();} else charts.forEach(c=>c.resize()); },150);}; window.addEventListener('resize',rs); window.addEventListener('orientationchange',rs); }
@@ -650,7 +650,7 @@ else { window.__charts=true; drawCharts(); let lm=MOB(),rt; const rs=()=>{clearT
   function on(){ let cur=0; secs.forEach((s,i)=>{ if(s.getBoundingClientRect().top<160) cur=i; }); links.forEach((a,i)=>a.classList.toggle('on',i===cur)); }
   window.addEventListener('scroll',on,{passive:true}); on(); })();
 
-(function(){ const o=$('owner_s'); if(o) o.textContent='B05 hỏi 1.000 bộ, chưa có báo giá · 7 khách hỏi hàng tuần này';
+(function(){ const o=$('owner_s'); if(o) o.textContent='9 đơn chờ giao, 8 quá hạn · B01 hỏi 10 bộ NX500 chưa có giá · 44 hội thoại 07–21/11';
  document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{const el=$(b.dataset.copy);const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Đã chọn, bấm sao chép';};try{navigator.clipboard.writeText(el.textContent).then(()=>{b.textContent='Đã chép';},sel);}catch(e){sel();}}));
 })();
 </script>
