@@ -380,7 +380,7 @@ const T={
   vhH:'Xu hướng visitor các kỳ gần nhất',vhN:'Mỗi cột là một kỳ visitor của sheet; đường là buyer L1+',
   tpH:'Top 3 sản phẩm hút khách',tpLead:'Xếp hạng theo Unique Visitors (UV); bấm tên hoặc nút để mở Alibaba.',tpNote:'Nguồn chỉ có UV nên không hiển thị order, inquiry hay CTR từng sản phẩm. Kỳ 2026 Week 46 (15–21/11). Cả 3 sản phẩm đều là phụ kiện xe máy của Mbike.',open:'Mở sản phẩm ↗',
   kwH:'Buyer đang tìm gì thật tuần này?',kwLead:'Từ khóa chính xác của visitor, giữ nguyên câu đã tìm; chỉ vẽ nhóm phù hợp ngành.',
-  kwNote:(p)=>'Kỳ '+p+' · 1.871 từ khóa, 2.181 lượt · thanh = số lần xuất hiện · PV dòng nguồn là PV của visitor đã gõ từ đó, không phải số lượt tìm kiếm · vài từ khóa Alibaba hiện mất dấu, giữ nguyên',
+  kwNote:(p)=>'Kỳ '+p+' · '+kws.length.toLocaleString('vi-VN')+' từ khóa, '+kws.reduce((a,k)=>a+k.occurrences,0).toLocaleString('vi-VN')+' lượt · thanh = số lần xuất hiện · PV dòng nguồn là PV của visitor đã gõ từ đó, không phải số lượt tìm kiếm · vài từ khóa Alibaba hiện mất dấu, giữ nguyên',
   kwWarn:(a,b)=>'Cảnh báo chất lượng dữ liệu: chỉ '+a+'/'+b+' từ khóa tuần này phù hợp ngành nên không vẽ biểu đồ "hot" để tránh hiểu sai. Kiểm tra nguồn traffic/keyword lệch ngành.',
   kwAllS:n=>'Xem tất cả '+n+' từ khóa chính xác',kwQ:'Tìm từ khóa...',kwCols:['Từ khóa (nguyên văn)','Số lần','PV dòng nguồn','Phân loại'],
   cls:{core:'Đúng ngành',other:'Chưa xác định',noise:'Lệch ngành'},

@@ -1,0 +1,653 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Karats · Báo cáo tuần</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
+<style>
+:root{--navy:#102A43;--blue:#2563EB;--blue2:#DBEAFE;--green:#16A34A;--green2:#DCFCE7;--amber:#D97706;--amber2:#FEF3C7;--red:#DC2626;--red2:#FEE2E2;--bg:#F3F6FA;--ink:#172033;--muted:#5b6678;--line:#E4EAF1;--shadow:0 2px 8px rgba(16,42,67,.07);--h1:#2b1d0e;--h2:#8a6420}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.55 Inter,Arial,"PingFang SC","Microsoft YaHei",sans-serif;font-variant-numeric:tabular-nums;-webkit-text-size-adjust:100%}
+.wrap{max-width:1440px;margin:auto;padding:20px 28px 48px}
+.langbar{display:none;justify-content:flex-end;gap:8px;margin-bottom:10px}
+.langbar.on{display:flex}
+.langbar button{border:1px solid var(--line);background:#fff;border-radius:20px;padding:9px 18px;font:inherit;font-weight:800;font-size:13px;cursor:pointer;min-height:44px;color:var(--navy)}
+.langbar button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.hero{background:linear-gradient(135deg,var(--h1),var(--h2));color:#fff;border-radius:18px;padding:24px 28px}
+.hero .kick{font-size:12px;letter-spacing:.08em;text-transform:uppercase;opacity:.8}
+.hero h1{font-size:24px;margin:4px 0 8px;letter-spacing:-.02em;line-height:1.25}
+.hero .headline{font-size:18px;font-weight:800;margin:6px 0 10px;max-width:900px;line-height:1.4}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 0 12px;max-width:980px}
+.pn div{border-radius:12px;padding:10px 12px;font-size:13.5px;line-height:1.45;font-weight:600}
+.pn b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:2px}
+.pn .p{background:rgba(34,197,94,.22);border:1px solid rgba(134,239,172,.55)}
+.pn .n{background:rgba(251,146,60,.25);border:1px solid rgba(253,186,116,.6)}
+.periods{font-size:11.5px;opacity:.85;margin:0 0 14px}
+.hk{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.hkc{background:rgba(255,255,255,.96);color:var(--ink);border-radius:14px;padding:12px 14px}
+.hkc .l{font-size:12px;color:var(--muted);font-weight:700}
+.hkc .v{font-size:26px;font-weight:900;letter-spacing:-.04em;line-height:1.15;margin:2px 0}
+.hkc .s{font-size:11.5px;color:var(--muted)}
+.hkc.pos .v{color:var(--green)}.hkc.urg .v{color:var(--red)}.hkc.mid .v{color:var(--amber)}
+.owner{background:linear-gradient(135deg,#f97316,#dc2626);border-radius:14px;padding:14px 16px;display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.owner b{font-size:15px;display:block}.owner span{font-size:13px;opacity:.95}
+.owner a{background:#fff;color:#b91c1c;font-weight:850;text-decoration:none;padding:12px 18px;border-radius:12px;font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.nav{position:sticky;top:0;z-index:50;background:rgba(243,246,250,.95);backdrop-filter:blur(6px);display:flex;gap:8px;padding:10px 0;margin-bottom:8px}
+.nav a{white-space:nowrap;text-decoration:none;color:var(--navy);font-weight:750;font-size:13px;background:#fff;border:1px solid var(--line);padding:8px 16px;border-radius:20px}
+.nav a.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.area-title{font-size:21px;font-weight:850;color:var(--navy);margin:24px 0 4px;letter-spacing:-.02em}
+.area-lead{font-size:14.5px;color:#33415c;font-weight:700;margin:0 0 14px}
+.section{background:#fff;border-radius:16px;padding:20px 22px;margin-bottom:16px;box-shadow:var(--shadow)}
+.section h2{font-size:16px;margin:0 0 6px}
+.lead{font-weight:800;font-size:15px;color:var(--navy);background:linear-gradient(90deg,#e8f0ff,#fff);border-left:4px solid var(--blue);padding:10px 14px;border-radius:8px;line-height:1.5;margin:0 0 14px}
+.note{font-size:12px;color:var(--muted);margin:0 0 12px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}.grid2>*{min-width:0}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.tag{display:inline-flex;align-items:center;border-radius:20px;padding:3px 10px;font-size:11.5px;font-weight:800;white-space:nowrap}
+.tag.red{color:var(--red);background:var(--red2)}.tag.amber{color:var(--amber);background:var(--amber2)}.tag.green{color:#166534;background:var(--green2)}.tag.blue{color:var(--blue);background:var(--blue2)}.tag.gray{color:#536074;background:#eef1f5}
+.bgroup h2{display:flex;align-items:center;gap:10px;font-size:18px;margin:0 0 4px;flex-wrap:wrap}
+.bgroup h2 i{font-style:normal;font-size:12px;font-weight:800;padding:3px 10px;border-radius:20px;color:#fff}
+.bgroup.big h2 i{background:var(--red)}.bgroup.paid h2 i{background:var(--green)}
+.bdef{font-size:13px;color:var(--muted);margin:0 0 12px}
+.bcard{border-radius:16px;padding:14px 16px;margin-bottom:12px;border:1px solid var(--line);border-left:6px solid #94a3b8;background:#fff;box-shadow:0 1px 4px rgba(16,42,67,.06)}
+.big .bcard{border-left-color:var(--amber);background:linear-gradient(90deg,#fffbeb,#fff 45%)}
+.big .bcard.top{border-left-color:var(--red);background:linear-gradient(90deg,#fff5f5,#fff 45%)}
+.paid .bcard{border-left-color:var(--green);background:linear-gradient(90deg,#f0fdf4,#fff 45%)}
+.bh{display:flex;gap:10px;align-items:flex-start}
+.rank{flex:none;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:900;font-size:14px;display:flex;align-items:center;justify-content:center}
+.big .top .rank{background:var(--red)}.paid .rank{background:var(--green)}
+.who{flex:1 1 0;min-width:90px}
+.bn{font-size:16.5px;font-weight:850;color:var(--navy);line-height:1.3;word-break:break-word}
+.ctry{display:inline-block;margin-top:3px;font-size:12px;color:#475569;background:#f1f5f9;border-radius:20px;padding:2px 9px}
+.pill{flex:none}
+.sig{margin:10px 0 4px}
+.chip{display:inline-block;background:var(--blue2);color:#1e40af;font-weight:800;border-radius:8px;padding:3px 10px;font-size:13px;line-height:1.4}
+.row{font-size:14px;margin:8px 0;line-height:1.5}
+.row b,.nextbox b{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.04em;color:#7a8699;margin-bottom:1px}
+.clamp{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.bcard.open .clamp{display:block;-webkit-line-clamp:unset}
+.nextbox{margin-top:8px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600;color:#1e3a8a}
+.big .nextbox{background:#fffbeb;border-color:#fde68a;color:#78350f}
+.paid .nextbox{background:#f0fdf4;border-color:#bbf7d0;color:#14532d}
+.nextbox b{opacity:.7;color:inherit}
+.more-detail{display:none}
+.bcard.open .more-detail{display:block}
+.tl{margin:6px 0 0;padding-left:16px;font-size:13px;color:#455066}
+.bf{display:flex;justify-content:space-between;align-items:center;margin-top:10px;gap:8px;flex-wrap:wrap}
+.dt{font-size:12.5px;font-weight:750;color:var(--muted)}
+.lnk{border:0;background:transparent;color:var(--blue);font:inherit;font-size:13px;font-weight:800;cursor:pointer;padding:10px 4px;min-height:44px}
+.extra{display:none}
+.extra.show{display:block;animation:fd .22s ease}
+@keyframes fd{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--blue);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-family:inherit;min-height:46px}
+.btn.wide{width:100%}.btn.ghost{background:#eef2f7;color:var(--navy)}
+.empty{background:#f0fdf4;border:1px dashed #86efac;border-radius:14px;padding:16px;font-weight:700;color:#166534;font-size:14px}
+.rule{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+.bm{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.bmc{border:1px solid var(--line);border-radius:14px;padding:15px;border-top:4px solid var(--blue)}
+.bmc.green{border-top-color:var(--green)}.bmc.amber{border-top-color:var(--amber);background:#fffdf5}
+.bmc h3{margin:0 0 10px;font-size:15px}
+.bar{margin:8px 0}
+.bar .bl{display:flex;justify-content:space-between;font-size:12.5px;color:var(--muted);margin-bottom:3px;gap:8px}
+.bar .bl b{color:var(--ink)}
+.bar .tr{height:10px;background:#eef2f7;border-radius:6px;overflow:hidden}
+.bar .fl{height:100%;border-radius:6px}
+.pcts{display:flex;gap:6px;flex-wrap:wrap;margin:10px 0 8px}
+.bmc p{font-size:13px;color:#1f2a44;font-weight:700;margin:0}
+.metric-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.metric{border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.metric .n{font-size:24px;font-weight:850}
+.metric .l{font-size:12px;color:var(--muted)}
+.metric .d{font-size:12px;font-weight:800;margin-top:2px}
+.up{color:var(--green)}.down{color:var(--red)}
+.chart{width:100%;height:320px}
+.chart.cty{height:440px}.chart.kw{height:440px}.chart.lg{height:320px}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;margin-bottom:8px;color:#455066}
+.legend i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.warn{background:var(--amber2);border:1px solid #fde68a;border-radius:12px;padding:12px 14px;font-size:13.5px;font-weight:650;color:#78350f;margin-bottom:12px}
+.pcard{border:1px solid var(--line);border-radius:14px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.pcard .rank{background:var(--blue)}
+.pcard .nm{font-weight:750;font-size:14.5px;color:var(--navy);text-decoration:none;line-height:1.4;word-break:break-word}
+.pcard .pid{font-size:11.5px;color:var(--muted)}
+.pcard .uv{font-size:30px;font-weight:900;color:var(--blue);letter-spacing:-.04em}
+.pcard .uv small{font-size:12px;color:var(--muted);font-weight:700}
+.searchbar{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;align-items:center}
+.searchbar input{flex:1;min-width:180px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;font-size:16px}
+.count-pill{font-size:11px;color:var(--muted);background:#f3f5f8;border-radius:20px;padding:4px 10px;white-space:nowrap}
+details.dx summary{cursor:pointer;font-weight:800;color:var(--navy);padding:12px 0;min-height:44px}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:10px;max-height:460px;-webkit-overflow-scrolling:touch}
+.table{border-collapse:collapse;width:100%;min-width:620px;font-size:12.5px}
+.table th,.table td{padding:8px 10px;text-align:left;border-bottom:1px solid #edf0f4;vertical-align:top}
+.table th{background:#f3f5f8;color:#5e6878;font-weight:800;position:sticky;top:0;white-space:nowrap;z-index:1}
+.table th.num,.table td.num{text-align:right}
+.owner-sum{font-weight:800;font-size:15px;color:var(--navy);background:linear-gradient(90deg,#e8f0ff,#fff);border-left:4px solid var(--blue);padding:12px 14px;border-radius:10px;line-height:1.55;margin:0 0 14px}
+.tri{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.col{border-radius:14px;padding:16px;border:1px solid}
+.col h3{margin:0 0 8px;font-size:15px}
+.col p{margin:0;font-size:14px;font-weight:650}
+.col.g{background:var(--green2);border-color:#bbf7d0}.col.g h3{color:#166534}
+.col.a{background:var(--amber2);border-color:#fde68a}.col.a h3{color:#92400e}
+.act{border-radius:14px;padding:16px;background:var(--blue2);border:1px solid #bfdbfe}
+.act.note2{background:var(--amber2);border-color:#fde68a}
+.act h3{margin:0 0 6px;font-size:15px;display:flex;gap:8px;align-items:center}
+.act p{margin:0;font-size:13.5px}
+.ops-table th{background:var(--navy);color:#fff}
+.ops-table td:first-child,.ops-table th:first-child{position:sticky;left:0;font-weight:800;color:var(--navy);background:#f6f9fc;z-index:2}
+.ops-table th:first-child{background:var(--navy);color:#fff}
+.notes p{font-size:13px;margin:6px 0}
+.foot{text-align:center;color:#9aa2ad;font-size:12px;margin-top:26px;line-height:1.9}
+.lb{position:fixed;inset:0;background:rgba(10,20,35,.88);z-index:200;display:none;align-items:center;justify-content:center;padding:16px}
+@media(min-width:1000px){.blist,.extra.show{display:grid;grid-template-columns:1fr 1fr;gap:0 14px;align-items:start}}
+@media(max-width:1100px){.bm{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr}.hk{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){
+ body{padding-bottom:calc(68px + env(safe-area-inset-bottom))}
+ .wrap{padding:10px 12px 20px}
+ .hero{padding:16px 14px;border-radius:16px}.hero h1{font-size:20px}.hero .headline{font-size:16px}
+ .pn{grid-template-columns:1fr}
+ .hk{gap:8px}.hkc{padding:10px 12px}.hkc .v{font-size:23px}
+ .owner{padding:12px 14px}.owner a{width:100%;justify-content:center}
+ .nav{position:fixed;left:0;right:0;bottom:0;top:auto;z-index:80;margin:0;padding:6px 8px calc(6px + env(safe-area-inset-bottom));gap:4px;background:#fff;border-top:1px solid var(--line);box-shadow:0 -4px 14px rgba(16,42,67,.1)}
+ .nav a{flex:1;text-align:center;border:0;border-radius:12px;padding:0 4px;min-height:48px;display:flex;align-items:center;justify-content:center;font-size:12.5px;background:transparent}
+ .nav a.on{background:var(--navy);color:#fff}
+ .area-title{font-size:20px;margin-top:20px}
+ .section{padding:15px 14px;border-radius:14px}
+ .bm,.grid2,.grid3,.tri{grid-template-columns:1fr}
+ .metric-row{grid-template-columns:1fr 1fr;gap:8px}.metric .n{font-size:21px}
+ .chart{height:300px}.chart.cty{height:420px}.chart.lg{height:300px}
+ .btn{width:100%}.bcard{padding:13px}
+ .pcard .uv{font-size:26px}
+}
+@media(max-width:420px){.hkc .v{font-size:21px}.hkc .l{font-size:11.5px}}
+
+.newbadge{display:inline-block;background:#f97316;color:#fff;font-size:11px;font-weight:850;border-radius:20px;padding:2px 9px;margin-left:8px;vertical-align:2px}
+.alert{background:var(--red2);border:1px solid #fca5a5;border-left:6px solid var(--red);border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.alert b{display:block;font-size:17px;color:#991b1b;line-height:1.35}
+.alert span{font-size:13.5px;color:#7f1d1d;font-weight:650}
+.metric.r{border-color:#fca5a5;background:#fff5f5}.metric.r .n{color:var(--red)}
+.metric.a{border-color:#fde68a;background:#fffdf5}.metric.a .n{color:var(--amber)}
+.metric.g .n{color:var(--green)}
+.todo{margin-top:12px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:10px;padding:10px 12px;font-size:14px;font-weight:700;color:#1e3a8a}
+.kb{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0}
+.kb span{border:1px dashed #cbd5e1;color:#64748b;border-radius:20px;padding:4px 11px;font-size:12.5px;font-weight:700}
+.jam{border:1px solid var(--line);border-left:6px solid var(--amber);border-radius:14px;padding:13px 15px;background:linear-gradient(90deg,#fffbeb,#fff 45%)}
+.jam h3{margin:0 0 6px;font-size:15.5px;color:var(--navy)}
+.jam .row{margin:6px 0}
+.jam pre{white-space:pre-wrap;font:13px/1.5 inherit;background:#f8fafc;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin:6px 0 0}
+.pf{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 2px}
+.pf span{background:#f1f5f9;border-radius:20px;padding:3px 10px;font-size:12.5px;font-weight:750;color:#334155}
+.jam.hi{border-left-color:var(--red);background:linear-gradient(90deg,#fff5f5,#fff 45%)}
+.jam.lo{border-left-color:#94a3b8;background:#fff}
+.jam q{font-style:italic;color:#0f172a}
+.jam h3{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.hold{background:#f1f5f9;border:1px dashed #cbd5e1;border-radius:12px;padding:12px 14px;font-size:13.5px;font-weight:650;color:#475569}
+html[lang="zh"] .vi{display:none}html[lang="vi"] .zh{display:none}
+</style>
+</head>
+<body>
+<!-- NB-START nhac viec karats 2026-11-27 --><style id="nb-style">
+.nb{position:sticky;top:0;z-index:9999;box-shadow:0 2px 10px rgba(0,0,0,.08);background:#fff7ed;border-bottom:2px solid #ea580c;color:#431407;font:14px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.nb-in{max-width:1080px;margin:0 auto;padding:10px 16px 12px}
+.nb-h{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center}
+.nb-tag{background:#ea580c;color:#fff;font-weight:800;font-size:12px;border-radius:999px;padding:2px 10px;white-space:nowrap}
+.nb-h b{font-size:16px}
+.nb-l{margin:4px 0 0;color:#7c2d12}.nb-l i{font-style:normal;font-weight:700;color:#9a3412;margin-right:6px}.nb-l b{color:#b91c1c}
+.nb ul{margin:6px 0 0;padding-left:20px}.nb li{margin:2px 0}
+html[lang=zh] .nb .vi{display:none}html:not([lang=zh]) .nb .zh{display:none}
+@media (prefers-color-scheme:dark){.nb{background:#2a1608;color:#ffedd5;border-color:#fb923c}.nb-l{color:#fed7aa}.nb-l i{color:#fdba74}.nb-l b{color:#fca5a5}}
+</style>
+<section class="nb" id="nhac-viec"><div class="nb-in"><div class="nb-h"><span class="nb-tag"><span class="vi">Nhắc việc</span><span class="zh">提醒</span></span><b><span class="vi">Sửa sản phẩm lỗi trước khi đăng thêm</span><span class="zh">先修复问题产品</span></b></div><p class="nb-l"><i><span class="vi">Gian bạn</span><span class="zh">您的店铺</span></i>1.271 SP · 707 SP có vấn đề · 3★</p><p class="nb-l"><i><span class="vi">Tuần này</span><span class="zh">本周</span></i>chỉ <b>90 / 1.271 sản phẩm</b> có người xem (7%). <span class="vi">Sửa các sản phẩm bị Alibaba báo lỗi, ưu tiên nhẫn moissanite, lắc tennis và dây riviera đang có khách xem.</span></p></div></section>
+<!-- NB-END -->
+<main class="wrap">
+  <div class="langbar" id="langbar"><button type="button" data-l="vi">Tiếng Việt</button><button type="button" data-l="zh">中文</button></div>
+  <header class="hero">
+    <div class="kick" id="kick"></div>
+    <h1 id="storeName"></h1>
+    <div class="headline" id="headline"></div>
+    <div class="pn"><div class="p"><b id="pl"></b><span id="pt"></span></div><div class="n"><b id="bl"></b><span id="bt"></span></div></div>
+    <p class="periods" id="periods"></p>
+    <div class="hk" id="hk"></div>
+    <div class="owner"><div><b id="owner_t"></b><span id="owner_s"></span></div><a href="#viec" id="owner_a"></a></div>
+  </header>
+  <nav class="nav" id="nav"><a href="#viec"><span class="vi">Việc</span><span class="zh">任务</span></a><a href="#buyer" id="n1"></a><a href="#traffic" id="n2"></a><a href="#san-pham" id="n3"></a><a href="#viec-moi"><span class="vi">Sức khỏe</span><span class="zh">健康</span></a></nav><span id="n4" hidden></span>
+
+  <section id="viec">
+    <div class="area-title">Sale làm gì tuần này</div>
+    <p class="area-lead">5 việc, xếp theo tiền gần nhất. Chi tiết từng buyer ở mục 01.</p>
+    <div class="section"><div class="grid2"><div class="act"><h3><span class="tag red">Hôm nay</span>Gửi lại báo giá 20 lắc tennis vàng 18K cho K01 Nhật</h3><p>Khách hỏi khung lắc tennis vàng đặc 18K, đá 1,9–2,0 ly, 4 chấu, dài 18 cm, làm 1 cái rồi 20 cái. Shop báo ngày 30/10: USD 1.100 cho 1 cái, USD 1.000/cái nếu 20 cái (khoảng USD 20.000). Khách chưa đọc. Ngày 26/11 AI lại mời một lắc bạc giá rẻ. Sale</p></div><div class="act"><h3><span class="tag red">Hôm nay</span>Chốt việc đầu tiên với 2 khách đặt làm theo gram</h3><p>K02 (Caribe, có địa chỉ ở Miami) đã đồng ý công USD 5/gram ngày 13/11 và nói đang chuẩn bị dự án. K04 Mỹ (thợ đúc) hỏi dây Cuban bạc 925 không đá, shop báo công USD 3–5/gram, khách đã gửi địa chỉ 20/11. Hỏi mẫu, file 3D, số lượng, rồi tạo đơn mẫu. Sale</p></div><div class="act"><h3><span class="tag amber">24 giờ</span>Sửa 2 báo giá AI lạ và báo giá 10 nhẫn cho K06</h3><p>K03 nhận báo giá AI: từ 30 bộ cô dâu 4 món, USD 4.500/bộ, trong khi giá trên trang khoảng USD 500–550/bộ. K05 nhận USD 140/cái cho từ 10 dây hip hop, nhưng tin AI lại nói "five units". K06 hỏi bảng giá sỉ 10 nhẫn bạc moissanite (USD 40/cái), sale chỉ nhắn "Hola". Sale</p></div><div class="act"><h3><span class="tag amber">Tuần này</span>Xử lý 2 đơn đang giao</h3><p>Đơn Lithuania USD 158,14 (dây chuyền) kẹt hải quan, đã quá hạn, khách cần trước 09/11. Đơn Canada USD 230 đã giao 24/11, khách khen "amazing work": xin khách bấm hoàn tất đơn và để lại đánh giá. Sale + quản lý</p></div><div class="act note2"><h3><span class="tag amber">Từ hôm nay</span>Không trả lời "hết hàng" hay "không làm 1 cái" rồi im</h3><p>4 khách nhận "out of stock" hoặc "I cannot produce 1 item" rồi không có phương án. Karats làm theo đơn: báo thời gian làm và giá mẫu thay vì từ chối. Khách hỏi nhẫn lab diamond 1,20 ct đã nhắn muốn 2 cái, shop chưa trả lời từ 17/11. Sale</p></div></div></div>
+  </section>
+  <section id="buyer">
+    <div class="area-title" id="t1"></div>
+    <p class="area-lead" id="buyer_lead"></p>
+    <div class="hold" id="ngay-tin" style="margin:0 0 14px;background:#fff7ed;border:1px solid #fdba74;color:#7c2d12"><b>25 hội thoại có hoạt động từ 13/11 đến 27/11</b> (Claude đọc trực tiếp trên gian ngày 27/11), cộng trang đơn hàng. Kỳ 15–21/11 không có đơn Trade Assurance mới. Đang giao: Lithuania USD 158,14 (quá hạn). Đã giao: Canada USD 230 (24/11). Có 17 đơn đã đóng, lớn nhất Colombia USD 756,04 (10 cái) và Indonesia USD 473,96.</div>
+<div class="section" id="phan-tich-buyer">
+      <h2>Buyer cần xử lý theo tiền gần nhất <span class="newbadge">THEO SKILL SALE</span></h2>
+      <p class="note">Mỗi buyer: hạng đơn, câu nguyên văn, lỗi follow-up và 1 tin nhắn sẵn để gửi. Tên buyer đã đổi thành mã K01, K02…, mã đánh lại mỗi kỳ.</p>
+      <div class="alert" style="background:#fff7ed;border-color:#fdba74;border-left-color:#f97316"><b style="color:#9a3412">Traffic ít nhưng mỗi khách đáng tiền: tiền lớn nằm ở khách đặt làm vàng và khách tính công theo gram.</b><span style="color:#7c2d12">1 khách Nhật đã được báo USD 1.000/cái cho 20 lắc vàng 18K, nhưng chưa ai nhắc lại từ 30/10.</span></div>
+      <div class="grid2">
+<div class="jam hi"><h3>K01 · Nhật · 20 khung lắc tennis vàng đặc 18K · khoảng USD 20.000 <span class="tag red">Hạng A</span><span class="tag red">Follow-up: Đang mất</span></h3><div class="pf"><span>Vàng 18K (Au750), không đá</span><span>Đá 1,9–2,0 ly, 4 chấu, dài 18 cm</span><span>1 cái USD 1.100 · 20 cái USD 1.000/cái</span></div><div class="row"><b>Buyer nói</b>Gửi yêu cầu chi tiết ngày 29/10: <q>Material: Solid 18K Yellow Gold (Au750), not gold-plated</q>, làm 1 cái trước, có thể 20 cái sau.</div><div class="row"><b>Lỗi follow-up</b>Shop báo giá ngày 30/10, khách chưa đọc. Không nhắc lại suốt 4 tuần. Ngày 26/11 AI mời một lắc bạc giá rẻ, không đúng nhu cầu vàng 18K.</div><div class="todo">Hôm nay: gửi lại báo giá kèm trọng lượng vàng ước tính, giá công USD 7/gram, ảnh chấu 4 ly, thời gian làm. Đề nghị làm 1 cái mẫu trước. Tag: <span class="tag blue">Đặt làm vàng</span> <span class="tag gray">Số lượng 20</span></div><details class="dx"><summary>Tin nhắn sẵn để gửi</summary><pre id="m1">Hello, following up on your 18K solid gold (Au750) tennis bracelet mounting: 4-prong, 1.90–2.00 mm stones, 18 cm. Price: USD 1,100 for 1 sample, USD 1,000 each for 20 pieces (estimated gold weight [..] g; final price follows the gold price on the order date). Production time: [..] days. Shall I prepare the sample order on Alibaba.com?</pre><button class="btn ghost copy" type="button" data-copy="m1">Chép tin</button></details></div>
+<div class="jam hi"><h3>K02 Caribe (địa chỉ Miami) · K04 Mỹ · khách đặt làm, tính công theo gram <span class="tag red">Hạng A/B</span><span class="tag amber">Follow-up: Chờ dự án</span></h3><div class="pf"><span>K02: công USD 5/gram, muốn làm lâu dài</span><span>K04: thợ đúc, hỏi dây Cuban bạc 925 không đá</span></div><div class="row"><b>Buyer nói</b>K02: <q>we have serious business to get started</q>, <q>can we work with $5/gm?</q>, rồi <q>we're preparing a project for you to start soon</q> (13/11). K04: <q>I cast also but this will save me time</q>, <q>Can you also do Cuban link .925 without stone?</q> (20/11).</div><div class="row"><b>Shop đã làm</b>Đồng ý USD 5/gram với K02. Báo K04: USD 3/gram hàng đơn giản, USD 5/gram hàng khó, vàng USD 7/gram cộng 5% hao hụt; giá kim loại theo giá mua thực tế ở Việt Nam. K04 đã gửi địa chỉ.</div><div class="todo">Trong 24 giờ: hỏi K02 mẫu đầu tiên (file 3D, số lượng, kim loại). Với K04: báo giá 1 dây Cuban mẫu có trọng lượng và tổng tiền, tạo đơn Trade Assurance. Tag: <span class="tag blue">Đặt làm OEM</span> <span class="tag gray">Lâu dài</span></div><details class="dx"><summary>Tin nhắn sẵn để gửi</summary><pre id="m2">Hi, thank you for the trust. To start your first project at USD 5/gram labor: please send the 3D file or sketch, metal (925 silver or gold karat), quantity per design and target date. I will send the full quotation (metal weight + labor + shipping) within 24 hours.</pre><button class="btn ghost copy" type="button" data-copy="m2">Chép tin</button></details></div>
+<div class="jam hi"><h3>K03 · báo giá AI 30 bộ cô dâu USD 4.500/bộ · K05 · dây hip hop USD 140 × 10 <span class="tag amber">Hạng A/B</span><span class="tag red">Giá AI cần kiểm</span></h3><div class="pf"><span>K03: bộ cô dâu 4 món moissanite bạc 925</span><span>K05: dây hip hop moissanite S925, từ 10 cái</span></div><div class="row"><b>Chuyện gì</b>Ngày 17/11 AI gửi K03 thẻ báo giá <q>≥30.0 Pieces · USD 4500.0</q>, trong khi bộ này trên trang khoảng USD 500–550/bộ. Ngày 27/11 AI gửi K05 báo giá USD 140/cái từ 10 cái, nhưng trong tin lại hỏi về "these five units". Cả 2 khách chưa đọc.</div><div class="todo">Sale kiểm giá trước khi khách đọc, gửi lại báo giá đúng (giá, số lượng, mạ vàng 14K hay 18K). Tag: <span class="tag blue">Báo giá AI</span></div><details class="dx"><summary>Tin nhắn sẵn để gửi</summary><pre id="m3">Hello, please disregard the previous automatic quotation. For the 4-piece bridal moissanite set in 925 silver: USD [..] per set for 30 sets, plating [14K/18K] gold. Production time [..] days. Which plating and stone shape would you like?</pre><button class="btn ghost copy" type="button" data-copy="m3">Chép tin</button></details></div>
+<div class="jam hi"><h3>K06 nhẫn bạc 10 cái USD 400 · K07 Brazil dây riviera 5 cái · K08 bộ cô dâu <span class="tag amber">Hạng B</span><span class="tag red">Follow-up: Đang mất</span></h3><div class="pf"><span>K06: 10 nhẫn USD 40/cái</span><span>K07: riviera 3 chấu, 40 cm, 5 cái</span><span>K08: bộ cô dâu 4 món và bộ lá</span></div><div class="row"><b>Buyer nói</b>K06: <q>quisiera conocer sus precios de mayoreo por volumen</q> (20/11). K07: <q>Gostaria de saber qual tamanho do colar 45 cm ?</q> rồi chọn 40 cm (21/11). K08 gửi 2 bộ cô dâu ngày 24/11, chưa nói số lượng.</div><div class="row"><b>Lỗi follow-up</b>K06 chỉ nhận <q>Hola</q>. K07 nhận <q>Do you need semi-mounting necklace chains?</q> và <q>You can choose any size you want</q>, chưa có giá 5 cái. K08 nhận <q>Hi, how can I help you?</q></div><div class="todo">Trong 24 giờ: K06 gửi bảng giá bậc 10/50/100. K07 báo giá 5 dây 40 cm và màu. K08 hỏi số lượng và ngày cưới. Tag: <span class="tag blue">Bán sỉ nhỏ</span></div><details class="dx"><summary>Tin nhắn sẵn để gửi</summary><pre id="m4">Hola, gracias. Precios por volumen para el anillo de plata 925 con moissanita: 10–49 piezas USD 40 c/u, 50–99 piezas USD [..], 100+ USD [..]. Tallas 5 a 8. ¿Qué tallas y cantidades necesita? Le preparo la orden con Trade Assurance hoy.</pre><button class="btn ghost copy" type="button" data-copy="m4">Chép tin</button></details></div>
+<div class="jam lo"><h3>Đơn đang giao và sau bán <span class="tag gray">Hậu mãi</span></h3><div class="row"><b>Lithuania USD 158,14</b>Dây chuyền đặt 01/10, gửi 12/11, kẹt hải quan. Khách từng nhắn <q>мне надо его получить до 9 ноября</q> (cần nhận trước 09/11). Đơn bị gắn "Overdue".</div><div class="row"><b>Canada USD 230</b>Đã giao 24/11, khách: <q>amazing worki</q>, nhưng chê giao lâu. Shop đã xin khách bấm hoàn tất đơn.</div><div class="row"><b>Mỹ, đơn cũ</b>Khách chưa trả thuế nhập khẩu FedEx (điều kiện DAP). Shop hỏi lại ngày 14/11.</div><div class="todo">Theo dõi hải quan cho khách Lithuania tới khi nhận. Sau mỗi đơn giao xong, xin đánh giá: gian đang 3 sao.</div></div>
+<div class="jam lo"><h3>Rủi ro: khách xin email ngoài sàn <span class="tag gray">Giữ trên Alibaba</span></h3><div class="row"><b>K09</b>Gửi mẫu tin <q>plan to purchase in bulk. Please email our sales representative</q>. Shop trả lời đúng: <q>YOU CAN DISCUSS HERE</q>.</div><div class="todo">Không gửi email, không gửi danh sách giá ngoài Alibaba.</div></div>
+<div class="jam lo"><h3>Hội thoại nhỏ còn lại <span class="tag gray">Hạng C</span></h3><div class="row"><b>Tóm tắt</b>Nhẫn lab diamond 1,20 ct IGI: khách xin xem giấy IGI, shop nói hết hàng và không làm 1 cái; khách nhắn "2" ngày 17/11, chưa ai trả lời. Bộ 4 món bạc moissanite USD 550: 1 khách lo giao trễ, hỏi "Are you AI agent?", shop hỏi size ngày 12/11. Lắc emerald: moissanite USD 180, lab diamond USD 1.800, khách im từ 13/10. Dây 3 trong 1 và bông tai hoa: shop trả lời hết hàng. Nhẫn solitaire 1 cái (2 khách) chỉ nhận lời chào. AI đã gửi báo giá mặt dây chữ USD 12, mặt thánh giá USD 50, dây USD 100.</div><div class="todo">Trả lời khách muốn 2 nhẫn 1,20 ct: báo giá 2 cái và thời gian làm. Khi hết hàng, báo luôn thời gian làm lại.</div></div>
+      </div>
+      <div class="alert" style="margin-top:14px"><b>Lỗi của shop (AI hoặc sale) kỳ này</b><span>Khách hỏi lắc vàng 20 cái không được nhắc lại 4 tuần. 2 báo giá AI có giá hoặc số lượng lạ. 4 khách nhận "hết hàng" hoặc "không làm 1 cái" mà không có phương án. 3 khách bán sỉ nhỏ chỉ nhận lời chào.</span></div>
+      <div class="metric-row"><div class="metric g"><div class="n">98,36%</div><div class="l">Tỷ lệ phản hồi (15–21/11) · 2,06 giờ</div></div><div class="metric r"><div class="n">2</div><div class="l">Báo giá AI cần sửa</div></div><div class="metric a"><div class="n">4</div><div class="l">Khách nhận "hết hàng" / "không làm 1 cái"</div></div><div class="metric "><div class="n">25</div><div class="l">Hội thoại có hoạt động 13–27/11</div></div></div>
+      <p class="note" style="margin-top:10px">Hạng theo ngưỡng tạm: A từ USD 1.000 hoặc đặt làm OEM lâu dài; B có số lượng từ 5–10 hoặc từ USD 300; C hỏi 1 cái. Tên người, email, số điện thoại, địa chỉ trong tin nhắn đã ẩn.</p>
+    </div>
+    <div class="section" hidden><div class="bgroup big">
+      <h2><span id="h_big"></span> <i id="cnt_big"></i></h2>
+      <p class="bdef" id="d_big"></p>
+      <div class="blist" id="l_big"></div><div class="extra blist" id="x_big"></div>
+      <button class="btn ghost wide" id="t_big" type="button"></button>
+    </div></div>
+    <div class="section" hidden><div class="bgroup paid">
+      <h2><span id="h_paid"></span> <i id="cnt_paid"></i></h2>
+      <p class="bdef" id="d_paid"></p>
+      <div class="blist" id="l_paid"></div>
+      <div id="paid_empty"></div>
+      <p class="rule" id="pay_rule"></p>
+    </div></div>
+  </section>
+
+  <section id="traffic">
+    <div class="area-title" id="t2"></div>
+    <p class="area-lead" id="traffic_lead"></p>
+    <div class="section">
+      <h2 id="bm_h"></h2>
+      <p class="lead" id="bm_lead"></p>
+      <p class="note" id="bm_note"></p>
+      <div class="bm" id="bm"></div>
+    </div>
+    <div class="section">
+      <h2 id="vs_h"></h2>
+      <p class="lead" id="vs_lead"></p>
+      <p class="note" id="vs_note"></p>
+      <div class="metric-row" id="vs_metrics"></div>
+    </div>
+    <div class="grid2">
+      <div class="section"><h2 id="fn_h"></h2><p class="note" id="fn_n"></p><div id="ch_funnel" class="chart"></div></div>
+      <div class="section"><h2 id="ct_h"></h2><p class="note" id="ct_n"></p><div id="ch_country" class="chart cty"></div>
+        <details class="dx"><summary id="ct_all"></summary><div class="table-wrap"><table class="table" id="tbl_country"></table></div></details></div>
+    </div>
+    <div class="section"><h2 id="vh_h"></h2><p class="note" id="vh_n"></p><div id="ch_vhist" class="chart"></div></div>
+  </section>
+
+  <section id="san-pham">
+    <div class="area-title" id="t3"></div>
+    <p class="area-lead" id="prod_lead"></p>
+    <div class="section"><h2 id="tp_h"></h2><p class="lead" id="tp_lead"></p><div class="grid3" id="tp_cards"></div><p class="note" id="tp_note" style="margin-top:10px"></p></div>
+    <div class="section">
+      <h2 id="kw_h"></h2>
+      <p class="lead" id="kw_lead"></p>
+      <p class="note" id="kw_note"></p>
+      <div id="kw_warn"></div>
+      <div class="legend" id="kw_legend"></div>
+      <div id="ch_kw" class="chart kw"></div>
+      <details class="dx" id="kw_all"><summary id="kw_all_s"></summary>
+        <div class="searchbar"><input id="kw_q" type="search"><span class="count-pill" id="kw_cnt"></span></div>
+        <div class="table-wrap"><table class="table" id="tbl_kw"></table></div>
+      </details>
+    </div>
+  </section>
+
+  <section id="van-hanh" hidden>
+    <div class="area-title" id="t4"></div>
+    <div class="section">
+      <h2 id="oc_h"></h2>
+      <p class="owner-sum" id="oc_sum"></p>
+      <div class="tri"><div class="col g"><h3 id="g_h"></h3><p id="g_t"></p></div><div class="col a"><h3 id="a_h"></h3><p id="a_t"></p></div></div>
+    </div>
+    <div class="section"><h2 id="ac_h"></h2><div class="grid3" id="actions" style="margin-top:12px"></div></div>
+    <div class="section"><h2 id="om_h"></h2><p class="note" id="om_n"></p><div class="metric-row" id="ops_metrics"></div>
+      <details class="dx notes"><summary id="sn_h"></summary><div id="sn_body"></div></details></div>
+    <div class="grid2">
+      <div class="section"><h2 id="c1_h"></h2><p class="note" id="c1_n"></p><div id="ch_trend" class="chart lg"></div></div>
+      <div class="section"><h2 id="c2_h"></h2><p class="note" id="c2_n"></p><div id="ch_products" class="chart lg"></div></div>
+    </div>
+    <div class="section"><h2 id="tb_h"></h2><p class="note" id="tb_n"></p><div class="table-wrap" style="max-height:none"><table class="table ops-table" id="tbl_ops"></table></div></div>
+  </section>
+  <section id="viec-moi">
+    <div class="area-title">04 · Sức khỏe gian hàng</div>
+    <p class="area-lead">Claude đọc trên gian ngày 27/11/2026 (trang chủ số ngày 25/11) và trang Data tuần 15–21/11.</p>
+    <div class="section">
+      <h2>Sức khỏe gian hàng <span class="tag amber">TRAFFIC THẤP</span></h2>
+      <div class="metric-row"><div class="metric r"><div class="n">707</div><div class="l">Sản phẩm có vấn đề / 1.271 đang bán</div></div><div class="metric a"><div class="n">3★</div><div class="l">Số sao · 0 điểm phạt · gian 1 năm</div></div><div class="metric r"><div class="n">90</div><div class="l">Sản phẩm có người xem tuần 15–21/11 (7%)</div></div><div class="metric g"><div class="n">98,36%</div><div class="l">Phản hồi · 2,06 giờ</div></div></div>
+      <p class="note" style="margin-top:10px">12 tuần gần nhất: hiển thị tìm kiếm giảm từ 6.509 (30/08–05/09) xuống 4.644; lượt xem trang cao nhất 2.313 (11–17/10) rồi giảm còn 291. Tài khoản quảng cáo 0 VND. Đơn: 1 đang giao (quá hạn), 4 hoàn tất, 17 đã đóng.</p>
+    </div>
+  </section>
+  <div class="foot" id="foot"></div>
+</main>
+
+<script>
+const SPEC = {"spec_version": "3.0-mobile-owner", "prepared_at": "2026-11-27", "project": {"store_name": "Karats", "target_app": "karats/index.html", "language": "Tiếng Việt", "audience": "Ông chủ doanh nghiệp", "viewport_priority": "Mobile 390×844, sau đó desktop 1440px"}, "implementation_contract": {"hero": {"headline": "Karats tuần 15–21/11: traffic thấp. Hiển thị tìm kiếm 4.644 (bằng 29% TB ngành), lượt xem trang 291 (giảm 25%), 2 khách hỏi hàng, 0 đơn mới. Tiền nằm ở khách đặt làm: khách Nhật được báo USD 1.000/cái cho 20 lắc vàng 18K, khách Caribe đã đồng ý công USD 5/gram.", "positive": "Phản hồi 98,36%, trung bình 2,06 giờ; 77/149 visitor là buyer L1+ (52%); khách Mỹ chiếm 33 visitor; khách hỏi đúng hàng của gian (nhẫn moissanite, lab diamond, lắc tennis, riviera); đơn Canada USD 230 đã giao, khách khen.", "bottleneck": "Traffic chỉ bằng 17–29% TB ngành và đang giảm 12 tuần; 707/1.271 sản phẩm có vấn đề, chỉ 90 sản phẩm có người xem; gian 3 sao; khách lắc vàng 20 cái không được nhắc lại 4 tuần; 2 báo giá AI có giá lạ; 4 khách nhận \"hết hàng\" rồi im.", "kpis": ["Search Impressions", "Search Clicks", "Page Views", "Buyer L1+"]}}, "owner_readout": {"positive": "Phản hồi 98,36%, trung bình 2,06 giờ; 77/149 visitor là buyer L1+ (52%); khách Mỹ chiếm 33 visitor; khách hỏi đúng hàng của gian (nhẫn moissanite, lab diamond, lắc tennis, riviera); đơn Canada USD 230 đã giao, khách khen.", "bottleneck": "Traffic chỉ bằng 17–29% TB ngành và đang giảm 12 tuần; 707/1.271 sản phẩm có vấn đề, chỉ 90 sản phẩm có người xem; gian 3 sao; khách lắc vàng 20 cái không được nhắc lại 4 tuần; 2 báo giá AI có giá lạ; 4 khách nhận \"hết hàng\" rồi im.", "next_actions": ["Hôm nay: gửi lại báo giá 20 lắc vàng 18K cho khách Nhật; hỏi dự án đầu tiên của 2 khách đặt làm theo gram.", "Trong 24 giờ: sửa 2 báo giá AI lạ; gửi bảng giá sỉ 10 nhẫn bạc và 5 dây riviera.", "Tuần này: sửa sản phẩm lỗi (707), theo dõi đơn Lithuania kẹt hải quan, xin đánh giá đơn Canada."]}, "data": {"operations": {"weeks": [{"period": "15-11-2026 đến 21-11-2026", "kpis": {"Số sao": "3", "Tổng số sản phẩm": "1271", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "291", "Tổng số thư hỏi hàng": "2", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "2.06", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "08-11-2026 đến 14-11-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "388", "Tổng số thư hỏi hàng": "2", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "01-11-2026 đến 07-11-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "477", "Tổng số thư hỏi hàng": "2", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "25-10-2026 đến 31-10-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "560", "Tổng số thư hỏi hàng": "1", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "18-10-2026 đến 24-10-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "1321", "Tổng số thư hỏi hàng": "1", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "11-10-2026 đến 17-10-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "2313", "Tổng số thư hỏi hàng": "5", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "04-10-2026 đến 10-10-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "1209", "Tổng số thư hỏi hàng": "4", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "27-09-2026 đến 03-10-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "1120", "Tổng số thư hỏi hàng": "2", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "20-09-2026 đến 26-09-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "1011", "Tổng số thư hỏi hàng": "4", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "13-09-2026 đến 19-09-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "659", "Tổng số thư hỏi hàng": "4", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "06-09-2026 đến 12-09-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "701", "Tổng số thư hỏi hàng": "1", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}, {"period": "30-08-2026 đến 05-09-2026", "kpis": {"Số sao": "Alibaba không hiển thị", "Tổng số sản phẩm": "Alibaba không hiển thị", "Tổng số sản phẩm mới đã đăng": "Alibaba không hiển thị", "Tổng số người ghé thăm": "710", "Tổng số thư hỏi hàng": "2", "Tổng số thư hỏi hàng đã trả lời": "Alibaba không hiển thị", "Tổng số lượt đã báo giá RFQ": "Alibaba không hiển thị", "Số lượt báo giá RFQ còn lại": "Alibaba không hiển thị", "Thời gian phản hồi tin nhắn trung bình": "Alibaba không hiển thị", "Tỉ lệ tin nhắn được phản hồi trong 24h": "Alibaba không hiển thị", "Số lượng Super Product (win)": "Alibaba không hiển thị", "Số lượng Top Product (tiềm năng)": "Alibaba không hiển thị"}}], "benchmark": {"industry": "Jewelry, Eyewear, Watches & Accessories", "page_views": {"store": 291, "industry_average": 1667, "industry_leaders": 59337}, "search_impressions": {"store": 4644, "industry_average": 16018, "industry_leaders": 245358}, "search_clicks": {"store": 88, "industry_average": 376, "industry_leaders": 8140}, "visitors_with_inquiries": {"store": 2, "industry_average": 7, "industry_leaders": 106}}, "top_products": [{"rank": 1, "title": "KARATS Solitaire Ring Lab Created Moissanite GRA Certified Prong Set Custom Size Box Elegant Jewelry Engagement Gift 925", "uv": 24, "url": "https://www.alibaba.com/product-detail/KARATS-Solitaire-Ring-Lab-Created-Moissanite_1601707892581.html", "product_id": "1601707892581"}, {"rank": 2, "title": "1.20 Carat Oval Cut Halo Cluster Lab Grown Diamond IGI Certified Rhodium Plated 14K Solid Platinum Classic Engagement Ring", "uv": 8, "url": "https://www.alibaba.com/product-detail/1-20-Carat-Oval-Cut-Halo_10000047394255.html", "product_id": "10000047394255"}, {"rank": 3, "title": "Iced Moissanite Riviera 3 Prong Necklace Sterling Silver Gold Plated Luxury Hip Hop Setting Graduated Style Unisex GRA Certified", "uv": 6, "url": "https://www.alibaba.com/product-detail/Iced-Moissanite-Riviera-3-Prong-Necklace_10000040439156.html", "product_id": "10000040439156"}], "source_action_notes": []}, "visitors": {"visitor_history": [{"period": "Thời gian dữ liệu: 2026-11-15 đến 2026-11-21", "visitor_records": 149, "countries": 61, "pv": 291, "exact_keyword_records": 294, "visitors_with_keyword": 112, "L1_plus": 77, "levels": {"L0": 72, "L1": 29, "L2": 39, "L3": 9, "L4": 0}, "tab": "Visitor details · 15.11-21.11 (Claude đọc 15/15 trang)"}, {"period": "Thời gian dữ liệu: 2026-11-08 đến 2026-11-14", "visitor_records": 166, "countries": 65, "pv": 388, "exact_keyword_records": 302, "visitors_with_keyword": 115, "L1_plus": 90, "levels": {"L0": 76, "L1": 25, "L2": 54, "L3": 11, "L4": 0}, "tab": "Visitor details · 08.11-14.11 (Claude đọc toàn bộ)"}], "current_summary": {"period": "Thời gian dữ liệu: 2026-11-15 đến 2026-11-21", "visitor_records": 149, "countries": 61, "pv": 291, "exact_keyword_records": 294, "visitors_with_keyword": 112, "L1_plus": 77, "levels": {"L0": 72, "L1": 29, "L2": 39, "L3": 9, "L4": 0}}, "previous_summary": {"period": "Thời gian dữ liệu: 2026-11-08 đến 2026-11-14", "visitor_records": 166, "countries": 65, "pv": 388, "exact_keyword_records": 302, "visitors_with_keyword": 115, "L1_plus": 90, "levels": {"L0": 76, "L1": 25, "L2": 54, "L3": 11, "L4": 0}}, "all_countries": [{"country": "United States", "visitors": 33, "pv": 74, "keyword_visitors": 28, "exact_keyword_records": 83, "L0": 12, "L1": 9, "L2": 7, "L3": 5, "L4": 0, "L1_plus": 21}, {"country": "Bangladesh", "visitors": 9, "pv": 23, "keyword_visitors": 5, "exact_keyword_records": 10, "L0": 6, "L1": 1, "L2": 2, "L3": 0, "L4": 0, "L1_plus": 3}, {"country": "Indonesia", "visitors": 7, "pv": 13, "keyword_visitors": 6, "exact_keyword_records": 13, "L0": 7, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "China", "visitors": 6, "pv": 10, "keyword_visitors": 4, "exact_keyword_records": 11, "L0": 6, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Brazil", "visitors": 5, "pv": 23, "keyword_visitors": 5, "exact_keyword_records": 11, "L0": 2, "L1": 3, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 3}, {"country": "Australia", "visitors": 5, "pv": 8, "keyword_visitors": 3, "exact_keyword_records": 9, "L0": 1, "L1": 1, "L2": 3, "L3": 0, "L4": 0, "L1_plus": 4}, {"country": "United Kingdom", "visitors": 5, "pv": 8, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 1, "L1": 1, "L2": 1, "L3": 2, "L4": 0, "L1_plus": 4}, {"country": "France", "visitors": 5, "pv": 6, "keyword_visitors": 3, "exact_keyword_records": 5, "L0": 2, "L1": 1, "L2": 2, "L3": 0, "L4": 0, "L1_plus": 3}, {"country": "Burkina Faso", "visitors": 4, "pv": 15, "keyword_visitors": 3, "exact_keyword_records": 5, "L0": 3, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Canada", "visitors": 4, "pv": 12, "keyword_visitors": 4, "exact_keyword_records": 13, "L0": 1, "L1": 1, "L2": 2, "L3": 0, "L4": 0, "L1_plus": 3}, {"country": "Norway", "visitors": 3, "pv": 6, "keyword_visitors": 3, "exact_keyword_records": 11, "L0": 0, "L1": 1, "L2": 2, "L3": 0, "L4": 0, "L1_plus": 3}, {"country": "Philippines", "visitors": 3, "pv": 5, "keyword_visitors": 3, "exact_keyword_records": 9, "L0": 2, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Colombia", "visitors": 3, "pv": 4, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 2, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Vietnam", "visitors": 2, "pv": 4, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 2}, {"country": "Ghana", "visitors": 2, "pv": 4, "keyword_visitors": 2, "exact_keyword_records": 4, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Mexico", "visitors": 2, "pv": 3, "keyword_visitors": 2, "exact_keyword_records": 4, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Egypt", "visitors": 2, "pv": 3, "keyword_visitors": 1, "exact_keyword_records": 2, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Pakistan", "visitors": 2, "pv": 2, "keyword_visitors": 2, "exact_keyword_records": 2, "L0": 2, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "The Democratic Republic of the Congo", "visitors": 2, "pv": 2, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 1, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Portugal", "visitors": 2, "pv": 2, "keyword_visitors": 2, "exact_keyword_records": 6, "L0": 0, "L1": 0, "L2": 2, "L3": 0, "L4": 0, "L1_plus": 2}, {"country": "Japan", "visitors": 2, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 2}, {"country": "Italy", "visitors": 2, "pv": 2, "keyword_visitors": 2, "exact_keyword_records": 5, "L0": 1, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Tunisia", "visitors": 1, "pv": 6, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Andorra", "visitors": 1, "pv": 6, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Thailand", "visitors": 1, "pv": 4, "keyword_visitors": 1, "exact_keyword_records": 2, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Finland", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Oman", "visitors": 1, "pv": 2, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Poland", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 0, "L2": 0, "L3": 1, "L4": 0, "L1_plus": 1}, {"country": "United Arab Emirates", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Malaysia", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "India", "visitors": 1, "pv": 2, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Turkey", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Belgium", "visitors": 1, "pv": 2, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "South Korea", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Israel", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Chile", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Jordan", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Mauritius", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 2, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Spain", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Burundi", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Mozambique", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Chad", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Taiwan, China", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Somalia", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Singapore", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Honduras", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Russian Federation", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "South Africa", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Sudan", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Armenia", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Myanmar", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Venezuela", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Nicaragua", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Cambodia", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 0, "L2": 0, "L3": 1, "L4": 0, "L1_plus": 1}, {"country": "Romania", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 4, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Saudi Arabia", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Dominican Republic", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Libyan Arab Jamahiriya", "visitors": 1, "pv": 1, "keyword_visitors": 0, "exact_keyword_records": 0, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Bahrain", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 1, "L1": 0, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 0}, {"country": "Germany", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 1, "L0": 0, "L1": 0, "L2": 1, "L3": 0, "L4": 0, "L1_plus": 1}, {"country": "Afghanistan", "visitors": 1, "pv": 1, "keyword_visitors": 1, "exact_keyword_records": 3, "L0": 0, "L1": 1, "L2": 0, "L3": 0, "L4": 0, "L1_plus": 1}], "exact_keyword_aggregates": [{"exact_keyword": "lab diamond ring", "occurrences": 5, "source_row_pv_sum": 10}, {"exact_keyword": "moissanite ring", "occurrences": 4, "source_row_pv_sum": 8}, {"exact_keyword": "16", "occurrences": 3, "source_row_pv_sum": 11}, {"exact_keyword": "lab grown diamond ring", "occurrences": 3, "source_row_pv_sum": 6}, {"exact_keyword": "kaos pria", "occurrences": 3, "source_row_pv_sum": 6}, {"exact_keyword": "sepatu pria", "occurrences": 3, "source_row_pv_sum": 6}, {"exact_keyword": "moissanite", "occurrences": 2, "source_row_pv_sum": 18}, {"exact_keyword": "riviera", "occurrences": 2, "source_row_pv_sum": 10}, {"exact_keyword": "moissanite stud earring", "occurrences": 2, "source_row_pv_sum": 8}, {"exact_keyword": "moissanite cloves earrings", "occurrences": 2, "source_row_pv_sum": 8}, {"exact_keyword": "34", "occurrences": 2, "source_row_pv_sum": 7}, {"exact_keyword": "natural diamond ring igi", "occurrences": 2, "source_row_pv_sum": 5}, {"exact_keyword": "01 cart lab diamond jewelry", "occurrences": 2, "source_row_pv_sum": 5}, {"exact_keyword": "gia certified diamonds jewelry", "occurrences": 2, "source_row_pv_sum": 5}, {"exact_keyword": "moissanite jewelry", "occurrences": 2, "source_row_pv_sum": 3}, {"exact_keyword": "smal ring moissonite", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "half band moissonite", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "3", "occurrences": 2, "source_row_pv_sum": 2}, {"exact_keyword": "barber chair", "occurrences": 1, "source_row_pv_sum": 17}, {"exact_keyword": "cordless dog hair vacuum", "occurrences": 1, "source_row_pv_sum": 17}, {"exact_keyword": "hair blow dryer", "occurrences": 1, "source_row_pv_sum": 17}, {"exact_keyword": "joias de prata 925", "occurrences": 1, "source_row_pv_sum": 11}, {"exact_keyword": "corrente 925", "occurrences": 1, "source_row_pv_sum": 11}, {"exact_keyword": "joias riviera", "occurrences": 1, "source_row_pv_sum": 11}, {"exact_keyword": "semi joia com banho de 10 milimicrons", "occurrences": 1, "source_row_pv_sum": 8}, {"exact_keyword": "earring display", "occurrences": 1, "source_row_pv_sum": 7}, {"exact_keyword": "bijoux pour femme", "occurrences": 1, "source_row_pv_sum": 7}, {"exact_keyword": "service clientle alibaba", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "tailleur luxe curvy femme", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "tailleur femme ceremonie curvy", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "boucles doreilles moissanite gra", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "anti tarnish bracelet", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "woman jewelry set high quality", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "highquality racket for women jewellery woman said bracelet set", "occurrences": 1, "source_row_pv_sum": 6}, {"exact_keyword": "oval lab grown diamond ring", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "oval lab grown diamond", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "gold wedding band", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "mossinate hidden halo oval ring", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "12 v 1amp smps curcuit", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "lab grown diamond 5mm", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "lab 3carat", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "penampil perhiasan", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "igi gia lab grown diamond ringrhodium plated jewelry lab diamond", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "systmes de sonorisation en direct", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "moisanite jewelry bulk orders 1 dollar", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "925 sterling silver moissanite gra", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "925 sterling silver moissanite", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "sterling silver rhodium plated bangle", "occurrences": 1, "source_row_pv_sum": 4}, {"exact_keyword": "clutch bag", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "10k white gold ring", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "10k white gold half eternity ring", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "gold designer jewellery", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "gun storage", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "bamboo socks sport", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "newsmy", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "n系列储能电源", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "logo", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "jewelry", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "rings", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "earring men", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "alcoholic drink", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "bicycle food cart bulk", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "evtol passenger drone", "occurrences": 1, "source_row_pv_sum": 3}, {"exact_keyword": "tennis necklace lab diamond 4mm", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "tennis moissanita oro 10k", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "riviera moissanita necklace", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "moissanite rose cut ring", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "lab diamond ring sterling", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "925 silver couple ring", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "adodo jewelry", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "925 sterling silver moissanite rings", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "pyty warstwowe na cian", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "brama", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "diament laboratoryjny duy", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "womens blouses", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "womens party wear", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "zirconia jewelry set", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "bangles sterling silver branded", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "moisnette necklace sterling silver", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "premium pure silk luxury scrunchie 25", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "blue sapphire bangle", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "kebaya indonesia", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "white gold set jewelry for woman", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "diamond cut jewellery set", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "rhinestone necklace earrings", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "bijoux en acier inoxydable", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "fashion  necklaces", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "fashion bracelets & bangles", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "网球链", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "订婚戒指", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "定制的链条莫桑石", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "granuladora de alambre de cobre", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "maquina para lavar cascos", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "coleccion de arete y collar en oro laminado con mossanita", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "in yeni yil buffalo", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "riviera prata moissanite", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "pantalla telfonos tecno", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "samsung galaxy s24 ultra telfono original", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "poco", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "pet charm engraving", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "old money style dog", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "dog poop bag holder luxury", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "dog charms luxury", "occurrences": 1, "source_row_pv_sum": 2}, {"exact_keyword": "ring display box", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "lab diamond antique", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "lab diamond", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "lab diamond ring men", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "925 solid lab grown", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "necklace for grils set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "anel moissanite 8ct", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "brinco ponto de luz moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "heart illusion", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite jewelry 925 silver", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "kashmiri jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "toupee", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "braiding hair", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "human hair extensions", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "faux verre", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "anua", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tonique pour la peau", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "costumes", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "316lstainlesssteeljewelrywholesale", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "engine assembly", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "strength training", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "gem multi minimalist 18k plated jewlery", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "18ct gold plated jewellery muti gem braclet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "18 k gold plated  bangles for women  tarnished free", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "opal tennis bracelet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "open pendant necklace", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "synthetic opal horseshoe charm 925 silver", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fundas para telfono oppo", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "carcasa oppo", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "carcasa oppo a5m", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "dijes en color plata", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "semi mount", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "semi mount jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "plentiful huge boobs anime figure", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "uniforme de police pour hommes", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "coupe vent", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "uniforme de combat", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cuban link chain moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "necklace men gold", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite chain men", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "meia aliana moissonite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "靴", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "使用済女性", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "取外可能", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "anello moissanite regolabile", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "orecchini moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "acquamarina", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "anello toi e moi moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "indian jewelry set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "jewelry sets for women", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "4 pcs jewelry set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "watch", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "floor tiles 60x60", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "quilt sets 10 pieces", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "lab grown diamonds jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "wallpaper floral", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cuban link 18 karat gold chain faux diamant", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cuban link 18 karat gold chain", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moins chere une chane semblable au vrai diamant m", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "omega swatch", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tennis chain mount", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "royal pop band", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "black moissanite cuban", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "935 5mm 6mm cuban link moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite letter pendsnt", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite dogtags", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "esmeralda", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "wholesale charms jewelry making", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bracciali e colana argento 925 per uomo", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "wired velvet ribbon 15", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite jewelry yellow gold", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "earring for men", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "2", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "15", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "stainless steel diamond chain", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "316l stainless steel necklace", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "black tennis necklace", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "stainless steel hand chain set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "316l stainless steel jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moon hand chain", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "designer purse", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "designer jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "watches for men luxury", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "luxury womens quartz watch", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "wuzhou tianyu gems", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "hair accessories wholesale low price", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cartier watches", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "blind box", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "pink moissanite ring", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "men casual shirts", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "stainless 925 plaqu or", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "metal hollow bookmark ginkgo leaf gold", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "18k gold plated stainless steel", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tesla model s tuning", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tesla model s lip", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tesla model s", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "wedding band", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "engagement ring builder kit", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "luxury ring box", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "diamond tennis necklace", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "bezel moissanite necklace graduated", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tennis bracelet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fashion tennis bracelets", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "masajeadores sexuales hombres", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "relojes curren hombre", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "almohada de pareja", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "womens bracelet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "big cuban necklace box", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "shenzhen beikebei technology co ltd", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "shenzhen topcloud technology co ltd", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "rol pembungkus vinyl", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "organic maca root capsules", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "toko barang bekas", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "s925 rope chain", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mossinate cuban", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "hangzhou fengweima jewelry co ltd grillz", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "litman stethoscope", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "jelly cat", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "g80 m3 carbon fiber fenders", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite pendants", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "jewelry silver 925", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fashion necklaces 925", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "jewelry silver necklace", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "butterfly bracelet", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "jewelry for women", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "diamond set", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "ropa de mujer", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "tacones de mujer elegantes", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "zapatos de mujer", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "conjunto de joyas de acero inoxidable", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "metal crafts", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "silver dog tags", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "925 silver dog tag", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "zirkon beads for making jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "natural freshwater pearl rice shape beads aaa quality diy jewelry making fast response", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "boushron  jewelry sets", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "palm tree gold", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "missica", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "stinging machine", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fpv", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "jet engine 100kg", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "fireplace surround", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "lab grown moval old mine", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "lab grown omc", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "old mine cut moissanite oval", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mossinate 925 bracelet vvs", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mossinate men", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mossinate anillo y brasalete", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "mens basketball shorts", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "men basketball shorts", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "shorts nike for men", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "rings for women", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "rivieira moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "xuchang fuxin hair products co ltd", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "raw hair bundles", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "elegant earrings", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cadena de moissanita", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "sunliflex women watches", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "cushion earrings moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "initial necklace moissanite", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "moissanite silver jewelry", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "outdoor flashlight", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "giftbox for her", "occurrences": 1, "source_row_pv_sum": 1}, {"exact_keyword": "evil eye necklace sterling silver", "occurrences": 1, "source_row_pv_sum": 1}]}, "buyers": {"top5_priority": [], "all_priority_rows": [], "confirmed_paid_or_completed": [], "payment_status_rule": "Kỳ 15–21/11 không có đơn mới. Đang giao: Lithuania USD 158,14 (quá hạn). Đã giao 24/11: Canada USD 230."}}};
+const CFG = {"key": "karats", "storeName": "Karats", "bilingual": false, "coreRe": "moiss|moisan|mossan|mossin|moisson|diamond|diamant|diamante|\\blab\\b|ring|anel|anillo|anello|bague|necklace|collar|colar|collier|bracelet|bracelete|pulsera|bangle|earring|stud|pendant|charm|chain|cadena|corrente|cuban|tennis|riviera|925|silver|prata|plata|argent|gold|oro|jewel|joia|joya|bijou|perhiasan|igi|gra|wedding|engagement|bridal|carat|mount|band|zircon|pearl|sapphire|emerald|esmeralda|opal"};
+const $=id=>document.getElementById(id);
+const CJK=/[㐀-鿿]/;
+let LANG=CFG.bilingual?(localStorage.getItem(CFG.key+'_lang')||'vi'):'vi';
+
+/* ---------- bilingual helpers ---------- */
+function bi(s){
+  if(s==null) return {vi:'',zh:''};
+  s=String(s).trim();
+  let m=s.match(/^VI:\s*([\s\S]*?)\s*CN:\s*([\s\S]*)$/);
+  if(m) return {vi:m[1].trim(),zh:m[2].trim()};
+  if(CFG.bilingual){
+    for(const sep of [' | ',' / ']){
+      if(s.indexOf(sep)>-1){
+        const parts=s.split(sep).map(x=>x.trim());
+        const zh=parts.filter(p=>CJK.test(p)), vi=parts.filter(p=>!CJK.test(p));
+        if(zh.length&&vi.length) return {vi:vi.join(sep),zh:zh.join(sep)};
+      }
+    }
+  }
+  return {vi:s,zh:s};
+}
+const L=s=>{const b=bi(s);return b[LANG]||b.vi};
+const esc=s=>(s==null?'':String(s)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const fmt=n=>n==null||n===''||isNaN(Number(n))?'—':Number(n).toLocaleString('vi-VN');
+const fmt1=n=>Number(n).toLocaleString('vi-VN',{maximumFractionDigits:2});
+const num=s=>{const v=parseFloat(String(s).replace('%','').replace(',','.'));return isNaN(v)?null:v};
+const pct=(c,p)=>(c==null||!p)?null:(c-p)/p*100;
+const MOB=()=>window.innerWidth<768;
+
+/* ---------- UI strings ---------- */
+const T={
+ vi:{kick:'Báo cáo vận hành Alibaba',n1:'Buyer',n2:'Traffic',n3:'Sản phẩm',n4:'Vận hành',
+  t1:'01 · Buyer cần xử lý',t2:'02 · Traffic & Thị trường',t3:'03 · Sản phẩm & Buyer đang tìm gì?',t4:'04 · Vận hành & Hành động',
+  positive:'Điểm tốt',bottleneck:'Điểm nghẽn',ownerT:'Sale cần làm 5 việc tuần này',ownerA:'Xem việc cần làm ↓',
+  bigH:'Khách lớn cần ưu tiên theo dõi',bigD:'Buyer có nhu cầu số lượng, yêu cầu báo giá/mẫu/chứng nhận rõ hoặc đang gần bước chốt. Sắp theo mức ưu tiên rồi ngày mới nhất.',
+  paidH:'Khách đã thanh toán/chốt đơn',paidD:'Chỉ hiển thị buyer có bằng chứng rõ trong dữ liệu; trạng thái giữ nguyên theo nguồn.',
+  paidPill:'Đã có đơn',prodLead:'Sản phẩm nào hút khách nhất và buyer đang tìm gì.',paidEmpty:'Chưa xác nhận đơn đã thanh toán trong dữ liệu này',
+  buyerLead:'Buyer xếp theo tiền gần nhất: đơn lớn chờ báo giá trước, rồi khách đã hỏi thanh toán. Mỗi thẻ có tin nhắn sẵn để sale gửi.',
+  more:n=>'Xem thêm '+n+' buyer',less:'Thu gọn danh sách',detail:'Xem chi tiết',collapse:'Thu gọn',buyers:'buyer',
+  need:'Nhu cầu',qty:'Số lượng',evid:'Dẫn chứng & vướng mắc',next:'Việc tiếp theo',upd:'Cập nhật',verify:'Xác minh',verifyT:'Theo nội dung chat trong sheet buyer; chưa xác minh độc lập',timeline:'Diễn biến các lần trao đổi',level:'Level',
+  veryHigh:'Buyer ưu tiên rất cao',
+  hkImp:'Hiển thị tìm kiếm',hkClk:'Lượt nhấp tìm kiếm',hkPv:'Lượt xem trang (vận hành)',hkL1:'Buyer L1+',
+  vsInd:x=>x+'% trung bình ngành',
+  bmH:'Gian hàng đang đứng ở đâu so với ngành?',bmN:(p,i)=>'Kỳ '+p+' · ngành '+i,
+  bm:{page_views:'Lượt xem trang',search_impressions:'Lượt hiển thị tìm kiếm',search_clicks:'Lượt nhấp tìm kiếm',visitors_with_inquiries:'Khách để lại thư hỏi hàng'},
+  store:'Gian hàng',avg:'Trung bình ngành',lead:'Nhóm dẫn đầu',vsAvg:'so với TB ngành',vsLead:'so với nhóm dẫn đầu',
+  vsH:'Buyer & người xem tuần này',vsNote:(c,p)=>'Kỳ '+c+' so với kỳ gần nhất có trong sheet visitor '+p+' · cùng nguồn Visitor Analyzer',
+  mVisitors:'Visitor records',mCountries:'Quốc gia / vùng',mPv:'PV trong danh sách visitor',mL1:'Buyer L1+',prev:'kỳ trước',
+  fnH:'Phễu chất lượng buyer L0–L4',fnN:'L1+ = L1 đến L4',ctH:'Quốc gia: đủ cấp L0–L4',ctN:'Xếp theo số visitor · các màu là cấp L0 → L4',ctAll:n=>'Xem tất cả '+n+' quốc gia',
+  cols:['Quốc gia / vùng','Visitor','PV','Có keyword','Bản ghi keyword','L0','L1','L2','L3','L4','L1+'],
+  vhH:'Xu hướng visitor các kỳ gần nhất',vhN:'Mỗi cột là một kỳ visitor của sheet; đường là buyer L1+',
+  tpH:'Top 3 sản phẩm hút khách',tpLead:'Xếp hạng theo Unique Visitors (UV); bấm tên hoặc nút để mở Alibaba.',tpNote:'Nguồn chỉ có UV nên không hiển thị order, inquiry hay CTR từng sản phẩm. Kỳ 2026 Week 46 (15–21/11). Cả 3 sản phẩm đều là trang sức moissanite / lab diamond của Karats.',open:'Mở sản phẩm ↗',
+  kwH:'Buyer đang tìm gì thật tuần này?',kwLead:'Từ khóa chính xác của visitor, giữ nguyên câu đã tìm; chỉ vẽ nhóm phù hợp ngành.',
+  kwNote:(p)=>'Kỳ '+p+' · '+kws.length.toLocaleString('vi-VN')+' từ khóa, '+kws.reduce((a,k)=>a+k.occurrences,0).toLocaleString('vi-VN')+' lượt · thanh = số lần xuất hiện · PV dòng nguồn là PV của visitor đã gõ từ đó, không phải số lượt tìm kiếm · vài từ khóa Alibaba hiện mất dấu, giữ nguyên',
+  kwWarn:(a,b)=>'Cảnh báo chất lượng dữ liệu: chỉ '+a+'/'+b+' từ khóa tuần này phù hợp ngành nên không vẽ biểu đồ "hot" để tránh hiểu sai. Kiểm tra nguồn traffic/keyword lệch ngành.',
+  kwAllS:n=>'Xem tất cả '+n+' từ khóa chính xác',kwQ:'Tìm từ khóa...',kwCols:['Từ khóa (nguyên văn)','Số lần','PV dòng nguồn','Phân loại'],
+  cls:{core:'Đúng ngành',other:'Chưa xác định',noise:'Lệch ngành'},
+  ocH:'Ông chủ cần biết gì tuần này?',gH:'Điểm tốt',aH:'Điểm nghẽn có số liệu',acH:'Action',
+  w24:'Trong 24 giờ',w7:'Trong 7 ngày',wNote:'Lưu ý khi làm việc với buyer',wNext:'Tuần tiếp theo',
+  nextWeek:'Đối chiếu lại PV, Search Clicks, buyer L1+ và trạng thái các buyer đã nêu; chỉ kết luận khi cùng chỉ số, cùng kỳ, cùng nguồn.',
+  omH:'Chỉ số vận hành tuần mới nhất',omN:p=>'Vận hành & benchmark ngành: '+p,
+  k:['Điểm sao','Tổng sản phẩm','SP mới đăng','Lượt ghé thăm','Thư hỏi hàng','Đã trả lời','RFQ đã báo','RFQ còn lại','TG phản hồi (h)','Phản hồi 24h (%)','Super Product','Top Product'],
+  vsPrev:'so với tuần trước',snH:'Ghi chú chẩn đoán từ sheet vận hành (sheet chưa có ghi chú cho tuần 27/09–03/10)',snCur:'Ghi chú gần nhất',snPrev:'Ghi chú trước đó',
+  c1H:'Traffic & phản hồi 24h',c1N:'Lượt ghé thăm vận hành (cột) và tỷ lệ phản hồi 24h (đường), toàn bộ các tuần trong sheet.',
+  c2H:'Sản phẩm, Top & Super Product',c2N:'Tổng sản phẩm (cột) · Top Product và Super Product (đường).',
+  tbH:'Bảng KPI vận hành toàn bộ lịch sử',tbN:'Đủ 12 KPI mỗi tuần · vuốt ngang để xem các tuần.',metric:'Chỉ số',
+  noChart:'Thư viện biểu đồ (ECharts) không tải được — cần internet để xem biểu đồ.',
+  foot:'Báo cáo vận hành Alibaba · Version 3 · dữ liệu nhúng tĩnh, mở offline được',
+  visitorsL:'Visitor',l1:'Buyer L1+',
+  pMore:'Buyer có ngày sau kỳ visitor/vận hành được hiển thị theo ngày riêng của buyer.'},
+ zh:{kick:'阿里巴巴运营周报',n1:'买家',n2:'流量',n3:'产品',n4:'运营',
+  t1:'01 · 重点跟进买家',t2:'02 · 流量与市场',t3:'03 · 产品与本周真实搜索需求',t4:'04 · 运营与行动',
+  positive:'亮点',bottleneck:'瓶颈',ownerT:'销售本周要做5件事',ownerA:'查看任务 ↓',
+  bigH:'需优先跟进的大客户',bigD:'有明确数量、报价/样品/认证需求或接近成交的买家。按优先级再按最新日期排序。',
+  paidH:'已付款/已成交客户',paidD:'仅显示数据中有明确证据的买家；状态与来源保持一致。',
+  paidPill:'已有订单',prodLead:'哪些产品最吸引访客，买家在搜索什么。',paidEmpty:'本数据中暂无已确认付款的订单',
+  buyerLead:'按离成交最近排序：先处理等报价的大单，再处理已问付款的客户。每张卡都有可直接发送的消息。',
+  more:n=>'查看更多 '+n+' 位买家',less:'收起列表',detail:'查看详情',collapse:'收起',buyers:'位买家',
+  need:'需求',qty:'数量',evid:'对话依据与障碍',next:'下一步',upd:'更新',verify:'核实',verifyT:'依据买家表格中的聊天内容；尚未独立核实',timeline:'沟通过程',level:'等级',
+  veryHigh:'最高优先级买家',
+  hkImp:'搜索曝光',hkClk:'搜索点击',hkPv:'页面浏览量（运营）',hkL1:'L1+买家',
+  vsInd:x=>'行业平均的'+x+'%',
+  bmH:'店铺在行业中处于什么位置？',bmN:(p,i)=>'周期 '+p+' · 行业 '+i,
+  bm:{page_views:'页面浏览量',search_impressions:'搜索曝光',search_clicks:'搜索点击',visitors_with_inquiries:'发起询盘的访客'},
+  store:'本店',avg:'行业平均',lead:'行业领先',vsAvg:'相对行业平均',vsLead:'相对行业领先',
+  vsH:'本周买家与访客',vsNote:(c,p)=>'周期 '+c+'，对比访客表中最近一期 '+p+'（缺9/25–10/03数据）· 同一访客分析来源',
+  mVisitors:'访客记录',mCountries:'国家/地区',mPv:'访客列表PV',mL1:'L1+买家',prev:'上期',
+  fnH:'买家质量漏斗 L0–L4',fnN:'L1+ = L1 至 L4',ctH:'国家：完整L0–L4分层',ctN:'按访客数排序 · 颜色为 L0 → L4',ctAll:n=>'查看全部 '+n+' 个国家',
+  cols:['国家/地区','访客','PV','有关键词','关键词记录','L0','L1','L2','L3','L4','L1+'],
+  vhH:'近几期访客趋势',vhN:'每根柱为表格中的一期访客数；折线为L1+买家',
+  tpH:'吸引访客最多的前3款产品',tpLead:'按独立访客（UV）排序；点击名称或按钮打开阿里巴巴页面。',tpNote:'来源仅有UV，因此不显示单品订单、询盘或点击率。',open:'打开产品 ↗',
+  kwH:'买家本周真实在搜什么？',kwLead:'访客的精确关键词，保持原文；仅绘制与行业相符的部分。',
+  kwNote:p=>'周期 '+p+' · 柱=含该关键词的访客数 · 本周文档没有单个关键词的PV',
+  kwWarn:(a,b)=>'数据质量提醒：本周仅 '+a+'/'+b+' 个关键词与行业相符，为避免误读不绘制“热词”图。请核查流量/关键词来源是否偏离行业。',
+  kwAllS:n=>'查看全部 '+n+' 个精确关键词',kwQ:'搜索关键词...',kwCols:['关键词（原文）','次数','来源行PV','分类'],
+  cls:{core:'相符',other:'未确定',noise:'偏离行业'},
+  ocH:'老板本周需要知道什么？',gH:'亮点',aH:'带数据的瓶颈',acH:'行动',
+  w24:'24小时内',w7:'7天内',wNote:'与买家沟通的注意事项',wNext:'下周',
+  nextWeek:'复核PV、搜索点击、L1+买家及上述买家状态；仅在同指标、同周期、同来源时下结论。',
+  omH:'最新一周运营指标',omN:p=>'运营与行业基准：'+p,
+  k:['店铺星级','产品总数','新品数','访客数','询盘数','已回复','已报价RFQ','剩余RFQ','平均回复(小时)','24小时回复率(%)','Super Product','Top Product'],
+  vsPrev:'较上周',snH:'运营表格中的诊断备注',snCur:'最近备注',snPrev:'此前备注',
+  c1H:'流量与24小时回复率',c1N:'运营访客数（柱）与24小时回复率（线），涵盖表格中全部周次。',
+  c2H:'产品、Top与Super Product',c2N:'产品总数（柱）· Top Product 与 Super Product（线）。',
+  tbH:'全部历史运营KPI表',tbN:'每周12项KPI · 左右滑动查看各周。',metric:'指标',
+  noChart:'图表库（ECharts）无法加载——需联网查看图表。',
+  foot:'阿里巴巴运营周报 · 第3版 · 数据静态嵌入，可离线打开',
+  visitorsL:'访客',l1:'L1+买家',
+  pMore:'晚于访客/运营周期的买家日期按买家自身日期显示。'}
+};
+const t=()=>T[LANG];
+
+/* ---------- flags ---------- */
+const FLAGS=[[/austria/i,'AT'],[/malta/i,'MT'],[/togo/i,'TG'],[/libya/i,'LY'],[/emirates|uae/i,'AE'],[/portugal/i,'PT'],[/hoa kỳ|usa|united states/i,'US'],[/vương quốc anh|united kingdom|\buk\b/i,'GB'],[/nga\b|russia/i,'RU'],[/uzbekistan/i,'UZ'],[/việt nam|vietnam/i,'VN'],[/trung quốc|china/i,'CN'],[/đài loan|taiwan/i,'TW'],[/hong kong/i,'HK'],[/ấn độ|india/i,'IN'],[/pakistan/i,'PK'],[/indonesia/i,'ID'],[/malaysia/i,'MY'],[/philippines/i,'PH'],[/thailand/i,'TH'],[/japan|nhật/i,'JP'],[/hàn quốc|korea/i,'KR'],[/thổ nhĩ kỳ|turkey/i,'TR'],[/germany|đức/i,'DE'],[/france|pháp/i,'FR'],[/spain|tây ban nha/i,'ES'],[/italy/i,'IT'],[/mexico/i,'MX'],[/brazil/i,'BR'],[/canada/i,'CA'],[/australia/i,'AU'],[/new zealand/i,'NZ'],[/egypt/i,'EG'],[/ả rập xê út|saudi/i,'SA'],[/các tiểu vương quốc|emirates|\buae\b/i,'AE'],[/nam phi|south africa/i,'ZA'],[/nigeria/i,'NG'],[/ghana/i,'GH'],[/kenya/i,'KE'],[/tanzania/i,'TZ'],[/cote d|côte d/i,'CI'],[/cameroon/i,'CM'],[/senegal/i,'SN'],[/uganda/i,'UG'],[/zambia/i,'ZM'],[/zimbabwe/i,'ZW'],[/ethiopia/i,'ET'],[/morocco/i,'MA'],[/algeria/i,'DZ'],[/tunisia/i,'TN'],[/bangladesh/i,'BD'],[/sri lanka/i,'LK'],[/nepal/i,'NP'],[/myanmar/i,'MM'],[/cambodia/i,'KH'],[/singapore/i,'SG'],[/poland/i,'PL'],[/romania/i,'RO'],[/hungary/i,'HU'],[/bulgaria/i,'BG'],[/greece/i,'GR'],[/netherlands/i,'NL'],[/sweden/i,'SE'],[/norway/i,'NO'],[/switzerland/i,'CH'],[/slovakia/i,'SK'],[/kazakhstan/i,'KZ'],[/armenia/i,'AM'],[/azerbaijan/i,'AZ'],[/belarus/i,'BY'],[/israel/i,'IL'],[/iraq/i,'IQ'],[/jordan/i,'JO'],[/kuwait/i,'KW'],[/lebanon/i,'LB'],[/qatar/i,'QA'],[/oman/i,'OM'],[/yemen/i,'YE'],[/argentina/i,'AR'],[/colombia/i,'CO'],[/peru/i,'PE'],[/ecuador/i,'EC'],[/chile/i,'CL'],[/bolivia/i,'BO'],[/paraguay/i,'PY'],[/venezuela/i,'VE'],[/guatemala/i,'GT'],[/honduras/i,'HN'],[/nicaragua/i,'NI'],[/costa rica/i,'CR'],[/dominican|dominica/i,'DO'],[/jamaica/i,'JM'],[/haiti/i,'HT'],[/puerto rico/i,'PR'],[/mongolia/i,'MN'],[/mozambique/i,'MZ'],[/angola/i,'AO'],[/madagascar/i,'MG'],[/namibia/i,'NA'],[/botswana/i,'BW'],[/liberia/i,'LR'],[/sierra leone/i,'SL'],[/mali\b/i,'ML'],[/niger\b/i,'NE'],[/gabon/i,'GA'],[/benin/i,'BJ'],[/burkina/i,'BF'],[/congo/i,'CD'],[/maldives/i,'MV'],[/tajikistan/i,'TJ'],[/turkmenistan/i,'TM'],[/albania/i,'AL']];
+function flag(c){ if(!c) return ''; const s=String(c); for(const [re,iso] of FLAGS){ if(re.test(s)) return String.fromCodePoint(...[...iso].map(ch=>127397+ch.charCodeAt(0)))+' '; } return ''; }
+
+/* ---------- data ---------- */
+const OPS=SPEC.data.operations, VIS=SPEC.data.visitors, BUY=SPEC.data.buyers, BM=OPS.benchmark;
+const weeks=OPS.weeks.map(w=>{const kv=Object.values(w.kpis); return {period:String(w.period).split(' | ')[0], k:kv};}); // newest first
+const wNew=weeks[0], wPrev=weeks[1]||null;
+const endLabel=p=>{const s=p.split(' đến ')[1]||p; return s.replace(/-20\d\d$/,'').replace(/-/g,'/');};
+const perFull=p=>p.replace(/-/g,'/').replace(' đến ',' – ');
+const cur=VIS.current_summary, prv=VIS.previous_summary;
+const perVis=s=>{const m=String(s).match(/(20\d\d-\d\d-\d\d)\D+(?:đến|至|to)\D*(20\d\d-\d\d-\d\d)/); const f=d=>d.slice(8,10)+'/'+d.slice(5,7); return m?f(m[1])+' – '+f(m[2])+'/'+m[2].slice(0,4):bi(s).vi;};
+
+/* buyers: merge by name */
+const nm=s=>String(s).trim().toLowerCase();
+function prio(p){ const s=bi(p).vi||''; if(s.length>40) return 2; if(/rất cao/i.test(s)) return 5; if(/^cao\b|lead nóng|lead tốt|lead thật/i.test(s)) return 4; if(/trung bình-cao/i.test(s)) return 3; return 2; }
+function prioLabel(p){ const b=bi(p); const s=b.vi||''; if(s.length>40) return {vi:'Ưu tiên',zh:'优先'}; return b; }
+function group(rows){
+  const m=new Map();
+  rows.forEach(r=>{ const k=nm(r.name); if(!m.has(k)) m.set(k,[]); m.get(k).push(r); });
+  return [...m.values()].map(list=>{ list.sort((a,b)=>String(b.date).localeCompare(String(a.date))); const main=Object.assign({},list[0]); main.timeline=list.slice(1); main.n=list.length; return main; });
+}
+const topNames=BUY.top5_priority.map(r=>nm(r.name));
+const allG=group(BUY.all_priority_rows);
+const topG=BUY.top5_priority.map(r=>{ const g=allG.find(x=>nm(x.name)===nm(r.name)); const o=Object.assign({},g||r); Object.assign(o,{next_action:r.next_action||o.next_action,need:r.need||o.need,quantity:r.quantity||o.quantity,evidence:r.evidence||o.evidence,priority:r.priority||o.priority}); return o; });
+const restG=allG.filter(x=>!topNames.includes(nm(x.name))).sort((a,b)=>prio(b.priority)-prio(a.priority)||String(b.date).localeCompare(String(a.date)));
+const bigList=[...topG,...restG];
+const paid=BUY.confirmed_paid_or_completed||[];
+
+function bcard(x,i,kind){
+  const top=kind==='big'&&i<3?' top':'';
+  const pl=prioLabel(x.priority), pc=prio(x.priority)>=5?'red':prio(x.priority)>=4?'amber':'blue';
+  const tl=(x.timeline&&x.timeline.length)?'<div class="row"><b>'+t().timeline+'</b><ul class="tl">'+x.timeline.map(r=>'<li>'+esc(r.date)+' — '+esc(L(r.need))+(r.next_action?' → '+esc(L(r.next_action)):'')+'</li>').join('')+'</ul></div>':'';
+  const c=L(x.country||'');
+  return '<article class="bcard'+top+'"><div class="bh"><div class="rank">'+(i+1)+'</div><div class="who"><div class="bn">'+esc(x.name)+'</div>'+(c?'<span class="ctry">'+flag(x.country)+esc(c)+'</span>':'')+'</div><span class="tag '+pc+' pill">'+esc(pl[LANG]||pl.vi)+'</span></div>'+
+   (x.quantity?'<div class="sig"><span class="chip">'+esc(L(x.quantity))+'</span></div>':'')+
+   '<div class="row"><b>'+t().need+'</b><div class="clamp">'+esc(L(x.need))+'</div></div>'+
+   (x.next_action?'<div class="nextbox"><b>'+t().next+'</b><div class="clamp">'+esc(L(x.next_action))+'</div></div>':'')+
+   '<div class="more-detail"><div class="row"><b>'+t().evid+'</b>'+esc(L(x.evidence))+'</div>'+tl+'<div class="row"><b>'+t().verify+'</b>'+t().verifyT+(x.level?' · '+t().level+': '+esc(L(x.level)):'')+'</div></div>'+
+   '<div class="bf"><span class="dt">'+t().upd+' '+esc(x.date||'')+'</span><button class="lnk" type="button" data-d="1">'+t().detail+'</button></div></article>';
+}
+function paidCard(x,i){
+  return '<article class="bcard"><div class="bh"><div class="rank">'+(i+1)+'</div><div class="who"><div class="bn">'+esc(x.name)+'</div></div><span class="tag green pill">'+t().paidPill+'</span></div><div class="row"><b>'+t().evid+'</b>'+esc(L(x.status))+'</div><div class="row"><b>'+t().verify+'</b>'+esc(L(x.evidence_source||''))+'</div></article>';
+}
+let bigOpen=false, bigBuilt=false;
+function renderBuyers(){
+  const B=bigList;
+  $('cnt_big').textContent=B.length+' '+t().buyers;
+  $('l_big').innerHTML=B.slice(0,5).map((x,i)=>bcard(x,i,'big')).join('');
+  $('x_big').innerHTML=bigBuilt?B.slice(5).map((x,i)=>bcard(x,i+5,'big')).join(''):'';
+  const rest=B.length-5, tb=$('t_big');
+  if(rest<=0) tb.style.display='none'; else { tb.style.display=''; tb.textContent=bigOpen?t().less:t().more(rest); $('x_big').classList.toggle('show',bigOpen); }
+  $('cnt_paid').textContent=paid.length+' '+t().buyers;
+  $('l_paid').innerHTML=paid.map((x,i)=>paidCard(x,i)).join('');
+  $('paid_empty').innerHTML=paid.length?'':'<div class="empty">'+t().paidEmpty+'</div>';
+  $('pay_rule').textContent=L(BUY.payment_status_rule||'');
+}
+$('t_big').addEventListener('click',()=>{ if(!bigBuilt){ bigBuilt=true; } bigOpen=!bigOpen; renderBuyers(); if(!bigOpen) $('l_big').scrollIntoView({behavior:'smooth',block:'start'}); });
+document.addEventListener('click',e=>{ const b=e.target.closest('.lnk[data-d]'); if(!b) return; const c=b.closest('.bcard'); const o=c.classList.toggle('open'); b.textContent=o?t().collapse:t().detail; });
+
+/* ---------- keyword classification ---------- */
+const CORE=new RegExp(CFG.coreRe,'i');
+const NOISE=/phone|telfono|shoes|sepatu|kaos|shorts|blouse|hair|tesla|engine|drone|wallpaper|quilt|uniform|tiles|vacuum|chair|stethoscope|cart|toy|sex|boobs|figure|anua|tonique|costume|ropa|zapatos|bags?\b|purse|scrunchie|dryer|socks|gun|flashlight|smps|machine|tuning|swatch|watch|reloj/i;
+const cls=k=>CORE.test(k)?'core':NOISE.test(k)?'noise':'other';
+const kws=VIS.exact_keyword_aggregates.map(k=>Object.assign({cls:cls(k.exact_keyword)},k)).sort((a,b)=>b.occurrences-a.occurrences||b.source_row_pv_sum-a.source_row_pv_sum);
+
+/* ---------- render text parts ---------- */
+const H=SPEC.owner_readout, HERO=SPEC.implementation_contract.hero, BL=SPEC.bilingual_copy||{};
+const mk=id=>BM[id];
+function render(){
+  const X=t();
+  document.documentElement.lang=LANG==='zh'?'zh':'vi';
+  document.querySelectorAll('.langbar button').forEach(b=>b.classList.toggle('on',b.dataset.l===LANG));
+  $('kick').textContent=X.kick;
+  $('storeName').textContent=CFG.storeName;
+  $('headline').textContent=LANG==='zh'&&BL.hero_headline_cn?BL.hero_headline_cn:HERO.headline;
+  $('pl').textContent=X.positive; $('pt').textContent=LANG==='zh'&&BL.positive_cn?BL.positive_cn:H.positive;
+  $('bl').textContent=X.bottleneck; $('bt').textContent=LANG==='zh'&&BL.bottleneck_cn?BL.bottleneck_cn:H.bottleneck;
+  $('periods').textContent=(LANG==='zh'?'运营与行业基准：':'Vận hành & benchmark ngành: ')+perFull(wNew.period)+' · '+(LANG==='zh'?'访客/国家/关键词：':'Visitor, quốc gia, từ khóa: ')+perVis(cur.period)+' · '+X.pMore;
+  const imp=mk('search_impressions'), clk=mk('search_clicks'), pv=mk('page_views');
+  const r=(a,b)=>b?Math.round(a/b*100):null;
+  const dL1=pct(cur.L1_plus,prv.L1_plus);
+  $('hk').innerHTML=[
+    [X.hkImp,fmt(imp.store),(imp.industry_average==null?'TB ngành: Alibaba không hiển thị':X.vsInd(fmt(r(imp.store,imp.industry_average)))),(imp.industry_average!=null&&imp.store>=imp.industry_average)?'pos':'mid'],
+    [X.hkClk,fmt(clk.store),(clk.industry_average==null?'TB ngành: Alibaba không hiển thị':X.vsInd(fmt(r(clk.store,clk.industry_average)))),(clk.industry_average!=null&&clk.store>=clk.industry_average)?'pos':'mid'],
+    [X.hkPv,fmt(pv.store),(pv.industry_average==null?'TB ngành: Alibaba không hiển thị':X.vsInd(fmt(r(pv.store,pv.industry_average)))),(pv.industry_average!=null&&pv.store>=pv.industry_average)?'pos':'mid'],
+    [X.hkL1,fmt(cur.L1_plus),(dL1==null?'':(dL1>=0?'+':'')+dL1.toFixed(0)+'% '+X.vsPrev.replace('tuần','kỳ').replace('较上周','较上期')),'pos']
+  ].map(x=>'<div class="hkc '+x[3]+'"><div class="l">'+x[0]+'</div><div class="v">'+x[1]+'</div><div class="s">'+x[2]+'</div></div>').join('');
+  const vh=bigList.filter(x=>prio(x.priority)>=5).length;
+  $('owner_t').textContent=X.ownerT;
+  $('owner_s').textContent=vh+' '+X.veryHigh.toLowerCase()+' · '+bigList.length+' '+X.buyers+(paid.length?' · '+paid.length+' '+X.paidH.toLowerCase():'');
+  $('owner_a').textContent=X.ownerA;
+  ['n1','n2','n3','n4','t1','t2','t3','t4'].forEach(id=>$(id).textContent=X[id]);
+  if(LANG==='zh'&&BL.section_titles){ ['t1','t2','t3','t4'].forEach((id,i)=>$(id).textContent=(BL.section_titles[i]||'').split(' / ')[0]); }
+  $('buyer_lead').textContent=X.buyerLead;
+  $('h_big').textContent=X.bigH; $('d_big').textContent=X.bigD; $('h_paid').textContent=X.paidH; $('d_paid').textContent=X.paidD;
+  renderBuyers();
+  /* traffic */
+  $('bm_h').textContent=X.bmH;
+  const above=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].filter(k=>BM[k].industry_average!=null&&BM[k].store>=BM[k].industry_average);
+  const below=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].filter(k=>BM[k].store<BM[k].industry_average);
+  const nmz=k=>X.bm[k];
+  $('bm_lead').textContent=LANG==='zh'
+   ?('高于行业平均：'+(above.map(nmz).join('、')||'无')+'；低于行业平均：'+(below.map(nmz).join('、')||'无')+'。')
+   :('Vượt trung bình ngành: '+(above.map(nmz).join(', ')||'không có')+'. Thấp hơn trung bình ngành: '+(below.map(nmz).join(', ')||'không có')+'.');
+    $('bm_note').textContent=X.bmN(perFull(wNew.period),BM.industry);
+  const col={page_views:'#2563EB',search_impressions:'#16A34A',search_clicks:'#2563EB',visitors_with_inquiries:'#D97706'};
+  $('bm').innerHTML=['page_views','search_impressions','search_clicks','visitors_with_inquiries'].map(k=>{
+    const m=BM[k], mx=Math.max(m.store,m.industry_average,m.industry_leaders,1), up=m.industry_average!=null&&m.store>=m.industry_average;
+    const bar=(l,v,c)=>'<div class="bar"><div class="bl"><span>'+l+'</span><b>'+fmt(v)+'</b></div><div class="tr"><div class="fl" style="width:'+Math.max(2,v/mx*100)+'%;background:'+c+'"></div></div></div>';
+    return '<div class="bmc '+(up?'green':'amber')+'"><h3>'+X.bm[k]+'</h3>'+bar(X.store,m.store,up?'#16A34A':'#D97706')+bar(X.avg,m.industry_average,'#94a3b8')+bar(X.lead,m.industry_leaders,'#334155')+'<div class="pcts">'+(m.industry_average?'<span class="tag '+(up?'green':'amber')+'">'+fmt1(m.store/m.industry_average*100)+'% '+X.vsAvg+'</span><span class="tag gray">'+fmt1(m.store/m.industry_leaders*100)+'% '+X.vsLead+'</span>':'<span class="tag gray">Alibaba không hiển thị số ngành</span>')+'</div></div>';
+  }).join('');
+  $('vs_h').textContent=X.vsH;
+  $('vs_lead').textContent=(LANG==='zh'?'L1+买家 ':'Buyer L1+ ')+fmt(cur.L1_plus)+' / '+fmt(cur.visitor_records)+' visitor ('+(cur.visitor_records?Math.round(cur.L1_plus/cur.visitor_records*100):0)+'%) · '+fmt(cur.countries)+(LANG==='zh'?' 个国家/地区':' quốc gia / vùng');
+  $('traffic_lead').textContent=$('vs_lead').textContent;
+  $('vs_note').textContent=X.vsNote(perVis(cur.period),perVis(prv.period));
+  const mm=(l,c,p)=>{const d=pct(c,p); return '<div class="metric"><div class="n">'+fmt(c)+'</div><div class="l">'+l+'</div><div class="d '+(d==null?'':d>=0?'up':'down')+'">'+(d==null?'':(d>=0?'▲ +':'▼ ')+d.toFixed(0)+'% · '+X.prev+' '+fmt(p))+'</div></div>';};
+  $('vs_metrics').innerHTML=mm(X.mVisitors,cur.visitor_records,prv.visitor_records)+mm(X.mCountries,cur.countries,prv.countries)+mm(X.mPv,cur.pv,prv.pv)+mm(X.mL1,cur.L1_plus,prv.L1_plus);
+  $('fn_h').textContent=X.fnH; $('fn_n').textContent=X.fnN; $('ct_h').textContent=X.ctH; $('ct_n').textContent=X.ctN;
+  const cs=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors||b.L1_plus-a.L1_plus);
+  $('ct_all').textContent=X.ctAll(cs.length);
+  $('tbl_country').innerHTML='<tr>'+X.cols.map((c,i)=>'<th class="'+(i?'num':'')+'">'+c+'</th>').join('')+'</tr>'+cs.map(c=>'<tr><td>'+flag(c.country)+esc(L(c.country))+'</td><td class="num">'+c.visitors+'</td><td class="num">'+c.pv+'</td><td class="num">'+(c.keyword_visitors==null?'—':c.keyword_visitors)+'</td><td class="num">'+(c.exact_keyword_records==null?'—':c.exact_keyword_records)+'</td><td class="num">'+c.L0+'</td><td class="num">'+c.L1+'</td><td class="num">'+c.L2+'</td><td class="num">'+c.L3+'</td><td class="num">'+c.L4+'</td><td class="num"><b>'+c.L1_plus+'</b></td></tr>').join('');
+  $('vh_h').textContent=X.vhH; $('vh_n').textContent=X.vhN;
+  /* products */
+  $('prod_lead').textContent=X.prodLead;
+  $('tp_h').textContent=X.tpH; $('tp_lead').textContent=X.tpLead; $('tp_note').textContent=X.tpNote;
+  $('tp_cards').innerHTML=OPS.top_products.map(p=>'<div class="pcard"><div class="rank">'+p.rank+'</div><a class="nm" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+esc(p.title)+'</a><div class="pid">Product ID: '+esc(p.product_id)+'</div><div class="uv">'+fmt(p.uv)+' <small>UV</small></div><a class="btn" href="'+esc(p.url)+'" target="_blank" rel="noopener noreferrer">'+X.open+'</a></div>').join('');
+  $('kw_h').textContent=X.kwH; $('kw_lead').textContent=X.kwLead; $('kw_note').textContent=X.kwNote(perVis(cur.period));
+  const core=kws.filter(k=>k.cls==='core');
+  $('kw_warn').innerHTML=core.length<3?'<div class="warn">'+X.kwWarn(core.length,kws.length)+'</div>':'';
+  $('kw_legend').innerHTML=core.length<3?'':'<span><i style="background:#16A34A"></i>'+X.cls.core+'</span>';
+  $('kw_all_s').textContent=X.kwAllS(kws.length); $('kw_q').placeholder=X.kwQ;
+  drawKwTable();
+  /* conclusion */
+  $('oc_h').textContent=X.ocH;
+  $('oc_sum').textContent=LANG==='zh'&&BL.hero_headline_cn?BL.hero_headline_cn:HERO.headline;
+  $('g_h').textContent=X.gH; $('g_t').textContent=$('pt').textContent;
+  $('a_h').textContent=X.aH; $('a_t').textContent=$('bt').textContent;
+  $('ac_h').textContent=X.acH;
+  const na=H.next_actions, ac=LANG==='zh'&&BL.actions_cn?BL.actions_cn:na;
+  const cards=[[X.w24,ac[0],'P0','red'],[X.w7,ac[1],'P1','amber']];
+  $('actions').innerHTML=cards.map(c=>'<div class="act"><h3><span class="tag '+c[3]+'">'+c[2]+'</span>'+c[0]+'</h3><p>'+esc(c[1]||'')+'</p></div>').join('')+
+    '<div class="act"><h3><span class="tag blue">P2</span>'+X.wNext+'</h3><p>'+X.nextWeek+'</p></div>'+
+    (ac[2]?'<div class="act note2"><h3><span class="tag amber">!</span>'+X.wNote+'</h3><p>'+esc(ac[2])+'</p></div>':'');
+  /* ops */
+  $('om_h').textContent=X.omH; $('om_n').textContent=X.omN(perFull(wNew.period));
+  const vsW=(()=>{if(!wPrev)return X.vsPrev;const e=p=>{const m=String(p.split(' đến ')[1]||p).match(/(\d+)-(\d+)-(\d+)/);return m?new Date(+m[3],m[2]-1,+m[1]):null};const a=e(wNew.period),b=e(wPrev.period);return (a&&b&&(a-b)/864e5>7)?X.vsPrev.replace('tuần trước','tuần')+' '+perFull(wPrev.period).replace(/\/20\d\d/g,''):X.vsPrev;})();
+  const dl=(i)=>{ if(!wPrev) return ''; const d=pct(num(wNew.k[i]),num(wPrev.k[i])); return d==null?'':'<div class="d '+(d>=0?'up':'down')+'">'+(d>=0?'▲ +':'▼ ')+d.toFixed(0)+'% '+vsW+'</div>'; };
+  const pick=[[0,'★'],[3,''],[4,''],[9,'']];
+  $('ops_metrics').innerHTML=[0,3,4,9,1,7,10,11].map(i=>'<div class="metric"><div class="n">'+esc(wNew.k[i])+(i===0?' ★':'')+'</div><div class="l">'+X.k[i]+'</div>'+(i===0?'':dl(i))+'</div>').join('');
+  $('sn_h').textContent=X.snH;
+  $('sn_body').innerHTML=(OPS.source_action_notes||[]).map(n=>{const lb=n.label?L(n.label):''; return '<p>'+(lb?'<b>'+esc(lb)+'</b><br>':'')+'<span class="hint">'+X.snCur+':</span> '+esc(L(n.current))+'<br><span class="hint">'+X.snPrev+':</span> '+esc(L(n.previous))+'</p>';}).join('');
+  $('c1_h').textContent=X.c1H; $('c1_n').textContent=X.c1N; $('c2_h').textContent=X.c2H; $('c2_n').textContent=X.c2N;
+  $('tb_h').textContent=X.tbH; $('tb_n').textContent=X.tbN;
+  const wc=weeks.slice().reverse();
+  $('tbl_ops').innerHTML='<tr><th>'+X.metric+'</th>'+wc.map(w=>'<th class="num">'+esc(endLabel(w.period))+'</th>').join('')+'</tr>'+X.k.map((lab,i)=>'<tr><td>'+lab+'</td>'+wc.map(w=>'<td class="num">'+esc(w.k[i])+'</td>').join('')+'</tr>').join('');
+  $('foot').innerHTML=X.foot+'<br>'+X.pMore;
+  
+  $('n1').textContent=X.n1;
+  if(window.__charts) drawCharts();
+}
+function drawKwTable(){
+  const X=t(), q=($('kw_q').value||'').trim().toLowerCase();
+  const list=kws.filter(k=>!q||k.exact_keyword.toLowerCase().includes(q));
+  $('kw_cnt').textContent=list.length+' / '+kws.length;
+  $('tbl_kw').innerHTML='<tr>'+X.kwCols.map((c,i)=>'<th class="'+(i&&i<3?'num':'')+'">'+c+'</th>').join('')+'</tr>'+list.slice(0,600).map(k=>'<tr><td>'+esc(k.exact_keyword)+'</td><td class="num">'+k.occurrences+'</td><td class="num">'+(k.source_row_pv_sum==null?'—':k.source_row_pv_sum)+'</td><td><span class="tag '+(k.cls==='core'?'green':k.cls==='noise'?'red':'gray')+'">'+X.cls[k.cls]+'</span></td></tr>').join('');
+}
+$('kw_q').addEventListener('input',drawKwTable);
+
+/* ---------- charts ---------- */
+let charts=[]; const AXL={fontSize:11};
+function mkc(id){ const el=$(id); let c=echarts.getInstanceByDom(el); if(c) c.dispose(); c=echarts.init(el); charts.push(c); return c; }
+function drawCharts(){
+  if(typeof echarts==='undefined') return;
+  const X=t(), mob=MOB(); charts=[];
+  mkc('ch_funnel').setOption({tooltip:{trigger:'item',formatter:'{b}: {c}'},series:[{type:'funnel',left:'6%',width:'88%',sort:'none',minSize:'22%',label:{formatter:'{b}\n{c}',fontSize:12,lineHeight:16},color:['#9fb3d6','#7ea1e0','#4f7fd9','#2563EB','#16A34A'],data:['L0','L1','L2','L3','L4'].map(k=>({value:cur.levels[k],name:k}))}]});
+  const top=VIS.all_countries.slice().sort((a,b)=>b.visitors-a.visitors||b.L1_plus-a.L1_plus).slice(0,12).reverse();
+  const lc=['#cbd5e1','#93c5fd','#3b82f6','#1d4ed8','#16a34a'];
+  mkc('ch_country').setOption({tooltip:{trigger:'axis',axisPointer:{type:'shadow'},confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:mob?84:120,right:24,top:34,bottom:20},xAxis:{type:'value',axisLabel:AXL},yAxis:{type:'category',data:top.map(c=>L(c.country).split(/[\/;]/)[0].trim()),axisLabel:{fontSize:11,width:mob?80:116,overflow:'truncate'}},
+    series:['L0','L1','L2','L3','L4'].map((k,i)=>({name:k,type:'bar',stack:'lv',data:top.map(c=>c[k]),itemStyle:{color:lc[i]}}))});
+  const vh=(VIS.visitor_history||[]).slice().reverse();
+  const lab=v=>{const m=String(v.period).match(/(\d{4})-(\d\d)-(\d\d)\D+(\d{4})-(\d\d)-(\d\d)/); return m?m[2]+'/'+m[3]+'–'+m[5]+'/'+m[6]:String(v.tab).slice(-12);};
+  mkc('ch_vhist').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:56},xAxis:{type:'category',data:vh.map(lab),axisLabel:Object.assign({},AXL,{rotate:35})},yAxis:[{type:'value',name:X.visitorsL,axisLabel:AXL},{type:'value',name:X.l1,axisLabel:AXL}],
+    series:[{name:X.visitorsL,type:'bar',data:vh.map(v=>v.visitor_records),itemStyle:{color:'#93c5fd',borderRadius:[4,4,0,0]}},{name:X.l1,type:'line',yAxisIndex:1,data:vh.map(v=>v.L1_plus),smooth:true,itemStyle:{color:'#16A34A'}}]});
+  const core=kws.filter(k=>k.cls==='core');
+  if(core.length>=3){
+    $('ch_kw').style.display='';
+    const n=mob?10:10, tk=core.slice(0,n).reverse();
+    $('ch_kw').style.height=mob?(tk.length*40+50)+'px':'';
+    mkc('ch_kw').setOption({tooltip:{trigger:'item',confine:true,formatter:p=>{const k=tk[p.dataIndex];return '<b>'+esc(k.exact_keyword)+'</b><br>'+(LANG==='zh'?'出现次数':'Số lần')+': '+k.occurrences+(k.source_row_pv_sum==null?'':'<br>PV '+(LANG==='zh'?'（来源行）':'(dòng nguồn)')+': '+k.source_row_pv_sum);}},
+      grid:{left:4,right:mob?64:100,top:10,bottom:24,containLabel:true},xAxis:{type:'value',minInterval:1,axisLabel:AXL},yAxis:{type:'category',data:tk.map(k=>k.exact_keyword),axisLabel:{fontSize:mob?10:11,width:mob?100:200,overflow:'break'}},
+      series:[{type:'bar',data:tk.map(k=>({value:k.occurrences,itemStyle:{color:'#16A34A',borderRadius:[0,4,4,0]}})),label:{show:true,position:'right',fontSize:mob?10:11,formatter:p=>{const k=tk[p.dataIndex];return (mob||k.source_row_pv_sum==null)?k.occurrences+'×':k.occurrences+'× · PV '+k.source_row_pv_sum;}}}]});
+  } else { $('ch_kw').style.display='none'; }
+  const wk=weeks.slice().reverse(), xl=wk.map(w=>endLabel(w.period));
+  const ax={type:'category',data:xl,axisLabel:Object.assign({},AXL,{rotate:45})};
+  mkc('ch_trend').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:50},xAxis:ax,yAxis:[{type:'value',name:X.k[3],axisLabel:AXL},{type:'value',name:'%',min:0,max:100,axisLabel:AXL}],
+    series:[{name:X.k[3],type:'bar',data:wk.map(w=>num(w.k[3])),itemStyle:{color:'#2563EB',borderRadius:[4,4,0,0]}},{name:X.k[9],type:'line',yAxisIndex:1,data:wk.map(w=>num(w.k[9])),smooth:true,itemStyle:{color:'#16A34A'}}]});
+  mkc('ch_products').setOption({tooltip:{trigger:'axis',confine:true},legend:{top:0,textStyle:{fontSize:11}},grid:{left:44,right:40,top:40,bottom:50},xAxis:ax,yAxis:[{type:'value',name:'Top/Super',axisLabel:AXL},{type:'value',name:X.k[1],axisLabel:AXL}],
+    series:[{name:X.k[1],type:'bar',yAxisIndex:1,data:wk.map(w=>num(w.k[1])),itemStyle:{color:'#fca5a5'}},{name:X.k[11],type:'line',data:wk.map(w=>num(w.k[11])),smooth:true,itemStyle:{color:'#D97706'}},{name:X.k[10],type:'line',data:wk.map(w=>num(w.k[10])),smooth:true,itemStyle:{color:'#16A34A'}}]});
+}
+/* ---------- init ---------- */
+if(CFG.bilingual){ $('langbar').classList.add('on'); document.querySelectorAll('.langbar button').forEach(b=>b.addEventListener('click',()=>{ LANG=b.dataset.l; try{localStorage.setItem(CFG.key+'_lang',LANG);}catch(e){} render(); const o=$('owner_s'); if(o) o.textContent='Khách Nhật: 20 lắc vàng 18K chờ báo lại · 2 khách đặt làm theo gram · 25 hội thoại 13–27/11'; })); }
+render();
+if(typeof echarts==='undefined'){ ['ch_funnel','ch_country','ch_vhist','ch_kw','ch_trend','ch_products'].forEach(id=>{$(id).innerHTML='<p class="note" style="padding:20px">'+t().noChart+'</p>';}); }
+else { window.__charts=true; drawCharts(); let lm=MOB(),rt; const rs=()=>{clearTimeout(rt);rt=setTimeout(()=>{ if(MOB()!==lm){lm=MOB();drawCharts();} else charts.forEach(c=>c.resize()); },150);}; window.addEventListener('resize',rs); window.addEventListener('orientationchange',rs); }
+/* nav highlight */
+(function(){ const links=[...document.querySelectorAll('#nav a')], secs=links.map(a=>document.querySelector(a.getAttribute('href')));
+  function on(){ let cur=0; secs.forEach((s,i)=>{ if(s.getBoundingClientRect().top<160) cur=i; }); links.forEach((a,i)=>a.classList.toggle('on',i===cur)); }
+  window.addEventListener('scroll',on,{passive:true}); on(); })();
+
+(function(){ const o=$('owner_s'); if(o) o.textContent='Khách Nhật: 20 lắc vàng 18K chờ báo lại · 2 khách đặt làm theo gram · 25 hội thoại 13–27/11';
+ document.querySelectorAll('.copy').forEach(b=>b.addEventListener('click',()=>{const el=$(b.dataset.copy);const sel=()=>{const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Đã chọn, bấm sao chép';};try{navigator.clipboard.writeText(el.textContent).then(()=>{b.textContent='Đã chép';},sel);}catch(e){sel();}}));
+})();
+</script>
+</body></html>
